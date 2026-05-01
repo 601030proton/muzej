@@ -648,15 +648,21 @@ main {
     padding: 0;
   }
   .feature-title {
-    font-size: clamp(32px, 10.5vw, 50px);
-    line-height: 0.98;
+    max-width: 100%;
+    font-size: clamp(32px, 9.2vw, 42px);
+    line-height: 1.05;
+    letter-spacing: -0.024em;
+    text-wrap: balance;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
   }
   .feature-byline {
     margin: 28px 0 0;
     font-size: 11px;
   }
   .feature-title-break {
-    display: none;
+    display: block;
   }
   .feature-deck {
     margin-top: 34px;
@@ -762,7 +768,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
       </figure>
 
       <div class="feature-copy">
-        <h1 class="feature-title">Tokyo on the Vardar:<br class="feature-title-break">Kenzo Tange’s Reconstruction<br class="feature-title-break">of Skopje</h1>
+        <h1 class="feature-title">Tokyo on the Vardar:<br class="feature-title-break">Kenzo&nbsp;Tange’s Reconstruction<br class="feature-title-break">of Skopje</h1>
         <p class="feature-byline">Words Ace Trajkovski</p>
       </div>
     </div>
