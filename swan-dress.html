@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Swan Dress — Muzej</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&display=swap"
+    />
+
+    <style>
+      :root {
+        --background: #ffffff;
+        --foreground: #171513;
+        --muted: #70675d;
+        --rule: rgba(23, 21, 19, 0.09);
+        --rule-strong: rgba(23, 21, 19, 0.18);
+        --surface: #f1e9dd;
+        --surface-deep: #e4dac9;
+        --surface-soft: #f7f2e9;
+        --accent: #7f5243;
+        --red-carpet: #9b1e26;
+        --muzej-green: #686F5B;
+        --page-x: clamp(18px, 5.2vw, 72px);
+        --section-y: clamp(64px, 8.8vw, 128px);
+        --content-max: 1520px;
+        --serif: "Fraunces", serif;
+        --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      html,
+      body {
+        width: 100%;
+        min-height: 100%;
+        margin: 0;
+        background: var(--background);
+        color: var(--foreground);
+      }
+
+      body {
+        font-family: var(--sans);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      a:focus-visible,
+      button:focus-visible {
+        outline: 2px solid rgba(141, 79, 61, 0.45);
+        outline-offset: 3px;
+      }
+
+      .page {
+        width: 100%;
+        background: var(--background);
+      }
+
+      .shell {
+        width: min(100%, var(--content-max));
+        margin: 0 auto;
+        padding-left: var(--page-x);
+        padding-right: var(--page-x);
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: transparent;
+        pointer-events: none;
+      }
+
+      .header-frame {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: 1.5rem 2rem;
+        padding-top: 28px;
+        padding-bottom: 24px;
+      }
+
+      .brand-mark {
+        display: inline-flex;
+        align-items: center;
+        font-family: var(--serif);
+        font-size: clamp(2.55rem, 2.02rem + 1.52vw, 4rem);
+        line-height: 0.86;
+        letter-spacing: -0.05em;
+        font-weight: 560;
+        font-optical-sizing: auto;
+        white-space: nowrap;
+        transform: translate3d(0, 0, 0);
+        transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+        will-change: transform;
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+      }
+
+      .site-header .header-frame,
+      .site-header .brand-mark,
+      .site-header .header-tools {
+        pointer-events: auto;
+      }
+
+      body.muzej-logo-hidden .site-header .brand-mark {
+        transform: translate3d(0, calc(-100% - 42px), 0);
+      }
+
+      .utility-link,
+      .utility-menu-item {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 2rem;
+        border: 0;
+        background: transparent;
+        padding: 0;
+        font-family: var(--sans);
+        font-size: 0.72rem;
+        line-height: 1.2;
+        letter-spacing: 0.11em;
+        color: rgba(23, 21, 19, 0.58);
+        text-transform: uppercase;
+        transition: color 180ms ease, border-color 180ms ease;
+      }
+
+      .utility-link:hover,
+      .utility-menu-item:hover {
+        color: var(--foreground);
+      }
+
+      .header-tools {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+      }
+
+      .utility-menu {
+        position: relative;
+      }
+
+      .utility-menu summary {
+        list-style: none;
+      }
+
+      .utility-menu summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .utility-trigger {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.2rem 0;
+        border: 0;
+        background: transparent;
+        color: var(--foreground);
+        cursor: pointer;
+        transition: color 180ms ease, opacity 180ms ease;
+      }
+
+      .utility-trigger:hover {
+        opacity: 0.72;
+      }
+
+      .utility-icon {
+        display: grid;
+        gap: 0.26rem;
+      }
+
+      .utility-icon-line {
+        display: block;
+        width: 1.45rem;
+        height: 1px;
+        background: currentColor;
+        opacity: 0.88;
+      }
+
+      .utility-panel {
+        position: absolute;
+        top: calc(100% + 0.55rem);
+        right: 0;
+        z-index: 10;
+        display: grid;
+        min-width: 10rem;
+        padding: 0.45rem 0;
+        border: 1px solid rgba(23, 21, 19, 0.12);
+        background: #ffffff;
+        box-shadow: 0 10px 30px rgba(23, 21, 19, 0.08);
+      }
+
+      .utility-panel-group {
+        display: grid;
+        gap: 0;
+      }
+
+      .utility-panel-utility {
+        margin-top: 0.25rem;
+        padding-top: 0.35rem;
+        border-top: 1px solid rgba(23, 21, 19, 0.1);
+      }
+
+      .utility-panel .utility-link,
+      .utility-panel .utility-menu-item {
+        justify-content: flex-start;
+        min-height: 0;
+        width: 100%;
+        padding: 0.6rem 0.9rem;
+        text-align: left;
+        background: transparent;
+      }
+
+      .utility-panel-utility .utility-link {
+        font-size: 0.66rem;
+        letter-spacing: 0.14em;
+        color: rgba(23, 21, 19, 0.52);
+      }
+
+      .utility-panel .utility-link:hover,
+      .utility-panel .utility-menu-item:hover {
+        background: rgba(23, 21, 19, 0.035);
+      }
+
+      .rg-hero {
+        min-height: calc(100svh - 118px);
+        display: grid;
+        align-items: start;
+        padding-top: clamp(14px, 2.5vw, 42px);
+        padding-bottom: clamp(72px, 9vw, 140px);
+      }
+
+      .rg-hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.72fr);
+        gap: clamp(34px, 6vw, 108px);
+        align-items: center;
+        min-width: 0;
+      }
+
+      .rg-hero-copy {
+        max-width: 56rem;
+        min-width: 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 0.95rem;
+        font-family: var(--sans);
+        font-size: 0.72rem;
+        line-height: 1.2;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: rgba(23, 21, 19, 0.48);
+      }
+
+      .rg-title {
+        max-width: 9.2ch;
+        margin: 0;
+        font-family: var(--serif);
+        font-size: clamp(4.7rem, 9.2vw, 10.8rem);
+        line-height: 0.96;
+        letter-spacing: -0.035em;
+        font-weight: 350;
+        font-optical-sizing: auto;
+        text-wrap: balance;
+      }
+
+      .rg-dek {
+        width: 100%;
+        max-width: 34rem;
+        margin: clamp(1.3rem, 2vw, 2rem) 0 0;
+        font-size: clamp(1.08rem, 1.05rem + 0.3vw, 1.32rem);
+        line-height: 1.68;
+        color: var(--muted);
+        text-wrap: balance;
+        overflow-wrap: break-word;
+      }
+
+      .object-card {
+        min-width: 0;
+        padding-top: 0;
+      }
+
+      .object-card-label {
+        margin: 0 0 0.85rem;
+        font-size: 0.66rem;
+        line-height: 1.2;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: rgba(23, 21, 19, 0.48);
+      }
+
+      .swan-collage {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        min-width: 0;
+        margin-top: 32px;
+        aspect-ratio: 4 / 5.15;
+        min-height: 420px;
+        border: 1px solid rgba(23, 21, 19, 0.08);
+        background: var(--surface-soft);
+      }
+
+      .swan-collage img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+      }
+
+      .fact-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+        margin: 1.35rem 0 0;
+        border-top: 1px solid rgba(23, 21, 19, 0.16);
+      }
+
+      .swan-dress-post-image-text {
+        margin-top: calc(1.35rem + 32px);
+      }
+
+      .fact-row {
+        display: grid;
+        grid-template-columns: minmax(96px, 0.48fr) minmax(0, 1fr);
+        gap: 1rem;
+        padding: 0.82rem 0;
+        border-bottom: 1px solid rgba(23, 21, 19, 0.12);
+      }
+
+      .fact-row dt,
+      .fact-row dd {
+        margin: 0;
+      }
+
+      .fact-row dt {
+        font-size: 0.66rem;
+        line-height: 1.25;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(23, 21, 19, 0.45);
+      }
+
+      .fact-row dd {
+        font-family: var(--serif);
+        font-size: clamp(1.14rem, 1vw + 0.88rem, 1.55rem);
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+        font-weight: 350;
+      }
+
+      .rg-body {
+        padding-top: 0;
+        padding-bottom: clamp(32px, 4vw, 56px);
+      }
+
+      .body-grid {
+        --body-gap: clamp(34px, 6vw, 96px);
+        display: grid;
+        grid-template-columns: minmax(180px, 0.38fr) minmax(0, 0.62fr);
+        gap: var(--body-gap);
+        align-items: start;
+        min-width: 0;
+        padding-top: clamp(46px, 7vw, 96px);
+      }
+
+      .body-note {
+        position: sticky;
+        top: 92px;
+        max-width: 18rem;
+        padding-top: 0.4rem;
+      }
+
+      .body-note-title {
+        margin: 0;
+        font-family: var(--serif);
+        font-size: clamp(1.7rem, 2.4vw, 2.75rem);
+        line-height: 0.98;
+        letter-spacing: -0.03em;
+        font-weight: 350;
+      }
+
+      .prose {
+        max-width: 42rem;
+        min-width: 0;
+      }
+
+      .prose p {
+        margin: 0;
+        border: 0;
+        padding: 0;
+        font-family: inherit;
+        font-size: 1.16rem;
+        line-height: 1.72;
+        letter-spacing: normal;
+        font-weight: 400;
+        color: var(--foreground);
+        overflow-wrap: break-word;
+      }
+
+      .prose p + p {
+        margin-top: clamp(1.8rem, 3vw, 2.35rem);
+      }
+
+      .prose p:first-child {
+        margin-top: 0;
+      }
+
+      .more-from-muzej {
+        padding-top: clamp(32px, 4vw, 56px);
+        padding-bottom: clamp(82px, 10vw, 148px);
+        background: transparent;
+        color: var(--foreground);
+      }
+
+      .more-from-muzej-frame {
+        display: grid;
+        width: min(calc(100% - (var(--page-x) * 2)), 68rem);
+        max-width: 68rem;
+        margin: 0 auto;
+        padding-left: 0;
+        padding-right: 0;
+        border-top: 2px solid var(--foreground);
+        padding-top: clamp(2.1rem, 4vw, 3.25rem);
+      }
+
+      .more-from-muzej-title {
+        max-width: none;
+        margin: 0;
+        font-family: var(--serif);
+        font-size: clamp(1.45rem, 1vw + 1.1rem, 1.9rem);
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+        font-weight: 650;
+        font-optical-sizing: auto;
+      }
+
+      .related-list {
+        list-style: none;
+        margin: clamp(1.4rem, 2.5vw, 2rem) 0 0;
+        padding: 0;
+      }
+
+      .related-list li {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: clamp(1.1rem, 1.8vw, 1.6rem) 0;
+        border-top: 1px solid var(--rule);
+        align-items: start;
+      }
+
+      .related-list li:last-child {
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .related-list a {
+        font-family: var(--serif);
+        font-size: clamp(1.1rem, 1.3vw + 0.7rem, 1.55rem);
+        font-weight: 350;
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+        color: var(--foreground);
+        font-optical-sizing: auto;
+        border-bottom: none;
+        transition: color 180ms ease;
+      }
+
+      .related-list a:hover {
+        color: var(--muted);
+      }
+
+      .related-list .related-desc {
+        display: block;
+        margin-top: 0.45rem;
+        font-family: var(--sans);
+        font-size: clamp(0.82rem, 0.78rem + 0.18vw, 0.94rem);
+        line-height: 1.72;
+        letter-spacing: 0;
+        color: var(--muted);
+      }
+
+      .site-footer {
+        margin-top: 0;
+      }
+
+      .muzej-footer {
+        width: 100%;
+        padding: clamp(3.5rem, 7vw, 6rem) var(--page-x);
+        background: #000000;
+        color: #f7f2e9;
+      }
+
+      .footer-inner {
+        display: grid;
+        grid-template-columns: minmax(320px, 620px) minmax(180px, 260px);
+        gap: clamp(3rem, 7vw, 6rem);
+        justify-content: center;
+        align-items: start;
+        width: min(100%, 1160px);
+        margin: 0 auto;
+      }
+
+      .footer-brand {
+        min-width: 0;
+      }
+
+      .footer-wordmark {
+        display: inline-flex;
+        font-family: var(--serif);
+        font-size: clamp(3.1rem, 5vw, 5rem);
+        font-weight: 560;
+        line-height: 0.88;
+        letter-spacing: -0.055em;
+        font-optical-sizing: auto;
+      }
+
+      .footer-statement {
+        max-width: 38.75rem;
+        margin: clamp(1.15rem, 1.8vw, 1.45rem) 0 0;
+        font-size: clamp(1rem, 1vw + 0.72rem, 1.15rem);
+        line-height: 1.5;
+        color: rgba(247, 242, 233, 0.86);
+      }
+
+      .muzej-footer .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+        padding-top: 0.28rem;
+      }
+
+      .muzej-footer .footer-links a {
+        font-family: var(--sans);
+        font-size: 0.85rem;
+        line-height: 1.2;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: inherit;
+        text-decoration: none;
+        transition: opacity 180ms ease, text-decoration-color 180ms ease;
+      }
+
+      .muzej-footer .footer-links a:hover {
+        text-decoration: underline;
+        text-underline-offset: 0.25em;
+        opacity: 0.86;
+      }
+
+      @media (max-width: 1080px) {
+        .rg-hero-grid,
+        .body-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .rg-hero-copy,
+        .prose,
+        .body-note {
+          max-width: none;
+        }
+
+        .body-note {
+          position: static;
+        }
+
+        .swan-collage {
+          margin-top: 0;
+          min-height: 0;
+          max-height: 720px;
+        }
+
+        .swan-dress-post-image-text {
+          margin-top: 1.35rem;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .shell {
+          max-width: 100vw;
+        }
+
+        .header-frame {
+          grid-template-columns: 1fr;
+          justify-items: start;
+          gap: 0.85rem 1.25rem;
+          padding-top: 20px;
+          padding-bottom: 18px;
+        }
+
+        .brand-mark {
+          font-size: clamp(2.3rem, 10.8vw, 3.05rem);
+        }
+
+        .header-tools {
+          justify-content: flex-start;
+        }
+
+        .rg-hero {
+          min-height: auto;
+          padding-top: 12px;
+          padding-bottom: 64px;
+        }
+
+        .rg-hero-copy,
+        .object-card,
+        .body-note,
+        .prose {
+          width: min(100%, 21rem);
+          max-width: calc(100vw - (var(--page-x) * 2));
+        }
+
+        .rg-title {
+          max-width: 9.6ch;
+          font-size: clamp(3.95rem, 16vw, 5.8rem);
+          line-height: 0.98;
+          letter-spacing: -0.03em;
+        }
+
+        .rg-dek {
+          font-size: 1.03rem;
+          line-height: 1.66;
+        }
+
+        .fact-row {
+          grid-template-columns: 1fr;
+          gap: 0.32rem;
+        }
+
+        .footer-inner {
+          grid-template-columns: 1fr;
+          gap: 2.4rem;
+        }
+
+        .muzej-footer .footer-links {
+          padding-top: 0;
+        }
+
+        .utility-panel {
+          min-width: 9.25rem;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .brand-mark {
+          transition: none;
+          will-change: auto;
+        }
+
+        body.muzej-logo-hidden .site-header .brand-mark {
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <div class="shell header-frame">
+          <a class="brand-mark" href="index.html" aria-label="Muzej home">Muzej</a>
+
+          <div class="header-tools">
+            <details class="utility-menu">
+              <summary class="utility-trigger" aria-label="Open navigation menu">
+                <span class="utility-icon" aria-hidden="true">
+                  <span class="utility-icon-line"></span>
+                  <span class="utility-icon-line"></span>
+                  <span class="utility-icon-line"></span>
+                </span>
+              </summary>
+              <nav class="utility-panel" aria-label="Site navigation">
+                <div class="utility-panel-group">
+                  <a class="utility-link" href="index.html">Home</a>
+                  <a class="utility-link" href="index.html#selected-stories">Selected Stories</a>
+                  <a class="utility-link" href="index.html#in-rotation">In Rotation</a>
+                  <a class="utility-link" href="index.html#culture">Culture</a>
+                  <a class="utility-link" href="about.html">About Muzej</a>
+                </div>
+                <div class="utility-panel-group utility-panel-utility">
+                  <a class="utility-link" href="mailto:601030@protonmail.com">Contact</a>
+                  <a class="utility-link" href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                </div>
+              </nav>
+            </details>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="rg-article">
+          <section class="rg-hero" aria-labelledby="article-title">
+            <div class="shell rg-hero-grid">
+              <div class="rg-hero-copy">
+                <p class="eyebrow">Revolutionary Garments</p>
+                <h1 class="rg-title" id="article-title">The Swan Dress</h1>
+                <p class="rg-dek">
+                  The swan dress that turned the Oscars red carpet into theater.
+                </p>
+              </div>
+
+              <aside class="object-card" aria-label="Object facts">
+                <p class="object-card-label">Object Study</p>
+                <div class="swan-collage">
+                  <img
+                    src="./Assets/Swan%20Dress/swan-final.png"
+                    alt="Collage image for the Swan Dress article."
+                  />
+                </div>
+
+                <dl class="fact-grid swan-dress-post-image-text">
+                  <div class="fact-row">
+                    <dt>Designer</dt>
+                    <dd>Marjan Pejoski</dd>
+                  </div>
+                  <div class="fact-row">
+                    <dt>Worn by</dt>
+                    <dd>Björk</dd>
+                  </div>
+                  <div class="fact-row">
+                    <dt>Year</dt>
+                    <dd>2001</dd>
+                  </div>
+                  <div class="fact-row">
+                    <dt>Site</dt>
+                    <dd>73rd Academy Awards</dd>
+                  </div>
+                  <div class="fact-row">
+                    <dt>Museum context</dt>
+                    <dd>MoMA Björk retrospective</dd>
+                  </div>
+                </dl>
+              </aside>
+            </div>
+          </section>
+
+          <section class="rg-body">
+            <div class="shell body-grid">
+              <aside class="body-note" aria-label="Why it matters">
+                <h2 class="body-note-title">Why it matters</h2>
+              </aside>
+
+              <div class="prose">
+                <p>
+                  The dress matters because it did not treat the red carpet as a neutral
+                  setting for glamour. It used scale, humor, silhouette, and theatrical
+                  construction to turn a celebrity appearance into an image of lasting
+                  fashion consequence. Its importance lies not only in its visibility,
+                  but in its refusal to behave like a conventional evening gown.
+                </p>
+                <p class="small">
+                  Designed by Macedonian designer Marjan Pejoski and worn by Björk at
+                  the 73rd Academy Awards in 2001, the garment joined couture
+                  construction with theatrical image-making. Its white body, extended
+                  swan neck, and staged presence shifted attention from embellishment
+                  to silhouette, posture, and performance.
+                </p>
+              </div>
+            </div>
+          </section>
+        </article>
+
+        <section class="more-from-muzej" aria-labelledby="more-title">
+          <div class="shell more-from-muzej-frame">
+            <h2 class="more-from-muzej-title" id="more-title">More from Muzej</h2>
+            <ul class="related-list">
+              <li>
+                <a href="skopje-tange.html">Tokyo on the Vardar: Kenzo Tange’s Reconstruction of Skopje</a>
+                <span class="related-desc">How a Japanese Architect Impacted Skopje</span>
+              </li>
+              <li>
+                <a href="martinoski.html">The Many Faces of Nikola Martinoski</a>
+                <span class="related-desc">A portrait of a painter and the visual language of Macedonian modernism.</span>
+              </li>
+              <li>
+                <a href="wearing-the-nation.html">The Nation on Their Backs</a>
+                <span class="related-desc">A design note on football shirts, color, and national identity.</span>
+              </li>
+              <li>
+                <a href="longing-for-south.html">Longing for the South</a>
+                <span class="related-desc">“To see Ohrid / to see Struga.”</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer muzej-footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <span class="footer-wordmark">Muzej</span>
+            <p class="footer-statement">An editorial archive of Macedonian art, style, tradition, and culture.</p>
+          </div>
+
+          <nav class="footer-links" aria-label="Footer navigation">
+            <a href="about.html">ABOUT MUZEJ</a>
+            <a href="mailto:601030@protonmail.com">CONTACT</a>
+            <a href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer" aria-label="Open Muzej on Instagram">INSTAGRAM</a>
+          </nav>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      (function () {
+        var previousY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+        var ticking = false;
+        var revealZone = 24;
+        var motionThreshold = 4;
+        var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+        function updateMuzejLogoVisibility() {
+          var currentY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+          var delta = currentY - previousY;
+
+          if (reducedMotion.matches) {
+            document.body.classList.remove("muzej-logo-hidden");
+            ticking = false;
+            return;
+          }
+
+          if (currentY <= revealZone) {
+            document.body.classList.remove("muzej-logo-hidden");
+          } else if (delta > motionThreshold) {
+            document.body.classList.add("muzej-logo-hidden");
+          } else if (delta < -motionThreshold) {
+            document.body.classList.remove("muzej-logo-hidden");
+          }
+
+          previousY = currentY;
+          ticking = false;
+        }
+
+        function requestMuzejLogoVisibility() {
+          if (!ticking) {
+            window.requestAnimationFrame(updateMuzejLogoVisibility);
+            ticking = true;
+          }
+        }
+
+        window.addEventListener("scroll", requestMuzejLogoVisibility, { passive: true });
+        window.addEventListener("resize", requestMuzejLogoVisibility);
+
+        if (reducedMotion.addEventListener) {
+          reducedMotion.addEventListener("change", requestMuzejLogoVisibility);
+        } else if (reducedMotion.addListener) {
+          reducedMotion.addListener(requestMuzejLogoVisibility);
+        }
+
+        updateMuzejLogoVisibility();
+      })();
+    </script>
+  </body>
+</html>

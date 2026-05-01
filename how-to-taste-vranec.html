@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A Muzej guide to tasting Vranec, Macedonia’s flagship red wine grape: dark fruit, tannin, alcohol, origin, oak, blends, and regional expression.">
+<title>How to taste Vranec (like a sommelier) | МУЗЕЈ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&display=swap">
+<style>
+@font-face {
+  font-family: 'Adobe Jenson';
+  src: url('./fonts/AdobeJenson-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f0e0d;
+  --white: #ffffff;
+  --ink: #0f0e0d;
+  --ink-soft: rgba(15, 14, 13, 0.62);
+  --ink-faint: rgba(15, 14, 13, 0.12);
+  --muted: #70675d;
+  --rule: rgba(23, 21, 19, 0.09);
+  --page-x: clamp(18px, 5.2vw, 72px);
+  --nav-h: clamp(88px, 10vw, 128px);
+  --feature-w: min(1280px, calc(100vw - (var(--page-x) * 2)));
+  --rail-gap: clamp(28px, 5vw, 76px);
+  --body-col: minmax(380px, 560px);
+  --body-tail: clamp(16px, 1.4vw, 24px);
+  --section-gap: clamp(48px, 8vw, 108px);
+  --content-max: 1520px;
+  --serif: "Fraunces", serif;
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --article-serif: 'Adobe Jenson', Georgia, serif;
+  --brand-serif: "Fraunces", serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--article-serif);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+.shell {
+  width: min(100%, var(--content-max));
+  margin: 0 auto;
+  padding-left: var(--page-x);
+  padding-right: var(--page-x);
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  background: var(--background);
+}
+.header-frame {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  padding-top: 28px;
+  padding-bottom: 24px;
+}
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--serif);
+  font-size: clamp(2.55rem, 2.02rem + 1.52vw, 4rem);
+  line-height: 0.86;
+  letter-spacing: -0.05em;
+  font-weight: 560;
+  font-optical-sizing: auto;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.utility-link,
+.utility-menu-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  letter-spacing: 0.11em;
+  color: rgba(23, 21, 19, 0.58);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+.utility-link:hover,
+.utility-menu-item:hover {
+  color: var(--foreground);
+}
+.header-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.utility-menu {
+  position: relative;
+}
+.utility-menu summary {
+  list-style: none;
+}
+.utility-menu summary::-webkit-details-marker {
+  display: none;
+}
+.utility-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: color 180ms ease, opacity 180ms ease;
+}
+.utility-trigger:hover {
+  opacity: 0.72;
+}
+.utility-trigger:focus-visible {
+  outline: 2px solid rgba(141, 79, 61, 0.45);
+  outline-offset: 3px;
+}
+.utility-icon {
+  display: grid;
+  gap: 0.26rem;
+}
+.utility-icon-line {
+  display: block;
+  width: 1.45rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.88;
+}
+.utility-panel {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  right: 0;
+  z-index: 10;
+  display: grid;
+  min-width: 10rem;
+  padding: 0.45rem 0;
+  border: 1px solid rgba(23, 21, 19, 0.12);
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(23, 21, 19, 0.08);
+}
+.utility-panel-group {
+  display: grid;
+  gap: 0;
+}
+.utility-panel-utility {
+  margin-top: 0.25rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid rgba(23, 21, 19, 0.1);
+}
+.utility-panel .utility-link,
+.utility-panel .utility-menu-item {
+  justify-content: flex-start;
+  min-height: 0;
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  background: transparent;
+}
+.utility-panel-utility .utility-link {
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  color: rgba(23, 21, 19, 0.52);
+}
+.utility-panel .utility-menu-item {
+  cursor: pointer;
+}
+.utility-panel .utility-link:hover,
+.utility-panel .utility-menu-item:hover {
+  background: rgba(23, 21, 19, 0.035);
+}
+
+main {
+  padding-top: clamp(24px, 3.2vw, 48px);
+}
+
+.feature {
+  padding:
+    clamp(0px, 0.6vw, 6px)
+    clamp(16px, 3vw, 40px)
+    clamp(56px, 8vw, 102px);
+}
+.feature-inner {
+  display: grid;
+  grid-template-columns: minmax(420px, 1.06fr) minmax(300px, 0.84fr);
+  gap: clamp(22px, 3.8vw, 52px);
+  align-items: stretch;
+  max-width: min(1320px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
+  margin: 0 auto;
+}
+.feature-media {
+  margin: 0;
+}
+.feature-media img {
+  width: 100%;
+  height: clamp(620px, 80vh, 920px);
+  object-fit: cover;
+  object-position: center center;
+  background: var(--white);
+}
+.feature-copy {
+  min-height: clamp(620px, 80vh, 920px);
+  max-width: 27rem;
+  margin: 0 auto;
+  padding: clamp(26px, 3.6vw, 42px) 0 clamp(20px, 3vw, 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.feature-title {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(38px, 4.9vw, 76px);
+  font-weight: 400;
+  line-height: 0.96;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+.feature-title-break {
+  display: block;
+}
+.feature-byline {
+  margin: auto 0 0;
+  color: var(--ink-soft);
+  font-size: clamp(12px, 0.95vw, 14px);
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.feature-deck {
+  max-width: min(1320px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
+  margin: clamp(28px, 4vw, 52px) auto 0;
+  color: var(--ink);
+  font-size: clamp(17px, 1.55vw, 23px);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+}
+.article-shell {
+  max-width: var(--feature-w);
+  margin: 0 auto;
+  padding: 0 var(--page-x) clamp(32px, 4vw, 56px);
+}
+.content-row {
+  display: grid;
+  grid-template-columns: minmax(240px, 1.08fr) var(--body-col) var(--body-tail);
+  column-gap: var(--rail-gap);
+  align-items: start;
+}
+.article-body {
+  display: grid;
+  grid-template-columns: minmax(240px, 1.08fr) var(--body-col) var(--body-tail);
+  column-gap: var(--rail-gap);
+  align-items: start;
+  margin-bottom: var(--section-gap);
+}
+.content-row + .content-row {
+  margin-top: var(--section-gap);
+}
+.content-row .empty-rail,
+.article-body .empty-tail,
+.content-row .empty-tail {
+  min-height: 1px;
+}
+.article-body-media {
+  margin: 0;
+  align-self: start;
+  position: sticky;
+  top: calc(var(--nav-h) + clamp(12px, 2vw, 26px));
+}
+.article-body-media img {
+  width: 100%;
+  height: auto;
+}
+.article-body-media figcaption {
+  margin-top: 12px;
+  color: var(--ink-soft);
+  font-size: 8px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+.article-body-copy {
+  min-width: 0;
+}
+
+.section-heading {
+  margin: 0;
+  max-width: 15ch;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+}
+
+.body-block p {
+  margin: 0;
+  font-size: clamp(16px, 1.18vw, 18px);
+  line-height: 1.82;
+}
+.body-block p + p {
+  margin-top: 1.75em;
+}
+
+.guide-section {
+  padding-top: clamp(34px, 5vw, 62px);
+}
+.guide-section:first-child {
+  padding-top: 0;
+}
+.guide-section h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(31px, 3.2vw, 48px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.028em;
+}
+.guide-pull {
+  margin: 0.65em 0 0;
+  color: var(--ink);
+  font-size: clamp(20px, 2.15vw, 28px);
+  line-height: 1.14;
+  letter-spacing: -0.024em;
+}
+.guide-section p:not(.guide-pull) {
+  margin: 1.15em 0 0;
+  color: var(--ink);
+  font-size: clamp(16px, 1.18vw, 18px);
+  line-height: 1.82;
+}
+.why-label {
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 0.68em;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.pull-quote {
+  margin: 0;
+  max-width: none;
+  font-size: clamp(20px, 2.35vw, 26px);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+.gallery-reading {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 1.9vw, 24px);
+  margin: var(--section-gap) 0 0;
+}
+.gallery-reading-media,
+.gallery-reading-feature {
+  margin: 0;
+  aspect-ratio: 15 / 21;
+  overflow: hidden;
+}
+.gallery-reading-media img,
+.gallery-reading-feature img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-reading-side {
+  min-width: 0;
+}
+.article-body-lower {
+  margin-top: clamp(22px, 3vw, 34px);
+  margin-bottom: 0;
+}
+
+.site-footer {
+  margin: 0;
+}
+.more-from-muzej {
+  padding-top: clamp(32px, 4vw, 56px);
+  padding-bottom: clamp(82px, 10vw, 148px);
+  background: transparent;
+  color: var(--foreground);
+}
+.more-from-muzej-frame {
+  display: grid;
+  width: min(calc(100% - (var(--page-x) * 2)), 68rem);
+  max-width: 68rem;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  border-top: 2px solid var(--foreground);
+  padding-top: clamp(2.1rem, 4vw, 3.25rem);
+}
+.more-from-muzej-title {
+  max-width: none;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(1.45rem, 1vw + 1.1rem, 1.9rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 650;
+  font-optical-sizing: auto;
+}
+.related-list {
+  list-style: none;
+  margin: clamp(1.4rem, 2.5vw, 2rem) 0 0;
+  padding: 0;
+}
+.related-list li {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  padding: clamp(1.1rem, 1.8vw, 1.6rem) 0;
+  border-top: 1px solid var(--rule);
+  align-items: start;
+}
+.related-list li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+.related-list a {
+  font-family: var(--serif);
+  font-size: clamp(1.1rem, 1.3vw + 0.7rem, 1.55rem);
+  font-weight: 350;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+  font-optical-sizing: auto;
+  border-bottom: none;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+.related-list a:hover {
+  color: var(--muted);
+}
+.related-list .related-desc {
+  display: block;
+  margin-top: 0.45rem;
+  font-family: var(--sans);
+  font-size: clamp(0.82rem, 0.78rem + 0.18vw, 0.94rem);
+  line-height: 1.72;
+  letter-spacing: 0;
+  color: var(--muted);
+}
+.muzej-footer {
+  width: 100%;
+  padding: clamp(3.5rem, 7vw, 6rem) var(--page-x);
+  background: #000000;
+  color: #f7f2e9;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: minmax(320px, 620px) minmax(180px, 260px);
+  gap: clamp(3rem, 7vw, 6rem);
+  justify-content: center;
+  align-items: start;
+  width: min(100%, 1160px);
+  margin: 0 auto;
+}
+.footer-brand {
+  min-width: 0;
+}
+.footer-wordmark {
+  display: inline-flex;
+  font-family: var(--serif);
+  font-size: clamp(3.1rem, 5vw, 5rem);
+  font-weight: 560;
+  line-height: 0.88;
+  letter-spacing: -0.055em;
+  font-optical-sizing: auto;
+}
+.footer-statement {
+  max-width: 38.75rem;
+  margin: clamp(1.15rem, 1.8vw, 1.45rem) 0 0;
+  font-size: clamp(1rem, 1vw + 0.72rem, 1.15rem);
+  line-height: 1.5;
+  color: rgba(247, 242, 233, 0.86);
+}
+.muzej-footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-top: 0.28rem;
+}
+.muzej-footer .footer-links a {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  line-height: 1.2;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 180ms ease, text-decoration-color 180ms ease;
+}
+.muzej-footer .footer-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  opacity: 0.86;
+}
+
+@media (max-width: 1080px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+
+  .muzej-footer .footer-links {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 1140px) {
+  .header-frame {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 0.85rem 1.25rem;
+  }
+  .header-tools {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 980px) {
+  .menu-button {
+    padding: 8px 0 6px 18px;
+  }
+  .menu-panel {
+    padding: 0 calc(var(--page-x) + 18px) 0 var(--page-x);
+    gap: 16px;
+  }
+  .menu-panel a {
+    width: min(100%, 22rem);
+    font-size: clamp(26px, 5vw, 42px);
+  }
+  .feature-inner {
+    grid-template-columns: minmax(300px, 0.94fr) minmax(300px, 0.9fr);
+    gap: clamp(24px, 4vw, 46px);
+    align-items: stretch;
+  }
+  .feature-media img {
+    height: clamp(500px, 70vh, 720px);
+  }
+  .feature-copy {
+    min-height: clamp(500px, 70vh, 720px);
+    max-width: 23rem;
+  }
+  .feature-title {
+    font-size: clamp(34px, 4.35vw, 58px);
+  }
+  .feature-deck {
+    margin-top: clamp(30px, 4.2vw, 48px);
+    font-size: clamp(16px, 2.05vw, 20px);
+  }
+  .content-row {
+    grid-template-columns: minmax(170px, 0.82fr) minmax(0, 520px) clamp(14px, 1vw, 18px);
+  }
+  .article-body {
+    grid-template-columns: minmax(170px, 0.82fr) minmax(0, 520px) clamp(14px, 1vw, 18px);
+  }
+}
+
+@media (max-width: 760px) {
+  .header-frame {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .brand-mark {
+    font-size: clamp(2.3rem, 10.8vw, 3.05rem);
+  }
+}
+
+@media (max-width: 720px) {
+  .header-frame {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .brand-mark {
+    font-size: clamp(2.3rem, 10.8vw, 3.05rem);
+  }
+  .menu-button {
+    gap: 7px;
+    padding: 8px 0 6px 16px;
+    margin-top: 1px;
+  }
+  .menu-panel {
+    padding: 0 calc(var(--page-x) + 6px) 0 var(--page-x);
+    gap: 14px;
+  }
+  .menu-panel a {
+    width: min(100%, 16rem);
+    font-size: clamp(22px, 9vw, 30px);
+    line-height: 1.08;
+  }
+  .menu-panel a:last-child {
+    font-size: 18px;
+  }
+  .feature {
+    padding:
+      4px
+      var(--page-x)
+      48px;
+  }
+  .feature-inner,
+  .article-body,
+  .content-row {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    text-align: left;
+  }
+  .feature-inner {
+    display: grid;
+    gap: 22px;
+  }
+  .feature-media img {
+    height: clamp(360px, 56vh, 470px);
+  }
+  .article-body {
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .gallery-reading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin: 40px 0 0;
+  }
+  .article-body-media {
+    position: static;
+  }
+  .gallery-reading-media {
+    position: static;
+  }
+  .article-body-lower {
+    margin-top: 18px;
+    margin-bottom: 0;
+  }
+  .content-row .empty-tail {
+    display: none;
+  }
+  .article-body .empty-tail {
+    display: none;
+  }
+  .feature-copy {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+  }
+  .feature-title {
+    font-size: clamp(32px, 10.5vw, 50px);
+    line-height: 0.98;
+  }
+  .feature-byline {
+    margin: 28px 0 0;
+    font-size: 11px;
+  }
+  .feature-deck {
+    margin-top: 56px;
+    font-size: clamp(15px, 3.9vw, 18px);
+    line-height: 1.2;
+  }
+  .feature-title-break {
+    display: none;
+  }
+  .content-row + .content-row {
+    margin-top: 40px;
+  }
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: transparent;
+  pointer-events: none;
+}
+
+.site-header .header-frame,
+.site-header .brand-mark,
+.site-header .header-tools {
+  pointer-events: auto;
+}
+
+.site-header .brand-mark {
+  transform: translate3d(0, 0, 0);
+  transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.muzej-logo-hidden .site-header .brand-mark {
+  transform: translate3d(0, calc(-100% - 42px), 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header .brand-mark {
+    transition: none;
+    will-change: auto;
+  }
+
+  body.muzej-logo-hidden .site-header .brand-mark {
+    transform: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="shell header-frame">
+    <a class="brand-mark" href="index.html" aria-label="Muzej home">Muzej</a>
+
+    <div class="header-tools">
+      <details class="utility-menu">
+        <summary class="utility-trigger" aria-label="Open navigation menu">
+          <span class="utility-icon" aria-hidden="true">
+            <span class="utility-icon-line"></span>
+            <span class="utility-icon-line"></span>
+            <span class="utility-icon-line"></span>
+          </span>
+        </summary>
+        <nav class="utility-panel" aria-label="Site navigation">
+          <div class="utility-panel-group">
+            <a class="utility-link" href="index.html">Home</a>
+            <a class="utility-link" href="index.html#selected-stories">Selected Stories</a>
+            <a class="utility-link" href="index.html#in-rotation">In Rotation</a>
+            <a class="utility-link" href="index.html#culture">Culture</a>
+            <a class="utility-link" href="about.html">About Muzej</a>
+          </div>
+          <div class="utility-panel-group utility-panel-utility">
+            <a class="utility-link" href="mailto:601030@protonmail.com">Contact</a>
+            <a class="utility-link" href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main>
+  <header class="feature">
+    <div class="feature-inner">
+      <figure class="feature-media">
+        <img src="Assets/Vranec/vranec-tasting.jpg" alt="Wine being poured into a glass during a tasting">
+      </figure>
+
+      <div class="feature-copy">
+        <h1 class="feature-title">How to taste Vranec (like a sommelier)</h1>
+        <p class="feature-byline">Words Ace Trajkovski</p>
+      </div>
+    </div>
+    <p class="feature-deck">Dark fruit, firm tannin, and the problem of being too powerful.</p>
+  </header>
+
+  <article class="article-shell">
+    <section class="article-body">
+      <figure class="article-body-media">
+        <img src="Assets/Vranec/vranec-vineyard-top.png" alt="Vineyard at sunset with mountains in the background">
+      </figure>
+
+      <div class="article-body-copy">
+        <section class="guide-section">
+          <h2>Vranec</h2>
+          <p class="guide-pull">“The fruit is dark, but the wine still has lift.”</p>
+          <p><span class="why-label">Why:</span> Vranec is Vardar’s flagship red grape, and it rarely enters quietly. It is usually deep in color, full in body and built around black fruit: plum, blackberry, black cherry, sour cherry, sometimes violet, pepper or herbs. But the important thing is not size. Many wines are big. Fewer have shape. A good Vranec should begin with fruit, tighten with tannin, rise with acidity and finish somewhere more savory than sweet.</p>
+        </section>
+
+        <section class="guide-section">
+          <h2>Color</h2>
+          <p class="guide-pull">“Don’t give it points just for being dark.”</p>
+          <p><span class="why-label">Why:</span> Vranec can look impressive before you even smell it. The grape is thick-skinned, deeply pigmented and rich in anthocyanins, which helps explain the dark ruby or purple-edged color of many young bottles. But color is only evidence of extraction and grape character. It does not prove balance. A dark wine can still be dull, hot or clumsy. The better question is: does the wine move?</p>
+        </section>
+
+        <section class="guide-section">
+          <h2>Tannin</h2>
+          <p class="guide-pull">“The tannins are firm, but they’re ripe.”</p>
+          <p><span class="why-label">Why:</span> Tannin is where Vranec proves itself. The grape naturally gives structure, dry extract and grip, so the issue is not whether tannin is present. It will be. The issue is whether it feels integrated. Good tannin frames the wine. Bad tannin dries out the finish after the fruit has disappeared. One of the most useful sentences in tasting Vranec is: “The tannin outlasts the fruit.” That is a polite way of saying the wine is not balanced.</p>
+        </section>
+
+        <section class="guide-section">
+          <h2>Alcohol</h2>
+          <p class="guide-pull">“There’s warmth, but it isn’t leading.”</p>
+          <p><span class="why-label">Why:</span> Vranec ripens generously, especially in warmer districts. That can give the wines breadth, body and a certain southern confidence. But alcohol should support the wine, not announce itself. Balanced warmth feels expansive. Unbalanced heat catches at the back of the throat. If the wine feels sweet, heavy or short, the problem may not be ripeness itself, but ripeness without enough freshness to carry it.</p>
+        </section>
+
+        <section class="guide-section">
+          <h2>Origin</h2>
+          <p class="guide-pull">“Adopted flagship, not native-born mascot.”</p>
+          <p><span class="why-label">Why:</span> Vranec is central to modern Macedonian red wine, but its official origin points to Montenegro, where it is known as Vranac. Genetic records identify it as the offspring of Duljenga and Kratošija.</p>
+        </section>
+
+        <section class="guide-section">
+          <h2>Tikveš</h2>
+          <p class="guide-pull">“This is the reference point.”</p>
+          <p><span class="why-label">Why:</span> Tikveš is the classic center of Macedonian wine and the easiest place to understand Vranec in its most recognizable form. Mediterranean warmth meets continental influence, and the better sites can give concentration without losing freshness. Expect dark fruit, body, tannin and, in the best examples, enough acidity to keep the wine from becoming merely heavy. Tikveš Vranec is the baseline: generous, structured and serious.</p>
+        </section>
+      </div>
+
+      <div class="empty-tail" aria-hidden="true"></div>
+    </section>
+
+    <section class="article-body">
+      <figure class="article-body-media">
+        <img src="Assets/Vranec/vranec-grapes-bottom.png" alt="Dark grape clusters hanging on the vine">
+      </figure>
+
+      <div class="article-body-copy">
+        <section class="guide-section">
+          <h2>The Far South</h2>
+          <p class="guide-pull">“The sun is in the glass.”</p>
+          <p><span class="why-label">Why:</span> In warmer southern districts such as Gevgelija-Valandovo and Strumica-Radovish, Vranec can become more solar: riper fruit, bigger body, warmer alcohol, more dry extract. These wines can be seductive, but they are also risky. If sugar ripeness arrives before phenolic ripeness, the wine may taste ripe and alcoholic while the tannins still feel hard. The best versions feel Mediterranean. The weaker ones feel overexposed.</p>
+        </section>
+
+        <section class="guide-section">
+          <h2>Wind and Altitude</h2>
+          <p class="guide-pull">“This is where the stereotype starts to break.”</p>
+          <p><span class="why-label">Why:</span> Ovche Pole and Kochani-Vinica complicate the idea that Vranec is always dark, hot and thick. Wind, altitude, diurnal shifts and poorer soils can push the grape toward a fresher, more angular expression: red fruit instead of only black fruit, herbs, pepper, firmer lines and a more savory finish. These wines matter because they show Vranec as something other than a warm-climate blockbuster. They make it intellectual.</p>
+        </section>
+
+        <section class="guide-section">
+          <h2>Oak</h2>
+          <p class="guide-pull">“The oak supports the fruit.”</p>
+          <p><span class="why-label">Why:</span> Vranec can take oak, but oak can also make it anonymous. Cedar, spice, polish and length can flatter the grape. Vanilla, coconut, mocha and sweetness can bury it. This is especially important because Vranec already has power. It does not need cosmetic weight. The best oak-aged versions use barrel as architecture. The worst use it as makeup.</p>
+        </section>
+
+        <section class="guide-section">
+          <h2>Blends</h2>
+          <p class="guide-pull">“Vranec is giving the blend its backbone.”</p>
+          <p><span class="why-label">Why:</span> Vranec does not have to appear alone to be important. In blends, it can provide color, tannin, extract and dark-fruit depth. With Cabernet Sauvignon, it can reinforce structure. With Merlot, it can add body and freshness. With Kratošija, its traditional partner and genetic parent, it can become brighter and less severe. The smart question is not always “Is this 100 percent Vranec?” It is: “What role is Vranec playing?”</p>
+        </section>
+
+        <section class="guide-section">
+          <h2>What Good Vranec Does</h2>
+          <p class="guide-pull">“Powerful, but not clumsy.”</p>
+          <p><span class="why-label">Why:</span> Good Vranec has depth without dead weight. It is dark-fruited, but not flat. Firm, but not punishing. Warm, but not hot. Oaked, maybe, but not disguised. The best examples have sequence: fruit, grip, freshness, savory finish. That sequence is everything. A merely rich Vranec ends sweet, hot or blunt. A better one keeps going.</p>
+        </section>
+
+        <section class="guide-section">
+          <h2>The Point</h2>
+          <p class="guide-pull">“The question is not whether Vranec is big. It usually is.”</p>
+          <p><span class="why-label">Why:</span> The useful question is: what kind of big? Vranec can be rustic or polished, solar or fresh, oaked or transparent, monolithic or full of regional detail. Its interest lies in that tension. It is not a tidy grape, and that is precisely why it is worth learning. It carries the warmth of the Balkans, the ambition of a young export economy and the old problem of powerful wines everywhere: how to be serious without becoming heavy.</p>
+        </section>
+      </div>
+
+      <div class="empty-tail" aria-hidden="true"></div>
+    </section>
+
+  </article>
+
+  <section class="more-from-muzej" aria-labelledby="more-title">
+    <div class="shell more-from-muzej-frame">
+      <h2 class="more-from-muzej-title" id="more-title">More from Muzej</h2>
+      <ul class="related-list">
+        <li>
+          <a href="swan-dress.html">The dress that turned the red carpet into theater.</a>
+          <span class="related-desc">A profile of a garment where fashion and performance meet.</span>
+        </li>
+        <li>
+          <a href="skopje-tange.html">Tokyo on the Vardar: Kenzo Tange’s Reconstruction of Skopje</a>
+          <span class="related-desc">How Japanese urban theory found form in Macedonia.</span>
+        </li>
+        <li>
+          <a href="martinoski.html">The Many Faces of Nikola Martinoski</a>
+          <span class="related-desc">A portrait of a painter and the visual language of Macedonian modernism.</span>
+        </li>
+        <li>
+          <a href="prespa.html">Prespa, in Quiet Light</a>
+          <span class="related-desc">Lake, mountain, orchard, and a slower study of the Macedonian south.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer muzej-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-wordmark">Muzej</span>
+      <p class="footer-statement">An editorial archive of Macedonian art, style, tradition, and culture.</p>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="about.html">ABOUT MUZEJ</a>
+      <a href="mailto:601030@protonmail.com">CONTACT</a>
+      <a href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer" aria-label="Open Muzej on Instagram">INSTAGRAM</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+const menuButton = document.getElementById('menuButton');
+const menuPanel = document.getElementById('menuPanel');
+
+if (menuButton && menuPanel) {
+  const setMenuState = (isOpen) => {
+    menuPanel.classList.toggle('open', isOpen);
+    menuButton.classList.toggle('is-open', isOpen);
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+    menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  };
+
+  menuButton.addEventListener('click', () => {
+    setMenuState(!menuPanel.classList.contains('open'));
+  });
+
+  menuPanel.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setMenuState(false));
+  });
+}
+</script>
+
+<script>
+  (function () {
+    var previousY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+    var ticking = false;
+    var revealZone = 24;
+    var motionThreshold = 4;
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    function updateMuzejLogoVisibility() {
+      var currentY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+      var delta = currentY - previousY;
+
+      if (reducedMotion.matches) {
+        document.body.classList.remove("muzej-logo-hidden");
+        ticking = false;
+        return;
+      }
+
+      if (currentY <= revealZone) {
+        document.body.classList.remove("muzej-logo-hidden");
+      } else if (delta > motionThreshold) {
+        document.body.classList.add("muzej-logo-hidden");
+      } else if (delta < -motionThreshold) {
+        document.body.classList.remove("muzej-logo-hidden");
+      }
+
+      previousY = currentY;
+      ticking = false;
+    }
+
+    function requestMuzejLogoVisibility() {
+      if (!ticking) {
+        window.requestAnimationFrame(updateMuzejLogoVisibility);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener("scroll", requestMuzejLogoVisibility, { passive: true });
+    window.addEventListener("resize", requestMuzejLogoVisibility);
+
+    if (reducedMotion.addEventListener) {
+      reducedMotion.addEventListener("change", requestMuzejLogoVisibility);
+    } else if (reducedMotion.addListener) {
+      reducedMotion.addListener(requestMuzejLogoVisibility);
+    }
+
+    updateMuzejLogoVisibility();
+  })();
+</script>
+
+</body>
+</html>

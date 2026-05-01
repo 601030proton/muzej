@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Nation on Their Backs. Five Macedonian shirts, and what they reveal about design, memory, and the limits of reinvention.">
+<title>The Nation on Their Backs | Muzej</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&display=swap">
+<style>
+@font-face {
+  font-family: 'Adobe Jenson';
+  src: url('./fonts/AdobeJenson-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f0e0d;
+  --white: #ffffff;
+  --ink: #0f0e0d;
+  --ink-soft: rgba(15, 14, 13, 0.62);
+  --ink-faint: rgba(15, 14, 13, 0.12);
+  --muted: #70675d;
+  --rule: rgba(23, 21, 19, 0.09);
+  --page-x: clamp(18px, 5.2vw, 72px);
+  --nav-h: clamp(88px, 10vw, 128px);
+  --feature-w: min(1280px, calc(100vw - (var(--page-x) * 2)));
+  --rail-gap: clamp(28px, 5vw, 76px);
+  --body-col: minmax(380px, 560px);
+  --body-tail: clamp(16px, 1.4vw, 24px);
+  --section-gap: clamp(48px, 8vw, 108px);
+  --content-max: 1520px;
+  --serif: "Fraunces", serif;
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --article-serif: 'Adobe Jenson', Georgia, serif;
+  --brand-serif: "Fraunces", serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--article-serif);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+.shell {
+  width: min(100%, var(--content-max));
+  margin: 0 auto;
+  padding-left: var(--page-x);
+  padding-right: var(--page-x);
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  background: var(--background);
+}
+.header-frame {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  padding-top: 28px;
+  padding-bottom: 24px;
+}
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--serif);
+  font-size: clamp(2.55rem, 2.02rem + 1.52vw, 4rem);
+  line-height: 0.86;
+  letter-spacing: -0.05em;
+  font-weight: 560;
+  font-optical-sizing: auto;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.utility-link,
+.utility-menu-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  letter-spacing: 0.11em;
+  color: rgba(23, 21, 19, 0.58);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+.utility-link:hover,
+.utility-menu-item:hover {
+  color: var(--foreground);
+}
+.header-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.utility-menu {
+  position: relative;
+}
+.utility-menu summary {
+  list-style: none;
+}
+.utility-menu summary::-webkit-details-marker {
+  display: none;
+}
+.utility-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: color 180ms ease, opacity 180ms ease;
+}
+.utility-trigger:hover {
+  opacity: 0.72;
+}
+.utility-trigger:focus-visible {
+  outline: 2px solid rgba(141, 79, 61, 0.45);
+  outline-offset: 3px;
+}
+.utility-icon {
+  display: grid;
+  gap: 0.26rem;
+}
+.utility-icon-line {
+  display: block;
+  width: 1.45rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.88;
+}
+.utility-panel {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  right: 0;
+  z-index: 10;
+  display: grid;
+  min-width: 10rem;
+  padding: 0.45rem 0;
+  border: 1px solid rgba(23, 21, 19, 0.12);
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(23, 21, 19, 0.08);
+}
+.utility-panel-group {
+  display: grid;
+  gap: 0;
+}
+.utility-panel-utility {
+  margin-top: 0.25rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid rgba(23, 21, 19, 0.1);
+}
+.utility-panel .utility-link,
+.utility-panel .utility-menu-item {
+  justify-content: flex-start;
+  min-height: 0;
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  background: transparent;
+}
+.utility-panel-utility .utility-link {
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  color: rgba(23, 21, 19, 0.52);
+}
+.utility-panel .utility-menu-item {
+  cursor: pointer;
+}
+.utility-panel .utility-link:hover,
+.utility-panel .utility-menu-item:hover {
+  background: rgba(23, 21, 19, 0.035);
+}
+
+main {
+  padding-top: clamp(24px, 3.2vw, 48px);
+}
+
+.feature {
+  padding:
+    clamp(0px, 0.6vw, 6px)
+    clamp(16px, 3vw, 40px)
+    clamp(56px, 8vw, 102px);
+}
+.feature-inner {
+  display: grid;
+  grid-template-columns: minmax(420px, 1.06fr) minmax(300px, 0.84fr);
+  gap: clamp(22px, 3.8vw, 52px);
+  align-items: stretch;
+  max-width: min(1320px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
+  margin: 0 auto;
+}
+.feature-media {
+  margin: 0;
+}
+.feature-media img {
+  width: 100%;
+  height: clamp(620px, 80vh, 920px);
+  object-fit: cover;
+  object-position: center;
+  background: var(--white);
+}
+.feature-copy {
+  min-height: clamp(620px, 80vh, 920px);
+  max-width: 28rem;
+  margin: 0 auto;
+  padding: clamp(26px, 3.6vw, 42px) 0 clamp(20px, 3vw, 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.feature-kicker {
+  margin: 0 0 1.2rem;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.feature-title {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(42px, 5.2vw, 82px);
+  font-weight: 400;
+  line-height: 0.96;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+.feature-byline {
+  margin: auto 0 0;
+  color: var(--ink-soft);
+  font-size: clamp(12px, 0.95vw, 14px);
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.feature-deck {
+  max-width: min(1320px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
+  margin: clamp(28px, 4vw, 52px) auto 0;
+  color: var(--ink);
+  font-size: clamp(17px, 1.55vw, 23px);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+}
+.article-shell {
+  max-width: var(--feature-w);
+  margin: 0 auto;
+  padding: 0 var(--page-x) clamp(84px, 10vw, 132px);
+}
+.content-row {
+  display: grid;
+  grid-template-columns: minmax(240px, 1.08fr) var(--body-col) var(--body-tail);
+  column-gap: var(--rail-gap);
+  align-items: start;
+}
+.article-body {
+  display: grid;
+  grid-template-columns: minmax(240px, 1.08fr) var(--body-col) var(--body-tail);
+  column-gap: var(--rail-gap);
+  align-items: start;
+  margin-bottom: var(--section-gap);
+}
+.content-row + .content-row {
+  margin-top: var(--section-gap);
+}
+.content-row .empty-rail,
+.article-body .empty-tail,
+.content-row .empty-tail {
+  min-height: 1px;
+}
+.article-body-media {
+  margin: 0;
+  align-self: start;
+  position: sticky;
+  top: calc(var(--nav-h) + clamp(12px, 2vw, 26px));
+}
+.article-body-copy {
+  min-width: 0;
+}
+.section-heading {
+  margin: 0 0 1.15em;
+  max-width: 15ch;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+}
+.body-block p {
+  margin: 0;
+  font-size: clamp(16px, 1.18vw, 18px);
+  line-height: 1.82;
+}
+.body-block p + p,
+.body-block p + .section-heading {
+  margin-top: 1.75em;
+}
+.pull-quote {
+  margin: 0;
+  max-width: none;
+  font-size: clamp(20px, 2.35vw, 26px);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+.gallery-reading {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 1.9vw, 24px);
+  margin: var(--section-gap) 0 0;
+}
+.gallery-reading-media,
+.gallery-reading-feature {
+  margin: 0;
+  aspect-ratio: 15 / 21;
+  overflow: hidden;
+}
+.gallery-reading-side {
+  min-width: 0;
+}
+.article-body-lower {
+  margin-top: clamp(22px, 3vw, 34px);
+  margin-bottom: 0;
+}
+.article-image-placeholder {
+  display: block;
+  width: 100%;
+  border: 1px solid rgba(23, 21, 19, 0.08);
+  background:
+    linear-gradient(180deg, #f7f2e9 0%, #f1e9dd 100%);
+}
+.article-image-placeholder--portrait {
+  aspect-ratio: 3 / 4;
+}
+.article-image-placeholder--spread {
+  aspect-ratio: 16 / 10;
+}
+.gallery-reading .article-image-placeholder {
+  height: 100%;
+}
+.article-image-placeholder img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.article-image-placeholder:has(img[src*="/Jerseys/"]) {
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  background: transparent;
+}
+.article-image-placeholder:has(img[src*="/Jerseys/"]) img {
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+}
+.article-image-placeholder:has(img[src$="/new2.png"]) img,
+.article-image-placeholder:has(img[src$="/nation-on-their-backs-03.png"]) img {
+  object-fit: contain;
+}
+.more-from-muzej {
+  padding-top: clamp(24px, 4vw, 56px);
+  padding-bottom: clamp(82px, 10vw, 148px);
+  background: transparent;
+  color: var(--foreground);
+}
+.more-from-muzej-frame {
+  display: grid;
+  width: min(calc(100% - (var(--page-x) * 2)), 68rem);
+  max-width: 68rem;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  border-top: 2px solid var(--foreground);
+  padding-top: clamp(2.1rem, 4vw, 3.25rem);
+}
+.more-from-muzej-title {
+  max-width: none;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(1.45rem, 1vw + 1.1rem, 1.9rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 650;
+  font-optical-sizing: auto;
+}
+.related-list {
+  list-style: none;
+  margin: clamp(1.4rem, 2.5vw, 2rem) 0 0;
+  padding: 0;
+}
+.related-list li {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  padding: clamp(1.1rem, 1.8vw, 1.6rem) 0;
+  border-top: 1px solid var(--rule);
+  align-items: start;
+}
+.related-list li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+.related-list a {
+  font-family: var(--serif);
+  font-size: clamp(1.1rem, 1.3vw + 0.7rem, 1.55rem);
+  font-weight: 350;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+  font-optical-sizing: auto;
+  border-bottom: none;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+.related-list a:hover {
+  color: var(--muted);
+}
+.related-list .related-desc {
+  display: block;
+  margin-top: 0.45rem;
+  font-family: var(--sans);
+  font-size: clamp(0.82rem, 0.78rem + 0.18vw, 0.94rem);
+  line-height: 1.72;
+  letter-spacing: 0;
+  color: var(--muted);
+}
+.site-footer {
+  margin-top: 0;
+}
+.muzej-footer {
+  width: 100%;
+  padding: clamp(3.5rem, 7vw, 6rem) var(--page-x);
+  background: #000000;
+  color: #f7f2e9;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: minmax(320px, 620px) minmax(180px, 260px);
+  gap: clamp(3rem, 7vw, 6rem);
+  justify-content: center;
+  align-items: start;
+  width: min(100%, 1160px);
+  margin: 0 auto;
+}
+.footer-brand {
+  min-width: 0;
+}
+.footer-wordmark {
+  display: inline-flex;
+  font-family: var(--serif);
+  font-size: clamp(3.1rem, 5vw, 5rem);
+  font-weight: 560;
+  line-height: 0.88;
+  letter-spacing: -0.055em;
+  font-optical-sizing: auto;
+}
+.footer-statement {
+  max-width: 38.75rem;
+  margin: clamp(1.15rem, 1.8vw, 1.45rem) 0 0;
+  font-size: clamp(1rem, 1vw + 0.72rem, 1.15rem);
+  line-height: 1.5;
+  color: rgba(247, 242, 233, 0.86);
+}
+.muzej-footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-top: 0.28rem;
+}
+.muzej-footer .footer-links a {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  line-height: 1.2;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 180ms ease, text-decoration-color 180ms ease;
+}
+.muzej-footer .footer-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  opacity: 0.86;
+}
+
+@media (max-width: 1080px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+
+  .muzej-footer .footer-links {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 1140px) {
+  .header-frame {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 0.85rem 1.25rem;
+  }
+  .header-tools {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 980px) {
+  .feature-inner {
+    grid-template-columns: minmax(300px, 0.94fr) minmax(300px, 0.9fr);
+    gap: clamp(24px, 4vw, 46px);
+    align-items: stretch;
+  }
+  .feature-media img {
+    height: clamp(500px, 70vh, 720px);
+  }
+  .feature-copy {
+    min-height: clamp(500px, 70vh, 720px);
+    max-width: 23rem;
+  }
+  .feature-title {
+    font-size: clamp(34px, 4.35vw, 58px);
+  }
+  .feature-deck {
+    margin-top: clamp(30px, 4.2vw, 48px);
+    font-size: clamp(16px, 2.05vw, 20px);
+  }
+  .content-row {
+    grid-template-columns: minmax(170px, 0.82fr) minmax(0, 520px) clamp(14px, 1vw, 18px);
+  }
+  .article-body {
+    grid-template-columns: minmax(170px, 0.82fr) minmax(0, 520px) clamp(14px, 1vw, 18px);
+  }
+}
+
+@media (max-width: 760px) {
+  .header-frame {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .brand-mark {
+    font-size: clamp(2.3rem, 10.8vw, 3.05rem);
+  }
+}
+
+@media (max-width: 720px) {
+  .feature {
+    padding:
+      4px
+      var(--page-x)
+      48px;
+  }
+  .feature-inner,
+  .article-body,
+  .content-row {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    text-align: left;
+  }
+  .feature-inner {
+    display: grid;
+    gap: 22px;
+  }
+  .feature-media img {
+    height: clamp(330px, 52vh, 440px);
+  }
+  .article-body {
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .gallery-reading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin: 40px 0 0;
+  }
+  .article-body-media {
+    position: static;
+  }
+  .article-body-lower {
+    margin-top: 18px;
+    margin-bottom: 0;
+  }
+  .content-row .empty-tail,
+  .article-body .empty-tail {
+    display: none;
+  }
+  .feature-copy {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+  }
+  .feature-title {
+    font-size: clamp(32px, 10.5vw, 50px);
+    line-height: 0.98;
+  }
+  .feature-byline {
+    margin: 28px 0 0;
+    font-size: 11px;
+  }
+  .feature-deck {
+    margin-top: 34px;
+    font-size: clamp(15px, 3.9vw, 18px);
+    line-height: 1.2;
+  }
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: transparent;
+  pointer-events: none;
+}
+
+.site-header .header-frame,
+.site-header .brand-mark,
+.site-header .header-tools {
+  pointer-events: auto;
+}
+
+.site-header .brand-mark {
+  transform: translate3d(0, 0, 0);
+  transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.muzej-logo-hidden .site-header .brand-mark {
+  transform: translate3d(0, calc(-100% - 42px), 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header .brand-mark {
+    transition: none;
+    will-change: auto;
+  }
+
+  body.muzej-logo-hidden .site-header .brand-mark {
+    transform: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="shell header-frame">
+    <a class="brand-mark" href="index.html" aria-label="Muzej home">Muzej</a>
+
+    <div class="header-tools">
+      <details class="utility-menu">
+        <summary class="utility-trigger" aria-label="Open navigation menu">
+          <span class="utility-icon" aria-hidden="true">
+            <span class="utility-icon-line"></span>
+            <span class="utility-icon-line"></span>
+            <span class="utility-icon-line"></span>
+          </span>
+        </summary>
+        <nav class="utility-panel" aria-label="Site navigation">
+          <div class="utility-panel-group">
+            <a class="utility-link" href="index.html">Home</a>
+            <a class="utility-link" href="index.html#selected-stories">Selected Stories</a>
+            <a class="utility-link" href="index.html#in-rotation">In Rotation</a>
+            <a class="utility-link" href="index.html#culture">Culture</a>
+            <a class="utility-link" href="about.html">About Muzej</a>
+          </div>
+          <div class="utility-panel-group utility-panel-utility">
+            <a class="utility-link" href="mailto:601030@protonmail.com">Contact</a>
+            <a class="utility-link" href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main>
+  <header class="feature">
+    <div class="feature-inner">
+      <figure class="feature-media">
+        <img src="./Assets/Wearing%20the%20Nation/e9d02185-3178-4851-b0b0-ef36d7436568.png" alt="A collection of Macedonian football shirts in red, yellow, and white.">
+      </figure>
+
+      <div class="feature-copy">
+        <p class="feature-kicker">Sport | Design</p>
+        <h1 class="feature-title">The Nation on Their Backs</h1>
+        <p class="feature-byline">Words Ace Trajkovski</p>
+      </div>
+    </div>
+    <p class="feature-deck">Five Macedonian shirts, and what they reveal about design, memory, and the limits of reinvention.</p>
+  </header>
+
+  <article class="article-shell">
+    <section class="article-body">
+      <figure class="article-body-media">
+        <div class="article-image-placeholder article-image-placeholder--portrait">
+          <img src="Assets/Wearing the Nation/Jerseys/1.png" alt="Red Macedonian football shirt with yellow collar">
+        </div>
+      </figure>
+
+      <div class="article-body-copy body-block">
+        <h2 class="section-heading">A palette under pressure</h2>
+
+        <p>Most national-team shirts are asked to do a few simple things: read clearly on television, flatter the sponsor, move merchandise, maybe flatter the past. Macedonia’s shirts have had a heavier assignment. Since independence in 1991, the country’s public symbols have been repeatedly revised, contested, or internationalized. The flag changed in 1995 under Greek pressure. The country’s name changed under the Prespa Agreement in 2018. Even the initials on the crest became a matter of complaint during the European Championship in 2021.</p>
+
+        <p>That history helps explain why Macedonian shirts are not merely sportswear. They are visual arguments. Their success depends on more than cut or trend. They have to solve a harder design problem: how do you make a nation legible to itself?</p>
+
+        <p>Over the past three decades, five shirts have answered that question in distinct ways. Taken together, they show a clear evolution—from color as identity, to geometry as signal, to iconography as system, to a brief and failed symbolic detour, and finally back to the most stable language of all: red, yellow, and the sun.</p>
+
+        <h2 class="section-heading">From color to composition</h2>
+
+        <p>The 1994 Gems home shirt is the right place to begin because it is so restrained. Red body, subtle jacquard texture, yellow polo collar, white buttons. By contemporary standards, it is almost anti-graphic. It does not dramatize the state. It does not turn the torso into a billboard for national mythology. It simply establishes the palette.</p>
+
+        <p>That modesty is part of its intelligence. In a new footballing nation, appearing in competition in unmistakable red and yellow already carried symbolic weight. The shirt did not need to illustrate Macedonia. It only needed to wear it. For a design audience, the lesson is familiar: a system often begins not with expression but with discipline. Before the symbol becomes explicit, the palette has to become undeniable.</p>
+
+        <p>The 1998 Puma home shirt moved from discipline to signal. Here the red base is interrupted by a bold yellow horizontal band across the chest and sleeves, with yellow cuffs and a red-yellow V-neck. The effect is sharper, louder, and much more modern. If the Gems shirt used color as accent, the Puma shirt used it as structure.</p>
+
+        <p>This is the first Macedonian shirt that feels fully tuned to broadcast-era design. The yellow band reads like a banner, a piece of visual shorthand that works at distance, in motion, and under stadium lights. It also marks the team’s transition into the template culture of late-nineties global sportswear. Yet the shirt never loses specificity. It borrows Puma’s commercial grammar, then bends it toward a distinctly Macedonian message. Red and yellow are no longer just present; they are organized for legibility.</p>
+
+        <p>That distinction matters. Good kit design is not only about symbolism. It is about hierarchy. What reads first? What survives motion blur? What can be recognized from the upper deck or a paused replay? The 1998 shirt understood that national identity, on a football field, is partly a problem of contrast.</p>
+      </div>
+      <div class="empty-tail" aria-hidden="true"></div>
+    </section>
+
+    <div class="content-row">
+      <div class="empty-rail" aria-hidden="true"></div>
+      <aside class="pull-quote">A Macedonian shirt is never just a shirt. It carries more than fabric can comfortably hold.</aside>
+      <div class="empty-tail" aria-hidden="true"></div>
+    </div>
+
+    <section class="gallery-reading" aria-label="Editorial images of Macedonian football shirts">
+      <figure class="gallery-reading-media">
+        <div class="article-image-placeholder article-image-placeholder--spread">
+          <img src="Assets/Wearing the Nation/Jerseys/new2.png" alt="Red Macedonian football jersey with yellow sleeve stripes">
+        </div>
+      </figure>
+
+      <div class="gallery-reading-side">
+        <figure class="gallery-reading-feature">
+          <div class="article-image-placeholder article-image-placeholder--portrait">
+            <img src="Assets/Wearing the Nation/Jerseys/nation-on-their-backs-03.png" alt="Red Macedonian football jersey with yellow sunburst design">
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="article-body article-body-lower">
+      <figure class="article-body-media">
+        <div class="article-image-placeholder article-image-placeholder--portrait">
+          <img src="Assets/Wearing the Nation/Jerseys/4.png" alt="Burgundy Macedonian football shirt with geometric lynx graphic">
+        </div>
+      </figure>
+
+      <div class="article-body-copy body-block">
+        <h2 class="section-heading">When the symbol takes over</h2>
+
+        <p>By 2016, under JAKO, the shirt stopped merely arranging national colors and began translating a national symbol. The home jersey introduced that year used a front graphic inspired by the eight-rayed sun of the Macedonian flag, with a slightly wavy composition intended to evoke the flag moving in the wind.</p>
+
+        <p>This was a conceptual jump. Earlier shirts implied the nation through palette or layout. The 2016 shirt made the sun the design engine. It treated the front panel not as a neutral field but as an active surface for national iconography. In branding terms, it was the moment the system became explicit. The shirt no longer said Macedonia through color alone; it said it through a graphic thesis.</p>
+
+        <p>What makes the 2016 design so effective is that it avoids feeling illustrative in the cheap sense. It is symbolic, but it still behaves like sportswear. The sun graphic has motion, direction, and a clear center of emphasis. The composition preserves performance logic even as it deepens narrative content. For designers, that balance is the whole trick. National symbolism works only when it is absorbed into form rather than pasted on top of it.</p>
+
+        <p>In Macedonia’s case, the sun is more than a handsome motif. It is one of the most charged elements in the country’s post-independence visual identity. That gives the shirt unusual density. A radiating yellow field is not just a flourish. It is a citation.</p>
+
+        <h2 class="section-heading">The shirt that broke the system</h2>
+
+        <p>The 2021 JAKO home shirt is important precisely because it failed.</p>
+
+        <p>Unveiled for the country’s first major-tournament appearance, it replaced the familiar bright red with a darker burgundy and made an embossed geometric Balkan lynx face the dominant graphic element. On paper, the idea was not frivolous. The lynx is regionally meaningful and critically endangered. The design tried to connect national identity, modern styling, and environmental symbolism in a single object.</p>
+
+        <p>But supporters rejected it almost immediately, and the federation reversed course before the tournament began. The backlash is often described as a reaction to the color, and that is true, but “color” here means more than preference. It means memory. For many fans, the shirt’s burgundy base and reduced red-yellow contrast felt like a break in legitimacy.</p>
+
+        <p>That is what makes the 2021 kit such a revealing design case. It shows that not every strong symbol has equal authority inside a visual system. The lynx may have been meaningful, but it was not foundational. It could not displace the sun-centered red-and-yellow grammar that supporters understood as the proper public face of the team.</p>
+
+        <p>Designers often talk about brand equity as though it were abstract. This shirt turned it concrete. A national team can stretch its identity, but only so far. Beyond a certain point, innovation reads not as evolution but as breach.</p>
+      </div>
+
+      <div class="empty-tail" aria-hidden="true"></div>
+    </section>
+
+    <section class="article-body article-body-lower">
+      <figure class="article-body-media">
+        <div class="article-image-placeholder article-image-placeholder--portrait">
+          <img src="Assets/Wearing the Nation/Jerseys/5.png" alt="Red Macedonian football shirt with yellow sun pattern">
+        </div>
+      </figure>
+
+      <div class="article-body-copy body-block">
+        <h2 class="section-heading">The return to visual certainty</h2>
+
+        <p>The 2023 JAKO home shirt looks, in that context, like a correction written in full view. Its central element is once again a large sun on the chest. After the lynx experiment, the hierarchy is restored: the national symbol is central, the palette is familiar, the message is instant.</p>
+
+        <p>It is not the most radical shirt in Macedonian history. That is the point. The design does not ask supporters to learn a new metaphor for the nation. It returns to the one that has proven most durable. For a design audience, the shirt is a reminder that clarity can be more powerful than novelty. Sometimes the boldest move is to reassert the core asset.</p>
+
+        <p>These five shirts show that Macedonia’s kit history is really a history of visual calibration. The 1994 Gems shirt established the palette. The 1998 Puma shirt sharpened it into broadcast geometry. The 2016 JAKO shirt turned the sun into a full compositional system. The 2021 lynx shirt tested the limits of substitution and lost. The 2023 shirt restored the code.</p>
+
+        <p>In other words, the best Macedonian shirts do not simply wear the nation’s colors. They arrange color, symbol, and memory so that recognition feels immediate and unavoidable. Red. Yellow. The sun. In Macedonia, that is not just a design language. It is the point at which a country agrees to see itself.</p>
+      </div>
+
+      <div class="empty-tail" aria-hidden="true"></div>
+    </section>
+
+  </article>
+
+  <section class="more-from-muzej" aria-labelledby="more-title">
+    <div class="shell more-from-muzej-frame">
+      <h2 class="more-from-muzej-title" id="more-title">More from Muzej</h2>
+      <ul class="related-list">
+        <li>
+          <a href="swan-dress.html">The dress that turned the red carpet into theater.</a>
+          <span class="related-desc">A profile of a garment where fashion and performance meet.</span>
+        </li>
+        <li>
+          <a href="skopje-tange.html">Tokyo on the Vardar: Kenzo Tange’s Reconstruction of Skopje</a>
+          <span class="related-desc">How Japanese urban theory found form in Macedonia.</span>
+        </li>
+        <li>
+          <a href="martinoski.html">The Many Faces of Nikola Martinoski</a>
+          <span class="related-desc">A portrait of a painter and the visual language of Macedonian modernism.</span>
+        </li>
+        <li>
+          <a href="how-to-taste-vranec.html">How to taste Vranec (like a sommelier)</a>
+          <span class="related-desc">Dark fruit, firm tannin, and the problem of being too powerful.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer muzej-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-wordmark">Muzej</span>
+      <p class="footer-statement">An editorial archive of Macedonian art, style, tradition, and culture.</p>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="about.html">ABOUT MUZEJ</a>
+      <a href="mailto:601030@protonmail.com">CONTACT</a>
+      <a href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer" aria-label="Open Muzej on Instagram">INSTAGRAM</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var previousY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+    var ticking = false;
+    var revealZone = 24;
+    var motionThreshold = 4;
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    function updateMuzejLogoVisibility() {
+      var currentY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+      var delta = currentY - previousY;
+
+      if (reducedMotion.matches) {
+        document.body.classList.remove("muzej-logo-hidden");
+        ticking = false;
+        return;
+      }
+
+      if (currentY <= revealZone) {
+        document.body.classList.remove("muzej-logo-hidden");
+      } else if (delta > motionThreshold) {
+        document.body.classList.add("muzej-logo-hidden");
+      } else if (delta < -motionThreshold) {
+        document.body.classList.remove("muzej-logo-hidden");
+      }
+
+      previousY = currentY;
+      ticking = false;
+    }
+
+    function requestMuzejLogoVisibility() {
+      if (!ticking) {
+        window.requestAnimationFrame(updateMuzejLogoVisibility);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener("scroll", requestMuzejLogoVisibility, { passive: true });
+    window.addEventListener("resize", requestMuzejLogoVisibility);
+
+    if (reducedMotion.addEventListener) {
+      reducedMotion.addEventListener("change", requestMuzejLogoVisibility);
+    } else if (reducedMotion.addListener) {
+      reducedMotion.addListener(requestMuzejLogoVisibility);
+    }
+
+    updateMuzejLogoVisibility();
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="A МУЗЕЈ film review of DJ Ahmet, on music, grief, and change within village life.">
+<title>The Village Hears the Future | МУЗЕЈ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&display=swap">
+<style>
+@font-face {
+  font-family: 'Adobe Jenson';
+  src: url('./fonts/AdobeJenson-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f0e0d;
+  --white: #ffffff;
+  --ink: #0f0e0d;
+  --ink-soft: rgba(15, 14, 13, 0.62);
+  --ink-faint: rgba(15, 14, 13, 0.12);
+  --page-x: clamp(18px, 5.2vw, 72px);
+  --nav-h: clamp(88px, 10vw, 128px);
+  --hero-w: min(1080px, calc(100vw - (var(--page-x) * 2)));
+  --lead-w: min(980px, calc(100vw - (var(--page-x) * 2)));
+  --body-w: min(620px, calc(100vw - (var(--page-x) * 2)));
+  --section-gap: clamp(68px, 9vw, 112px);
+  --content-max: 1520px;
+  --serif: "Fraunces", serif;
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --article-serif: 'Adobe Jenson', Georgia, serif;
+  --brand-serif: "Fraunces", serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--article-serif);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+.shell {
+  width: min(100%, var(--content-max));
+  margin: 0 auto;
+  padding-left: var(--page-x);
+  padding-right: var(--page-x);
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  background: var(--background);
+}
+.header-frame {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  padding-top: 28px;
+  padding-bottom: 24px;
+}
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--serif);
+  font-size: clamp(2.55rem, 2.02rem + 1.52vw, 4rem);
+  line-height: 0.86;
+  letter-spacing: -0.05em;
+  font-weight: 560;
+  font-optical-sizing: auto;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.utility-link,
+.utility-menu-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  letter-spacing: 0.11em;
+  color: rgba(23, 21, 19, 0.58);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+.utility-link:hover,
+.utility-menu-item:hover {
+  color: var(--foreground);
+}
+.header-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.utility-menu {
+  position: relative;
+}
+.utility-menu summary {
+  list-style: none;
+}
+.utility-menu summary::-webkit-details-marker {
+  display: none;
+}
+.utility-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: color 180ms ease, opacity 180ms ease;
+}
+.utility-trigger:hover {
+  opacity: 0.72;
+}
+.utility-trigger:focus-visible {
+  outline: 2px solid rgba(141, 79, 61, 0.45);
+  outline-offset: 3px;
+}
+.utility-icon {
+  display: grid;
+  gap: 0.26rem;
+}
+.utility-icon-line {
+  display: block;
+  width: 1.45rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.88;
+}
+.utility-panel {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  right: 0;
+  z-index: 10;
+  display: grid;
+  min-width: 10rem;
+  padding: 0.45rem 0;
+  border: 1px solid rgba(23, 21, 19, 0.12);
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(23, 21, 19, 0.08);
+}
+.utility-panel-group {
+  display: grid;
+  gap: 0;
+}
+.utility-panel-utility {
+  margin-top: 0.25rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid rgba(23, 21, 19, 0.1);
+}
+.utility-panel .utility-link,
+.utility-panel .utility-menu-item {
+  justify-content: flex-start;
+  min-height: 0;
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  background: transparent;
+}
+.utility-panel-utility .utility-link {
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  color: rgba(23, 21, 19, 0.52);
+}
+.utility-panel .utility-menu-item {
+  cursor: pointer;
+}
+.utility-panel .utility-link:hover,
+.utility-panel .utility-menu-item:hover {
+  background: rgba(23, 21, 19, 0.035);
+}
+
+main {
+  padding-top: var(--nav-h);
+}
+
+.film-info-strip {
+  border-top: 1px solid var(--ink-faint);
+  border-bottom: 1px solid var(--ink-faint);
+  background: var(--white);
+}
+.film-info-inner {
+  max-width: min(1440px, calc(100vw - (var(--page-x) * 2)));
+  margin: 0 auto;
+  padding: 0 var(--page-x);
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.film-info-inner::-webkit-scrollbar {
+  display: none;
+}
+.film-info-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  min-width: 100%;
+  gap: 0;
+  min-height: 46px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  white-space: nowrap;
+}
+.film-info-item {
+  flex: 0 0 auto;
+  padding: 0 clamp(10px, 1.35vw, 16px);
+  color: var(--ink);
+  font-size: clamp(9px, 0.76vw, 11px);
+  line-height: 1.35;
+  letter-spacing: 0.06em;
+}
+.film-info-item + .film-info-item {
+  border-left: 1px solid var(--ink-faint);
+}
+
+.review-page {
+  padding: clamp(42px, 5.8vw, 64px) var(--page-x) clamp(90px, 11vw, 138px);
+}
+.review-hero {
+  max-width: var(--hero-w);
+  margin: 0 auto;
+  text-align: center;
+}
+.review-kicker {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: clamp(11px, 0.92vw, 13px);
+  letter-spacing: 0.18em;
+  line-height: 1.3;
+}
+.review-title {
+  margin: clamp(18px, 2.4vw, 26px) auto 0;
+  max-width: 12ch;
+  font-size: clamp(40px, 5.2vw, 68px);
+  font-weight: 400;
+  line-height: 0.96;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+.review-deck {
+  margin: clamp(26px, 3vw, 34px) auto 0;
+  max-width: 38rem;
+  font-size: clamp(17px, 1.45vw, 21px);
+  font-weight: 400;
+  line-height: 1.36;
+  letter-spacing: -0.018em;
+  text-wrap: balance;
+}
+.review-byline {
+  color: var(--ink-soft);
+  font-size: clamp(11px, 0.95vw, 13px);
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.review-lead {
+  max-width: var(--lead-w);
+  margin: clamp(52px, 7vw, 78px) auto 0;
+}
+.review-lead img {
+  width: 100%;
+  height: auto;
+}
+.review-lead figcaption {
+  margin-top: 14px;
+  color: var(--ink-soft);
+  font-size: clamp(12px, 0.95vw, 14px);
+  letter-spacing: 0.01em;
+  line-height: 1.55;
+  text-align: left;
+}
+.review-byline {
+  margin: 14px 0 0;
+  text-align: left;
+}
+.review-body {
+  max-width: var(--body-w);
+  margin: clamp(62px, 8vw, 88px) auto 0;
+}
+.review-copy p {
+  margin: 0;
+  font-size: clamp(16px, 1.18vw, 18px);
+  line-height: 1.82;
+}
+.review-copy p + p {
+  margin-top: 1.75em;
+}
+.review-spread {
+  max-width: var(--lead-w);
+  margin: clamp(56px, 7vw, 74px) auto;
+}
+.review-spread-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 1.9vw, 22px);
+}
+.review-spread figure {
+  margin: 0;
+}
+.review-spread img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.trailer-section,
+.related-stories {
+  max-width: var(--lead-w);
+  margin-left: auto;
+  margin-right: auto;
+}
+.trailer-section {
+  margin-top: var(--section-gap);
+  padding-top: 20px;
+  border-top: 1px solid var(--ink-faint);
+}
+.section-label,
+.related-label {
+  margin: 0 0 26px;
+  color: var(--ink-soft);
+  font-size: 8px;
+  letter-spacing: 0.28em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.trailer-frame {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+  background: #f5f3ef;
+}
+.trailer-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.trailer-note {
+  margin: 16px auto 0;
+  max-width: 34rem;
+  color: var(--ink-soft);
+  font-size: clamp(14px, 1.05vw, 16px);
+  line-height: 1.65;
+  text-align: center;
+}
+
+.more-from-muzej {
+  padding-top: clamp(32px, 4vw, 56px);
+  padding-bottom: clamp(82px, 10vw, 148px);
+  background: transparent;
+  color: var(--foreground);
+}
+.more-from-muzej-frame {
+  display: grid;
+  width: min(calc(100% - (var(--page-x) * 2)), 68rem);
+  max-width: 68rem;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  border-top: 2px solid var(--foreground);
+  padding-top: clamp(2.1rem, 4vw, 3.25rem);
+}
+.more-from-muzej-title {
+  max-width: none;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(1.45rem, 1vw + 1.1rem, 1.9rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 650;
+  font-optical-sizing: auto;
+}
+.related-list {
+  list-style: none;
+  margin: clamp(1.4rem, 2.5vw, 2rem) 0 0;
+  padding: 0;
+}
+.related-list li {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  padding: clamp(1.1rem, 1.8vw, 1.6rem) 0;
+  border-top: 1px solid var(--ink-faint);
+  align-items: start;
+}
+.related-list li:last-child {
+  border-bottom: 1px solid var(--ink-faint);
+}
+.related-list a {
+  font-family: var(--serif);
+  font-size: clamp(1.1rem, 1.3vw + 0.7rem, 1.55rem);
+  font-weight: 350;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+  font-optical-sizing: auto;
+  border-bottom: none;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+.related-list a:hover {
+  color: var(--ink-soft);
+}
+.related-list .related-desc {
+  display: block;
+  margin-top: 0.45rem;
+  font-family: var(--sans);
+  font-size: clamp(0.82rem, 0.78rem + 0.18vw, 0.94rem);
+  line-height: 1.72;
+  letter-spacing: 0;
+  color: var(--ink-soft);
+}
+
+.site-footer {
+  margin-top: 0;
+}
+.muzej-footer {
+  width: 100%;
+  padding: clamp(3.5rem, 7vw, 6rem) var(--page-x);
+  background: #000000;
+  color: #f7f2e9;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: minmax(320px, 620px) minmax(180px, 260px);
+  gap: clamp(3rem, 7vw, 6rem);
+  justify-content: center;
+  align-items: start;
+  width: min(100%, 1160px);
+  margin: 0 auto;
+}
+.footer-brand {
+  min-width: 0;
+}
+.footer-wordmark {
+  display: inline-flex;
+  font-family: var(--serif);
+  font-size: clamp(3.1rem, 5vw, 5rem);
+  font-weight: 560;
+  line-height: 0.88;
+  letter-spacing: -0.055em;
+  font-optical-sizing: auto;
+}
+.footer-statement {
+  max-width: 38.75rem;
+  margin: clamp(1.15rem, 1.8vw, 1.45rem) 0 0;
+  font-size: clamp(1rem, 1vw + 0.72rem, 1.15rem);
+  line-height: 1.5;
+  color: rgba(247, 242, 233, 0.86);
+}
+.muzej-footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-top: 0.28rem;
+}
+.muzej-footer .footer-links a {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  line-height: 1.2;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 180ms ease, text-decoration-color 180ms ease;
+}
+.muzej-footer .footer-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  opacity: 0.86;
+}
+
+@media (max-width: 1140px) {
+  .header-frame {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 0.85rem 1.25rem;
+  }
+  .header-tools {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 980px) {
+  .menu-button {
+    padding: 8px 0 6px 18px;
+  }
+  .menu-panel {
+    padding: 0 calc(var(--page-x) + 18px) 0 var(--page-x);
+    gap: 16px;
+  }
+  .menu-panel a {
+    width: min(100%, 22rem);
+    font-size: clamp(26px, 5vw, 42px);
+  }
+  .review-title {
+    max-width: 11ch;
+  }
+  .review-deck {
+    max-width: 32rem;
+  }
+  .film-info-list {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 760px) {
+  .header-frame {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .brand-mark {
+    font-size: clamp(2.3rem, 10.8vw, 3.05rem);
+  }
+}
+
+@media (max-width: 720px) {
+  .header-frame {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .brand-mark {
+    font-size: clamp(2.3rem, 10.8vw, 3.05rem);
+  }
+  .site-footer-mark {
+    font-size: clamp(2rem, 9.4vw, 2.55rem);
+  }
+  .menu-button {
+    gap: 7px;
+    padding: 8px 0 6px 16px;
+    margin-top: 1px;
+  }
+  .menu-panel {
+    padding: 0 calc(var(--page-x) + 6px) 0 var(--page-x);
+    gap: 14px;
+  }
+  .menu-panel a {
+    width: min(100%, 16rem);
+    font-size: clamp(22px, 9vw, 30px);
+    line-height: 1.08;
+  }
+  .menu-panel a:last-child {
+    font-size: 18px;
+  }
+  .film-info-inner {
+    padding: 0 var(--page-x);
+  }
+  .film-info-list {
+    min-height: 44px;
+    justify-content: flex-start;
+  }
+  .film-info-item {
+    padding: 0 12px;
+    font-size: 9px;
+  }
+  .review-page {
+    padding-top: 36px;
+    padding-bottom: 88px;
+  }
+  .review-title {
+    font-size: clamp(34px, 10vw, 50px);
+    line-height: 0.98;
+  }
+  .review-deck {
+    font-size: clamp(16px, 4.5vw, 19px);
+    line-height: 1.38;
+  }
+  .review-body {
+    margin-top: 54px;
+  }
+  .review-copy p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  .review-spread {
+    margin: 44px auto;
+  }
+  .review-spread-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+  .muzej-footer .footer-links {
+    padding-top: 0;
+  }
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: transparent;
+  pointer-events: none;
+}
+
+.site-header .header-frame,
+.site-header .brand-mark,
+.site-header .header-tools {
+  pointer-events: auto;
+}
+
+.site-header .brand-mark {
+  transform: translate3d(0, 0, 0);
+  transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.muzej-logo-hidden .site-header .brand-mark {
+  transform: translate3d(0, calc(-100% - 42px), 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header .brand-mark {
+    transition: none;
+    will-change: auto;
+  }
+
+  body.muzej-logo-hidden .site-header .brand-mark {
+    transform: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="shell header-frame">
+    <a class="brand-mark" href="index.html" aria-label="Muzej home">Muzej</a>
+
+    <div class="header-tools">
+      <details class="utility-menu">
+        <summary class="utility-trigger" aria-label="Open navigation menu">
+          <span class="utility-icon" aria-hidden="true">
+            <span class="utility-icon-line"></span>
+            <span class="utility-icon-line"></span>
+            <span class="utility-icon-line"></span>
+          </span>
+        </summary>
+        <nav class="utility-panel" aria-label="Site navigation">
+          <div class="utility-panel-group">
+            <a class="utility-link" href="index.html">Home</a>
+            <a class="utility-link" href="index.html#selected-stories">Selected Stories</a>
+            <a class="utility-link" href="index.html#in-rotation">In Rotation</a>
+            <a class="utility-link" href="index.html#culture">Culture</a>
+            <a class="utility-link" href="about.html">About Muzej</a>
+          </div>
+          <div class="utility-panel-group utility-panel-utility">
+            <a class="utility-link" href="mailto:601030@protonmail.com">Contact</a>
+            <a class="utility-link" href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="film-info-strip" aria-label="Film information">
+    <div class="film-info-inner">
+      <ul class="film-info-list">
+        <li class="film-info-item">Directed &amp; Written by Georgi M. Unkovski</li>
+        <li class="film-info-item">Stars Arif Jakup, Agush Agushev, Dora Akan Zlatanova</li>
+        <li class="film-info-item">Running Time 1h 39m</li>
+        <li class="film-info-item">Genres Comedy, Drama</li>
+      </ul>
+    </div>
+  </section>
+
+  <article class="review-page">
+    <header class="review-hero">
+      <p class="review-kicker">Current Cinema</p>
+      <h1 class="review-title">The Village Hears the Future</h1>
+      <p class="review-deck">In DJ Ahmet, electronic music is not an escape from tradition but the rhythm that reveals how much has already begun to change.</p>
+    </header>
+
+    <figure class="review-lead">
+      <img src="Assets/DJ Ahmet/dj-ahmet-lead.jpg" alt="Still from DJ Ahmet.">
+      <figcaption>In “DJ Ahmet,” music propels the story of a shepherd named Ahmet (Arif Jakup). Credit...Ink Films</figcaption>
+      <p class="review-byline">Words Stefan Horvat</p>
+    </figure>
+
+    <section class="review-body">
+      <div class="review-copy">
+        <p><em>DJ Ahmet</em> begins with a setup that could easily become schematic: a teenage boy, a stern father, a mute younger brother, a girl promised elsewhere, a conservative village, an illegal rave. But the film's real intelligence lies in refusing that simplification. It does not stage modernity as a foreign force arriving from outside to shock a sealed rural world. Rather, it treats the village as a place already full of pressure, fantasy, grief, and unfinished change. EDM, smartphones, and viral video do not interrupt tradition; they expose how permeable it has already become.</p>
+
+        <p>That shift matters because it changes how we read the father. In a thinner film, he would simply be the obstacle: patriarchy in human form, there to be defeated by youth and desire. Here, he is more troubling than that and more believable. He is a grieving widower formed inside a culture that gives men very little permission to show pain. The point is not to excuse him. It is to see that repression in the film is not just personal cruelty; it is a damaged social language, one passed down so completely that even tenderness comes out misshapen.</p>
+
+        <p>That is why music matters. In lesser coming-of-age films, dance music would serve as a ready-made symbol of liberation: the beat drops, the old world loosens, the teenager becomes himself. <em>DJ Ahmet</em> wants something subtler. Rhythm becomes a form of expression in a world where speech has stalled, where one child no longer talks, where a father cannot mourn aloud, and where love survives in glances, chores, and improvised gestures. The tractor outfitted as a DJ booth is funny, but it is also exact. Change does not descend from above in this film. It is built out of whatever is already there.</p>
+
+        <section class="review-spread" aria-label="Selected stills from DJ Ahmet">
+          <div class="review-spread-grid">
+            <figure>
+              <img src="Assets/DJ Ahmet/dj-ahmet-spread-1.webp" alt="Still from DJ Ahmet.">
+            </figure>
+            <figure>
+              <img src="Assets/DJ Ahmet/dj-ahmet-spread-2.jpg" alt="Still from DJ Ahmet.">
+            </figure>
+          </div>
+        </section>
+
+        <p>The film's tonal wager is what makes it interesting as criticism rather than mere uplift. It understands that a community can be criticized most sharply when it is shown from within, with all its beauty, awkwardness, comedy, and confinement intact. Too many films about rural traditional life assume that seriousness requires severity. <em>DJ Ahmet</em> understands the opposite: that kindness can be incisive. Its most interesting idea is not that Ahmet wants to leave. It is that once he has heard another rhythm, the village itself can no longer sound quite the same.</p>
+
+        <p>Unkovski’s own path helps clarify the texture of the film. He comes to it as a Macedonian filmmaker shaped by study abroad, years in Prague, and an early interest in how games might reshape cinema. Yet what feels compelling here is not interactivity but attention. <em>DJ Ahmet</em> is not interested in winning a culture war between old life and new life. It is interested in the moment a different rhythm enters the air and makes an entire world sound newly unstable. That is a finer idea than rebellion. It suggests that what changes a life is not always escape. Sometimes it is simply hearing, for the first time, that your world is no longer keeping perfect time.</p>
+      </div>
+    </section>
+
+  </article>
+
+  <section class="more-from-muzej" aria-labelledby="more-title">
+    <div class="shell more-from-muzej-frame">
+      <h2 class="more-from-muzej-title" id="more-title">More from Muzej</h2>
+      <ul class="related-list">
+        <li>
+          <a href="the-new-new-wave.html">The (New) New Wave</a>
+          <span class="related-desc">A new cohort of Macedonian filmmakers is going international by staying close to home.</span>
+        </li>
+        <li>
+          <a href="tose-proeski.html">Toše Proeski and the Making of The Hardest Thing</a>
+          <span class="related-desc">A singer still expanding the possibilities of his own voice.</span>
+        </li>
+        <li>
+          <a href="skopje-tange.html">Tokyo on the Vardar: Kenzo Tange’s Reconstruction of Skopje</a>
+          <span class="related-desc">How Japanese urban theory found form in Macedonia.</span>
+        </li>
+        <li>
+          <a href="swan-dress.html">The dress that turned the red carpet into theater.</a>
+          <span class="related-desc">A profile of a garment where fashion and performance meet.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer muzej-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-wordmark">Muzej</span>
+      <p class="footer-statement">An editorial archive of Macedonian art, style, tradition, and culture.</p>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="about.html">ABOUT MUZEJ</a>
+      <a href="mailto:601030@protonmail.com">CONTACT</a>
+      <a href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer" aria-label="Open Muzej on Instagram">INSTAGRAM</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+const menuButton = document.getElementById('menuButton');
+const menuPanel = document.getElementById('menuPanel');
+
+if (menuButton && menuPanel) {
+  const setMenuState = (isOpen) => {
+    menuPanel.classList.toggle('open', isOpen);
+    menuButton.classList.toggle('is-open', isOpen);
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+    menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  };
+
+  menuButton.addEventListener('click', () => {
+    setMenuState(!menuPanel.classList.contains('open'));
+  });
+
+  menuPanel.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setMenuState(false));
+  });
+}
+</script>
+
+<script>
+  (function () {
+    var previousY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+    var ticking = false;
+    var revealZone = 24;
+    var motionThreshold = 4;
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    function updateMuzejLogoVisibility() {
+      var currentY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+      var delta = currentY - previousY;
+
+      if (reducedMotion.matches) {
+        document.body.classList.remove("muzej-logo-hidden");
+        ticking = false;
+        return;
+      }
+
+      if (currentY <= revealZone) {
+        document.body.classList.remove("muzej-logo-hidden");
+      } else if (delta > motionThreshold) {
+        document.body.classList.add("muzej-logo-hidden");
+      } else if (delta < -motionThreshold) {
+        document.body.classList.remove("muzej-logo-hidden");
+      }
+
+      previousY = currentY;
+      ticking = false;
+    }
+
+    function requestMuzejLogoVisibility() {
+      if (!ticking) {
+        window.requestAnimationFrame(updateMuzejLogoVisibility);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener("scroll", requestMuzejLogoVisibility, { passive: true });
+    window.addEventListener("resize", requestMuzejLogoVisibility);
+
+    if (reducedMotion.addEventListener) {
+      reducedMotion.addEventListener("change", requestMuzejLogoVisibility);
+    } else if (reducedMotion.addListener) {
+      reducedMotion.addListener(requestMuzejLogoVisibility);
+    }
+
+    updateMuzejLogoVisibility();
+  })();
+</script>
+
+</body>
+</html>
