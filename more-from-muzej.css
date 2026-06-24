@@ -1,0 +1,149 @@
+/* Shared article More from Muzej card block. */
+.more-from-muzej {
+  padding: clamp(70px, 9vw, 132px) 0 clamp(82px, 10vw, 148px);
+  background: var(--background, #ffffff);
+  color: var(--foreground, var(--ink, #171513));
+}
+
+.more-from-muzej-frame {
+  width: min(calc(100% - (var(--page-x, clamp(18px, 5.2vw, 72px)) * 2)), 76rem);
+  margin: 0 auto;
+  padding-top: clamp(2.2rem, 4vw, 3.4rem);
+  border-top: 2px solid var(--foreground, var(--ink, #171513));
+}
+
+.more-from-muzej-title {
+  margin: 0;
+  font-family: var(--serif, "Fraunces", Georgia, serif);
+  font-size: clamp(2rem, 1.55rem + 1.4vw, 3.1rem);
+  line-height: 0.98;
+  letter-spacing: -0.026em;
+  font-weight: 560;
+  font-optical-sizing: auto;
+  color: var(--foreground, var(--ink, #171513));
+}
+
+.more-from-muzej-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(28px, 4vw, 56px);
+  margin-top: clamp(2rem, 3.4vw, 3.2rem);
+}
+
+.more-from-muzej-card {
+  min-width: 0;
+}
+
+.more-from-muzej-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.more-from-muzej-card-link:hover .more-from-muzej-card-title,
+.more-from-muzej-card-link:focus-visible .more-from-muzej-card-title {
+  color: var(--muted, #70675d);
+}
+
+.more-from-muzej-card-link:focus-visible {
+  outline: 2px solid rgba(141, 79, 61, 0.45);
+  outline-offset: 4px;
+}
+
+.more-from-muzej-card-image {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(241, 233, 221, 0.6), rgba(228, 218, 201, 0.36));
+}
+
+.more-from-muzej-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--more-card-position, center center);
+  transition: transform 260ms ease;
+}
+
+.more-from-muzej-card-link:hover .more-from-muzej-card-image img,
+.more-from-muzej-card-link:focus-visible .more-from-muzej-card-image img {
+  transform: scale(1.018);
+}
+
+.more-from-muzej-card-copy {
+  display: block;
+  min-width: 0;
+  padding-top: clamp(0.95rem, 1.5vw, 1.15rem);
+}
+
+.more-from-muzej-card-kicker {
+  display: block;
+  margin: 0;
+  font-family: var(--sans, "Helvetica Neue", Helvetica, Arial, sans-serif);
+  font-size: clamp(0.68rem, 0.62rem + 0.18vw, 0.78rem);
+  line-height: 1.25;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(23, 21, 19, 0.58);
+}
+
+.more-from-muzej-card-title {
+  display: block;
+  margin: 0.68rem 0 0;
+  font-family: var(--serif, "Fraunces", Georgia, serif);
+  font-size: clamp(1.5rem, 1.14rem + 0.92vw, 2.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  font-weight: 430;
+  font-optical-sizing: auto;
+  color: var(--foreground, var(--ink, #171513));
+  text-wrap: balance;
+  transition: color 180ms ease;
+}
+
+.more-from-muzej-card-dek {
+  display: block;
+  margin: 0.62rem 0 0;
+  font-family: var(--sans, "Helvetica Neue", Helvetica, Arial, sans-serif);
+  font-size: clamp(0.96rem, 0.9rem + 0.16vw, 1.06rem);
+  line-height: 1.5;
+  color: var(--muted, #70675d);
+}
+
+@media (max-width: 980px) {
+  .more-from-muzej-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .more-from-muzej {
+    padding-top: 58px;
+    padding-bottom: 68px;
+  }
+
+  .more-from-muzej-frame {
+    padding-top: 2rem;
+  }
+
+  .more-from-muzej-card-grid {
+    grid-template-columns: 1fr;
+    gap: 2.35rem;
+  }
+
+  .more-from-muzej-card-image {
+    aspect-ratio: 4 / 4.85;
+  }
+}
+
+.more-from-muzej[data-more-from-muzej] {
+  padding-top: clamp(56px, 6vw, 72px);
+}
+
+@media (max-width: 680px) {
+  .more-from-muzej[data-more-from-muzej] {
+    padding-top: clamp(40px, 11vw, 56px);
+  }
+}

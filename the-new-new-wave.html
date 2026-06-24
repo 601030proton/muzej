@@ -5,17 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="The (New) New Wave. A new cohort of Macedonian filmmakers is going international by staying close to home. An essay from МУЗЕЈ.">
 <title>The (New) New Wave | МУЗЕЈ</title>
+<link rel="icon" type="image/png" href="./Assets/Font/Muzej%20Logo.ai.png">
+<link rel="apple-touch-icon" href="./Assets/Font/Muzej%20Logo.ai.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&display=swap">
 <style>
-@font-face {
-  font-family: 'Adobe Jenson';
-  src: url('./fonts/AdobeJenson-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
 :root {
   --background: #ffffff;
   --foreground: #0f0e0d;
@@ -772,6 +767,9 @@ body.muzej-logo-hidden .site-header .brand-mark {
   .site-header .utility-panel .utility-menu-item { justify-content: center; min-height: 2.75rem; padding: 0.72rem 0; text-align: center; }
 }
 </style>
+<link rel="stylesheet" href="article-headlines.css">
+<link rel="stylesheet" href="more-from-muzej.css">
+<script src="more-from-muzej.js" defer></script>
 </head>
 <body>
 
@@ -798,7 +796,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
           </div>
           <div class="utility-panel-group utility-panel-utility">
             <a class="utility-link" href="mailto:muzej.mk@proton.me">Contact</a>
-            <a class="utility-link" href="https://www.instagram.com/_muzej/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a class="utility-link" href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer">Instagram</a>
           </div>
         </nav>
       </details>
@@ -810,7 +808,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
   <header class="feature">
     <div class="feature-inner">
       <figure class="feature-media">
-        <img src="Assets/New Wave/New Wave Hero/new-new-wave-hero.png" alt="Collage of four contemporary filmmakers against a red, blue, and yellow painted background">
+        <img src="./Assets/New Wave/New Wave Hero/new-new-wave-hero.png" alt="Collage of four contemporary filmmakers against a red, blue, and yellow painted background">
       </figure>
 
       <div class="feature-copy">
@@ -825,7 +823,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
     <section class="article-body article-body--first-half">
       <figure class="article-body-media">
         <div class="article-image-placeholder article-image-placeholder--portrait">
-          <img src="Assets/New Wave/New Wave Hero/New Wave/1.png" alt="Film still from contemporary Macedonian cinema">
+          <img src="./Assets/New Wave/New Wave Hero/New Wave/1.png" alt="Film still from contemporary Macedonian cinema">
         </div>
       </figure>
 
@@ -854,14 +852,14 @@ body.muzej-logo-hidden .site-header .brand-mark {
     <section class="gallery-reading" aria-label="Editorial stills for The (New) New Wave article">
       <figure class="gallery-reading-media">
         <div class="article-image-placeholder article-image-placeholder--portrait">
-          <img src="Assets/New Wave/New Wave Hero/New Wave/5.png" alt="Film still of a beekeeper surrounded by bees in golden light">
+          <img src="./Assets/New Wave/New Wave Hero/New Wave/5.png" alt="Film still of a beekeeper surrounded by bees in golden light">
         </div>
       </figure>
 
       <div class="gallery-reading-side">
         <figure class="gallery-reading-feature">
           <div class="article-image-placeholder article-image-placeholder--portrait">
-            <img src="Assets/New Wave/New Wave Hero/New Wave/3.png" alt="Film still from contemporary Macedonian cinema">
+            <img src="./Assets/New Wave/New Wave Hero/New Wave/3.png" alt="Film still from contemporary Macedonian cinema">
           </div>
         </figure>
       </div>
@@ -870,7 +868,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
     <section class="article-body article-body-lower article-body--second-half">
       <figure class="article-body-media">
         <div class="article-image-placeholder article-image-placeholder--portrait">
-          <img src="Assets/New Wave/New Wave Hero/New Wave/4.png" alt="Film still from contemporary Macedonian cinema">
+          <img src="./Assets/New Wave/New Wave Hero/New Wave/4.png" alt="Film still from contemporary Macedonian cinema">
         </div>
       </figure>
 
@@ -908,29 +906,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
 
   </article>
 
-  <section class="more-from-muzej" aria-labelledby="more-title">
-    <div class="shell more-from-muzej-frame">
-      <h2 class="more-from-muzej-title" id="more-title">More from Muzej</h2>
-      <ul class="related-list">
-        <li>
-          <a href="swan-dress.html">The dress that turned the red carpet into theater.</a>
-          <span class="related-desc">A profile of a garment where fashion and performance meet.</span>
-        </li>
-        <li>
-          <a href="skopje-tange.html">Tokyo on the Vardar: Kenzo Tange’s Reconstruction of Skopje</a>
-          <span class="related-desc">How Japanese urban theory found form in Macedonia.</span>
-        </li>
-        <li>
-          <a href="martinoski.html">The Many Faces of Nikola Martinoski</a>
-          <span class="related-desc">A portrait of a painter and the visual language of Macedonian modernism.</span>
-        </li>
-        <li>
-          <a href="how-to-taste-vranec.html">How to taste Vranec (like a sommelier)</a>
-          <span class="related-desc">Dark fruit, firm tannin, and the problem of being too powerful.</span>
-        </li>
-      </ul>
-    </div>
-  </section>
+  <section class="more-from-muzej" data-more-from-muzej aria-labelledby="more-from-muzej-title"></section>
 </main>
 
 <footer class="site-footer muzej-footer">
@@ -943,7 +919,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
     <nav class="footer-links" aria-label="Footer navigation">
       <a href="about.html">ABOUT MUZEJ</a>
       <a href="mailto:muzej.mk@proton.me">CONTACT</a>
-      <a href="https://www.instagram.com/_muzej/" target="_blank" rel="noopener noreferrer" aria-label="Open Muzej on Instagram">INSTAGRAM</a>
+      <a href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer" aria-label="Open Muzej on Instagram">INSTAGRAM</a>
     </nav>
   </div>
 </footer>

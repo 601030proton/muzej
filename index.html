@@ -4,6 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Muzej</title>
+<meta name="description" content="Muzej is an independent editorial archive of Macedonian art, style, tradition, and culture.">
+<meta property="og:title" content="Muzej">
+<meta property="og:description" content="An independent editorial archive of Macedonian art, style, tradition, and culture.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="./Assets/Stranci/Stranci%20Pix/stranci-index-portrait.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Muzej">
+<meta name="twitter:description" content="An independent editorial archive of Macedonian art, style, tradition, and culture.">
+<meta name="twitter:image" content="./Assets/Stranci/Stranci%20Pix/stranci-index-portrait.png">
+<link rel="icon" type="image/png" href="./Assets/Font/Muzej%20Logo.ai.png">
+<link rel="apple-touch-icon" href="./Assets/Font/Muzej%20Logo.ai.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -302,10 +313,12 @@
       .hero-stage {
         display: grid;
         width: 100%;
-        max-width: min(100%, 1240px);
+        max-width: min(100%, 1056px);
         margin: 0 auto;
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-        gap: clamp(12px, 2vw, 28px);
+        grid-template-columns: minmax(360px, 480px) minmax(280px, 30rem);
+        column-gap: clamp(64px, 6vw, 96px);
+        row-gap: clamp(24px, 3vw, 48px);
+        justify-content: center;
         align-items: center;
       }
 
@@ -314,9 +327,12 @@
         align-content: center;
         gap: clamp(1.4rem, 1.9vw, 1.95rem);
         width: 100%;
+        min-width: 0;
+        max-width: 720px;
+        padding-top: 0;
+        text-align: left;
         transform: none;
-        justify-self: end;
-        max-width: min(100%, 30rem);
+        justify-self: start;
       }
 
       .hero-copy {
@@ -339,30 +355,39 @@
 
       .hero-title {
         margin: 0;
-        max-width: 9.85ch;
+        max-width: min(100%, 11.5ch);
+        min-height: 3.06em;
         font-family: var(--serif);
         font-size: clamp(4.35rem, 6.45vw, 7.2rem);
         line-height: 1.01;
         letter-spacing: -0.026em;
         font-weight: 350;
         font-optical-sizing: auto;
+        text-align: left;
         text-wrap: balance;
+        overflow-wrap: normal;
+        word-break: normal;
       }
 
       .hero-dek {
         max-width: 24rem;
         margin: 0;
+        min-height: 5.7rem;
         font-size: clamp(1rem, 0.98rem + 0.18vw, 1.1rem);
         line-height: 1.72;
         color: var(--muted);
+        text-align: left;
         text-wrap: balance;
         overflow-wrap: anywhere;
       }
 
       .hero-support {
         display: grid;
+        align-content: start;
         gap: clamp(1.2rem, 1.5vw, 1.55rem);
+        grid-template-rows: minmax(5.7rem, auto) auto;
         width: 100%;
+        height: clamp(7.6rem, 9vw, 9.4rem);
         max-width: 26rem;
       }
 
@@ -391,16 +416,23 @@
         display: block;
       }
 
+      .story-card .story-card-link {
+        aspect-ratio: 3 / 4;
+        overflow: hidden;
+      }
+
       .hero-media {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
+        display: block;
         width: 100%;
+        min-width: 0;
+        max-width: 30rem;
+        aspect-ratio: 3 / 4;
+        height: auto;
+        overflow: hidden;
         padding-top: 0;
         margin: 0;
-        transform: translateX(calc(-1 * clamp(64px, 6vw, 104px)));
+        transform: none;
         justify-self: start;
-        max-width: min(100%, 40rem);
       }
 
       .hero-image,
@@ -418,19 +450,21 @@
       .hero-image {
         width: 100%;
         max-width: 100%;
-        max-height: min(68vh, 620px);
-        height: auto;
+        height: 100%;
+        max-height: none;
         aspect-ratio: auto;
-        object-fit: contain;
-        object-position: center top;
+        object-fit: cover;
+        object-position: center center;
         border: 0;
         background: transparent;
         box-shadow: none;
       }
 
       .story-image {
+        height: 100%;
         aspect-ratio: 3 / 4;
         object-fit: cover;
+        object-position: center center;
       }
 
       .new-wave-card-image {
@@ -476,6 +510,11 @@
 
       .explore-image--longing img {
         object-position: center center;
+      }
+
+      .explore-image--ohrid img {
+        object-position: center center;
+        filter: grayscale(1) contrast(1.08);
       }
 
       .media-placeholder {
@@ -715,55 +754,118 @@
         display: none;
       }
 
-      .feature-spotlight {
+      .kinfolk-feature {
         padding-top: clamp(132px, 14vw, 224px);
-        padding-bottom: clamp(164px, 16vw, 280px);
+        padding-bottom: clamp(152px, 15vw, 260px);
+        background: #ffffff;
       }
 
-      .feature-spotlight-frame {
+      .kinfolk-feature-frame {
+        display: grid;
+        justify-items: center;
         text-align: center;
       }
 
-      .feature-spotlight-link {
+      .kinfolk-feature-article {
         display: grid;
         justify-items: center;
+        width: 100%;
+      }
+
+      .kinfolk-feature-text-link,
+      .kinfolk-feature-media-link {
         color: inherit;
       }
 
-      .feature-spotlight-title {
-        max-width: none;
-        margin: 0 0 0.3rem;
+      .kinfolk-feature-title {
+        max-width: min(100%, 44rem);
+        margin: 0 auto;
         font-family: var(--serif);
-        font-size: clamp(1.6rem, 2.7vw, 3.1rem);
-        line-height: 0.98;
-        letter-spacing: -0.03em;
+        font-size: clamp(2.65rem, 3.65vw, 3.85rem);
+        line-height: 1.08;
+        letter-spacing: 0;
         font-weight: 350;
         font-optical-sizing: auto;
-        text-transform: uppercase;
-        color: var(--foreground);
+        color: rgba(23, 21, 19, 0.86);
         text-wrap: balance;
       }
 
-      .feature-spotlight-dek {
-        max-width: 78rem;
-        margin: 0;
-        font-family: var(--serif);
-        font-size: clamp(1rem, 1.675vw, 2rem);
-        line-height: 0.96;
-        letter-spacing: -0.036em;
-        font-weight: 350;
-        font-optical-sizing: auto;
-        color: var(--foreground);
-        text-wrap: balance;
-      }
-
-      .feature-spotlight-image {
+      .kinfolk-feature-media-link {
         display: block;
-        width: clamp(210px, 17vw, 315px);
+        width: clamp(230px, 23vw, 370px);
+        margin-top: clamp(58px, 6.2vw, 104px);
+      }
+
+      .kinfolk-feature-image {
+        display: block;
+        width: 100%;
         height: auto;
-        margin-top: clamp(54px, 5.2vw, 86px);
         border: 0;
         background: transparent;
+      }
+
+      .tose-descendants {
+        padding-top: clamp(112px, 10.5vw, 188px);
+        padding-bottom: clamp(64px, 6vw, 112px);
+        background: #ffffff;
+      }
+
+      .tose-descendants-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.78fr);
+        gap: clamp(54px, 8vw, 150px);
+        align-items: start;
+      }
+
+      .tose-descendants-copy {
+        display: grid;
+        justify-items: start;
+        align-content: start;
+        padding-top: clamp(2px, 0.9vw, 18px);
+        min-width: 0;
+      }
+
+      .tose-descendants-kicker,
+      .tose-descendants-title {
+        margin: 0;
+        font-family: var(--serif);
+        font-weight: 350;
+        font-optical-sizing: auto;
+        color: var(--foreground);
+        text-wrap: balance;
+      }
+
+      .tose-descendants-kicker {
+        font-size: clamp(3.25rem, 5.2vw, 7rem);
+        line-height: 0.88;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .tose-descendants-title {
+        max-width: 11.8ch;
+        margin-top: 0.1em;
+        font-size: clamp(3.35rem, 5vw, 6.45rem);
+        line-height: 0.98;
+        letter-spacing: 0;
+      }
+
+      .tose-descendants-media {
+        display: block;
+        width: min(100%, 560px);
+        justify-self: end;
+        overflow: hidden;
+        aspect-ratio: 3 / 4;
+        color: inherit;
+        background: var(--surface-soft);
+      }
+
+      .tose-descendants-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
       }
 
       .more-from-muzej {
@@ -860,6 +962,86 @@
         line-height: 1.04;
         letter-spacing: -0.02em;
         color: var(--foreground);
+      }
+
+      .editorial-spread {
+        padding-top: clamp(112px, 12vw, 220px);
+      }
+
+      .editorial-spread-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(18px, 2vw, 32px);
+      }
+
+      .editorial-spread-card {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        aspect-ratio: 4 / 5;
+        color: #fff;
+        background: var(--surface-deep);
+        text-decoration: none;
+      }
+
+      .editorial-spread-card img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: saturate(0.86) contrast(0.96);
+      }
+
+      .editorial-spread-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(23, 21, 19, 0) 40%, rgba(23, 21, 19, 0.28) 68%, rgba(23, 21, 19, 0.68) 100%);
+        pointer-events: none;
+      }
+
+      .editorial-spread-card--no-image-overlay img {
+        filter: none;
+      }
+
+      .editorial-spread-card--no-image-overlay::after {
+        display: none;
+      }
+
+      .editorial-spread-copy {
+        position: absolute;
+        z-index: 1;
+        right: clamp(18px, 3.2vw, 54px);
+        bottom: clamp(26px, 4.4vw, 68px);
+        left: clamp(18px, 3.2vw, 54px);
+        display: grid;
+        justify-items: center;
+        gap: 0.58rem;
+        text-align: center;
+      }
+
+      .editorial-spread-eyebrow {
+        margin: 0;
+        font-family: var(--sans);
+        font-size: clamp(0.68rem, 0.78vw, 0.82rem);
+        line-height: 1.2;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.84);
+      }
+
+      .editorial-spread-title {
+        max-width: 13ch;
+        margin: 0;
+        font-family: var(--serif);
+        font-size: clamp(2.3rem, 4vw, 4.7rem);
+        line-height: 0.98;
+        letter-spacing: -0.026em;
+        font-weight: 350;
+        font-optical-sizing: auto;
+        text-wrap: balance;
+        color: #fff;
       }
 
       .explore-header-title {
@@ -1226,16 +1408,23 @@
         }
 
         .hero-stage {
-          grid-template-columns: 1fr;
-          max-width: none;
-          gap: 22px;
+          grid-template-columns: minmax(300px, 440px) minmax(280px, 26rem);
+          max-width: min(100%, 912px);
+          column-gap: clamp(32px, 4vw, 56px);
+          row-gap: 22px;
+          justify-content: center;
+          align-items: center;
         }
 
         .hero-text {
           width: 100%;
+          min-width: 0;
+          padding-top: 0;
+          align-content: start;
           gap: 1.4rem;
           justify-self: stretch;
           max-width: none;
+          text-align: left;
           transform: none;
         }
 
@@ -1246,19 +1435,28 @@
 
         .hero-media {
           width: 100%;
-          justify-content: center;
-          justify-self: stretch;
-          max-width: none;
+          max-width: min(100%, 32rem);
+          aspect-ratio: 3 / 4;
+          height: auto;
+          justify-self: center;
           transform: none;
         }
 
         .hero-image {
           width: 100%;
-          max-height: min(62vh, 560px);
+          height: 100%;
+          max-height: none;
+          object-fit: cover;
+        }
+
+        .hero-dek {
+          min-height: 4.9rem;
         }
 
         .hero-support {
           width: 100%;
+          height: 8.4rem;
+          grid-template-rows: minmax(4.9rem, auto) auto;
           max-width: none;
         }
 
@@ -1334,19 +1532,26 @@
         }
 
         .hero-stage {
+          grid-template-columns: 1fr;
+          max-width: none;
           gap: 18px;
+          align-items: start;
         }
 
         .hero-title {
+          min-height: 4.08em;
+          height: auto;
           font-size: clamp(2.95rem, 12vw, 4.25rem);
           line-height: 1.02;
           max-width: 10.5ch;
+          text-align: left;
         }
 
         .hero-dek {
           max-width: 32rem;
           font-size: 0.98rem;
           line-height: 1.66;
+          text-align: left;
         }
 
         .story-card-title {
@@ -1366,7 +1571,6 @@
           font-size: clamp(2rem, 9vw, 2.65rem);
         }
 
-        .hero-title,
         .section-title,
         .story-card-title,
         .explore-row-title,
@@ -1378,9 +1582,19 @@
         }
 
         .story-grid,
+        .editorial-spread-grid,
         .archive-groups {
           grid-template-columns: 1fr;
           gap: 24px;
+        }
+
+
+        .editorial-spread {
+          padding-top: 72px;
+        }
+
+        .editorial-spread-title {
+          font-size: clamp(2.1rem, 10vw, 3.5rem);
         }
 
         .explore-header {
@@ -1424,10 +1638,21 @@
           aspect-ratio: 4 / 5;
         }
 
+        .hero-text {
+          height: auto;
+        }
+
+        .hero-media {
+          height: auto;
+          aspect-ratio: 3 / 4;
+        }
+
         .hero-image {
           width: 100%;
-          max-height: 54vh;
+          height: 100%;
+          max-height: none;
           aspect-ratio: auto;
+          object-fit: cover;
         }
 
         .explore-image {
@@ -1460,23 +1685,52 @@
           font-size: clamp(1.85rem, 9vw, 2.45rem);
         }
 
-        .feature-spotlight {
+        .kinfolk-feature {
           padding-top: 92px;
-          padding-bottom: 116px;
+          padding-bottom: 112px;
         }
 
-        .feature-spotlight-title {
-          font-size: clamp(1.3rem, 6.5vw, 2.1rem);
+        .kinfolk-feature-title {
+          max-width: min(100%, 19rem);
+          font-size: clamp(1.88rem, 8.6vw, 2.35rem);
+          line-height: 1.12;
         }
 
-        .feature-spotlight-dek {
-          max-width: 94%;
-          font-size: clamp(0.95rem, 4vw, 1.35rem);
-        }
-
-        .feature-spotlight-image {
-          width: min(72vw, 280px);
+        .kinfolk-feature-media-link {
+          width: min(68vw, 280px);
           margin-top: 42px;
+        }
+
+        .tose-descendants {
+          padding-top: 88px;
+          padding-bottom: 64px;
+        }
+
+        .tose-descendants-grid {
+          grid-template-columns: 1fr;
+          gap: 38px;
+        }
+
+        .tose-descendants-copy {
+          justify-items: center;
+          text-align: center;
+          padding-top: 0;
+        }
+
+        .tose-descendants-kicker {
+          font-size: clamp(2.35rem, 12vw, 4.1rem);
+          line-height: 0.92;
+        }
+
+        .tose-descendants-title {
+          max-width: 10.8ch;
+          font-size: clamp(2.35rem, 10.6vw, 3.9rem);
+          line-height: 1.02;
+        }
+
+        .tose-descendants-media {
+          width: min(82vw, 360px);
+          justify-self: center;
         }
 
         .more-from-muzej {
@@ -1608,7 +1862,7 @@
                 </div>
                 <div class="utility-panel-group utility-panel-utility">
                   <a class="utility-link" href="mailto:muzej.mk@proton.me">Contact</a>
-                  <a class="utility-link" href="https://www.instagram.com/_muzej/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                  <a class="utility-link" href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer">Instagram</a>
                 </div>
               </nav>
             </details>
@@ -1623,29 +1877,29 @@
           aria-labelledby="hero-title"
         >
           <div class="shell">
-            <article class="hero-grid" data-story="kenzo-lead">
+            <article class="hero-grid" data-story="stranci-lead">
               <div class="hero-stage">
                 <div class="hero-text">
                   <div class="hero-copy">
-                    <p class="eyebrow">Architecture | Urbanism</p>
+                    <p class="eyebrow">Culture | Internet</p>
                     <h1 class="hero-title" id="hero-title">
-                      <a href="./skopje-tange.html">Tokyo on the Vardar</a>
+                      <a href="./the-stranci.html">How to Be From Somewhere Else</a>
                     </h1>
                   </div>
 
                   <div class="hero-support">
-                    <p class="hero-dek">The Japanese architect who dreamed a new Skopje.</p>
+                    <p class="hero-dek">They came looking for a place the internet had not already flattened. They stayed for the ajvar.</p>
                     <div class="hero-actions">
-                      <a class="text-cta" href="./skopje-tange.html">Read the Essay</a>
+                      <a class="text-cta" href="./the-stranci.html">Read the Essay</a>
                     </div>
                   </div>
                 </div>
 
-                <a class="hero-media story-card-link" href="./skopje-tange.html">
+                <a class="hero-media story-card-link" href="./the-stranci.html">
                   <img
                     class="hero-image"
-                    src="./Assets/Kenzo%20Article/Tange%20Pics/final.png"
-                    alt="Editorial collage portrait with red geometric forms and brutalist architecture."
+                    src="./Assets/Stranci/Stranci%20Pix/stranci-index-portrait.png"
+                    alt="Three people posing for a phone camera against a yellow and pink painted backdrop with social media icons."
                   />
                 </a>
               </div>
@@ -1661,18 +1915,18 @@
 
             <div class="story-grid">
               <article class="story-card">
-                <a class="story-card-link" href="./martinoski.html">
+                <a class="story-card-link" href="./skopje-tange.html">
                   <img
                     class="story-image"
-                    src="./Assets/Martinoski%20Article/Nikola's%20Hero%20Images/Martinoski%20Square.png"
-                    alt="Square collage portrait of Nikola Martinoski."
+                    src="./Assets/Kenzo%20Article/Tange%20Pics/final.png"
+                    alt="Editorial collage portrait with red geometric forms and brutalist architecture."
                     loading="lazy"
                   />
                 </a>
                 <div class="story-card-copy">
-                  <p class="story-card-kicker">Art | Painting</p>
+                  <p class="story-card-kicker">Architecture | Urbanism</p>
                   <h3 class="story-card-title">
-                    <a href="./martinoski.html">The Many Faces of Nikola Martinoski</a>
+                    <a href="./skopje-tange.html">Tokyo on the Vardar</a>
                   </h3>
                 </div>
               </article>
@@ -1715,8 +1969,8 @@
                 <a class="story-card-link" href="./wearing-the-nation.html">
                   <img
                     class="story-image"
-                    src="./Assets/Wearing%20the%20Nation/e9d02185-3178-4851-b0b0-ef36d7436568.png"
-                    alt="A collection of Macedonian football shirts in red, yellow, and white."
+                    src="./Assets/Wearing%20the%20Nation/nation-on-their-backs-index-portrait.png"
+                    alt="Portrait crop of Macedonian football shirts in red, yellow, and white."
                     loading="lazy"
                   />
                 </a>
@@ -1731,20 +1985,21 @@
           </div>
         </section>
 
-        <section class="section feature-spotlight" id="tose-feature" aria-labelledby="tose-feature-title">
-          <div class="shell feature-spotlight-frame">
-            <a class="feature-spotlight-link" href="./tose-proeski.html">
-              <h2 class="feature-spotlight-title" id="tose-feature-title">Toše Proeski</h2>
-              <p class="feature-spotlight-dek">
-                The album meant to carry the singer beyond the Balkans became his final chapter.
-              </p>
-              <img
-                class="feature-spotlight-image"
-                src="./Assets/Tose%20Hardest%20Thing/Tose%20Photos/tose-hero.png"
-                alt="Editorial collage for Toše Proeski and The Hardest Thing."
-                loading="lazy"
-              />
-            </a>
+        <section class="section kinfolk-feature" id="ohrid-feature" aria-labelledby="ohrid-feature-title">
+          <div class="shell kinfolk-feature-frame">
+            <article class="kinfolk-feature-article">
+              <a class="kinfolk-feature-text-link" href="./lake-ohrid-architecture-memory.html">
+                <h2 class="kinfolk-feature-title" id="ohrid-feature-title">The Ohrid House and the Logic of Place</h2>
+              </a>
+              <a class="kinfolk-feature-media-link" href="./lake-ohrid-architecture-memory.html" aria-label="Read The Ohrid House and the Logic of Place">
+                <img
+                  class="kinfolk-feature-image"
+                  src="./Assets/Ohrid%20Architecture/Images/cover.png"
+                  alt="Black-and-white collage of Ohrid house architecture with white plaster and dark timber windows."
+                  loading="lazy"
+                />
+              </a>
+            </article>
           </div>
         </section>
 
@@ -1752,11 +2007,11 @@
           <div class="shell more-from-muzej-frame">
             <div class="more-from-muzej-header">
               <h2 class="more-from-muzej-title" id="more-from-muzej-title">In Rotation</h2>
-              <p class="more-from-muzej-subtitle">What we're feeling.</p>
+              <p class="more-from-muzej-subtitle"></p>
             </div>
 
             <div class="more-from-muzej-grid">
-              <article class="more-from-muzej-card">
+              <article class="more-from-muzej-card" data-in-rotation-slot="spinning">
                 <a class="more-from-muzej-image-link" href="https://www.youtube.com/watch?v=u_7rtrLfiaM" target="_blank" rel="noopener noreferrer" aria-label="Watch Thea Trajkovska Senki on YouTube">
                   <div class="more-from-muzej-image">
                     <img src="./Assets/In%20Rotation/in-rotation-thea.jpg" alt="Thea Trajkovska portrait with red and orange background" loading="lazy" />
@@ -1768,7 +2023,7 @@
                 </div>
               </article>
 
-              <article class="more-from-muzej-card">
+              <article class="more-from-muzej-card" data-in-rotation-slot="following">
                 <a class="more-from-muzej-image-link" href="https://www.instagram.com/magazinn.mk/" target="_blank" rel="noopener noreferrer" aria-label="Open @magazinn.mk on Instagram">
                   <div class="more-from-muzej-image">
                     <img src="./Assets/In%20Rotation/in-rotation-magazinn.webp" alt="Black-and-white portrait of a man wearing traditional Macedonian dress" loading="lazy" />
@@ -1795,6 +2050,60 @@
           </div>
         </section>
 
+
+        <section class="section editorial-spread" aria-label="Editorial features">
+          <div class="shell editorial-spread-grid">
+            <a class="editorial-spread-card editorial-spread-card--no-image-overlay" href="./five-books-with-macedonian-state.html">
+              <img
+                src="./Assets/5%20Books/Images/NewCovers%20Folder/newbooks2.jpg"
+                alt="Five Macedonian history book covers"
+                loading="lazy"
+                style="object-position: center top;"
+              />
+              <div class="editorial-spread-copy">
+                <p class="editorial-spread-eyebrow">Literature | History</p>
+                <h2 class="editorial-spread-title">Start Here: Five Books with Macedonian State</h2>
+              </div>
+            </a>
+
+            <a class="editorial-spread-card" href="./marko-micov.html">
+              <img
+                src="./Assets/Marko%20Interview/Text%20and%20Photos/Images/Micov-Color-Photo_Rachel_Malehorn-17.jpg"
+                alt="Marko Micov ballet portrait."
+                loading="lazy"
+                style="object-position: center top;"
+              />
+              <div class="editorial-spread-copy">
+                <p class="editorial-spread-eyebrow">INTERVIEW | BALLET</p>
+                <h2 class="editorial-spread-title">Marko Micov</h2>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section class="section tose-descendants" id="tose-feature" aria-labelledby="tose-feature-title">
+          <div class="shell">
+            <article class="tose-descendants-grid">
+              <div class="tose-descendants-copy">
+                <p class="tose-descendants-kicker">
+                  <a href="./tose-proeski.html">Toše Proeski</a>
+                </p>
+                <h2 class="tose-descendants-title" id="tose-feature-title">
+                  <a href="./tose-proeski.html">The album meant to carry the singer beyond the Balkans became his final chapter.</a>
+                </h2>
+              </div>
+              <a class="tose-descendants-media" href="./tose-proeski.html" aria-label="Read Toše Proeski">
+                <img
+                  class="tose-descendants-image"
+                  src="./Assets/Tose%20Hardest%20Thing/Tose%20Photos/tose-hero.png"
+                  alt="Editorial collage for Toše Proeski and The Hardest Thing."
+                  loading="lazy"
+                />
+              </a>
+            </article>
+          </div>
+        </section>
+
         <section class="section" id="culture" aria-labelledby="explore-title">
           <div class="shell section-frame">
             <div class="explore-header">
@@ -1814,7 +2123,7 @@
                   />
                 </div>
                 <div class="explore-row-copy">
-                  <h3 class="explore-row-title">The Swan Dress that turned the Oscars red carpet into theater.</h3>
+                  <h3 class="explore-row-title">The Swan Dress that turned the Oscars red carpet into theater</h3>
                 </div>
               </a>
 
@@ -1829,7 +2138,7 @@
                   </div>
                 </div>
                 <div class="explore-row-copy">
-                  <h3 class="explore-row-title">Konstantin Miladinov's "Longing for the South."</h3>
+                  <h3 class="explore-row-title">Konstantin Miladinov's "Longing for the South"</h3>
                 </div>
               </a>
 
@@ -1844,7 +2153,37 @@
                   </div>
                 </div>
                 <div class="explore-row-copy">
-                  <h3 class="explore-row-title">How to taste Vranec like a sommelier.</h3>
+                  <h3 class="explore-row-title">How to taste Vranec like a sommelier</h3>
+                </div>
+              </a>
+              <a class="explore-row" href="./dj-ahmet.html">
+                <div class="explore-row-media">
+                  <div class="explore-image explore-image--photo">
+                    <img
+                      src="./Assets/DJ%20Ahmet/dj-ahmet-lead.jpg"
+                      alt="Still from DJ Ahmet with a young musician in a village setting"
+                      loading="lazy"
+                      style="object-position: 75% center;"
+                    />
+                  </div>
+                </div>
+                <div class="explore-row-copy">
+                  <h3 class="explore-row-title">"DJ Ahmet" Finds the Rhythms of the Selo</h3>
+                </div>
+              </a>
+
+              <a class="explore-row" href="./martinoski.html">
+                <div class="explore-row-media">
+                  <div class="explore-image explore-image--photo">
+                    <img
+                      src="./Assets/Martinoski%20Article/Nikola%27s%20Hero%20Images/Martinoski%20Portrait.png"
+                      alt="Portrait-oriented collage image of Nikola Martinoski"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <div class="explore-row-copy">
+                  <h3 class="explore-row-title">The Many Faces of Nikola Martinoski</h3>
                 </div>
               </a>
             </div>
@@ -1860,7 +2199,7 @@
             <div class="about-layout" id="about-strip">
               <div>
                 <h2 class="about-statement" id="newsletter-title">
-                  Muzej is a museum without walls.
+                  Muzej is an English-language journal exploring Macedonian culture.
                 </h2>
               </div>
             </div>
@@ -1874,12 +2213,263 @@
           <span aria-hidden="true">|</span>
           <a href="mailto:muzej.mk@proton.me">Contact</a>
           <span aria-hidden="true">|</span>
-          <a href="https://www.instagram.com/_muzej/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer">Instagram</a>
         </nav>
       </footer>
     </div>
 
     <script>
+      (function () {
+        var slots = {
+          spinning: [
+            {
+              title: "Thea Trajkovska — “Senki”",
+              href: "https://www.youtube.com/watch?v=u_7rtrLfiaM",
+              image: "./Assets/In%20Rotation/in-rotation-thea.jpg",
+              alt: "Thea Trajkovska — Senki",
+              ariaLabel: "Watch Thea Trajkovska Senki on YouTube"
+            },
+            {
+              title: "Saška Petkovska — “Nikogaš, Nikogaš”",
+              href: "https://www.youtube.com/watch?v=jt8qdoBz5Do",
+              image: "./Assets/In%20Rotation/in%20rotation%202/saksainrotation.png",
+              alt: "Saška Petkovska — Nikogaš, Nikogaš",
+              ariaLabel: "Watch Saška Petkovska Nikogaš, Nikogaš on YouTube"
+            }
+          ],
+          following: [
+            {
+              title: "@magazinn.mk",
+              href: "https://www.instagram.com/magazinn.mk/",
+              image: "./Assets/In%20Rotation/in-rotation-magazinn.webp",
+              alt: "@magazinn.mk",
+              ariaLabel: "Open @magazinn.mk on Instagram"
+            },
+            {
+              title: "MELEEM",
+              href: "https://www.instagram.com/meleemskopje/",
+              image: "./Assets/In%20Rotation/in%20rotation%202/meeleminrot.png",
+              alt: "MELEEM",
+              ariaLabel: "Open MELEEM on Instagram"
+            }
+          ]
+        };
+
+        function applyItem(slotName) {
+          var card = document.querySelector("[data-in-rotation-slot=\"" + slotName + "\"]");
+          var options = slots[slotName];
+
+          if (!card || !options || !options.length) {
+            return;
+          }
+
+          var item = options[Math.floor(Math.random() * options.length)];
+          var imageLink = card.querySelector(".more-from-muzej-image-link");
+          var titleLink = card.querySelector(".story-card-title a");
+          var image = card.querySelector("img");
+
+          [imageLink, titleLink].forEach(function (link) {
+            if (!link) {
+              return;
+            }
+
+            link.href = item.href;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            link.setAttribute("aria-label", item.ariaLabel);
+          });
+
+          if (titleLink) {
+            titleLink.textContent = item.title;
+          }
+
+          if (image) {
+            image.src = item.image;
+            image.alt = item.alt;
+          }
+        }
+
+        applyItem("spinning");
+        applyItem("following");
+      })();
+
+    </script>
+
+    <script>
+      (function () {
+        var articles = {
+          stranci: {
+            title: "How to Be From Somewhere Else",
+            href: "./the-stranci.html",
+            meta: "Culture | Internet",
+            dek: "They came looking for a place the internet had not already flattened. They stayed for the ajvar.",
+            heroImage: "./Assets/Stranci/Stranci%20Pix/stranci-index-portrait.png",
+            alt: "Three people posing for a phone camera against a yellow and pink painted backdrop with social media icons."
+          },
+          tokyo: {
+            title: "Tokyo on the Vardar",
+            href: "./skopje-tange.html",
+            meta: "Architecture | Urbanism",
+            dek: "The Japanese architect who dreamed a new Skopje.",
+            heroImage: "./Assets/Kenzo%20Article/Tange%20Pics/final.png",
+            alt: "Editorial collage portrait with red geometric forms and brutalist architecture."
+          },
+          nation: {
+            title: "The Nation on Their Backs",
+            href: "./wearing-the-nation.html",
+            meta: "Sport | Design",
+            dek: "Five Macedonian shirts, and what they reveal about design, memory, and the limits of reinvention.",
+            heroImage: "./Assets/Wearing%20the%20Nation/nation-on-their-backs-index-portrait.png",
+            alt: "Portrait crop of Macedonian football shirts in red, yellow, and white."
+          },
+          marko: {
+            title: "Marko Micov",
+            href: "./marko-micov.html",
+            meta: "Interview | Ballet",
+            dek: "A Macedonian ballet dancer on Skopje, discipline, leaving home, and carrying Macedonia onto the stage.",
+            heroImage: "./Assets/Marko%20Interview/Text%20and%20Photos/Images/unnamed.jpg",
+            cardImage: "./Assets/Marko%20Interview/Text%20and%20Photos/Images/Micov-Color-Photo_Rachel_Malehorn-17.jpg",
+            cardAlt: "Marko Micov ballet portrait.",
+            alt: "Marko Micov in a ballet portrait."
+          },
+          prespa: {
+            title: "Prespa",
+            href: "./prespa.html",
+            meta: "Travel | Weekend Guide",
+            dek: "A lake region of villages, mountain roads, beaches, wetlands, and quiet continuity.",
+            heroImage: "./Assets/prespa-hero.jpeg",
+            alt: "Lake Prespa shoreline in soft evening light."
+          },
+          newWave: {
+            title: "The (New) New Wave",
+            href: "./the-new-new-wave.html",
+            meta: "Cinema",
+            dek: "A new generation of Macedonian filmmakers is reshaping what the national screen can hold.",
+            heroImage: "./Assets/New%20Wave/New%20Wave%20Hero/new%20new%20wave.png",
+            imageClass: "new-wave-card-image",
+            alt: "Portrait collage of contemporary Macedonian filmmakers for The (New) New Wave article."
+          }
+        };
+
+        var heroRotationSlugs = ["stranci", "tokyo", "nation"];
+        var selectedStorySlugs = heroRotationSlugs.concat(["prespa", "newWave"]);
+        var selectedSlug = heroRotationSlugs[Math.floor(Math.random() * heroRotationSlugs.length)];
+        var selectedArticle = articles[selectedSlug];
+
+        function setLink(link, article) {
+          if (!link || !article) {
+            return;
+          }
+
+          link.href = article.href;
+        }
+
+        function setMetaContent(selector, value) {
+          var meta = document.querySelector(selector);
+
+          if (meta && value) {
+            meta.setAttribute("content", value);
+          }
+        }
+
+        function renderHero(slug, article) {
+          var hero = document.querySelector(".hero-grid");
+          var eyebrow = document.querySelector(".hero-copy .eyebrow");
+          var titleLink = document.querySelector(".hero-title a");
+          var dek = document.querySelector(".hero-dek");
+          var cta = document.querySelector(".hero-actions a");
+          var mediaLink = document.querySelector(".hero-media");
+          var image = document.querySelector(".hero-image");
+
+          if (!hero || !article) {
+            return;
+          }
+
+          hero.setAttribute("data-story", slug + "-lead");
+
+          if (eyebrow) {
+            eyebrow.textContent = article.meta;
+          }
+
+          if (titleLink) {
+            titleLink.textContent = article.title;
+            titleLink.href = article.href;
+          }
+
+          if (dek) {
+            dek.textContent = article.dek;
+          }
+
+          setLink(cta, article);
+          setLink(mediaLink, article);
+
+          if (image) {
+            image.src = article.heroImage;
+            image.alt = article.alt;
+          }
+
+          setMetaContent("meta[property=\"og:image\"]", article.heroImage);
+          setMetaContent("meta[name=\"twitter:image\"]", article.heroImage);
+        }
+
+        function renderStoryCard(article) {
+          var card = document.createElement("article");
+          var link = document.createElement("a");
+          var image = document.createElement("img");
+          var copy = document.createElement("div");
+          var kicker = document.createElement("p");
+          var title = document.createElement("h3");
+          var titleLink = document.createElement("a");
+
+          card.className = "story-card";
+          link.className = "story-card-link";
+          link.href = article.href;
+
+          image.className = article.imageClass ? "story-image " + article.imageClass : "story-image";
+          image.src = article.cardImage || article.heroImage;
+          image.alt = article.cardAlt || article.alt;
+          image.loading = "lazy";
+
+          copy.className = "story-card-copy";
+          kicker.className = "story-card-kicker";
+          kicker.textContent = article.meta;
+
+          title.className = "story-card-title";
+          titleLink.href = article.href;
+          titleLink.textContent = article.title;
+
+          link.appendChild(image);
+          title.appendChild(titleLink);
+          copy.appendChild(kicker);
+          copy.appendChild(title);
+          card.appendChild(link);
+          card.appendChild(copy);
+
+          return card;
+        }
+
+        function renderSelectedStories(activeSlug) {
+          var storyGrid = document.querySelector("#selected-stories .story-grid");
+
+          if (!storyGrid) {
+            return;
+          }
+
+          storyGrid.textContent = "";
+          selectedStorySlugs
+            .filter(function (slug) { return slug !== activeSlug; })
+            .slice(0, 4)
+            .forEach(function (slug) {
+              if (articles[slug]) {
+                storyGrid.appendChild(renderStoryCard(articles[slug]));
+              }
+            });
+        }
+
+        renderHero(selectedSlug, selectedArticle);
+        renderSelectedStories(selectedSlug);
+      })();
+
       (function () {
         var utilityMenu = document.querySelector(".utility-menu");
 

@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Swan Dress — Muzej</title>
+<link rel="icon" type="image/png" href="./Assets/Font/Muzej%20Logo.ai.png">
+<link rel="apple-touch-icon" href="./Assets/Font/Muzej%20Logo.ai.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -692,7 +694,10 @@
 }
 
     </style>
-  </head>
+<link rel="stylesheet" href="article-headlines.css">
+  <link rel="stylesheet" href="more-from-muzej.css">
+<script src="more-from-muzej.js" defer></script>
+</head>
   <body>
     <div class="page">
       <header class="site-header">
@@ -718,7 +723,7 @@
                 </div>
                 <div class="utility-panel-group utility-panel-utility">
                   <a class="utility-link" href="mailto:muzej.mk@proton.me">Contact</a>
-                  <a class="utility-link" href="https://www.instagram.com/_muzej/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                  <a class="utility-link" href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer">Instagram</a>
                 </div>
               </nav>
             </details>
@@ -799,30 +804,8 @@
           </section>
         </article>
 
-        <section class="more-from-muzej" aria-labelledby="more-title">
-          <div class="shell more-from-muzej-frame">
-            <h2 class="more-from-muzej-title" id="more-title">More from Muzej</h2>
-            <ul class="related-list">
-              <li>
-                <a href="skopje-tange.html">Tokyo on the Vardar: Kenzo Tange’s Reconstruction of Skopje</a>
-                <span class="related-desc">How a Japanese Architect Impacted Skopje</span>
-              </li>
-              <li>
-                <a href="martinoski.html">The Many Faces of Nikola Martinoski</a>
-                <span class="related-desc">A portrait of a painter and the visual language of Macedonian modernism.</span>
-              </li>
-              <li>
-                <a href="wearing-the-nation.html">The Nation on Their Backs</a>
-                <span class="related-desc">A design note on football shirts, color, and national identity.</span>
-              </li>
-              <li>
-                <a href="longing-for-south.html">Longing for the South</a>
-                <span class="related-desc">“To see Ohrid / to see Struga.”</span>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </main>
+  <section class="more-from-muzej" data-more-from-muzej aria-labelledby="more-from-muzej-title"></section>
+</main>
 
       <footer class="site-footer muzej-footer">
         <div class="footer-inner">
@@ -834,7 +817,7 @@
           <nav class="footer-links" aria-label="Footer navigation">
             <a href="about.html">ABOUT MUZEJ</a>
             <a href="mailto:muzej.mk@proton.me">CONTACT</a>
-            <a href="https://www.instagram.com/_muzej/" target="_blank" rel="noopener noreferrer" aria-label="Open Muzej on Instagram">INSTAGRAM</a>
+            <a href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer" aria-label="Open Muzej on Instagram">INSTAGRAM</a>
           </nav>
         </div>
       </footer>

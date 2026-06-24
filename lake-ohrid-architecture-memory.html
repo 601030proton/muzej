@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="How one Macedonian vernacular tradition turned hillside, lake, climate, and craft into architecture.">
+<title>The Ohrid House and the Logic of Place | Muzej</title>
+<link rel="icon" type="image/png" href="./Assets/Font/Muzej%20Logo.ai.png">
+<link rel="apple-touch-icon" href="./Assets/Font/Muzej%20Logo.ai.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&display=swap">
+<style>
+:root {
+  --background: #ffffff;
+  --foreground: #0f0e0d;
+  --white: #ffffff;
+  --ink: #0f0e0d;
+  --ink-soft: rgba(15, 14, 13, 0.62);
+  --ink-faint: rgba(15, 14, 13, 0.12);
+  --muted: #70675d;
+  --rule: rgba(23, 21, 19, 0.09);
+  --page-x: clamp(18px, 5.2vw, 72px);
+  --nav-h: clamp(88px, 10vw, 128px);
+  --feature-w: min(1280px, calc(100vw - (var(--page-x) * 2)));
+  --rail-gap: clamp(28px, 5vw, 76px);
+  --body-col: minmax(380px, 560px);
+  --body-tail: clamp(16px, 1.4vw, 24px);
+  --section-gap: clamp(48px, 8vw, 108px);
+  --content-max: 1520px;
+  --serif: "Fraunces", serif;
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --article-serif: 'Adobe Jenson', Georgia, serif;
+  --brand-serif: "Fraunces", serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--article-serif);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+.shell {
+  width: min(100%, var(--content-max));
+  margin: 0 auto;
+  padding-left: var(--page-x);
+  padding-right: var(--page-x);
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  background: var(--background);
+}
+.header-frame {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  padding-top: 28px;
+  padding-bottom: 24px;
+}
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--serif);
+  font-size: clamp(2.55rem, 2.02rem + 1.52vw, 4rem);
+  line-height: 0.86;
+  letter-spacing: -0.05em;
+  font-weight: 560;
+  font-optical-sizing: auto;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.utility-link,
+.utility-menu-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  letter-spacing: 0.11em;
+  color: rgba(23, 21, 19, 0.58);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+.utility-link:hover,
+.utility-menu-item:hover {
+  color: var(--foreground);
+}
+.header-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.utility-menu {
+  position: relative;
+}
+.utility-menu summary {
+  list-style: none;
+}
+.utility-menu summary::-webkit-details-marker {
+  display: none;
+}
+.utility-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: color 180ms ease, opacity 180ms ease;
+}
+.utility-trigger:hover {
+  opacity: 0.72;
+}
+.utility-trigger:focus-visible {
+  outline: 2px solid rgba(141, 79, 61, 0.45);
+  outline-offset: 3px;
+}
+.utility-icon {
+  display: grid;
+  gap: 0.26rem;
+}
+.utility-icon-line {
+  display: block;
+  width: 1.45rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.88;
+}
+.utility-panel {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  right: 0;
+  z-index: 10;
+  display: grid;
+  min-width: 10rem;
+  padding: 0.45rem 0;
+  border: 1px solid rgba(23, 21, 19, 0.12);
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(23, 21, 19, 0.08);
+}
+.utility-panel-group {
+  display: grid;
+  gap: 0;
+}
+.utility-panel-utility {
+  margin-top: 0.25rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid rgba(23, 21, 19, 0.1);
+}
+.utility-panel .utility-link,
+.utility-panel .utility-menu-item {
+  justify-content: flex-start;
+  min-height: 0;
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  background: transparent;
+}
+.utility-panel-utility .utility-link {
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  color: rgba(23, 21, 19, 0.52);
+}
+.utility-panel .utility-menu-item {
+  cursor: pointer;
+}
+.utility-panel .utility-link:hover,
+.utility-panel .utility-menu-item:hover {
+  background: rgba(23, 21, 19, 0.035);
+}
+
+main {
+  padding-top: clamp(24px, 3.2vw, 48px);
+}
+
+.feature {
+  padding:
+    clamp(0px, 0.6vw, 6px)
+    clamp(16px, 3vw, 40px)
+    clamp(56px, 8vw, 102px);
+}
+.feature-inner {
+  display: grid;
+  grid-template-columns: minmax(420px, 1.06fr) minmax(300px, 0.84fr);
+  gap: clamp(22px, 3.8vw, 52px);
+  align-items: stretch;
+  max-width: min(1320px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
+  margin: 0 auto;
+}
+.feature-media {
+  margin: 0;
+}
+.feature-media img {
+  width: 100%;
+  height: clamp(620px, 80vh, 920px);
+  object-fit: contain;
+  object-position: center top;
+  background: var(--white);
+}
+.feature-copy {
+  min-height: clamp(620px, 80vh, 920px);
+  max-width: 27rem;
+  margin: 0 auto;
+  padding: clamp(26px, 3.6vw, 42px) 0 clamp(20px, 3vw, 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.feature-title {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(38px, 4.9vw, 76px);
+  font-weight: 400;
+  line-height: 0.96;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+.feature-title-break {
+  display: block;
+}
+.feature-byline {
+  margin: auto 0 0;
+  color: var(--ink-soft);
+  font-size: clamp(12px, 0.95vw, 14px);
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.feature-deck {
+  max-width: min(1320px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
+  margin: clamp(28px, 4vw, 52px) auto 0;
+  color: var(--ink);
+  font-size: clamp(17px, 1.55vw, 23px);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+}
+.article-shell {
+  max-width: var(--feature-w);
+  margin: 0 auto;
+  padding: 0 var(--page-x) clamp(32px, 4vw, 56px);
+}
+.content-row {
+  display: grid;
+  grid-template-columns: minmax(240px, 1.08fr) var(--body-col) var(--body-tail);
+  column-gap: var(--rail-gap);
+  align-items: start;
+}
+.article-body {
+  display: grid;
+  grid-template-columns: minmax(240px, 1.08fr) var(--body-col) var(--body-tail);
+  column-gap: var(--rail-gap);
+  align-items: start;
+  margin-bottom: var(--section-gap);
+}
+.content-row + .content-row {
+  margin-top: var(--section-gap);
+}
+.content-row .empty-rail,
+.article-body .empty-tail,
+.content-row .empty-tail {
+  min-height: 1px;
+}
+.article-body-media {
+  margin: 0;
+  align-self: start;
+  position: sticky;
+  top: calc(var(--nav-h) + clamp(12px, 2vw, 26px));
+}
+.article-body-media img {
+  width: 100%;
+  height: auto;
+}
+.article-body-media figcaption {
+  margin-top: 12px;
+  color: var(--ink-soft);
+  font-size: 8px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+.article-body-copy {
+  min-width: 0;
+}
+
+.section-heading {
+  margin: 0;
+  max-width: 34rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-size: clamp(0.9rem, 1vw, 1.05rem);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.body-block p {
+  margin: 0;
+  font-size: clamp(16px, 1.18vw, 18px);
+  line-height: 1.82;
+}
+.body-block p + p {
+  margin-top: 1.75em;
+}
+
+.pull-quote {
+  margin: 0;
+  max-width: none;
+  font-size: clamp(20px, 2.35vw, 26px);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+.gallery-reading {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 1.9vw, 24px);
+  margin: var(--section-gap) 0 0;
+}
+.gallery-reading-media,
+.gallery-reading-feature {
+  margin: 0;
+  aspect-ratio: 15 / 21;
+  overflow: hidden;
+}
+.gallery-reading-media img,
+.gallery-reading-feature img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-reading-side {
+  min-width: 0;
+}
+.article-body-lower {
+  margin-top: clamp(22px, 3vw, 34px);
+  margin-bottom: 0;
+}
+
+.more-from-muzej {
+  padding-top: clamp(32px, 4vw, 56px);
+  padding-bottom: clamp(82px, 10vw, 148px);
+  background: transparent;
+  color: var(--foreground);
+}
+.more-from-muzej-frame {
+  display: grid;
+  width: min(calc(100% - (var(--page-x) * 2)), 68rem);
+  max-width: 68rem;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  border-top: 2px solid var(--foreground);
+  padding-top: clamp(2.1rem, 4vw, 3.25rem);
+}
+.more-from-muzej-title {
+  max-width: none;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(1.45rem, 1vw + 1.1rem, 1.9rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 650;
+  font-optical-sizing: auto;
+}
+.related-list {
+  list-style: none;
+  margin: clamp(1.4rem, 2.5vw, 2rem) 0 0;
+  padding: 0;
+}
+.related-list li {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  padding: clamp(1.1rem, 1.8vw, 1.6rem) 0;
+  border-top: 1px solid var(--rule);
+  align-items: start;
+}
+.related-list li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+.related-list a {
+  font-family: var(--serif);
+  font-size: clamp(1.1rem, 1.3vw + 0.7rem, 1.55rem);
+  font-weight: 350;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+  font-optical-sizing: auto;
+  border-bottom: none;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+.related-list a:hover {
+  color: var(--muted);
+}
+.related-list .related-desc {
+  display: block;
+  margin-top: 0.45rem;
+  font-family: var(--sans);
+  font-size: clamp(0.82rem, 0.78rem + 0.18vw, 0.94rem);
+  line-height: 1.72;
+  letter-spacing: 0;
+  color: var(--muted);
+}
+
+.site-footer {
+  margin-top: 0;
+}
+.muzej-footer {
+  width: 100%;
+  padding: clamp(3.5rem, 7vw, 6rem) var(--page-x);
+  background: #000000;
+  color: #f7f2e9;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: minmax(320px, 620px) minmax(180px, 260px);
+  gap: clamp(3rem, 7vw, 6rem);
+  justify-content: center;
+  align-items: start;
+  width: min(100%, 1160px);
+  margin: 0 auto;
+}
+.footer-brand {
+  min-width: 0;
+}
+.footer-wordmark {
+  display: inline-flex;
+  font-family: var(--serif);
+  font-size: clamp(3.1rem, 5vw, 5rem);
+  font-weight: 560;
+  line-height: 0.88;
+  letter-spacing: -0.055em;
+  font-optical-sizing: auto;
+}
+.footer-statement {
+  max-width: 38.75rem;
+  margin: clamp(1.15rem, 1.8vw, 1.45rem) 0 0;
+  font-size: clamp(1rem, 1vw + 0.72rem, 1.15rem);
+  line-height: 1.5;
+  color: rgba(247, 242, 233, 0.86);
+}
+.muzej-footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-top: 0.28rem;
+}
+.muzej-footer .footer-links a {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  line-height: 1.2;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 180ms ease, text-decoration-color 180ms ease;
+}
+.muzej-footer .footer-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  opacity: 0.86;
+}
+
+@media (max-width: 1080px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+
+  .muzej-footer .footer-links {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 1140px) {
+  .header-frame {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 0.85rem 1.25rem;
+  }
+  .header-tools {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 980px) {
+  .menu-button {
+    padding: 8px 0 6px 18px;
+  }
+  .menu-panel {
+    padding: 0 calc(var(--page-x) + 18px) 0 var(--page-x);
+    gap: 16px;
+  }
+  .menu-panel a {
+    width: min(100%, 22rem);
+    font-size: clamp(26px, 5vw, 42px);
+  }
+  .feature-inner {
+    grid-template-columns: minmax(300px, 0.94fr) minmax(300px, 0.9fr);
+    gap: clamp(24px, 4vw, 46px);
+    align-items: stretch;
+  }
+  .feature-media img {
+    height: clamp(500px, 70vh, 720px);
+  }
+  .feature-copy {
+    min-height: clamp(500px, 70vh, 720px);
+    max-width: 23rem;
+  }
+  .feature-title {
+    font-size: clamp(34px, 4.35vw, 58px);
+  }
+  .feature-deck {
+    margin-top: clamp(30px, 4.2vw, 48px);
+    font-size: clamp(16px, 2.05vw, 20px);
+  }
+  .content-row {
+    grid-template-columns: minmax(170px, 0.82fr) minmax(0, 520px) clamp(14px, 1vw, 18px);
+  }
+  .article-body {
+    grid-template-columns: minmax(170px, 0.82fr) minmax(0, 520px) clamp(14px, 1vw, 18px);
+  }
+}
+
+@media (max-width: 760px) {
+  .header-frame {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .brand-mark {
+    font-size: clamp(2.3rem, 10.8vw, 3.05rem);
+  }
+}
+
+@media (max-width: 720px) {
+  .header-frame {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .brand-mark {
+    font-size: clamp(2.3rem, 10.8vw, 3.05rem);
+  }
+  .menu-button {
+    gap: 7px;
+    padding: 8px 0 6px 16px;
+    margin-top: 1px;
+  }
+  .menu-panel {
+    padding: 0 calc(var(--page-x) + 6px) 0 var(--page-x);
+    gap: 14px;
+  }
+  .menu-panel a {
+    width: min(100%, 16rem);
+    font-size: clamp(22px, 9vw, 30px);
+    line-height: 1.08;
+  }
+  .menu-panel a:last-child {
+    font-size: 18px;
+  }
+  .feature {
+    padding:
+      4px
+      var(--page-x)
+      48px;
+  }
+  .feature-inner,
+  .article-body,
+  .content-row {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    text-align: left;
+  }
+  .feature-inner {
+    display: grid;
+    gap: 22px;
+  }
+  .feature-media img {
+    height: clamp(360px, 56vh, 470px);
+  }
+  .article-body {
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .gallery-reading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin: 40px 0 0;
+  }
+  .article-body-media {
+    position: static;
+  }
+  .gallery-reading-media {
+    position: static;
+  }
+  .article-body-lower {
+    margin-top: 18px;
+    margin-bottom: 0;
+  }
+  .content-row .empty-tail {
+    display: none;
+  }
+  .article-body .empty-tail {
+    display: none;
+  }
+  .feature-copy {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+  }
+  .feature-title {
+    font-size: clamp(32px, 10.5vw, 50px);
+    line-height: 0.98;
+  }
+  .feature-byline {
+    margin: 28px 0 0;
+    font-size: 11px;
+  }
+  .feature-deck {
+    margin-top: 34px;
+    font-size: clamp(15px, 3.9vw, 18px);
+    line-height: 1.2;
+  }
+  .feature-title-break {
+    display: none;
+  }
+  .content-row + .content-row {
+    margin-top: 40px;
+  }
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: transparent;
+  pointer-events: none;
+}
+
+.site-header .header-frame,
+.site-header .brand-mark,
+.site-header .header-tools {
+  pointer-events: auto;
+}
+
+.site-header .brand-mark {
+  transform: translate3d(0, 0, 0);
+  transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.muzej-logo-hidden .site-header .brand-mark {
+  transform: translate3d(0, calc(-100% - 42px), 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header .brand-mark {
+    transition: none;
+    will-change: auto;
+  }
+
+  body.muzej-logo-hidden .site-header .brand-mark {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header { z-index: 2000; }
+  .site-header .header-frame { grid-template-columns: minmax(0, 1fr) auto; align-items: center; justify-items: stretch; gap: 1rem; }
+  .site-header .brand-mark { justify-self: start; min-width: 0; }
+  .site-header .header-tools { justify-self: end; justify-content: flex-end; margin-left: auto; position: relative; z-index: 2002; }
+  .site-header .utility-menu { position: static; }
+  .site-header .utility-trigger { position: relative; z-index: 2003; }
+  .site-header .utility-panel { position: fixed; inset: 0; left: 0; right: 0; top: 0; z-index: 2001; display: grid; align-content: center; width: 100vw; max-width: none; min-width: 0; height: 100vh; height: 100svh; padding: clamp(76px, 18vh, 128px) var(--page-x) 48px; border: 0; background: rgba(255, 255, 255, 0.98); box-shadow: none; overflow-y: auto; transform: none; }
+  .site-header .utility-panel-group { width: min(100%, 22rem); margin: 0 auto; }
+  .site-header .utility-panel-utility { margin-top: 0.8rem; padding-top: 0.85rem; }
+  .site-header .utility-panel .utility-link,
+  .site-header .utility-panel .utility-menu-item { justify-content: center; min-height: 2.75rem; padding: 0.72rem 0; text-align: center; }
+}
+
+
+
+.article-longform {
+  padding-bottom: clamp(72px, 9vw, 132px);
+}
+.article-longform .section-heading {
+  max-width: 34rem;
+  margin: clamp(30px, 4vw, 48px) 0 clamp(6px, 0.7vw, 9px);
+}
+.article-longform .section-heading:first-child {
+  margin-top: 0;
+}
+.article-longform .section-heading + p {
+  margin-top: 0;
+}
+.article-longform .ohrid-sketch-spread {
+  margin-bottom: 72px;
+}
+ (max-width: 720px) {
+  .article-longform .ohrid-sketch-spread {
+    margin-bottom: 44px;
+  }
+}
+
+</style>
+<link rel="stylesheet" href="article-headlines.css">
+<link rel="stylesheet" href="more-from-muzej.css">
+<script src="more-from-muzej.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="shell header-frame">
+    <a class="brand-mark" href="index.html" aria-label="Muzej home">Muzej</a>
+
+    <div class="header-tools">
+      <details class="utility-menu">
+        <summary class="utility-trigger" aria-label="Open navigation menu">
+          <span class="utility-icon" aria-hidden="true">
+            <span class="utility-icon-line"></span>
+            <span class="utility-icon-line"></span>
+            <span class="utility-icon-line"></span>
+          </span>
+        </summary>
+        <nav class="utility-panel" aria-label="Site navigation">
+          <div class="utility-panel-group">
+            <a class="utility-link" href="index.html">Home</a>
+            <a class="utility-link" href="index.html#selected-stories">Selected Stories</a>
+            <a class="utility-link" href="index.html#in-rotation">In Rotation</a>
+            <a class="utility-link" href="index.html#culture">Culture</a>
+            <a class="utility-link" href="about.html">About Muzej</a>
+          </div>
+          <div class="utility-panel-group utility-panel-utility">
+            <a class="utility-link" href="mailto:muzej.mk@proton.me">Contact</a>
+            <a class="utility-link" href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main>
+  <header class="feature">
+    <div class="feature-inner">
+      <figure class="feature-media">
+        <img src="./Assets/Ohrid%20Architecture/Images/cover.png" alt="Collage of traditional Ohrid house architecture with white plaster, dark timber, and lake-facing windows">
+      </figure>
+
+      <div class="feature-copy">
+        <h1 class="feature-title">The Ohrid House and the Logic of Place</h1>
+      </div>
+    </div>
+    <p class="feature-deck">How one Macedonian vernacular tradition turned hillside, lake, climate, and craft into architecture.</p>
+  </header>
+
+  <article class="article-shell article-longform">
+    <section class="content-row">
+      <figure class="article-body-media">
+        <img src="./Assets/Ohrid%20Architecture/Images/2.png" alt="Watercolor illustration of a traditional Ohrid house on a stone street." width="1198" height="1313" loading="lazy" decoding="async">
+      </figure>
+      <div class="article-body-copy body-block">
+        <p>The first thing to understand about the traditional Ohrid house is that its form was produced by constraints. It did not emerge from a flat site, a generous parcel, or an abstract idea of national style. It developed in a dense lake town where the old settlement climbs a hill above Lake Ohrid, where streets are narrow and irregular, and where buildable land was limited. The ground floors of these houses often had to accept the awkwardness of the street and the parcel. The upper floors, by contrast, could widen, project outward, gather light, and recover more regular rooms above an irregular base.</p>
+
+        <p>That basic sectional movement—heavy and compressed below, lighter and more open above—is one of the keys to Ohrid’s domestic architecture. It explains the stone lower levels, the timber-framed and plastered upper storeys, the deep eaves, the bands of windows, and the carefully positioned outlooks toward the lake, sun, street, or slope. It also explains why the Ohrid house should not be reduced to a pretty Balkan façade. It is a building type shaped by topography, climate, social life, and craft.</p>
+
+        <p>Scholars generally describe the Ohrid town house as a regional variant of the Ottoman urban house, but with specific indigenous characteristics in plan, construction, and spatial organization. That distinction matters. The Ohrid house is not a pure copy of a Turkish, Byzantine, Greek, Slavic, or any other single model. It belongs to a mixed Balkan world in which earlier urban continuity, Byzantine memory, Ottoman neighborhood structure, Macedonian and southwest Balkan craft traditions, local materials, and the lake environment all intersected. Its importance lies in that convergence.</p>
+
+        <p>This architecture offers a useful corrective to shallow ideas of heritage. It shows that tradition is not only pattern, ornament, or nostalgia. It is also an accumulated intelligence about how to live in a place. The Ohrid house is meaningful because it solved real problems: how to build on steep terrain, how to bring light into dense streets, how to divide winter and summer living, how to combine stone and wood, how to create privacy at street level while opening the house above, and how to make domestic space respond to both family life and the larger landscape.</p>
+
+        <h2 class="section-heading">A town older than its houses</h2>
+
+        <p>Ohrid’s vernacular houses belong to a city whose significance predates them by many centuries. UNESCO identifies the Ohrid region as one of Europe’s oldest human settlements, with archaeological remains from ancient Lychnidos, early Christian basilicas, Byzantine churches, and a still-legible historic urban center along the hill and lakeshore. The old town is valuable not only because it contains monuments, but because its urban form has remained unusually coherent in relation to the lake, terrain, and historic street network. </p>
+
+        <p>The late-Ottoman residential buildings of the eighteenth and nineteenth centuries are a major part of that urban fabric. They developed in a town that had already passed through many historical phases. Ottoman rule reorganized Ohrid, but it did not erase the earlier city. Instead, Ohrid became part of a broader Rumelian and Balkan urban world, linked to regional routes such as the Via Egnatia and shaped by the Ottoman mahalle system: neighborhoods organized around family life, religious institutions, local streets, and irregular parcels.</p>
+
+        <p>In Ohrid, those broader Ottoman-Balkan urban patterns were filtered through a particularly demanding site. The old town rises above the lake, with the fortress above and the water below. Boris Čipan and Dušan Grabrijan, as interpreted by Serena Acciai, emphasized the way Ohrid’s houses appear to grow out of the hill, with their čardaks oriented toward views over the rooftops, streets, and lake. Their reading is important because it treats the house not as an isolated object, but as part of the hillside town. </p>
+
+        <p>The social geography of the town also shaped its domestic architecture. Scholarship notes a historical division in which Christians occupied the hill and Muslims lived in the lower plain near the bazaar, with the commercial district mediating between them. This division helps explain the morphology of the street network and the relationship between domestic life, neighborhood structure, and urban form. </p>
+
+        <p>The result was not a standardized architectural image, but a family of related solutions. Ohrid houses responded to narrow lots, steep streets, shifting social boundaries, views toward the lake, and the practical demands of seasonal living. Their distinctiveness comes from that specificity.</p>
+
+        <p>Any discussion of Macedonian vernacular architecture has to be clear about geography. </p>
+
+        <p>This matters because vernacular architecture does not follow modern borders neatly. The Ohrid house belongs most directly to the urban traditions of Vardar Macedonia, but its relationships extend across a wider southwest Balkan building world. Comparisons with Lerin and Kostur in Aegean Macedonia, with Melnik and the wider Pirin Revival context, and with Debar, Reka, Galičnik, Kruševo, Veles, Prilep, and Bitola all show both shared vocabulary and important local differences.</p>
+
+        <p>Macedonian architecture is not one uniform style. It is a regional field. Ohrid is one of its most refined urban expressions, but it should not be treated as a substitute for all Macedonian vernacular architecture. Its importance lies in its particularity.</p>
+
+        <h2 class="section-heading">The anatomy of the Ohrid house</h2>
+
+        <p>The mature Ohrid town house is usually defined by a combination of massing, section, plan, materials, and façade treatment. Ivkovska’s typological work describes it as a regional variant of the Ottoman urban house with indigenous characteristics, especially in its spatial plan and structural details. The basic materials are ordinary—stone and wood—but the way they are used produces a highly specific civic domestic architecture. </p>
+
+        <p>The lower part of the house is typically built in stone masonry. It is heavier, more enclosed, and more directly tied to the street and parcel line. In many houses, the ground floor presses against the edge of the lot. Because the plots are irregular and the streets narrow, the lower plan may be awkward. The upper floors, built in lighter timber-frame construction, often project outward and regularize the living spaces. This creates one of Ohrid’s most recognizable features: a building that appears constrained at the base but expansive above.</p>
+
+        <p>Ohrid houses often rise to three or even four floors, whereas many related Balkan urban houses are more commonly two-storey. The verticality is not accidental. It responds to a shortage of frontal space, steep terrain, and the need to recover light, air, and geometric order above the irregular ground floor.</p>
+
+        <p>The central interior element is the čardak. In different regional vocabularies, related spaces may be called sofa, hayat, or hall, but in the Macedonian house the čardak is especially important. It functions as an upper-level distributor around which rooms are organized. Depending on climate and local type, it may open toward a terrace or tronj, be partially enclosed, or serve as a summer living and sleeping space. Acciai, drawing on Grabrijan, identifies it as the compositional heart of the Macedonian house. Ivkovska’s measured plans show the same logic in Ohrid: stairs rise from the lower levels to the hall, and rooms are distributed from that central space. </p>
+
+        <p>The L-type house is especially frequent in Ohrid’s civic architecture. Its variations depend on the placement of the hall and porch across different levels. This is one reason the Ohrid house often appears asymmetrical from the outside while remaining highly organized internally. The plan is not careless; it is adapted.</p>
+
+        <h2 class="section-heading">Winter below, summer above</h2>
+
+        <p>One of the most important principles in the Macedonian house is the seasonal division between winter and summer living. Acciai summarizes the broader Macedonian pattern as a massive stone winter dwelling below and a lighter timber-framed summer dwelling above. Ivkovska applies this specifically to Ohrid, where winter residence is often placed on a mezzanine level, while the summer residence occupies upper floors oriented toward the sun and lake. </p>
+
+        <p>This division is essential to the type. The lower winter rooms were smaller, heavier, and more easily heated. The upper spaces were freer, brighter, and better ventilated. The čardak could serve as a summer living room or sleeping area. Stairs, niches, service spaces, and sometimes an open attic all contributed to a house that worked as a layered climatic system rather than a sealed modern container. </p>
+
+        <p>The climate of Ohrid helps explain the arrangement. The region has a Mediterranean-continental climate, and Lake Ohrid moderates conditions. Acciai describes the area as having a mixture of Mediterranean and mountain climate, which helps explain why dense urban houses could still use broad upper windows and summer-oriented living spaces.</p>
+
+        <p>The old house therefore encoded a seasonal way of life. It did not attempt to make every room perform the same function all year. Instead, it accepted that domestic life moves through a house differently in winter and summer. That is one of the most sophisticated features of the tradition, and one of the easiest to miss if the house is viewed only as an exterior image.</p>
+
+        <h2 class="section-heading">Street, courtyard, and privacy</h2>
+
+        <p>The relationship between the Ohrid house and the street is another defining feature. At ground level, the house is often relatively closed. The lower masonry levels meet the street and parcel edge directly. Above, the house opens through projections, grouped windows, and wider living spaces. This contrast between closed base and open upper floor is not only visual; it reflects privacy, climate, and urban density.</p>
+
+        <p>The courtyard in Ohrid is also different from the large garden or formal courtyard found in some other Ottoman-Balkan house types. Because land was limited, the yard often became a compressed extension of the interior rather than a broad detached outdoor space. Ivkovska notes that the cellar and summer kitchen could remain in the yard, while the winter apartment sat above and the upper summer levels opened toward the sun, street, and lake.</p>
+
+        <p>This means the Ohrid house cannot be understood through façade alone. Its organization depends on a sequence: street, threshold, service yard, lower rooms, stairs, hall, upper rooms, windows, and view. The house manages privacy at the street while still participating in the life of the town and landscape above.</p>
+
+        <h2 class="section-heading">Materials and construction</h2>
+
+        <p>The classic Ohrid house is built around a contrast between stone and wood. The lower levels are massive stone masonry. The upper levels use timber-frame bondruk construction, usually covered with plaster. Tomovska and Radivojević identify the principal materials as stone, wood, mud mortar, traditional exterior plaster known as čok plaster, lime-based interior plaster, glass, and clay tiles. Many of these materials came from the immediate surroundings, and some stone blocks were reused from earlier buildings or local monuments. </p>
+
+        <p>The plaster system was technically more complex than a simple white surface. Ivkovska notes that plaster on bondruk walls was applied over wooden lattices and could include hydrated or powdered lime, river sand, and pozzolanic additives such as ground volcanic stone, clay-tile dust, or pozzolanic earth. Tomovska and Radivojević describe similar interior and exterior plaster systems. They also note a bondruk wall composition of about eighteen centimetres, with two timber-frame layers and an intermediate air layer that improved insulation despite the wall’s lightness.</p>
+
+        <p>This material logic is central to the architecture’s appearance. The familiar contrast of exposed stone below, light plaster above, dark timber lines, and broad roof eaves is not merely an aesthetic code. It expresses construction. The visual identity comes from the way the house is made.</p>
+
+        <p>This is an important point for contemporary adaptation. If stone, timber, plaster, window rhythm, and projection are treated as surface motifs, the result is usually weak. In the original houses, those features correspond to structure, climate, and use.</p>
+      </div>
+      <div class="empty-tail" aria-hidden="true"></div>
+    </section>
+
+    <section class="gallery-reading ohrid-sketch-spread">
+      <figure class="gallery-reading-media">
+        <img src="./Assets/Ohrid%20Architecture/Images/ohrid-architecture-sketch-01.png" alt="Architectural sketch of traditional Ohrid house forms and projecting upper floors">
+      </figure>
+
+      <div class="gallery-reading-side">
+        <figure class="gallery-reading-feature">
+          <img src="./Assets/Ohrid%20Architecture/Images/ohrid-architecture-sketch-02.png" alt="Detail sketch of Ohrid vernacular house windows, timber framing, and roof eaves">
+        </figure>
+      </div>
+    </section>
+
+    <section class="content-row">
+      <figure class="article-body-media">
+        <img src="./Assets/Ohrid%20Architecture/Images/image1.png" alt="Watercolor illustration of a traditional Ohrid house with a red tile roof and stone base." width="1254" height="1254" loading="lazy" decoding="async">
+      </figure>
+      <div class="article-body-copy body-block">
+        <h2 class="section-heading">Windows, eaves, and façade order</h2>
+
+        <p>Ohrid façades are often described through their stone bases, timber-framed upper storeys, accentuated projections, broad windows, and deep eaves. Ivkovska describes ground floors of stone masonry with wooden tie elements, upper bondruk construction, pronounced upper-floor projections, double orders of wide regular windows, and roof forms with broad eaves and regular or curved tympanums. </p>
+
+        <p>The windows are especially important. Namicev and colleagues, in a broader study of symmetry in Macedonian traditional architecture, show that façade composition often relies on grouped windows, bay windows, balconies, and proportional symmetry or near-symmetry, even when the plan behind them is irregular. Window groupings of one, three, or five appear in places such as Debar, Struga, Kratovo, and Ohrid, while longer window sequences create horizontal emphasis and increase light. </p>
+
+        <p>This helps explain the particular discipline of the Ohrid façade. The house may not be perfectly symmetrical, but it is rarely random. It uses repeated openings, projecting volumes, and rooflines to create order over an irregular base. In some cases, the function of internal rooms can be read from the exterior through the grouping of windows. </p>
+
+        <p>The deep eaves also have practical and compositional roles. They protect plastered upper walls, shade windows, and visually complete the upper volume. Together with the projecting floors and horizontal window bands, they give the Ohrid house its recognizable profile.</p>
+
+        <h2 class="section-heading">Interior architecture and built-in domesticity</h2>
+
+        <p>The exterior of the Ohrid house is often restrained compared with more ornamented Macedonian traditions, but the interior contains another layer of architectural order. Built-in cupboards, shelves, fireplaces, door and window frames, stairs, ceiling composition, and room hierarchy all matter. The broader Macedonian literature emphasizes that furnishings were not simply movable objects placed inside finished rooms. They were part of the architecture. </p>
+
+        <p>This is especially visible in related Macedonian house traditions. In Kruševo, for example, researchers describe built-in wooden furniture grouped along one side of the room to keep the remaining floor area open and flexible. They also note painted ceilings and walls, carved wooden rosettes, textile decoration, and a rich guest-room culture. Kruševo is not Ohrid, and its house tradition developed differently, especially through Aromanian/Vlach mercantile culture and Mijak building experience. Still, the comparison shows how Macedonian domestic architecture often concentrated ornament and craft in specific interior elements rather than spreading decoration indiscriminately across the exterior. </p>
+
+        <p>For Ohrid, this distinction matters because the house is often remembered visually from the outside: white upper walls, dark wood, stone base, lake-facing windows. But the traditional house was also an interior system. The čardak, musandra, odaja, fireplace, ceiling, niche, stair, and cupboard all contributed to how the family lived in the building.</p>
+
+        <h2 class="section-heading">Master builders and regional craft networks</h2>
+
+        <p>Ohrid’s traditional houses were not anonymous in the sense of being unspecialized. They were shaped by master builders from Ohrid, Struga, Debar, and the wider southwest Balkan building world. Tomovska and Radivojević identify these builders as crucial both to the stylistic unification of regional Ottoman residential architecture and to the development of specific local solutions in Ohrid. </p>
+
+        <p>The Debar-Reka and Mijak traditions are especially relevant. Builders from these areas were known across the Balkans for their skill in stone and wood construction. Research on Upper Reka houses documents the use of massive retaining walls, horizontal timber ties known as kushak, and combinations of masonry and bondruk upper structures. Museum With No Frontiers describes a house in Tresonche with a second-storey room above the entrance supported on wooden pillars, again showing the regional importance of vertical growth and projection.</p>
+
+        <p>Ohrid should therefore be understood as both local and regional. Its houses respond directly to Ohrid’s lake, hill, and urban fabric, but they also belong to a mobile craft world in which builders carried techniques, proportions, and construction systems across towns and regions.</p>
+
+        <p>This is one of the reasons simplistic origin claims are not useful. The Ohrid house is not best explained as a pure survival of one culture or a direct copy from another. It is a layered Ottoman-era civic house tradition, realized through local Christian builders, local materials, and broader Balkan craft exchange.</p>
+
+        <h2 class="section-heading">Ohrid among Macedonian house traditions</h2>
+
+        <p>Ohrid belongs to a larger family of Macedonian hill-town, mountain-town, and urban-house traditions, but it has a distinctive position within that family. Its strongest traits are verticality, lake orientation, upper-floor openness, and tight integration with a dense historic urban ensemble.</p>
+
+        <p>In Veles, the traditional house is often described as a two-storey type with an open-plan balcony or čardak-čardaklija, modest exterior decoration, and greater emphasis on fireplaces, cupboards, and ceiling treatment inside. This suggests a related domestic structure but a different urban character. Compared with Ohrid, Veles appears less panoramic and less dramatically shaped by a lake-facing slope. </p>
+
+        <p>In Prilep and Mariovo, the vernacular traditions are more low-rise and rural-grounded. Studies emphasize ground-floor houses and one-floor houses with open or closed čardaks, built from local stone, earth, and wood in both mountain and valley settings. These houses share vocabulary with Ohrid but not the same degree of vertical urban compression. </p>
+
+        <p>Debar, Reka, and Galičnik form another important comparison. Their houses are generally heavier, more mountainous, and often more tower-like. They use stone and wood systems, mahala clustering, retaining walls, timber ties, and projected upper elements. Ohrid shares construction logic with these regions, partly through builder networks, but its houses are more closely tied to lake views, urban plots, and a dense old-town street system.</p>
+
+        <p>Kruševo is different again. Its house tradition reflects mountain-town conditions, Aromanian/Vlach mercantile culture, and Mijak building technique. It is often more interior-ornamental than Ohrid, with built-in furniture, painted walls and ceilings, carved rosettes, textiles, and distinctive guest-room arrangements. </p>
+
+        <p>Bitola belongs to the wider Macedonian urban-house field, but its nineteenth-century role as a consular and vilayet city drew it more directly into European and eclectic architectural currents. Its traditional architecture is important, but the city’s urban development followed a different trajectory from Ohrid’s older and more topographically continuous ensemble. </p>
+
+        <p>These comparisons help clarify Ohrid’s particularity. It is not simply “the Macedonian house.” It is one highly developed Macedonian urban type, shaped by a rare combination of hillside density, lake climate, Ottoman urban organization, local craft, and long urban continuity.</p>
+
+        <h2 class="section-heading">Comparisons across Aegean and Pirin Macedonia</h2>
+
+        <p>In Aegean Macedonia, especially in Lerin, Kostur, and the Prespa area, traditional houses share certain Balkan-Ottoman principles but adapt them to different climates and urban patterns.</p>
+
+        <p>Lerin, for example, has a colder and more humid continental climate. Oikonomou and Bougiatioti describe houses with thick stone or adobe walls, small openings on the winter floor, lightweight timber-framed upper walls, and cross-ventilated summer rooms. In many cases, fireplaces relate to the semi-open hayat, and more intense summer activity moves to the upper floors and open-air spaces. Compared with Ohrid, Lerin is more explicitly shaped by winter severity, while Ohrid is milder and more oriented toward lake outlook and upper-level glazing.</p>
+
+        <p>Kostur offers another comparison. Surveys of houses in Aegean Macedonia describe inward-facing domestic types with yards or courtyards, nearly blank lower façades toward the street, repeated upper windows, raised entrances, and Ottoman hall or sofa logic. Kostur also preserves eighteenth- and nineteenth-century mansions with outer-hall, iwan-hayat, and central-sofa arrangements. Ohrid shares the closed lower façade and open upper levels, but its iconic type is usually more lot-driven, asymmetrical, and oriented toward lake and slope rather than toward a large mansion courtyard.</p>
+
+        <p>In Pirin Macedonia, Melnik and related towns show another set of affinities and differences. Raycheva describes these houses as mixed stone-basement and half-timber upper-storey structures with grouped windows, wide overhanging eaves, ceramic-tile roofs, ornamental wall paintings, and often formalized, symmetrical room-and-hall compositions. Melnik’s Kordopulu House is one example. Compared with Ohrid, the Melnik and Pirin type often appears more symmetrical, ceremonial, and horizontally composed, while Ohrid remains more strongly shaped by irregular plots, vertical growth, and the lake-facing section. </p>
+
+        <p>These comparisons are not meant to rank one tradition over another. Macedonian vernacular architecture, in conversation with wider Balkan traditions, must be read regionally. Similar elements—stone base, timber upper floor, hall, courtyard, grouped windows, deep eaves—can produce very different houses depending on climate, town structure, craft lineage, and social use.</p>
+
+        <h2 class="section-heading">Conservation and the problem of false continuity</h2>
+
+        <p>Ohrid’s architectural value is also vulnerable. UNESCO and municipal planning documents warn that uncontrolled change, inappropriate materials, unprofessional renovation, tourism pressure, and infrastructure development threaten the authenticity of the old town and its relationship to the lake. </p>
+
+        <p>The danger is not only demolition. It is also bad imitation. Recent scholarship on Ohrid’s authenticity argues that official encouragement of historical replication has often produced low-quality imitations and a false sense of continuity. Ivkovska’s critique of touristic re-creations such as the “Macedonian Village” raises a related concern: when vernacular traditions are turned into staged folklore, their regional differences and constructional logic are flattened. </p>
+
+        <p>This is especially relevant for contemporary Macedonian cultural work. A house tradition like Ohrid’s can easily be reduced to pasted-on beams, fake bay windows, generic carved ornament, artificially aged surfaces, or a mixture of motifs from Ohrid, Kruševo, Debar, and other regions without regard for their differences. Such results may look familiar, but they do not carry the intelligence of the original architecture.</p>
+
+        <p>The essential elements of the Ohrid vernacular are relational rather than decorative: heavy to light, closed to open, base to projection, winter to summer, narrow street to widened upper floor, hall to distributed rooms, plastered timber volume to stone pedestal, broad eaves to window field, and house to landscape. These relationships are what should be studied, protected, and, where appropriate, translated into contemporary design.</p>
+
+        <h2 class="section-heading">What contemporary adaptation can learn</h2>
+
+        <p>A serious contemporary use of Ohrid’s vernacular should not attempt to rebuild the nineteenth century. The lesson is not literal replication. It is the transfer of principles.</p>
+
+        <p>For architecture or interiors, that might mean working with a heavier base and a lighter upper level, using transitional spaces that function like a contemporary čardak, concentrating ornament in built-in elements rather than applying it everywhere, and using material contrast honestly rather than decoratively. Lime or lime-like mineral finishes, timber joinery, stone plinths, niches, benches, cupboards, textiles, and filtered daylight can all refer to the tradition without pretending to be historic fabric.</p>
+
+        <p>For museums or cultural spaces, Ohrid suggests a sectional sequence: compressed entry, grounded lower zone, brighter upper room, framed outlook, and a social threshold between interior and exterior. For publications or websites, the architecture can be translated more abstractly through stacked bands, window rhythms, strong margins, broad image fields, and a restrained palette drawn from stone, plaster, timber, and tile. For branding, the most durable approach would be to abstract the grammar of the façade rather than reproduce postcard silhouettes.</p>
+
+        <p>The point is not to make everything look like an Ohrid house. The point is to understand why the Ohrid house looks the way it does.</p>
+
+        <p>For Macedonians outside Macedonia, vernacular architecture can easily become a nostalgic image. Many people in the diaspora encounter old houses through family photographs, summer visits, restaurant interiors, church halls, tourism campaigns, or social media. These fragments can be meaningful, but they can also simplify. A house becomes “traditional” because it has white walls, exposed wood, stone, and a balcony. A region becomes a mood. A complex architectural history becomes décor.</p>
+
+        <p>The Ohrid house deserves better than that. It is one of the clearest examples of Macedonian architecture as applied knowledge. It shows how a community built within constraint, how master builders adapted shared Balkan-Ottoman forms to a specific Macedonian lake town, how stone and wood were combined, how domestic life moved between seasons, and how the house mediated between privacy and urban view.</p>
+
+        <p>It also gives the diaspora a more demanding way to think about inheritance. To inherit a tradition is not only to preserve its visible signs. It is to understand its internal logic: the reasons behind its forms, the differences between regions, the materials and techniques that produced its appearance, and the social life embedded in its rooms.</p>
+
+        <p>Ohrid’s houses are valuable because they are specific. They belong to a town, a lake, a hillside, a climate, a craft network, and a layered Macedonian and Balkan history. Their meaning is not weakened by that complexity. It is strengthened by it.</p>
+
+        <p>The best contemporary response is therefore not imitation, but literacy. Learn the difference between Ohrid and Kruševo, between Veles and Galičnik, between Lerin and Melnik, between a real čardak and a decorative balcony, between bondruk construction and fake timber strips, between architectural memory and staged folklore. That literacy is what keeps tradition from becoming generic.</p>
+
+        <p>The Ohrid house is not important because it offers a ready-made style to copy. It is important because it shows how architecture can emerge from place with precision. It is a record of Macedonian urban life shaped by terrain, climate, season, neighborhood, family structure, material economy, and master craft. For a culture often forced to explain itself through politics, borders, and identity disputes, the house offers another kind of evidence: built, practical, regional, and durable.</p>
+
+        <p>It remains one of the strongest architectural arguments that Macedonian heritage is not an abstract idea. It has a section, a plan, a wall thickness, a window rhythm, a seasonal logic, a craft lineage, and a view toward the lake.</p>
+      </div>
+      <div class="empty-tail" aria-hidden="true"></div>
+    </section>
+  </article>
+
+  <section class="more-from-muzej" data-more-from-muzej aria-labelledby="more-from-muzej-title"></section>
+</main>
+
+<footer class="site-footer muzej-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-wordmark">Muzej</span>
+      <p class="footer-statement">An editorial archive of Macedonian art, style, tradition, and culture.</p>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="about.html">ABOUT MUZEJ</a>
+      <a href="mailto:muzej.mk@proton.me">CONTACT</a>
+      <a href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer" aria-label="Open Muzej on Instagram">INSTAGRAM</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+const menuButton = document.getElementById('menuButton');
+const menuPanel = document.getElementById('menuPanel');
+
+if (menuButton && menuPanel) {
+  const setMenuState = (isOpen) => {
+    menuPanel.classList.toggle('open', isOpen);
+    menuButton.classList.toggle('is-open', isOpen);
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+    menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  };
+
+  menuButton.addEventListener('click', () => {
+    setMenuState(!menuPanel.classList.contains('open'));
+  });
+
+  menuPanel.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setMenuState(false));
+  });
+}
+</script>
+
+<script>
+  (function () {
+    var previousY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+    var ticking = false;
+    var revealZone = 24;
+    var motionThreshold = 4;
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    function updateMuzejLogoVisibility() {
+      var currentY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+      var delta = currentY - previousY;
+
+      if (reducedMotion.matches) {
+        document.body.classList.remove("muzej-logo-hidden");
+        ticking = false;
+        return;
+      }
+
+      if (currentY <= revealZone) {
+        document.body.classList.remove("muzej-logo-hidden");
+      } else if (delta > motionThreshold) {
+        document.body.classList.add("muzej-logo-hidden");
+      } else if (delta < -motionThreshold) {
+        document.body.classList.remove("muzej-logo-hidden");
+      }
+
+      previousY = currentY;
+      ticking = false;
+    }
+
+    function requestMuzejLogoVisibility() {
+      if (!ticking) {
+        window.requestAnimationFrame(updateMuzejLogoVisibility);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener("scroll", requestMuzejLogoVisibility, { passive: true });
+    window.addEventListener("resize", requestMuzejLogoVisibility);
+
+    if (reducedMotion.addEventListener) {
+      reducedMotion.addEventListener("change", requestMuzejLogoVisibility);
+    } else if (reducedMotion.addListener) {
+      reducedMotion.addListener(requestMuzejLogoVisibility);
+    }
+
+    updateMuzejLogoVisibility();
+  })();
+</script>
+
+</body>
+</html>

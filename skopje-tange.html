@@ -5,17 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Kenzo Tange’s reconstruction of Skopje after the 1963 earthquake, and the meeting of Japanese urban theory, Yugoslav planning, and modern architecture.">
 <title>Tokyo on the Vardar | МУЗЕЈ</title>
+<link rel="icon" type="image/png" href="./Assets/Font/Muzej%20Logo.ai.png">
+<link rel="apple-touch-icon" href="./Assets/Font/Muzej%20Logo.ai.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&display=swap">
 <style>
-@font-face {
-  font-family: 'Adobe Jenson';
-  src: url('./fonts/AdobeJenson-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
 :root {
   --background: #ffffff;
   --foreground: #0f0e0d;
@@ -726,6 +721,9 @@ body.muzej-logo-hidden .site-header .brand-mark {
   .site-header .utility-panel .utility-menu-item { justify-content: center; min-height: 2.75rem; padding: 0.72rem 0; text-align: center; }
 }
 </style>
+<link rel="stylesheet" href="article-headlines.css">
+<link rel="stylesheet" href="more-from-muzej.css">
+<script src="more-from-muzej.js" defer></script>
 </head>
 <body>
 
@@ -752,7 +750,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
           </div>
           <div class="utility-panel-group utility-panel-utility">
             <a class="utility-link" href="mailto:muzej.mk@proton.me">Contact</a>
-            <a class="utility-link" href="https://www.instagram.com/_muzej/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a class="utility-link" href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer">Instagram</a>
           </div>
         </nav>
       </details>
@@ -778,7 +776,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
   <article class="article-shell">
     <section class="article-body">
       <figure class="article-body-media">
-        <img src="Assets/Kenzo Article/Tange Pics/e73a14_2adf63977e274b93ab6dca86396ee1c1~mv2.jpg" alt="Ruined building and crowds in Skopje after the 1963 earthquake.">
+        <img src="./Assets/Kenzo Article/Tange Pics/e73a14_2adf63977e274b93ab6dca86396ee1c1~mv2.jpg" alt="Ruined building and crowds in Skopje after the 1963 earthquake.">
         <figcaption>Skopje in the immediate aftermath of the 1963 earthquake.</figcaption>
       </figure>
 
@@ -813,19 +811,19 @@ body.muzej-logo-hidden .site-header .brand-mark {
 
     <section class="gallery-reading" aria-label="Selected images from Kenzo Tange’s plan for Skopje">
       <figure class="gallery-reading-media">
-        <img src="Assets/Kenzo Article/Tange Pics/Skopje_Cite_Master_Plan_0033_02.jpg" alt="Color model view of Kenzo Tange's Skopje master plan with towers and the river foreground.">
+        <img src="./Assets/Kenzo Article/Tange Pics/Skopje_Cite_Master_Plan_0033_02.jpg" alt="Color model view of Kenzo Tange's Skopje master plan with towers and the river foreground.">
       </figure>
 
       <div class="gallery-reading-side">
         <figure class="gallery-reading-feature">
-          <img src="Assets/Kenzo Article/Tange Pics/plan for skopje.jpg" alt="Model view of Kenzo Tange's master plan for central Skopje.">
+          <img src="./Assets/Kenzo Article/Tange Pics/plan for skopje.jpg" alt="Model view of Kenzo Tange's master plan for central Skopje.">
         </figure>
       </div>
     </section>
 
     <section class="article-body article-body-lower">
       <figure class="article-body-media">
-        <img src="Assets/Kenzo Article/Tange Pics/A vintage postcard view of the “Cyril &amp; Methodius” University of Skopje..jpg" alt="Vintage postcard view of the University of Skopje campus.">
+        <img src="./Assets/Kenzo Article/Tange Pics/A vintage postcard view of the “Cyril &amp; Methodius” University of Skopje..jpg" alt="Vintage postcard view of the University of Skopje campus.">
         <figcaption>A Yugoslav-era postcard view of the University of Skopje.</figcaption>
       </figure>
 
@@ -854,29 +852,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
     </section>
   </article>
 
-  <section class="more-from-muzej" aria-labelledby="more-title">
-    <div class="shell more-from-muzej-frame">
-      <h2 class="more-from-muzej-title" id="more-title">More from Muzej</h2>
-      <ul class="related-list">
-        <li>
-          <a href="swan-dress.html">The dress that turned the red carpet into theater.</a>
-          <span class="related-desc">A profile of a garment where fashion and performance meet.</span>
-        </li>
-        <li>
-          <a href="martinoski.html">The Many Faces of Nikola Martinoski</a>
-          <span class="related-desc">A portrait of a painter and the visual language of Macedonian modernism.</span>
-        </li>
-        <li>
-          <a href="wearing-the-nation.html">The Nation on Their Backs</a>
-          <span class="related-desc">A design note on football shirts, color, and national identity.</span>
-        </li>
-        <li>
-          <a href="how-to-taste-vranec.html">How to taste Vranec (like a sommelier)</a>
-          <span class="related-desc">Dark fruit, firm tannin, and the problem of being too powerful.</span>
-        </li>
-      </ul>
-    </div>
-  </section>
+  <section class="more-from-muzej" data-more-from-muzej aria-labelledby="more-from-muzej-title"></section>
 </main>
 
 <footer class="site-footer muzej-footer">
@@ -889,7 +865,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
     <nav class="footer-links" aria-label="Footer navigation">
       <a href="about.html">ABOUT MUZEJ</a>
       <a href="mailto:muzej.mk@proton.me">CONTACT</a>
-      <a href="https://www.instagram.com/_muzej/" target="_blank" rel="noopener noreferrer" aria-label="Open Muzej on Instagram">INSTAGRAM</a>
+      <a href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer" aria-label="Open Muzej on Instagram">INSTAGRAM</a>
     </nav>
   </div>
 </footer>

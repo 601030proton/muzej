@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Nikola Martinoski. Inside the practice of “The Doctor.” An essay from МУЗЕЈ on the formation of modern Macedonian painting.">
-<title>Nikola Martinoski | МУЗЕЈ</title>
+<meta name="description" content="A Macedonian ballet dancer on Skopje, discipline, leaving home, and carrying Macedonia onto the stage.">
+<title>Marko Micov | МУЗЕЈ</title>
 <link rel="icon" type="image/png" href="./Assets/Font/Muzej%20Logo.ai.png">
 <link rel="apple-touch-icon" href="./Assets/Font/Muzej%20Logo.ai.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -193,38 +193,64 @@ a { color: inherit; }
 }
 
 main {
-  padding-top: clamp(24px, 3.2vw, 48px);
+  padding-top: 0;
 }
 
 .feature {
-  padding:
-    clamp(0px, 0.6vw, 6px)
-    clamp(16px, 3vw, 40px)
-    clamp(56px, 8vw, 102px);
+  width: 100%;
+  background: var(--white);
 }
 .feature-inner {
   display: grid;
-  grid-template-columns: minmax(420px, 1.06fr) minmax(300px, 0.84fr);
-  gap: clamp(22px, 3.8vw, 52px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0;
   align-items: stretch;
-  max-width: min(1320px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
-  margin: 0 auto;
+  max-width: none;
+  min-height: clamp(620px, calc(100svh - var(--nav-h)), 900px);
+  margin: 0;
 }
 .feature-media {
   margin: 0;
-}
-.feature-media img {
-  width: 100%;
-  height: clamp(620px, 80vh, 920px);
-  object-fit: contain;
-  object-position: center top;
+  min-height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
   background: var(--white);
 }
+.feature-media img {
+  display: block;
+  width: min(86%, 720px);
+  max-width: 86%;
+  height: auto;
+  max-height: min(74vh, 760px);
+  object-fit: contain;
+  object-position: center center;
+  margin: 0 auto;
+}
+.feature--stranci .feature-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.feature--stranci .feature-media img {
+  width: auto;
+  max-width: min(92%, 760px);
+  height: min(84vh, 840px);
+  max-height: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 981px) {
+  .feature--stranci .feature-media img {
+    transform: translateX(-6%);
+  }
+}
 .feature-copy {
-  min-height: clamp(620px, 80vh, 920px);
+  min-height: inherit;
   max-width: 27rem;
   margin: 0 auto;
-  padding: clamp(26px, 3.6vw, 42px) 0 clamp(20px, 3vw, 30px);
+  padding: clamp(72px, 8vw, 136px) 0 clamp(72px, 8vw, 128px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -234,10 +260,12 @@ main {
 .feature-title {
   margin: 0;
   color: var(--ink);
+  font-family: var(--brand-serif);
   font-size: clamp(38px, 4.9vw, 76px);
-  font-weight: 400;
-  line-height: 0.96;
-  letter-spacing: -0.03em;
+  font-weight: 350;
+  line-height: 1.01;
+  letter-spacing: -0.026em;
+  font-optical-sizing: auto;
   text-wrap: balance;
 }
 .feature-title-break {
@@ -251,9 +279,11 @@ main {
   line-height: 1.4;
   text-transform: uppercase;
 }
-.feature-deck {
-  max-width: min(1320px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
-  margin: clamp(28px, 4vw, 52px) auto 0;
+.article-deck {
+  width: 100%;
+  max-width: min(920px, 100%);
+  margin: 0 0 clamp(52px, 7vw, 92px);
+  text-align: left;
   color: var(--ink);
   font-size: clamp(17px, 1.55vw, 23px);
   font-weight: 400;
@@ -263,7 +293,7 @@ main {
 .article-shell {
   max-width: var(--feature-w);
   margin: 0 auto;
-  padding: 0 var(--page-x) clamp(32px, 4vw, 56px);
+  padding: clamp(64px, 8vw, 112px) var(--page-x) clamp(84px, 10vw, 132px);
 }
 .content-row {
   display: grid;
@@ -296,6 +326,10 @@ main {
   width: 100%;
   height: auto;
 }
+.article-body-media--portrait img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
 .article-body-media figcaption {
   margin-top: 12px;
   color: var(--ink-soft);
@@ -305,6 +339,14 @@ main {
 }
 .article-body-copy {
   min-width: 0;
+}
+.article-inline-media {
+  width: min(88%, 420px);
+  margin: clamp(52px, 7vw, 88px) auto;
+}
+.article-inline-media img {
+  width: 100%;
+  height: auto;
 }
 
 .section-heading {
@@ -325,6 +367,32 @@ main {
   margin-top: 1.75em;
 }
 
+.article-photo-credits {
+  margin-top: clamp(18px, 3vw, 34px);
+}
+.photo-credit-note {
+  margin: 0;
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: clamp(11px, 0.82vw, 13px);
+  line-height: 1.55;
+  letter-spacing: 0.02em;
+  border-top: 1px solid var(--ink-faint);
+  padding-top: 14px;
+}
+.photo-credit-note p {
+  margin: 0;
+}
+.photo-credit-note p + p {
+  margin-top: 0.18rem;
+}
+.photo-credit-heading {
+  margin-bottom: 0.45rem;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+
 .pull-quote {
   margin: 0;
   max-width: none;
@@ -342,14 +410,23 @@ main {
 .gallery-reading-media,
 .gallery-reading-feature {
   margin: 0;
+}
+.gallery-reading-frame {
   aspect-ratio: 15 / 21;
   overflow: hidden;
 }
-.gallery-reading-media img,
-.gallery-reading-feature img {
+.gallery-reading-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.gallery-reading-media figcaption,
+.gallery-reading-feature figcaption {
+  margin-top: 12px;
+  color: var(--ink-soft);
+  font-size: 8px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
 }
 .gallery-reading-side {
   min-width: 0;
@@ -360,7 +437,7 @@ main {
 }
 
 .more-from-muzej {
-  padding-top: clamp(32px, 4vw, 56px);
+  padding-top: clamp(70px, 9vw, 132px);
   padding-bottom: clamp(82px, 10vw, 148px);
   background: transparent;
   color: var(--foreground);
@@ -425,6 +502,84 @@ main {
   letter-spacing: 0;
   color: var(--muted);
 }
+
+.more-from-muzej-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(22px, 2.8vw, 38px);
+  margin-top: clamp(1.4rem, 2.5vw, 2rem);
+}
+.more-from-muzej-card {
+  min-width: 0;
+}
+.more-from-muzej-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.more-from-muzej-card-image {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border: 1px solid rgba(23, 21, 19, 0.14);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.08));
+}
+.more-from-muzej-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.more-from-muzej-card-copy {
+  padding-top: 0.95rem;
+}
+.more-from-muzej-card-kicker {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  line-height: 1.2;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(23, 21, 19, 0.62);
+}
+.more-from-muzej-card-title {
+  margin: 0.62rem 0 0;
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 0.95rem + 0.85vw, 1.95rem);
+  font-weight: 350;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  font-optical-sizing: auto;
+  text-wrap: balance;
+}
+.more-from-muzej-card-title a {
+  color: var(--foreground);
+  text-decoration: none;
+}
+.more-from-muzej-card-title a:hover {
+  color: var(--muted);
+}
+.more-from-muzej-card-dek {
+  margin: 0.55rem 0 0;
+  font-family: var(--sans);
+  font-size: clamp(0.82rem, 0.78rem + 0.18vw, 0.94rem);
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .more-from-muzej-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .more-from-muzej-card-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
 
 .site-footer {
   margin-top: 0;
@@ -527,18 +682,14 @@ main {
     align-items: stretch;
   }
   .feature-media img {
-    height: clamp(500px, 70vh, 720px);
+    max-height: clamp(460px, 64vh, 660px);
   }
   .feature-copy {
-    min-height: clamp(500px, 70vh, 720px);
+    min-height: clamp(460px, 64vh, 660px);
     max-width: 23rem;
   }
   .feature-title {
     font-size: clamp(34px, 4.35vw, 58px);
-  }
-  .feature-deck {
-    margin-top: clamp(30px, 4.2vw, 48px);
-    font-size: clamp(16px, 2.05vw, 20px);
   }
   .content-row {
     grid-template-columns: minmax(170px, 0.82fr) minmax(0, 520px) clamp(14px, 1vw, 18px);
@@ -589,6 +740,9 @@ main {
       var(--page-x)
       48px;
   }
+  .feature--stranci {
+    padding-bottom: 34px;
+  }
   .feature-inner,
   .article-body,
   .content-row {
@@ -601,7 +755,7 @@ main {
     gap: 22px;
   }
   .feature-media img {
-    height: clamp(360px, 56vh, 470px);
+    max-height: clamp(330px, 52vh, 430px);
   }
   .article-body {
     gap: 24px;
@@ -634,23 +788,74 @@ main {
     padding: 0;
   }
   .feature-title {
-    font-size: clamp(32px, 10.5vw, 50px);
-    line-height: 0.98;
+    max-width: 100%;
+    font-size: clamp(32px, 9.2vw, 42px);
+    line-height: 1.05;
+    letter-spacing: -0.024em;
+    text-wrap: balance;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
   }
   .feature-byline {
     margin: 28px 0 0;
     font-size: 11px;
   }
-  .feature-deck {
-    margin-top: 34px;
-    font-size: clamp(15px, 3.9vw, 18px);
-    line-height: 1.2;
-  }
   .feature-title-break {
-    display: none;
+    display: block;
   }
   .content-row + .content-row {
     margin-top: 40px;
+  }
+}
+
+@media (max-width: 980px) {
+  .feature--stranci {
+    padding: 0 0 clamp(48px, 9vw, 82px);
+  }
+
+  .feature--stranci .feature-inner {
+    grid-template-columns: 1fr;
+    gap: 0;
+    min-height: 0;
+  }
+
+  .feature--stranci .feature-copy {
+    min-height: auto;
+    padding:
+      clamp(54px, 12vw, 96px)
+      var(--page-x)
+      clamp(42px, 8vw, 70px);
+  }
+
+  .feature--stranci .feature-media {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+    width: 100%;
+  }
+
+  .feature--stranci .feature-media img {
+    width: auto;
+    max-width: 96%;
+    height: 100%;
+    max-height: none;
+  }
+
+
+  .article-shell {
+    padding-top: clamp(52px, 10vw, 84px);
+  }
+
+  .article-deck {
+    max-width: min(920px, 100%);
+    margin-bottom: clamp(44px, 8vw, 72px);
+    font-size: clamp(17px, 3.3vw, 21px);
+  }
+}
+
+@media (max-width: 720px) {
+  .feature--stranci .feature-media {
+    aspect-ratio: 4 / 5;
   }
 }
 
@@ -705,6 +910,22 @@ body.muzej-logo-hidden .site-header .brand-mark {
   .site-header .utility-panel .utility-link,
   .site-header .utility-panel .utility-menu-item { justify-content: center; min-height: 2.75rem; padding: 0.72rem 0; text-align: center; }
 }
+
+.body-block .interview-question {
+  margin: clamp(2.35rem, 4vw, 3.35rem) 0 0.85rem;
+  font-family: var(--serif);
+  font-size: clamp(1.42rem, 1.08rem + 0.92vw, 2.15rem);
+  line-height: 1.08;
+  letter-spacing: -0.024em;
+  font-weight: 430;
+  font-optical-sizing: auto;
+}
+.body-block .interview-question:first-child {
+  margin-top: 0;
+}
+.body-block .interview-question + p {
+  margin-top: 0;
+}
 </style>
 <link rel="stylesheet" href="article-headlines.css">
 <link rel="stylesheet" href="more-from-muzej.css">
@@ -744,98 +965,109 @@ body.muzej-logo-hidden .site-header .brand-mark {
 </header>
 
 <main>
-  <header class="feature">
+  <header class="feature feature--stranci" aria-labelledby="article-title">
     <div class="feature-inner">
-      <figure class="feature-media">
-        <img src="./Assets/Martinoski Article/Nikola's Hero Images/Martinoski Portrait.png" alt="Portrait-oriented collage image of Nikola Martinoski">
-      </figure>
-
       <div class="feature-copy">
-        <h1 class="feature-title">The Many Faces of<br class="feature-title-break">Nikola Martinoski</h1>
-        <p class="feature-byline">Words Ace Trajkovski</p>
+        <h1 id="article-title" class="feature-title">Marko Micov Carries Macedonia With Him</h1>
+        <p class="feature-byline">Interview Ace Trajkovski</p>
       </div>
+      <figure class="feature-media" aria-label="Article hero image">
+        <img src="./Assets/Marko%20Interview/Text%20and%20Photos/Images/Micov-Color-Photo_Rachel_Malehorn-17.jpg" alt="Marko Micov ballet portrait." width="3457" height="5185" decoding="async" fetchpriority="high" style="object-position: center top;">
+      </figure>
     </div>
-    <p class="feature-deck">Martinoski stands at the hinge point where Macedonian painting became recognizably modern.</p>
   </header>
 
-  <article class="article-shell">
+  <article class="article-shell article-interview">
+    <p class="article-deck">From Skopje’s State Ballet School to Milwaukee Ballet, Marko Micov reflects on discipline, distance, and what it means to carry Macedonia onto the stage.</p>
+
     <section class="article-body">
-      <figure class="article-body-media">
-        <img src="./Assets/Martinoski Article/Martinoski Paintings/nmself1949.jpg" alt="Self-portrait by Nikola Martinoski">
-        <figcaption>Self-Portrait, 1949.</figcaption>
+      <figure class="article-body-media article-body-media--portrait">
+        <img src="./Assets/Marko%20Interview/Text%20and%20Photos/Images/unnamed-3.jpg" alt="Marko Micov performing ballet on stage." width="3549" height="4733" loading="lazy" decoding="async">
       </figure>
 
       <div class="article-body-copy body-block">
-        <p>Modern Macedonian painting did not arrive as a tidy package from Paris, wrapped in theory and tied with a ribbon of influence. It arrived broken, translated, argued over, and made under pressure. In the work of Nikola Martinoski, that pressure is visible everywhere: in the sharpened cheekbone, the bent back, the mother’s hand, the beggar’s stance, the café woman’s brittle poise, the partisan’s severity, the earthquake survivor’s shaken contour. His paintings are full of faces, but the face is never only a face. It is a social fact. It is fatigue, dignity, eros, deprivation, memory. It is history, forced to sit still long enough to be painted.</p>
+        <h2 class="interview-question">Where did your relationship with ballet begin?</h2>
+        <p>It began in a very unexpected way, because I come from a family with no artistic background. My father was in the military, my mother was an accountant, and art was never part of our everyday life. I remember my parents taking me to the theater to see different plays, and I was completely captivated by the stage, the emotion, and the atmosphere.</p>
+        <p>At home, I was always dancing and acting around the house. When I was in kindergarten, one of my teachers noticed this and told my parents that I might have some talent. She encouraged them to enroll me in the State Ballet School in Skopje. That was the first step into the world of ballet and the beginning of my journey.</p>
 
-        <p>Martinoski stands at the hinge point where Macedonian painting became recognizably modern. He was born in Kruševo on August 18, 1903, and died in Skopje on February 7, 1973. Between those dates he did something rarer than influence: he made a language. Trained professionally at the School of Fine Arts in Bucharest from 1920 to 1927, then transformed by a crucial stay in Paris in 1927–1928, at the Académie de la Grande Chaumière and the Académie Ranson, he returned to Skopje with a pictorial vocabulary capable of absorbing post-Cubism, French and German Expressionism, and the atmosphere of Montparnasse without surrendering either local subject matter or Macedonian visual memory. That is why official and scholarly sources alike return to the word “founder.” Not because he was simply early, but because he achieved a durable synthesis: medieval Macedonian pictorial memory, the social and ethnic textures of Skopje and Kruševo, and the formal liberties of European modernism.</p>
+        <h2 class="interview-question">What do you remember most about training in Skopje?</h2>
+        <p>I remember long hours of dancing, but also so many beautiful moments with the friends I made throughout the years at the ballet school. It became like a second home to me: a place filled with hard work, discipline, laughter, and unforgettable memories. Looking back now, it was one of the most special periods of my life, and I would give anything to go back, even for just one day, and experience it all again.</p>
+        <p>I was also very fortunate to receive my ballet education under Dr. Sonja Zdravkova Djeparoska, a professor who had a tremendous influence on my development as both a dancer and a person. She taught me discipline, dedication, and respect for the art from the very first ballet steps I ever took. Her guidance and belief in me helped shape the foundation of my career and my understanding of what it truly means to be an artist.</p>
 
-        <p>He painted mothers with children, half-length women, café interiors, beggars, brides, portraits, nudes, still lifes, partisan subjects, and the catastrophe of the 1963 Skopje earthquake. Across all of it, the human figure remained his testing ground. Even when the palette flared or the line turned angular, the body carried psychological pressure, dignity, fatigue, eros, and social fact. In Martinoski, the body does not merely occupy the canvas; it bears the weight of a century.</p>
+        <h2 class="interview-question">Who shaped you most as a young dancer?</h2>
+        <p>Since my arrival in the United States, after completing my ballet education, I have had the chance to work with many incredible artists and mentors. However, one of the people who left the greatest mark on my development as a young dancer was the legendary ballerina Gelsey Kirkland.</p>
+        <p>Working with her was an unforgettable experience. Her artistry, discipline, and deep understanding of classical ballet inspired me tremendously and pushed me to grow both technically and emotionally as a performer. She taught me the importance of commitment, precision, and storytelling through movement, and her influence helped shape my artistic identity in a profound way.</p>
 
-        <p>The larger historical setting matters. The National Gallery’s own account of the interwar period is unusually blunt: modern Macedonian art emerged under conditions of “total negation” of Macedonian national, linguistic, and cultural identity. Artists trained in Belgrade, Sofia, and Bucharest, then refined themselves in places like Paris and Prague, were not simply importing style. They were inventing both an artistic language and the conditions under which that language might be heard. In that story, Martinoski is central because he turned foreign training into a local syntax rather than a borrowed accent.</p>
-
-        <p>The apprenticeship began in turbulence. Born in Kruševo and moved as a child to Skopje, Martinoski first attended a Romanian grammar school there. Then the Balkan Wars and the First World War rearranged the educational map beneath him: he passed through various school settings before continuing in a Serbian high school in Skopje. By 1919 he was working, together with Tomo Vladimirski, in the workshop of the last Macedonian icon painter, Dimitar Andonov Papradishki. One institutional catalog notes that as late as 1920 he was still producing apprentice works after colored postcards. This is not a trivial detail. The modernism that came later never fully erased the training that came first. Something of the icon remained in him: the frontal gravity, the economy of line, the strange stillness that can make a figure seem at once ordinary and ceremonial.</p>
-
-        <p>Bucharest gave that early aptitude a structure. At the School of Fine Arts, where he studied from 1920 to 1927, Martinoski received what a later museum catalog called his first wholly professional education. The National Gallery’s 2013 jubilee catalog adds a striking detail: he graduated as the best student of his year. Bucharest, in the official and scholarly record, was no academic cul-de-sac. It was a place where Romanian art had already been touched by expressionist tendencies, and where Martinoski moved decisively beyond workshop craft into a modern, self-aware painterly discipline.</p>
-
-        <p>Then came Paris, the turning point. Boris Petkovski’s study of the Paris period describes the stay from late 1927 to late 1928 as extraordinarily important in Martinoski’s life and art, and it is not hard to see why. The Académie de la Grande Chaumière, in Montparnasse, stood for open drawing and painting workshops, independent art, and freedom from academic constraint. The Académie Ranson offered another corridor into the living arguments of European modernism. By the time Martinoski left, he had encountered not only the School of Paris, but the pressure fields around French and German Expressionism. A piece of advice associated with Roger Bissière and preserved in the 2013 National Gallery catalog reads like a private motto for the career: remain true to yourself; remain Macedonian. The paradox is perfect. Paris modernized him. It did not estrange him.</p>
-
-        <p>When he returned to Skopje at the end of 1928, he returned not to some cultivated bohemia but to a provincial capital of the Vardar Banate. His first solo exhibition opened there in 1929. The years from 1929 to 1932 are now described as an expressionist phase of exceptional importance, and the phrase earns its keep. A 2009 museum catalog identifies early-thirties works centered on café life and prostitution, and notes the way Martinoski deformed, even caricatured, figures in order to heighten the brutality of the motif. In these pictures, bodies can appear cylindrical or broken; forms are cubistically stressed; physiognomies stretch and sharpen. The point is not decoration. The point is pressure. Modernism becomes, in his hands, a means of moral intensification.</p>
-
-        <p>By the mid-nineteen-thirties, the pitch changes without falling back into academic calm. The National Gallery’s 2013 essay argues that Martinoski’s artistic personality had fully matured by 1936. He continued to draw many of his models from the Roma neighborhoods of Skopje, but the work shifted toward what the catalog calls lyrical realism. Poorly dressed boys and girls, mothers and wet nurses, faces kind or melancholic, bodies quietly monumental: the effect is gentler than the early expressionist bite, but no less alert to hardship. From 1938 to 1941, that lyricism thickens into social realism. Details are sometimes overemphasized so that suffering, resignation, and the bitterness of impoverished life come forward with almost physical insistence. The recurring “Mother and Child” motif belongs here. It is not one picture but a lifelong problem: how to paint care without sentimentality, weight without heaviness, tenderness without softening the fact of deprivation.</p>
-
-        <p>The war years widened both his subject matter and his role in public life. In 1939 and 1940 he worked as a freelance scenographer at the Skopje theater. After the liberation, he helped found the institution remembered as the present School of Applied Arts and led it until the late nineteen-forties. He then became director of the newly established Art Gallery in Skopje, though official institutional sources differ on the precise date of that transition, with one account implying 1948 and another placing it in 1949 after his work at the school. He served several times as president of DLUM, was twice elected a national M.P. in the federal assembly of Yugoslavia, and in 1967 became a regular member of the Macedonian Academy of Sciences and Arts, MANU. Martinoski did not simply paint Macedonian modernism. He helped administer its conditions of possibility.</p>
-
+        <h2 class="interview-question">What did Macedonia give you that still lives in your work?</h2>
+        <p>We come from a very small country, and personally, I grew up during a time when our society was still trying to rebuild itself and figure out many things. Life was not always easy, and as children in my generation, we did not always have everything we needed or dreamed of. But what I remember most is that our people always found a way to move forward with patience and resilience. Growing up in that environment shaped not only the artist I became, but also the person I am today.</p>
+        <p>No matter where life takes me, I carry those roots. They remind me to stay patient and humble, to never forget where I came from, and to always keep fighting for what I love.</p>
       </div>
       <div class="empty-tail" aria-hidden="true"></div>
     </section>
 
     <div class="content-row">
       <div class="empty-rail" aria-hidden="true"></div>
-      <aside class="pull-quote">His paintings are full of faces, but the face is never only a face. It is a social fact.</aside>
+      <aside class="pull-quote" style="font-style: italic;">No matter where life takes me, I carry those roots.</aside>
       <div class="empty-tail" aria-hidden="true"></div>
     </div>
 
-    <section class="gallery-reading" aria-label="Selected paintings by Nikola Martinoski">
+    <section class="gallery-reading" aria-label="Marko Micov ballet portraits">
       <figure class="gallery-reading-media">
-        <img src="./Assets/Martinoski Article/Martinoski Paintings/martinoski-spread-1.png" alt="Still life painting by Nikola Martinoski with a wine bottle, glass, and fruit">
+        <div class="gallery-reading-frame">
+          <img src="./Assets/Marko%20Interview/Text%20and%20Photos/Images/unnamed-2.jpg" alt="Marko Micov dancing on stage." width="2482" height="1632" loading="lazy" decoding="async">
+        </div>
       </figure>
 
       <div class="gallery-reading-side">
         <figure class="gallery-reading-feature">
-          <img src="./Assets/Martinoski Article/Martinoski Paintings/martinoski-spread-2.png" alt="Painting by Nikola Martinoski of a seated woman holding a child">
+          <div class="gallery-reading-frame">
+            <img src="./Assets/Marko%20Interview/Text%20and%20Photos/Images/unnamed-1.jpg" alt="Portrait of Marko Micov." width="768" height="882" loading="lazy" decoding="async">
+          </div>
         </figure>
       </div>
     </section>
 
     <section class="article-body article-body-lower">
-      <figure class="article-body-media">
-        <img src="./Assets/Martinoski Article/Martinoski Paintings/martinoski-lower-left.png" alt="Portrait painting by Nikola Martinoski of an elderly bearded man">
+      <figure class="article-body-media article-body-media--portrait">
+        <img src="./Assets/Marko%20Interview/Text%20and%20Photos/Images/unnamed.jpg" alt="Marko Micov in a ballet portrait." width="1836" height="2472" loading="lazy" decoding="async">
       </figure>
 
       <div class="article-body-copy body-block">
-        <p>The postwar oeuvre is full of restarts, rephrasings, and formal wagers. Petkovski describes the period from 1951 to 1960 as discontinuous, a sequence of repeated attempts to recover a personal language. The description is persuasive. During the fifties, Martinoski became increasingly interested in new currents in world art and in the modernization of Macedonian art. In drawings from roughly 1952 to 1954, philosophical, moral, and social concerns are translated into a modern idiom that fuses prewar expressionist inheritance with symbolism, surrealism, and Byzantine aesthetic echoes. By 1956 to 1959, scholarship notes angular constructions, deformations, cubistic expression, fantasy, and daring placements of the body in space. After 1959, curved and mannered refinements become more pronounced. What makes these phases interesting is not their neatness, but their instability. One feels an artist refusing to become merely canonical in a culture already tempted to canonize him.</p>
+        <h2 class="interview-question">What was it like leaving home to pursue ballet abroad?</h2>
+        <p>I was very young, and the only thing I truly had at that time was my love for ballet. Looking back now, I realize how extraordinary it was that my parents allowed me to go so far away from home at such a young age in order to follow my dream. That kind of decision requires an enormous amount of trust, sacrifice, and love.</p>
+        <p>At the time, I do not think I fully understood how brave that step really was. I was simply following my passion with the innocence and determination of a child. But now, being older and more mature, there are moments when I wake up and think to myself, “Wow, Marko, you were truly brave.” Yet even more than myself, I give the greatest credit to my parents.</p>
+        <p>They gave me the courage to chase a dream that was completely unfamiliar to our family, my teacher, and anyone we knew. They supported me despite the distance and the sacrifices it required. Without their love and faith in me, none of this journey would have been possible.</p>
 
-        <p>Technique helps explain the persistence. Official sources describe a corpus running into the thousands: paintings, drawings, murals, illustrations, and theater scenographies. He worked in oil on canvas, oil on cardboard, tempera on paper, pencil and chalk, oil on glass, and larger mural or scenic formats. Blaze Koneski, in the 2013 jubilee catalog, remembered the intensity with which Martinoski could study a model, as though the brush were moving from stored knowledge and instinct as much as from immediate sight. The remark feels right, because in Martinoski drawing is never simply preliminary. His line thinks. The contour is the place where form begins to feel.</p>
+        <h2 class="interview-question">What is something people misunderstand about the life of a ballet dancer?</h2>
+        <p>People only see the beauty on stage, not the sacrifices behind it: the years of hard training, injuries, physical pain, and emotional pressure dancers experience every day. Ballet requires complete discipline and dedication from a very young age. Many dancers leave home early and sacrifice a normal childhood to follow their dream.</p>
+        <p>Despite all the challenges, dancers continue because of their deep passion and love for the art. Ballet is not just a profession; it becomes your entire life.</p>
 
-        <p>That is especially clear in the motifs to which he returned. Motherhood, in Martinoski, is rarely sentimental. His mothers are firmly built, dignified, often arranged in pyramidal compositions. Their faces may be rendered with deliberate realism while the hands and surrounding forms loosen into more elastic handling. Wedding scenes and “Kruševo ambients” offered another theater altogether: group compositions full of costume, furniture, custom, and local architecture, animated now by irony, now by affectionate caricature. Still lifes—flowers, fish, game—gave him a testing ground for color saturation and, at times, a fauvist or expressionist treatment of objects. Then the 1963 earthquake forced him into a different register altogether. In the earthquake cycle, line trembles, figuration disperses, and urban catastrophe is translated into pictures that can be poeticized, charged with pathos, or openly dramatic.</p>
+        <h2 class="interview-question">Is there a role, performance, or moment on stage that changed you?</h2>
+        <p>I have been very fortunate to perform many roles and dance in numerous ballets throughout my career so far. Every role has been special to me in a different way, and I approach each one with dedication, passion, and deep respect for the art.</p>
+        <p>However, one moment that will always stay close to my heart was performing at the 20th Anniversary Gala of the United Macedonian Diaspora in Detroit. It was an unforgettable honor to perform in the presence of our president, Gordana Siljanovska-Davkova, as well as many successful Macedonians who had built their lives abroad while still carrying so much love for their homeland.</p>
+        <p>That evening meant much more to me than just a performance. Standing on that stage, surrounded by people who shared the same roots, history, and emotions, gave me an incredible sense of belonging and pride. It reminded me that no matter how far we travel in life, we are never truly alone, because our culture and community always connect us back to home.</p>
 
-        <p>Among his peers, the comparison that most clarifies him is also the one that most risks flattening him. Like Lazar Ličenoski, Martinoski belonged to the first generation of contemporary Macedonian artists, absorbed Parisian training, and maintained a strong relation to medieval and local visual traditions. But the difference in temperament matters. Institutional texts on Ličenoski stress color expressionism, post-Cubist construction, and painterly chromatic force as signature elements. Martinoski’s decisive arena is different. He makes the figure, rather than color, the site of invention. If Ličenoski often seems to reach modernism through chromatic orchestration, Martinoski reaches it through psychological contour and social empathy. Tomo Vladimirski, in National Gallery descriptions, appears as a painter of gentle discipline and quiet artistic passion. Martinoski is the harsher dramatist of the first generation—more willing to bend the body, sharpen the cheekbone, agitate the picture plane, and keep feeling and social fact from settling into mere genre. The comparison is interpretive, but it follows closely from the language institutional sources themselves use.</p>
+        <h2 class="interview-question">What does representing Macedonia mean to you?</h2>
+        <p>We come from a small country that many people around the world still do not know much about, but at the same time, it is a place with an incredible history, culture, and identity. In many ways, I think that makes us lucky. Whenever I perform, I enjoy being able to talk about where I come from and share a different side of the world with people. There is something really special about coming from a small place with such a long history and strong character, and then carrying that energy with me.</p>
+        <p>No matter where life takes me, that mentality and background stay with you. And honestly, I think it is pretty cool to come from somewhere small and still leave a strong impression.</p>
 
-        <p>His role in Macedonian and Balkan modern art is therefore double. He is both painter and connective tissue. Official scholarship repeatedly casts him as the artist who linked epochs: medieval painting and modern currents, homeland and Europe, private studio and public institution. The 2013 National Gallery catalog goes so far as to call him the first modern expressionist and the founder of contemporary Macedonian fine art. It is a strong claim, but not an absurd one. His works circulated widely in Skopje, Belgrade, Zagreb, and Paris, and later at group exhibitions stretching from Prague and Sofia to Washington, New York, Mexico City, Oslo, and New Delhi. Yet he remained insistently local—not provincial, but located. He made Macedonian modernism legible outward without emptying it inward.</p>
-
-        <p>There is another reason the work still feels alive. Much of it was lost. The National Gallery notes that a substantial portion of Martinoski’s output was damaged or destroyed in the Second World War, the flood of 1962, and the catastrophic Skopje earthquake of 1963. What survives therefore carries the pressure of remainder. The surviving works in Kruševo, Skopje, and MANU are not simply holdings. They are fragments of an interrupted whole, pieces of a still unfinished picture of Macedonian modernism’s foundational painter.</p>
-
-        <p>Even the public record has that same fractured quality. It is rich, but not seamless. Works survive in the National Gallery’s orbit, in the Museum of Contemporary Art in Skopje, the Museum of the City of Skopje, MANU, and the Nikola Martinoski Gallery in Kruševo, but online holdings data remain uneven. In many cases, the most precise public record is still not a live collection database but the 2003 centenary exhibition catalog, supplemented by later institutional catalogs. The gaps matter, and the honest thing is not to smooth them over. The archive, in Martinoski’s case, tells the same story as the paintings: survival, fracture, reassembly.</p>
-
-        <p>That is one of the reasons Martinoski has remained more than a historical “first.” Modern scholarship keeps returning to him not to repeat the founding myth, but to complicate it. His work can still be reread through expressionism, social realism, post-Cubism, drawing practice, medieval Macedonian visual memory, gendered figuration, and the politics of institution-building. Boris Petkovski’s 1982 monograph remains the indispensable book-length study; his specialized essays on the Paris period, the drawing oeuvre of the nineteen-sixties, and Martinoski’s relation to German Expressionism continue to shape the field. Vladimir Velickovski’s 2003 centenary exhibition of previously unexhibited works reopened the corpus through family holdings. The National Gallery’s 2013 jubilee exhibition consolidated the canonical image. And then scholarship moved again: in 2015, Kiril Penushliski identified six previously unknown portrait drawings published in the Skopje daily <i>Vardar</i> between 1933 and 1936. Even now, the oeuvre is not entirely settled in public view.</p>
-
-        <p>Perhaps that is fitting. Martinoski’s art is full of faces that do not quite let themselves be finished. A mother looks outward but keeps a reserve. A beggar is rendered with sympathy but not innocence. A bride carries ceremony and fatigue in the same posture. A self-portrait is never only private. An earthquake scene is at once documentary and visionary. The many faces of Nikola Martinoski are, finally, the many ways a modern art can be local without becoming narrow, European without becoming borrowed, canonical without becoming inert.</p>
+        <h2 class="interview-question">What advice would you give to a young Macedonian artist trying to build a life through their art?</h2>
+        <p>After reading this interview, I hope young Macedonian artists understand that everything is possible. It does not matter if you come from a small country or from a family with no artistic background. With discipline, hard work, and belief in yourself, you can build a life through your art.</p>
       </div>
 
       <div class="empty-tail" aria-hidden="true"></div>
     </section>
 
+    <div class="content-row article-photo-credits">
+      <div class="empty-rail" aria-hidden="true"></div>
+      <aside class="photo-credit-note" aria-label="Photo credits">
+        <p class="photo-credit-heading">Photos</p>
+        <p>Srna Klotz &amp; Marko Micov (Battery Dance Festival)</p>
+        <p>Rachel Malehorn (Milwaukee Ballet — Genesis)</p>
+        <p>Marko Micov &amp; Marize Fumero (Swan Lake)</p>
+      </aside>
+      <div class="empty-tail" aria-hidden="true"></div>
+    </div>
   </article>
 
   <section class="more-from-muzej" data-more-from-muzej aria-labelledby="more-from-muzej-title"></section>
