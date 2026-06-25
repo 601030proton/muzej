@@ -22,6 +22,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&display=swap"
     />
+    <link rel="stylesheet" href="https://use.typekit.net/gnw6uol.css" />
 
     <style>
       :root {
@@ -38,6 +39,7 @@
         --section-y: clamp(64px, 8.8vw, 128px);
         --content-max: 1520px;
         --serif: "Fraunces", serif;
+        --headline-serif: "ivypresto-display", serif;
         --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
       }
 
@@ -293,12 +295,13 @@
       .section-title {
         margin: 0;
         max-width: min(100%, 16ch);
-        font-family: var(--serif);
+        font-family: var(--headline-serif);
         font-size: clamp(2.2rem, 1.82rem + 1.12vw, 3.45rem);
         line-height: 1.01;
-        letter-spacing: -0.026em;
-        font-weight: 350;
+        letter-spacing: 0;
+        font-weight: 300;
         font-optical-sizing: auto;
+        font-kerning: normal;
         text-wrap: balance;
       }
 
@@ -357,12 +360,13 @@
         margin: 0;
         max-width: min(100%, 11.5ch);
         min-height: 3.06em;
-        font-family: var(--serif);
+        font-family: var(--headline-serif);
         font-size: clamp(4.35rem, 6.45vw, 7.2rem);
         line-height: 1.01;
-        letter-spacing: -0.026em;
-        font-weight: 350;
+        letter-spacing: 0;
+        font-weight: 300;
         font-optical-sizing: auto;
+        font-kerning: normal;
         text-align: left;
         text-wrap: balance;
         overflow-wrap: normal;
@@ -660,11 +664,12 @@
       .stack-story-title,
       .archive-link {
         margin: 0.62rem 0 0;
-        font-family: var(--serif);
-        font-weight: 350;
+        font-family: var(--headline-serif);
+        font-weight: 300;
         line-height: 1;
-        letter-spacing: -0.025em;
+        letter-spacing: 0;
         font-optical-sizing: auto;
+        font-kerning: normal;
         text-wrap: balance;
       }
 
@@ -708,12 +713,13 @@
 
       .read-next-title {
         margin: 0;
-        font-family: var(--serif);
+        font-family: var(--headline-serif);
         font-size: clamp(2rem, 2.8vw, 3.15rem);
         line-height: 1;
-        letter-spacing: -0.026em;
-        font-weight: 350;
+        letter-spacing: 0;
+        font-weight: 300;
         font-optical-sizing: auto;
+        font-kerning: normal;
       }
 
       #selected-stories .story-card {
@@ -780,12 +786,13 @@
       .kinfolk-feature-title {
         max-width: min(100%, 44rem);
         margin: 0 auto;
-        font-family: var(--serif);
+        font-family: var(--headline-serif);
         font-size: clamp(2.65rem, 3.65vw, 3.85rem);
         line-height: 1.08;
         letter-spacing: 0;
-        font-weight: 350;
+        font-weight: 300;
         font-optical-sizing: auto;
+        font-kerning: normal;
         color: rgba(23, 21, 19, 0.86);
         text-wrap: balance;
       }
@@ -828,24 +835,25 @@
       .tose-descendants-kicker,
       .tose-descendants-title {
         margin: 0;
-        font-family: var(--serif);
-        font-weight: 350;
+        font-family: var(--headline-serif);
+        font-weight: 300;
         font-optical-sizing: auto;
+        font-kerning: normal;
         color: var(--foreground);
         text-wrap: balance;
       }
 
       .tose-descendants-kicker {
-        font-size: clamp(3.25rem, 5.2vw, 7rem);
+        font-size: clamp(2.65rem, 4.15vw, 5.45rem);
         line-height: 0.88;
         letter-spacing: 0;
         text-transform: uppercase;
       }
 
       .tose-descendants-title {
-        max-width: 11.8ch;
+        max-width: 12.6ch;
         margin-top: 0.1em;
-        font-size: clamp(3.35rem, 5vw, 6.45rem);
+        font-size: clamp(2.7rem, 4vw, 5.05rem);
         line-height: 0.98;
         letter-spacing: 0;
       }
@@ -892,12 +900,13 @@
     .more-from-muzej-title {
       max-width: none;
       margin: 0 0 0.3rem;
-      font-family: var(--serif);
+      font-family: var(--headline-serif);
       font-size: clamp(3rem, 5vw, 5.2rem);
       line-height: 0.92;
-      letter-spacing: -0.04em;
-      font-weight: 350;
+      letter-spacing: -0.015em;
+      font-weight: 300;
       font-optical-sizing: auto;
+      font-kerning: normal;
       color: var(--foreground);
       text-wrap: balance;
     }
@@ -905,12 +914,13 @@
     .more-from-muzej-subtitle {
       max-width: 78rem;
       margin: 0 auto;
-      font-family: var(--serif);
+      font-family: var(--headline-serif);
       font-size: clamp(1rem, 1.675vw, 2rem);
       line-height: 0.96;
-      letter-spacing: -0.036em;
-      font-weight: 350;
+      letter-spacing: 0;
+      font-weight: 300;
       font-optical-sizing: auto;
+      font-kerning: normal;
       color: var(--foreground);
       text-wrap: balance;
     }
@@ -960,7 +970,7 @@
       .more-from-muzej .story-card-title {
         font-size: clamp(1.45rem, 1.05rem + 0.9vw, 2.05rem);
         line-height: 1.04;
-        letter-spacing: -0.02em;
+        letter-spacing: 0;
         color: var(--foreground);
       }
 
@@ -1034,12 +1044,13 @@
       .editorial-spread-title {
         max-width: 13ch;
         margin: 0;
-        font-family: var(--serif);
+        font-family: var(--headline-serif);
         font-size: clamp(2.3rem, 4vw, 4.7rem);
         line-height: 0.98;
-        letter-spacing: -0.026em;
-        font-weight: 350;
+        letter-spacing: 0;
+        font-weight: 300;
         font-optical-sizing: auto;
+        font-kerning: normal;
         text-wrap: balance;
         color: #fff;
       }
@@ -1078,12 +1089,13 @@
 
       .explore-row-title {
         margin: 0;
-        font-family: var(--serif);
+        font-family: var(--headline-serif);
         font-size: clamp(3.1rem, 5.3vw, 5.3rem);
         line-height: 0.97;
-        letter-spacing: -0.03em;
-        font-weight: 350;
+        letter-spacing: 0;
+        font-weight: 300;
         font-optical-sizing: auto;
+        font-kerning: normal;
         text-wrap: balance;
       }
 
@@ -1243,12 +1255,13 @@
       .about-statement {
         max-width: 31rem;
         margin: 0;
-        font-family: var(--serif);
+        font-family: var(--headline-serif);
         font-size: clamp(2.3rem, 1.82rem + 1.12vw, 3.5rem);
         line-height: 1.04;
-        letter-spacing: -0.026em;
-        font-weight: 350;
+        letter-spacing: 0;
+        font-weight: 300;
         font-optical-sizing: auto;
+        font-kerning: normal;
         text-wrap: balance;
       }
 
@@ -1259,12 +1272,16 @@
       }
 
       #newsletter-strip .about-statement {
-        max-width: 1040px;
+        max-width: 52rem;
         width: 100%;
         margin: 0 auto;
-        font-size: clamp(2.35rem, 4.5vw, 4.2rem);
-        line-height: 1.05;
-        letter-spacing: -0.03em;
+        font-family: var(--headline-serif);
+        font-size: clamp(1.5rem, 3vw, 2.625rem);
+        line-height: 1.14;
+        letter-spacing: 0;
+        font-weight: 300;
+        font-optical-sizing: auto;
+        font-kerning: normal;
         color: #B65A3C;
         white-space: normal;
         overflow-wrap: normal;
@@ -1718,13 +1735,13 @@
         }
 
         .tose-descendants-kicker {
-          font-size: clamp(2.35rem, 12vw, 4.1rem);
+          font-size: clamp(2rem, 10vw, 3.35rem);
           line-height: 0.92;
         }
 
         .tose-descendants-title {
-          max-width: 10.8ch;
-          font-size: clamp(2.35rem, 10.6vw, 3.9rem);
+          max-width: 12ch;
+          font-size: clamp(2rem, 9.2vw, 3.2rem);
           line-height: 1.02;
         }
 
@@ -1759,11 +1776,11 @@
         }
 
         #newsletter-strip .about-statement {
-          max-width: 11ch;
+          max-width: 24rem;
           white-space: normal;
           overflow-wrap: normal;
-          font-size: clamp(2rem, 10.5vw, 3.2rem);
-          line-height: 1.06;
+          font-size: clamp(1.25rem, 6vw, 1.625rem);
+          line-height: 1.16;
         }
 
         #newsletter-strip .about-strip-frame {

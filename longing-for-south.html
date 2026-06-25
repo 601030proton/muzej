@@ -17,6 +17,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&display=swap"
     />
+    <link rel="stylesheet" href="https://use.typekit.net/gnw6uol.css" />
 
     <style>
       :root {
@@ -33,7 +34,9 @@
         --section-y: clamp(64px, 8.8vw, 128px);
         --content-max: 1520px;
         --serif: "Fraunces", serif;
+        --headline-serif: "ivypresto-display", serif;
         --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --article-serif: 'Adobe Jenson', Georgia, serif;
       }
 
       * {
@@ -296,11 +299,11 @@
       .section-title {
         margin: 0;
         max-width: min(100%, 16ch);
-        font-family: var(--serif);
+        font-family: var(--headline-serif);
         font-size: clamp(2.2rem, 1.82rem + 1.12vw, 3.45rem);
         line-height: 1.01;
-        letter-spacing: -0.026em;
-        font-weight: 350;
+        letter-spacing: 0;
+        font-weight: 300;
         font-optical-sizing: auto;
         text-wrap: balance;
       }
@@ -354,11 +357,11 @@
       .hero-title {
         margin: 0;
         max-width: 9.85ch;
-        font-family: var(--serif);
+        font-family: var(--headline-serif);
         font-size: clamp(4.35rem, 6.45vw, 7.2rem);
         line-height: 1.01;
-        letter-spacing: -0.026em;
-        font-weight: 350;
+        letter-spacing: 0;
+        font-weight: 300;
         font-optical-sizing: auto;
         text-wrap: balance;
       }
@@ -612,10 +615,10 @@
       .stack-story-title,
       .archive-link {
         margin: 0.62rem 0 0;
-        font-family: var(--serif);
-        font-weight: 350;
+        font-family: var(--headline-serif);
+        font-weight: 300;
         line-height: 1;
-        letter-spacing: -0.025em;
+        letter-spacing: 0;
         font-optical-sizing: auto;
         text-wrap: balance;
       }
@@ -660,11 +663,11 @@
 
       .read-next-title {
         margin: 0;
-        font-family: var(--serif);
+        font-family: var(--headline-serif);
         font-size: clamp(2rem, 2.8vw, 3.15rem);
         line-height: 1;
-        letter-spacing: -0.026em;
-        font-weight: 350;
+        letter-spacing: 0;
+        font-weight: 300;
         font-optical-sizing: auto;
       }
 
@@ -724,11 +727,11 @@
       .feature-spotlight-title {
         max-width: none;
         margin: 0 0 0.3rem;
-        font-family: var(--serif);
+        font-family: var(--headline-serif);
         font-size: clamp(1.6rem, 2.7vw, 3.1rem);
         line-height: 0.98;
-        letter-spacing: -0.03em;
-        font-weight: 350;
+        letter-spacing: -0.015em;
+        font-weight: 300;
         font-optical-sizing: auto;
         text-transform: uppercase;
         color: var(--foreground);
@@ -738,11 +741,11 @@
       .feature-spotlight-dek {
         max-width: 78rem;
         margin: 0;
-        font-family: var(--serif);
+        font-family: var(--headline-serif);
         font-size: clamp(1rem, 1.675vw, 2rem);
         line-height: 0.96;
-        letter-spacing: -0.036em;
-        font-weight: 350;
+        letter-spacing: 0;
+        font-weight: 300;
         font-optical-sizing: auto;
         color: var(--foreground);
         text-wrap: balance;
@@ -779,11 +782,11 @@
 
       .more-from-muzej-title {
         margin: 0;
-        font-family: var(--serif);
+        font-family: var(--headline-serif);
         font-size: clamp(2.15rem, 3.2vw, 3.85rem);
         line-height: 1;
-        letter-spacing: -0.026em;
-        font-weight: 350;
+        letter-spacing: 0;
+        font-weight: 300;
         font-optical-sizing: auto;
       }
 
@@ -853,11 +856,11 @@
 
       .explore-row-title {
         margin: 0;
-        font-family: var(--serif);
+        font-family: var(--headline-serif);
         font-size: clamp(3.1rem, 5.3vw, 5.3rem);
         line-height: 0.97;
-        letter-spacing: -0.03em;
-        font-weight: 350;
+        letter-spacing: -0.015em;
+        font-weight: 300;
         font-optical-sizing: auto;
         text-wrap: balance;
       }
@@ -1014,11 +1017,11 @@
       .about-statement {
         max-width: 31rem;
         margin: 0;
-        font-family: var(--serif);
+        font-family: var(--headline-serif);
         font-size: clamp(2.3rem, 1.82rem + 1.12vw, 3.5rem);
         line-height: 1.04;
-        letter-spacing: -0.026em;
-        font-weight: 350;
+        letter-spacing: 0;
+        font-weight: 300;
         font-optical-sizing: auto;
         text-wrap: balance;
       }
@@ -1554,11 +1557,11 @@
       .poem-title {
         max-width: 11ch;
         margin: 0;
-        font-family: var(--serif);
+        font-family: var(--headline-serif);
         font-size: clamp(3.25rem, 6.4vw, 6.35rem);
         line-height: 0.96;
-        letter-spacing: -0.038em;
-        font-weight: 350;
+        letter-spacing: -0.015em;
+        font-weight: 300;
         font-optical-sizing: auto;
         text-wrap: balance;
       }
@@ -1591,11 +1594,11 @@
 
       .poem-text {
         max-width: 35rem;
-        font-family: var(--serif);
+        font-family: var(--article-serif);
         font-size: clamp(1.24rem, 1rem + 0.56vw, 1.58rem);
         line-height: 1.58;
         letter-spacing: -0.006em;
-        font-weight: 350;
+        font-weight: 300;
         font-optical-sizing: auto;
       }
 
@@ -1633,7 +1636,7 @@
       .more-from-muzej-title {
         max-width: none;
         margin: 0;
-        font-family: var(--serif);
+        font-family: var(--headline-serif);
         font-size: clamp(1.45rem, 1vw + 1.1rem, 1.9rem);
         line-height: 1.08;
         letter-spacing: -0.02em;
@@ -1661,9 +1664,9 @@
       }
 
       .related-list a {
-        font-family: var(--serif);
+        font-family: var(--headline-serif);
         font-size: clamp(1.1rem, 1.3vw + 0.7rem, 1.55rem);
-        font-weight: 350;
+        font-weight: 300;
         line-height: 1.08;
         letter-spacing: -0.02em;
         color: var(--foreground);

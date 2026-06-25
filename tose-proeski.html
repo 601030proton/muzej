@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&display=swap">
+<link rel="stylesheet" href="https://use.typekit.net/gnw6uol.css">
 <style>
 :root {
   --background: #ffffff;
@@ -26,6 +27,7 @@
   --nav-h: clamp(88px, 10vw, 128px);
   --content-max: 1520px;
   --serif: "Fraunces", serif;
+        --headline-serif: "ivypresto-display", serif;
   --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --article-serif: 'Adobe Jenson', Georgia, serif;
 }
@@ -233,7 +235,7 @@ main {
   font-size: clamp(38px, 4.9vw, 76px);
   font-weight: 400;
   line-height: 0.96;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.015em;
   text-wrap: balance;
 }
 .feature-title-break {
@@ -312,13 +314,11 @@ main {
 .pull-quote {
   grid-column: 2;
   margin: 0;
-  font-family: var(--serif);
-  font-size: clamp(2rem, 4.1vw, 4.5rem);
-  font-weight: 350;
-  line-height: 1;
-  letter-spacing: -0.035em;
-  font-optical-sizing: auto;
-  text-wrap: balance;
+  max-width: none;
+  font-size: clamp(20px, 2.35vw, 26px);
+  font-style: italic;
+  line-height: 1.12;
+  letter-spacing: 0;
 }
 .article-body-copy .pull-quote {
   margin: clamp(48px, 7vw, 92px) 0;
@@ -361,7 +361,7 @@ main {
 .more-from-muzej-title {
   max-width: none;
   margin: 0;
-  font-family: var(--serif);
+  font-family: var(--headline-serif);
   font-size: clamp(1.45rem, 1vw + 1.1rem, 1.9rem);
   line-height: 1.08;
   letter-spacing: -0.02em;
@@ -385,9 +385,9 @@ main {
   border-bottom: 1px solid var(--rule);
 }
 .related-list a {
-  font-family: var(--serif);
+  font-family: var(--headline-serif);
   font-size: clamp(1.1rem, 1.3vw + 0.7rem, 1.55rem);
-  font-weight: 350;
+  font-weight: 300;
   line-height: 1.08;
   letter-spacing: -0.02em;
   color: var(--foreground);
@@ -655,7 +655,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
 <link rel="stylesheet" href="more-from-muzej.css">
 <script src="more-from-muzej.js" defer></script>
 </head>
-<body>
+<body class="kinfolk-article-hero">
 
 <header class="site-header">
   <div class="shell header-frame">
@@ -696,8 +696,8 @@ body.muzej-logo-hidden .site-header .brand-mark {
       </figure>
 
       <div class="feature-copy">
-        <h1 class="feature-title">Toše Proeski<br>and the<br>Making of<br>The Hardest<br>Thing</h1>
         <p class="feature-byline">Words Ace Trajkovski</p>
+        <h1 class="feature-title">Toše Proeski and the Making of The Hardest Thing</h1>
       </div>
     </div>
     <p class="feature-deck">A singer still expanding the possibilities of his own voice.</p>
@@ -742,7 +742,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
 
         <p>Formally, the song behaves like a modern rock ballad: restrained verse, rising connective section, chorus with widened vowel space, bridge, then a final chorus engineered for maximum lift. The melody is not especially complex intervallically, but it is strategically placed. The verse sits closer to speech and breath; the chorus lengthens note values and lets Proeski lean into the upper part of the line. In production terms, the arrangement does exactly what a crossover launch single should do: guitars and rhythm section frame the track as contemporary adult pop-rock, while strings and layered vocal ambience preserve the grand, elegiac feeling his audience expected from him.</p>
 
-        <aside class="pull-quote">Wright would sit at a keyboard or piano and Toše would improvise—scatting, searching, trying out sounds...</aside>
+        <aside class="pull-quote">Wright would sit at a keyboard or piano and Toše would improvise—scatting, searching, trying out sounds.</aside>
 
         <p>Wright’s account of the later songs sharpens that picture. “When I’ve Got the Sunlight” grew out of an early home demo that already contained melodic material but no finished lyric. “If You Wanna Leave” had to be rescued from an incomplete surviving demo. “Secret Place” was built around vocal tracks Proeski had recorded with Petra Crnetić. This is not the workflow of a singer arriving at the end to decorate someone else’s finished song. It is the workflow of a writer-performer whose fragments mattered—whose half-lines, rough takes, and melodic instincts remained alive enough to be shaped into finished work even after he was gone. One of Wright’s most memorable anecdotes is that in Jamaica there was virtually no gear in the studio. Scarcity, in that case, became revelation. Strip away the machinery and what remains is the essence of Proeski’s art: voice, melody, feeling, form.</p>
 

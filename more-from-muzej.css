@@ -14,12 +14,13 @@
 
 .more-from-muzej-title {
   margin: 0;
-  font-family: var(--serif, "Fraunces", Georgia, serif);
+  font-family: var(--headline-serif, "ivypresto-display", serif);
   font-size: clamp(2rem, 1.55rem + 1.4vw, 3.1rem);
   line-height: 0.98;
-  letter-spacing: -0.026em;
-  font-weight: 560;
+  letter-spacing: -0.015em;
+  font-weight: 300;
   font-optical-sizing: auto;
+  font-kerning: normal;
   color: var(--foreground, var(--ink, #171513));
 }
 
@@ -92,12 +93,13 @@
 .more-from-muzej-card-title {
   display: block;
   margin: 0.68rem 0 0;
-  font-family: var(--serif, "Fraunces", Georgia, serif);
+  font-family: var(--headline-serif, "ivypresto-display", serif);
   font-size: clamp(1.5rem, 1.14rem + 0.92vw, 2.25rem);
   line-height: 1.05;
-  letter-spacing: -0.025em;
-  font-weight: 430;
+  letter-spacing: 0;
+  font-weight: 300;
   font-optical-sizing: auto;
+  font-kerning: normal;
   color: var(--foreground, var(--ink, #171513));
   text-wrap: balance;
   transition: color 180ms ease;

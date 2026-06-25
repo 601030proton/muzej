@@ -123,8 +123,8 @@
     {
       slug: "lake-ohrid-architecture-memory",
       href: "lake-ohrid-architecture-memory.html",
-      title: "Lake Ohrid and the Architecture of Memory",
-      kicker: "Architecture | Memory",
+      title: "The Ohrid House and the Logic of Place",
+      kicker: "Architecture | Urbanism",
       dek: "How one Macedonian vernacular tradition turned hillside, lake, climate, and craft into architecture.",
       image: "./Assets/Ohrid%20Architecture/Images/cover.png",
       alt: "Black-and-white collage of Ohrid house architecture with white plaster and dark timber windows.",
@@ -205,12 +205,15 @@
     imageWrap.appendChild(image);
 
     copy.className = "more-from-muzej-card-copy";
-    kicker.className = "more-from-muzej-card-kicker";
-    kicker.textContent = article.kicker;
     title.className = "more-from-muzej-card-title";
     title.textContent = article.title;
 
-    copy.appendChild(kicker);
+    if (article.kicker) {
+      kicker.className = "more-from-muzej-card-kicker";
+      kicker.textContent = article.kicker;
+      copy.appendChild(kicker);
+    }
+
     copy.appendChild(title);
 
     if (article.dek) {

@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&display=swap">
+<link rel="stylesheet" href="https://use.typekit.net/gnw6uol.css">
 <style>
 :root {
   --background: #ffffff;
@@ -29,6 +30,7 @@
   --section-gap: clamp(48px, 8vw, 108px);
   --content-max: 1520px;
   --serif: "Fraunces", serif;
+        --headline-serif: "ivypresto-display", serif;
   --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --article-serif: 'Adobe Jenson', Georgia, serif;
   --brand-serif: "Fraunces", serif;
@@ -260,11 +262,11 @@ main {
 .feature-title {
   margin: 0;
   color: var(--ink);
-  font-family: var(--brand-serif);
+  font-family: var(--headline-serif);
   font-size: clamp(38px, 4.9vw, 76px);
-  font-weight: 350;
+  font-weight: 300;
   line-height: 1.01;
-  letter-spacing: -0.026em;
+  letter-spacing: 0;
   font-optical-sizing: auto;
   text-wrap: balance;
 }
@@ -355,7 +357,7 @@ main {
   font-size: clamp(30px, 4vw, 48px);
   font-weight: 400;
   line-height: 1.02;
-  letter-spacing: -0.025em;
+  letter-spacing: 0;
 }
 
 .body-block p {
@@ -372,7 +374,7 @@ main {
   max-width: none;
   font-size: clamp(20px, 2.35vw, 26px);
   line-height: 1.12;
-  letter-spacing: -0.025em;
+  letter-spacing: 0;
 }
 
 .gallery-reading {
@@ -429,7 +431,7 @@ main {
 .more-from-muzej-title {
   max-width: none;
   margin: 0;
-  font-family: var(--serif);
+  font-family: var(--headline-serif);
   font-size: clamp(1.45rem, 1vw + 1.1rem, 1.9rem);
   line-height: 1.08;
   letter-spacing: -0.02em;
@@ -453,9 +455,9 @@ main {
   border-bottom: 1px solid var(--rule);
 }
 .related-list a {
-  font-family: var(--serif);
+  font-family: var(--headline-serif);
   font-size: clamp(1.1rem, 1.3vw + 0.7rem, 1.55rem);
-  font-weight: 350;
+  font-weight: 300;
   line-height: 1.08;
   letter-spacing: -0.02em;
   color: var(--foreground);
@@ -518,9 +520,9 @@ main {
 }
 .more-from-muzej-card-title {
   margin: 0.62rem 0 0;
-  font-family: var(--serif);
+  font-family: var(--headline-serif);
   font-size: clamp(1.35rem, 0.95rem + 0.85vw, 1.95rem);
-  font-weight: 350;
+  font-weight: 300;
   line-height: 1.04;
   letter-spacing: -0.02em;
   font-optical-sizing: auto;
@@ -765,7 +767,7 @@ main {
     max-width: 100%;
     font-size: clamp(32px, 9.2vw, 42px);
     line-height: 1.05;
-    letter-spacing: -0.024em;
+    letter-spacing: 0;
     text-wrap: balance;
     overflow-wrap: normal;
     word-break: normal;
@@ -889,7 +891,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
 <link rel="stylesheet" href="more-from-muzej.css">
 <script src="more-from-muzej.js" defer></script>
 </head>
-<body>
+<body class="kinfolk-article-hero">
 
 <header class="site-header">
   <div class="shell header-frame">
@@ -926,8 +928,8 @@ body.muzej-logo-hidden .site-header .brand-mark {
   <header class="feature feature--stranci" aria-labelledby="article-title">
     <div class="feature-inner">
       <div class="feature-copy">
-        <h1 id="article-title" class="feature-title">How to Be From Somewhere Else</h1>
         <p class="feature-byline">Words Ace Trajkovski</p>
+        <h1 id="article-title" class="feature-title">How to Be From Somewhere Else</h1>
       </div>
       <figure class="feature-media" aria-label="Article hero image">
         <img src="./Assets/Stranci/Stranci%20Pix/hero%20portrait.png" alt="Three people posing for a phone camera against a yellow and pink painted backdrop with social media icons." width="1023" height="1537" decoding="async" fetchpriority="high">
