@@ -33,8 +33,10 @@
         --page-x: clamp(18px, 5.2vw, 72px);
         --section-y: clamp(64px, 8.8vw, 128px);
         --content-max: 1520px;
-        --serif: "Fraunces", serif;
-        --headline-serif: "ivypresto-display", serif;
+        --font-display: "ivypresto-display", "IvyPresto Display", "Ivy Presto", serif;
+        --font-wordmark: var(--font-display);
+        --serif: var(--font-display);
+        --headline-serif: var(--font-display);
         --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
         --article-serif: 'Adobe Jenson', Georgia, serif;
       }
@@ -123,13 +125,15 @@
       .brand-mark {
         display: inline-flex;
         align-items: center;
-        font-family: var(--serif);
-        font-size: clamp(2.55rem, 2.02rem + 1.52vw, 4rem);
-        line-height: 0.86;
-        letter-spacing: -0.05em;
-        font-weight: 560;
+        font-family: var(--font-wordmark);
+        font-size: clamp(2.4rem, 1.9rem + 1.43vw, 3.76rem);
+        line-height: 0.92;
+        letter-spacing: 0.09em;
+        font-weight: 400;
         font-optical-sizing: auto;
         white-space: nowrap;
+        text-transform: uppercase;
+
       }
 
       .utility-link,
@@ -1215,7 +1219,8 @@
         }
 
         .brand-mark {
-          font-size: clamp(2.3rem, 10.8vw, 3.05rem);
+          font-size: clamp(2.16rem, 10.15vw, 2.87rem);
+
         }
 
         .utility-panel {
@@ -1717,12 +1722,14 @@
 
       .footer-wordmark {
         display: inline-flex;
-        font-family: var(--serif);
+        font-family: var(--font-wordmark);
         font-size: clamp(3.1rem, 5vw, 5rem);
-        font-weight: 560;
-        line-height: 0.88;
-        letter-spacing: -0.055em;
+        font-weight: 400;
+        line-height: 0.92;
+        letter-spacing: 0.04em;
         font-optical-sizing: auto;
+        text-transform: uppercase;
+
       }
 
       .footer-statement {
