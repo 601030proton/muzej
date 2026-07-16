@@ -1,0 +1,1896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Muzej's 2026 Quality of Life Survey ranks the most liveable cities across the Macedonian geographic and cultural region.">
+<title>Muzej Quality of Life Survey 2026 | МУЗЕЈ</title>
+<meta property="og:title" content="Muzej Quality of Life Survey 2026">
+<meta property="og:description" content="A ranked Muzej survey of where everyday life works best across the Macedonian geographic and cultural region.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="./Assets/Quality%20of%20Life/hero-final.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Muzej Quality of Life Survey 2026">
+<meta name="twitter:description" content="A ranked Muzej survey of where everyday life works best across the Macedonian geographic and cultural region.">
+<meta name="twitter:image" content="./Assets/Quality%20of%20Life/hero-final.png">
+<link rel="stylesheet" href="https://use.typekit.net/gnw6uol.css">
+<style>
+:root {
+  --background: #ffffff;
+  --foreground: #0f0e0d;
+  --white: #ffffff;
+  --ink: #0f0e0d;
+  --ink-soft: rgba(15, 14, 13, 0.62);
+  --ink-faint: rgba(15, 14, 13, 0.12);
+  --muted: #70675d;
+  --rule: rgba(23, 21, 19, 0.09);
+  --rule-strong: rgba(23, 21, 19, 0.18);
+  --paper: #f7f2e9;
+  --paper-deep: #ede3d2;
+  --accent: #7f5243;
+  --page-x: clamp(18px, 5.2vw, 72px);
+  --nav-h: clamp(88px, 10vw, 128px);
+  --feature-w: min(1280px, calc(100vw - (var(--page-x) * 2)));
+  --rail-gap: clamp(28px, 5vw, 76px);
+  --body-col: minmax(380px, 640px);
+  --section-gap: clamp(62px, 9vw, 128px);
+  --content-max: 1520px;
+  --serif: "ivypresto-display", "IvyPresto Display", "Ivy Presto", serif;
+  --headline-serif: "ivypresto-display", "IvyPresto Display", "Ivy Presto", serif;
+  --font-wordmark: var(--headline-serif);
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --article-serif: 'Adobe Jenson', Georgia, serif;
+  --brand-serif: var(--headline-serif);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--article-serif);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+a:focus-visible,
+summary:focus-visible {
+  outline: 2px solid rgba(141, 79, 61, 0.45);
+  outline-offset: 3px;
+}
+
+.shell {
+  width: min(100%, var(--content-max));
+  margin: 0 auto;
+  padding-left: var(--page-x);
+  padding-right: var(--page-x);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: transparent;
+  pointer-events: none;
+}
+.site-header .header-frame,
+.site-header .brand-mark,
+.site-header .header-tools {
+  pointer-events: auto;
+}
+.header-frame {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  padding-top: 28px;
+  padding-bottom: 24px;
+}
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-wordmark);
+  font-size: clamp(2.4rem, 1.9rem + 1.43vw, 3.76rem);
+  line-height: 0.92;
+  letter-spacing: 0.09em;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  white-space: nowrap;
+  text-transform: uppercase;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+body.muzej-logo-hidden .site-header .brand-mark {
+  transform: translate3d(0, calc(-100% - 42px), 0);
+}
+.utility-link,
+.utility-menu-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  letter-spacing: 0.11em;
+  color: rgba(23, 21, 19, 0.58);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+.utility-link:hover,
+.utility-menu-item:hover {
+  color: var(--foreground);
+}
+.header-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.utility-menu {
+  position: relative;
+}
+.utility-menu summary {
+  list-style: none;
+}
+.utility-menu summary::-webkit-details-marker {
+  display: none;
+}
+.utility-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: color 180ms ease, opacity 180ms ease;
+}
+.utility-trigger:hover {
+  opacity: 0.72;
+}
+.utility-icon {
+  display: grid;
+  gap: 0.26rem;
+}
+.utility-icon-line {
+  display: block;
+  width: 1.45rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.88;
+}
+.utility-panel {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  right: 0;
+  z-index: 10;
+  display: grid;
+  min-width: 10rem;
+  padding: 0.45rem 0;
+  border: 1px solid rgba(23, 21, 19, 0.12);
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(23, 21, 19, 0.08);
+}
+.utility-panel-group {
+  display: grid;
+  gap: 0;
+}
+.utility-panel-utility {
+  margin-top: 0.25rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid rgba(23, 21, 19, 0.1);
+}
+.utility-panel .utility-link,
+.utility-panel .utility-menu-item {
+  justify-content: flex-start;
+  min-height: 0;
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  background: transparent;
+}
+.utility-panel-utility .utility-link {
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  color: rgba(23, 21, 19, 0.52);
+}
+.utility-panel .utility-link:hover,
+.utility-panel .utility-menu-item:hover {
+  background: rgba(23, 21, 19, 0.035);
+}
+
+main {
+  padding-top: 0;
+}
+
+.feature {
+  width: 100%;
+  background: var(--white);
+}
+.feature-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: clamp(22px, 4vw, 70px);
+  align-items: stretch;
+  max-width: none;
+  min-height: clamp(620px, calc(100svh - var(--nav-h)), 900px);
+  margin: 0;
+}
+.feature-copy {
+  min-height: inherit;
+  max-width: 32rem;
+  margin: 0 auto;
+  padding: clamp(72px, 8vw, 136px) 0 clamp(72px, 8vw, 128px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.feature-kicker,
+.survey-kicker,
+.rank-eyebrow,
+.callout-label,
+.entry-stats dt {
+  font-family: var(--sans);
+  letter-spacing: 0.16em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.feature-kicker {
+  margin: 0 0 clamp(18px, 2vw, 28px);
+  color: var(--ink-soft);
+  font-size: 0.72rem;
+}
+.feature-title {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--brand-serif);
+  font-size: clamp(40px, 5.1vw, 78px);
+  font-weight: 350;
+  line-height: 1.01;
+  letter-spacing: -0.026em;
+  font-optical-sizing: auto;
+  text-wrap: balance;
+}
+.feature-byline {
+  margin: auto 0 0;
+  color: var(--ink-soft);
+  font-size: clamp(12px, 0.95vw, 14px);
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.feature-media {
+  margin: 0;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(48px, 7vw, 96px) var(--page-x) clamp(52px, 7vw, 104px) 0;
+  overflow: visible;
+  background: var(--white);
+}
+.feature-media-frame {
+  width: min(100%, 820px);
+  aspect-ratio: 5 / 3.45;
+  overflow: hidden;
+  border: 1px solid var(--rule-strong);
+  background: var(--paper);
+}
+.feature-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+.article-shell {
+  max-width: var(--feature-w);
+  margin: 0 auto;
+  padding: clamp(62px, 8vw, 112px) var(--page-x) clamp(84px, 10vw, 132px);
+}
+.article-deck {
+  width: 100%;
+  max-width: min(920px, 100%);
+  margin: 0 0 clamp(34px, 5vw, 64px);
+  text-align: left;
+  color: var(--ink);
+  font-size: clamp(17px, 1.18vw, 20px);
+  font-weight: 400;
+  line-height: 1.68;
+  letter-spacing: 0;
+}
+.article-intro {
+  display: grid;
+  gap: 1.1rem;
+}
+.article-intro p {
+  margin: 0;
+}
+.survey-intro {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.4fr) minmax(0, 0.6fr);
+  gap: clamp(24px, 4vw, 58px);
+  align-items: start;
+  margin-bottom: clamp(52px, 7vw, 94px);
+  border-top: 1px solid var(--rule-strong);
+  padding-top: clamp(24px, 3.2vw, 38px);
+}
+.survey-note {
+  margin: 0;
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: clamp(0.8rem, 0.76rem + 0.16vw, 0.92rem);
+  line-height: 1.72;
+}
+.survey-kicker {
+  margin: 0 0 0.72rem;
+  color: var(--accent);
+  font-size: 0.68rem;
+}
+.survey-intro > .survey-note {
+  padding-top: 1.536rem;
+}
+.survey-index {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1px;
+  margin: 0 0 clamp(58px, 8vw, 104px);
+  padding: 0;
+  list-style: none;
+  border: 1px solid var(--rule-strong);
+  background: var(--rule-strong);
+}
+.survey-index:empty {
+  display: none;
+}
+.survey-index li {
+  min-width: 0;
+}
+.survey-index a {
+  display: grid;
+  min-height: 5.6rem;
+  padding: 0.78rem;
+  background: var(--white);
+  color: var(--ink);
+  text-decoration: none;
+}
+.survey-index-number {
+  font-family: var(--brand-serif);
+  font-size: 1.65rem;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+.survey-index-title {
+  align-self: end;
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  line-height: 1.3;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ranking-list {
+  display: grid;
+}
+.ranking-entry {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.88fr) minmax(0, 1.12fr);
+  gap: var(--rail-gap);
+  align-items: start;
+  padding: clamp(48px, 7vw, 92px) 0 clamp(54px, 7.5vw, 104px);
+  border-top: 1px solid var(--rule-strong);
+}
+.ranking-entry:first-child {
+  border-top-width: 2px;
+}
+.ranking-media {
+  margin: 0;
+  align-self: start;
+  position: sticky;
+  top: calc(var(--nav-h) + clamp(12px, 2vw, 26px));
+}
+.ranking-media-frame {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--paper);
+}
+.ranking-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  transform: translateY(var(--image-offset, 0));
+}
+.ranking-media--map img {
+  object-fit: cover;
+}
+.ranking-caption {
+  margin: 0.65rem 0 0;
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.ranking-copy {
+  min-width: 0;
+}
+.rank-head {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: clamp(14px, 2vw, 28px);
+  align-items: baseline;
+  margin-top: clamp(12px, 2vw, 30px);
+  margin-bottom: clamp(36px, 5vw, 72px);
+}
+.rank-head > div {
+  min-width: 0;
+  display: grid;
+  gap: clamp(10px, 1.2vw, 16px);
+}
+.rank-number {
+  display: block;
+  font-family: var(--headline-serif);
+  font-size: clamp(28px, 3.25vw, 46px);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--ink);
+}
+.rank-eyebrow {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.68rem;
+}
+.rank-title {
+  margin: 0;
+  max-width: none;
+  font-family: var(--headline-serif);
+  font-size: clamp(28px, 3.25vw, 46px);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+.ranking-intro,
+.ranking-details p {
+  margin: 0;
+  font-size: clamp(16px, 1.18vw, 18px);
+  line-height: 1.82;
+}
+.ranking-details {
+  margin-top: 1.45rem;
+}
+.ranking-details summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  list-style: none;
+}
+.ranking-details summary::-webkit-details-marker {
+  display: none;
+}
+.ranking-details summary::before {
+  content: "+";
+  display: inline-flex;
+  width: 1.1rem;
+  height: 1.1rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--ink);
+  font-size: 0.75rem;
+  line-height: 1;
+}
+.ranking-details[open] summary::before {
+  content: "-";
+}
+.ranking-details-body {
+  display: grid;
+  gap: 1.45rem;
+  padding-top: 1.35rem;
+}
+.qol-guide-card {
+  display: grid;
+  gap: clamp(24px, 3.4vw, 42px);
+}
+.qol-guide-header {
+  margin-bottom: 0;
+}
+.qol-guide-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+.qol-award,
+.qol-score-badge,
+.qol-section-label {
+  margin: 0;
+  font-family: var(--sans);
+  letter-spacing: 0.15em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.qol-award {
+  color: var(--accent);
+  font-size: 0.68rem;
+}
+.qol-score-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.55rem;
+  padding: 0.3rem 0.52rem;
+  border: 1px solid var(--rule-strong);
+  color: var(--ink-soft);
+  font-size: 0.56rem;
+  background: var(--white);
+}
+.qol-section-label {
+  color: var(--ink-soft);
+  font-size: 0.6rem;
+}
+.qol-guide-verdict {
+  max-width: 44rem;
+}
+.qol-signals {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(28px, 4vw, 52px);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: var(--white);
+}
+.qol-signal {
+  min-width: 0;
+  padding: clamp(16px, 1.8vw, 22px) 0 clamp(20px, 2.2vw, 28px);
+  border-top: 1px solid var(--rule-strong);
+  background: var(--white);
+}
+.qol-signal dt,
+.qol-editorial-block h3,
+.qol-fit-index h3 {
+  margin: 0 0 0.55rem;
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.qol-signal dd {
+  display: grid;
+  gap: 0.28rem;
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: clamp(14px, 1vw, 16px);
+  line-height: 1.58;
+}
+.qol-signal dd strong {
+  font-weight: 550;
+}
+.qol-signal dd span {
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: clamp(11px, 0.78vw, 12px);
+  line-height: 1.45;
+}
+.qol-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(20px, 2.8vw, 34px) clamp(20px, 3vw, 42px);
+}
+.qol-editorial-block {
+  min-width: 0;
+  padding-top: clamp(14px, 1.8vw, 22px);
+  border-top: 1px solid var(--rule);
+}
+.qol-editorial-block p {
+  margin: 0;
+  font-size: clamp(14px, 1vw, 16px);
+  line-height: 1.68;
+}
+.qol-survey-map {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+}
+.qol-survey-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.qol-fit-index {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.32fr) minmax(0, 0.68fr);
+  gap: clamp(24px, 4vw, 58px);
+  margin-top: clamp(42px, 6vw, 82px);
+  border-top: 1px solid var(--rule-strong);
+  padding-top: clamp(24px, 4vw, 42px);
+}
+.qol-fit-index h2 {
+  margin: 0;
+  max-width: 12ch;
+  font-family: var(--brand-serif);
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 350;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+}
+.qol-fit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--rule-strong);
+  background: var(--rule-strong);
+}
+.qol-fit-card {
+  min-width: 0;
+  padding: clamp(14px, 1.8vw, 20px);
+  background: var(--white);
+}
+.qol-fit-card p {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(14px, 1vw, 16px);
+  line-height: 1.5;
+}
+.qol-fit-subtitle {
+  margin: 0.8rem 0 0;
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: clamp(0.78rem, 0.74rem + 0.12vw, 0.88rem);
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+.qol-data-note p {
+  max-width: 62rem;
+}
+.take-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: clamp(28px, 3.4vw, 42px);
+  background: var(--rule-strong);
+  border: 1px solid var(--rule-strong);
+}
+.take {
+  min-width: 0;
+  padding: clamp(16px, 2vw, 22px);
+  background: var(--white);
+}
+.callout-label {
+  display: block;
+  margin-bottom: 0.58rem;
+  color: var(--accent);
+  font-size: 0.64rem;
+}
+.take p {
+  margin: 0;
+  font-size: clamp(14px, 1vw, 16px);
+  line-height: 1.56;
+}
+.entry-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin: clamp(26px, 3vw, 38px) 0 0;
+  background: var(--rule-strong);
+  border: 1px solid var(--rule-strong);
+}
+.entry-stat {
+  min-width: 0;
+  padding: 0.86rem;
+  background: var(--paper);
+}
+.entry-stats dt {
+  margin: 0 0 0.45rem;
+  color: var(--ink-soft);
+  font-size: 0.56rem;
+}
+.entry-stats dd {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: clamp(0.82rem, 0.78rem + 0.18vw, 0.96rem);
+  line-height: 1.35;
+}
+.closing-note {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.4fr) minmax(0, 0.6fr);
+  gap: clamp(24px, 4vw, 58px);
+  margin-top: clamp(22px, 4vw, 54px);
+  border-top: 2px solid var(--ink);
+  padding-top: clamp(24px, 4vw, 42px);
+}
+.closing-note h2 {
+  margin: 0;
+  max-width: 10ch;
+  font-family: var(--brand-serif);
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 350;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+}
+.closing-note p {
+  margin: 0;
+  font-size: clamp(16px, 1.18vw, 18px);
+  line-height: 1.82;
+}
+
+.site-footer {
+  margin-top: 0;
+}
+.muzej-footer {
+  width: 100%;
+  padding: clamp(3.5rem, 7vw, 6rem) var(--page-x);
+  background: #000000;
+  color: #f7f2e9;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: minmax(320px, 620px) minmax(180px, 260px);
+  gap: clamp(3rem, 7vw, 6rem);
+  justify-content: center;
+  align-items: start;
+  width: min(100%, 1160px);
+  margin: 0 auto;
+}
+.footer-brand {
+  min-width: 0;
+}
+.footer-wordmark {
+  display: inline-flex;
+  font-family: var(--font-wordmark);
+  font-size: clamp(3.1rem, 5vw, 5rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: 0.09em;
+  font-optical-sizing: auto;
+  text-transform: uppercase;
+}
+.footer-statement {
+  max-width: 38.75rem;
+  margin: clamp(1.15rem, 1.8vw, 1.45rem) 0 0;
+  font-size: clamp(1rem, 1vw + 0.72rem, 1.15rem);
+  line-height: 1.5;
+  color: rgba(247, 242, 233, 0.86);
+}
+.muzej-footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-top: 0.28rem;
+}
+.muzej-footer .footer-links a {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  line-height: 1.2;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 180ms ease, text-decoration-color 180ms ease;
+}
+.muzej-footer .footer-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  opacity: 0.86;
+}
+
+@media (max-width: 1140px) {
+  .header-frame {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 0.85rem 1.25rem;
+  }
+  .header-tools {
+    justify-content: flex-start;
+  }
+  .survey-index {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 980px) {
+  .feature {
+    padding: 0 0 clamp(48px, 9vw, 82px);
+  }
+  .feature-inner {
+    grid-template-columns: 1fr;
+    gap: 0;
+    min-height: 0;
+  }
+  .feature-copy {
+    min-height: auto;
+    max-width: none;
+    padding: clamp(54px, 12vw, 96px) var(--page-x) clamp(42px, 8vw, 70px);
+  }
+  .feature-media {
+    min-height: 0;
+    padding: 0 var(--page-x);
+  }
+  .feature-media-frame {
+    width: min(100%, 860px);
+  }
+  .feature-byline {
+    margin: clamp(32px, 5vw, 48px) 0 0;
+  }
+  .article-shell {
+    padding-top: clamp(52px, 10vw, 84px);
+  }
+  .survey-intro > .survey-note {
+    padding-top: 0;
+  }
+  .survey-intro,
+  .ranking-entry,
+  .qol-fit-index,
+  .closing-note {
+    grid-template-columns: 1fr;
+  }
+  .ranking-entry {
+    gap: 24px;
+  }
+  .ranking-media {
+    position: static;
+  }
+  .ranking-media-frame {
+    aspect-ratio: 4 / 5;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    z-index: 2000;
+  }
+  .site-header .header-frame {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    justify-items: stretch;
+    gap: 1rem;
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .site-header .brand-mark {
+    justify-self: start;
+    min-width: 0;
+    font-size: clamp(2.3rem, 10.8vw, 3.05rem);
+  }
+  .site-header .header-tools {
+    justify-self: end;
+    justify-content: flex-end;
+    margin-left: auto;
+    position: relative;
+    z-index: 2002;
+  }
+  .site-header .utility-menu {
+    position: static;
+  }
+  .site-header .utility-trigger {
+    position: relative;
+    z-index: 2003;
+  }
+  .site-header .utility-panel {
+    position: fixed;
+    inset: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2001;
+    display: grid;
+    align-content: center;
+    width: 100vw;
+    max-width: none;
+    min-width: 0;
+    height: 100vh;
+    height: 100svh;
+    padding: clamp(76px, 18vh, 128px) var(--page-x) 48px;
+    border: 0;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: none;
+    overflow-y: auto;
+    transform: none;
+  }
+  .site-header .utility-panel-group {
+    width: min(100%, 22rem);
+    margin: 0 auto;
+  }
+  .site-header .utility-panel-utility {
+    margin-top: 0.8rem;
+    padding-top: 0.85rem;
+  }
+  .site-header .utility-panel .utility-link,
+  .site-header .utility-panel .utility-menu-item {
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: 0.72rem 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 720px) {
+  .feature-title {
+    font-size: clamp(34px, 9.2vw, 44px);
+    line-height: 1.05;
+    letter-spacing: -0.024em;
+  }
+  .feature-media-frame {
+    aspect-ratio: 4 / 3.35;
+  }
+  .article-deck {
+    margin-bottom: clamp(38px, 8vw, 58px);
+    font-size: clamp(17px, 3.3vw, 21px);
+  }
+  .survey-index {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .rank-head {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.7em;
+    align-items: baseline;
+    margin-top: clamp(10px, 4vw, 22px);
+    margin-bottom: clamp(30px, 9vw, 48px);
+  }
+  .rank-head > div {
+    gap: 10px;
+  }
+  .rank-number,
+  .rank-title {
+    font-size: clamp(26px, 7.4vw, 38px);
+    line-height: 1.03;
+  }
+  .qol-signals,
+  .qol-guide-grid,
+  .qol-fit-grid,
+  .take-grid,
+  .entry-stats {
+    grid-template-columns: 1fr;
+  }
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+  .muzej-footer .footer-links {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .survey-index {
+    grid-template-columns: 1fr;
+  }
+  .survey-index a {
+    min-height: 4.6rem;
+  }
+}
+
+.kinfolk-article-hero .feature-media {
+  grid-column: 1;
+  grid-row: 1;
+  order: 1;
+}
+.kinfolk-article-hero .feature-copy {
+  grid-column: 2;
+  grid-row: 1;
+  order: 2;
+  width: min(100%, 44rem);
+  max-width: none;
+  padding-left: clamp(18px, 2.2vw, 42px);
+  padding-right: clamp(18px, 2.2vw, 42px);
+  justify-content: center;
+  gap: clamp(28px, 4.6vh, 64px);
+}
+.kinfolk-article-hero .feature-title {
+  width: 100%;
+  max-width: min(760px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: manual;
+}
+.kinfolk-article-hero .feature-kicker {
+  display: none;
+}
+.survey-index-number,
+.qol-fit-index h2,
+.closing-note h2 {
+  font-family: var(--headline-serif);
+  font-weight: 300;
+  letter-spacing: 0;
+  font-kerning: normal;
+}
+.qol-fit-index h2,
+.closing-note h2 {
+  text-transform: uppercase;
+}
+@media (max-width: 980px) {
+  .kinfolk-article-hero .feature-media,
+  .kinfolk-article-hero .feature-copy {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .kinfolk-article-hero .feature-media {
+    order: 1;
+  }
+
+  .kinfolk-article-hero .feature-copy {
+    order: 2;
+    width: 100%;
+    padding-left: var(--page-x);
+    padding-right: var(--page-x);
+  }
+
+}
+
+/* Match the supplied Ohrid architecture hero reference. */
+.feature.reference-hero {
+  padding: clamp(10px, 1vw, 18px) clamp(24px, 5.2vw, 102px) clamp(40px, 5vw, 72px);
+}
+.reference-hero .feature-inner {
+  grid-template-columns: minmax(0, 1.04fr) minmax(420px, 0.96fr);
+  gap: clamp(70px, 10vw, 190px);
+  max-width: none;
+  min-height: 0;
+  margin: 0;
+}
+.reference-hero .feature-media {
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: var(--white);
+}
+.reference-hero .feature-media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: contain;
+  object-position: center;
+  background: var(--white);
+}
+.reference-hero .feature-copy {
+  min-height: clamp(720px, 84vh, 1080px);
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: clamp(52px, 5vw, 82px) 0 clamp(22px, 2.2vw, 36px);
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+}
+.reference-hero .feature-byline {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--headline-serif);
+  font-size: clamp(24px, 2vw, 38px);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  text-transform: none;
+}
+.reference-hero .feature-title {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--headline-serif);
+  font-size: clamp(58px, 5.25vw, 104px);
+  font-weight: 300;
+  font-kerning: normal;
+  line-height: 0.84;
+  letter-spacing: -0.025em;
+  text-align: center;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+@media (max-width: 1100px) {
+  .reference-hero .feature-inner {
+    grid-template-columns: minmax(0, 1fr) minmax(340px, 0.9fr);
+    gap: clamp(36px, 6vw, 72px);
+  }
+  .reference-hero .feature-title {
+    font-size: clamp(48px, 5.4vw, 68px);
+  }
+}
+
+@media (max-width: 720px) {
+  .feature.reference-hero {
+    padding: 4px var(--page-x) 48px;
+  }
+  .reference-hero .feature-inner {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .reference-hero .feature-media img {
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+  .reference-hero .feature-copy {
+    min-height: auto;
+    padding: 30px 0 0;
+    gap: 56px;
+  }
+  .reference-hero .feature-byline {
+    font-size: clamp(20px, 6vw, 28px);
+  }
+  .reference-hero .feature-title {
+    font-size: clamp(40px, 12vw, 58px);
+    line-height: 0.88;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .site-header .brand-mark {
+    transition: none;
+    will-change: auto;
+  }
+  body.muzej-logo-hidden .site-header .brand-mark {
+    transform: none;
+  }
+}
+</style>
+<link rel="stylesheet" href="article-headlines.css">
+<link rel="stylesheet" href="more-from-muzej.css">
+<script src="more-from-muzej.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="shell header-frame">
+    <a class="brand-mark" href="index.html" aria-label="Muzej home">Muzej</a>
+
+    <div class="header-tools">
+      <details class="utility-menu">
+        <summary class="utility-trigger" aria-label="Open navigation menu" aria-controls="quality-navigation" aria-expanded="false">
+          <span class="utility-icon" aria-hidden="true">
+            <span class="utility-icon-line"></span>
+            <span class="utility-icon-line"></span>
+            <span class="utility-icon-line"></span>
+          </span>
+        </summary>
+        <nav class="utility-panel" id="quality-navigation" aria-label="Site navigation">
+          <div class="utility-panel-group">
+            <a class="utility-link" href="index.html">Home</a>
+            <a class="utility-link" href="index.html#selected-stories">Selected Stories</a>
+            <a class="utility-link" href="index.html#in-rotation">In Rotation</a>
+            <a class="utility-link" href="index.html#culture">Culture</a>
+            <a class="utility-link" href="about.html">About Muzej</a>
+          </div>
+          <div class="utility-panel-group utility-panel-utility">
+            <a class="utility-link" href="mailto:muzej.mk@proton.me">Contact</a>
+            <a class="utility-link" href="https://www.instagram.com/_muzej/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main>
+  <header class="feature reference-hero" aria-labelledby="article-title">
+    <div class="feature-inner">
+      <figure class="feature-media">
+        <img src="./Assets/Quality%20of%20Life/hero-final.png" alt="Collage of a woman holding the Macedonian flag for the Quality of Life Survey 2026." width="1080" height="1350" decoding="async" fetchpriority="high">
+      </figure>
+
+      <div class="feature-copy">
+        <h1 id="article-title" class="feature-title">Quality of Life Survey 2026: The 10 most liveable cities in Macedonia</h1>
+      </div>
+    </div>
+  </header>
+
+  <article class="article-shell">
+    <section class="article-deck article-intro" aria-label="Editor's note">
+      <p>At Muzej, we are interested in what makes a place more than merely attractive. A city can photograph beautifully and still be difficult to live in. Another can lack a famous skyline and still give its residents something rarer: a reliable rhythm, a humane scale, a walkable centre, a decent market, a reachable hospital, a café that feels like a civic room, and enough public life to make the day feel shared rather than endured.</p>
+      <p>That is the spirit behind Muzej’s Quality of Life Survey 2026. The question is practical rather than sentimental: across the Macedonian geographic and cultural region, where does everyday life work best now? Not where the beaches perform best in August. Not where property is cheapest on paper. Not where the national story feels most flattering. But where daily life holds together after the novelty wears off — where housing remains attainable, streets still belong to people, healthcare and education are within reach, nature is close, and a city still feels human at 10:00 in the morning and after 22:00 at night.</p>
+      <p>The survey screened 28 candidate cities and towns and favoured places that can be lived in year-round, not just admired on a weekend. The scoring system totals 100 points and gives weight to the things that shape ordinary stability: affordability, housing quality and availability, safety, healthcare access, air and environment, walkability and daily convenience, food, cafés, markets and restaurants, culture and urban character, nature and climate comfort, and connectivity for work and study. Family life is not treated as a decorative bonus. It is folded into the basics: housing, safety, healthcare, schools, services and the ease of getting through a day.</p>
+      <p>The source hierarchy was deliberately strict. Official statistics, cadastre-derived housing data, municipal and airport operators, public hospitals, universities, UNESCO, transport providers and institutional sources carry the most weight. Where the data becomes thinner — especially around rents, safety perceptions and small-market cost estimates — crowd-sourced figures are used only as directional indicators, not gospel. A final editorial adjustment was reserved for street-level texture: whether a place has a convincing public realm, a legible centre and a social life that can still be lived on foot.</p>
+      <p>The result is not a claim of perfection. Macedonia’s cities are shaped by demographic shrinkage, outward migration, uneven investment, ageing infrastructure and the widening gap between capitals, tourist winners and smaller towns asked to do more with less. Even the best places here have tradeoffs. Some are beautiful but seasonal. Some are practical but polluted. Some are affordable but thin on services. Some offer opportunity at the price of calm.</p>
+      <p>So consider this survey the beginning of a conversation rather than the end of one. For diaspora readers, returnees, remote workers, families and anyone trying to understand the region beyond nostalgia, the aim is simple: to move the discussion of liveability away from slogans and toward the daily details that actually shape a life. Which cities still give you room to walk, work, eat, rest, gather, age and belong? Which ones keep the most parts of life in proportion? That is the question this ranking tries to answer.</p>
+    </section>
+
+    <div class="ranking-list">
+      <section class="ranking-entry" id="berovo">
+        <figure class="ranking-media" style="--image-position: center center;">
+          <div class="ranking-media-frame">
+            <img src="./Assets/Quality%20of%20Life/QoL%20Photos/berovo.png" alt="Small Orthodox church and quiet green landscape in Berovo." width="1080" height="1350" loading="lazy" decoding="async">
+          </div>
+        </figure>
+
+        <div class="ranking-copy qol-guide-card">
+          <div class="rank-head qol-guide-header">
+            <span class="rank-number">10.</span>
+            <div>
+              <h2 class="rank-title">Berovo</h2>
+              <div class="qol-guide-meta">
+                <p class="qol-award">Best for slow living</p>
+                <p class="qol-score-badge">Score 72 / 100</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="ranking-intro qol-guide-verdict">Berovo earns its place because this survey measures quality of life, not urban intensity. Its cooler mountain climate, access to the Maleševo landscape, and slower pace offer a level of everyday calm that is increasingly rare. Rather than competing with larger cities, &quot;Little Switzerland&quot; represents a different model of living: a highland town where families, returnees, and semi-retirees trade convenience for nature, quiet, and room to breathe.</p>
+
+          <p class="qol-section-label">Livability signals</p>
+          <dl class="qol-signals" aria-label="Berovo livability signals">
+            <div class="qol-signal"><dt>Altitude</dt><dd><strong>Roughly 800-900 m</strong><span>Tourism sources place the town in this mountain band.</span></dd></div>
+            <div class="qol-signal"><dt>Climate</dt><dd><strong>About 8.7°C annual average</strong><span>One tourism source gives Berovo this cooler annual temperature.</span></dd></div>
+            <div class="qol-signal"><dt>Lake</dt><dd><strong>Around 1,000 m</strong><span>Berovo Lake is part of the town's recreational appeal.</span></dd></div>
+            <div class="qol-signal"><dt>Nature</dt><dd><strong>Restorative setting</strong><span>Promotional material frames Berovo around untouched nature and quiet.</span></dd></div>
+            <div class="qol-signal"><dt>Data caveat</dt><dd><strong>Thinner evidence base</strong><span>Air-quality and housing data are thinner here than in larger cities.</span></dd></div>
+          </dl>
+
+          <details class="ranking-details">
+            <summary>Read more</summary>
+            <div class="ranking-details-body qol-guide-grid">
+              <section class="qol-editorial-block"><h3>What works</h3><p>Cool summers, lower sensory stress, access to lake and forest, and a powerful slow-living argument.</p></section>
+              <section class="qol-editorial-block"><h3>Tradeoffs</h3><p>Thin services, weak data coverage, small job market, and likely car dependence.</p></section>
+              <section class="qol-editorial-block"><h3>Daily-life scene</h3><p>Pine air, earlier evenings, and the sensation that time is no longer trying to outrun you.</p></section>
+              <section class="qol-editorial-block"><h3>Best address</h3><p>The Berovo Lake-town-center rhythm, rather than any single prestige street.</p></section>
+              <section class="qol-editorial-block"><h3>Best suited for</h3><p>Retirees, writers, returnees with independent income, and families seeking summers that stay breathable.</p></section>
+              <section class="qol-editorial-block"><h3>Adopt</h3><p>Protect the lake-and-town rhythm with small-scale paths, lighting, and year-round public programming.</p></section>
+              <section class="qol-editorial-block"><h3>Drop</h3><p>Selling Berovo only as a weekend escape instead of a serious slow-living option.</p></section>
+              <section class="qol-editorial-block"><h3>Not ideal for</h3><p>Residents who need specialist healthcare, frequent flights, or big-city social density.</p></section>
+            </div>
+          </details>
+        </div>
+      </section>
+
+
+      <section class="ranking-entry" id="solun">
+        <figure class="ranking-media">
+          <div class="ranking-media-frame">
+            <img src="./Assets/Quality%20of%20Life/QoL%20Photos/solun.png" alt="Solun waterfront and White Tower scene for the quality of life survey." width="1080" height="1350" loading="lazy" decoding="async">
+          </div>
+        </figure>
+
+        <div class="ranking-copy qol-guide-card">
+          <div class="rank-head qol-guide-header">
+            <span class="rank-number">9.</span>
+            <div>
+              <h2 class="rank-title">Solun</h2>
+              <div class="qol-guide-meta">
+                <p class="qol-award">Best big-city life</p>
+                <p class="qol-score-badge">Score 74 / 100</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="ranking-intro qol-guide-verdict">Solun ranks because no other city in the survey matches its mix of opportunity, education, culture, and metropolitan energy. A modernized metro, major universities, strong healthcare, and an international airport make it the region's most complete urban center. But that comes at a price: higher housing costs, traffic, and a busier, rougher urban environment. For those willing to trade tranquility for culture, nightlife, and opportunity, Solun remains unmatched—just not the best overall value.</p>
+
+          <p class="qol-section-label">Livability signals</p>
+          <dl class="qol-signals" aria-label="Solun livability signals">
+            <div class="qol-signal"><dt>Rent</dt><dd><strong>About $626/month</strong><span>Secondary estimate for a city-centre one-bedroom.</span></dd></div>
+            <div class="qol-signal"><dt>Cost comparison</dt><dd><strong>About 42.9% above Skopje</strong><span>Directional comparison including rent.</span></dd></div>
+            <div class="qol-signal"><dt>Big-city comparison</dt><dd><strong>About 5.4% cheaper</strong><span>Directional estimate against Athens including rent.</span></dd></div>
+            <div class="qol-signal"><dt>Metro</dt><dd><strong>13 base-line stations</strong><span>18 total underground stations once the extension is counted.</span></dd></div>
+            <div class="qol-signal"><dt>Airport access</dt><dd><strong>Multiple bus links</strong><span>Airport buses connect to the centre, rail station, bus terminal and metro interchange.</span></dd></div>
+          </dl>
+
+          <details class="ranking-details">
+            <summary>Read more</summary>
+            <div class="ranking-details-body qol-guide-grid">
+              <section class="qol-editorial-block"><h3>What works</h3><p>Scale, universities, hospitals, nightlife, food culture, social networks, professional networks, airport access and metro-backed mobility.</p></section>
+              <section class="qol-editorial-block"><h3>Tradeoffs</h3><p>Cost pressure, traffic, noise, congestion, moderate safety perceptions and a city that asks residents to absorb disorder.</p></section>
+              <section class="qol-editorial-block"><h3>Daily-life scene</h3><p>Roman and Ottoman traces, market quarters, waterfront walks, students, medics, founders, old men at tsipouro tables and a social life that keeps going after smaller cities have closed their shutters.</p></section>
+              <section class="qol-editorial-block"><h3>Best address</h3><p>The Solun waterfront, with the central promenade and market-to-waterfront circuit as the strongest all-day urban sequence.</p></section>
+              <section class="qol-editorial-block"><h3>Best suited for</h3><p>Young professionals, students, creatives, founders, medics and anyone who wants scale.</p></section>
+              <section class="qol-editorial-block"><h3>Adopt</h3><p>Use the metro era to reclaim more surface streets for walking, shade, buses, bikes and civic life.</p></section>
+              <section class="qol-editorial-block"><h3>Drop</h3><p>Treating congestion and housing pressure as unavoidable costs of being a real city.</p></section>
+              <section class="qol-editorial-block"><h3>Not ideal for</h3><p>People chasing quiet, low overheads or tidy urbanism.</p></section>
+            </div>
+          </details>
+        </div>
+      </section>
+
+
+      <section class="ranking-entry" id="lerin">
+        <figure class="ranking-media" style="--image-position: center center;">
+          <div class="ranking-media-frame">
+            <img src="./Assets/Quality%20of%20Life/QoL%20Photos/lerin.png" alt="Lerin town setting with surrounding hills and cool inland atmosphere." width="1080" height="1350" loading="lazy" decoding="async">
+          </div>
+        </figure>
+
+        <div class="ranking-copy qol-guide-card">
+          <div class="rank-head qol-guide-header">
+            <span class="rank-number">8.</span>
+            <div>
+              <h2 class="rank-title">Lerin</h2>
+              <div class="qol-guide-meta">
+                <p class="qol-award">Best for cool-weather café life</p>
+                <p class="qol-score-badge">Score 76 / 100</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="ranking-intro qol-guide-verdict">Lerin stands out for its riverside charm, distinct seasonal character, and newly restored rail connection to Solun. Rather than chasing growth, it offers a quieter quality of life built around walkability, culture, and a strong sense of place. While its economy and healthcare are limited compared to larger cities, Lerin remains an ideal choice for those who value atmosphere, creativity, and a slower pace over constant urban intensity.</p>
+
+          <p class="qol-section-label">Livability signals</p>
+          <dl class="qol-signals" aria-label="Lerin livability signals">
+            <div class="qol-signal"><dt>Rail</dt><dd><strong>Resumed 30 May 2026</strong><span>Direct Solun-Lerin service returned with two daily pairs.</span></dd></div>
+            <div class="qol-signal"><dt>Road distance</dt><dd><strong>194 km from Solun</strong><span>Listed by intercity bus.</span></dd></div>
+            <div class="qol-signal"><dt>Urban anchor</dt><dd><strong>Sakuleva River</strong><span>The river is central to the city's identity.</span></dd></div>
+            <div class="qol-signal"><dt>Culture</dt><dd><strong>Open-air summer calendar</strong><span>Cultural Summer brings concerts, screenings and exhibitions into public space.</span></dd></div>
+            <div class="qol-signal"><dt>Climate</dt><dd><strong>Coldest city in Egej</strong><span>Regional material gives Lerin a distinct cool-weather profile.</span></dd></div>
+          </dl>
+
+          <details class="ranking-details">
+            <summary>Read more</summary>
+            <div class="ranking-details-body qol-guide-grid">
+              <section class="qol-editorial-block"><h3>What works</h3><p>Atmosphere, riverfront public space, seasonal culture and improved rail access.</p></section>
+              <section class="qol-editorial-block"><h3>Tradeoffs</h3><p>Small labor market, harsh winters for some households and limited metropolitan-scale services.</p></section>
+              <section class="qol-editorial-block"><h3>Daily-life scene</h3><p>River walks, scarves, espresso, brass-band festivals and the sense that weather is still allowed to define a city's personality.</p></section>
+              <section class="qol-editorial-block"><h3>Best address</h3><p>The Lerin riverside.</p></section>
+              <section class="qol-editorial-block"><h3>Best suited for</h3><p>Artists, teachers, researchers, quiet urbanists and anyone who wants seasons to feel like seasons.</p></section>
+              <section class="qol-editorial-block"><h3>Adopt</h3><p>Build the restored rail link into the town's identity with better station-area wayfinding and weekend cultural itineraries.</p></section>
+              <section class="qol-editorial-block"><h3>Drop</h3><p>Apologizing for the cold; the climate is part of Lerin's character.</p></section>
+              <section class="qol-editorial-block"><h3>Not ideal for</h3><p>Sun-seekers, rapid-career climbers or households requiring large-city service density.</p></section>
+            </div>
+          </details>
+        </div>
+      </section>
+
+
+      <section class="ranking-entry" id="struga">
+        <figure class="ranking-media" style="--image-position: center center;">
+          <div class="ranking-media-frame">
+            <img src="./Assets/Quality%20of%20Life/QoL%20Photos/struga.png" alt="Struga city image from the supplied quality of life survey PDF." width="1080" height="1350" loading="lazy" decoding="async">
+          </div>
+        </figure>
+
+        <div class="ranking-copy qol-guide-card">
+          <div class="rank-head qol-guide-header">
+            <span class="rank-number">7.</span>
+            <div>
+              <h2 class="rank-title">Struga</h2>
+              <div class="qol-guide-meta">
+                <p class="qol-award">Best lake-life alternative</p>
+                <p class="qol-score-badge">Score 77 / 100</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="ranking-intro qol-guide-verdict">A looser lake-life alternative: lower-key than Ohrid, less burdened by postcard expectations and useful for households that want water, rhythm and room to breathe.</p>
+
+          <p class="qol-section-label">Livability signals</p>
+          <dl class="qol-signals" aria-label="Struga livability signals">
+            <div class="qol-signal"><dt>Setting</dt><dd><strong>Lake and river identity</strong><span>Struga sits on Ohrid Lake with a river-to-lake urban rhythm.</span></dd></div>
+            <div class="qol-signal"><dt>Housing</dt><dd><strong>Lower than Ohrid</strong><span>The research notes lower apartment transaction averages.</span></dd></div>
+            <div class="qol-signal"><dt>Urban character</dt><dd><strong>Looser heritage fabric</strong><span>Less concentrated heritage core than Ohrid.</span></dd></div>
+            <div class="qol-signal"><dt>Seasonal profile</dt><dd><strong>Visible summer swing</strong><span>The town's urban mood is more seasonal.</span></dd></div>
+            <div class="qol-signal"><dt>Main strength</dt><dd><strong>Lighter lake living</strong><span>Water access with a less ceremonial daily feel.</span></dd></div>
+            <div class="qol-signal"><dt>Main weakness</dt><dd><strong>Less year-round depth</strong><span>Services and cultural concentration are thinner than Ohrid.</span></dd></div>
+          </dl>
+
+          <details class="ranking-details">
+            <summary>Read more</summary>
+            <div class="ranking-details-body qol-guide-grid">
+              <section class="qol-editorial-block"><h3>What works</h3><p>Lake access, softer urban identity, lower housing threshold than Ohrid and a less performative daily rhythm.</p></section>
+              <section class="qol-editorial-block"><h3>Tradeoffs</h3><p>Seasonality, less year-round service depth and less cultural concentration than Ohrid.</p></section>
+              <section class="qol-editorial-block"><h3>Daily-life scene</h3><p>River-to-lake walks, cafe terraces, summer movement, quieter shoulders of the season and a town that feels more open-ended than ceremonial.</p></section>
+              <section class="qol-editorial-block"><h3>Best address</h3><p>The river-to-lake promenade sequence.</p></section>
+              <section class="qol-editorial-block"><h3>Best suited for</h3><p>Diaspora households, lake-life seekers, semi-retirees, remote workers with flexible income and people who like Ohrid's setting but not its pressure.</p></section>
+              <section class="qol-editorial-block"><h3>Adopt</h3><p>Lean into Struga's river-to-lake identity with cleaner public edges, better walking continuity and year-round cultural use.</p></section>
+              <section class="qol-editorial-block"><h3>Drop</h3><p>Measuring Struga only against Ohrid; its value is in being looser, not grander.</p></section>
+              <section class="qol-editorial-block"><h3>Not ideal for</h3><p>People who need deep year-round services, concentrated heritage drama or a city that feels equally active in every season.</p></section>
+            </div>
+          </details>
+        </div>
+      </section>
+
+
+      <section class="ranking-entry" id="sandanski">
+        <figure class="ranking-media" style="--image-position: center center;">
+          <div class="ranking-media-frame">
+            <img src="./Assets/Quality%20of%20Life/QoL%20Photos/sandanski%20by%20Stoyan%20Kolev_.png" alt="Sandanski landscape and civic greenery under soft light." width="1080" height="1350" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="ranking-caption">Photo: Stoyan Kolev</figcaption>
+        </figure>
+
+        <div class="ranking-copy qol-guide-card">
+          <div class="rank-head qol-guide-header">
+            <span class="rank-number">6.</span>
+            <div>
+              <h2 class="rank-title">Sandanski</h2>
+              <div class="qol-guide-meta">
+                <p class="qol-award">Best for climate and winter sun</p>
+                <p class="qol-score-badge">Score 77 / 100</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="ranking-intro qol-guide-verdict">Sandanski ranks highly thanks to its exceptional climate, renowned mineral springs, and expansive city park, making it one of the region’s most restorative places to live. Its slower pace and year-round outdoor lifestyle give it a unique appeal. While it lacks the cultural, educational, and economic depth of larger cities, Sandanski excels as a wellness-focused small city built around comfort and quality of life.</p>
+
+          <p class="qol-section-label">Livability signals</p>
+          <dl class="qol-signals" aria-label="Sandanski livability signals">
+            <div class="qol-signal"><dt>Wellness</dt><dd><strong>Mineral-water reputation</strong><span>Tourism and municipal sources emphasize curative treatments and healing climate.</span></dd></div>
+            <div class="qol-signal"><dt>Park life</dt><dd><strong>200+ Mediterranean species</strong><span>The city park carries much of Sandanski's daily appeal.</span></dd></div>
+            <div class="qol-signal"><dt>Natural asset</dt><dd><strong>Old plane trees</strong><span>The park is noted for 500-year-old examples.</span></dd></div>
+            <div class="qol-signal"><dt>Services</dt><dd><strong>Routes and medical access</strong><span>The tourist-information center advertises events, sports and access to medical services.</span></dd></div>
+            <div class="qol-signal"><dt>Data caveat</dt><dd><strong>Thin contribution density</strong><span>Cost-of-living data exist, but the sample is limited.</span></dd></div>
+          </dl>
+
+          <details class="ranking-details">
+            <summary>Read more</summary>
+            <div class="ranking-details-body qol-guide-grid">
+              <section class="qol-editorial-block"><h3>What works</h3><p>Climate, greenery, wellness infrastructure and an unusually gentle winter profile.</p></section>
+              <section class="qol-editorial-block"><h3>Tradeoffs</h3><p>Narrower economy, thinner culture scene and limited data depth on the housing market.</p></section>
+              <section class="qol-editorial-block"><h3>Daily-life scene</h3><p>Slow walks, spa air, shady benches and a city that treats outdoor time as ordinary rather than exceptional.</p></section>
+              <section class="qol-editorial-block"><h3>Best address</h3><p>The city park, which functions as Sandanski's true shared commons.</p></section>
+              <section class="qol-editorial-block"><h3>Best suited for</h3><p>Retirees, health-focused professionals, remote workers seeking climate relief and cross-border households.</p></section>
+              <section class="qol-editorial-block"><h3>Adopt</h3><p>Make the park the organizing principle for the whole town: more shade, slower streets, wellness paths and public seating.</p></section>
+              <section class="qol-editorial-block"><h3>Drop</h3><p>Letting spa branding substitute for a fuller civic life.</p></section>
+              <section class="qol-editorial-block"><h3>Not ideal for</h3><p>People who need major universities, deep job diversity or metropolitan social velocity.</p></section>
+            </div>
+          </details>
+        </div>
+      </section>
+
+
+      <section class="ranking-entry" id="kostur">
+        <figure class="ranking-media" style="--image-position: center center;">
+          <div class="ranking-media-frame">
+            <img src="./Assets/Quality%20of%20Life/QoL%20Photos/kostur.png" alt="Kostur lake peninsula and townscape for the quality of life survey." width="1080" height="1350" loading="lazy" decoding="async">
+          </div>
+        </figure>
+
+        <div class="ranking-copy qol-guide-card">
+          <div class="rank-head qol-guide-header">
+            <span class="rank-number">5.</span>
+            <div>
+              <h2 class="rank-title">Kostur</h2>
+              <div class="qol-guide-meta">
+                <p class="qol-award">Best for old-world urban life</p>
+                <p class="qol-score-badge">Score 78 / 100</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="ranking-intro qol-guide-verdict">Kostur stands out for its lakeside setting, historic neighborhoods, and beautifully preserved urban character, offering one of the survey’s most refined everyday environments. Its slower pace, architectural memory, and strong sense of place make it ideal for those who value atmosphere over intensity. Limited job opportunities and a smaller economy prevent it from ranking higher, but few cities in the region match Kostur’s combination of beauty, walkability, and a deeply rooted sense of place.</p>
+
+          <p class="qol-section-label">Livability signals</p>
+          <dl class="qol-signals" aria-label="Kostur livability signals">
+            <div class="qol-signal"><dt>Healthcare</dt><dd><strong>119 developed beds</strong><span>Kostur General Hospital lists this capacity.</span></dd></div>
+            <div class="qol-signal"><dt>Setting</dt><dd><strong>Lakefront peninsula</strong><span>The city's appeal is inseparable from its promenade and lakeside quarters.</span></dd></div>
+            <div class="qol-signal"><dt>Culture</dt><dd><strong>Old quarters and lake circuit</strong><span>Museum life, winter traditions and boat views shape the daily atmosphere.</span></dd></div>
+            <div class="qol-signal"><dt>Cost indicator</dt><dd><strong>About $350/month</strong><span>Secondary estimate for a single person excluding rent.</span></dd></div>
+            <div class="qol-signal"><dt>Daily-life asset</dt><dd><strong>Promenade and quarters</strong><span>The lakefront walk is the strongest everyday address.</span></dd></div>
+          </dl>
+
+          <details class="ranking-details">
+            <summary>Read more</summary>
+            <div class="ranking-details-body qol-guide-grid">
+              <section class="qol-editorial-block"><h3>What works</h3><p>Urban beauty, walkable scenery, civic calm and a distinct sense of place.</p></section>
+              <section class="qol-editorial-block"><h3>Tradeoffs</h3><p>Thin labor market, small-market housing data and limited metropolitan-scale services.</p></section>
+              <section class="qol-editorial-block"><h3>Daily-life scene</h3><p>Lake mist, stone mansions, church towers and a town that still seems to know how to move at walking speed.</p></section>
+              <section class="qol-editorial-block"><h3>Best address</h3><p>The lakefront promenade and old lakeside quarters.</p></section>
+              <section class="qol-editorial-block"><h3>Best suited for</h3><p>Writers, designers, retirees and anyone who values atmosphere over scale.</p></section>
+              <section class="qol-editorial-block"><h3>Adopt</h3><p>Protect the lakefront walk and old quarters as everyday infrastructure, not just heritage scenery.</p></section>
+              <section class="qol-editorial-block"><h3>Drop</h3><p>Depending on atmosphere alone while the labor market thins.</p></section>
+              <section class="qol-editorial-block"><h3>Not ideal for</h3><p>Early-career strivers who need deep labor markets and frequent regional travel.</p></section>
+            </div>
+          </details>
+        </div>
+      </section>
+
+
+      <section class="ranking-entry" id="strumica">
+        <figure class="ranking-media">
+          <div class="ranking-media-frame">
+            <img src="./Assets/Quality%20of%20Life/QoL%20Photos/strumica.png" alt="Strumica city life and surrounding landscape." width="1080" height="1350" loading="lazy" decoding="async">
+          </div>
+        </figure>
+
+        <div class="ranking-copy qol-guide-card">
+          <div class="rank-head qol-guide-header">
+            <span class="rank-number">4.</span>
+            <div>
+              <h2 class="rank-title">Strumica</h2>
+              <div class="qol-guide-meta">
+                <p class="qol-award">Best for food and markets</p>
+                <p class="qol-score-badge">Score 79 / 100</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="ranking-intro qol-guide-verdict">Strumica earns its place through the strength of everyday life: affordability, family practicality, fresh local food, and a public culture that remains active and accessible. Its agricultural wealth shapes the city’s rhythm, from vibrant markets to seasonal festivals, making it one of Macedonia’s most grounded and livable places. While it lacks the cultural depth of Bitola or the opportunities of Skopje, Strumica succeeds where many cities fail: providing a practical, balanced, and sustainable daily life.</p>
+
+          <p class="qol-section-label">Livability signals</p>
+          <dl class="qol-signals" aria-label="Strumica livability signals">
+            <div class="qol-signal"><dt>Housing</dt><dd><strong>About $838/m²</strong><span>Q1 2026 apartment transactions averaged around this level.</span></dd></div>
+            <div class="qol-signal"><dt>Public space</dt><dd><strong>Goce Delčev Square</strong><span>The square is the city's main civic anchor.</span></dd></div>
+            <div class="qol-signal"><dt>Culture</dt><dd><strong>Festival calendar</strong><span>AsterFest, Risto Shishkov and the International Strumica Art Colony feature in the calendar.</span></dd></div>
+            <div class="qol-signal"><dt>Healthcare</dt><dd><strong>Regional hospital role</strong><span>The general hospital has a recognized regional role.</span></dd></div>
+            <div class="qol-signal"><dt>Environmental caveat</dt><dd><strong>Resident concern</strong><span>A 2024 citizen-perception study found almost 8 in 10 saw local air pollution as a problem.</span></dd></div>
+          </dl>
+
+          <details class="ranking-details">
+            <summary>Read more</summary>
+            <div class="ranking-details-body qol-guide-grid">
+              <section class="qol-editorial-block"><h3>What works</h3><p>Affordability, strong food culture, family practicality and a center that still behaves like a center.</p></section>
+              <section class="qol-editorial-block"><h3>Tradeoffs</h3><p>Heat, limited mass transit and environmental complaints from residents themselves.</p></section>
+              <section class="qol-editorial-block"><h3>Daily-life scene</h3><p>Grocers, cafes, parents, teenagers and evening circulation that feels domestic rather than touristic.</p></section>
+              <section class="qol-editorial-block"><h3>Best address</h3><p>Goce Delčev Square and the market streets feeding into it.</p></section>
+              <section class="qol-editorial-block"><h3>Best suited for</h3><p>Families, small-business owners, food people and diaspora households seeking stability.</p></section>
+              <section class="qol-editorial-block"><h3>Adopt</h3><p>Treat the market streets and square as civic infrastructure with shade, seating, cleaner air measures and better pedestrian priority.</p></section>
+              <section class="qol-editorial-block"><h3>Drop</h3><p>Letting environmental complaints become background noise.</p></section>
+              <section class="qol-editorial-block"><h3>Not ideal for</h3><p>People dependent on rail, major cultural institutions or an intense night economy.</p></section>
+            </div>
+          </details>
+        </div>
+      </section>
+
+
+      <section class="ranking-entry" id="ohrid">
+        <figure class="ranking-media" style="--image-position: center center;">
+          <div class="ranking-media-frame">
+            <img src="./Assets/Quality%20of%20Life/QoL%20Photos/ohrid.png" alt="Ohrid old bazaar street scene for the quality of life survey." width="1080" height="1350" loading="lazy" decoding="async">
+          </div>
+        </figure>
+
+        <div class="ranking-copy qol-guide-card">
+          <div class="rank-head qol-guide-header">
+            <span class="rank-number">3.</span>
+            <div>
+              <h2 class="rank-title">Ohrid</h2>
+              <div class="qol-guide-meta">
+                <p class="qol-award">Best for lake living</p>
+                <p class="qol-score-badge">Score 82 / 100</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="ranking-intro qol-guide-verdict">Ohrid offers the survey’s most breathtaking everyday setting, combining a UNESCO-listed lakeside landscape with exceptional walkability, heritage, and quality of life. Its beauty and relaxed pace make it one of the region’s most desirable places to live. However, rising housing costs, tourism pressure, and a highly seasonal economy keep it from the top tier, making Ohrid an outstanding lifestyle city rather than the most balanced one.</p>
+
+          <p class="qol-section-label">Livability signals</p>
+          <dl class="qol-signals" aria-label="Ohrid livability signals">
+            <div class="qol-signal"><dt>Heritage</dt><dd><strong>Natural and cultural value</strong><span>The Ohrid region is recognized on both fronts.</span></dd></div>
+            <div class="qol-signal"><dt>Housing</dt><dd><strong>About $1,350/m²</strong><span>Q1 2026 apartment transactions averaged around this level.</span></dd></div>
+            <div class="qol-signal"><dt>Rent</dt><dd><strong>About $290/month</strong><span>Secondary estimate for a city-centre one-bedroom.</span></dd></div>
+            <div class="qol-signal"><dt>Safety</dt><dd><strong>Index about 73.7</strong><span>Secondary perception data give Ohrid this Safety Index.</span></dd></div>
+            <div class="qol-signal"><dt>Connectivity</dt><dd><strong>Growing airport use</strong><span>Ohrid airport continued to show passenger growth in 2025.</span></dd></div>
+          </dl>
+
+          <details class="ranking-details">
+            <summary>Read more</summary>
+            <div class="ranking-details-body qol-guide-grid">
+              <section class="qol-editorial-block"><h3>What works</h3><p>Beauty, walkability, low perceived crime, world-class setting and a daily rhythm built around the lake rather than traffic.</p></section>
+              <section class="qol-editorial-block"><h3>Tradeoffs</h3><p>Tourism pressure, higher-than-expected housing costs and a narrow year-round job base.</p></section>
+              <section class="qol-editorial-block"><h3>Daily-life scene</h3><p>Bells, stone lanes, slow water and evening promenades that still feel ceremonial rather than performative.</p></section>
+              <section class="qol-editorial-block"><h3>Best address</h3><p>The Old Town-lakefront-Kaneo corridor.</p></section>
+              <section class="qol-editorial-block"><h3>Best suited for</h3><p>Semi-retirees, culture-minded households, remote workers with flexible income and tourism professionals.</p></section>
+              <section class="qol-editorial-block"><h3>Adopt</h3><p>Stronger year-round housing protections and visitor management that protect daily life, not just scenery.</p></section>
+              <section class="qol-editorial-block"><h3>Drop</h3><p>Assuming beauty can carry the city through every planning mistake.</p></section>
+              <section class="qol-editorial-block"><h3>Not ideal for</h3><p>Anyone needing a broad labor market, anonymity or a city that behaves the same way in January and July.</p></section>
+            </div>
+          </details>
+        </div>
+      </section>
+
+
+      <section class="ranking-entry" id="skopje">
+        <figure class="ranking-media" style="--image-position: center center;">
+          <div class="ranking-media-frame">
+            <img src="./Assets/Quality%20of%20Life/QoL%20Photos/skopje%20by%20Jaka%20Bulc.png" alt="Skopje viewed from the cable car over Vodno for the quality of life survey." width="1080" height="1350" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="ranking-caption">Photo: Jaka Bulc</figcaption>
+        </figure>
+
+        <div class="ranking-copy qol-guide-card">
+          <div class="rank-head qol-guide-header">
+            <span class="rank-number">2.</span>
+            <div>
+              <h2 class="rank-title">Skopje</h2>
+              <div class="qol-guide-meta">
+                <p class="qol-award">Opportunity and connectivity</p>
+                <p class="qol-score-badge">Score 84 / 100</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="ranking-intro qol-guide-verdict">Skopje is Macedonia’s indispensable capital, offering the region’s strongest concentration of jobs, universities, specialist healthcare, and international connectivity. For those seeking career opportunities, education, or access to major institutions, no other city in the country can compete with its scale and practicality.</p>
+          <p class="ranking-intro qol-guide-verdict">That same centrality comes with trade-offs. Higher housing costs, traffic congestion, air pollution, and uneven urban planning make daily life less balanced than in smaller cities. While neighborhoods like the Old Bazaar, Debar Maalo, and the Vardar waterfront give Skopje plenty of character, it remains a city of opportunity first and comfort second.</p>
+
+          <p class="qol-section-label">Livability signals</p>
+          <dl class="qol-signals" aria-label="Skopje livability signals">
+            <div class="qol-signal"><dt>Rent</dt><dd><strong>About $435/month</strong><span>Secondary estimate for a city-centre one-bedroom.</span></dd></div>
+            <div class="qol-signal"><dt>Housing</dt><dd><strong>About $1,444/m²</strong><span>Q1 2026 apartment transactions averaged around this level.</span></dd></div>
+            <div class="qol-signal"><dt>Education</dt><dd><strong>UKIM flagship role</strong><span>UKIM is the country's flagship university.</span></dd></div>
+            <div class="qol-signal"><dt>Connectivity</dt><dd><strong>Principal air gateway</strong><span>Skopje is the main air gateway in Vardar Macedonia.</span></dd></div>
+            <div class="qol-signal"><dt>Main weakness</dt><dd><strong>Housing, air, traffic</strong><span>High costs, winter air pollution and congestion shape the tradeoff.</span></dd></div>
+          </dl>
+
+          <details class="ranking-details">
+            <summary>Read more</summary>
+            <div class="ranking-details-body qol-guide-grid">
+              <section class="qol-editorial-block"><h3>What works</h3><p>Jobs, universities, specialist healthcare, airport access, institutions and the deepest social-professional ecosystem in Vardar Macedonia.</p></section>
+              <section class="qol-editorial-block"><h3>Tradeoffs</h3><p>High housing costs for the country, poor winter air, traffic, planning clutter and daily friction.</p></section>
+              <section class="qol-editorial-block"><h3>Daily-life scene</h3><p>Fast, messy, energetic and institution-heavy: a city you use intensely even when you complain about it constantly.</p></section>
+              <section class="qol-editorial-block"><h3>Best address</h3><p>The Debar Maalo-Macedonia Street-Old Bazaar triangle, depending on whether someone prioritizes dining, strolling or heritage.</p></section>
+              <section class="qol-editorial-block"><h3>Best suited for</h3><p>Ambitious professionals, students, NGO and tech workers, medics and anyone who needs the state's deepest service basket.</p></section>
+              <section class="qol-editorial-block"><h3>Adopt</h3><p>A serious winter-air agenda, faster buses, calmer streets and more housing discipline near the places people actually work and study.</p></section>
+              <section class="qol-editorial-block"><h3>Drop</h3><p>Confusing national centrality with everyday comfort.</p></section>
+              <section class="qol-editorial-block"><h3>Not ideal for</h3><p>People with respiratory vulnerability, low tolerance for chaos or a desire for calm urban form.</p></section>
+            </div>
+          </details>
+        </div>
+      </section>
+
+
+      <section class="ranking-entry" id="bitola">
+        <figure class="ranking-media" style="--image-position: center center;">
+          <div class="ranking-media-frame">
+            <img src="./Assets/Quality%20of%20Life/QoL%20Photos/bitola%20by%20Meri%20Vasilevski.png" alt="Bitola streetscape with historic buildings and a pedestrian urban rhythm." width="1080" height="1350" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="ranking-caption">Photo: Meri Vasilevski</figcaption>
+        </figure>
+
+        <div class="ranking-copy qol-guide-card">
+          <div class="rank-head qol-guide-header">
+            <span class="rank-number">1.</span>
+            <div>
+              <h2 class="rank-title">Bitola</h2>
+              <div class="qol-guide-meta">
+                <p class="qol-award">Best all-rounder</p>
+                <p class="qol-score-badge">Score 86 / 100</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="ranking-intro qol-guide-verdict">The most complete city in the survey: handsome, walkable, cultured, affordable by regional standards, and large enough to feel useful rather than merely charming.</p>
+          <p class="ranking-intro qol-guide-verdict">Bitola ranks first not because it dominates any single category, but because it avoids the weaknesses that drag down so many peers. Širok Sokak remains a genuine social spine rather than a museum piece, while the city combines a university, regional hospital, and enough civic weight to serve a large hinterland. Housing is markedly cheaper than Ohrid and below the Skopje average, giving Bitola something increasingly rare: urban dignity without metropolitan costs.</p>
+          <p class="ranking-intro qol-guide-verdict">Its drawbacks are real. Bitola cannot match the job markets of Skopje or Solun, and the Pelagonia basin still faces winter air pollution. Yet few cities balance their assets as successfully. The historic center, café culture, educational institutions, and practical services reinforce one another to create a city that simply works. The rhythm is enviable: errands on foot, coffee on Širok Sokak, a short commute, and an evening promenade that still belongs to residents. It is not glamorous—it is livable.</p>
+
+          <p class="qol-section-label">Livability signals</p>
+          <dl class="qol-signals" aria-label="Bitola livability signals">
+            <div class="qol-signal"><dt>Housing</dt><dd><strong>About $964/m²</strong><span>Q1 2026 apartment transactions averaged around this level.</span></dd></div>
+            <div class="qol-signal"><dt>Rent</dt><dd><strong>About $266/month</strong><span>Secondary estimate for a city-centre one-bedroom.</span></dd></div>
+            <div class="qol-signal"><dt>Healthcare</dt><dd><strong>520 beds</strong><span>Clinical Hospital Bitola serves the south-west region.</span></dd></div>
+            <div class="qol-signal"><dt>Education</dt><dd><strong>UKLO headquarters</strong><span>St. Kliment Ohridski University of Bitola is based here.</span></dd></div>
+            <div class="qol-signal"><dt>Safety</dt><dd><strong>Index above 72</strong><span>Secondary perception data give Bitola a Safety Index above this mark.</span></dd></div>
+          </dl>
+
+          <details class="ranking-details">
+            <summary>Read more</summary>
+            <div class="ranking-details-body qol-guide-grid">
+              <section class="qol-editorial-block"><h3>What works</h3><p>A legible center, strong cafe life, solid healthcare, cultural heft and competitive housing costs by regional standards.</p></section>
+              <section class="qol-editorial-block"><h3>Tradeoffs</h3><p>Limited high-end job options, modest connectivity and winter pollution risk.</p></section>
+              <section class="qol-editorial-block"><h3>Daily-life scene</h3><p>Coffee, consular façades, students, hospital staff, pensioners and families on an evening walk: Bitola still understands the Balkan art of making a street feel like a shared living room.</p></section>
+              <section class="qol-editorial-block"><h3>Best address</h3><p>Širok Sokak, especially the stretch between Magnolia Square and the park.</p></section>
+              <section class="qol-editorial-block"><h3>Best suited for</h3><p>Families, diaspora returnees, academics, healthcare workers and anyone who wants a real city rather than a resort.</p></section>
+              <section class="qol-editorial-block"><h3>Adopt</h3><p>Better rail and regional connectivity so Bitola's civic strengths are not trapped by distance.</p></section>
+              <section class="qol-editorial-block"><h3>Drop</h3><p>Treating the city's heritage core as nostalgia rather than a working model for humane urban life.</p></section>
+              <section class="qol-editorial-block"><h3>Not ideal for</h3><p>People who need capital-city salaries, frequent flights or constant novelty.</p></section>
+            </div>
+          </details>
+        </div>
+      </section>
+    </div>
+
+    <section class="survey-intro" aria-label="Survey introduction">
+      <div>
+        <p class="survey-kicker">Method</p>
+        <p class="survey-note">The survey screened 28 candidate cities and towns across Vardar, Egej and Pirin. Scores are out of 100 and weigh affordability, housing, safety, healthcare, environment, walkability, markets, culture, nature, connectivity, work and study.</p>
+      </div>
+      <p class="survey-note">The winner is not the biggest city, nor the most internationally visible, nor the one with the strongest tourism brand. It is the place that keeps the most parts of life in proportion after the first burst of novelty wears off.</p>
+    </section>
+
+    <ol class="survey-index" id="survey-index" aria-label="Final ranking"></ol>
+    <noscript>
+      <ol class="survey-index" aria-label="Final ranking">
+        <li><a href="#berovo"><span class="survey-index-number">10.</span><span class="survey-index-title">Berovo</span></a></li>
+        <li><a href="#solun"><span class="survey-index-number">9.</span><span class="survey-index-title">Solun</span></a></li>
+        <li><a href="#lerin"><span class="survey-index-number">8.</span><span class="survey-index-title">Lerin</span></a></li>
+        <li><a href="#struga"><span class="survey-index-number">7.</span><span class="survey-index-title">Struga</span></a></li>
+        <li><a href="#sandanski"><span class="survey-index-number">6.</span><span class="survey-index-title">Sandanski</span></a></li>
+        <li><a href="#kostur"><span class="survey-index-number">5.</span><span class="survey-index-title">Kostur</span></a></li>
+        <li><a href="#strumica"><span class="survey-index-number">4.</span><span class="survey-index-title">Strumica</span></a></li>
+        <li><a href="#ohrid"><span class="survey-index-number">3.</span><span class="survey-index-title">Ohrid</span></a></li>
+        <li><a href="#skopje"><span class="survey-index-number">2.</span><span class="survey-index-title">Skopje</span></a></li>
+        <li><a href="#bitola"><span class="survey-index-number">1.</span><span class="survey-index-title">Bitola</span></a></li>
+      </ol>
+    </noscript>
+
+    <figure class="qol-survey-map">
+      <img src="./Assets/Quality%20of%20Life/QoL%20Map.png" alt="Map locating the ten cities in the Muzej Quality of Life Survey 2026 by final rank." width="10000" height="5625" loading="lazy" decoding="async">
+    </figure>
+
+    <section class="qol-fit-index" aria-labelledby="fit-title">
+      <div>
+        <p class="survey-kicker">Guide</p>
+        <h2 id="fit-title">Find your fit</h2>
+        <p class="qol-fit-subtitle">Best for, not just best overall.</p>
+      </div>
+      <div class="qol-fit-grid">
+        <div class="qol-fit-card"><h3>Families</h3><p>Bitola, Strumica</p></div>
+        <div class="qol-fit-card"><h3>Remote workers</h3><p>Sandanski, Solun, Ohrid</p></div>
+        <div class="qol-fit-card"><h3>Nightlife</h3><p>Solun, Skopje, Ohrid in summer</p></div>
+        <div class="qol-fit-card"><h3>Affordability</h3><p>Strumica, Bitola, Berovo</p></div>
+        <div class="qol-fit-card"><h3>Culture</h3><p>Solun, Bitola, Ohrid, Kostur</p></div>
+        <div class="qol-fit-card"><h3>Nature</h3><p>Ohrid, Kostur, Struga, Berovo</p></div>
+        <div class="qol-fit-card"><h3>Diaspora return</h3><p>Bitola, Strumica, Ohrid</p></div>
+        <div class="qol-fit-card"><h3>Lake living</h3><p>Ohrid, Struga, Kostur</p></div>
+        <div class="qol-fit-card"><h3>Slow living</h3><p>Berovo, Struga, Kostur</p></div>
+      </div>
+    </section>
+
+    <section class="closing-note qol-data-note" aria-labelledby="verification-title">
+      <h2 id="verification-title">Data note</h2>
+      <p>This guide scores everyday livability rather than postcard appeal. The underlying survey weighs affordability, housing, safety, healthcare, air and environment, walkability, food and markets, culture, nature and climate comfort, and connectivity. Official statistics, cadastre-derived housing data, hospitals, universities, transport operators, UNESCO and institutional sources are treated as firmer evidence. Crowd-sourced rent, cost and safety figures are used only as directional indicators. All research figures originally reported in euros or Macedonian denars are shown here in US dollars, converted with the National Bank of the Republic of North Macedonia’s official middle rates for 16 July 2026 and rounded to the nearest dollar. Daily-life scenes, best addresses, best-suited-for notes and Adopt / Drop lines are editorial guideposts, not hard statistics.</p>
+    </section>
+  </article>
+
+  <section class="more-from-muzej" data-more-from-muzej aria-labelledby="more-from-muzej-title"></section>
+</main>
+
+<footer class="site-footer muzej-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-wordmark" aria-label="Muzej">Muzej</span>
+      <p class="footer-statement">An editorial archive of Macedonian art, style, tradition, and culture.</p>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="about.html">ABOUT MUZEJ</a>
+      <a href="mailto:muzej.mk@proton.me">CONTACT</a>
+      <a href="https://www.instagram.com/_muzej/" target="_blank" rel="noopener noreferrer" aria-label="Open Muzej on Instagram">INSTAGRAM</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  const qualityOfLifeEntries = [
+    { rank: "10", displayRank: "10", title: "Berovo", href: "#berovo", score: 72, subtitle: "Best for slow living" },
+    { rank: "09", displayRank: "9", title: "Solun", href: "#solun", score: 74, subtitle: "Best big-city life" },
+    { rank: "08", displayRank: "8", title: "Lerin", href: "#lerin", score: 76, subtitle: "Best for cool-weather café life" },
+    { rank: "07", displayRank: "7", title: "Struga", href: "#struga", score: 77, subtitle: "Best lake-life alternative" },
+    { rank: "06", displayRank: "6", title: "Sandanski", href: "#sandanski", score: 77, subtitle: "Best for climate and winter sun" },
+    { rank: "05", displayRank: "5", title: "Kostur", href: "#kostur", score: 78, subtitle: "Best for old-world urban life" },
+    { rank: "04", displayRank: "4", title: "Strumica", href: "#strumica", score: 79, subtitle: "Best for food and markets" },
+    { rank: "03", displayRank: "3", title: "Ohrid", href: "#ohrid", score: 82, subtitle: "Best for lake living" },
+    { rank: "02", displayRank: "2", title: "Skopje", href: "#skopje", score: 84, subtitle: "Opportunity and connectivity" },
+    { rank: "01", displayRank: "1", title: "Bitola", href: "#bitola", score: 86, subtitle: "Best all-rounder" }
+  ];
+
+  (function () {
+    var index = document.getElementById("survey-index");
+
+    if (!index) {
+      return;
+    }
+
+    qualityOfLifeEntries.forEach(function (entry) {
+      var item = document.createElement("li");
+      var link = document.createElement("a");
+      var number = document.createElement("span");
+      var title = document.createElement("span");
+
+      link.href = entry.href;
+      link.setAttribute("aria-label", entry.rank + ". " + entry.title + ", " + entry.subtitle + ", score " + entry.score);
+      number.className = "survey-index-number";
+      number.textContent = (entry.displayRank || entry.rank) + ".";
+      title.className = "survey-index-title";
+      title.textContent = entry.title;
+
+      link.appendChild(number);
+      link.appendChild(title);
+      item.appendChild(link);
+      index.appendChild(item);
+    });
+  })();
+
+  (function () {
+    var utilityMenu = document.querySelector(".utility-menu");
+
+    if (!utilityMenu) {
+      return;
+    }
+
+    var utilityTrigger = utilityMenu.querySelector(".utility-trigger");
+    var utilityLinks = utilityMenu.querySelectorAll(".utility-link");
+
+    function setUtilityMenuOpen(isOpen) {
+      utilityMenu.open = isOpen;
+
+      if (utilityTrigger) {
+        utilityTrigger.setAttribute("aria-expanded", String(isOpen));
+      }
+    }
+
+    utilityMenu.addEventListener("toggle", function () {
+      if (utilityTrigger) {
+        utilityTrigger.setAttribute("aria-expanded", String(utilityMenu.open));
+      }
+    });
+
+    utilityLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        setUtilityMenuOpen(false);
+      });
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        setUtilityMenuOpen(false);
+      }
+    });
+  })();
+
+  (function () {
+    var previousY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+    var ticking = false;
+    var revealZone = 24;
+    var motionThreshold = 4;
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    function updateMuzejLogoVisibility() {
+      var currentY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+      var delta = currentY - previousY;
+
+      if (reducedMotion.matches) {
+        document.body.classList.remove("muzej-logo-hidden");
+        ticking = false;
+        return;
+      }
+
+      if (currentY <= revealZone) {
+        document.body.classList.remove("muzej-logo-hidden");
+      } else if (delta > motionThreshold) {
+        document.body.classList.add("muzej-logo-hidden");
+      } else if (delta < -motionThreshold) {
+        document.body.classList.remove("muzej-logo-hidden");
+      }
+
+      previousY = currentY;
+      ticking = false;
+    }
+
+    function requestTick() {
+      if (!ticking) {
+        window.requestAnimationFrame(updateMuzejLogoVisibility);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener("scroll", requestTick, { passive: true });
+
+    if (reducedMotion.addEventListener) {
+      reducedMotion.addEventListener("change", updateMuzejLogoVisibility);
+    } else if (reducedMotion.addListener) {
+      reducedMotion.addListener(updateMuzejLogoVisibility);
+    }
+  })();
+</script>
+</body>
+</html>

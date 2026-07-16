@@ -2067,18 +2067,18 @@
               </article>
 
               <article class="story-card">
-                <a class="story-card-link" href="./the-new-new-wave.html">
+                <a class="story-card-link" href="./quality-of-life.html">
                   <img
-                    class="story-image new-wave-card-image"
-                    src="./Assets/New%20Wave/New%20Wave%20Hero/new%20new%20wave.png"
-                    alt="Portrait collage of contemporary Macedonian filmmakers for The (New) New Wave article."
+                    class="story-image"
+                    src="./Assets/Quality%20of%20Life/hero-final.png"
+                    alt="Collage of a woman holding the Macedonian flag for the Quality of Life Survey 2026."
                     loading="lazy"
                   />
                 </a>
                 <div class="story-card-copy">
-                  <p class="story-card-kicker">Cinema</p>
+                  <p class="story-card-kicker">Quality of Life | Urbanism</p>
                   <h3 class="story-card-title">
-                    <a href="./the-new-new-wave.html">The (New) New Wave</a>
+                    <a href="./quality-of-life.html">Quality of Life Survey 2026</a>
                   </h3>
                 </div>
               </article>
@@ -2263,6 +2263,20 @@
             </div>
 
             <div class="explore-stack">
+              <a class="explore-row" href="./the-new-new-wave.html">
+                <div class="explore-row-media">
+                  <img
+                    class="explore-image"
+                    src="./Assets/New%20Wave/New%20Wave%20Hero/new%20new%20wave.png"
+                    alt="Portrait collage of contemporary Macedonian filmmakers for The (New) New Wave article."
+                    loading="lazy"
+                  />
+                </div>
+                <div class="explore-row-copy">
+                  <h3 class="explore-row-title">The (New) New Wave</h3>
+                </div>
+              </a>
+
               <a class="explore-row" href="./swan-dress.html">
                 <div class="explore-row-media">
                   <img
@@ -2456,6 +2470,16 @@
             heroImage: "./Assets/Stranci/Stranci%20Pix/stranci-index-portrait.png",
             alt: "Three people posing for a phone camera against a yellow and pink painted backdrop with social media icons."
           },
+          quality: {
+            title: "Quality of Life Survey 2026",
+            href: "./quality-of-life.html",
+            meta: "Quality of Life | Urbanism",
+            dek: "A ranked survey of where everyday life works best across the Macedonian geographic and cultural region.",
+            heroImage: "./Assets/Quality%20of%20Life/hero-final.png",
+            cardImage: "./Assets/Quality%20of%20Life/hero-final.png",
+            cardAlt: "Collage of a woman holding the Macedonian flag for the Quality of Life Survey 2026.",
+            alt: "Collage of a woman holding the Macedonian flag for the Quality of Life Survey 2026."
+          },
           tokyo: {
             title: "Tokyo on the Vardar",
             href: "./skopje-tange.html",
@@ -2501,8 +2525,8 @@
           }
         };
 
-        var heroRotationSlugs = ["stranci", "tokyo", "nation"];
-        var selectedStorySlugs = heroRotationSlugs.concat(["prespa", "newWave"]);
+        var heroRotationSlugs = ["quality", "stranci", "tokyo", "nation"];
+        var selectedStorySlugs = ["tokyo", "prespa", "quality", "nation", "stranci"];
         var selectedSlug = heroRotationSlugs[Math.floor(Math.random() * heroRotationSlugs.length)];
         var selectedArticle = articles[selectedSlug];
 
