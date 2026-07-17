@@ -301,7 +301,7 @@ main {
 .article-shell {
   max-width: var(--feature-w);
   margin: 0 auto;
-  padding: clamp(62px, 8vw, 112px) var(--page-x) clamp(84px, 10vw, 132px);
+  padding: clamp(62px, 8vw, 112px) var(--page-x) clamp(40px, 5vw, 64px);
 }
 .article-deck {
   width: 100%;
@@ -403,6 +403,7 @@ main {
   align-self: start;
   position: sticky;
   top: calc(var(--nav-h) + clamp(12px, 2vw, 26px));
+  will-change: transform;
 }
 .ranking-media-frame {
   aspect-ratio: 4 / 5;
@@ -572,13 +573,23 @@ main {
   background: var(--white);
 }
 .qol-signal dt,
-.article-body .qol-editorial-block h3,
-.qol-fit-index h3 {
+.qol-editorial-block h3 {
   margin: 0 0 0.55rem;
   color: var(--accent);
   font-family: var(--sans);
   font-size: 0.62rem;
+  font-weight: 400;
   letter-spacing: 0.15em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.qol-fit-index h3 {
+  margin: 0 0 0.55rem;
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
   line-height: 1.2;
   text-transform: uppercase;
 }
@@ -744,6 +755,9 @@ main {
 
 .site-footer {
   margin-top: 0;
+}
+main > .more-from-muzej[data-more-from-muzej] {
+  padding-top: clamp(28px, 3vw, 44px);
 }
 .muzej-footer {
   width: 100%;
@@ -1770,6 +1784,58 @@ main {
 </footer>
 
 <script>
+  (function () {
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    document.querySelectorAll(".ranking-details").forEach(function (details) {
+      var summary = details.querySelector("summary");
+      var entry = details.closest(".ranking-entry");
+      var media = entry ? entry.querySelector(".ranking-media") : null;
+      var previousMediaTop = null;
+      var positionAnimation = null;
+
+      if (!summary || !media) {
+        return;
+      }
+
+      summary.addEventListener("click", function () {
+        previousMediaTop = media.getBoundingClientRect().top;
+      });
+
+      details.addEventListener("toggle", function () {
+        if (previousMediaTop === null) {
+          return;
+        }
+
+        window.requestAnimationFrame(function () {
+          var currentMediaTop = media.getBoundingClientRect().top;
+          var positionDelta = previousMediaTop - currentMediaTop;
+
+          previousMediaTop = null;
+
+          if (reducedMotion.matches || Math.abs(positionDelta) < 1) {
+            return;
+          }
+
+          if (positionAnimation) {
+            positionAnimation.cancel();
+          }
+
+          positionAnimation = media.animate(
+            [
+              { transform: "translateY(" + positionDelta + "px)" },
+              { transform: "translateY(0)" }
+            ],
+            {
+              duration: 360,
+              easing: "cubic-bezier(0.22, 1, 0.36, 1)"
+            }
+          );
+        });
+      });
+    });
+  })();
+
   const qualityOfLifeEntries = [
     { rank: "10", displayRank: "10", title: "Berovo", href: "#berovo", score: 72, subtitle: "Best for slow living" },
     { rank: "09", displayRank: "9", title: "Solun", href: "#solun", score: 74, subtitle: "Best big-city life" },
