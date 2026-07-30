@@ -31,6 +31,16 @@
       position: "center center"
     },
     {
+      slug: "vangel-naumovski",
+      href: "vangel-naumovski.html",
+      title: "The Metamorphosis of Vangel Naumovski",
+      kicker: "Art | Painting",
+      dek: "The Lake, the Body, and the Cosmos.",
+      image: "./Assets/Vangel/Website%20Pics/1.png",
+      alt: "Portrait of Vangel Naumovski seated before one of his paintings.",
+      position: "center top"
+    },
+    {
       slug: "wearing-the-nation",
       href: "wearing-the-nation.html",
       title: "The Nation on Their Backs",

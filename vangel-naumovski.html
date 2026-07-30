@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Metamorphosis of Vangel Naumovski. An essay from МУЗЕЈ on the Ohrid artist’s abundant, biological, and cosmological world.">
+<title>The Metamorphosis of Vangel Naumovski | МУЗЕЈ</title>
+<link rel="icon" type="image/png" href="./Assets/Font/Muzej%20Logo.ai.png">
+<link rel="apple-touch-icon" href="./Assets/Font/Muzej%20Logo.ai.png">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&display=swap"
+/>
+<link rel="stylesheet" href="https://use.typekit.net/gnw6uol.css">
+<style>
+:root {
+  --background: #ffffff;
+  --foreground: #0f0e0d;
+  --white: #ffffff;
+  --ink: #0f0e0d;
+  --ink-soft: rgba(15, 14, 13, 0.62);
+  --ink-faint: rgba(15, 14, 13, 0.12);
+  --muted: #70675d;
+  --rule: rgba(23, 21, 19, 0.09);
+  --page-x: clamp(18px, 5.2vw, 72px);
+  --nav-h: clamp(88px, 10vw, 128px);
+  --feature-w: min(1280px, calc(100vw - (var(--page-x) * 2)));
+  --rail-gap: clamp(28px, 5vw, 76px);
+  --body-col: minmax(380px, 560px);
+  --body-tail: clamp(16px, 1.4vw, 24px);
+  --section-gap: clamp(48px, 8vw, 108px);
+  --content-max: 1520px;
+  --font-display: "ivypresto-display", "IvyPresto Display", "Ivy Presto", serif;
+  --font-wordmark: var(--font-display);
+  --serif: var(--font-display);
+        --headline-serif: var(--font-display);
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --article-serif: 'Adobe Jenson', Georgia, serif;
+  --brand-serif: var(--font-wordmark);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--article-serif);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+.shell {
+  width: min(100%, var(--content-max));
+  margin: 0 auto;
+  padding-left: var(--page-x);
+  padding-right: var(--page-x);
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  background: var(--background);
+}
+.header-frame {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  padding-top: 28px;
+  padding-bottom: 24px;
+}
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-wordmark);
+  font-size: clamp(2.4rem, 1.9rem + 1.43vw, 3.76rem);
+  line-height: 0.92;
+  letter-spacing: 0.09em;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+
+}
+
+.utility-link,
+.utility-menu-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  letter-spacing: 0.11em;
+  color: rgba(23, 21, 19, 0.58);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+.utility-link:hover,
+.utility-menu-item:hover {
+  color: var(--foreground);
+}
+.header-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.utility-menu {
+  position: relative;
+}
+.utility-menu summary {
+  list-style: none;
+}
+.utility-menu summary::-webkit-details-marker {
+  display: none;
+}
+.utility-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: color 180ms ease, opacity 180ms ease;
+}
+.utility-trigger:hover {
+  opacity: 0.72;
+}
+.utility-trigger:focus-visible {
+  outline: 2px solid rgba(141, 79, 61, 0.45);
+  outline-offset: 3px;
+}
+.utility-icon {
+  display: grid;
+  gap: 0.26rem;
+}
+.utility-icon-line {
+  display: block;
+  width: 1.45rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.88;
+}
+.utility-panel {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  right: 0;
+  z-index: 10;
+  display: grid;
+  min-width: 10rem;
+  padding: 0.45rem 0;
+  border: 1px solid rgba(23, 21, 19, 0.12);
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(23, 21, 19, 0.08);
+}
+.utility-panel-group {
+  display: grid;
+  gap: 0;
+}
+.utility-panel-utility {
+  margin-top: 0.25rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid rgba(23, 21, 19, 0.1);
+}
+.utility-panel .utility-link,
+.utility-panel .utility-menu-item {
+  justify-content: flex-start;
+  min-height: 0;
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  background: transparent;
+}
+.utility-panel-utility .utility-link {
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  color: rgba(23, 21, 19, 0.52);
+}
+.utility-panel .utility-menu-item {
+  cursor: pointer;
+}
+.utility-panel .utility-link:hover,
+.utility-panel .utility-menu-item:hover {
+  background: rgba(23, 21, 19, 0.035);
+}
+
+main {
+  padding-top: clamp(24px, 3.2vw, 48px);
+}
+
+.feature {
+  padding:
+    clamp(0px, 0.6vw, 6px)
+    clamp(16px, 3vw, 40px)
+    clamp(56px, 8vw, 102px);
+}
+.feature-inner {
+  display: grid;
+  grid-template-columns: minmax(420px, 1.06fr) minmax(300px, 0.84fr);
+  gap: clamp(22px, 3.8vw, 52px);
+  align-items: stretch;
+  max-width: min(1320px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
+  margin: 0 auto;
+}
+.feature-media {
+  margin: 0;
+}
+.feature-media img {
+  width: 100%;
+  height: clamp(620px, 80vh, 920px);
+  object-fit: contain;
+  object-position: center top;
+  background: var(--white);
+}
+.feature-copy {
+  min-height: clamp(620px, 80vh, 920px);
+  max-width: 27rem;
+  margin: 0 auto;
+  padding: clamp(26px, 3.6vw, 42px) 0 clamp(20px, 3vw, 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.feature-title {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(38px, 4.9vw, 76px);
+  font-weight: 400;
+  line-height: 0.96;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+.feature-title-break {
+  display: block;
+}
+.feature-byline {
+  margin: auto 0 0;
+  color: var(--ink-soft);
+  font-size: clamp(12px, 0.95vw, 14px);
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.feature-deck {
+  max-width: min(1320px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
+  margin: clamp(28px, 4vw, 52px) auto 0;
+  color: var(--ink);
+  font-size: clamp(17px, 1.55vw, 23px);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+}
+.article-shell {
+  max-width: var(--feature-w);
+  margin: 0 auto;
+  padding: 0 var(--page-x) clamp(32px, 4vw, 56px);
+}
+.content-row {
+  display: grid;
+  grid-template-columns: minmax(240px, 1.08fr) var(--body-col) var(--body-tail);
+  column-gap: var(--rail-gap);
+  align-items: start;
+}
+.article-body {
+  display: grid;
+  grid-template-columns: minmax(240px, 1.08fr) var(--body-col) var(--body-tail);
+  column-gap: var(--rail-gap);
+  align-items: start;
+  margin-bottom: var(--section-gap);
+}
+.content-row + .content-row {
+  margin-top: var(--section-gap);
+}
+.content-row .empty-rail,
+.article-body .empty-tail,
+.content-row .empty-tail {
+  min-height: 1px;
+}
+.article-body-media {
+  margin: 0;
+  align-self: start;
+  position: sticky;
+  top: calc(var(--nav-h) + clamp(12px, 2vw, 26px));
+}
+.article-body-media img {
+  width: 100%;
+  height: auto;
+}
+.article-body-media figcaption {
+  margin-top: 12px;
+  color: var(--ink-soft);
+  font-size: 8px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+.article-body-copy {
+  min-width: 0;
+}
+
+.section-heading {
+  margin: 0;
+  max-width: 15ch;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+.body-block p {
+  margin: 0;
+  font-size: clamp(16px, 1.18vw, 18px);
+  line-height: 1.82;
+}
+.body-block p + p {
+  margin-top: 1.75em;
+}
+
+.pull-quote {
+  margin: 0;
+  max-width: none;
+  font-size: clamp(20px, 2.35vw, 26px);
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.gallery-reading {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 1.9vw, 24px);
+  margin: var(--section-gap) 0 0;
+}
+.gallery-reading-media,
+.gallery-reading-feature {
+  margin: 0;
+  aspect-ratio: 15 / 21;
+  overflow: hidden;
+}
+.gallery-reading-media img,
+.gallery-reading-feature img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-reading-side {
+  min-width: 0;
+}
+.article-body-lower {
+  margin-top: clamp(22px, 3vw, 34px);
+  margin-bottom: 0;
+}
+
+.more-from-muzej {
+  padding-top: clamp(32px, 4vw, 56px);
+  padding-bottom: clamp(82px, 10vw, 148px);
+  background: transparent;
+  color: var(--foreground);
+}
+.more-from-muzej-frame {
+  display: grid;
+  width: min(calc(100% - (var(--page-x) * 2)), 68rem);
+  max-width: 68rem;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  border-top: 2px solid var(--foreground);
+  padding-top: clamp(2.1rem, 4vw, 3.25rem);
+}
+.more-from-muzej-title {
+  max-width: none;
+  margin: 0;
+  font-family: var(--headline-serif);
+  font-size: clamp(1.45rem, 1vw + 1.1rem, 1.9rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 650;
+  font-optical-sizing: auto;
+}
+.related-list {
+  list-style: none;
+  margin: clamp(1.4rem, 2.5vw, 2rem) 0 0;
+  padding: 0;
+}
+.related-list li {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  padding: clamp(1.1rem, 1.8vw, 1.6rem) 0;
+  border-top: 1px solid var(--rule);
+  align-items: start;
+}
+.related-list li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+.related-list a {
+  font-family: var(--headline-serif);
+  font-size: clamp(1.1rem, 1.3vw + 0.7rem, 1.55rem);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+  font-optical-sizing: auto;
+  border-bottom: none;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+.related-list a:hover {
+  color: var(--muted);
+}
+.related-list .related-desc {
+  display: block;
+  margin-top: 0.45rem;
+  font-family: var(--sans);
+  font-size: clamp(0.82rem, 0.78rem + 0.18vw, 0.94rem);
+  line-height: 1.72;
+  letter-spacing: 0;
+  color: var(--muted);
+}
+
+.site-footer {
+  margin-top: 0;
+}
+.muzej-footer {
+  width: 100%;
+  padding: clamp(3.5rem, 7vw, 6rem) var(--page-x);
+  background: #000000;
+  color: #f7f2e9;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: minmax(320px, 620px) minmax(180px, 260px);
+  gap: clamp(3rem, 7vw, 6rem);
+  justify-content: center;
+  align-items: start;
+  width: min(100%, 1160px);
+  margin: 0 auto;
+}
+.footer-brand {
+  min-width: 0;
+}
+.footer-wordmark {
+  display: inline-flex;
+  font-family: var(--font-wordmark);
+  font-size: clamp(3.1rem, 5vw, 5rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: 0.04em;
+  font-optical-sizing: auto;
+  text-transform: uppercase;
+
+}
+.footer-statement {
+  max-width: 38.75rem;
+  margin: clamp(1.15rem, 1.8vw, 1.45rem) 0 0;
+  font-size: clamp(1rem, 1vw + 0.72rem, 1.15rem);
+  line-height: 1.5;
+  color: rgba(247, 242, 233, 0.86);
+}
+.muzej-footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-top: 0.28rem;
+}
+.muzej-footer .footer-links a {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  line-height: 1.2;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 180ms ease, text-decoration-color 180ms ease;
+}
+.muzej-footer .footer-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  opacity: 0.86;
+}
+
+@media (max-width: 1080px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+
+  .muzej-footer .footer-links {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 1140px) {
+  .header-frame {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 0.85rem 1.25rem;
+  }
+  .header-tools {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 980px) {
+  .menu-button {
+    padding: 8px 0 6px 18px;
+  }
+  .menu-panel {
+    padding: 0 calc(var(--page-x) + 18px) 0 var(--page-x);
+    gap: 16px;
+  }
+  .menu-panel a {
+    width: min(100%, 22rem);
+    font-size: clamp(26px, 5vw, 42px);
+  }
+  .feature-inner {
+    grid-template-columns: minmax(300px, 0.94fr) minmax(300px, 0.9fr);
+    gap: clamp(24px, 4vw, 46px);
+    align-items: stretch;
+  }
+  .feature-media img {
+    height: clamp(500px, 70vh, 720px);
+  }
+  .feature-copy {
+    min-height: clamp(500px, 70vh, 720px);
+    max-width: 23rem;
+  }
+  .feature-title {
+    font-size: clamp(34px, 4.35vw, 58px);
+  }
+  .feature-deck {
+    margin-top: clamp(30px, 4.2vw, 48px);
+    font-size: clamp(16px, 2.05vw, 20px);
+  }
+  .content-row {
+    grid-template-columns: minmax(170px, 0.82fr) minmax(0, 520px) clamp(14px, 1vw, 18px);
+  }
+  .article-body {
+    grid-template-columns: minmax(170px, 0.82fr) minmax(0, 520px) clamp(14px, 1vw, 18px);
+  }
+}
+
+@media (max-width: 760px) {
+  .header-frame {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .brand-mark {
+    font-size: clamp(2.16rem, 10.15vw, 2.87rem);
+
+  }
+}
+
+@media (max-width: 720px) {
+  .header-frame {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .brand-mark {
+    font-size: clamp(2.16rem, 10.15vw, 2.87rem);
+
+  }
+  .menu-button {
+    gap: 7px;
+    padding: 8px 0 6px 16px;
+    margin-top: 1px;
+  }
+  .menu-panel {
+    padding: 0 calc(var(--page-x) + 6px) 0 var(--page-x);
+    gap: 14px;
+  }
+  .menu-panel a {
+    width: min(100%, 16rem);
+    font-size: clamp(22px, 9vw, 30px);
+    line-height: 1.08;
+  }
+  .menu-panel a:last-child {
+    font-size: 18px;
+  }
+  .feature {
+    padding:
+      4px
+      var(--page-x)
+      48px;
+  }
+  .feature-inner,
+  .article-body,
+  .content-row {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    text-align: left;
+  }
+  .feature-inner {
+    display: grid;
+    gap: 22px;
+  }
+  .feature-media img {
+    height: clamp(360px, 56vh, 470px);
+  }
+  .article-body {
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .gallery-reading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin: 40px 0 0;
+  }
+  .article-body-media {
+    position: static;
+  }
+  .gallery-reading-media {
+    position: static;
+  }
+  .article-body-lower {
+    margin-top: 18px;
+    margin-bottom: 0;
+  }
+  .content-row .empty-tail {
+    display: none;
+  }
+  .article-body .empty-tail {
+    display: none;
+  }
+  .feature-copy {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+  }
+  .feature-title {
+    font-size: clamp(32px, 10.5vw, 50px);
+    line-height: 0.98;
+  }
+  .feature-byline {
+    margin: 28px 0 0;
+    font-size: 11px;
+  }
+  .feature-deck {
+    margin-top: 34px;
+    font-size: clamp(15px, 3.9vw, 18px);
+    line-height: 1.2;
+  }
+  .feature-title-break {
+    display: none;
+  }
+  .content-row + .content-row {
+    margin-top: 40px;
+  }
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: transparent;
+  pointer-events: none;
+}
+
+.site-header .header-frame,
+.site-header .brand-mark,
+.site-header .header-tools {
+  pointer-events: auto;
+}
+
+.site-header .brand-mark {
+  transform: translate3d(0, 0, 0);
+  transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.muzej-logo-hidden .site-header .brand-mark {
+  transform: translate3d(0, calc(-100% - 42px), 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header .brand-mark {
+    transition: none;
+    will-change: auto;
+  }
+
+  body.muzej-logo-hidden .site-header .brand-mark {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header { z-index: 2000; }
+  .site-header .header-frame { grid-template-columns: minmax(0, 1fr) auto; align-items: center; justify-items: stretch; gap: 1rem; }
+  .site-header .brand-mark { justify-self: start; min-width: 0; }
+  .site-header .header-tools { justify-self: end; justify-content: flex-end; margin-left: auto; position: relative; z-index: 2002; }
+  .site-header .utility-menu { position: static; }
+  .site-header .utility-trigger { position: relative; z-index: 2003; }
+  .site-header .utility-panel { position: fixed; inset: 0; left: 0; right: 0; top: 0; z-index: 2001; display: grid; align-content: center; width: 100vw; max-width: none; min-width: 0; height: 100vh; height: 100svh; padding: clamp(76px, 18vh, 128px) var(--page-x) 48px; border: 0; background: rgba(255, 255, 255, 0.98); box-shadow: none; overflow-y: auto; transform: none; }
+  .site-header .utility-panel-group { width: min(100%, 22rem); margin: 0 auto; }
+  .site-header .utility-panel-utility { margin-top: 0.8rem; padding-top: 0.85rem; }
+  .site-header .utility-panel .utility-link,
+  .site-header .utility-panel .utility-menu-item { justify-content: center; min-height: 2.75rem; padding: 0.72rem 0; text-align: center; }
+}
+</style>
+<link rel="stylesheet" href="article-headlines.css">
+<link rel="stylesheet" href="more-from-muzej.css">
+<style>
+.vangel-article .feature-title {
+  font-size: clamp(42px, 4.75vw, 76px);
+}
+
+@media (max-width: 980px) {
+  .vangel-article .feature-title {
+    font-size: clamp(38px, 6.2vw, 64px);
+  }
+}
+
+@media (max-width: 720px) {
+  .vangel-article .feature-title {
+    font-size: clamp(34px, 11.2vw, 52px);
+    line-height: 0.92;
+  }
+}
+</style>
+<script src="more-from-muzej.js?v=20260730-vangel" defer></script>
+</head>
+<body class="kinfolk-article-hero vangel-article">
+
+<header class="site-header">
+  <div class="shell header-frame">
+    <a class="brand-mark" href="index.html" aria-label="Muzej home">Muzej</a>
+
+    <div class="header-tools">
+      <details class="utility-menu">
+        <summary class="utility-trigger" aria-label="Open navigation menu">
+          <span class="utility-icon" aria-hidden="true">
+            <span class="utility-icon-line"></span>
+            <span class="utility-icon-line"></span>
+            <span class="utility-icon-line"></span>
+          </span>
+        </summary>
+        <nav class="utility-panel" aria-label="Site navigation">
+          <div class="utility-panel-group">
+            <a class="utility-link" href="index.html">Home</a>
+            <a class="utility-link" href="index.html#selected-stories">Selected Stories</a>
+            <a class="utility-link" href="index.html#in-rotation">In Rotation</a>
+            <a class="utility-link" href="index.html#culture">Culture</a>
+            <a class="utility-link" href="about.html">About Muzej</a>
+          </div>
+          <div class="utility-panel-group utility-panel-utility">
+            <a class="utility-link" href="mailto:muzej.mk@proton.me">Contact</a>
+            <a class="utility-link" href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main>
+  <header class="feature">
+    <div class="feature-inner">
+      <figure class="feature-media">
+        <img src="./Assets/Vangel/Website%20Pics/1.png" alt="Portrait of Vangel Naumovski seated before one of his paintings">
+      </figure>
+
+      <div class="feature-copy">
+        <p class="feature-byline">Words Ace Trajkovski</p>
+        <h1 class="feature-title">The Metamorphosis of Vangel Naumovski</h1>
+      </div>
+    </div>
+    <p class="feature-deck">The Lake, the Body, and the Cosmos.</p>
+  </header>
+
+  <article class="article-shell">
+    <section class="article-body">
+      <figure class="article-body-media">
+        <img src="./Assets/Vangel/Website%20Pics/4.png" alt="Vangel Naumovski painting in his studio">
+      </figure>
+
+      <div class="article-body-copy body-block">
+        <p>The first fact about a painting by Vangel Naumovski is its abundance.</p>
+
+        <p>Forms multiply, swell, divide, and encroach upon one another. A plant becomes a limb; a limb becomes a current; a current twists into an orbit. Eyes, seeds, mouths, shells, eggs, flowers, and planets share the same soft anatomy. Nothing is permitted to remain isolated. Everything approaches everything else.</p>
+
+        <p>Naumovski’s paintings do not represent a stable world. They present a world caught in the act of becoming.</p>
+
+        <p>The usual categories—landscape, figure painting, fantasy, abstraction—are of limited use here. A landscape presumes a distinction between the observer and what is observed. Naumovski abolishes that distinction. The human body is not situated in nature. It is one of nature’s temporary arrangements.</p>
+
+        <p>Naumovski imagines existence as a condition of perpetual exchange. Matter passes between categories. The botanical becomes anatomical; the anatomical becomes geological; the microscopic becomes astronomical. His paintings insist that these divisions are habits of perception rather than qualities inherent in the world. The lake, the body, and the cosmos are three scales of the same image.</p>
+
+        <p>Naumovski was born on March 22, 1924, in Skrebatno, near Ohrid, and spent most of his life in the Ohrid region. He died there on June 13, 2006. These biographical facts matter not because the paintings can be reduced to place, but because Lake Ohrid gave him a visual grammar: currents, shells, aquatic plants, eggs, endemic organisms, reflected light, depths that remain unseen from the surface.</p>
+
+        <p>He did not need to leave Ohrid imaginatively because Ohrid already contained several worlds: the visible landscape, the submerged ecosystem, the microscopic organism, the ancient lake, the mythic setting, the cosmic analogy. His art proceeds by enlargement. The smallest living form can become a landscape. A seed can become a planet. A lake can become a model of the universe.</p>
+
+        <p>Naumovski’s route into art was irregular. He left primary school young and worked in a succession of manual occupations. He enrolled at the secondary art school in Skopje in 1945 and was expelled in 1947, reportedly as “untalented.” In 1948, he began working as a draftsman in an Ohrid woodcarving workshop. He painted alongside other forms of employment for years, joined the Association of Fine Artists of Macedonia in 1967, and became a full-time independent artist in 1969. The expulsion from art school is an attractive story because it offers a clean reversal: the institution rejects the artist, history vindicates him.</p>
+
+        <p>Naumovski’s art was not produced by rejection alone. It was produced through duration: years of looking, drawing, working, and slowly discovering which forms could carry his imagination. To call him self-taught is correct, but insufficient. Every artist is taught by something. Naumovski was taught by the materials of work, by the traditions and images around him, and above all by nature understood not as scenery but as process. His earliest paintings still belong to the recognizable world. <i>Sleeping Girl</i> of 1959 places a human figure inside an abundant natural setting. <i>Youthful Landscape</i> of 1960 is dark and terrestrial, a nocturnal scene in which vegetation remains vegetation, earth remains earth, and the picture can still be entered as a place.</p>
+
+        <p>His first solo exhibitions took place in Ohrid and Struga in 1954, followed by exhibitions in Skopje, Bitola, Prilep, and elsewhere. In 1963, his work was shown at Zagreb’s Gallery of Primitive Art. Exhibitions in Rome, London, Milan, Paris, Toronto, Munich, Thessaloniki, Zagreb, and Zürich followed over the next two decades.</p>
+
+        <p>The institutional category through which he first became visible internationally was naïve or “primitive” art. The designation was understandable. Naumovski was largely self-taught. His early paintings contained simplified figures, narrative elements, and a freedom from academic perspective. He entered an exhibition system that had already learned how to present artists outside official modernism as authentic, instinctive, and untouched by intellectual culture But “naïve” can describe an artist’s relation to an institution more easily than it describes the art.</p>
+
+        <p>Naumovski’s mature paintings are not naïve in their construction. They are highly organized acts of visual instability. Their surfaces may appear spontaneous, but their metamorphoses are controlled. A curved contour is made to serve several identities. A shape can be read as bodily, floral, aquatic, and celestial without becoming completely any one of them. This ambiguity is not decorative. It is the subject.</p>
+
+        <p>The paintings train the eye to abandon certainty. Recognition occurs, then fails. A viewer sees a body, then a landscape; an eye, then an egg; a plant, then an organ. Each interpretation is immediately displaced by another. The image remains active because it cannot be concluded. Naumovski’s world is one in which resemblance has replaced identity.</p>
+
+        <p>By the later 1960s and 1970s, his figures had ceased to occupy conventional space. In works such as <i>Vardar Girl</i> and <i>In a Whirlwind of Wind Bloom</i>, anatomy is elongated into ribbons, petals, streams, and arabesques. The body no longer appears as a bounded object. It spreads.</p>
+      </div>
+      <div class="empty-tail" aria-hidden="true"></div>
+    </section>
+
+    <div class="content-row">
+      <div class="empty-rail" aria-hidden="true"></div>
+      <aside class="pull-quote">Nothing is merely itself. Everything is alive.</aside>
+      <div class="empty-tail" aria-hidden="true"></div>
+    </div>
+
+    <section class="gallery-reading" aria-label="Selected paintings by Vangel Naumovski">
+      <figure class="gallery-reading-media">
+        <img src="./Assets/Vangel/Website%20Pics/New2.png" alt="Vivid yellow, red, and green organic composition by Vangel Naumovski" loading="lazy">
+      </figure>
+
+      <div class="gallery-reading-side">
+        <figure class="gallery-reading-feature">
+          <img src="./Assets/Vangel/Website%20Pics/New1.png" alt="Blue and violet biomorphic composition by Vangel Naumovski" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="article-body article-body-lower">
+      <figure class="article-body-media">
+        <img src="./Assets/Vangel/Website%20Pics/5.png" alt="Black-and-white profile portrait of Vangel Naumovski">
+      </figure>
+
+      <div class="article-body-copy body-block">
+        <p>This is why his paintings differ from the more familiar forms of Surrealism with which they are sometimes compared. Surrealism frequently turned inward, toward dream, repression, private symbol, and the theatre of the unconscious. Naumovski’s work is less concerned with decoding the individual psyche than with dissolving it. The images are fantastic, but they do not feel detached from material existence. Their strangeness comes from observing nature too closely and then refusing to stop at the ordinary scale of perception.</p>
+
+        <p>Accounts associated with the 2024 centenary of his birth state that Naumovski worked with the Hydrobiological Institute in Ohrid, viewing endemic organisms through microscopes and drawing them when microphotography was not readily available there. Surviving drawings are reported to include endemic Ohrid snails. This history has not yet been fully verified through a digitized scientific or personnel archive, and it should therefore be stated with caution. But the visual connection is difficult to ignore.</p>
+
+        <p>Naumovski’s forms often resemble things seen through magnification: membranes, microorganisms, molluscan bodies, cellular structures, reproductive forms. These are not copied as scientific illustrations. They are translated into an imaginative language in which scale becomes unstable. Microscopy is already a kind of fantasy. It reveals that the familiar world is composed of forms that appear alien when enlarged. Naumovski’s paintings extend this discovery. The strange is not elsewhere. It is inside what appears ordinary. A cell contains the image of a world.</p>
+
+        <p>His black-and-white drawings make the structure of this visual language especially clear. Without the seduction of intense color, works such as <i>Sin of Youth</i>, <i>Great Excitement</i>, and <i>Universe</i> reveal how much depends on contour, density, and interlocking silhouettes. Forms fold into one another. Tonal transitions create depth, then flatten it. An opening may become a cavity, a pupil, an entrance, or a void. The drawings show that Naumovski’s art is not primarily an art of color. It is an art of continuity. Color intensifies that continuity.</p>
+
+        <p>Titles such as <i>Black Cradle of Bright Life</i>, <i>Cosmic Egg</i>, <i>Lake Bride</i>, <i>Pearls of Youth</i>, <i>Prohibited Thoughts</i>, <i>Atlantis</i>, and <i>Lacustrine Galaxy</i> provide clues without stabilizing the images. They join words from incompatible scales and categories. A cradle may be black while life is bright. A bride may be a lake. A galaxy may be lacustrine. The title performs in language what the painting performs in form: it brings distant things together until the distance between them appears artificial.</p>
+
+        <p>Among Naumovski’s most persistent images is the egg. Its symbolism is obvious and inexhaustible: fertility, origin, enclosure, potential. But in his work, the egg is not simply a symbol attached to the painting. It is a structural model for his universe. An egg is a bounded form containing transformation. It is both object and process. It appears complete while concealing an event that has not yet occurred. This tension made it an ideal form for Naumovski, whose paintings repeatedly imagine matter on the verge of becoming something else.</p>
+
+        <p>In <i>Heavenly Vision</i> of 1995, egg-like forms appear within a mature cosmic composition. The biological object has expanded into an astronomical one. Yet the change in scale does not change its meaning. Planet and embryo remain interchangeable images of beginning.</p>
+
+        <p>The cosmic paintings of the late 1970s and 1980s are sometimes treated as a later departure, as though Naumovski had moved from the lake to the galaxy. But the galaxy was already present in the lake. Works such as <i>Galaxy from the Other Side of the Sun</i>, <i>Horizontal Galaxy</i>, and <i>Spiral Galaxy</i> enlarge an existing vocabulary. Tendrils become orbital paths. Cells become planets. Currents become cosmic forces. The change is not from nature to space, but from one scale of nature to another.</p>
+
+        <p>Naumovski’s cosmos is not empty. It is bodily. Space itself seems capable of reproduction. The universe is usually pictured as the sublime negation of the human body: vast, cold, and indifferent. Naumovski refuses this opposition. His universe has organs. It flowers. The paintings are crowded because life is crowded.</p>
+
+        <p>Naumovski’s 1970 exhibition at Galerie Mona Lisa in Paris became the setting for the most famous story attached to his career. Later Macedonian cultural accounts report that Salvador Dalí visited the exhibition and described Naumovski as a “painter from fairy tales,” praising the Mediterranean, biological, and scientific qualities of the work.</p>
+
+        <p>Naumovski does not require Dalí’s authorization. The encounter is historically interesting because it suggests that his visual language could be recognized beyond the Yugoslav naïve-art framework. It does not explain the work.</p>
+
+        <p>Across decades, Naumovski returned to a limited set of fundamental forms: the egg, the spiral, the tendril, the opening, the eye, the flower, the submerged body. Repetition here is not exhaustion. The same organic language extended beyond painting. Naumovski also worked in sculpture, poetry, music, and architectural design. From at least 1965, he produced architectural models, sometimes using alternative names such as Nav Muan, Van San Skrebatski, and Saravan.</p>
+
+        <p>Reported projects included futuristic lakeside villas, a proposed Hotel Eros, and a model-sculpture submitted to the 1967 competition for the future Macedonian Opera and Ballet building. Nine architectural models were displayed during his 2024 centenary exhibition.</p>
+
+        <p>These projects were not secondary hobbies detached from the paintings. They transferred the same problem into space: how to make a structure appear alive. Curving walls, sculptural openings, and organic volumes replaced the rigid separation between building and landscape. Architecture became another kind of body. The house was no longer an object placed on the earth but a form imagined as growing from it.</p>
+      </div>
+
+      <div class="empty-tail" aria-hidden="true"></div>
+    </section>
+
+    <section class="gallery-reading" aria-label="Vangel Naumovski’s studio and public legacy">
+      <figure class="gallery-reading-media">
+        <img src="./Assets/Vangel/Website%20Pics/2.png" alt="Vangel Naumovski painting inside his organically designed Ohrid studio" loading="lazy">
+      </figure>
+
+      <div class="gallery-reading-side">
+        <figure class="gallery-reading-feature">
+          <img src="./Assets/Vangel/Website%20Pics/3.png" alt="A large mural honoring Vangel Naumovski on a building in Ohrid" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="article-body article-body-lower">
+      <figure class="article-body-media">
+        <img src="./Assets/Vangel/Website%20Pics/New3.png" alt="Pastel biomorphic painting with intertwined figures and flowers by Vangel Naumovski" loading="lazy">
+      </figure>
+
+      <div class="article-body-copy body-block">
+        <p>His house and studio in Ohrid may be the closest he came to making the world of the paintings inhabitable. Accounts describe a modernist residence with horizontal windows and brick bands, combined with curved stonework, a sculptural entrance, a planted courtyard, water, and an organically shaped studio façade. It served as a residence, workplace, and informal cultural meeting point. The total artwork is often imagined as an act of control: the artist designs everything. Naumovski’s house suggests a different ambition. Not control, but continuity. Painting, building, garden, water, and daily life were made to participate in one environment.</p>
+
+        <p>His 2016–2017 National Gallery retrospective assembled approximately one hundred works from different phases of his career. The exhibition affirmed his place in Macedonian art history while also exposing the limits of the existing scholarship. His paintings are known; his wider practice is not. The architectural models, poetry, music, sculptures, and scientific drawings remain much less studied.</p>
+
+        <p>The centenary exhibitions and commemorations of 2024 renewed attention to his work. Conservation was undertaken on a significant group of paintings owned by the St. Erasmus hospital in Ohrid. A mural was created, a square was named after him, and public calls were made for a permanent museum or display.</p>
+
+        <p>His inclusion in <i>Weaving Worlds: Collections in Conversation</i>, presented in Ljubljana from April 2025 to February 2026, placed his work within an ecological and post-human framework. This context seems contemporary, but it also reveals what was always present.</p>
+
+        <p>Naumovski’s paintings had already imagined the human as porous, unstable, and inseparable from nonhuman life. They do not propose ecology as an ethical lesson. They do something more radical: they make separateness visually impossible.</p>
+
+        <p>The category of the human survives only as one shape among others. It is recognizable, often eroticized, sometimes central, but never autonomous. The body belongs to the lake and the lake to the cosmos. Each is contained within the other. To look at Naumovski only as a regional naïve painter is therefore to misunderstand the scale of his project. The art is regional in its source and cosmological in its ambition. Its specificity is precisely what allows it to expand.</p>
+
+        <p>Lake Ohrid was not a picturesque subject for Naumovski. It was evidence. It showed that a bounded place could contain unfathomable age, microscopic life, submerged forms, folklore, memory, and continual biological transformation. It offered him not an image to reproduce, but a model of existence.</p>
+
+        <p>The deepest subject of Naumovski’s paintings is not fantasy. It is metamorphosis.</p>
+
+        <p>Fantasy usually means escape from the real. Naumovski’s art proposes the opposite: that reality becomes fantastic when its divisions are no longer taken for granted. Body, plant, animal, water, planet—these are names imposed on a continuum of forms.</p>
+
+        <p>His paintings ask the viewer to see too much at once. A flower is an organ. An organ is a landscape. A landscape is a body. An egg is a planet. A lake is a galaxy. Nothing is merely itself. Everything is alive.</p>
+      </div>
+
+      <div class="empty-tail" aria-hidden="true"></div>
+    </section>
+  </article>
+
+  <section class="more-from-muzej" data-more-from-muzej aria-labelledby="more-from-muzej-title"></section>
+</main>
+
+
+<footer class="site-footer muzej-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-wordmark">Muzej</span>
+      <p class="footer-statement">An editorial archive of Macedonian art, style, tradition, and culture.</p>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="about.html">ABOUT MUZEJ</a>
+      <a href="mailto:muzej.mk@proton.me">CONTACT</a>
+      <a href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer" aria-label="Open Muzej on Instagram">INSTAGRAM</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+const menuButton = document.getElementById('menuButton');
+const menuPanel = document.getElementById('menuPanel');
+
+if (menuButton && menuPanel) {
+  const setMenuState = (isOpen) => {
+    menuPanel.classList.toggle('open', isOpen);
+    menuButton.classList.toggle('is-open', isOpen);
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+    menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  };
+
+  menuButton.addEventListener('click', () => {
+    setMenuState(!menuPanel.classList.contains('open'));
+  });
+
+  menuPanel.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setMenuState(false));
+  });
+}
+</script>
+
+<script>
+  (function () {
+    var previousY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+    var ticking = false;
+    var revealZone = 24;
+    var motionThreshold = 4;
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    function updateMuzejLogoVisibility() {
+      var currentY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+      var delta = currentY - previousY;
+
+      if (reducedMotion.matches) {
+        document.body.classList.remove("muzej-logo-hidden");
+        ticking = false;
+        return;
+      }
+
+      if (currentY <= revealZone) {
+        document.body.classList.remove("muzej-logo-hidden");
+      } else if (delta > motionThreshold) {
+        document.body.classList.add("muzej-logo-hidden");
+      } else if (delta < -motionThreshold) {
+        document.body.classList.remove("muzej-logo-hidden");
+      }
+
+      previousY = currentY;
+      ticking = false;
+    }
+
+    function requestMuzejLogoVisibility() {
+      if (!ticking) {
+        window.requestAnimationFrame(updateMuzejLogoVisibility);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener("scroll", requestMuzejLogoVisibility, { passive: true });
+    window.addEventListener("resize", requestMuzejLogoVisibility);
+
+    if (reducedMotion.addEventListener) {
+      reducedMotion.addEventListener("change", requestMuzejLogoVisibility);
+    } else if (reducedMotion.addListener) {
+      reducedMotion.addListener(requestMuzejLogoVisibility);
+    }
+
+    updateMuzejLogoVisibility();
+  })();
+</script>
+
+</body>
+</html>

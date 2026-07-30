@@ -752,6 +752,34 @@
         margin-top: 0.56rem;
       }
 
+      #catalogue {
+        padding-top: clamp(104px, 10vw, 176px);
+      }
+
+      #catalogue .section-frame {
+        border-top: 0;
+        padding-top: 18px;
+      }
+
+      .catalogue-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(18px, 2vw, 32px);
+      }
+
+      #catalogue .story-card {
+        padding-top: 0;
+        border-top: 0;
+      }
+
+      #catalogue .story-card-copy {
+        padding-top: 0.98rem;
+      }
+
+      #catalogue .story-card-title {
+        margin-top: 0.56rem;
+      }
+
       .explore-header {
         margin-bottom: 1.35rem;
       }
@@ -1683,6 +1711,7 @@
         }
 
         .story-grid,
+        .catalogue-grid,
         .editorial-spread-grid,
         .archive-groups {
           grid-template-columns: 1fr;
@@ -1975,6 +2004,7 @@
                   <a class="utility-link" href="index.html">Home</a>
                   <a class="utility-link" href="#selected-stories">Selected Stories</a>
                   <a class="utility-link" href="#in-rotation">In Rotation</a>
+                  <a class="utility-link" href="#catalogue">Catalogue</a>
                   <a class="utility-link" href="#culture">Culture</a>
                   <a class="utility-link" href="about.html">About Muzej</a>
                 </div>
@@ -2067,18 +2097,18 @@
               </article>
 
               <article class="story-card">
-                <a class="story-card-link" href="./quality-of-life.html">
+                <a class="story-card-link" href="./the-new-new-wave.html">
                   <img
-                    class="story-image"
-                    src="./Assets/Quality%20of%20Life/hero-final.png"
-                    alt="Collage of a woman holding the Macedonian flag for the Quality of Life Survey 2026."
+                    class="story-image new-wave-card-image"
+                    src="./Assets/New%20Wave/New%20Wave%20Hero/new%20new%20wave.png"
+                    alt="Portrait collage of contemporary Macedonian filmmakers for The (New) New Wave article."
                     loading="lazy"
                   />
                 </a>
                 <div class="story-card-copy">
-                  <p class="story-card-kicker">Quality of Life | Urbanism</p>
+                  <p class="story-card-kicker">Cinema</p>
                   <h3 class="story-card-title">
-                    <a href="./quality-of-life.html">Quality of Life Survey 2026</a>
+                    <a href="./the-new-new-wave.html">The (New) New Wave</a>
                   </h3>
                 </div>
               </article>
@@ -2254,6 +2284,50 @@
           </div>
         </section>
 
+        <section class="section" id="catalogue" aria-labelledby="catalogue-title">
+          <div class="shell section-frame">
+            <div class="read-next-header">
+              <h2 class="read-next-title" id="catalogue-title">Catalogue</h2>
+            </div>
+
+            <div class="catalogue-grid">
+              <article class="story-card">
+                <a class="story-card-link" href="./vangel-naumovski.html">
+                  <img
+                    class="story-image"
+                    src="./Assets/Vangel/Website%20Pics/1.png"
+                    alt="Portrait of Vangel Naumovski seated before one of his paintings"
+                    loading="lazy"
+                  />
+                </a>
+                <div class="story-card-copy">
+                  <p class="story-card-kicker">Artist | Painting</p>
+                  <h3 class="story-card-title">
+                    <a href="./vangel-naumovski.html">The Metamorphosis of Vangel Naumovski</a>
+                  </h3>
+                </div>
+              </article>
+
+              <article class="story-card">
+                <a class="story-card-link" href="./martinoski.html">
+                  <img
+                    class="story-image"
+                    src="./Assets/Martinoski%20Article/Nikola%27s%20Hero%20Images/Martinoski%20Portrait.png"
+                    alt="Portrait-oriented collage image of Nikola Martinoski"
+                    loading="lazy"
+                  />
+                </a>
+                <div class="story-card-copy">
+                  <p class="story-card-kicker">Artist | Painting</p>
+                  <h3 class="story-card-title">
+                    <a href="./martinoski.html">The Many Faces of Nikola Martinoski</a>
+                  </h3>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
         <section class="section" id="culture" aria-labelledby="explore-title">
           <div class="shell section-frame">
             <div class="explore-header">
@@ -2263,20 +2337,6 @@
             </div>
 
             <div class="explore-stack">
-              <a class="explore-row" href="./the-new-new-wave.html">
-                <div class="explore-row-media">
-                  <img
-                    class="explore-image"
-                    src="./Assets/New%20Wave/New%20Wave%20Hero/new%20new%20wave.png"
-                    alt="Portrait collage of contemporary Macedonian filmmakers for The (New) New Wave article."
-                    loading="lazy"
-                  />
-                </div>
-                <div class="explore-row-copy">
-                  <h3 class="explore-row-title">The (New) New Wave</h3>
-                </div>
-              </a>
-
               <a class="explore-row" href="./swan-dress.html">
                 <div class="explore-row-media">
                   <img
@@ -2336,20 +2396,6 @@
                 </div>
               </a>
 
-              <a class="explore-row" href="./martinoski.html">
-                <div class="explore-row-media">
-                  <div class="explore-image explore-image--photo">
-                    <img
-                      src="./Assets/Martinoski%20Article/Nikola%27s%20Hero%20Images/Martinoski%20Portrait.png"
-                      alt="Portrait-oriented collage image of Nikola Martinoski"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-                <div class="explore-row-copy">
-                  <h3 class="explore-row-title">The Many Faces of Nikola Martinoski</h3>
-                </div>
-              </a>
             </div>
           </div>
         </section>
@@ -2470,16 +2516,6 @@
             heroImage: "./Assets/Stranci/Stranci%20Pix/stranci-index-portrait.png",
             alt: "Three people posing for a phone camera against a yellow and pink painted backdrop with social media icons."
           },
-          quality: {
-            title: "Quality of Life Survey 2026",
-            href: "./quality-of-life.html",
-            meta: "Quality of Life | Urbanism",
-            dek: "A ranked survey of where everyday life works best across the Macedonian geographic and cultural region.",
-            heroImage: "./Assets/Quality%20of%20Life/hero-final.png",
-            cardImage: "./Assets/Quality%20of%20Life/hero-final.png",
-            cardAlt: "Collage of a woman holding the Macedonian flag for the Quality of Life Survey 2026.",
-            alt: "Collage of a woman holding the Macedonian flag for the Quality of Life Survey 2026."
-          },
           tokyo: {
             title: "Tokyo on the Vardar",
             href: "./skopje-tange.html",
@@ -2525,8 +2561,8 @@
           }
         };
 
-        var heroRotationSlugs = ["quality", "stranci", "tokyo", "nation"];
-        var selectedStorySlugs = ["tokyo", "prespa", "quality", "nation", "stranci"];
+        var heroRotationSlugs = ["stranci", "tokyo", "nation"];
+        var selectedStorySlugs = heroRotationSlugs.concat(["prespa", "newWave"]);
         var selectedSlug = heroRotationSlugs[Math.floor(Math.random() * heroRotationSlugs.length)];
         var selectedArticle = articles[selectedSlug];
 
