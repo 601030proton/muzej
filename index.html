@@ -2183,14 +2183,14 @@
                 </div>
               </article>
 
-              <article class="more-from-muzej-card">
+              <article class="more-from-muzej-card" data-in-rotation-slot="scene">
                 <a class="more-from-muzej-image-link" href="https://www.instagram.com/koturkafeifilm/" target="_blank" rel="noopener noreferrer" aria-label="Open Kotur Kafe Film on Instagram">
                   <div class="more-from-muzej-image">
                     <img src="./Assets/In%20Rotation/in-rotation-kotur.png" alt="Crowd dancing under a disco ball at Kotur, Skopje" loading="lazy" />
                   </div>
                 </a>
                 <div class="more-from-muzej-copy">
-                  <p class="story-card-kicker">STAY LATE</p>
+                  <p class="story-card-kicker">SCENE</p>
                   <h3 class="story-card-title"><a href="https://www.instagram.com/koturkafeifilm/" target="_blank" rel="noopener noreferrer" aria-label="Open Kotur Kafe Film on Instagram">Kotur, Skopje</a></h3>
                 </div>
               </article>
@@ -2462,6 +2462,22 @@
               alt: "MELEEM",
               ariaLabel: "Open MELEEM on Instagram"
             }
+          ],
+          scene: [
+            {
+              title: "Kotur, Skopje",
+              href: "https://www.instagram.com/koturkafeifilm/",
+              image: "./Assets/In%20Rotation/in-rotation-kotur.png",
+              alt: "Crowd dancing under a disco ball at Kotur, Skopje",
+              ariaLabel: "Open Kotur Kafe Film on Instagram"
+            },
+            {
+              title: "Cafe Tigre, Bitola",
+              href: "https://www.google.com/maps/search/?api=1&query=Cafe%20Tigre%20Bitola",
+              image: "./Assets/In%20Rotation/The%20Scene/Scene1.png",
+              alt: "DJ performing at Cafe Tigre in Bitola",
+              ariaLabel: "Find Cafe Tigre in Bitola on Google Maps"
+            }
           ]
         };
 
@@ -2501,6 +2517,7 @@
 
         applyItem("spinning");
         applyItem("following");
+        applyItem("scene");
       })();
 
     </script>
