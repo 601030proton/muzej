@@ -2525,6 +2525,16 @@
     <script>
       (function () {
         var articles = {
+          quality: {
+            title: "Quality of Life Survey 2026",
+            href: "./quality-of-life.html",
+            meta: "Quality of Life | Urbanism",
+            dek: "A ranked survey of where everyday life works best across the Macedonian geographic and cultural region.",
+            heroImage: "./Assets/Quality%20of%20Life/hero-final.png",
+            cardImage: "./Assets/Quality%20of%20Life/hero-final.png",
+            cardAlt: "Collage of a woman holding the Macedonian flag for the Quality of Life Survey 2026.",
+            alt: "Collage of a woman holding the Macedonian flag for the Quality of Life Survey 2026."
+          },
           stranci: {
             title: "How to Be From Somewhere Else",
             href: "./the-stranci.html",
@@ -2578,8 +2588,8 @@
           }
         };
 
-        var heroRotationSlugs = ["stranci", "tokyo", "nation"];
-        var selectedStorySlugs = heroRotationSlugs.concat(["prespa", "newWave"]);
+        var heroRotationSlugs = ["quality", "stranci", "tokyo", "nation"];
+        var selectedStorySlugs = ["tokyo", "prespa", "quality", "nation", "stranci", "newWave"];
         var selectedSlug = heroRotationSlugs[Math.floor(Math.random() * heroRotationSlugs.length)];
         var selectedArticle = articles[selectedSlug];
 
