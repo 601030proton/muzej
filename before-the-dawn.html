@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Before the Dawn. An essay from МУЗЕЈ on Vlado Janevski, Macedonia’s first Eurovision entry, and the meaning of being seen.">
+<title>Before the Dawn | МУЗЕЈ</title>
+<link rel="icon" type="image/png" href="./Assets/Font/Muzej%20Logo.ai.png">
+<link rel="apple-touch-icon" href="./Assets/Font/Muzej%20Logo.ai.png">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&display=swap"
+/>
+<link rel="stylesheet" href="https://use.typekit.net/gnw6uol.css">
+<style>
+:root {
+  --background: #ffffff;
+  --foreground: #0f0e0d;
+  --white: #ffffff;
+  --ink: #0f0e0d;
+  --ink-soft: rgba(15, 14, 13, 0.62);
+  --ink-faint: rgba(15, 14, 13, 0.12);
+  --muted: #70675d;
+  --rule: rgba(23, 21, 19, 0.09);
+  --page-x: clamp(18px, 5.2vw, 72px);
+  --nav-h: clamp(88px, 10vw, 128px);
+  --feature-w: min(1280px, calc(100vw - (var(--page-x) * 2)));
+  --rail-gap: clamp(28px, 5vw, 76px);
+  --body-col: minmax(380px, 560px);
+  --body-tail: clamp(16px, 1.4vw, 24px);
+  --section-gap: clamp(48px, 8vw, 108px);
+  --content-max: 1520px;
+  --font-display: "ivypresto-display", "IvyPresto Display", "Ivy Presto", serif;
+  --font-wordmark: var(--font-display);
+  --serif: var(--font-display);
+        --headline-serif: var(--font-display);
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --article-serif: 'Adobe Jenson', Georgia, serif;
+  --brand-serif: var(--font-wordmark);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--article-serif);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+.shell {
+  width: min(100%, var(--content-max));
+  margin: 0 auto;
+  padding-left: var(--page-x);
+  padding-right: var(--page-x);
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  background: var(--background);
+}
+.header-frame {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  padding-top: 28px;
+  padding-bottom: 24px;
+}
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-wordmark);
+  font-size: clamp(2.4rem, 1.9rem + 1.43vw, 3.76rem);
+  line-height: 0.92;
+  letter-spacing: 0.09em;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+
+}
+
+.utility-link,
+.utility-menu-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  letter-spacing: 0.11em;
+  color: rgba(23, 21, 19, 0.58);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+.utility-link:hover,
+.utility-menu-item:hover {
+  color: var(--foreground);
+}
+.header-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.utility-menu {
+  position: relative;
+}
+.utility-menu summary {
+  list-style: none;
+}
+.utility-menu summary::-webkit-details-marker {
+  display: none;
+}
+.utility-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: color 180ms ease, opacity 180ms ease;
+}
+.utility-trigger:hover {
+  opacity: 0.72;
+}
+.utility-trigger:focus-visible {
+  outline: 2px solid rgba(141, 79, 61, 0.45);
+  outline-offset: 3px;
+}
+.utility-icon {
+  display: grid;
+  gap: 0.26rem;
+}
+.utility-icon-line {
+  display: block;
+  width: 1.45rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.88;
+}
+.utility-panel {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  right: 0;
+  z-index: 10;
+  display: grid;
+  min-width: 10rem;
+  padding: 0.45rem 0;
+  border: 1px solid rgba(23, 21, 19, 0.12);
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(23, 21, 19, 0.08);
+}
+.utility-panel-group {
+  display: grid;
+  gap: 0;
+}
+.utility-panel-utility {
+  margin-top: 0.25rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid rgba(23, 21, 19, 0.1);
+}
+.utility-panel .utility-link,
+.utility-panel .utility-menu-item {
+  justify-content: flex-start;
+  min-height: 0;
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  background: transparent;
+}
+.utility-panel-utility .utility-link {
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  color: rgba(23, 21, 19, 0.52);
+}
+.utility-panel .utility-menu-item {
+  cursor: pointer;
+}
+.utility-panel .utility-link:hover,
+.utility-panel .utility-menu-item:hover {
+  background: rgba(23, 21, 19, 0.035);
+}
+
+main {
+  padding-top: clamp(24px, 3.2vw, 48px);
+}
+
+.feature {
+  padding:
+    clamp(0px, 0.6vw, 6px)
+    clamp(16px, 3vw, 40px)
+    clamp(56px, 8vw, 102px);
+}
+.feature-inner {
+  display: grid;
+  grid-template-columns: minmax(420px, 1.06fr) minmax(300px, 0.84fr);
+  gap: clamp(22px, 3.8vw, 52px);
+  align-items: stretch;
+  max-width: min(1320px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
+  margin: 0 auto;
+}
+.feature-media {
+  margin: 0;
+}
+.feature-media img {
+  width: 100%;
+  height: clamp(620px, 80vh, 920px);
+  object-fit: contain;
+  object-position: center top;
+  background: var(--white);
+}
+.feature-copy {
+  min-height: clamp(620px, 80vh, 920px);
+  max-width: 27rem;
+  margin: 0 auto;
+  padding: clamp(26px, 3.6vw, 42px) 0 clamp(20px, 3vw, 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.feature-title {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(38px, 4.9vw, 76px);
+  font-weight: 400;
+  line-height: 0.96;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+.feature-title-break {
+  display: block;
+}
+.feature-byline {
+  margin: auto 0 0;
+  color: var(--ink-soft);
+  font-size: clamp(12px, 0.95vw, 14px);
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.feature-deck {
+  max-width: min(1320px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
+  margin: clamp(28px, 4vw, 52px) auto 0;
+  color: var(--ink);
+  font-size: clamp(17px, 1.55vw, 23px);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+}
+.article-shell {
+  max-width: var(--feature-w);
+  margin: 0 auto;
+  padding: 0 var(--page-x) clamp(32px, 4vw, 56px);
+}
+.content-row {
+  display: grid;
+  grid-template-columns: minmax(240px, 1.08fr) var(--body-col) var(--body-tail);
+  column-gap: var(--rail-gap);
+  align-items: start;
+}
+.article-body {
+  display: grid;
+  grid-template-columns: minmax(240px, 1.08fr) var(--body-col) var(--body-tail);
+  column-gap: var(--rail-gap);
+  align-items: start;
+  margin-bottom: var(--section-gap);
+}
+.content-row + .content-row {
+  margin-top: var(--section-gap);
+}
+.content-row .empty-rail,
+.article-body .empty-tail,
+.content-row .empty-tail {
+  min-height: 1px;
+}
+.article-body-media {
+  margin: 0;
+  align-self: start;
+  position: sticky;
+  top: calc(var(--nav-h) + clamp(12px, 2vw, 26px));
+}
+.article-body-media img {
+  width: 100%;
+  height: auto;
+}
+.article-body-media figcaption {
+  margin-top: 12px;
+  color: var(--ink-soft);
+  font-size: 8px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+.article-body-copy {
+  min-width: 0;
+}
+
+.section-heading {
+  margin: 0;
+  max-width: 15ch;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+.body-block p {
+  margin: 0;
+  font-size: clamp(16px, 1.18vw, 18px);
+  line-height: 1.82;
+}
+.body-block p + p {
+  margin-top: 1.75em;
+}
+
+.pull-quote {
+  margin: 0;
+  max-width: none;
+  font-size: clamp(20px, 2.35vw, 26px);
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.gallery-reading {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 1.9vw, 24px);
+  margin: var(--section-gap) 0 0;
+}
+.gallery-reading-media,
+.gallery-reading-feature {
+  margin: 0;
+  aspect-ratio: 15 / 21;
+  overflow: hidden;
+}
+.gallery-reading-media img,
+.gallery-reading-feature img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-reading-side {
+  min-width: 0;
+}
+.article-body-lower {
+  margin-top: clamp(22px, 3vw, 34px);
+  margin-bottom: 0;
+}
+
+.more-from-muzej {
+  padding-top: clamp(32px, 4vw, 56px);
+  padding-bottom: clamp(82px, 10vw, 148px);
+  background: transparent;
+  color: var(--foreground);
+}
+.more-from-muzej-frame {
+  display: grid;
+  width: min(calc(100% - (var(--page-x) * 2)), 68rem);
+  max-width: 68rem;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  border-top: 2px solid var(--foreground);
+  padding-top: clamp(2.1rem, 4vw, 3.25rem);
+}
+.more-from-muzej-title {
+  max-width: none;
+  margin: 0;
+  font-family: var(--headline-serif);
+  font-size: clamp(1.45rem, 1vw + 1.1rem, 1.9rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 650;
+  font-optical-sizing: auto;
+}
+.related-list {
+  list-style: none;
+  margin: clamp(1.4rem, 2.5vw, 2rem) 0 0;
+  padding: 0;
+}
+.related-list li {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  padding: clamp(1.1rem, 1.8vw, 1.6rem) 0;
+  border-top: 1px solid var(--rule);
+  align-items: start;
+}
+.related-list li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+.related-list a {
+  font-family: var(--headline-serif);
+  font-size: clamp(1.1rem, 1.3vw + 0.7rem, 1.55rem);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+  font-optical-sizing: auto;
+  border-bottom: none;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+.related-list a:hover {
+  color: var(--muted);
+}
+.related-list .related-desc {
+  display: block;
+  margin-top: 0.45rem;
+  font-family: var(--sans);
+  font-size: clamp(0.82rem, 0.78rem + 0.18vw, 0.94rem);
+  line-height: 1.72;
+  letter-spacing: 0;
+  color: var(--muted);
+}
+
+.site-footer {
+  margin-top: 0;
+}
+.muzej-footer {
+  width: 100%;
+  padding: clamp(3.5rem, 7vw, 6rem) var(--page-x);
+  background: #000000;
+  color: #f7f2e9;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: minmax(320px, 620px) minmax(180px, 260px);
+  gap: clamp(3rem, 7vw, 6rem);
+  justify-content: center;
+  align-items: start;
+  width: min(100%, 1160px);
+  margin: 0 auto;
+}
+.footer-brand {
+  min-width: 0;
+}
+.footer-wordmark {
+  display: inline-flex;
+  font-family: var(--font-wordmark);
+  font-size: clamp(3.1rem, 5vw, 5rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: 0.04em;
+  font-optical-sizing: auto;
+  text-transform: uppercase;
+
+}
+.footer-statement {
+  max-width: 38.75rem;
+  margin: clamp(1.15rem, 1.8vw, 1.45rem) 0 0;
+  font-size: clamp(1rem, 1vw + 0.72rem, 1.15rem);
+  line-height: 1.5;
+  color: rgba(247, 242, 233, 0.86);
+}
+.muzej-footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-top: 0.28rem;
+}
+.muzej-footer .footer-links a {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  line-height: 1.2;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 180ms ease, text-decoration-color 180ms ease;
+}
+.muzej-footer .footer-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  opacity: 0.86;
+}
+
+@media (max-width: 1080px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+
+  .muzej-footer .footer-links {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 1140px) {
+  .header-frame {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 0.85rem 1.25rem;
+  }
+  .header-tools {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 980px) {
+  .menu-button {
+    padding: 8px 0 6px 18px;
+  }
+  .menu-panel {
+    padding: 0 calc(var(--page-x) + 18px) 0 var(--page-x);
+    gap: 16px;
+  }
+  .menu-panel a {
+    width: min(100%, 22rem);
+    font-size: clamp(26px, 5vw, 42px);
+  }
+  .feature-inner {
+    grid-template-columns: minmax(300px, 0.94fr) minmax(300px, 0.9fr);
+    gap: clamp(24px, 4vw, 46px);
+    align-items: stretch;
+  }
+  .feature-media img {
+    height: clamp(500px, 70vh, 720px);
+  }
+  .feature-copy {
+    min-height: clamp(500px, 70vh, 720px);
+    max-width: 23rem;
+  }
+  .feature-title {
+    font-size: clamp(34px, 4.35vw, 58px);
+  }
+  .feature-deck {
+    margin-top: clamp(30px, 4.2vw, 48px);
+    font-size: clamp(16px, 2.05vw, 20px);
+  }
+  .content-row {
+    grid-template-columns: minmax(170px, 0.82fr) minmax(0, 520px) clamp(14px, 1vw, 18px);
+  }
+  .article-body {
+    grid-template-columns: minmax(170px, 0.82fr) minmax(0, 520px) clamp(14px, 1vw, 18px);
+  }
+}
+
+@media (max-width: 760px) {
+  .header-frame {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .brand-mark {
+    font-size: clamp(2.16rem, 10.15vw, 2.87rem);
+
+  }
+}
+
+@media (max-width: 720px) {
+  .header-frame {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .brand-mark {
+    font-size: clamp(2.16rem, 10.15vw, 2.87rem);
+
+  }
+  .menu-button {
+    gap: 7px;
+    padding: 8px 0 6px 16px;
+    margin-top: 1px;
+  }
+  .menu-panel {
+    padding: 0 calc(var(--page-x) + 6px) 0 var(--page-x);
+    gap: 14px;
+  }
+  .menu-panel a {
+    width: min(100%, 16rem);
+    font-size: clamp(22px, 9vw, 30px);
+    line-height: 1.08;
+  }
+  .menu-panel a:last-child {
+    font-size: 18px;
+  }
+  .feature {
+    padding:
+      4px
+      var(--page-x)
+      48px;
+  }
+  .feature-inner,
+  .article-body,
+  .content-row {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    text-align: left;
+  }
+  .feature-inner {
+    display: grid;
+    gap: 22px;
+  }
+  .feature-media img {
+    height: clamp(360px, 56vh, 470px);
+  }
+  .article-body {
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .gallery-reading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin: 40px 0 0;
+  }
+  .article-body-media {
+    position: static;
+  }
+  .gallery-reading-media {
+    position: static;
+  }
+  .article-body-lower {
+    margin-top: 18px;
+    margin-bottom: 0;
+  }
+  .content-row .empty-tail {
+    display: none;
+  }
+  .article-body .empty-tail {
+    display: none;
+  }
+  .feature-copy {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+  }
+  .feature-title {
+    font-size: clamp(32px, 10.5vw, 50px);
+    line-height: 0.98;
+  }
+  .feature-byline {
+    margin: 28px 0 0;
+    font-size: 11px;
+  }
+  .feature-deck {
+    margin-top: 34px;
+    font-size: clamp(15px, 3.9vw, 18px);
+    line-height: 1.2;
+  }
+  .feature-title-break {
+    display: none;
+  }
+  .content-row + .content-row {
+    margin-top: 40px;
+  }
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: transparent;
+  pointer-events: none;
+}
+
+.site-header .header-frame,
+.site-header .brand-mark,
+.site-header .header-tools {
+  pointer-events: auto;
+}
+
+.site-header .brand-mark {
+  transform: translate3d(0, 0, 0);
+  transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.muzej-logo-hidden .site-header .brand-mark {
+  transform: translate3d(0, calc(-100% - 42px), 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header .brand-mark {
+    transition: none;
+    will-change: auto;
+  }
+
+  body.muzej-logo-hidden .site-header .brand-mark {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header { z-index: 2000; }
+  .site-header .header-frame { grid-template-columns: minmax(0, 1fr) auto; align-items: center; justify-items: stretch; gap: 1rem; }
+  .site-header .brand-mark { justify-self: start; min-width: 0; }
+  .site-header .header-tools { justify-self: end; justify-content: flex-end; margin-left: auto; position: relative; z-index: 2002; }
+  .site-header .utility-menu { position: static; }
+  .site-header .utility-trigger { position: relative; z-index: 2003; }
+  .site-header .utility-panel { position: fixed; inset: 0; left: 0; right: 0; top: 0; z-index: 2001; display: grid; align-content: center; width: 100vw; max-width: none; min-width: 0; height: 100vh; height: 100svh; padding: clamp(76px, 18vh, 128px) var(--page-x) 48px; border: 0; background: rgba(255, 255, 255, 0.98); box-shadow: none; overflow-y: auto; transform: none; }
+  .site-header .utility-panel-group { width: min(100%, 22rem); margin: 0 auto; }
+  .site-header .utility-panel-utility { margin-top: 0.8rem; padding-top: 0.85rem; }
+  .site-header .utility-panel .utility-link,
+  .site-header .utility-panel .utility-menu-item { justify-content: center; min-height: 2.75rem; padding: 0.72rem 0; text-align: center; }
+}
+</style>
+<link rel="stylesheet" href="article-headlines.css">
+<link rel="stylesheet" href="more-from-muzej.css">
+<style>
+.vlado-article .feature-title {
+  font-size: clamp(42px, 4.75vw, 76px);
+}
+
+@media (max-width: 980px) {
+  .vlado-article .feature-title {
+    font-size: clamp(38px, 6.2vw, 64px);
+  }
+}
+
+@media (max-width: 720px) {
+  .vlado-article .feature-title {
+    font-size: clamp(34px, 11.2vw, 52px);
+    line-height: 0.92;
+  }
+}
+</style>
+<script src="more-from-muzej.js?v=20260731-vlado" defer></script>
+</head>
+<body class="kinfolk-article-hero vlado-article">
+
+<header class="site-header">
+  <div class="shell header-frame">
+    <a class="brand-mark" href="index.html" aria-label="Muzej home">Muzej</a>
+
+    <div class="header-tools">
+      <details class="utility-menu">
+        <summary class="utility-trigger" aria-label="Open navigation menu">
+          <span class="utility-icon" aria-hidden="true">
+            <span class="utility-icon-line"></span>
+            <span class="utility-icon-line"></span>
+            <span class="utility-icon-line"></span>
+          </span>
+        </summary>
+        <nav class="utility-panel" aria-label="Site navigation">
+          <div class="utility-panel-group">
+            <a class="utility-link" href="index.html">Home</a>
+            <a class="utility-link" href="index.html#selected-stories">Selected Stories</a>
+            <a class="utility-link" href="index.html#in-rotation">In Rotation</a>
+            <a class="utility-link" href="index.html#culture">Culture</a>
+            <a class="utility-link" href="about.html">About Muzej</a>
+          </div>
+          <div class="utility-panel-group utility-panel-utility">
+            <a class="utility-link" href="mailto:muzej.mk@proton.me">Contact</a>
+            <a class="utility-link" href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main>
+  <header class="feature">
+    <div class="feature-inner">
+      <figure class="feature-media">
+        <img src="./Assets/Vlado/Pics/hero.png" alt="Vlado Janevski performing on a brightly lit stage in a blue suit">
+      </figure>
+
+      <div class="feature-copy">
+        <p class="feature-byline">Words Ace Trajkovski</p>
+        <h1 class="feature-title">Before the Dawn</h1>
+      </div>
+    </div>
+    <p class="feature-deck">Vlado Janevski gave Macedonia its first Eurovision entry, and its first taste of being seen.</p>
+  </header>
+
+  <article class="article-shell">
+    <section class="article-body">
+      <figure class="article-body-media">
+        <img src="./Assets/Vlado/Pics/jan2.png" alt="Portrait of a young Vlado Janevski resting his chin on his folded hands">
+      </figure>
+
+      <div class="article-body-copy body-block">
+        <p>In May, during a public session of the Macedonian Radio Television Program Council, the broadcaster’s director general, Zoran Ristoski, announced that Macedonia would send a representative to the Eurovision Song Contest in 2027. The contest will be held in neighboring Bulgaria, making the return feel almost geographically ordained: after four consecutive years away, Macedonia would not have to travel far to re-enter Europe’s annual pageant of songs, lights, national feeling, and exquisitely tabulated disappointment. MRT said it expected support from the European Broadcasting Union and a more favorable arrangement for its return. No performer or song had yet been named. There was only the commitment to appear.</p>
+
+        <p>A little more than five weeks later, Vlado Janevski died in Skopje, after a short illness, at the age of sixty-five. Janevski had been a singer, composer, lyricist, multi-instrumentalist, reluctant national symbol, and, since one evening in Birmingham in 1998, the answer to a permanent Macedonian trivia question: Who was first? He would not live to see the country’s planned return, but the announcement made his story newly resonant. Before Macedonia could go back to Eurovision, it was worth remembering how it had arrived there in the first place.</p>
+
+        <p>The answer begins not in Birmingham but with an absence.</p>
+
+        <p>In 1996, four years after independence, Macedonia selected Kaliopi to perform “Samo ti.” The country was preparing to make its Eurovision début, but that year the European Broadcasting Union imposed an audio-only prequalification round to reduce the number of entries. The song did not advance. Macedonia had chosen a representative, recorded an entry, and approached the threshold of the contest, only to disappear before the television cameras were turned on. It was a début that had technically begun and publicly never happened.</p>
+
+        <p>That thwarted attempt gave the selection of 1998 an unusual weight. The next singer would not simply be competing for a respectable score. He would be asked to accomplish the basic act of national appearance—to stand on a stage beneath the country’s contested international designation and establish, before millions of viewers, that Macedonia was there.</p>
+
+        <p>Janevski was an unsurprising person on whom to place that burden. Born in Skopje in 1960, he studied English language and literature and played piano, guitar, and drums. Before becoming known as a solo balladeer, he passed through a succession of bands—Tost Sendvich, Bon Ton, Fotomodel, and Lastovica—whose names map an apprenticeship in the musical culture of late Yugoslavia. He had learned pop music as ensemble work: rehearsals, arrangements, festivals, compromises, the ability to make feeling legible within the length of a song.</p>
+
+        <p>His first encounter with the Eurovision apparatus came before Macedonia had its own place inside it. In 1992, appearing with Music Box at Jugovizija, the Yugoslav selection contest, Janevski performed “Hiljadu snova” and finished eleventh in a field of twenty. Jugovizija belonged to an older cultural system, one in which a singer from Skopje could enter a federal competition whose winner would be dispatched to represent Yugoslavia. Six years later, Janevski would take part in the same ritual under radically altered conditions. The federation was gone. The festival circuit remained. What had once been a route through Yugoslavia had become a means for Macedonia to present itself to Europe.</p>
+
+        <p>By then, Janevski’s domestic position was secure. His début album, <i>Parče Duša</i>, appeared in 1993. The following year, he won Makfest with “Eden baknež,” and released “Domašna rabota (Odličen 5)” with Igor Džambazov. In 1996 came <i>Daleku E Neboto</i> and the compilation <i>Sé Najdobro</i>. Promotional material supplied by MKRTV before Eurovision described him as Macedonia’s most popular pop artist of the decade and claimed that he had been voted pop singer of the year in 1994, 1995, and 1996. Such language was not an independently audited measurement of national taste. It was broadcaster rhetoric. But broadcaster rhetoric has its own documentary value: it tells us how MRT wanted Janevski to be understood—as established, trustworthy, and recognizably Macedonian without being provincial.</p>
+
+        <p>He was not an unknown requiring Eurovision to invent him. He was the sort of artist institutions choose when they want risk to appear dignified.</p>
+
+        <p>On March 7, 1998, twenty songs were performed at Universal Hall in Skopje. The selection process had three stages. MRT first issued an anonymous call for compositions. A special jury then reduced the submissions to twenty finalists. The winner was left to a public televote. It was a structure that combined official supervision with popular consent: the broadcaster determined what could be chosen, and the audience determined which of those choices would represent it.</p>
+
+        <p>Seen from a distance of nearly three decades, the line-up resembles a compressed history of Macedonian popular music. Kaliopi was there, two years after the aborted 1996 attempt. Karolina Gočeva, then still near the beginning of her career, was there. So were Risto Samardžiev, Tanja Carovska, Suzana Spasovska, Dule &amp; Koki, and a young Toše Proeski performing with Megatim Plus. Many of the people who would define Macedonian music over the next decade were gathered inside one hall, competing to become the country’s first visible Eurovision representative.</p>
+      </div>
+      <div class="empty-tail" aria-hidden="true"></div>
+    </section>
+
+    <div class="content-row">
+      <div class="empty-rail" aria-hidden="true"></div>
+      <aside class="pull-quote">Before Janevski, Macedonia had tried to appear. After Janevski, it had appeared.</aside>
+      <div class="empty-tail" aria-hidden="true"></div>
+    </div>
+
+    <section class="gallery-reading" aria-label="Portraits of Vlado Janevski">
+      <figure class="gallery-reading-media">
+        <img src="./Assets/Vlado/Pics/jan4.png" alt="Black-and-white portrait of Vlado Janevski wearing sunglasses" loading="lazy">
+      </figure>
+
+      <div class="gallery-reading-side">
+        <figure class="gallery-reading-feature">
+          <img src="./Assets/Vlado/Pics/jan5.png" alt="Vlado Janevski in a pale violet sweater" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="article-body article-body-lower">
+      <figure class="article-body-media">
+        <img src="./Assets/Vlado/Pics/jan.png" alt="Vlado Janevski singing into a microphone in a blue suit" loading="lazy">
+      </figure>
+
+      <div class="article-body-copy body-block">
+        <p>The voting was substantial enough to suggest that the public understood the importance of the decision. A total of 147,968 calls were registered. Janevski’s “Ne zori, zoro” received 38,642 of them—just over twenty-six per cent. Sašo Gigov-Giš finished close behind with 34,774 votes for “Samovilska svadba,” while Dule &amp; Koki placed third with 23,615. Together, the top three entries accounted for nearly two-thirds of all calls.</p>
+
+        <p>Farther down the results was a future that had not yet announced itself. Karolina finished fourth with 10,454 votes. Risto Samardžiev was fifth with 8,866. Suzana Spasovska received 5,441. Toše and Megatim Plus placed eighth with 4,210, and Kaliopi was ninth with 3,834. Janevski’s victory was clear but not overwhelming: he won by 3,868 calls, a margin large enough to confer legitimacy and small enough to preserve the feeling that the outcome had genuinely been contested.</p>
+
+        <p>The song selected that night was well suited to the ambiguity of the occasion. “Ne zori, zoro”—roughly, “Do Not Dawn, O Dawn”—was composed by Grigor Koprov, with lyrics by Janevski and an arrangement for the national selection credited to Valentino Skenderovski. It was released by MRT in Macedonian and English, the latter under the title “Somebody Stop the Dawn.”</p>
+
+        <p>The English title preserved the central image but not its full emotional architecture. “Ne zori, zoro” belongs to the long Balkan tradition in which dawn is not a promise but a threat. Night permits fantasy, postponement, drink, and denial; morning forces the world to resume. The singer addresses his mother. He speaks of a woman and of the possibility that her family will not allow the match. He drinks, loses himself, and imagines a drunken dance at the edge of daylight. The drama is intimate, but it is also social. Love is not merely a negotiation between two people. Families hover nearby. Reputation intrudes. The beloved is present mostly through the damage of her possible absence.</p>
+
+        <p>This was not the language of generic international pop, even though the song’s structure was recognizable as a Eurovision ballad. Its usefulness lay in that double identity. It could be understood as a familiar lament by a viewer who knew nothing about Macedonia, while retaining the emotional codes of the culture that had sent it. Janevski did not arrive offering ethnography or spectacle. He arrived with a song in which the national quality was carried by phrasing, social detail, and melancholy.</p>
+
+        <p>The Eurovision Song Contest has always claimed to be about music while behaving like a ceremony of recognition. Countries do not merely send singers; they submit small, carefully framed propositions about who they are. For established states, the ritual can be playful. For a young country still being introduced under the provisional label “FYR Macedonia,” appearing on the scoreboard was not entirely frivolous. The contest placed Macedonia’s unresolved international identity directly inside a mass-entertainment format: a name dispute rendered in broadcast graphics, followed by a ballad.</p>
+
+        <p>Janevski performed twenty-fifth in Birmingham. He finished nineteenth with sixteen points. Croatia awarded six, Slovenia four, Romania three, and Slovakia three. Macedonia, casting its own first Eurovision votes, gave twelve points to Croatia, ten to the United Kingdom, and eight to Israel. Under the relegation system then in force, the result meant that Macedonia did not participate in 1999.</p>
+
+        <p>On paper, it was an unremarkable finish. Nineteenth place rarely generates mythology beyond the country that earned it. There was no verified national chart record for the song, no international commercial breakthrough, and no evidence that Birmingham transformed Janevski into a pan-European star. The scoreboard reduced the evening to sixteen points and a place in the lower third.</p>
+
+        <p>But a first appearance accumulates value differently from a victory. Its significance lies not in defeating others but in having happened at all.</p>
+
+        <p>Janevski’s performance became the opening scene of Macedonia’s Eurovision history. Every later entry would be appended to it: XXL in 2000; Karolina Gočeva in 2002 and again in 2007; Toše Proeski in 2004; Elena Risteska’s twelfth-place finish in 2006; Kaliopi’s return with “Crno i belo” in 2012; and, eventually, Tamara Todevska’s “Proud,” which won the jury vote and finished seventh in 2019 with 305 points, the country’s best result. The contest changed around Macedonia—semifinals were introduced, live orchestras disappeared, staging became more elaborate, voting systems multiplied—but the national story continued to begin with Janevski asking the morning not to arrive.</p>
+
+        <p>Eurovision did not consume the rest of his career. That is essential to understanding his place in Macedonian music. He continued releasing albums—<i>Ima Nešto Posilno Od Se</i> in 2002, <i>Vakov Ili Takov</i> in 2004, and <i>Povtorno Se Zaljubuvam Vo Tebe</i> in 2006—and moved through a wide regional network of collaborators. He sang with Karolina, performed with Bajaga, and wrote the lyrics to “Ajde vodi me,” whose music was composed by Momčilo Bajagić and arranged by Nikša Bratoš.</p>
+
+        <p>His later catalogue continued in the same singer-songwriter mode: romantic directness, carefully shaped melancholy, a voice that seemed most comfortable addressing one person even when thousands were listening. He signed an exclusive agreement with Croatia Records in 2019. That March, according to his official site, a Skopje concert drew more than eight thousand people. Later singles—“Otkad si njegova,” “Nedostasuvaš,” “Nenormalen,” “Zlatni godini,” and “Prekrasen den”—showed an artist continuing to write and release rather than simply touring the memory of 1998.</p>
+
+        <p>In 2024, five concerts at the Macedonian Philharmonic reportedly sold out in quick succession. In February of 2026, he released “Prinčipesa” and held what would become his final major concert, at the Boris Trajkovski Arena in Skopje, on Valentine’s Day. His career had lasted too long, produced too many songs, and retained too large an audience to be reduced to one Eurovision entry. MRT’s obituary described him as one of the most influential and recognizable figures in Macedonian pop and counted six studio albums across his career.</p>
+
+        <p>And yet Eurovision remained near the beginning of every account of his life. This is the peculiar force of being first. A singer may spend decades accumulating work, but history prefers a clean threshold. Before Janevski, Macedonia had tried to appear. After Janevski, it had appeared.</p>
+
+        <p>The distinction mattered again after 2022, when Andrea’s “Circles” became Macedonia’s last entry before withdrawal. MRT cited financial pressures when it sat out the 2023 contest. The absence continued in 2024, 2025, and 2026, even as the broadcaster maintained a presence at Junior Eurovision. Four contests passed without a Macedonian entry. For a country that had selected a participant every year from 2004 through 2022—including an entry for the cancelled 2020 contest—the silence became conspicuous.</p>
+
+        <p>A Eurovision absence is hardly a national emergency. Broadcasters have limited budgets; participation fees, travel, staging, accommodation, and production all compete with less glamorous obligations. But Eurovision had provided Macedonia with something disproportionate to its artistic seriousness: a recurring appointment with visibility. For three minutes at a time, the country could be neither footnote nor disputed terminology. It was a song, a face, a language, a costume, a set of points. Even failure produced an image that could be remembered.</p>
+
+        <p>The return in 2027 will therefore carry two competing expectations. It will be treated as a fresh start, and it will be measured against everything that came before: Elena’s result, Kaliopi’s voice, Toše’s enduring stature, Tamara’s jury victory, the entries that came close to qualifying, the songs that vanished into the semifinal rankings. The temptation will be to treat Eurovision as a problem to be solved—to find the correct producer, staging concept, language, genre, or voting coalition. But the history inaugurated by Janevski suggests that the contest’s value for Macedonia has never been entirely captured by placement.</p>
+
+        <p>In 1998, Janevski did not win Europe. He did something more elementary. He made the country visible inside a format built from visibility. He walked onto the Birmingham stage representing a state that had already been prevented from appearing once, under a name it did not choose, and sang in Macedonian about the wish to suspend morning.</p>
+
+        <p>Twenty-eight years later, MRT announced that Macedonia would return. Then Janevski died, leaving the journey without the man who had begun it.</p>
+
+        <p>When the next Macedonian performer steps onto the Eurovision stage in Bulgaria, the production will be brighter, faster, and vastly more engineered than the one Janevski entered. The points will arrive by a different system. Social media will render every rehearsal into instant judgment. The delegation will speak of qualification, strategy, and the need to appear contemporary.</p>
+
+        <p>But beneath the new machinery will be the old request: let us be seen, and let the moment last a little longer.</p>
+
+        <p>The road back to Eurovision begins where the first one did—before the dawn.</p>
+      </div>
+
+      <div class="empty-tail" aria-hidden="true"></div>
+    </section>
+  </article>
+
+  <section class="more-from-muzej" data-more-from-muzej aria-labelledby="more-from-muzej-title"></section>
+</main>
+
+
+<footer class="site-footer muzej-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-wordmark">Muzej</span>
+      <p class="footer-statement">An editorial archive of Macedonian art, style, tradition, and culture.</p>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="about.html">ABOUT MUZEJ</a>
+      <a href="mailto:muzej.mk@proton.me">CONTACT</a>
+      <a href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer" aria-label="Open Muzej on Instagram">INSTAGRAM</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+const menuButton = document.getElementById('menuButton');
+const menuPanel = document.getElementById('menuPanel');
+
+if (menuButton && menuPanel) {
+  const setMenuState = (isOpen) => {
+    menuPanel.classList.toggle('open', isOpen);
+    menuButton.classList.toggle('is-open', isOpen);
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+    menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  };
+
+  menuButton.addEventListener('click', () => {
+    setMenuState(!menuPanel.classList.contains('open'));
+  });
+
+  menuPanel.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setMenuState(false));
+  });
+}
+</script>
+
+<script>
+  (function () {
+    var previousY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+    var ticking = false;
+    var revealZone = 24;
+    var motionThreshold = 4;
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    function updateMuzejLogoVisibility() {
+      var currentY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+      var delta = currentY - previousY;
+
+      if (reducedMotion.matches) {
+        document.body.classList.remove("muzej-logo-hidden");
+        ticking = false;
+        return;
+      }
+
+      if (currentY <= revealZone) {
+        document.body.classList.remove("muzej-logo-hidden");
+      } else if (delta > motionThreshold) {
+        document.body.classList.add("muzej-logo-hidden");
+      } else if (delta < -motionThreshold) {
+        document.body.classList.remove("muzej-logo-hidden");
+      }
+
+      previousY = currentY;
+      ticking = false;
+    }
+
+    function requestMuzejLogoVisibility() {
+      if (!ticking) {
+        window.requestAnimationFrame(updateMuzejLogoVisibility);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener("scroll", requestMuzejLogoVisibility, { passive: true });
+    window.addEventListener("resize", requestMuzejLogoVisibility);
+
+    if (reducedMotion.addEventListener) {
+      reducedMotion.addEventListener("change", requestMuzejLogoVisibility);
+    } else if (reducedMotion.addListener) {
+      reducedMotion.addListener(requestMuzejLogoVisibility);
+    }
+
+    updateMuzejLogoVisibility();
+  })();
+</script>
+
+</body>
+</html>

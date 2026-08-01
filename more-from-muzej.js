@@ -41,6 +41,16 @@
       position: "center top"
     },
     {
+      slug: "before-the-dawn",
+      href: "before-the-dawn.html",
+      title: "Before the Dawn",
+      kicker: "Music | Eurovision",
+      dek: "Vlado Janevski gave Macedonia its first Eurovision entry, and its first taste of being seen.",
+      image: "./Assets/Vlado/Pics/hero.png",
+      alt: "Vlado Janevski performing on a brightly lit stage in a blue suit.",
+      position: "center top"
+    },
+    {
       slug: "wearing-the-nation",
       href: "wearing-the-nation.html",
       title: "The Nation on Their Backs",
