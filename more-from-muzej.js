@@ -36,8 +36,8 @@
       title: "Toward an Art History of the Macedonian Renaissance",
       kicker: "Art | History",
       dek: "From Saint Sophia and Nerezi to Dicho Zograf and the carved iconostases of the nineteenth-century revival.",
-      image: "./Assets/Macedonian%20Renaissance/Article%20Photos/web/kurbinovo-archangel-detail.webp",
-      alt: "Detail of the Archangel Gabriel fresco at the Church of Saint George in Kurbinovo.",
+      image: "./Assets/Macedonian%20Renaissance/Article%20Photos/web/hero.webp",
+      alt: "Collage detail of the Archangel Gabriel fresco and a painted hand against a blue field.",
       position: "center center"
     },
     {
