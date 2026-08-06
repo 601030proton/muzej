@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A long view of Macedonian art, from Saint Sophia and Nerezi to Dicho Zograf, Bigorski, and the nineteenth-century revival.">
+<title>Toward an Art History of the Macedonian Renaissance | Muzej</title>
+<link rel="icon" type="image/png" href="./Assets/Font/Muzej%20Logo.ai.png">
+<link rel="apple-touch-icon" href="./Assets/Font/Muzej%20Logo.ai.png">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&display=swap"
+/>
+<link rel="stylesheet" href="https://use.typekit.net/gnw6uol.css">
+<style>
+:root {
+  --background: #ffffff;
+  --foreground: #0f0e0d;
+  --white: #ffffff;
+  --ink: #0f0e0d;
+  --ink-soft: rgba(15, 14, 13, 0.62);
+  --ink-faint: rgba(15, 14, 13, 0.12);
+  --muted: #70675d;
+  --rule: rgba(23, 21, 19, 0.09);
+  --page-x: clamp(18px, 5.2vw, 72px);
+  --nav-h: clamp(88px, 10vw, 128px);
+  --feature-w: min(1280px, calc(100vw - (var(--page-x) * 2)));
+  --rail-gap: clamp(28px, 5vw, 76px);
+  --body-col: minmax(380px, 560px);
+  --body-tail: clamp(16px, 1.4vw, 24px);
+  --section-gap: clamp(48px, 8vw, 108px);
+  --content-max: 1520px;
+  --font-display: "ivypresto-display", "IvyPresto Display", "Ivy Presto", serif;
+  --font-wordmark: var(--font-display);
+  --serif: var(--font-display);
+        --headline-serif: var(--font-display);
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --article-serif: 'Adobe Jenson', Georgia, serif;
+  --brand-serif: var(--font-wordmark);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--article-serif);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+.shell {
+  width: min(100%, var(--content-max));
+  margin: 0 auto;
+  padding-left: var(--page-x);
+  padding-right: var(--page-x);
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  background: var(--background);
+}
+.header-frame {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  padding-top: 28px;
+  padding-bottom: 24px;
+}
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-wordmark);
+  font-size: clamp(2.4rem, 1.9rem + 1.43vw, 3.76rem);
+  line-height: 0.92;
+  letter-spacing: 0.09em;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+
+}
+
+.utility-link,
+.utility-menu-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  letter-spacing: 0.11em;
+  color: rgba(23, 21, 19, 0.58);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+.utility-link:hover,
+.utility-menu-item:hover {
+  color: var(--foreground);
+}
+.header-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.utility-menu {
+  position: relative;
+}
+.utility-menu summary {
+  list-style: none;
+}
+.utility-menu summary::-webkit-details-marker {
+  display: none;
+}
+.utility-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: color 180ms ease, opacity 180ms ease;
+}
+.utility-trigger:hover {
+  opacity: 0.72;
+}
+.utility-trigger:focus-visible {
+  outline: 2px solid rgba(141, 79, 61, 0.45);
+  outline-offset: 3px;
+}
+.utility-icon {
+  display: grid;
+  gap: 0.26rem;
+}
+.utility-icon-line {
+  display: block;
+  width: 1.45rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.88;
+}
+.utility-panel {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  right: 0;
+  z-index: 10;
+  display: grid;
+  min-width: 10rem;
+  padding: 0.45rem 0;
+  border: 1px solid rgba(23, 21, 19, 0.12);
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(23, 21, 19, 0.08);
+}
+.utility-panel-group {
+  display: grid;
+  gap: 0;
+}
+.utility-panel-utility {
+  margin-top: 0.25rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid rgba(23, 21, 19, 0.1);
+}
+.utility-panel .utility-link,
+.utility-panel .utility-menu-item {
+  justify-content: flex-start;
+  min-height: 0;
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  background: transparent;
+}
+.utility-panel-utility .utility-link {
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  color: rgba(23, 21, 19, 0.52);
+}
+.utility-panel .utility-menu-item {
+  cursor: pointer;
+}
+.utility-panel .utility-link:hover,
+.utility-panel .utility-menu-item:hover {
+  background: rgba(23, 21, 19, 0.035);
+}
+
+main {
+  padding-top: clamp(24px, 3.2vw, 48px);
+}
+
+.feature {
+  padding:
+    clamp(0px, 0.6vw, 6px)
+    clamp(16px, 3vw, 40px)
+    clamp(56px, 8vw, 102px);
+}
+.feature-inner {
+  display: grid;
+  grid-template-columns: minmax(420px, 1.06fr) minmax(300px, 0.84fr);
+  gap: clamp(22px, 3.8vw, 52px);
+  align-items: stretch;
+  max-width: min(1320px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
+  margin: 0 auto;
+}
+.feature-media {
+  margin: 0;
+}
+.feature-media img {
+  width: 100%;
+  height: clamp(620px, 80vh, 920px);
+  object-fit: contain;
+  object-position: center top;
+  background: var(--white);
+}
+.feature-copy {
+  min-height: clamp(620px, 80vh, 920px);
+  max-width: 27rem;
+  margin: 0 auto;
+  padding: clamp(26px, 3.6vw, 42px) 0 clamp(20px, 3vw, 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.feature-title {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(38px, 4.9vw, 76px);
+  font-weight: 400;
+  line-height: 0.96;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+.feature-title-break {
+  display: block;
+}
+.feature-byline {
+  margin: auto 0 0;
+  color: var(--ink-soft);
+  font-size: clamp(12px, 0.95vw, 14px);
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.feature-deck {
+  max-width: min(1320px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
+  margin: clamp(28px, 4vw, 52px) auto 0;
+  color: var(--ink);
+  font-size: clamp(17px, 1.55vw, 23px);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+}
+.article-shell {
+  max-width: var(--feature-w);
+  margin: 0 auto;
+  padding: 0 var(--page-x) clamp(32px, 4vw, 56px);
+}
+.content-row {
+  display: grid;
+  grid-template-columns: minmax(240px, 1.08fr) var(--body-col) var(--body-tail);
+  column-gap: var(--rail-gap);
+  align-items: start;
+}
+.article-body {
+  display: grid;
+  grid-template-columns: minmax(240px, 1.08fr) var(--body-col) var(--body-tail);
+  column-gap: var(--rail-gap);
+  align-items: start;
+  margin-bottom: var(--section-gap);
+}
+.content-row + .content-row {
+  margin-top: var(--section-gap);
+}
+.content-row .empty-rail,
+.article-body .empty-tail,
+.content-row .empty-tail {
+  min-height: 1px;
+}
+.article-body-media {
+  margin: 0;
+  align-self: start;
+  position: sticky;
+  top: calc(var(--nav-h) + clamp(12px, 2vw, 26px));
+}
+.article-body-media img {
+  width: 100%;
+  height: auto;
+}
+.article-body-media figcaption {
+  margin-top: 12px;
+  color: var(--ink-soft);
+  font-size: 8px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+.article-body-copy {
+  min-width: 0;
+}
+
+.section-heading {
+  margin: 0 0 1.15em;
+  max-width: min(100%, 24ch);
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: 0;
+  text-wrap: normal;
+}
+
+.body-block p {
+  margin: 0;
+  font-size: clamp(16px, 1.18vw, 18px);
+  line-height: 1.82;
+}
+.body-block p + p,
+.body-block p + .section-heading {
+  margin-top: 1.75em;
+}
+
+.article-inline-media {
+  width: min(88%, 420px);
+  margin: clamp(52px, 7vw, 88px) auto;
+}
+.article-inline-media img {
+  width: 100%;
+  height: auto;
+}
+
+.pull-quote {
+  margin: 0;
+  max-width: none;
+  font-size: clamp(20px, 2.35vw, 26px);
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.gallery-reading {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 1.9vw, 24px);
+  margin: var(--section-gap) 0 0;
+}
+.gallery-reading-media,
+.gallery-reading-feature {
+  margin: 0;
+  aspect-ratio: 15 / 21;
+  overflow: hidden;
+}
+.gallery-reading-media img,
+.gallery-reading-feature img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-reading-side {
+  min-width: 0;
+}
+.article-body-lower {
+  margin-top: clamp(22px, 3vw, 34px);
+  margin-bottom: 0;
+}
+
+.more-from-muzej {
+  padding-top: clamp(32px, 4vw, 56px);
+  padding-bottom: clamp(82px, 10vw, 148px);
+  background: transparent;
+  color: var(--foreground);
+}
+.more-from-muzej-frame {
+  display: grid;
+  width: min(calc(100% - (var(--page-x) * 2)), 68rem);
+  max-width: 68rem;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  border-top: 2px solid var(--foreground);
+  padding-top: clamp(2.1rem, 4vw, 3.25rem);
+}
+.more-from-muzej-title {
+  max-width: none;
+  margin: 0;
+  font-family: var(--headline-serif);
+  font-size: clamp(1.45rem, 1vw + 1.1rem, 1.9rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 650;
+  font-optical-sizing: auto;
+}
+.related-list {
+  list-style: none;
+  margin: clamp(1.4rem, 2.5vw, 2rem) 0 0;
+  padding: 0;
+}
+.related-list li {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  padding: clamp(1.1rem, 1.8vw, 1.6rem) 0;
+  border-top: 1px solid var(--rule);
+  align-items: start;
+}
+.related-list li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+.related-list a {
+  font-family: var(--headline-serif);
+  font-size: clamp(1.1rem, 1.3vw + 0.7rem, 1.55rem);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+  font-optical-sizing: auto;
+  border-bottom: none;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+.related-list a:hover {
+  color: var(--muted);
+}
+.related-list .related-desc {
+  display: block;
+  margin-top: 0.45rem;
+  font-family: var(--sans);
+  font-size: clamp(0.82rem, 0.78rem + 0.18vw, 0.94rem);
+  line-height: 1.72;
+  letter-spacing: 0;
+  color: var(--muted);
+}
+
+.site-footer {
+  margin-top: 0;
+}
+.muzej-footer {
+  width: 100%;
+  padding: clamp(3.5rem, 7vw, 6rem) var(--page-x);
+  background: #000000;
+  color: #f7f2e9;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: minmax(320px, 620px) minmax(180px, 260px);
+  gap: clamp(3rem, 7vw, 6rem);
+  justify-content: center;
+  align-items: start;
+  width: min(100%, 1160px);
+  margin: 0 auto;
+}
+.footer-brand {
+  min-width: 0;
+}
+.footer-wordmark {
+  display: inline-flex;
+  font-family: var(--font-wordmark);
+  font-size: clamp(3.1rem, 5vw, 5rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: 0.04em;
+  font-optical-sizing: auto;
+  text-transform: uppercase;
+
+}
+.footer-statement {
+  max-width: 38.75rem;
+  margin: clamp(1.15rem, 1.8vw, 1.45rem) 0 0;
+  font-size: clamp(1rem, 1vw + 0.72rem, 1.15rem);
+  line-height: 1.5;
+  color: rgba(247, 242, 233, 0.86);
+}
+.muzej-footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-top: 0.28rem;
+}
+.muzej-footer .footer-links a {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  line-height: 1.2;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 180ms ease, text-decoration-color 180ms ease;
+}
+.muzej-footer .footer-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  opacity: 0.86;
+}
+
+@media (max-width: 1080px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+
+  .muzej-footer .footer-links {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 1140px) {
+  .header-frame {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 0.85rem 1.25rem;
+  }
+  .header-tools {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 980px) {
+  .menu-button {
+    padding: 8px 0 6px 18px;
+  }
+  .menu-panel {
+    padding: 0 calc(var(--page-x) + 18px) 0 var(--page-x);
+    gap: 16px;
+  }
+  .menu-panel a {
+    width: min(100%, 22rem);
+    font-size: clamp(26px, 5vw, 42px);
+  }
+  .feature-inner {
+    grid-template-columns: minmax(300px, 0.94fr) minmax(300px, 0.9fr);
+    gap: clamp(24px, 4vw, 46px);
+    align-items: stretch;
+  }
+  .feature-media img {
+    height: clamp(500px, 70vh, 720px);
+  }
+  .feature-copy {
+    min-height: clamp(500px, 70vh, 720px);
+    max-width: 23rem;
+  }
+  .feature-title {
+    font-size: clamp(34px, 4.35vw, 58px);
+  }
+  .feature-deck {
+    margin-top: clamp(30px, 4.2vw, 48px);
+    font-size: clamp(16px, 2.05vw, 20px);
+  }
+  .content-row {
+    grid-template-columns: minmax(170px, 0.82fr) minmax(0, 520px) clamp(14px, 1vw, 18px);
+  }
+  .article-body {
+    grid-template-columns: minmax(170px, 0.82fr) minmax(0, 520px) clamp(14px, 1vw, 18px);
+  }
+}
+
+@media (max-width: 760px) {
+  .header-frame {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .brand-mark {
+    font-size: clamp(2.16rem, 10.15vw, 2.87rem);
+
+  }
+}
+
+@media (max-width: 720px) {
+  .header-frame {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .brand-mark {
+    font-size: clamp(2.16rem, 10.15vw, 2.87rem);
+
+  }
+  .menu-button {
+    gap: 7px;
+    padding: 8px 0 6px 16px;
+    margin-top: 1px;
+  }
+  .menu-panel {
+    padding: 0 calc(var(--page-x) + 6px) 0 var(--page-x);
+    gap: 14px;
+  }
+  .menu-panel a {
+    width: min(100%, 16rem);
+    font-size: clamp(22px, 9vw, 30px);
+    line-height: 1.08;
+  }
+  .menu-panel a:last-child {
+    font-size: 18px;
+  }
+  .feature {
+    padding:
+      4px
+      var(--page-x)
+      48px;
+  }
+  .feature-inner,
+  .article-body,
+  .content-row {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    text-align: left;
+  }
+  .feature-inner {
+    display: grid;
+    gap: 22px;
+  }
+  .feature-media img {
+    height: clamp(360px, 56vh, 470px);
+  }
+  .article-body {
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .gallery-reading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin: 40px 0 0;
+  }
+  .article-body-media {
+    position: static;
+  }
+  .gallery-reading-media {
+    position: static;
+  }
+  .article-body-lower {
+    margin-top: 18px;
+    margin-bottom: 0;
+  }
+  .content-row .empty-tail {
+    display: none;
+  }
+  .article-body .empty-tail {
+    display: none;
+  }
+  .feature-copy {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+  }
+  .feature-title {
+    font-size: clamp(32px, 10.5vw, 50px);
+    line-height: 0.98;
+  }
+  .feature-byline {
+    margin: 28px 0 0;
+    font-size: 11px;
+  }
+  .feature-deck {
+    margin-top: 34px;
+    font-size: clamp(15px, 3.9vw, 18px);
+    line-height: 1.2;
+  }
+  .feature-title-break {
+    display: none;
+  }
+  .content-row + .content-row {
+    margin-top: 40px;
+  }
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: transparent;
+  pointer-events: none;
+}
+
+.site-header .header-frame,
+.site-header .brand-mark,
+.site-header .header-tools {
+  pointer-events: auto;
+}
+
+.site-header .brand-mark {
+  transform: translate3d(0, 0, 0);
+  transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.muzej-logo-hidden .site-header .brand-mark {
+  transform: translate3d(0, calc(-100% - 42px), 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header .brand-mark {
+    transition: none;
+    will-change: auto;
+  }
+
+  body.muzej-logo-hidden .site-header .brand-mark {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header { z-index: 2000; }
+  .site-header .header-frame { grid-template-columns: minmax(0, 1fr) auto; align-items: center; justify-items: stretch; gap: 1rem; }
+  .site-header .brand-mark { justify-self: start; min-width: 0; }
+  .site-header .header-tools { justify-self: end; justify-content: flex-end; margin-left: auto; position: relative; z-index: 2002; }
+  .site-header .utility-menu { position: static; }
+  .site-header .utility-trigger { position: relative; z-index: 2003; }
+  .site-header .utility-panel { position: fixed; inset: 0; left: 0; right: 0; top: 0; z-index: 2001; display: grid; align-content: center; width: 100vw; max-width: none; min-width: 0; height: 100vh; height: 100svh; padding: clamp(76px, 18vh, 128px) var(--page-x) 48px; border: 0; background: rgba(255, 255, 255, 0.98); box-shadow: none; overflow-y: auto; transform: none; }
+  .site-header .utility-panel-group { width: min(100%, 22rem); margin: 0 auto; }
+  .site-header .utility-panel-utility { margin-top: 0.8rem; padding-top: 0.85rem; }
+  .site-header .utility-panel .utility-link,
+  .site-header .utility-panel .utility-menu-item { justify-content: center; min-height: 2.75rem; padding: 0.72rem 0; text-align: center; }
+}
+
+.article-longform {
+  padding-bottom: clamp(72px, 9vw, 132px);
+}
+.article-longform .section-heading {
+  max-width: min(100%, 24ch);
+}
+.article-longform .section-heading:first-child {
+  margin-top: 0;
+}
+.article-longform .section-heading + p {
+  margin-top: 0;
+}
+.article-longform .ohrid-sketch-spread {
+  margin-bottom: 72px;
+}
+@media (max-width: 720px) {
+  .article-longform .ohrid-sketch-spread {
+    margin-bottom: 44px;
+  }
+}
+
+</style>
+<link rel="stylesheet" href="article-headlines.css">
+<style>
+.ohrid-article .feature-title {
+  font-family: "ivypresto-display", serif;
+  font-size: clamp(54px, 7.8vw, 132px);
+  font-weight: 300;
+  line-height: 0.86;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+.ohrid-article .feature-byline {
+  font-family: "ivypresto-display", serif;
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(24px, 2.2vw, 38px);
+  font-weight: 300;
+  line-height: 1.12;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.ohrid-article .feature-kicker {
+  display: none;
+  margin: 0;
+}
+.ohrid-article .feature-copy {
+  width: min(100%, 44rem);
+  max-width: none;
+  margin: 0 auto;
+  padding-top: clamp(108px, 16vh, 190px);
+  padding-bottom: clamp(22px, 3vw, 34px);
+  justify-content: space-between;
+  gap: clamp(72px, 14vh, 180px);
+}
+@media (min-width: 981px) {
+  .ohrid-article main {
+    padding-top: clamp(6px, 1.4vh, 14px);
+  }
+
+  .ohrid-article .feature {
+    padding-top: 0;
+    padding-bottom: clamp(48px, 5vh, 72px);
+  }
+
+  .ohrid-article .feature-inner {
+    height: clamp(600px, calc(100svh - var(--nav-h, 112px) - clamp(18px, 3svh, 32px)), 780px);
+    min-height: 0;
+    align-items: stretch;
+  }
+
+  .ohrid-article .feature-media,
+  .ohrid-article .feature-copy {
+    height: 100%;
+    min-height: 0;
+  }
+
+  .ohrid-article .feature-media img {
+    height: 100%;
+    max-height: 100%;
+  }
+
+  .ohrid-article .feature-copy {
+    padding-top: clamp(34px, 5vh, 76px);
+    padding-bottom: clamp(14px, 2.2vh, 28px);
+    gap: clamp(28px, 4.6vh, 64px);
+  }
+
+  .ohrid-article .feature-title {
+    font-size: clamp(48px, 6.1vw, 100px);
+  }
+
+  .ohrid-article .feature-byline {
+    font-size: clamp(22px, 1.9vw, 32px);
+  }
+
+  .ohrid-article .feature-deck {
+    margin-top: clamp(64px, 9svh, 118px);
+  }
+}
+@media (max-width: 980px) {
+  .ohrid-article .feature-title {
+    font-size: clamp(46px, 7.2vw, 78px);
+  }
+  .ohrid-article .feature-byline {
+    font-size: clamp(20px, 2.4vw, 30px);
+  }
+  .ohrid-article .feature-copy {
+    padding-top: clamp(72px, 12vh, 126px);
+    gap: clamp(58px, 10vh, 112px);
+  }
+}
+@media (max-width: 720px) {
+  .ohrid-article .feature-copy {
+    align-items: center;
+    text-align: center;
+    padding-top: 6px;
+    gap: clamp(48px, 14vw, 72px);
+  }
+  .ohrid-article .feature-title {
+    font-size: clamp(38px, 13.4vw, 62px);
+    line-height: 0.9;
+  }
+  .ohrid-article .feature-byline {
+    margin: 0;
+    font-size: clamp(20px, 6.2vw, 28px);
+  }
+}
+
+.renaissance-article .feature-title {
+  font-size: clamp(40px, 5.15vw, 82px);
+  line-height: 0.9;
+}
+.renaissance-article .feature-media img {
+  object-fit: cover;
+  object-position: center center;
+}
+.renaissance-article .section-heading {
+  text-transform: uppercase;
+}
+.renaissance-article .gallery-reading-media,
+.renaissance-article .gallery-reading-feature {
+  aspect-ratio: auto;
+  overflow: visible;
+}
+.renaissance-article .gallery-reading-media img,
+.renaissance-article .gallery-reading-feature img {
+  aspect-ratio: 15 / 21;
+  height: auto;
+  object-fit: cover;
+}
+.renaissance-article .gallery-reading figcaption {
+  margin-top: 12px;
+  color: var(--ink-soft);
+  font-size: 8px;
+  letter-spacing: 0.24em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+.renaissance-article .article-inline-media {
+  width: min(92%, 460px);
+}
+@media (max-width: 720px) {
+  .renaissance-article .feature-title {
+    font-size: clamp(33px, 11.4vw, 54px);
+  }
+}
+</style>
+<link rel="stylesheet" href="more-from-muzej.css">
+<script src="more-from-muzej.js" defer></script>
+</head>
+<body class="ohrid-article renaissance-article">
+
+<header class="site-header">
+  <div class="shell header-frame">
+    <a class="brand-mark" href="index.html" aria-label="Muzej home">Muzej</a>
+
+    <div class="header-tools">
+      <details class="utility-menu">
+        <summary class="utility-trigger" aria-label="Open navigation menu">
+          <span class="utility-icon" aria-hidden="true">
+            <span class="utility-icon-line"></span>
+            <span class="utility-icon-line"></span>
+            <span class="utility-icon-line"></span>
+          </span>
+        </summary>
+        <nav class="utility-panel" aria-label="Site navigation">
+          <div class="utility-panel-group">
+            <a class="utility-link" href="index.html">Home</a>
+            <a class="utility-link" href="index.html#selected-stories">Selected Stories</a>
+            <a class="utility-link" href="index.html#in-rotation">In Rotation</a>
+            <a class="utility-link" href="index.html#culture">Culture</a>
+            <a class="utility-link" href="about.html">About Muzej</a>
+          </div>
+          <div class="utility-panel-group utility-panel-utility">
+            <a class="utility-link" href="mailto:muzej.mk@proton.me">Contact</a>
+            <a class="utility-link" href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main>
+  <header class="feature">
+    <div class="feature-inner">
+      <figure class="feature-media">
+        <img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/kurbinovo-archangel-detail.webp" alt="Detail of the Archangel Gabriel fresco at the Church of Saint George in Kurbinovo.">
+      </figure>
+
+      <div class="feature-copy">
+        <p class="feature-byline">Words Ace Trajkovski</p>
+        <h1 class="feature-title">Toward an Art<br>History of the<br>Macedonian<br>Renaissance</h1>
+      </div>
+    </div>
+    <p class="feature-deck">From Saint Sophia and Nerezi to Dicho Zograf and the carved iconostases of the nineteenth-century revival, Macedonian art is a history of line, surface, and presence.</p>
+  </header>
+
+  <article class="article-shell article-longform">
+    <section class="content-row">
+      <figure class="article-body-media">
+        <img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/saint-sophia.webp" alt="Frescoed saints inside the Church of Saint Sophia in Ohrid." loading="lazy" decoding="async">
+        <figcaption>Saint Sophia, Ohrid</figcaption>
+      </figure>
+      <div class="article-body-copy body-block">
+        <p>The history of Macedonian art is repeatedly described through inheritance: the inheritance of Byzantium, of Ohrid, of the icon, of the monastery workshop. But inheritance is too passive a word for what the objects actually do. From the eleventh-century frescoes of Saint Sophia to the nineteenth-century icons of Dicho Zograf and the carved walnut iconostases of the Mijak masters, the most consequential Macedonian works are not acts of preservation alone. They are acts of formal pressure. Each period takes an established visual language—the frontal saint, the gold ground, the liturgical cycle, the basilica, the icon screen—and pushes it toward a new intensity.</p>
+
+        <p>The phrase “Macedonian Renaissance” properly refers, in Byzantine art history, to the cultural and classicizing revival associated with the Macedonian imperial dynasty after the end of Iconoclasm, particularly between 867 and 1056. Yet in Macedonia the term acquires a longer and more visually compelling afterlife. The classical composure of Middle Byzantine painting is followed by the psychological compression of Nerezi, the nervous linearity of Kurbinovo, the narrative congestion of Peribleptos, and, centuries later, by the resurgent monumentality of nineteenth-century church building, icon painting, woodcarving, and domestic architecture.</p>
+
+        <p>These moments do not form one uninterrupted style. What connects them is something more concrete: an extraordinary confidence in the ability of line and surface to produce presence. Macedonian art rarely treats the wall as neutral support. The wall becomes a field of bodies; the wooden screen becomes vegetation, narrative, and architecture at once; the icon panel becomes a compact mechanism of recognition. Even when the figure approaches naturalism, it never fully submits to the illusion of an open window. The image remains attached to its material surface, and it makes that attachment expressive.</p>
+
+        <h2 class="section-heading">The Classical Gravity of Saint Sophia</h2>
+
+        <p>Any survey must begin in Ohrid, not because the city contains a convenient sequence of monuments, but because Saint Sophia establishes the scale of the problem. Its principal eleventh-century fresco program was created during the episcopate of Archbishop Leo, 1037–1056. Branislav Todić has argued that Leo was not simply the patron but the decisive intelligence behind the iconographic program: its saints, liturgical subjects, and arrangement were deliberately coordinated rather than accumulated as conventional decoration.</p>
+
+        <p>Yet before the program is read, it is felt. Entering the sanctuary, one confronts a painted order in which the human body has become architectural. The figures are broad, heavily outlined, and slow. Faces are constructed from long noses, enlarged eyes, shadowed sockets, and abrupt planes of light. The modeling does not dissolve the figure into atmosphere; it consolidates it. Flesh appears dense, almost mineral.</p>
+
+        <p>In the apse, the enthroned Virgin occupies the conch above the Communion of the Apostles, where Christ officiates before the altar. The composition is not organized according to the casual optics of observed space. Its proportions are liturgical rather than naturalistic: figures expand or contract according to their role, and the architecture inside the painting clarifies the action rather than producing convincing depth. The ciborium, altar, apostles, and duplicated figure of Christ establish a solemn visual rhythm across the curved wall.</p>
+
+        <p>The fresco is often approached as theology rendered visible, which it is. But its pictorial achievement is equally specific. The curve of the apse prevents the scene from being perceived all at once. The apostles advance around the sanctuary wall in a measured sequence; the architecture of the church converts painted procession into actual spatial movement. Otto Demus’s account of Byzantine church decoration as an integrated spatial system is particularly relevant here: the image does not sit on the architecture like a framed painting. It becomes legible through the architecture.</p>
+
+        <p>The palette at Saint Sophia has none of the jeweled dematerialization associated with mosaic. Ochres, blue-greens, earthen reds, whites, and dark contours retain the granular opacity of fresco. The colors bind the figures to the plaster. This material weight is essential to their authority. Even when a robe is articulated through fine linear folds, the body remains compact. Light does not enter from outside the image; it is laid onto the face and garment in discrete strokes.</p>
+
+        <p>Compared with the aristocratic manuscripts usually invoked to define the Byzantine Macedonian Renaissance, Saint Sophia is less self-consciously antique. The classicism is present in the measured contrapposto of certain figures, the controlled fall of drapery, and the volumetric coherence of heads and bodies. But classical form has been stripped of display. It has become an instrument of monumentality.</p>
+
+        <p>The result is not realism but gravity. Saint Sophia establishes the body as a stable theological and pictorial unit: a form that can occupy the wall without appearing either trapped by it or detached from it.</p>
+
+        <h2 class="section-heading">Nerezi: The Invention of Intimacy</h2>
+
+        <p>A century later, at Saint Panteleimon in Gorno Nerezi, the body begins to break open. The church is securely dated by its inscription to 1164 and preserves one of the major ensembles of Komnenian fresco painting. It falls outside the Macedonian dynasty and its Renaissance in the strict chronological sense, but any history of the art of Macedonia that stops at dynastic periodization misses the transformation that occurred here.</p>
+
+        <p>The famous Lamentation is often reproduced as an early anticipation of Italian emotional naturalism. This comparison is understandable and mostly unhelpful. Nerezi does not become important because it resembles something that will later happen elsewhere. Its importance lies in the way Byzantine line is made to carry affect without surrendering the image’s formal discipline.</p>
+
+        <p>Christ’s body lies diagonally across the foreground, its extended shape establishing the composition’s emotional horizon. The Virgin bends over him until her face approaches his; Saint John collapses toward the dead hand; the surrounding mourners produce a chain of inclinations, gestures, and interrupted contours. Grief is not represented through facial expression alone. It travels through the entire composition as a series of bent axes.</p>
+
+        <p>The landscape remains spare. A rocky ground rises behind the figures, but it does not open into continuous natural space. Instead, its slopes echo the downward pull of the bodies. The image’s emotional force comes from this coordination of figure and setting: every form is made to lean toward the corpse.</p>
+
+        <p>The painters at Nerezi were attentive to minute physical signs—hands touching flesh, cheeks pressed together, torsos curved by mourning—but the scene never becomes anecdotal. The figures remain types even as they appear to suffer individually. This tension between canonical identity and bodily particularity is the fresco’s great invention.</p>
+
+        <p>Hans Belting’s distinction between an image that is contemplated aesthetically and an image encountered as a presence is useful here. At Nerezi, however, presence is no longer secured by frontal immobility alone. It is produced through contact. The painted body of Christ becomes the point toward which every other body is drawn.</p>
+
+        <p>The effect is intimate without becoming private. This is public grief, staged on the wall at monumental scale. The fresco allows the congregation to approach sacred history not through illusionistic entry into a distant past, but through a tightly compressed choreography of touch.</p>
+      </div>
+      <div class="empty-tail" aria-hidden="true"></div>
+    </section>
+
+    <section class="gallery-reading ohrid-sketch-spread">
+      <figure class="gallery-reading-media">
+        <img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/saint-sophia-2.webp" alt="Vault frescoes inside Saint Sophia in Ohrid." loading="lazy" decoding="async">
+      </figure>
+
+      <div class="gallery-reading-side">
+        <figure class="gallery-reading-feature">
+          <img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/saint-sophia-3.webp" alt="Painted fresco cycle on the interior walls and vaults of Saint Sophia." loading="lazy" decoding="async">
+        </figure>
+      </div>
+    </section>
+
+    <section class="content-row">
+      <figure class="article-body-media">
+        <img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/kurbinovo-archangel-full.webp" alt="Full figure of the Archangel Gabriel fresco at the Church of Saint George in Kurbinovo." loading="lazy" decoding="async">
+        <figcaption>Archangel Gabriel, Kurbinovo</figcaption>
+      </figure>
+      <div class="article-body-copy body-block">
+        <h2 class="section-heading">Kurbinovo: Line at the Point of Flight</h2>
+
+        <p>If Nerezi bends the figure under emotional pressure, Saint George at Kurbinovo almost releases it from gravity altogether. The fresco decoration began on April 25, 1191, according to the surviving inscription. The building itself is strikingly plain: a long single-nave church terminating in a semicircular apse. Its architectural austerity intensifies the shock of the interior, where the wall painting seems to move faster than the building can contain it.</p>
+
+        <p>The defining formal element at Kurbinovo is the line—not contour as boundary, but contour as velocity. Limbs lengthen; torsos twist; garments split into streams of parallel highlights. The figures possess bodies, but those bodies have been subjected to a linear energy that exceeds anatomy.</p>
+
+        <p>This is clearest in the Archangel Gabriel of the Annunciation. Gabriel advances with one arm extended, his body elongated across the field as though the divine message had acquired physical momentum. The wings do not merely identify him; their diagonals amplify his forward motion. His mantle wraps the torso and then escapes into a vortex of folds, while the narrow face remains preternaturally calm. Movement occurs everywhere except in the gaze.</p>
+
+        <p>The achievement is one of controlled contradiction. Gabriel is both swift and suspended. His drapery announces arrival while his body remains permanently poised at the threshold of the event. The painter has discovered how to represent speed without sequence: all phases of movement are compressed into a single figure.</p>
+
+        <p>UNESCO’s nomination documentation describes the Kurbinovo frescoes through their dynamism, slenderness, “whirlwind drapery,” and departure from classical pictorial norms. It also notes that the precise organization and origin of the workshop remain debated; proposals have ranged from a distinctive local group to painters working under a master trained in a major Byzantine center.</p>
+
+        <p>Lydie Hadermann-Misguich’s monograph on Kurbinovo remains fundamental because it treats the ensemble not as an isolated eccentricity but as a high point of late-twelfth-century Byzantine painting. The frescoes belong to a wider moment of mannered elongation and expressive abstraction, yet Kurbinovo pushes those tendencies toward a nearly calligraphic extremity.</p>
+
+        <p>Color participates in the same agitation. Blue fields hold figures whose garments are articulated in sharp green, white, red, and ochre intervals. Highlights do not gradually describe volume; they strike across it. The body is never fully dissolved, but it is made porous to the rhythm of the brush.</p>
+
+        <p>At Saint Sophia, drapery confirmed bodily mass. At Kurbinovo, drapery behaves like an independent nervous system. It registers forces that the body itself cannot visibly contain.</p>
+
+        <h2 class="section-heading">Peribleptos: The Image Becomes a Crowd</h2>
+
+        <p>The frescoes of the Virgin Peribleptos in Ohrid, dated 1294/95, inaugurate another pictorial world. The church’s painters, Michael Astrapas and Eutychios, left their names within the ensemble, making this the first documented work of a workshop that would become active across the central Balkans.</p>
+
+        <p>Where Kurbinovo achieves intensity through attenuation, Peribleptos achieves it through accumulation. The figures are heavier, the compositions denser, and the narrative field more crowded. Architecture proliferates behind the actors: walls, arcades, canopies, stairs, and compact urban structures divide and reconnect the scenes. The painted setting no longer functions merely as an emblematic backdrop. It becomes a compositional machine for staging multiple reactions.</p>
+
+        <p>The expanded Dormition of the Virgin exemplifies this new narrative appetite. The subject’s essential structure remains familiar: the Virgin’s body lies horizontally, Christ stands behind it holding her soul, and the apostles gather around. But the Peribleptos painters extend the event through crowds, secondary episodes, angels, architectural frames, and dramatically varied gestures. The scene becomes not a single action but a chain of simultaneous intensities. The church’s program similarly includes an extensive Passion cycle, the life of the Virgin, the life of John the Baptist, and unusual narthex imagery.</p>
+
+        <p>Faces at Peribleptos are less serene than those at Saint Sophia and less ethereal than those at Kurbinovo. Brows contract, cheeks swell, eyes glance sideways, mouths tense. Bodies occupy space with an almost uncomfortable abundance. Drapery gathers in thick, abrupt folds that enlarge the figures rather than setting them into flight.</p>
+
+        <p>The usual description of this painting as “Palaeologan humanism” catches only part of what is happening. The painters’ interest in emotion does not lead to psychological isolation. On the contrary, feeling becomes collective and contagious. One figure turns, another recoils, another reaches outward; each reaction generates the next. The image becomes a social field of gestures.</p>
+
+        <p>The small scale of many scenes increases their density. From a distance, the wall reads as a dark, continuous fabric. At closer range it breaks into episodes, faces, hands, and buildings. Peribleptos therefore demands two forms of looking: the first architectural, the second almost microscopic.</p>
+
+        <p>This double address distinguishes it from the frontal monumentality of Saint Sophia. The viewer is no longer held at a single visual distance. One is compelled to move closer, withdraw, and move again. Narrative has become spatially restless.</p>
+
+        <h2 class="section-heading">The Portable Image and the Ohrid Tradition</h2>
+
+        <p>The portable icon condenses the problems of monumental painting into a surface that can be carried, repositioned, kissed, screened, and illuminated. Ohrid’s icon collection demonstrates the extraordinary variety possible within what is too easily called a fixed convention. UNESCO notes the exceptional survival of icons and medieval fresco painting throughout the Ohrid region, where local and travelling painters worked across several centuries.</p>
+
+        <p>The icon does not abolish pictorial invention; it relocates it. Since the saint’s identity must remain legible, innovation concentrates in proportion, facial modeling, ornament, chromatic temperature, inscriptions, and the relation between figure and border. A shift in the width of a face, the curvature of an eyebrow, or the rhythm of gold highlights can transform the entire emotional register of the panel.</p>
+
+        <p>The gold ground is not empty space. It removes the figure from ordinary atmosphere while intensifying every painted edge. Against gold, the smallest deviation of contour becomes visible. The icon’s apparent stillness is therefore produced through extreme formal precision.</p>
+
+        <p>By the eighteenth and nineteenth centuries, Macedonian painters continued to use this inherited structure while gradually introducing softer flesh, greater textile detail, architectural motifs, floral ornament, and more complex spatial suggestions. The post-Byzantine icon is neither a degraded medieval image nor an incompletely modern painting. It is an elastic form capable of absorbing new kinds of description while maintaining its devotional legibility.</p>
+
+        <h2 class="section-heading">Dicho Zograf and the Intelligence of Repetition</h2>
+
+        <p>Dicho Zograf, born Dimitar Krstev Dichov in Tresonče in 1819, is the central painter of the nineteenth-century revival. Roughly two thousand icons have been associated with him and his workshop across Macedonia and the wider Balkans, though the borders between autograph work, workshop production, and later attribution are not always secure. His first known signed and dated icon is the Mother of God Pantohara of 1844, now in the Ohrid Icon Gallery.</p>
+
+        <p>Dicho’s importance is not that he abandoned the Byzantine tradition. He did something more difficult: he made its repetition newly productive.</p>
+
+        <p>His figures retain the frontal address, hieratic scale, gold field, and identifying inscriptions of Orthodox icon painting. Yet the faces are often more softly modeled than those of earlier post-Byzantine masters. Flesh passes through rose, ochre, olive, and white accents; eyes are sharply drawn but set within rounded sockets; garments combine strong contour with an increased appetite for pattern and material detail.</p>
+
+        <p>The resulting images exist in a productive tension between type and likeness. A saint must remain immediately recognizable, but Dicho allows subtle distinctions of age, temperament, and physical presence to enter the type. His old men do not merely possess white beards as attributes; the beard becomes a field of rhythmic brushwork. Episcopal vestments are not only signs of rank but surfaces crowded with crosses, jewels, borders, and colored intervals.</p>
+
+        <p>His 1844 Ermeneia, published in a critical edition by Sasho Cvetkovski, records technical recipes, iconographic instructions, inscriptions, and workshop procedures. The manual does not diminish Dicho’s authorship. It clarifies its nature. His art emerged from command of an inherited pictorial grammar: invention occurred through selection, adjustment, combination, speed, and consistency.</p>
+
+        <p>The modern cult of originality has made repetition difficult to see. In Dicho’s practice, repetition is not the opposite of thought. It is the medium through which thought becomes visible. Each new commission presents a different architectural scale, iconostasis, congregation, sequence of saints, and ensemble of colors. The painter’s task is to make the canonical image inhabit these conditions without losing its identity.</p>
+
+        <p>Dicho’s art is most compelling where the image appears at once ancient and unmistakably nineteenth century. The gilded field remains metaphysical; the flowers, architectural dividers, textile motifs, and facial modeling acknowledge a world increasingly attentive to tangible things. Rather than choosing between icon and painting, he holds both visual regimes in suspension.</p>
+
+      </div>
+      <div class="empty-tail" aria-hidden="true"></div>
+    </section>
+
+    <section class="gallery-reading ohrid-sketch-spread">
+      <figure class="gallery-reading-media">
+        <img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/st-nicholas-mavrovo.webp" alt="The partially submerged Church of Saint Nicholas in Mavrovo Lake." loading="lazy" decoding="async">
+        <figcaption>Church of Saint Nicholas, Mavrovo Lake. Built in 1850, with icons painted by Dicho Zograf.</figcaption>
+      </figure>
+
+      <div class="gallery-reading-side">
+        <figure class="gallery-reading-feature">
+          <img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/dicho-zograf.webp" alt="A brightly colored icon attributed to the tradition of Dicho Zograf." loading="lazy" decoding="async">
+          <figcaption>Dicho Zograf, nineteenth-century Macedonian icon painting.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="content-row">
+      <figure class="article-body-media">
+        <img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/bigorski.webp" alt="Bigorski Monastery and the surrounding mountain landscape." loading="lazy" decoding="async">
+        <figcaption>Bigorski Monastery</figcaption>
+      </figure>
+      <div class="article-body-copy body-block">
+        <h2 class="section-heading">Walnut in Motion: Bigorski and Saint Saviour</h2>
+
+        <p>The iconostasis is often treated as the frame around the real art—the icons. At Bigorski Monastery and the Church of Saint Saviour in Skopje, the frame overwhelms any such hierarchy. Carved from walnut in high relief, these screens constitute some of the most ambitious sculptural environments of the nineteenth-century Macedonian revival.</p>
+
+        <p>The Bigorski iconostasis was created during the monastery’s major early-nineteenth-century expansion and is associated with Petre Filipovski Garkata, Marko Filipovski, and Makarij Frčkovski. Its carved panels contain scenes from the Old and New Testaments embedded within an extraordinarily dense system of foliage, animals, architectural motifs, and human figures.</p>
+
+        <p>The first impression is excess. Vines curl into scrolls, scrolls become frames, frames open onto narrative scenes, and figures emerge from leaves before being absorbed again into ornament. But the density is not disorderly. The carving alternates between zones of high relief and deep shadow, creating a legible rhythm across the screen.</p>
+
+        <p>Walnut is made to behave as though it were soft, tensile material. Leaves fold, feathers overlap, beards separate into strands, and miniature bodies turn within spaces only centimeters deep. The technical bravura lies not simply in detail but in the control of negative space. Undercutting permits darkness to enter the object. The screen’s visual richness depends as much on the cavities between forms as on the forms themselves.</p>
+
+        <p>The iconostasis at Saint Saviour, completed in 1824 by Petre Filipovski Garkata and his workshop from Gari, produces a related effect. Its reliefs include biblical figures dressed in local costume and a remarkable representation of the craftsmen themselves. Their self-portraits do not rupture the sacred ensemble. They occupy it with the same compact physicality as the other figures, registering the presence of the workshop within the work.</p>
+
+        <p>The carved screen is not sculpture added to architecture. It is architecture made unstable by sculpture. Columns become stems; borders behave like branches; narrative panels appear as clearings inside an ornamental forest. The iconostasis maintains a strict liturgical division while making its own material boundary almost deliriously active.</p>
+
+        <p>This is where the distinction between ornament and image ceases to hold. Ornament carries narrative; narrative becomes pattern. The eye cannot remain fixed on a single scene because every border generates another form. The screen does not simply display sacred history—it gives sacred history the structure of endless proliferation.</p>
+
+        <h2 class="section-heading">Architecture as Composite Form</h2>
+
+        <p>The nineteenth-century revival was equally architectural. Andrej Damjanov and the broader tradition of Macedonian master builders developed large urban churches whose forms combined the longitudinal clarity of the basilica with domes, galleries, porticoes, arcades, towers, and a wide vocabulary of historical ornament. Damjanov’s churches were built across Macedonia and beyond; scholarship emphasizes the composite character of his architecture rather than its conformity to a single revival style.</p>
+
+        <p>“Eclectic” is too weak a description. These buildings are not collages of borrowed motifs. Their various languages are subordinated to the problem of scale: how to produce an interior capable of holding a large congregation while preserving the visual concentration of the sanctuary.</p>
+
+        <p>The exterior may be horizontally extended and relatively restrained, while the interior rises through columns, galleries, and painted or carved focal points. Architecture prepares a sequence of thresholds: street to porch, porch to nave, nave to iconostasis, iconostasis to altar. The building is experienced through progressive visual restriction and release.</p>
+
+        <p>This spatial logic is intensified by the relation between pale masonry, dark wooden furnishings, gilded icons, textile, metal, and painted walls. The nineteenth-century church interior is not stylistically unified in the modern sense. Its unity is cumulative. Architecture, carving, painting, and liturgical object build density around the eastern end.</p>
+
+        <p>The same workshop intelligence enters domestic architecture. The Robev House in Ohrid, rebuilt between 1861 and 1863 under the master builder Todor Petkov of Gari, is a double residence whose carved ceilings, cupboards, and interior ornament were produced by distinct teams. The two halves were intentionally differentiated, turning competitive craftsmanship into an organizing principle of the interior.</p>
+
+        <p>From the street, the house appears to grow lighter as it rises: a massive stone base supports projecting upper floors punctuated by increasingly numerous windows. Inside, the carved ceiling transforms the room into an inverted ornamental field. The center often behaves like a medallion or shallow dome, with radial geometries extending outward across the wooden surface.</p>
+
+        <p>The domestic ceiling repeats, in secular form, an effect already encountered in the church. Surface ceases to be passive enclosure. It gathers the room’s visual energy and redirects it toward a center.</p>
+
+        <h2 class="section-heading">From the Saint to the Sitter</h2>
+
+        <p>The final phase of the Macedonian revival is usually narrated as the emergence of secular painting. Dimitar Andonov-Papradishki, Gjorgji Zografski, Kosta Vangelov, and related painters continued to produce icons and frescoes while also turning toward portraiture, landscape, historical compositions, and scenes of everyday life. Some portraits were based on photographs, a practice recorded by the National Gallery of North Macedonia.</p>
+
+        <p>The change was not simply a move from “traditional” to “European” art. It involved a reorganization of pictorial attention.</p>
+
+        <p>In the icon, the face belongs to a known sacred identity. The painter’s task is to make that identity present through an established type. In the portrait, the face must distinguish one absent person from every other person. Small differences—an asymmetrical mouth, a particular beard, the fall of hair, the cut of clothing—acquire new importance.</p>
+
+        <p>Yet the early secular portrait often retains the icon’s frontal authority. Sitters occupy shallow space; bodies are presented with a certain rigidity; objects are selected for emblematic clarity. The neutral or architectural background replaces the gold field, but the figure continues to confront the viewer rather than casually inhabit a scene.</p>
+
+        <p>Photography intensifies likeness while preserving this frontal structure. The photograph offers the painter a fixed face and pose; painting reintroduces color, material texture, status, and scale. The resulting portrait is neither simply photographic nor fully academic. It retains the icon painter’s conviction that a face can dominate a surface.</p>
+
+        <p>Landscape and historical painting posed a different problem: the construction of continuous space. Here the artist had to move beyond the isolated sacred figure toward atmosphere, distance, narrative environment, and changing light. The transition was necessarily uneven. But its unevenness is what makes these works art-historically compelling. They show pictorial conventions being tested rather than replaced overnight.</p>
+
+        <h2 class="section-heading">A Renaissance of Surfaces</h2>
+
+        <p>The art of the Macedonian Renaissance cannot be reduced to a single return—to antiquity, to Byzantium, to folk tradition, or to Europe. Its history is visible instead as a sequence of transformations in the relation between figure and surface.</p>
+
+        <p>At Saint Sophia, the wall gives the body monumental gravity. At Nerezi, line bends the body into intimacy and grief. At Kurbinovo, line accelerates until anatomy becomes almost airborne. At Peribleptos, the wall fills with crowds, architecture, and simultaneous narrative. In the icons of Dicho Zograf, an inherited type becomes the basis for chromatic and descriptive variation. At Bigorski and Saint Saviour, the wooden boundary between nave and sanctuary grows into a sculptural cosmos. In the Robev House, carving leaves the church and reorganizes domestic space. In the first secular portraits, the frontal sacred figure becomes the individualized sitter.</p>
+
+        <p>This is not a march from abstraction to realism. Such a history would misunderstand nearly every major work. Macedonian art repeatedly moves in both directions at once: toward a greater description of the visible world and toward a stronger assertion of the image as a constructed surface.</p>
+
+        <p>Its central protagonist is therefore not the individual master, though masters matter, and not even the iconographic subject. It is the line: the grave contour at Saint Sophia, the grieving curve at Nerezi, the electric fold at Kurbinovo, the agitated gesture at Peribleptos, the precise boundary of Dicho’s saints, the line cut physically into walnut by the carvers of Gari.</p>
+
+        <p>Across nine centuries, this line changes speed, weight, medium, and scale. It can enclose a face, direct a procession, describe a wing, divide a garment, open a leaf, or turn a ceiling into a radial field. It is never merely decorative. It is the instrument through which the image acquires force.</p>
+
+        <p>That is the art-historical substance of the Macedonian Renaissance: not a rebirth of something lost, but the repeated discovery that a wall, a panel, or a piece of wood can still be made to live.</p>
+
+        <h2 class="section-heading">Selected scholarly grounding</h2>
+
+        <p>The account above draws particularly on Helen C. Evans and William D. Wixom’s The Glory of Byzantium for the Middle Byzantine context; Branislav Todić on the program of Saint Sophia; Lydie Hadermann-Misguich’s Kurbinovo: Les fresques de Saint-Georges et la peinture byzantine du XIIe siècle; Sašo Korunovski and Elizabeta Dimitrova’s Macédoine byzantine; Miodrag Marković on Michael Astrapas and Eutychios at Peribleptos; Sasho Cvetkovski’s critical work on Dicho Zograf and his Ermeneia; and the work of R. F. Hoddinott and Macedonian scholars including Dimitar Kornakov on the woodcarving tradition.</p>
+      </div>
+      <div class="empty-tail" aria-hidden="true"></div>
+    </section>
+  </article>
+
+  <section class="more-from-muzej" data-more-from-muzej aria-labelledby="more-from-muzej-title"></section>
+</main>
+
+<footer class="site-footer muzej-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-wordmark">Muzej</span>
+      <p class="footer-statement">An editorial archive of Macedonian art, style, tradition, and culture.</p>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="about.html">ABOUT MUZEJ</a>
+      <a href="mailto:muzej.mk@proton.me">CONTACT</a>
+      <a href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer" aria-label="Open Muzej on Instagram">INSTAGRAM</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+const menuButton = document.getElementById('menuButton');
+const menuPanel = document.getElementById('menuPanel');
+
+if (menuButton && menuPanel) {
+  const setMenuState = (isOpen) => {
+    menuPanel.classList.toggle('open', isOpen);
+    menuButton.classList.toggle('is-open', isOpen);
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+    menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  };
+
+  menuButton.addEventListener('click', () => {
+    setMenuState(!menuPanel.classList.contains('open'));
+  });
+
+  menuPanel.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setMenuState(false));
+  });
+}
+</script>
+
+<script>
+  (function () {
+    var previousY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+    var ticking = false;
+    var revealZone = 24;
+    var motionThreshold = 4;
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    function updateMuzejLogoVisibility() {
+      var currentY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+      var delta = currentY - previousY;
+
+      if (reducedMotion.matches) {
+        document.body.classList.remove("muzej-logo-hidden");
+        ticking = false;
+        return;
+      }
+
+      if (currentY <= revealZone) {
+        document.body.classList.remove("muzej-logo-hidden");
+      } else if (delta > motionThreshold) {
+        document.body.classList.add("muzej-logo-hidden");
+      } else if (delta < -motionThreshold) {
+        document.body.classList.remove("muzej-logo-hidden");
+      }
+
+      previousY = currentY;
+      ticking = false;
+    }
+
+    function requestMuzejLogoVisibility() {
+      if (!ticking) {
+        window.requestAnimationFrame(updateMuzejLogoVisibility);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener("scroll", requestMuzejLogoVisibility, { passive: true });
+    window.addEventListener("resize", requestMuzejLogoVisibility);
+
+    if (reducedMotion.addEventListener) {
+      reducedMotion.addEventListener("change", requestMuzejLogoVisibility);
+    } else if (reducedMotion.addListener) {
+      reducedMotion.addListener(requestMuzejLogoVisibility);
+    }
+
+    updateMuzejLogoVisibility();
+  })();
+</script>
+
+</body>
+</html>
