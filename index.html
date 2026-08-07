@@ -2354,17 +2354,18 @@
             </div>
 
             <div class="explore-stack">
-              <a class="explore-row" href="./tose-proeski.html">
+              <a class="explore-row" href="./dodole.html">
                 <div class="explore-row-media">
-                  <img
-                    class="explore-image"
-                    src="./Assets/Tose%20Hardest%20Thing/Tose%20Photos/tose-hero.png"
-                    alt="Editorial collage for Toše Proeski and The Hardest Thing."
-                    loading="lazy"
-                  />
+                  <div class="explore-image explore-image--photo">
+                    <img
+                      src="./Assets/Dodole/rain2.png"
+                      alt="Black-and-white archival photograph of women and girls gathered around a Macedonian rain-making ritual"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
                 <div class="explore-row-copy">
-                  <h3 class="explore-row-title">Toše Proeski and the Making of <i>The Hardest Thing</i></h3>
+                  <h3 class="explore-row-title">DODOLE, a Macedonian rain-making ritual song from Istibanja</h3>
                 </div>
               </a>
 
@@ -2411,22 +2412,6 @@
                   <h3 class="explore-row-title">How to taste Vranec like a sommelier</h3>
                 </div>
               </a>
-              <a class="explore-row" href="./dj-ahmet.html">
-                <div class="explore-row-media">
-                  <div class="explore-image explore-image--photo">
-                    <img
-                      src="./Assets/DJ%20Ahmet/dj-ahmet-lead.jpg"
-                      alt="Still from DJ Ahmet with a young musician in a village setting"
-                      loading="lazy"
-                      style="object-position: 75% center;"
-                    />
-                  </div>
-                </div>
-                <div class="explore-row-copy">
-                  <h3 class="explore-row-title">"DJ Ahmet" Finds the Rhythms of the Selo</h3>
-                </div>
-              </a>
-
             </div>
           </div>
         </section>
@@ -2616,11 +2601,21 @@
             heroImage: "./Assets/New%20Wave/New%20Wave%20Hero/new%20new%20wave.png",
             imageClass: "new-wave-card-image",
             alt: "Portrait collage of contemporary Macedonian filmmakers for The (New) New Wave article."
+          },
+          dodole: {
+            title: "DODOLE",
+            href: "./dodole.html",
+            meta: "Video | Ritual Song",
+            dek: "A Macedonian rain-making ritual song filmed in Istibanja in 1987.",
+            heroImage: "./Assets/Dodole/rain2.png",
+            cardImage: "./Assets/Dodole/rain2.png",
+            cardAlt: "Black-and-white archival photograph of women and girls gathered around a Macedonian rain-making ritual.",
+            alt: "Black-and-white archival photograph of women and girls gathered around a Macedonian rain-making ritual."
           }
         };
 
         var heroRotationSlugs = ["quality", "stranci", "tokyo", "nation"];
-        var selectedStorySlugs = ["tokyo", "prespa", "quality", "nation", "stranci", "newWave"];
+        var selectedStorySlugs = ["tokyo", "prespa", "quality", "nation", "stranci", "newWave", "dodole"];
         var selectedSlug = heroRotationSlugs[Math.floor(Math.random() * heroRotationSlugs.length)];
         var selectedArticle = articles[selectedSlug];
 

@@ -1,6 +1,16 @@
 (function () {
   var articles = [
     {
+      slug: "dodole",
+      href: "dodole.html",
+      title: "DODOLE",
+      kicker: "Video | Ritual Song",
+      dek: "A Macedonian rain-making ritual song filmed in Istibanja in 1987.",
+      image: "./Assets/Dodole/rain2.png",
+      alt: "Black-and-white archival photograph of women and girls gathered around a Macedonian rain-making ritual.",
+      position: "center top"
+    },
+    {
       slug: "five-books-with-macedonian-state",
       href: "five-books-with-macedonian-state.html",
       title: "Start Here: Five Books with Macedonian State",
@@ -129,26 +139,6 @@
       image: "./Assets/Stranci/Stranci%20Pix/stranci-index-portrait.png",
       alt: "Three people posing for a phone camera against a yellow and pink painted backdrop with social media icons.",
       position: "center center"
-    },
-    {
-      slug: "tose-proeski",
-      href: "tose-proeski.html",
-      title: "Toše Proeski",
-      kicker: "Music | Pop",
-      dek: "A singer still expanding the possibilities of his own voice.",
-      image: "./Assets/Tose%20Hardest%20Thing/Tose%20Photos/tose-hero.png",
-      alt: "Editorial collage for Toše Proeski and The Hardest Thing.",
-      position: "center center"
-    },
-    {
-      slug: "dj-ahmet",
-      href: "dj-ahmet.html",
-      title: '"DJ Ahmet" Finds the Rhythms of the Selo',
-      kicker: "Cinema | Review",
-      dek: "A village comedy of grief, rhythm, and the moment a new sound enters the air.",
-      image: "./Assets/DJ%20Ahmet/dj-ahmet-lead.jpg",
-      alt: "Still from DJ Ahmet with a young musician in a village setting.",
-      position: "75% center"
     },
     {
       slug: "lake-ohrid-architecture-memory",

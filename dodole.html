@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A Muzej video feature for Dodole, a Macedonian rain-making ritual song filmed in Istibanja, Macedonia in 1987.">
+<meta property="og:title" content="Dodole | МУЗЕЈ">
+<meta property="og:description" content="A Macedonian rain-making ritual song filmed in Istibanja, Macedonia in 1987.">
+<meta property="og:image" content="./Assets/Dodole/dodole-youtube-thumbnail.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dodole | МУЗЕЈ">
+<meta name="twitter:description" content="A Macedonian rain-making ritual song filmed in Istibanja, Macedonia in 1987.">
+<meta name="twitter:image" content="./Assets/Dodole/dodole-youtube-thumbnail.jpg">
+<title>Dodole | МУЗЕЈ</title>
+<link rel="icon" type="image/png" href="./Assets/Font/Muzej%20Logo.ai.png">
+<link rel="apple-touch-icon" href="./Assets/Font/Muzej%20Logo.ai.png">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&display=swap"
+/>
+<link rel="stylesheet" href="https://use.typekit.net/gnw6uol.css">
+<link rel="stylesheet" href="more-from-muzej.css">
+<style>
+:root {
+  --background: #ffffff;
+  --foreground: #171513;
+  --white: #ffffff;
+  --ink: #171513;
+  --ink-soft: rgba(23, 21, 19, 0.64);
+  --muted: #776f66;
+  --rule: rgba(23, 21, 19, 0.12);
+  --earth: #8f3f2c;
+  --rain: #5f7f86;
+  --field: #d9c57f;
+  --page-x: clamp(18px, 5.2vw, 72px);
+  --nav-h: clamp(88px, 10vw, 128px);
+  --content-max: 1520px;
+  --font-display: "ivypresto-display", "IvyPresto Display", "Ivy Presto", serif;
+  --font-wordmark: var(--font-display);
+  --headline-serif: var(--font-display);
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --article-serif: "Adobe Jenson", Georgia, serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--ink);
+  font-family: var(--article-serif);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+.shell {
+  width: min(100%, var(--content-max));
+  margin: 0 auto;
+  padding-left: var(--page-x);
+  padding-right: var(--page-x);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: transparent;
+  pointer-events: none;
+}
+.header-frame {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  padding-top: 28px;
+  padding-bottom: 24px;
+}
+.site-header .header-frame,
+.site-header .brand-mark,
+.site-header .header-tools {
+  pointer-events: auto;
+}
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-wordmark);
+  font-size: clamp(2.4rem, 1.9rem + 1.43vw, 3.76rem);
+  line-height: 0.92;
+  letter-spacing: 0.09em;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  transform: translate3d(0, 0, 0);
+  transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+body.muzej-logo-hidden .brand-mark {
+  transform: translate3d(0, calc(-100% - 42px), 0);
+}
+.header-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.utility-link,
+.utility-menu-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  letter-spacing: 0.11em;
+  color: rgba(23, 21, 19, 0.58);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 180ms ease, background 180ms ease;
+}
+.utility-link:hover,
+.utility-menu-item:hover {
+  color: var(--foreground);
+}
+.utility-menu { position: relative; }
+.utility-menu summary { list-style: none; }
+.utility-menu summary::-webkit-details-marker { display: none; }
+.utility-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: opacity 180ms ease;
+}
+.utility-trigger:hover { opacity: 0.72; }
+.utility-trigger:focus-visible {
+  outline: 2px solid rgba(95, 127, 134, 0.5);
+  outline-offset: 3px;
+}
+.utility-icon {
+  display: grid;
+  gap: 0.26rem;
+}
+.utility-icon-line {
+  display: block;
+  width: 1.45rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.88;
+}
+.utility-panel {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  right: 0;
+  z-index: 10;
+  display: grid;
+  min-width: 10rem;
+  padding: 0.45rem 0;
+  border: 1px solid rgba(23, 21, 19, 0.12);
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(23, 21, 19, 0.08);
+}
+.utility-panel-group {
+  display: grid;
+  gap: 0;
+}
+.utility-panel-utility {
+  margin-top: 0.25rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid rgba(23, 21, 19, 0.1);
+}
+.utility-panel .utility-link,
+.utility-panel .utility-menu-item {
+  justify-content: flex-start;
+  min-height: 0;
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  background: transparent;
+}
+.utility-panel .utility-link:hover,
+.utility-panel .utility-menu-item:hover {
+  background: rgba(23, 21, 19, 0.035);
+}
+
+main {
+  padding-top: clamp(4px, 1.2vw, 18px);
+}
+.watch-hero {
+  display: grid;
+  min-height: clamp(680px, calc(100svh - var(--nav-h)), 900px);
+  padding: 0 var(--page-x) clamp(54px, 7vw, 96px);
+  align-items: start;
+}
+.watch-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.28fr) minmax(300px, 0.72fr);
+  gap: clamp(24px, 4.5vw, 72px);
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  align-items: center;
+}
+.video-frame {
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background:
+    linear-gradient(135deg, rgba(95, 127, 134, 0.18), rgba(143, 63, 44, 0.16)),
+    #10100f;
+  box-shadow: 0 22px 70px rgba(23, 21, 19, 0.16);
+}
+.video-poster {
+  position: absolute;
+  inset: 0;
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.video-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(0.22) contrast(0.96) saturate(0.84);
+  transition: transform 260ms ease, filter 260ms ease;
+}
+.video-poster::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(16, 16, 15, 0.06), rgba(16, 16, 15, 0.24));
+  pointer-events: none;
+}
+.video-poster:hover img,
+.video-poster:focus-visible img {
+  transform: scale(1.018);
+  filter: sepia(0.14) contrast(1) saturate(0.9);
+}
+.video-poster:focus-visible {
+  outline: 3px solid rgba(95, 127, 134, 0.72);
+  outline-offset: 4px;
+}
+.video-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  display: grid;
+  width: clamp(64px, 8vw, 92px);
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 50%;
+  background: #ff0033;
+  box-shadow: 0 16px 36px rgba(16, 16, 15, 0.26);
+  transform: translate(-50%, -50%);
+}
+.video-play::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: 7%;
+  border-top: clamp(12px, 1.6vw, 18px) solid transparent;
+  border-bottom: clamp(12px, 1.6vw, 18px) solid transparent;
+  border-left: clamp(19px, 2.3vw, 29px) solid #ffffff;
+}
+.video-label {
+  position: absolute;
+  left: clamp(14px, 2vw, 24px);
+  bottom: clamp(14px, 2vw, 24px);
+  z-index: 1;
+  max-width: calc(100% - clamp(28px, 4vw, 48px));
+  padding: 0.72rem 0.88rem;
+  background: rgba(16, 16, 15, 0.72);
+  color: #ffffff;
+  font-family: var(--sans);
+  font-size: clamp(0.66rem, 0.55rem + 0.35vw, 0.82rem);
+  line-height: 1.25;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.watch-copy {
+  display: flex;
+  min-width: 0;
+  min-height: min(62vw, 640px);
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.watch-kicker {
+  margin: 0 0 clamp(18px, 2.2vw, 28px);
+  font-family: var(--sans);
+  font-size: clamp(0.72rem, 0.64rem + 0.22vw, 0.86rem);
+  line-height: 1.35;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(23, 21, 19, 0.58);
+}
+.watch-title {
+  margin: 0;
+  max-width: 9.6ch;
+  font-family: var(--headline-serif);
+  font-size: clamp(4.1rem, 8.8vw, 10.5rem);
+  font-weight: 300;
+  line-height: 0.78;
+  letter-spacing: 0.02em;
+  font-optical-sizing: auto;
+  text-transform: uppercase;
+}
+.watch-subtitle {
+  margin: clamp(22px, 3vw, 34px) 0 0;
+  max-width: 29rem;
+  font-family: var(--article-serif);
+  font-size: clamp(1.08rem, 1.1vw + 0.78rem, 1.44rem);
+  line-height: 1.35;
+  color: var(--ink-soft);
+}
+.watch-source {
+  display: inline-flex;
+  margin-top: clamp(24px, 3vw, 36px);
+  border-bottom: 1px solid currentColor;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--foreground);
+}
+.watch-article {
+  width: min(calc(100% - (var(--page-x) * 2)), 1160px);
+  margin: 0 auto;
+  padding: clamp(44px, 7vw, 94px) 0 clamp(34px, 5vw, 68px);
+  border-top: 1px solid var(--rule);
+}
+.watch-body {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.92fr) minmax(0, 560px) minmax(80px, 0.32fr);
+  gap: clamp(24px, 5vw, 70px);
+  align-items: start;
+}
+.watch-body > * {
+  min-width: 0;
+}
+.watch-prose p {
+  margin: 0;
+  font-size: clamp(1.05rem, 0.95rem + 0.34vw, 1.24rem);
+  line-height: 1.78;
+}
+.watch-prose p + p {
+  margin-top: 1.55em;
+}
+.watch-rail-image {
+  margin: 0;
+  position: sticky;
+  top: calc(var(--nav-h) + 24px);
+}
+.watch-rail-image img {
+  width: 100%;
+  aspect-ratio: 4 / 5.1;
+  object-fit: cover;
+}
+
+.site-footer {
+  margin-top: 0;
+}
+.muzej-footer {
+  width: 100%;
+  padding: clamp(3.5rem, 7vw, 6rem) var(--page-x);
+  background: #000000;
+  color: #f7f2e9;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: minmax(320px, 620px) minmax(180px, 260px);
+  gap: clamp(3rem, 7vw, 6rem);
+  justify-content: center;
+  align-items: start;
+  width: min(100%, 1160px);
+  margin: 0 auto;
+}
+.footer-wordmark {
+  display: inline-flex;
+  font-family: var(--font-wordmark);
+  font-size: clamp(3.1rem, 5vw, 5rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: 0.04em;
+  font-optical-sizing: auto;
+  text-transform: uppercase;
+}
+.footer-statement {
+  max-width: 38.75rem;
+  margin: clamp(1.15rem, 1.8vw, 1.45rem) 0 0;
+  font-size: clamp(1rem, 1vw + 0.72rem, 1.15rem);
+  line-height: 1.5;
+  color: rgba(247, 242, 233, 0.86);
+}
+.muzej-footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-top: 0.28rem;
+}
+.muzej-footer .footer-links a {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  line-height: 1.2;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+}
+.muzej-footer .footer-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+@media (max-width: 1080px) {
+  .watch-hero-inner {
+    grid-template-columns: 1fr;
+    gap: clamp(30px, 5vw, 48px);
+  }
+  .watch-copy {
+    min-height: auto;
+    order: -1;
+  }
+  .watch-title {
+    max-width: 8.5ch;
+    font-size: clamp(4rem, 13vw, 8rem);
+  }
+  .watch-subtitle {
+    max-width: 38rem;
+  }
+  .watch-body {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr);
+  }
+  .watch-prose {
+    max-width: 680px;
+  }
+  .watch-rail-image {
+    position: static;
+  }
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header { z-index: 2000; }
+  .header-frame {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    justify-items: stretch;
+    gap: 1rem;
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .brand-mark {
+    justify-self: start;
+    min-width: 0;
+    font-size: clamp(2.16rem, 10.15vw, 2.87rem);
+  }
+  .header-tools {
+    justify-self: end;
+    justify-content: flex-end;
+    margin-left: auto;
+    position: relative;
+    z-index: 2002;
+  }
+  .utility-menu { position: static; }
+  .utility-trigger {
+    position: relative;
+    z-index: 2003;
+  }
+  .utility-panel {
+    position: fixed;
+    inset: 0;
+    z-index: 2001;
+    display: grid;
+    align-content: center;
+    width: 100vw;
+    max-width: none;
+    min-width: 0;
+    height: 100vh;
+    height: 100svh;
+    padding: clamp(76px, 18vh, 128px) var(--page-x) 48px;
+    border: 0;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: none;
+    overflow-y: auto;
+  }
+  .utility-panel-group {
+    width: min(100%, 22rem);
+    margin: 0 auto;
+  }
+  .utility-panel-utility {
+    margin-top: 0.8rem;
+    padding-top: 0.85rem;
+  }
+  .utility-panel .utility-link,
+  .utility-panel .utility-menu-item {
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: 0.72rem 0;
+    text-align: center;
+  }
+  .watch-hero {
+    min-height: auto;
+    padding-bottom: 52px;
+  }
+  .watch-title {
+    font-size: clamp(3.6rem, 18vw, 5.4rem);
+    line-height: 0.82;
+  }
+  .watch-subtitle {
+    font-size: clamp(1.04rem, 4.6vw, 1.26rem);
+  }
+  .watch-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-mark {
+    transition: none;
+    will-change: auto;
+  }
+  body.muzej-logo-hidden .brand-mark {
+    transform: none;
+  }
+}
+</style>
+<script src="more-from-muzej.js?v=20260807-dodole" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="shell header-frame">
+    <a class="brand-mark" href="index.html" aria-label="Muzej home">Muzej</a>
+
+    <div class="header-tools">
+      <details class="utility-menu">
+        <summary class="utility-trigger" aria-label="Open navigation menu">
+          <span class="utility-icon" aria-hidden="true">
+            <span class="utility-icon-line"></span>
+            <span class="utility-icon-line"></span>
+            <span class="utility-icon-line"></span>
+          </span>
+        </summary>
+        <nav class="utility-panel" aria-label="Site navigation">
+          <div class="utility-panel-group">
+            <a class="utility-link" href="index.html">Home</a>
+            <a class="utility-link" href="index.html#selected-stories">Selected Stories</a>
+            <a class="utility-link" href="index.html#in-rotation">In Rotation</a>
+            <a class="utility-link" href="index.html#culture">Culture</a>
+            <a class="utility-link" href="about.html">About Muzej</a>
+          </div>
+          <div class="utility-panel-group utility-panel-utility">
+            <a class="utility-link" href="mailto:muzej.mk@proton.me">Contact</a>
+            <a class="utility-link" href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main>
+  <header class="watch-hero" aria-labelledby="watch-title">
+    <div class="watch-hero-inner">
+      <div class="video-frame">
+        <a
+          class="video-poster"
+          href="https://www.youtube.com/watch?v=7N5xDQRuLMo"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Watch Dodole on YouTube"
+        >
+          <img src="./Assets/Dodole/dodole-youtube-thumbnail.jpg" alt="YouTube thumbnail for Dodole, a Macedonian rain-making ritual song filmed in Istibanja in 1987">
+          <span class="video-play" aria-hidden="true"></span>
+          <span class="video-label">Watch video on YouTube</span>
+        </a>
+      </div>
+
+      <div class="watch-copy">
+        <p class="watch-kicker">Video | Ritual Song</p>
+        <h1 class="watch-title" id="watch-title">DODOLE</h1>
+        <p class="watch-subtitle">A Macedonian rain-making ritual song filmed in Istibanja in 1987.</p>
+        <a class="watch-source" href="https://www.youtube.com/watch?v=7N5xDQRuLMo" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+      </div>
+    </div>
+  </header>
+
+  <article class="watch-article">
+    <div class="watch-body">
+      <figure class="watch-rail-image">
+        <img src="./Assets/Dodole/rain2.png" alt="Black-and-white archival photograph of women and girls gathered around a Macedonian rain-making ritual" loading="lazy">
+      </figure>
+
+      <div class="watch-prose">
+        <p>Дудулева мајка крај море седи<br>
+        Вај, дудуле, дај Боже дожд</p>
+
+        <p>Крај море седи, Бога си моли<br>
+        Вај, дудуле, дај Боже дожд</p>
+
+        <p>Да си зароси таја ситна роса<br>
+        Вај, дудуле, дај Боже дожд</p>
+
+        <p>Да си навади по полето<br>
+        Вај, дудуле, дај Боже дожд</p>
+
+        <p>Ај по полето бериќето<br>
+        Вај, дудуле, дај Боже дожд</p>
+      </div>
+    </div>
+  </article>
+
+  <section class="more-from-muzej" data-more-from-muzej aria-labelledby="more-from-muzej-title"></section>
+</main>
+
+<footer class="site-footer muzej-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-wordmark">Muzej</span>
+      <p class="footer-statement">An editorial archive of Macedonian art, style, tradition, and culture.</p>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="about.html">ABOUT MUZEJ</a>
+      <a href="mailto:muzej.mk@proton.me">CONTACT</a>
+      <a href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer" aria-label="Open Muzej on Instagram">INSTAGRAM</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var utilityMenu = document.querySelector(".utility-menu");
+
+    if (!utilityMenu) {
+      return;
+    }
+
+    var utilityTrigger = utilityMenu.querySelector(".utility-trigger");
+    var utilityLinks = utilityMenu.querySelectorAll(".utility-link");
+
+    function setUtilityMenuOpen(isOpen) {
+      utilityMenu.open = isOpen;
+
+      if (utilityTrigger) {
+        utilityTrigger.setAttribute("aria-expanded", String(isOpen));
+      }
+    }
+
+    utilityMenu.addEventListener("toggle", function () {
+      if (utilityTrigger) {
+        utilityTrigger.setAttribute("aria-expanded", String(utilityMenu.open));
+      }
+    });
+
+    utilityLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        setUtilityMenuOpen(false);
+      });
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && utilityMenu.open) {
+        setUtilityMenuOpen(false);
+
+        if (utilityTrigger) {
+          utilityTrigger.focus();
+        }
+      }
+    });
+
+    document.addEventListener("click", function (event) {
+      if (utilityMenu.open && !utilityMenu.contains(event.target)) {
+        setUtilityMenuOpen(false);
+      }
+    });
+  })();
+</script>
+
+<script>
+  (function () {
+    var previousY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+    var ticking = false;
+    var revealZone = 24;
+    var motionThreshold = 4;
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    function updateMuzejLogoVisibility() {
+      var currentY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+      var delta = currentY - previousY;
+
+      if (reducedMotion.matches) {
+        document.body.classList.remove("muzej-logo-hidden");
+        ticking = false;
+        return;
+      }
+
+      if (currentY <= revealZone) {
+        document.body.classList.remove("muzej-logo-hidden");
+      } else if (delta > motionThreshold) {
+        document.body.classList.add("muzej-logo-hidden");
+      } else if (delta < -motionThreshold) {
+        document.body.classList.remove("muzej-logo-hidden");
+      }
+
+      previousY = currentY;
+      ticking = false;
+    }
+
+    function requestMuzejLogoVisibility() {
+      if (!ticking) {
+        window.requestAnimationFrame(updateMuzejLogoVisibility);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener("scroll", requestMuzejLogoVisibility, { passive: true });
+    window.addEventListener("resize", requestMuzejLogoVisibility);
+
+    if (reducedMotion.addEventListener) {
+      reducedMotion.addEventListener("change", requestMuzejLogoVisibility);
+    } else if (reducedMotion.addListener) {
+      reducedMotion.addListener(requestMuzejLogoVisibility);
+    }
+
+    updateMuzejLogoVisibility();
+  })();
+</script>
+</body>
+</html>
