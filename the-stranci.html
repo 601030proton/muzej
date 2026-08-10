@@ -285,21 +285,21 @@ main {
   letter-spacing: 0;
   line-height: 1.4;
 }
-.article-deck {
-  width: 100%;
-  max-width: min(920px, 100%);
-  margin: 0 0 clamp(52px, 7vw, 92px);
-  text-align: left;
+.feature-deck {
+  max-width: min(1380px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
+  margin: clamp(40px, 5vw, 78px) auto 0;
   color: var(--ink);
-  font-size: clamp(17px, 1.55vw, 23px);
+  font-family: "plantin", Georgia, serif;
+  font-size: clamp(32px, 3.05vw, 56px);
   font-weight: 400;
-  line-height: 1.18;
-  letter-spacing: -0.02em;
+  line-height: 1.08;
+  letter-spacing: 0;
+  text-wrap: balance;
 }
 .article-shell {
   max-width: var(--feature-w);
   margin: 0 auto;
-  padding: clamp(64px, 8vw, 112px) var(--page-x) clamp(84px, 10vw, 132px);
+  padding: 0 var(--page-x) clamp(84px, 10vw, 132px);
 }
 .content-row {
   display: grid;
@@ -828,12 +828,9 @@ main {
     padding-top: clamp(52px, 10vw, 84px);
   }
 
-  .article-deck {
-    width: calc(100vw - (var(--page-x) * 2));
-    max-width: 100%;
-    margin-bottom: clamp(44px, 8vw, 72px);
-    font-size: clamp(17px, 3.3vw, 21px);
-    overflow-wrap: break-word;
+  .feature-deck {
+    margin-top: clamp(30px, 4.2vw, 48px);
+    font-size: clamp(16px, 2.05vw, 20px);
   }
 }
 
@@ -942,11 +939,10 @@ body.muzej-logo-hidden .site-header .brand-mark {
         <img src="./Assets/Stranci/Stranci%20Pix/hero%20portrait.png" alt="Three people posing for a phone camera against a yellow and pink painted backdrop with social media icons." width="1023" height="1537" decoding="async" fetchpriority="high">
       </figure>
     </div>
+    <p class="feature-deck">They came looking for a place the internet had not already flattened. What they found was a country unusually willing to argue, embrace, and claim them.</p>
   </header>
 
   <article class="article-shell">
-    <p class="article-deck">They came looking for a place the internet had not already flattened. What they found was a country unusually willing to argue, embrace, and claim them.</p>
-
     <section class="article-body">
       <figure class="article-body-media">
         <img src="./Assets/Stranci/Stranci%20Pix/Screenshot%202026-06-18%20at%203.17.14%E2%80%AFPM.png" alt="Screenshot from a social media video with text reading Promaja is real." width="552" height="742" loading="lazy" decoding="async">
