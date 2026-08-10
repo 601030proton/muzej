@@ -27,8 +27,8 @@
   --page-x: clamp(18px, 5.2vw, 72px);
   --nav-h: clamp(88px, 10vw, 128px);
   --feature-w: min(1280px, calc(100vw - (var(--page-x) * 2)));
-  --rail-gap: clamp(28px, 5vw, 76px);
-  --body-col: minmax(520px, 760px);
+  --rail-gap: clamp(20px, 3.2vw, 46px);
+  --body-col: minmax(520px, 720px);
   --body-tail: clamp(16px, 1.4vw, 24px);
   --section-gap: clamp(48px, 8vw, 108px);
   --content-max: 1520px;
@@ -277,13 +277,13 @@ main {
 }
 .content-row {
   display: grid;
-  grid-template-columns: minmax(240px, 1.08fr) var(--body-col) var(--body-tail);
+  grid-template-columns: minmax(210px, 0.78fr) var(--body-col) var(--body-tail);
   column-gap: var(--rail-gap);
   align-items: start;
 }
 .article-body {
   display: grid;
-  grid-template-columns: minmax(240px, 1.08fr) var(--body-col) var(--body-tail);
+  grid-template-columns: minmax(210px, 0.78fr) var(--body-col) var(--body-tail);
   column-gap: var(--rail-gap);
   align-items: start;
   margin-bottom: var(--section-gap);
@@ -551,10 +551,10 @@ main {
     line-height: 1.1;
   }
   .content-row {
-    grid-template-columns: minmax(170px, 0.76fr) minmax(0, 660px) clamp(14px, 1vw, 18px);
+    grid-template-columns: minmax(150px, 0.58fr) minmax(0, 640px) clamp(14px, 1vw, 18px);
   }
   .article-body {
-    grid-template-columns: minmax(170px, 0.76fr) minmax(0, 660px) clamp(14px, 1vw, 18px);
+    grid-template-columns: minmax(150px, 0.58fr) minmax(0, 640px) clamp(14px, 1vw, 18px);
   }
 }
 
