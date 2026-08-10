@@ -296,6 +296,9 @@ main {
   letter-spacing: 0;
   text-wrap: balance;
 }
+.article-interview-hero .feature-deck {
+  margin-bottom: clamp(64px, 8vw, 118px);
+}
 .article-shell {
   max-width: var(--feature-w);
   margin: 0 auto;
@@ -379,6 +382,8 @@ main {
 }
 .photo-credit-note {
   margin: 0;
+  justify-self: end;
+  width: min(100%, 520px);
   color: var(--ink-soft);
   font-family: var(--sans);
   font-size: clamp(11px, 0.82vw, 13px);
@@ -849,6 +854,9 @@ main {
     margin-top: clamp(30px, 4.2vw, 48px);
     font-size: clamp(16px, 2.05vw, 20px);
   }
+  .article-interview-hero .feature-deck {
+    margin-bottom: clamp(46px, 7vw, 76px);
+  }
 }
 
 @media (max-width: 720px) {
@@ -962,7 +970,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
 </header>
 
 <main>
-  <header class="feature feature--stranci" aria-labelledby="article-title">
+  <header class="feature feature--stranci article-interview-hero" aria-labelledby="article-title">
     <div class="feature-inner">
       <div class="feature-copy">
         <p class="feature-byline">Interview Ace Trajkovski</p>
@@ -1054,7 +1062,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
       <div class="empty-tail" aria-hidden="true"></div>
     </section>
 
-    <div class="content-row article-photo-credits">
+    <div class="content-row article-photo-credits" id="photo-credits">
       <div class="empty-rail" aria-hidden="true"></div>
       <aside class="photo-credit-note" aria-label="Photo credits">
         <p class="photo-credit-heading">Photos</p>
