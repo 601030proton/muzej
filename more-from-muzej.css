@@ -1,8 +1,7 @@
-@import url("https://use.typekit.net/gnw6uol.css");
 
 /* Shared article More from Muzej card block. */
 .more-from-muzej {
-  --more-from-serif: "plantin", "Plantin", Georgia, serif;
+  --more-from-serif: "plantin", Georgia, serif;
   padding: clamp(70px, 9vw, 132px) 0 clamp(82px, 10vw, 148px);
   background: var(--background, #ffffff);
   color: var(--foreground, var(--ink, #171513));
@@ -103,6 +102,13 @@
   color: var(--foreground, var(--ink, #171513));
   text-wrap: balance;
   transition: color 180ms ease;
+}
+
+.more-from-muzej-title,
+.more-from-muzej-card-title,
+.more-from-muzej-card-title a {
+  font-family: "plantin", Georgia, serif;
+  font-weight: 400;
 }
 
 .more-from-muzej-card-dek {
