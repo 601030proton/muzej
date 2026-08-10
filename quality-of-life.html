@@ -255,12 +255,12 @@ main {
 .feature-title {
   margin: 0;
   color: var(--ink);
-  font-family: var(--brand-serif);
-  font-size: clamp(40px, 5.1vw, 78px);
-  font-weight: 350;
-  line-height: 1.01;
-  letter-spacing: -0.026em;
-  font-optical-sizing: auto;
+  font-family: "plantin", Georgia, serif;
+  font-size: clamp(42px, 5.2vw, 82px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0;
+  text-transform: none;
   text-wrap: balance;
 }
 .feature-byline {
@@ -305,9 +305,9 @@ main {
   margin: 0 0 clamp(34px, 5vw, 64px);
   text-align: left;
   color: var(--ink);
-  font-size: clamp(17px, 1.18vw, 20px);
+  font-size: clamp(23px, 1.65vw, 31px);
   font-weight: 400;
-  line-height: 1.68;
+  line-height: 1.46;
   letter-spacing: 0;
 }
 .article-intro {
@@ -466,8 +466,8 @@ main {
 .ranking-intro,
 .ranking-details p {
   margin: 0;
-  font-size: clamp(16px, 1.18vw, 18px);
-  line-height: 1.82;
+  font-size: clamp(23px, 1.65vw, 31px);
+  line-height: 1.46;
 }
 .ranking-details {
   margin-top: 1.45rem;
@@ -612,8 +612,8 @@ main {
 }
 .qol-editorial-block p {
   margin: 0;
-  font-size: clamp(14px, 1vw, 16px);
-  line-height: 1.68;
+  font-size: clamp(18px, 1.25vw, 22px);
+  line-height: 1.5;
 }
 .qol-survey-map {
   width: min(100%, 1120px);
@@ -737,8 +737,8 @@ main {
 }
 .closing-note p {
   margin: 0;
-  font-size: clamp(16px, 1.18vw, 18px);
-  line-height: 1.82;
+  font-size: clamp(23px, 1.65vw, 31px);
+  line-height: 1.46;
 }
 
 .site-footer {
@@ -1097,15 +1097,16 @@ main > .more-from-muzej[data-more-from-muzej] {
 }
 .reference-hero .feature-title {
   width: 100%;
-  max-width: none;
+  max-width: min(760px, 100%);
   margin: 0;
   color: var(--ink);
-  font-family: var(--headline-serif);
-  font-size: clamp(58px, 5.25vw, 104px);
+  font-family: "plantin", Georgia, serif;
+  font-size: clamp(42px, 5.2vw, 82px);
   font-weight: 400;
   font-kerning: normal;
-  line-height: 0.84;
-  letter-spacing: -0.025em;
+  line-height: 0.98;
+  letter-spacing: 0;
+  text-transform: none;
   text-align: center;
   text-wrap: balance;
 }
@@ -1116,7 +1117,7 @@ main > .more-from-muzej[data-more-from-muzej] {
     gap: clamp(36px, 6vw, 72px);
   }
   .reference-hero .feature-title {
-    font-size: clamp(48px, 5.4vw, 68px);
+    font-size: clamp(34px, 4.35vw, 58px);
   }
 }
 
@@ -1141,8 +1142,11 @@ main > .more-from-muzej[data-more-from-muzej] {
     font-size: clamp(20px, 6vw, 28px);
   }
   .reference-hero .feature-title {
-    font-size: clamp(40px, 12vw, 58px);
-    line-height: 0.88;
+    font-size: clamp(30px, 8.2vw, 38px);
+    line-height: 1.03;
+    width: calc(100vw - (var(--page-x) * 2));
+    max-width: 100%;
+    overflow-wrap: break-word;
   }
 }
 
@@ -1157,7 +1161,6 @@ main > .more-from-muzej[data-more-from-muzej] {
   }
 }
 </style>
-<link rel="stylesheet" href="article-headlines.css">
 <link rel="stylesheet" href="more-from-muzej.css?v=20260810-plantin-final">
 <script src="more-from-muzej.js?v=20260810-plantin-final" defer></script>
 </head>
