@@ -87,7 +87,7 @@
   font-family: var(--sans, "Helvetica Neue", Helvetica, Arial, sans-serif);
   font-size: clamp(0.68rem, 0.62rem + 0.18vw, 0.78rem);
   line-height: 1.25;
-  letter-spacing: 0.18em;
+  letter-spacing: 0;
   color: rgba(23, 21, 19, 0.58);
 }
 
