@@ -308,7 +308,7 @@
       }
 
       .hero-feature {
-        padding-top: clamp(20px, 3.5vw, 48px);
+        padding-top: clamp(18px, 2.6vw, 42px);
       }
 
       .hero-grid {
@@ -318,37 +318,38 @@
       .hero-stage {
         display: grid;
         width: 100%;
-        max-width: min(100%, 1056px);
+        max-width: min(100%, 1370px);
         margin: 0 auto;
-        grid-template-columns: minmax(360px, 480px) minmax(280px, 30rem);
-        column-gap: clamp(64px, 6vw, 96px);
+        grid-template-columns: minmax(330px, 0.62fr) minmax(620px, 1.08fr);
+        column-gap: clamp(58px, 6.5vw, 116px);
         row-gap: clamp(24px, 3vw, 48px);
         justify-content: center;
-        align-items: center;
+        align-items: start;
       }
 
       .hero-text {
         display: grid;
-        align-content: center;
-        gap: clamp(1.4rem, 1.9vw, 1.95rem);
+        align-content: start;
+        gap: clamp(1.05rem, 1.35vw, 1.45rem);
         width: 100%;
         min-width: 0;
-        max-width: 720px;
-        padding-top: 0;
+        max-width: 31rem;
+        padding-top: clamp(190px, 18vw, 310px);
         text-align: left;
-        transform: none;
+        transform: translateX(clamp(58px, 5.4vw, 108px));
         justify-self: start;
       }
 
       .hero-copy {
         display: grid;
-        gap: clamp(0.55rem, 0.9vw, 0.85rem);
+        gap: clamp(0.58rem, 0.85vw, 0.82rem);
         max-width: none;
         padding-top: 0;
         padding-bottom: 0;
       }
 
       .eyebrow {
+        display: none;
         margin: 0;
         font-family: var(--sans);
         font-size: 0.7rem;
@@ -359,29 +360,38 @@
 
       .hero-title {
         margin: 0;
-        max-width: min(100%, 11.5ch);
-        min-height: 3.06em;
+        max-width: min(100%, 12.4ch);
+        min-height: 0;
         font-family: var(--headline-serif);
-        font-size: clamp(4.35rem, 6.45vw, 7.2rem);
-        line-height: 1.01;
+        font-size: clamp(4.1rem, 5vw, 6.65rem);
+        line-height: 0.91;
         letter-spacing: 0;
         font-weight: 400;
         font-optical-sizing: auto;
         font-kerning: normal;
         text-align: left;
         text-wrap: balance;
-        color: rgba(23, 21, 19, 0.84);
+        color: rgba(23, 21, 19, 0.82);
         overflow-wrap: normal;
         word-break: normal;
       }
 
+      .hero-title a {
+        text-decoration-line: underline;
+        text-decoration-thickness: 0.055em;
+        text-underline-offset: 0.12em;
+        text-decoration-skip-ink: none;
+      }
+
       .hero-dek {
-        max-width: 24rem;
+        max-width: 26rem;
         margin: 0;
-        min-height: 5.7rem;
-        font-size: clamp(1rem, 0.98rem + 0.18vw, 1.1rem);
-        line-height: 1.72;
-        color: var(--muted);
+        min-height: 0;
+        font-family: var(--sans);
+        font-size: clamp(1.28rem, 1.35vw, 1.72rem);
+        font-weight: 500;
+        line-height: 1.34;
+        color: rgba(23, 21, 19, 0.78);
         text-align: left;
         text-wrap: balance;
         overflow-wrap: anywhere;
@@ -390,10 +400,10 @@
       .hero-support {
         display: grid;
         align-content: start;
-        gap: clamp(1.2rem, 1.5vw, 1.55rem);
-        grid-template-rows: minmax(5.7rem, auto) auto;
+        gap: clamp(0.62rem, 0.8vw, 0.9rem);
+        grid-template-rows: auto auto;
         width: 100%;
-        height: clamp(7.6rem, 9vw, 9.4rem);
+        height: auto;
         max-width: 26rem;
       }
 
@@ -403,12 +413,14 @@
 
       .text-cta {
         display: inline-block;
-        padding-bottom: 0.3rem;
+        padding-bottom: 0;
         font-family: var(--sans);
-        font-size: 0.76rem;
+        font-size: clamp(0.82rem, 0.86vw, 1rem);
+        font-weight: 600;
         line-height: 1.25;
-        letter-spacing: 0;
-        border-bottom: 1px solid rgba(23, 21, 19, 0.24);
+        letter-spacing: 0.03em;
+        color: rgba(23, 21, 19, 0.48);
+        border-bottom: 0;
         transition: color 180ms ease, border-color 180ms ease;
       }
 
@@ -430,14 +442,14 @@
         display: block;
         width: 100%;
         min-width: 0;
-        max-width: 30rem;
-        aspect-ratio: 3 / 4;
+        max-width: none;
+        aspect-ratio: 0.78 / 1;
         height: auto;
         overflow: hidden;
         padding-top: 0;
         margin: 0;
         transform: none;
-        justify-self: start;
+        justify-self: stretch;
       }
 
       .hero-image,
@@ -1523,24 +1535,24 @@
         }
 
         .hero-stage {
-          grid-template-columns: minmax(300px, 440px) minmax(280px, 26rem);
-          max-width: min(100%, 912px);
-          column-gap: clamp(32px, 4vw, 56px);
+          grid-template-columns: minmax(280px, 0.58fr) minmax(460px, 1fr);
+          max-width: min(100%, 1030px);
+          column-gap: clamp(34px, 5vw, 62px);
           row-gap: 22px;
           justify-content: center;
-          align-items: center;
+          align-items: start;
         }
 
         .hero-text {
           width: 100%;
           min-width: 0;
-          padding-top: 0;
+          padding-top: clamp(112px, 15vw, 178px);
           align-content: start;
-          gap: 1.4rem;
+          gap: 1.1rem;
           justify-self: stretch;
           max-width: none;
           text-align: left;
-          transform: none;
+          transform: translateX(clamp(24px, 3.2vw, 42px));
         }
 
         .hero-copy {
@@ -1550,8 +1562,8 @@
 
         .hero-media {
           width: 100%;
-          max-width: min(100%, 32rem);
-          aspect-ratio: 3 / 4;
+          max-width: none;
+          aspect-ratio: 0.78 / 1;
           height: auto;
           justify-self: center;
           transform: none;
@@ -1565,13 +1577,13 @@
         }
 
         .hero-dek {
-          min-height: 4.9rem;
+          min-height: 0;
         }
 
         .hero-support {
           width: 100%;
-          height: 8.4rem;
-          grid-template-rows: minmax(4.9rem, auto) auto;
+          height: auto;
+          grid-template-rows: auto auto;
           max-width: none;
         }
 
@@ -1655,18 +1667,18 @@
         }
 
         .hero-title {
-          min-height: 4.08em;
+          min-height: 0;
           height: auto;
           font-size: clamp(2.95rem, 12vw, 4.25rem);
-          line-height: 1.02;
-          max-width: 10.5ch;
+          line-height: 0.94;
+          max-width: 11.5ch;
           text-align: left;
         }
 
         .hero-dek {
           max-width: 32rem;
           font-size: 0.98rem;
-          line-height: 1.66;
+          line-height: 1.48;
           text-align: left;
         }
 
@@ -1760,11 +1772,13 @@
 
         .hero-text {
           height: auto;
+          padding-top: 0;
+          transform: none;
         }
 
         .hero-media {
           height: auto;
-          aspect-ratio: 3 / 4;
+          aspect-ratio: 0.86 / 1;
         }
 
         .hero-image {
@@ -2029,7 +2043,7 @@
                   <div class="hero-support">
                     <p class="hero-dek">They came looking for a place the internet had not already flattened. They stayed for the ajvar.</p>
                     <div class="hero-actions">
-                      <a class="text-cta" href="./the-stranci.html">Read the Essay</a>
+                      <a class="text-cta" href="./the-stranci.html">By Ace Trajkovski</a>
                     </div>
                   </div>
                 </div>
@@ -2537,6 +2551,7 @@
             href: "./quality-of-life.html",
             meta: "Quality of Life | Urbanism",
             dek: "A ranked survey of where everyday life works best across the Macedonian geographic and cultural region.",
+            author: "Ace Trajkovski",
             heroImage: "./Assets/Quality%20of%20Life/hero-final.png",
             cardImage: "./Assets/Quality%20of%20Life/hero-final.png",
             cardAlt: "Collage of a woman holding the Macedonian flag for the Quality of Life Survey 2026.",
@@ -2547,6 +2562,7 @@
             href: "./the-stranci.html",
             meta: "Field Notes | Internet",
             dek: "They came looking for a place the internet had not already flattened. They stayed for the ajvar.",
+            author: "Ace Trajkovski",
             heroImage: "./Assets/Stranci/Stranci%20Pix/stranci-index-portrait.png",
             alt: "Three people posing for a phone camera against a yellow and pink painted backdrop with social media icons."
           },
@@ -2555,6 +2571,7 @@
             href: "./skopje-tange.html",
             meta: "Architecture | Urbanism",
             dek: "The Japanese architect who dreamed a new Skopje.",
+            author: "Ace Trajkovski",
             heroImage: "./Assets/Kenzo%20Article/Tange%20Pics/final.png",
             alt: "Editorial collage portrait with red geometric forms and brutalist architecture."
           },
@@ -2563,6 +2580,7 @@
             href: "./wearing-the-nation.html",
             meta: "Sport | Design",
             dek: "Five Macedonian shirts, and what they reveal about design, memory, and the limits of reinvention.",
+            author: "Ace Trajkovski",
             heroImage: "./Assets/Wearing%20the%20Nation/nation-on-their-backs-index-portrait.png",
             alt: "Portrait crop of Macedonian football shirts in red, yellow, and white."
           },
@@ -2655,6 +2673,9 @@
           }
 
           setLink(cta, article);
+          if (cta) {
+            cta.textContent = article.author ? "By " + article.author : "Read the Essay";
+          }
           setLink(mediaLink, article);
 
           if (image) {
