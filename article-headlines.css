@@ -5,7 +5,7 @@
 .weekender-title,
 .poem-title {
   margin: 0;
-  font-family: var(--headline-serif, "ivypresto-display", serif);
+  font-family: var(--headline-serif, "plantin", Georgia, serif);
   font-size: clamp(38px, 4.9vw, 76px);
   font-weight: 300;
   line-height: 0.96;
@@ -35,7 +35,7 @@
 .recommendation-row-title,
 .day-label,
 .itinerary-item-title {
-  font-family: var(--headline-serif, "ivypresto-display", serif);
+  font-family: var(--headline-serif, "plantin", Georgia, serif);
   font-weight: 300;
   letter-spacing: 0;
   font-kerning: normal;
@@ -97,7 +97,7 @@
 
 .kinfolk-article-hero .feature-title {
   min-width: 0;
-  font-family: "ivypresto-display", serif;
+  font-family: "plantin", Georgia, serif;
   width: 100%;
   max-width: min(760px, 100%);
   margin-left: auto;
@@ -108,14 +108,13 @@
   font-kerning: normal;
   line-height: 0.86;
   letter-spacing: 0;
-  text-transform: uppercase;
   overflow-wrap: normal;
   word-break: normal;
   hyphens: manual;
 }
 
 .kinfolk-article-hero .feature-byline {
-  font-family: "ivypresto-display", serif;
+  font-family: "plantin", Georgia, serif;
   margin: 0;
   color: var(--ink, var(--foreground, #0f0e0d));
   font-size: clamp(24px, 2.2vw, 38px);

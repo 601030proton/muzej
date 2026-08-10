@@ -2,7 +2,7 @@
 
 /* Shared article More from Muzej card block. */
 .more-from-muzej {
-  --more-from-serif: "ivypresto-display", "IvyPresto Display", "Ivy Presto", serif;
+  --more-from-serif: "plantin", "Plantin", Georgia, serif;
   padding: clamp(70px, 9vw, 132px) 0 clamp(82px, 10vw, 148px);
   background: var(--background, #ffffff);
   color: var(--foreground, var(--ink, #171513));

@@ -3,7 +3,7 @@
     {
       slug: "dodole",
       href: "dodole.html",
-      title: "DODOLE",
+      title: "Dodole",
       kicker: "Video | Ritual Song",
       dek: "A Macedonian rain-making ritual song filmed in Istibanja in 1987.",
       image: "./Assets/Dodole/rain2.png",
@@ -134,7 +134,7 @@
       slug: "the-stranci",
       href: "the-stranci.html",
       title: "How to Be From Somewhere Else",
-      kicker: "Culture | Internet",
+      kicker: "Field Notes | Internet",
       dek: "They came looking for a place the internet had not already flattened. They stayed for the ajvar.",
       image: "./Assets/Stranci/Stranci%20Pix/stranci-index-portrait.png",
       alt: "Three people posing for a phone camera against a yellow and pink painted backdrop with social media icons.",
