@@ -21,7 +21,7 @@
   font-size: clamp(2rem, 1.55rem + 1.4vw, 3.1rem);
   line-height: 0.98;
   letter-spacing: -0.026em;
-  font-weight: 300;
+  font-weight: 400;
   font-optical-sizing: auto;
   color: var(--foreground, var(--ink, #171513));
 }
@@ -88,7 +88,6 @@
   font-size: clamp(0.68rem, 0.62rem + 0.18vw, 0.78rem);
   line-height: 1.25;
   letter-spacing: 0.18em;
-  text-transform: uppercase;
   color: rgba(23, 21, 19, 0.58);
 }
 
@@ -99,7 +98,7 @@
   font-size: clamp(1.5rem, 1.14rem + 0.92vw, 2.25rem);
   line-height: 1.05;
   letter-spacing: -0.025em;
-  font-weight: 300;
+  font-weight: 400;
   font-optical-sizing: auto;
   color: var(--foreground, var(--ink, #171513));
   text-wrap: balance;
