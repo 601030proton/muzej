@@ -107,8 +107,9 @@
 .more-from-muzej-title,
 .more-from-muzej-card-title,
 .more-from-muzej-card-title a {
-  font-family: "plantin", Georgia, serif;
-  font-weight: 400;
+  font-family: "plantin", Georgia, serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
 }
 
 .more-from-muzej-card-dek {

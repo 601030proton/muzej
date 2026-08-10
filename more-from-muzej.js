@@ -226,6 +226,9 @@
 
     copy.className = "more-from-muzej-card-copy";
     title.className = "more-from-muzej-card-title";
+    title.style.fontFamily = '"plantin", Georgia, serif';
+    title.style.fontWeight = "400";
+    title.style.fontStyle = "normal";
     title.textContent = article.title;
 
     if (article.kicker) {
@@ -284,6 +287,9 @@
     frame.className = "more-from-muzej-frame";
     heading.className = "more-from-muzej-title";
     heading.id = "more-from-muzej-title";
+    heading.style.fontFamily = '"plantin", Georgia, serif';
+    heading.style.fontWeight = "400";
+    heading.style.fontStyle = "normal";
     heading.textContent = "More from Muzej";
     grid.className = "more-from-muzej-card-grid";
 
