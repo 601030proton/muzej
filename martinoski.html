@@ -318,6 +318,8 @@ main {
 }
 .article-body-copy {
   min-width: 0;
+  justify-self: end;
+  width: min(100%, 760px);
 }
 
 .section-heading {
@@ -341,6 +343,8 @@ main {
 .pull-quote {
   margin: 0;
   max-width: none;
+  justify-self: end;
+  width: min(100%, 760px);
   font-size: clamp(20px, 2.35vw, 26px);
   line-height: 1.12;
   letter-spacing: 0;
@@ -612,6 +616,11 @@ main {
     flex-direction: column;
     text-align: left;
   }
+  .article-body-copy,
+  .pull-quote {
+    justify-self: stretch;
+    width: 100%;
+  }
   .feature-inner {
     display: grid;
     gap: 22px;
@@ -726,7 +735,6 @@ body.muzej-logo-hidden .site-header .brand-mark {
   .site-header .utility-panel .utility-menu-item { justify-content: center; min-height: 2.75rem; padding: 0.72rem 0; text-align: center; }
 }
 </style>
-<link rel="stylesheet" href="article-headlines.css?v=20260810-martinoski-titlecase">
 <link rel="stylesheet" href="more-from-muzej.css?v=20260810-plantin-final">
 <script src="more-from-muzej.js?v=20260810-plantin-final" defer></script>
 </head>
@@ -772,7 +780,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
 
       <div class="feature-copy">
         <p class="feature-byline">Words Ace Trajkovski</p>
-        <h1 class="feature-title" style="font-family: 'plantin', Georgia, serif; font-weight: 400; font-style: normal; font-variant-caps: normal; text-transform: none; letter-spacing: 0;">The Many Faces of Nikola Martinoski</h1>
+        <h1 class="feature-title" style="font-family: 'plantin', Georgia, serif; font-weight: 400; font-style: normal; font-variant-caps: normal; text-transform: none; letter-spacing: 0;">The many faces of Nikola Martinoski</h1>
       </div>
     </div>
     <p class="feature-deck">Martinoski stands at the hinge point where Macedonian painting became recognizably modern.</p>
