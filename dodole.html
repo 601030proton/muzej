@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="A Muzej video feature for Dodole, a Macedonian rain-making ritual song filmed in Istibanja, Macedonia in 1987.">
+<meta name="description" content="A Muzej video feature for Dodole, a field recording filmed in Istibanja in 1987.">
 <meta property="og:title" content="Dodole | МУЗЕЈ">
-<meta property="og:description" content="A Macedonian rain-making ritual song filmed in Istibanja, Macedonia in 1987.">
-<meta property="og:image" content="./Assets/Dodole/dodole-youtube-thumbnail.jpg">
+<meta property="og:description" content="A field recording filmed in Istibanja in 1987.">
+<meta property="og:image" content="https://i.ytimg.com/vi/uw6UeXdH7Lw/maxresdefault.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Dodole | МУЗЕЈ">
-<meta name="twitter:description" content="A Macedonian rain-making ritual song filmed in Istibanja, Macedonia in 1987.">
-<meta name="twitter:image" content="./Assets/Dodole/dodole-youtube-thumbnail.jpg">
+<meta name="twitter:description" content="A field recording filmed in Istibanja in 1987.">
+<meta name="twitter:image" content="https://i.ytimg.com/vi/uw6UeXdH7Lw/maxresdefault.jpg">
 <title>Dodole | МУЗЕЈ</title>
 <link rel="icon" type="image/png" href="./Assets/Font/Muzej%20Logo.ai.png">
 <link rel="apple-touch-icon" href="./Assets/Font/Muzej%20Logo.ai.png">
@@ -204,17 +204,18 @@ main {
 .watch-hero {
   display: grid;
   min-height: clamp(680px, calc(100svh - var(--nav-h)), 900px);
-  padding: 0 var(--page-x) clamp(54px, 7vw, 96px);
+  padding: clamp(48px, 8svh, 96px) var(--page-x) clamp(78px, 9vw, 132px);
   align-items: start;
 }
 .watch-hero-inner {
   display: grid;
-  grid-template-columns: minmax(0, 1.28fr) minmax(300px, 0.72fr);
-  gap: clamp(24px, 4.5vw, 72px);
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(260px, 34svh, 420px);
   width: 100%;
-  max-width: 1360px;
+  max-width: 1120px;
   margin: 0 auto;
-  align-items: center;
+  justify-items: center;
+  align-items: start;
 }
 .video-frame {
   position: relative;
@@ -238,7 +239,7 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: sepia(0.22) contrast(0.96) saturate(0.84);
+  filter: contrast(1.02) saturate(0.96);
   transition: transform 260ms ease, filter 260ms ease;
 }
 .video-poster::after {
@@ -251,7 +252,7 @@ main {
 .video-poster:hover img,
 .video-poster:focus-visible img {
   transform: scale(1.018);
-  filter: sepia(0.14) contrast(1) saturate(0.9);
+  filter: contrast(1.04) saturate(1);
 }
 .video-poster:focus-visible {
   outline: 3px solid rgba(95, 127, 134, 0.72);
@@ -299,10 +300,10 @@ main {
 .watch-copy {
   display: flex;
   min-width: 0;
-  min-height: min(62vw, 640px);
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
 }
 .watch-kicker {
   margin: 0 0 clamp(18px, 2.2vw, 28px);
@@ -315,22 +316,35 @@ main {
 }
 .watch-title {
   margin: 0;
-  max-width: 9.6ch;
   font-family: var(--headline-serif);
-  font-size: clamp(4.1rem, 8.8vw, 10.5rem);
+  font-size: clamp(4.1rem, 12vw, 10.5rem);
   font-weight: 300;
   line-height: 0.78;
   letter-spacing: 0.02em;
   font-optical-sizing: auto;
   text-transform: uppercase;
 }
-.watch-subtitle {
-  margin: clamp(22px, 3vw, 34px) 0 0;
-  max-width: 29rem;
-  font-family: var(--article-serif);
-  font-size: clamp(1.08rem, 1.1vw + 0.78rem, 1.44rem);
+.watch-detail {
+  display: grid;
+  gap: 0.38rem;
+  margin-top: clamp(22px, 3vw, 34px);
+}
+.watch-detail-kicker,
+.watch-detail-place {
+  margin: 0;
+  font-family: var(--sans);
   line-height: 1.35;
-  color: var(--ink-soft);
+  text-transform: uppercase;
+}
+.watch-detail-kicker {
+  font-size: clamp(0.7rem, 0.62rem + 0.2vw, 0.82rem);
+  letter-spacing: 0.18em;
+  color: rgba(23, 21, 19, 0.58);
+}
+.watch-detail-place {
+  font-size: clamp(0.76rem, 0.68rem + 0.2vw, 0.9rem);
+  letter-spacing: 0.14em;
+  color: var(--foreground);
 }
 .watch-source {
   display: inline-flex;
@@ -437,19 +451,13 @@ main {
 
 @media (max-width: 1080px) {
   .watch-hero-inner {
-    grid-template-columns: 1fr;
-    gap: clamp(30px, 5vw, 48px);
+    gap: clamp(260px, 34svh, 420px);
   }
   .watch-copy {
     min-height: auto;
-    order: -1;
   }
   .watch-title {
-    max-width: 8.5ch;
     font-size: clamp(4rem, 13vw, 8rem);
-  }
-  .watch-subtitle {
-    max-width: 38rem;
   }
   .watch-body {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr);
@@ -527,14 +535,15 @@ main {
   }
   .watch-hero {
     min-height: auto;
-    padding-bottom: 52px;
+    padding-top: clamp(86px, 14svh, 120px);
+    padding-bottom: 72px;
+  }
+  .watch-hero-inner {
+    gap: clamp(420px, 58svh, 560px);
   }
   .watch-title {
     font-size: clamp(3.6rem, 18vw, 5.4rem);
     line-height: 0.82;
-  }
-  .watch-subtitle {
-    font-size: clamp(1.04rem, 4.6vw, 1.26rem);
   }
   .watch-body {
     grid-template-columns: 1fr;
@@ -591,12 +600,12 @@ main {
       <div class="video-frame">
         <a
           class="video-poster"
-          href="https://www.youtube.com/watch?v=7N5xDQRuLMo"
+          href="https://www.youtube.com/watch?v=uw6UeXdH7Lw"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Watch Dodole on YouTube"
         >
-          <img src="./Assets/Dodole/dodole-youtube-thumbnail.jpg" alt="YouTube thumbnail for Dodole, a Macedonian rain-making ritual song filmed in Istibanja in 1987">
+          <img src="https://i.ytimg.com/vi/uw6UeXdH7Lw/maxresdefault.jpg" alt="YouTube thumbnail for Dodole, a field recording filmed in Istibanja in 1987">
           <span class="video-play" aria-hidden="true"></span>
           <span class="video-label">Watch video on YouTube</span>
         </a>
@@ -605,8 +614,11 @@ main {
       <div class="watch-copy">
         <p class="watch-kicker">Video | Ritual Song</p>
         <h1 class="watch-title" id="watch-title">DODOLE</h1>
-        <p class="watch-subtitle">A Macedonian rain-making ritual song filmed in Istibanja in 1987.</p>
-        <a class="watch-source" href="https://www.youtube.com/watch?v=7N5xDQRuLMo" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        <div class="watch-detail" aria-label="Recording details">
+          <p class="watch-detail-kicker">Field Recording</p>
+          <p class="watch-detail-place">Istibanja, 1987</p>
+        </div>
+        <a class="watch-source" href="https://www.youtube.com/watch?v=uw6UeXdH7Lw" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
       </div>
     </div>
   </header>
