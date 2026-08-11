@@ -945,11 +945,6 @@
         right: clamp(14px, 1.8vw, 26px);
       }
 
-      .city-clock--center {
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
       .city-clock__place,
       .city-clock__time {
         white-space: nowrap;
@@ -2494,10 +2489,6 @@
         <span class="city-clock__place"></span>
         <span class="city-clock__time"></span>
       </div>
-      <div class="city-clock city-clock--center" data-city-clock data-preferred-city="Resen" aria-live="off">
-        <span class="city-clock__place"></span>
-        <span class="city-clock__time"></span>
-      </div>
       <div class="city-clock city-clock--right" data-city-clock aria-live="off">
         <span class="city-clock__place"></span>
         <span class="city-clock__time"></span>
@@ -2529,16 +2520,7 @@
           return;
         }
 
-        var preferredLabels = clocks
-          .map(function (clock) {
-            return clock.dataset.preferredCity;
-          })
-          .filter(Boolean);
-
         var shuffled = cities
-          .filter(function (city) {
-            return preferredLabels.indexOf(city.label) === -1;
-          })
           .map(function (city) {
             return { city: city, sort: Math.random() };
           })
@@ -2550,15 +2532,7 @@
           });
 
         clocks.forEach(function (clock, index) {
-          var preferredCity = clock.dataset.preferredCity;
-          var city = preferredCity
-            ? cities.find(function (candidate) { return candidate.label === preferredCity; })
-            : shuffled[index % shuffled.length];
-
-          if (!city) {
-            city = shuffled[index % shuffled.length];
-          }
-
+          var city = shuffled[index % shuffled.length];
           clock.dataset.timeZone = city.timeZone;
           clock.querySelector(".city-clock__place").textContent = city.label;
         });
