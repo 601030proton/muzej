@@ -870,8 +870,13 @@ body.muzej-logo-hidden .site-header .brand-mark {
   line-height: 0.9;
 }
 .renaissance-article .feature-media img {
-  object-fit: cover;
+  width: auto;
+  max-width: 100%;
+  height: min(80svh, 920px);
+  max-height: 100%;
+  object-fit: contain;
   object-position: center center;
+  background: var(--white);
 }
 .renaissance-article .section-heading {
 }
@@ -895,6 +900,17 @@ body.muzej-logo-hidden .site-header .brand-mark {
 }
 .renaissance-article .article-inline-media {
   width: min(92%, 460px);
+}
+.renaissance-article .article-inline-media--peribleptos {
+  width: min(100%, 520px);
+  margin: 0 0 clamp(34px, 4vw, 54px);
+}
+.renaissance-article .article-inline-media--peribleptos figcaption {
+  margin-top: 12px;
+  color: var(--ink-soft);
+  font-size: 8px;
+  letter-spacing: 0;
+  line-height: 1.35;
 }
 @media (max-width: 720px) {
   .renaissance-article .feature-title {
@@ -1077,6 +1093,11 @@ body.muzej-logo-hidden .site-header .brand-mark {
         <p>At Saint Sophia, drapery confirmed bodily mass. At Kurbinovo, drapery behaves like an independent nervous system. It registers forces that the body itself cannot visibly contain.</p>
 
         <h2 class="section-heading">Peribleptos: The Image Becomes a Crowd</h2>
+
+        <figure class="article-inline-media article-inline-media--peribleptos">
+          <img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/church-virgin-mary-peribleptos.jpg" alt="Church of the Virgin Mary Peribleptos in Ohrid framed by leaves against a blue sky." width="1350" height="1800" loading="lazy" decoding="async">
+          <figcaption>Church of the Virgin Mary Peribleptos, Ohrid</figcaption>
+        </figure>
 
         <p>The frescoes of the Virgin Peribleptos in Ohrid, dated 1294/95, inaugurate another pictorial world. The church’s painters, Michael Astrapas and Eutychios, left their names within the ensemble, making this the first documented work of a workshop that would become active across the central Balkans.</p>
 

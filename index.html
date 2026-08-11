@@ -887,7 +887,7 @@
       }
 
       .tose-descendants-title {
-        max-width: 18ch;
+        max-width: 24ch;
         margin-top: 0.42em;
         font-size: clamp(1.9rem, 2.8vw, 3.4rem);
         line-height: 1.08;
@@ -911,6 +911,41 @@
         height: 100%;
         object-fit: cover;
         object-position: center center;
+      }
+
+      .city-clock {
+        position: fixed;
+        bottom: clamp(14px, 1.6vw, 24px);
+        z-index: 80;
+        display: inline-flex;
+        align-items: baseline;
+        gap: 0.72em;
+        padding: 0.38rem 0.52rem;
+        color: rgba(23, 21, 19, 0.78);
+        font-family: "Space Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        font-size: clamp(0.72rem, 0.82vw, 0.92rem);
+        line-height: 1;
+        letter-spacing: 0.02em;
+        background: rgba(255, 255, 255, 0.74);
+        backdrop-filter: blur(8px);
+        pointer-events: none;
+      }
+
+      .city-clock--left {
+        left: clamp(14px, 1.8vw, 26px);
+      }
+
+      .city-clock--right {
+        right: clamp(14px, 1.8vw, 26px);
+      }
+
+      .city-clock__place,
+      .city-clock__time {
+        white-space: nowrap;
+      }
+
+      .city-clock__time {
+        font-variant-numeric: tabular-nums;
       }
 
       .muzej-letter {
@@ -1854,7 +1889,7 @@
         }
 
         .tose-descendants-title {
-          max-width: 18ch;
+          max-width: 22ch;
           font-size: clamp(1.5rem, 7vw, 2.25rem);
           line-height: 1.12;
         }
@@ -2371,20 +2406,6 @@
                 </div>
               </a>
 
-              <a class="explore-row" href="./swan-dress.html">
-                <div class="explore-row-media">
-                  <img
-                    class="explore-image"
-                    src="./Assets/Swan%20Dress/swan-final.png"
-                    alt="Bjork wearing the Swan Dress on the red carpet"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="explore-row-copy">
-                  <h3 class="explore-row-title">The Swan Dress that turned the Oscars red carpet into theater</h3>
-                </div>
-              </a>
-
               <a class="explore-row" href="./longing-for-south.html">
                 <div class="explore-row-media">
                   <div class="explore-image explore-image--photo explore-image--longing">
@@ -2435,6 +2456,15 @@
         </section>
       </main>
 
+      <div class="city-clock city-clock--left" data-city-clock aria-live="off">
+        <span class="city-clock__place"></span>
+        <span class="city-clock__time"></span>
+      </div>
+      <div class="city-clock city-clock--right" data-city-clock aria-live="off">
+        <span class="city-clock__place"></span>
+        <span class="city-clock__time"></span>
+      </div>
+
       <footer class="site-footer simple-footer">
         <nav aria-label="Footer navigation">
           <a href="about.html">About Muzej</a>
@@ -2447,6 +2477,54 @@
     </div>
 
     <script>
+      (function () {
+        var clocks = Array.prototype.slice.call(document.querySelectorAll("[data-city-clock]"));
+        var cities = [
+          { label: "Skopje", timeZone: "Europe/Skopje" },
+          { label: "Solun", timeZone: "Europe/Athens" },
+          { label: "Ohrid", timeZone: "Europe/Skopje" },
+          { label: "Bitola", timeZone: "Europe/Skopje" }
+        ];
+
+        if (!clocks.length) {
+          return;
+        }
+
+        var shuffled = cities
+          .map(function (city) {
+            return { city: city, sort: Math.random() };
+          })
+          .sort(function (a, b) {
+            return a.sort - b.sort;
+          })
+          .map(function (entry) {
+            return entry.city;
+          });
+
+        clocks.forEach(function (clock, index) {
+          var city = shuffled[index % shuffled.length];
+          clock.dataset.timeZone = city.timeZone;
+          clock.querySelector(".city-clock__place").textContent = city.label;
+        });
+
+        function updateClocks() {
+          clocks.forEach(function (clock) {
+            var time = new Intl.DateTimeFormat("en-GB", {
+              hour: "2-digit",
+              minute: "2-digit",
+              second: "2-digit",
+              hour12: false,
+              timeZone: clock.dataset.timeZone
+            }).format(new Date());
+
+            clock.querySelector(".city-clock__time").textContent = time;
+          });
+        }
+
+        updateClocks();
+        window.setInterval(updateClocks, 1000);
+      })();
+
       (function () {
         var slots = {
           spinning: [

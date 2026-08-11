@@ -287,14 +287,16 @@ main {
 }
 .article-deck {
   width: 100%;
-  max-width: min(920px, 100%);
-  margin: 0 0 clamp(52px, 7vw, 92px);
+  max-width: min(1380px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
+  margin: 0 auto clamp(64px, 8vw, 118px);
   text-align: left;
   color: var(--ink);
-  font-size: clamp(17px, 1.55vw, 23px);
+  font-family: "plantin", Georgia, serif;
+  font-size: clamp(32px, 3.05vw, 56px);
   font-weight: 400;
-  line-height: 1.18;
-  letter-spacing: -0.02em;
+  line-height: 1.08;
+  letter-spacing: 0;
+  text-wrap: balance;
 }
 .article-shell {
   max-width: var(--feature-w);
@@ -857,7 +859,7 @@ main {
     width: calc(100vw - (var(--page-x) * 2));
     max-width: 100%;
     margin-bottom: clamp(44px, 8vw, 72px);
-    font-size: clamp(17px, 3.3vw, 21px);
+    font-size: clamp(16px, 2.05vw, 20px);
     overflow-wrap: break-word;
   }
 }

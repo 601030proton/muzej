@@ -81,16 +81,6 @@
       position: "center center"
     },
     {
-      slug: "swan-dress",
-      href: "swan-dress.html",
-      title: "The Swan Dress",
-      kicker: "Revolutionary Garments",
-      dek: "The swan dress that turned the Oscars red carpet into theater.",
-      image: "./Assets/Swan%20Dress/swan-final.png",
-      alt: "Bjork wearing the Swan Dress on the red carpet.",
-      position: "center center"
-    },
-    {
       slug: "skopje-tange",
       href: "skopje-tange.html",
       title: "Tokyo on the Vardar",
