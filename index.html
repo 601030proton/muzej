@@ -130,12 +130,13 @@
         display: inline-flex;
         align-items: center;
         font-family: var(--font-wordmark);
-        font-size: clamp(2.4rem, 1.9rem + 1.43vw, 3.76rem);
-        line-height: 0.92;
-        letter-spacing: 0;
-        font-weight: 400;
+        font-size: clamp(3rem, 2.1rem + 2.55vw, 5.35rem);
+        line-height: 0.82;
+        letter-spacing: 0.055em;
+        font-weight: 700;
         font-optical-sizing: auto;
         white-space: nowrap;
+        text-transform: uppercase;
 
       }
 
@@ -944,6 +945,11 @@
         right: clamp(14px, 1.8vw, 26px);
       }
 
+      .city-clock--center {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
       .city-clock__place,
       .city-clock__time {
         white-space: nowrap;
@@ -951,6 +957,24 @@
 
       .city-clock__time {
         font-variant-numeric: tabular-nums;
+      }
+
+      @media (max-width: 520px) {
+        .city-clock {
+          bottom: 8px;
+          gap: 0.42em;
+          padding: 0.28rem 0.34rem;
+          font-size: 0.58rem;
+          letter-spacing: 0;
+        }
+
+        .city-clock--left {
+          left: 6px;
+        }
+
+        .city-clock--right {
+          right: 6px;
+        }
       }
 
       .muzej-letter {
@@ -1664,7 +1688,7 @@
         }
 
         .brand-mark {
-          font-size: clamp(2.16rem, 10.15vw, 2.87rem);
+          font-size: clamp(2.45rem, 11vw, 3.35rem);
 
         }
 
@@ -2035,7 +2059,7 @@
     <div class="page">
       <header class="site-header">
         <div class="shell header-frame">
-          <a class="brand-mark" href="index.html" aria-label="Muzej home">Muzej</a>
+          <a class="brand-mark" href="index.html" aria-label="Muzej home">MUZEJ</a>
 
           <div class="header-tools">
             <details class="utility-menu">
@@ -2470,6 +2494,10 @@
         <span class="city-clock__place"></span>
         <span class="city-clock__time"></span>
       </div>
+      <div class="city-clock city-clock--center" data-city-clock data-preferred-city="Resen" aria-live="off">
+        <span class="city-clock__place"></span>
+        <span class="city-clock__time"></span>
+      </div>
       <div class="city-clock city-clock--right" data-city-clock aria-live="off">
         <span class="city-clock__place"></span>
         <span class="city-clock__time"></span>
@@ -2493,14 +2521,24 @@
           { label: "Skopje", timeZone: "Europe/Skopje" },
           { label: "Solun", timeZone: "Europe/Athens" },
           { label: "Ohrid", timeZone: "Europe/Skopje" },
-          { label: "Bitola", timeZone: "Europe/Skopje" }
+          { label: "Bitola", timeZone: "Europe/Skopje" },
+          { label: "Resen", timeZone: "Europe/Skopje" }
         ];
 
         if (!clocks.length) {
           return;
         }
 
+        var preferredLabels = clocks
+          .map(function (clock) {
+            return clock.dataset.preferredCity;
+          })
+          .filter(Boolean);
+
         var shuffled = cities
+          .filter(function (city) {
+            return preferredLabels.indexOf(city.label) === -1;
+          })
           .map(function (city) {
             return { city: city, sort: Math.random() };
           })
@@ -2512,7 +2550,15 @@
           });
 
         clocks.forEach(function (clock, index) {
-          var city = shuffled[index % shuffled.length];
+          var preferredCity = clock.dataset.preferredCity;
+          var city = preferredCity
+            ? cities.find(function (candidate) { return candidate.label === preferredCity; })
+            : shuffled[index % shuffled.length];
+
+          if (!city) {
+            city = shuffled[index % shuffled.length];
+          }
+
           clock.dataset.timeZone = city.timeZone;
           clock.querySelector(".city-clock__place").textContent = city.label;
         });
