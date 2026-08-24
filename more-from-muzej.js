@@ -11,6 +11,16 @@
       position: "center top"
     },
     {
+      slug: "peppers",
+      href: "peppers.html",
+      title: "Peppers (Пиперки)",
+      kicker: "Poetry | Translation",
+      dek: "Blaže Koneski's ode to peppers, Prilep, autumn, and household pride.",
+      image: "./Assets/Peppers/peppers.jpg",
+      alt: "Red peppers drying from a balcony above a garden.",
+      position: "center top"
+    },
+    {
       slug: "five-books-with-macedonian-state",
       href: "five-books-with-macedonian-state.html",
       title: "Start Here: Five Books with Macedonian State",
