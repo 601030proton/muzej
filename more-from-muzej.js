@@ -16,7 +16,7 @@
       title: "Peppers (Пиперки)",
       kicker: "Poetry | Translation",
       dek: "Blaže Koneski's ode to peppers, Prilep, autumn, and household pride.",
-      image: "./Assets/Peppers/peppers.jpg",
+      image: "./Assets/Peppers/peppers.png",
       alt: "Red peppers drying from a balcony above a garden.",
       position: "center top"
     },
