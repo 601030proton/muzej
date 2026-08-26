@@ -173,7 +173,8 @@
   ];
 
   function currentSlug() {
-    var file = window.location.pathname.split("/").pop() || "";
+    var parts = window.location.pathname.split("/").filter(Boolean);
+    var file = parts.length ? parts[parts.length - 1] : "";
     return decodeURIComponent(file).replace(/\.html?$/i, "");
   }
 
