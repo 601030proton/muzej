@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Robert Gligorov, a Macedonian artist from Kriva Palanka who lives and works in Milan, reflects on medium, the art world, Macedonia, the body, and mortality.">
+<title>Robert Gligorov | МУЗЕЈ</title>
+<link rel="icon" type="image/png" href="./Assets/Font/Muzej%20Logo.ai.png">
+<link rel="apple-touch-icon" href="./Assets/Font/Muzej%20Logo.ai.png">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&display=swap"
+/>
+<link rel="stylesheet" href="https://muzej.co/fonts.css">
+<style>
+:root {
+  --background: #ffffff;
+  --foreground: #0f0e0d;
+  --white: #ffffff;
+  --ink: #0f0e0d;
+  --ink-soft: rgba(15, 14, 13, 0.62);
+  --ink-faint: rgba(15, 14, 13, 0.12);
+  --muted: #70675d;
+  --rule: rgba(23, 21, 19, 0.09);
+  --page-x: clamp(18px, 5.2vw, 72px);
+  --nav-h: clamp(88px, 10vw, 128px);
+  --feature-w: min(1280px, calc(100vw - (var(--page-x) * 2)));
+  --rail-gap: clamp(34px, 5.4vw, 84px);
+  --body-col: minmax(520px, 760px);
+  --body-tail: 0px;
+  --section-gap: clamp(48px, 8vw, 108px);
+  --content-max: 1520px;
+  --font-display: "plantin", Georgia, serif;
+  --font-wordmark: var(--font-display);
+  --serif: var(--font-display);
+        --headline-serif: var(--font-display);
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --article-serif: "adobe-jenson-pro", Georgia, serif;
+  --brand-serif: var(--font-wordmark);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--article-serif);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+.shell {
+  width: min(100%, var(--content-max));
+  margin: 0 auto;
+  padding-left: var(--page-x);
+  padding-right: var(--page-x);
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  background: var(--background);
+}
+.header-frame {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  padding-top: 28px;
+  padding-bottom: 24px;
+}
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-wordmark);
+  font-size: clamp(2.4rem, 1.9rem + 1.43vw, 3.76rem);
+  line-height: 0.92;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  white-space: nowrap;
+  text-decoration: none;
+
+}
+
+.utility-link,
+.utility-menu-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: rgba(23, 21, 19, 0.58);
+  text-decoration: none;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+.utility-link:hover,
+.utility-menu-item:hover {
+  color: var(--foreground);
+}
+.header-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.utility-menu {
+  position: relative;
+}
+.utility-menu summary {
+  list-style: none;
+}
+.utility-menu summary::-webkit-details-marker {
+  display: none;
+}
+.utility-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: color 180ms ease, opacity 180ms ease;
+}
+.utility-trigger:hover {
+  opacity: 0.72;
+}
+.utility-trigger:focus-visible {
+  outline: 2px solid rgba(141, 79, 61, 0.45);
+  outline-offset: 3px;
+}
+.utility-icon {
+  display: grid;
+  gap: 0.26rem;
+}
+.utility-icon-line {
+  display: block;
+  width: 1.45rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.88;
+}
+.utility-panel {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  right: 0;
+  z-index: 10;
+  display: grid;
+  min-width: 10rem;
+  padding: 0.45rem 0;
+  border: 1px solid rgba(23, 21, 19, 0.12);
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(23, 21, 19, 0.08);
+}
+.utility-panel-group {
+  display: grid;
+  gap: 0;
+}
+.utility-panel-utility {
+  margin-top: 0.25rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid rgba(23, 21, 19, 0.1);
+}
+.utility-panel .utility-link,
+.utility-panel .utility-menu-item {
+  justify-content: flex-start;
+  min-height: 0;
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  background: transparent;
+}
+.utility-panel-utility .utility-link {
+  font-size: 0.66rem;
+  letter-spacing: 0;
+  color: rgba(23, 21, 19, 0.52);
+}
+.utility-panel .utility-menu-item {
+  cursor: pointer;
+}
+.utility-panel .utility-link:hover,
+.utility-panel .utility-menu-item:hover {
+  background: rgba(23, 21, 19, 0.035);
+}
+
+main {
+  padding-top: 0;
+}
+
+.feature {
+  width: 100%;
+  background: var(--white);
+}
+.feature-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0;
+  align-items: stretch;
+  max-width: none;
+  min-height: clamp(620px, calc(100svh - var(--nav-h)), 900px);
+  margin: 0;
+}
+.feature-media {
+  margin: 0;
+  min-height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  background: var(--white);
+}
+.feature-media img {
+  display: block;
+  width: min(86%, 720px);
+  max-width: 86%;
+  height: auto;
+  max-height: min(74vh, 760px);
+  object-fit: contain;
+  object-position: center center;
+  margin: 0 auto;
+}
+.feature--stranci .feature-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.feature--stranci .feature-media img {
+  width: auto;
+  max-width: min(92%, 760px);
+  height: min(84vh, 840px);
+  max-height: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 981px) {
+  .feature--stranci .feature-media img {
+    transform: translateX(-6%);
+  }
+}
+.feature-copy {
+  min-height: inherit;
+  max-width: 27rem;
+  margin: 0 auto;
+  padding: clamp(72px, 8vw, 136px) 0 clamp(72px, 8vw, 128px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.feature-title {
+  margin: 0;
+  color: var(--ink);
+  font-family: "plantin", Georgia, serif;
+  font-size: clamp(42px, 5.2vw, 82px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0;
+  text-transform: none;
+  text-wrap: balance;
+}
+.feature-title-break {
+  display: block;
+}
+.feature-byline {
+  margin: 0 0 auto;
+  color: var(--ink-soft);
+  font-size: clamp(16px, 1.18vw, 19px);
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+.feature-deck {
+  max-width: min(1380px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
+  margin: clamp(40px, 5vw, 78px) auto 0;
+  color: var(--ink);
+  font-family: "plantin", Georgia, serif;
+  font-size: clamp(32px, 3.05vw, 56px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+.article-interview-hero {
+  padding-bottom: clamp(132px, 12vw, 210px);
+}
+.article-interview-hero .feature-deck {
+  margin-bottom: 0;
+}
+.article-shell {
+  max-width: var(--feature-w);
+  margin: 0 auto;
+  padding: 0 var(--page-x) clamp(84px, 10vw, 132px);
+}
+.content-row {
+  display: grid;
+  grid-template-columns: minmax(270px, 1fr) var(--body-col);
+  column-gap: var(--rail-gap);
+  align-items: start;
+}
+.article-body {
+  display: grid;
+  grid-template-columns: minmax(270px, 1fr) var(--body-col);
+  column-gap: var(--rail-gap);
+  align-items: start;
+  margin-bottom: var(--section-gap);
+}
+.content-row + .content-row {
+  margin-top: var(--section-gap);
+}
+.content-row .empty-rail,
+.article-body .empty-tail,
+.content-row .empty-tail {
+  min-height: 1px;
+}
+.article-body-media {
+  margin: 0;
+  align-self: start;
+  position: sticky;
+  top: calc(var(--nav-h) + clamp(12px, 2vw, 26px));
+}
+.article-body-media img {
+  width: 100%;
+  height: auto;
+}
+.article-body-media--portrait img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+.article-body-media figcaption {
+  margin-top: 12px;
+  color: var(--ink-soft);
+  font-size: 8px;
+  letter-spacing: 0;
+}
+.article-body-copy {
+  min-width: 0;
+  justify-self: end;
+  width: min(100%, 520px);
+}
+.article-inline-media {
+  width: min(88%, 420px);
+  margin: clamp(52px, 7vw, 88px) auto;
+}
+.article-inline-media img {
+  width: 100%;
+  height: auto;
+}
+
+.section-heading {
+  margin: 0;
+  max-width: 15ch;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+.body-block p {
+  margin: 0;
+  font-size: clamp(23px, 1.65vw, 31px);
+  line-height: 1.46;
+}
+.body-block p + p {
+  margin-top: 1.95em;
+}
+
+.article-photo-credits {
+  margin-top: clamp(18px, 3vw, 34px);
+}
+.photo-credit-note {
+  margin: 0;
+  justify-self: end;
+  width: min(100%, 520px);
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: clamp(11px, 0.82vw, 13px);
+  line-height: 1.55;
+  letter-spacing: 0;
+  border-top: 1px solid var(--ink-faint);
+  padding-top: 14px;
+}
+.photo-credit-note p {
+  margin: 0;
+}
+.photo-credit-note p + p {
+  margin-top: 0.18rem;
+}
+.photo-credit-heading {
+  margin-bottom: 0.45rem;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.pull-quote {
+  margin: 0;
+  max-width: none;
+  justify-self: end;
+  width: min(100%, 520px);
+  font-size: clamp(20px, 2.35vw, 26px);
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.gallery-reading {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 1.9vw, 24px);
+  margin: var(--section-gap) 0 0;
+}
+.gallery-reading-media,
+.gallery-reading-feature {
+  margin: 0;
+}
+.gallery-reading-frame {
+  aspect-ratio: 15 / 21;
+  overflow: hidden;
+}
+.gallery-reading-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-reading-media figcaption,
+.gallery-reading-feature figcaption {
+  margin-top: 12px;
+  color: var(--ink-soft);
+  font-size: 8px;
+  letter-spacing: 0;
+}
+.gallery-reading-side {
+  min-width: 0;
+}
+.article-body-lower {
+  margin-top: clamp(22px, 3vw, 34px);
+  margin-bottom: 0;
+}
+
+.more-from-muzej {
+  padding-top: clamp(70px, 9vw, 132px);
+  padding-bottom: clamp(82px, 10vw, 148px);
+  background: transparent;
+  color: var(--foreground);
+}
+.more-from-muzej-frame {
+  display: grid;
+  width: min(calc(100% - (var(--page-x) * 2)), 68rem);
+  max-width: 68rem;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  border-top: 2px solid var(--foreground);
+  padding-top: clamp(2.1rem, 4vw, 3.25rem);
+}
+.more-from-muzej-title {
+  max-width: none;
+  margin: 0;
+  font-family: var(--headline-serif);
+  font-size: clamp(1.45rem, 1vw + 1.1rem, 1.9rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 650;
+  font-optical-sizing: auto;
+}
+.related-list {
+  list-style: none;
+  margin: clamp(1.4rem, 2.5vw, 2rem) 0 0;
+  padding: 0;
+}
+.related-list li {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  padding: clamp(1.1rem, 1.8vw, 1.6rem) 0;
+  border-top: 1px solid var(--rule);
+  align-items: start;
+}
+.related-list li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+.related-list a {
+  font-family: var(--headline-serif);
+  font-size: clamp(1.1rem, 1.3vw + 0.7rem, 1.55rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+  font-optical-sizing: auto;
+  border-bottom: none;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+.related-list a:hover {
+  color: var(--muted);
+}
+.related-list .related-desc {
+  display: block;
+  margin-top: 0.45rem;
+  font-family: var(--sans);
+  font-size: clamp(0.82rem, 0.78rem + 0.18vw, 0.94rem);
+  line-height: 1.72;
+  letter-spacing: 0;
+  color: var(--muted);
+}
+
+.more-from-muzej-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(22px, 2.8vw, 38px);
+  margin-top: clamp(1.4rem, 2.5vw, 2rem);
+}
+.more-from-muzej-card {
+  min-width: 0;
+}
+.more-from-muzej-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.more-from-muzej-card-image {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border: 1px solid rgba(23, 21, 19, 0.14);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.08));
+}
+.more-from-muzej-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.more-from-muzej-card-copy {
+  padding-top: 0.95rem;
+}
+.more-from-muzej-card-kicker {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: rgba(23, 21, 19, 0.62);
+}
+.more-from-muzej-card-title {
+  margin: 0.62rem 0 0;
+  font-family: var(--headline-serif);
+  font-size: clamp(1.35rem, 0.95rem + 0.85vw, 1.95rem);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  font-optical-sizing: auto;
+  text-wrap: balance;
+}
+.more-from-muzej-card-title a {
+  color: var(--foreground);
+  text-decoration: none;
+}
+.more-from-muzej-card-title a:hover {
+  color: var(--muted);
+}
+.more-from-muzej-card-dek {
+  margin: 0.55rem 0 0;
+  font-family: var(--sans);
+  font-size: clamp(0.82rem, 0.78rem + 0.18vw, 0.94rem);
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .more-from-muzej-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .more-from-muzej-card-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.site-footer {
+  margin-top: 0;
+}
+.muzej-footer {
+  width: 100%;
+  padding: clamp(3.5rem, 7vw, 6rem) var(--page-x);
+  background: #000000;
+  color: #f7f2e9;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: minmax(320px, 620px) minmax(180px, 260px);
+  gap: clamp(3rem, 7vw, 6rem);
+  justify-content: center;
+  align-items: start;
+  width: min(100%, 1160px);
+  margin: 0 auto;
+}
+.footer-brand {
+  min-width: 0;
+}
+.footer-wordmark {
+  display: inline-flex;
+  font-family: var(--font-wordmark);
+  font-size: clamp(3.1rem, 5vw, 5rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: 0;
+  font-optical-sizing: auto;
+
+}
+.footer-statement {
+  max-width: 38.75rem;
+  margin: clamp(1.15rem, 1.8vw, 1.45rem) 0 0;
+  font-size: clamp(1rem, 1vw + 0.72rem, 1.15rem);
+  line-height: 1.5;
+  color: rgba(247, 242, 233, 0.86);
+}
+.muzej-footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-top: 0.28rem;
+}
+.muzej-footer .footer-links a {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 180ms ease, text-decoration-color 180ms ease;
+}
+.muzej-footer .footer-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  opacity: 0.86;
+}
+
+@media (max-width: 1080px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+
+  .muzej-footer .footer-links {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 1140px) {
+  .header-frame {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 0.85rem 1.25rem;
+  }
+  .header-tools {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 980px) {
+  .menu-button {
+    padding: 8px 0 6px 18px;
+  }
+  .menu-panel {
+    padding: 0 calc(var(--page-x) + 18px) 0 var(--page-x);
+    gap: 16px;
+  }
+  .menu-panel a {
+    width: min(100%, 22rem);
+    font-size: clamp(26px, 5vw, 42px);
+  }
+  .feature-inner {
+    grid-template-columns: minmax(300px, 0.94fr) minmax(300px, 0.9fr);
+    gap: clamp(24px, 4vw, 46px);
+    align-items: stretch;
+  }
+  .feature-media img {
+    max-height: clamp(460px, 64vh, 660px);
+  }
+  .feature-copy {
+    min-height: clamp(460px, 64vh, 660px);
+    max-width: 23rem;
+  }
+  .feature-title {
+    font-size: clamp(34px, 4.35vw, 58px);
+  }
+  .content-row {
+    grid-template-columns: minmax(210px, 1fr) minmax(0, 660px);
+  }
+  .article-body {
+    grid-template-columns: minmax(210px, 1fr) minmax(0, 660px);
+  }
+}
+
+@media (max-width: 760px) {
+  .header-frame {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .brand-mark {
+    font-size: clamp(2.16rem, 10.15vw, 2.87rem);
+
+  }
+}
+
+@media (max-width: 720px) {
+  .header-frame {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .brand-mark {
+    font-size: clamp(2.16rem, 10.15vw, 2.87rem);
+
+  }
+  .menu-button {
+    gap: 7px;
+    padding: 8px 0 6px 16px;
+    margin-top: 1px;
+  }
+  .menu-panel {
+    padding: 0 calc(var(--page-x) + 6px) 0 var(--page-x);
+    gap: 14px;
+  }
+  .menu-panel a {
+    width: min(100%, 16rem);
+    font-size: clamp(22px, 9vw, 30px);
+    line-height: 1.08;
+  }
+  .menu-panel a:last-child {
+    font-size: 18px;
+  }
+  .feature {
+    padding:
+      4px
+      var(--page-x)
+      48px;
+  }
+  .feature--stranci {
+    padding-bottom: 34px;
+  }
+  .feature-inner,
+  .article-body,
+  .content-row {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    text-align: left;
+  }
+  .feature-inner {
+    display: grid;
+    gap: 22px;
+  }
+  .feature-media img {
+    max-height: clamp(330px, 52vh, 430px);
+  }
+  .article-body {
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .gallery-reading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin: 40px 0 0;
+  }
+  .article-body-media {
+    position: static;
+  }
+  .gallery-reading-media {
+    position: static;
+  }
+  .article-body-lower {
+    margin-top: 18px;
+    margin-bottom: 0;
+  }
+  .content-row .empty-tail {
+    display: none;
+  }
+  .article-body .empty-tail {
+    display: none;
+  }
+  .feature-copy {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+  }
+  .feature-title {
+    font-size: clamp(30px, 8.2vw, 38px);
+    line-height: 1.03;
+    width: calc(100vw - (var(--page-x) * 2));
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+  .feature-byline {
+    margin: 28px 0 0;
+    font-size: 15px;
+  }
+  .feature-title-break {
+    display: block;
+  }
+  .content-row + .content-row {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 980px) {
+  .feature--stranci {
+    padding: 0 0 clamp(48px, 9vw, 82px);
+  }
+
+  .feature--stranci .feature-inner {
+    grid-template-columns: 1fr;
+    gap: 0;
+    min-height: 0;
+  }
+
+  .feature--stranci .feature-copy {
+    min-height: auto;
+    padding:
+      clamp(54px, 12vw, 96px)
+      var(--page-x)
+      clamp(42px, 8vw, 70px);
+  }
+
+  .feature--stranci .feature-media {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+    width: 100%;
+  }
+
+  .feature--stranci .feature-media img {
+    width: auto;
+    max-width: 96%;
+    height: 100%;
+    max-height: none;
+  }
+
+  .feature-deck {
+    margin-top: clamp(30px, 4.2vw, 48px);
+    font-size: clamp(16px, 2.05vw, 20px);
+  }
+  .article-interview-hero .feature-deck {
+    margin-bottom: 0;
+  }
+  .article-interview-hero {
+    padding-bottom: clamp(72px, 13vw, 112px);
+  }
+}
+
+@media (max-width: 720px) {
+  .feature--stranci .feature-media {
+    aspect-ratio: 4 / 5;
+  }
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: transparent;
+  pointer-events: none;
+}
+
+.site-header .header-frame,
+.site-header .brand-mark,
+.site-header .header-tools {
+  pointer-events: auto;
+}
+
+.site-header .brand-mark {
+  transform: translate3d(0, 0, 0);
+  transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.muzej-logo-hidden .site-header .brand-mark {
+  transform: translate3d(0, calc(-100% - 42px), 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header .brand-mark {
+    transition: none;
+    will-change: auto;
+  }
+
+  body.muzej-logo-hidden .site-header .brand-mark {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header { z-index: 2000; }
+  .site-header .header-frame { grid-template-columns: minmax(0, 1fr) auto; align-items: center; justify-items: stretch; gap: 1rem; }
+  .site-header .brand-mark { justify-self: start; min-width: 0; }
+  .site-header .header-tools { justify-self: end; justify-content: flex-end; margin-left: auto; position: relative; z-index: 2002; }
+  .site-header .utility-menu { position: static; }
+  .site-header .utility-trigger { position: relative; z-index: 2003; }
+  .site-header .utility-panel { position: fixed; inset: 0; left: 0; right: 0; top: 0; z-index: 2001; display: grid; align-content: center; width: 100vw; max-width: none; min-width: 0; height: 100vh; height: 100svh; padding: clamp(76px, 18vh, 128px) var(--page-x) 48px; border: 0; background: rgba(255, 255, 255, 0.98); box-shadow: none; overflow-y: auto; transform: none; }
+  .site-header .utility-panel-group { width: min(100%, 22rem); margin: 0 auto; }
+  .site-header .utility-panel-utility { margin-top: 0.8rem; padding-top: 0.85rem; }
+  .site-header .utility-panel .utility-link,
+  .site-header .utility-panel .utility-menu-item { justify-content: center; min-height: 2.75rem; padding: 0.72rem 0; text-align: center; }
+}
+
+.body-block .interview-question {
+  margin: clamp(2.35rem, 4vw, 3.35rem) 0 0.85rem;
+  font-family: var(--headline-serif);
+  font-size: clamp(1.42rem, 1.08rem + 0.92vw, 2.15rem);
+  line-height: 1.08;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-optical-sizing: auto;
+}
+.body-block .interview-question:first-child {
+  margin-top: 0;
+}
+.body-block .interview-question + p {
+  margin-top: 0;
+}
+</style>
+<link rel="stylesheet" href="https://muzej.co/more-from-muzej.css?v=20260810-plantin-final">
+<script src="https://muzej.co/more-from-muzej.js?v=20260810-plantin-final" defer></script>
+</head>
+<body class="kinfolk-article-hero">
+
+<header class="site-header">
+  <div class="shell header-frame">
+    <a class="brand-mark" href="index.html" aria-label="Muzej home">Muzej</a>
+
+    <div class="header-tools">
+      <details class="utility-menu">
+        <summary class="utility-trigger" aria-label="Open navigation menu">
+          <span class="utility-icon" aria-hidden="true">
+            <span class="utility-icon-line"></span>
+            <span class="utility-icon-line"></span>
+            <span class="utility-icon-line"></span>
+          </span>
+        </summary>
+        <nav class="utility-panel" aria-label="Site navigation">
+          <div class="utility-panel-group">
+            <a class="utility-link" href="index.html">Home</a>
+            <a class="utility-link" href="index.html#selected-stories">Selected Stories</a>
+            <a class="utility-link" href="index.html#in-rotation">In Rotation</a>
+            <a class="utility-link" href="index.html#field-notes">Field Notes</a>
+            <a class="utility-link" href="about.html">About Muzej</a>
+          </div>
+          <div class="utility-panel-group utility-panel-utility">
+            <a class="utility-link" href="mailto:muzej.mk@proton.me">Contact</a>
+            <a class="utility-link" href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main>
+  <header class="feature feature--stranci article-interview-hero" aria-labelledby="article-title">
+    <div class="feature-inner">
+      <div class="feature-copy">
+        <p class="feature-byline">Interview Ace Trajkovski</p>
+        <h1 id="article-title" class="feature-title">Robert Gligorov: Between the Dream and Reality</h1>
+      </div>
+      <figure class="feature-media" aria-label="Article hero image">
+        <img src="./Assets/Robert%20Gligorov/For%20Website/Gligorov-01.png" alt="Robert Gligorov." width="3457" height="5185" decoding="async" fetchpriority="high" style="object-position: center top;">
+      </figure>
+    </div>
+    <p class="feature-deck">Robert Gligorov is a Macedonian artist from Kriva Palanka who lives and works in Milan. His practice explores mysterious, dissonant, surreal, and provocative installations that challenge perception and expectation.</p>
+  </header>
+
+  <article class="article-shell article-interview">
+    <section class="article-body">
+      <figure class="article-body-media article-body-media--portrait">
+        <img src="./Assets/Robert%20Gligorov/For%20Website/Gligorov-09.png" alt="Robert Gligorov installation." width="3549" height="4733" loading="lazy" decoding="async">
+      </figure>
+
+      <div class="article-body-copy body-block">
+        <h2 class="interview-question">You work across photography, video, painting, installation, performance and other forms, yet you have said that you don't have an “ideal medium”—that the medium is simply functional to the idea.</h2>
+        <p>Yes, one can be critical of the homogenization of a certain way of making art, but it must also be said that galleries and the art market are a contemporary invention. Fairs, private galleries, and auctions expect success precisely through sales, and one realizes that with recognizability, increases the likelihood of generating economy. Anyone who receives positive feedback and manages to channel their work into an art/market system might end up trapped in a formula. The reasons why someone chooses to define themselves as an artist and conduct their own research, only to then finalize it in exhibitions, stem from a romantic urge—from the artist-as-hero—and then, like all things, evolve according to a sense of logic and economics.</p>
+
+        <h2 class="interview-question">And a recognizable style or medium works against the artist?</h2>
+        <p>As I said, these places that exhibit and propose art or pseudo-art are a contradiction. Art should not be collective and should not have generating profit as its sole purpose; but in a contemporary world where numbers and economic performance are indicators of success, the "hero" artist is conditioned in their endeavor. Ultimately, the person who buys from you (the end user), the one who might spend or invest in your works, is usually a wealthy person, and therefore invests in their own personal taste. Their yardstick is "I like it or I don't like it," and whether they can live with that work. Therefore, to be appealing and seductive, a work should have characteristics of common taste. Attention is paid to aesthetics, to what they call beauty. A series of possibilities that might not be successful are immediately ruled out. An artwork could be studied scientifically and be perfect in all its components: size, material, content, and exhibition space.</p>
+
+        <h2 class="interview-question">So is there a medium you feel most comfortable in?</h2>
+        <p>Thinking quickly, scanning my thoughts, I don't have a favorite medium; I adore drawing—to me it is a form of handwriting, it's like writing thoughts, potential works. I reproduce every possibility on sheets of paper. For my exhibitions, I create the work based on the space, which could be outdoors, a forest, a museum, or an alternative space; they invite me because of the scale and the idea of what I would like to exhibit in that container. I start with the idea of realization: the strongest, most unpredictable, most fun idea to accept as a challenge for the exhibition, work, or project. Sometimes someone has pointed out to me that I don’t have a style, that the objects are not eternal, as if there were a decalogue of what is right and what is wrong. It is as if I had an alter ego to whom I turn and with whom I debate. I won't hide from you that I often collaborate with technical artisans of various kinds, and I always struggle a lot to ideally realize what I aspired to. Between the dream and reality lies feasibility.</p>
+
+        <h2 class="interview-question">You once said that critics often misunderstand your work, and that explaining one's own work may be the most difficult thing in making art. Do you think an artwork should resist its artist's explanation?</h2>
+        <p>Perhaps today there are no longer critics, but rather curators who are mostly self-taught, possessing a subjective vision of what they like and what they don't; this has created a stalemate in art, where only a few get to dance and have fun while others are just spectators, creating a closed system that remains unreachable for many artists. This conditions your strategy within the art system because the requirements must match a hypothetical sense of value. Nevertheless, whether talking about themselves or the world, the artist indirectly explains what they do and why they do it; they are certainly the first critic of what the brain proposes, and of when this magic, this flash of light, transforms into an idea. Even if an artist explains their work, they might lie, tailoring an ideal meaning to it—not true, but credible. Often in many contemporary works, the title or the rationale has generated iconic works. Yes, it is very interesting to listen to the artist's sometimes catastrophic motivations, but they could also just be a charlatan.</p>
+      </div>
+      <div class="empty-tail" aria-hidden="true"></div>
+    </section>
+
+    <div class="content-row">
+      <div class="empty-rail" aria-hidden="true"></div>
+      <aside class="pull-quote" style="font-style: italic;">The artist tries to drive a nail into the hand of the clock to stop its course.</aside>
+      <div class="empty-tail" aria-hidden="true"></div>
+    </div>
+
+    <section class="gallery-reading" aria-label="Robert Gligorov images">
+      <figure class="gallery-reading-media">
+        <div class="gallery-reading-frame">
+          <img src="./Assets/Robert%20Gligorov/For%20Website/Gligorov-08.png" alt="Robert Gligorov with his work." width="2482" height="1632" loading="lazy" decoding="async">
+        </div>
+      </figure>
+
+      <div class="gallery-reading-side">
+        <figure class="gallery-reading-feature">
+          <div class="gallery-reading-frame">
+            <img src="./Assets/Robert%20Gligorov/For%20Website/Gligorov-04.png" alt="Artwork by Robert Gligorov." width="768" height="882" loading="lazy" decoding="async">
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="article-body article-body-lower">
+      <figure class="article-body-media article-body-media--portrait">
+        <img src="./Assets/Robert%20Gligorov/For%20Website/Gligorov-10.png" alt="Robert Gligorov with an installation." width="1836" height="2472" loading="lazy" decoding="async">
+      </figure>
+
+      <div class="article-body-copy body-block">
+        <h2 class="interview-question">How often do you create? Are you on a strict timetable, or is it when the influence strikes?</h2>
+        <p>Certainly, a religious place, a silent space, a forest where you only hear the breeze of the wind, or a rough sea with waves crashing on the coast could be creative spaces, but generally, they do not trigger a creative spark in me. Instead, I believe very much in Oscar Wilde’s theory: he said that in the morning he would leave the house to run errands and ask himself for an idea for his book, and by evening, one or more ideas would reveal themselves to him. There are two ways to look for an idea: one is to seek it within oneself, and the other is to observe the outside world and analyze many aspects of reality. These are different ways, and I believe I have entered a compulsive mode in which I am constantly tormented by the desire to make. Once an exhibition or a work is finished, I experience a sort of depression, as if a party has ended. I don't know if I would be able to stop making art like Duchamp did; I fear that beyond that, life would be unbearable.</p>
+
+        <h2 class="interview-question">How do you preserve an inner artistic freedom while participating in the art world?</h2>
+        <p>I entered the art world by bringing in sponsors, spaces, curators, media, etc., and finalizing the whole package. A true self-made man. I never leaned on the specific figures that are part of the mechanism and the cliché. Someone who chooses you or likes you acts as a sponsor, and promotion is a tower, a mechanism that the artist should know how to navigate. What I could advise young artists is not to reduce their career to "if I don’t get into that context, etc., I won’t even dedicate myself to making art," but rather to be the architect of the creative process of an exhibition and to generate curiosity and surprise in their proposal. The world in general is hungry for brilliant works, and I don't believe any system can block the winning energy of an artistic proposal. The thing that could make a difference—returning to the artist-hero as the bearer of a message from the beyond—is being an innovator, even if that is not so obvious.</p>
+
+        <h2 class="interview-question">Is there any dialogue with Macedonia in your art?</h2>
+        <p>The art world has become globalized, and no matter how much one refines or de-provincializes their way of thinking and operating—obviously by confronting the creative world—it is as if everything has imploded into a small space. Cultures, traditions, and personal growth fade because everything has become homogenized. When I see biennials, exhibitions, and the like, they look more like Ethnic Expos to me rather than experimentation or provocation, which is what the meaning of art should be. There are periods in my practice, especially in the nineties, at the beginning, when I felt the need to investigate an expressive, performative, artistic, almost theatrical potential. But like many phases, that too passed, and my focus became wide-angle; I dedicate myself to the search for something else. In reality, I don't know if I am completely immune to the methods and rules of a regime like the socialist one; perhaps certain violent works of mine, or those that use horror as a form of writing, stem from that. Certainly, art should not be self-referential; it should not narrate or tell the story of the world in didactic images. I have a dialogue with Macedonia in terms of diplomacy and relations, but had I lived in Macedonia, I would not be the artist I am today. I certainly advise living in the world and considering Macedonia as a point of arrival, not of departure.</p>
+
+        <h2 class="interview-question">There is something particularly interesting about the fact that you use your own body so extensively. Why is that? A reminder of mortality or existence?</h2>
+        <p>An artist is, by definition, a narcissist, and as such does not escape this well-codified disorder. Looking at oneself in the mirror, in a photograph, gives you a sort of signature and certainty. I would also like to say that many immaterial, composite, complex works—involving sound, smell, light, etc.—cannot be preserved. What remains is a photograph; in the end, that is what is left. It is impossible to preserve everything that has been presented. If they were to census all living artists and their works and make a catalog of them, I think it would be a book miles long. The body changes, loses elasticity, its shapes alter, but this does not interest me. I do not care about the passage of time and slow decline. The artist tries to drive a nail into the hand of the clock to stop its course. Sometimes I reflect on the possibility of destroying everything I have produced once I am no longer on this earth. The body has certainly been a great protagonist of the artistic imagination in all its forms. Perhaps today it is outdated, mere material to be molded and a medium to be used. We quickly grow accustomed to every stimulus, and the capacity for wonder is perhaps left only in the eyes of children; could they be the ideal audience?</p>
+
+        <h2 class="interview-question">In 2011 you said the question you'd always wanted to be asked was "are you afraid of death?"—and nobody asked it. Fifteen years later: are you?</h2>
+        <p>The logical thing about death is that nobody knows they are dead; we only know we are alive. What perhaps frightens me the most is the idea of leaving the people I relate to, the relationships, the individuals, the animals, the dialogue with myself. If we were to be reborn, we would be a page to be rewritten, a vessel to be filled, and we would run toward the traumas that will shape our personality. Perhaps my insistence on the afterlife, on spirituality, on the speculation of existence, on the energy that generates value, on beauty, on solidarity... perhaps this wanting to tell fairy tales to a world increasingly tired of and desensitized to both social and entertainment images becomes a challenge: trying to tell a fairy tale to the human being to lull them to sleep and accompany them into a regenerative slumber.</p>
+      </div>
+
+      <div class="empty-tail" aria-hidden="true"></div>
+    </section>
+
+    <div class="content-row article-photo-credits" id="photo-credits">
+      <div class="empty-rail" aria-hidden="true"></div>
+      <aside class="photo-credit-note" aria-label="Photo credits">
+
+      </aside>
+      <div class="empty-tail" aria-hidden="true"></div>
+    </div>
+  </article>
+
+  <section class="more-from-muzej" data-more-from-muzej aria-labelledby="more-from-muzej-title"></section>
+</main>
+
+<footer class="site-footer muzej-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-wordmark">Muzej</span>
+      <p class="footer-statement">An editorial archive of Macedonian art, style, tradition, and culture.</p>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="about.html">About Muzej</a>
+      <a href="mailto:muzej.mk@proton.me">Contact</a>
+      <a href="https://www.instagram.com/muzej.mk/" target="_blank" rel="noopener noreferrer" aria-label="Open Muzej on Instagram">Instagram</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+const menuButton = document.getElementById('menuButton');
+const menuPanel = document.getElementById('menuPanel');
+
+if (menuButton && menuPanel) {
+  const setMenuState = (isOpen) => {
+    menuPanel.classList.toggle('open', isOpen);
+    menuButton.classList.toggle('is-open', isOpen);
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+    menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  };
+
+  menuButton.addEventListener('click', () => {
+    setMenuState(!menuPanel.classList.contains('open'));
+  });
+
+  menuPanel.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setMenuState(false));
+  });
+}
+</script>
+
+<script>
+  (function () {
+    var previousY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+    var ticking = false;
+    var revealZone = 24;
+    var motionThreshold = 4;
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    function updateMuzejLogoVisibility() {
+      var currentY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+      var delta = currentY - previousY;
+
+      if (reducedMotion.matches) {
+        document.body.classList.remove("muzej-logo-hidden");
+        ticking = false;
+        return;
+      }
+
+      if (currentY <= revealZone) {
+        document.body.classList.remove("muzej-logo-hidden");
+      } else if (delta > motionThreshold) {
+        document.body.classList.add("muzej-logo-hidden");
+      } else if (delta < -motionThreshold) {
+        document.body.classList.remove("muzej-logo-hidden");
+      }
+
+      previousY = currentY;
+      ticking = false;
+    }
+
+    function requestMuzejLogoVisibility() {
+      if (!ticking) {
+        window.requestAnimationFrame(updateMuzejLogoVisibility);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener("scroll", requestMuzejLogoVisibility, { passive: true });
+    window.addEventListener("resize", requestMuzejLogoVisibility);
+
+    if (reducedMotion.addEventListener) {
+      reducedMotion.addEventListener("change", requestMuzejLogoVisibility);
+    } else if (reducedMotion.addListener) {
+      reducedMotion.addListener(requestMuzejLogoVisibility);
+    }
+
+    updateMuzejLogoVisibility();
+  })();
+</script>
+
+</body>
+</html>

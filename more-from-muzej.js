@@ -41,6 +41,16 @@
       position: "center top"
     },
     {
+      slug: "robert-gligorov",
+      href: "robert-gligorov.html",
+      title: "Robert Gligorov: Between the Dream and Reality",
+      kicker: "Interview | Art",
+      dek: "The artist on freedom, the art world, and the fear of death.",
+      image: "./Assets/Robert%20Gligorov/For%20Website/Gligorov-01.png",
+      alt: "Robert Gligorov.",
+      position: "center top"
+    },
+    {
       slug: "martinoski",
       href: "martinoski.html",
       title: "The Many Faces of Nikola Martinoski",
