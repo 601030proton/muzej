@@ -2504,10 +2504,6 @@
         </section>
       </main>
 
-      <div class="city-clock city-clock--left" data-city-clock aria-live="off">
-        <span class="city-clock__place"></span>
-        <span class="city-clock__time"></span>
-      </div>
       <div class="city-clock city-clock--right" data-city-clock aria-live="off">
         <span class="city-clock__place"></span>
         <span class="city-clock__time"></span>
@@ -2682,6 +2678,7 @@
           },
           stranci: {
             title: "Robert Gligorov: Between the Dream and Reality",
+            cardTitle: "Robert Gligorov",
             href: "./robert-gligorov.html",
             meta: "Interview | Art",
             dek: "The artist on freedom, the art world, and the fear of death.",
@@ -2831,7 +2828,7 @@
 
           title.className = "story-card-title";
           titleLink.href = article.href;
-          titleLink.textContent = article.title;
+          titleLink.textContent = article.cardTitle || article.title;
 
           link.appendChild(image);
           title.appendChild(titleLink);
