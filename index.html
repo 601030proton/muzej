@@ -1153,6 +1153,110 @@
         color: var(--foreground);
       }
 
+      .now-playing {
+        margin-top: 0;
+        min-height: 100svh;
+        display: grid;
+        align-items: center;
+        padding-top: clamp(108px, 11vw, 180px);
+        padding-bottom: clamp(112px, 12vw, 196px);
+        background: #000;
+        color: #fff;
+      }
+
+      .now-playing-frame {
+        display: grid;
+        gap: clamp(42px, 5vw, 72px);
+      }
+
+      .now-playing-header {
+        text-align: center;
+      }
+
+      .now-playing-title {
+        margin: 0;
+        font-family: var(--headline-serif);
+        font-size: clamp(3rem, 5vw, 5.2rem);
+        line-height: 0.92;
+        letter-spacing: -0.015em;
+        font-weight: 400;
+        font-optical-sizing: auto;
+        font-kerning: normal;
+        color: #fff;
+      }
+
+      .now-playing-feature {
+        width: min(100%, 1180px);
+        margin: 0 auto;
+      }
+
+      .now-playing-media {
+        position: relative;
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        padding: 0;
+        border: 0;
+        overflow: hidden;
+        background: #111;
+        cursor: pointer;
+      }
+
+      .now-playing-media img,
+      .now-playing-media iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        object-fit: cover;
+      }
+
+      .now-playing-play {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: clamp(58px, 6vw, 84px);
+        height: clamp(58px, 6vw, 84px);
+        border: 1px solid rgba(255, 255, 255, 0.72);
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.46);
+        transform: translate(-50%, -50%);
+      }
+
+      .now-playing-play::after {
+        content: "";
+        position: absolute;
+        left: 52%;
+        top: 50%;
+        width: 0;
+        height: 0;
+        border-top: 9px solid transparent;
+        border-bottom: 9px solid transparent;
+        border-left: 15px solid #fff;
+        transform: translate(-38%, -50%);
+      }
+
+      .now-playing-caption {
+        margin: 1rem 0 0;
+        font-family: var(--headline-serif);
+        font-size: clamp(1.45rem, 1.05rem + 0.9vw, 2.05rem);
+        line-height: 1.04;
+        letter-spacing: 0;
+        font-weight: 400;
+        color: #fff;
+      }
+
+      .now-playing-caption a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .now-playing-caption a:hover {
+        text-decoration: underline;
+        text-underline-offset: 0.16em;
+      }
+
+
       .editorial-spread {
         padding-top: clamp(112px, 12vw, 220px);
       }
@@ -2073,7 +2177,7 @@
                 <div class="utility-panel-group">
                   <a class="utility-link" href="index.html">Home</a>
                   <a class="utility-link" href="#selected-stories">Selected Stories</a>
-                  <a class="utility-link" href="#in-rotation">In Rotation</a>
+                  <a class="utility-link" href="#now-playing">Now Playing</a>
                   <a class="utility-link" href="#catalogue">Catalogue</a>
                   <a class="utility-link" href="#field-notes">Field Notes</a>
                   <a class="utility-link" href="about.html">About Muzej</a>
@@ -2221,54 +2325,38 @@
           </div>
         </section>
 
-        <section class="section more-from-muzej" id="in-rotation" aria-labelledby="more-from-muzej-title">
-          <div class="shell more-from-muzej-frame">
-            <div class="more-from-muzej-header">
-              <h2 class="more-from-muzej-title" id="more-from-muzej-title">In Rotation</h2>
-              <p class="more-from-muzej-subtitle"></p>
+        <section class="section now-playing" id="now-playing" aria-labelledby="now-playing-title">
+          <div class="shell now-playing-frame">
+            <div class="now-playing-header">
+              <h2 class="now-playing-title" id="now-playing-title">Now Playing</h2>
             </div>
 
-            <div class="more-from-muzej-grid">
-              <article class="more-from-muzej-card" data-in-rotation-slot="spinning">
-                <a class="more-from-muzej-image-link" href="https://www.youtube.com/watch?v=u_7rtrLfiaM" target="_blank" rel="noopener noreferrer" aria-label="Watch Thea Trajkovska Senki on YouTube">
-                  <div class="more-from-muzej-image">
-                    <img src="./Assets/In%20Rotation/in-rotation-thea.jpg" alt="Thea Trajkovska portrait with red and orange background" loading="lazy" />
-                  </div>
-                </a>
-                <div class="more-from-muzej-copy">
-                  <p class="story-card-kicker">Now Spinning</p>
-                  <h3 class="story-card-title"><a href="https://www.youtube.com/watch?v=u_7rtrLfiaM" target="_blank" rel="noopener noreferrer" aria-label="Watch Thea Trajkovska Senki on YouTube">Thea Trajkovska — “Senki”</a></h3>
-                </div>
-              </article>
+            <article class="now-playing-feature">
+              <button
+                class="now-playing-media"
+                type="button"
+                data-youtube-id="zLmtG7q3k8s"
+                data-youtube-start="156"
+                aria-label="Play Rhythm and Sound (1955), directed by Trajče Popov"
+              >
+                <img
+                  src="./Assets/In%20Rotation/now-playing-rhythm-and-sound.png"
+                  alt="Rhythm and Sound (1955), directed by Trajče Popov"
+                  loading="lazy"
+                />
+                <span class="now-playing-play" aria-hidden="true"></span>
+              </button>
 
-              <article class="more-from-muzej-card" data-in-rotation-slot="following">
-                <a class="more-from-muzej-image-link" href="https://www.instagram.com/magazinn.mk/" target="_blank" rel="noopener noreferrer" aria-label="Open @magazinn.mk on Instagram">
-                  <div class="more-from-muzej-image">
-                    <img src="./Assets/In%20Rotation/in-rotation-magazinn.webp" alt="Black-and-white portrait of a man wearing traditional Macedonian dress" loading="lazy" />
-                  </div>
+              <h3 class="now-playing-caption">
+                <a href="https://www.youtube.com/watch?v=zLmtG7q3k8s&t=156s" target="_blank" rel="noopener noreferrer">
+                  Rhythm and Sound (1955) | Directed by Trajče Popov
                 </a>
-                <div class="more-from-muzej-copy">
-                  <p class="story-card-kicker">Now Following</p>
-                  <h3 class="story-card-title"><a href="https://www.instagram.com/magazinn.mk/" target="_blank" rel="noopener noreferrer" aria-label="Open @magazinn.mk on Instagram">@magazinn.mk</a></h3>
-                </div>
-              </article>
-
-              <article class="more-from-muzej-card" data-in-rotation-slot="scene">
-                <a class="more-from-muzej-image-link" href="https://www.instagram.com/koturkafeifilm/" target="_blank" rel="noopener noreferrer" aria-label="Open Kotur Kafe Film on Instagram">
-                  <div class="more-from-muzej-image">
-                    <img src="./Assets/In%20Rotation/in-rotation-kotur.png" alt="Crowd dancing under a disco ball at Kotur, Skopje" loading="lazy" />
-                  </div>
-                </a>
-                <div class="more-from-muzej-copy">
-                  <p class="story-card-kicker">Scene</p>
-                  <h3 class="story-card-title"><a href="https://www.instagram.com/koturkafeifilm/" target="_blank" rel="noopener noreferrer" aria-label="Open Kotur Kafe Film on Instagram">Kotur, Skopje</a></h3>
-                </div>
-              </article>
-            </div>
+              </h3>
+            </article>
           </div>
         </section>
 
-        <section class="section editorial-spread" aria-label="Editorial features">
+<section class="section editorial-spread" aria-label="Editorial features">
           <div class="shell editorial-spread-grid">
             <a class="editorial-spread-card editorial-spread-card--no-image-overlay" href="./five-books-with-macedonian-state.html">
               <img
@@ -2571,95 +2659,26 @@
       })();
 
       (function () {
-        var slots = {
-          spinning: [
-            {
-              title: "Thea Trajkovska — “Senki”",
-              href: "https://www.youtube.com/watch?v=u_7rtrLfiaM",
-              image: "./Assets/In%20Rotation/in-rotation-thea.jpg",
-              alt: "Thea Trajkovska — Senki",
-              ariaLabel: "Watch Thea Trajkovska Senki on YouTube"
-            },
-            {
-              title: "Saška Petkovska — “Nikogaš, Nikogaš”",
-              href: "https://www.youtube.com/watch?v=jt8qdoBz5Do",
-              image: "./Assets/In%20Rotation/in%20rotation%202/saksainrotation.png",
-              alt: "Saška Petkovska — Nikogaš, Nikogaš",
-              ariaLabel: "Watch Saška Petkovska Nikogaš, Nikogaš on YouTube"
-            }
-          ],
-          following: [
-            {
-              title: "@magazinn.mk",
-              href: "https://www.instagram.com/magazinn.mk/",
-              image: "./Assets/In%20Rotation/in-rotation-magazinn.webp",
-              alt: "@magazinn.mk",
-              ariaLabel: "Open @magazinn.mk on Instagram"
-            },
-            {
-              title: "Meleem",
-              href: "https://www.instagram.com/meleemskopje/",
-              image: "./Assets/In%20Rotation/in%20rotation%202/meeleminrot.png",
-              alt: "Meleem",
-              ariaLabel: "Open Meleem on Instagram"
-            }
-          ],
-          scene: [
-            {
-              title: "Kotur, Skopje",
-              href: "https://www.instagram.com/koturkafeifilm/",
-              image: "./Assets/In%20Rotation/in-rotation-kotur.png",
-              alt: "Crowd dancing under a disco ball at Kotur, Skopje",
-              ariaLabel: "Open Kotur Kafe Film on Instagram"
-            },
-            {
-              title: "Cafe Tigre, Bitola",
-              href: "https://www.google.com/maps/search/?api=1&query=Cafe%20Tigre%20Bitola",
-              image: "./Assets/In%20Rotation/The%20Scene/Scene1.png",
-              alt: "DJ performing at Cafe Tigre in Bitola",
-              ariaLabel: "Find Cafe Tigre in Bitola on Google Maps"
-            }
-          ]
-        };
+        var player = document.querySelector(".now-playing-media");
 
-        function applyItem(slotName) {
-          var card = document.querySelector("[data-in-rotation-slot=\"" + slotName + "\"]");
-          var options = slots[slotName];
-
-          if (!card || !options || !options.length) {
-            return;
-          }
-
-          var item = options[Math.floor(Math.random() * options.length)];
-          var imageLink = card.querySelector(".more-from-muzej-image-link");
-          var titleLink = card.querySelector(".story-card-title a");
-          var image = card.querySelector("img");
-
-          [imageLink, titleLink].forEach(function (link) {
-            if (!link) {
-              return;
-            }
-
-            link.href = item.href;
-            link.target = "_blank";
-            link.rel = "noopener noreferrer";
-            link.setAttribute("aria-label", item.ariaLabel);
-          });
-
-          if (titleLink) {
-            titleLink.textContent = item.title;
-          }
-
-          if (image) {
-            image.src = item.image;
-            image.alt = item.alt;
-          }
+        if (!player) {
+          return;
         }
 
-        applyItem("spinning");
-        applyItem("following");
-        applyItem("scene");
+        player.addEventListener("click", function () {
+          var videoId = player.dataset.youtubeId;
+          var start = player.dataset.youtubeStart || "0";
+          var iframe = document.createElement("iframe");
+
+          iframe.src = "https://www.youtube.com/embed/" + videoId + "?start=" + start + "&autoplay=1&rel=0";
+          iframe.title = "Rhythm and Sound (1955) | Directed by Trajče Popov";
+          iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+          iframe.allowFullscreen = true;
+
+          player.replaceWith(iframe);
+        }, { once: true });
       })();
+
 
     </script>
 
