@@ -46,7 +46,7 @@
       title: "Robert Gligorov: Between the Dream and Reality",
       kicker: "Interview | Art",
       dek: "The artist on freedom, the art world, and the fear of death.",
-      image: "./Assets/Robert%20Gligorov/For%20Website/Gligorov-01.png",
+      image: "./Assets/Robert%20Gligorov/For%20Website/Gligorov-09.png",
       alt: "Robert Gligorov.",
       position: "center top"
     },
