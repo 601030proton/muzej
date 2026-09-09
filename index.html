@@ -2143,6 +2143,24 @@
         transform: translate3d(0, calc(-100% - 42px), 0);
       }
 
+      .site-header .brand-mark {
+        position: relative;
+        width: 150px;
+        height: 30px;
+        overflow: hidden;
+        flex: 0 0 auto;
+      }
+
+      .site-header .brand-mark-image {
+        position: absolute;
+        width: 186.26px;
+        max-width: none;
+        height: auto;
+        left: -18.31px;
+        top: -101.14px;
+        display: block;
+      }
+
       @media (prefers-reduced-motion: reduce) {
         .site-header .brand-mark {
           transition: none;
@@ -2157,7 +2175,8 @@
 @media (max-width: 768px) {
   .site-header { z-index: 2000; }
   .site-header .header-frame { grid-template-columns: minmax(0, 1fr) auto; align-items: center; justify-items: stretch; gap: 1rem; }
-  .site-header .brand-mark { justify-self: start; min-width: 0; }
+  .site-header .brand-mark { justify-self: start; min-width: 0; width: 118px; height: 24px; }
+  .site-header .brand-mark-image { width: 146.52px; left: -14.40px; top: -79.57px; }
   .site-header .header-tools { justify-self: end; justify-content: flex-end; margin-left: auto; position: relative; z-index: 2002; }
   .site-header .utility-menu { position: static; }
   .site-header .utility-trigger { position: relative; z-index: 2003; }
@@ -2174,7 +2193,7 @@
     <div class="page">
       <header class="site-header">
         <div class="shell header-frame">
-          <a class="brand-mark" href="index.html" aria-label="Muzej home">MUZEJ</a>
+          <a class="brand-mark" href="index.html" aria-label="Muzej home"><img class="brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png" alt="" aria-hidden="true" /></a>
 
           <div class="header-tools">
             <details class="utility-menu">
