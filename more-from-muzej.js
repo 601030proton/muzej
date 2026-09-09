@@ -41,16 +41,6 @@
       position: "center top"
     },
     {
-      slug: "robert-gligorov",
-      href: "robert-gligorov.html",
-      title: "Robert Gligorov: Between the Dream and Reality",
-      kicker: "Interview | Art",
-      dek: "The artist on freedom, the art world, and the fear of death.",
-      image: "./Assets/Robert%20Gligorov/For%20Website/Gligorov-09.png",
-      alt: "Robert Gligorov.",
-      position: "center top"
-    },
-    {
       slug: "martinoski",
       href: "martinoski.html",
       title: "The Many Faces of Nikola Martinoski",
@@ -131,14 +121,14 @@
       position: "center center"
     },
     {
-      slug: "the-new-new-wave",
-      href: "the-new-new-wave.html",
-      title: "The (New) New Wave",
-      kicker: "Cinema",
-      dek: "A new cohort of Macedonian filmmakers is going international by staying close to home.",
-      image: "./Assets/New%20Wave/New%20Wave%20Hero/new%20new%20wave.png",
-      alt: "Portrait collage of contemporary Macedonian filmmakers.",
-      position: "center center"
+      slug: "tattoo",
+      href: "tattoo.html",
+      title: "On a Film That Shaped the Macedonian Psyche",
+      kicker: "CineMacedonia",
+      dek: "CineMacedonia revisits Tattoo (1991)—the film that validated a young nation's hope for change.",
+      image: "./Assets/Tattoo/hero%20image.png",
+      alt: "Tattoo (1991).",
+      position: "center top"
     },
     {
       slug: "the-stranci",
