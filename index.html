@@ -1,0 +1,2972 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muzej</title>
+<meta name="description" content="Muzej is an independent editorial archive of Macedonian art, style, tradition, and culture.">
+<meta property="og:title" content="Muzej">
+<meta property="og:description" content="An independent editorial archive of Macedonian art, style, tradition, and culture.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="./Assets/Stranci/Stranci%20Pix/stranci-index-portrait.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Muzej">
+<meta name="twitter:description" content="An independent editorial archive of Macedonian art, style, tradition, and culture.">
+<meta name="twitter:image" content="./Assets/Stranci/Stranci%20Pix/stranci-index-portrait.png">
+<link rel="icon" type="image/png" href="./Assets/Font/Muzej%20Logo.ai.png">
+<link rel="apple-touch-icon" href="./Assets/Font/Muzej%20Logo.ai.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&display=swap"
+    />
+    <link rel="stylesheet" href="fonts.css">
+
+    <style>
+      :root {
+        --background: #ffffff;
+        --foreground: #171513;
+        --muted: #70675d;
+        --rule: rgba(23, 21, 19, 0.09);
+        --rule-strong: rgba(23, 21, 19, 0.18);
+        --surface: #f1e9dd;
+        --surface-deep: #e4dac9;
+        --surface-soft: #f7f2e9;
+        --accent: #7f5243;
+        --page-x: clamp(18px, 5.2vw, 72px);
+        --section-y: clamp(64px, 8.8vw, 128px);
+        --content-max: 1520px;
+        --font-display: "plantin", Georgia, serif;
+        --font-wordmark: var(--font-display);
+        --serif: var(--font-display);
+        --headline-serif: var(--font-display);
+        --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      html,
+      body {
+        width: 100%;
+        min-height: 100%;
+        margin: 0;
+        background: var(--background);
+        color: var(--foreground);
+      }
+
+      body {
+        font-family: var(--sans);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        background: var(--background);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input {
+        font: inherit;
+      }
+
+      a:focus-visible,
+      button:focus-visible,
+      input:focus-visible {
+        outline: 2px solid rgba(141, 79, 61, 0.45);
+        outline-offset: 3px;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .page {
+        width: 100%;
+        background: var(--background);
+      }
+
+      .shell {
+        width: min(100%, var(--content-max));
+        margin: 0 auto;
+        padding-left: var(--page-x);
+        padding-right: var(--page-x);
+      }
+
+      .site-header {
+        background: var(--background);
+      }
+
+      .header-frame {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: 1.5rem 2rem;
+        padding-top: 28px;
+        padding-bottom: 24px;
+      }
+
+      .brand-mark {
+        display: inline-flex;
+        align-items: center;
+        font-family: var(--font-wordmark);
+        font-size: clamp(3rem, 2.1rem + 2.55vw, 5.35rem);
+        line-height: 0.82;
+        letter-spacing: 0.055em;
+        font-weight: 300;
+        font-optical-sizing: auto;
+        white-space: nowrap;
+        text-transform: uppercase;
+
+      }
+
+      .utility-link,
+      .utility-menu-item {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 2rem;
+        border: 0;
+        background: transparent;
+        padding: 0;
+        font-family: var(--sans);
+        font-size: 0.72rem;
+        line-height: 1.2;
+        letter-spacing: 0;
+        color: rgba(23, 21, 19, 0.58);
+        transition: color 180ms ease, border-color 180ms ease;
+      }
+
+      .utility-link:hover,
+      .utility-menu-item:hover {
+        color: var(--foreground);
+      }
+
+      .header-tools {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+      }
+
+      .utility-menu {
+        position: relative;
+      }
+
+      .utility-menu summary {
+        list-style: none;
+      }
+
+      .utility-menu summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .utility-trigger {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.2rem 0;
+        border: 0;
+        background: transparent;
+        color: var(--foreground);
+        transition: color 180ms ease, opacity 180ms ease;
+      }
+
+      .utility-trigger:hover {
+        opacity: 0.72;
+      }
+
+      .utility-trigger:focus-visible {
+        outline: 2px solid rgba(141, 79, 61, 0.45);
+        outline-offset: 3px;
+      }
+
+      .utility-icon {
+        display: grid;
+        gap: 0.26rem;
+      }
+
+      .utility-icon-line {
+        display: block;
+        width: 1.45rem;
+        height: 1px;
+        background: currentColor;
+        opacity: 0.88;
+      }
+
+      .utility-panel {
+        position: absolute;
+        top: calc(100% + 0.55rem);
+        right: 0;
+        z-index: 10;
+        display: grid;
+        min-width: 10rem;
+        padding: 0.45rem 0;
+        border: 1px solid rgba(23, 21, 19, 0.12);
+        background: #ffffff;
+        box-shadow: 0 10px 30px rgba(23, 21, 19, 0.08);
+      }
+
+      .utility-panel-group {
+        display: grid;
+        gap: 0;
+      }
+
+      .utility-panel-utility {
+        margin-top: 0.25rem;
+        padding-top: 0.35rem;
+        border-top: 1px solid rgba(23, 21, 19, 0.1);
+      }
+
+      .utility-panel .utility-link,
+      .utility-panel .utility-menu-item {
+        justify-content: flex-start;
+        min-height: 0;
+        width: 100%;
+        padding: 0.6rem 0.9rem;
+        text-align: left;
+        background: transparent;
+      }
+
+      .utility-panel-utility .utility-link {
+        font-size: 0.66rem;
+        letter-spacing: 0;
+        color: rgba(23, 21, 19, 0.52);
+      }
+
+      .utility-panel .utility-menu-item {
+        cursor: pointer;
+      }
+
+      .utility-panel .utility-link:hover,
+      .utility-panel .utility-menu-item:hover {
+        background: rgba(23, 21, 19, 0.035);
+      }
+
+      .home {
+        padding-bottom: 0;
+      }
+
+      .section {
+        padding-top: var(--section-y);
+      }
+
+      .section-frame {
+        border-top: 1px solid var(--rule);
+        padding-top: 24px;
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: minmax(112px, 0.22fr) minmax(0, 1fr);
+        align-items: end;
+        gap: 1.25rem 2rem;
+        margin-bottom: 2.2rem;
+      }
+
+      .section-kicker {
+        margin: 0;
+        font-family: var(--sans);
+        font-size: 0.7rem;
+        line-height: 1.2;
+        letter-spacing: 0;
+        color: rgba(23, 21, 19, 0.5);
+      }
+
+      .section-title {
+        margin: 0;
+        max-width: min(100%, 16ch);
+        font-family: var(--headline-serif);
+        font-size: clamp(2.2rem, 1.82rem + 1.12vw, 3.45rem);
+        line-height: 1.01;
+        letter-spacing: 0;
+        font-weight: 400;
+        font-optical-sizing: auto;
+        font-kerning: normal;
+        text-wrap: balance;
+        color: rgba(23, 21, 19, 0.84);
+      }
+
+      .hero-feature {
+        padding-top: clamp(18px, 2.6vw, 42px);
+      }
+
+      .hero-grid {
+        display: block;
+      }
+
+      .hero-stage {
+        display: grid;
+        width: 100%;
+        max-width: min(100%, 1370px);
+        margin: 0 auto;
+        grid-template-columns: minmax(330px, 0.62fr) minmax(620px, 1.08fr);
+        column-gap: clamp(58px, 6.5vw, 116px);
+        row-gap: clamp(24px, 3vw, 48px);
+        justify-content: center;
+        align-items: start;
+      }
+
+      .hero-text {
+        display: grid;
+        align-content: start;
+        gap: clamp(1.05rem, 1.35vw, 1.45rem);
+        width: 100%;
+        min-width: 0;
+        max-width: 31rem;
+        padding-top: clamp(118px, 13vw, 230px);
+        text-align: left;
+        transform: translateX(clamp(58px, 5.4vw, 108px));
+        justify-self: start;
+      }
+
+      .hero-copy {
+        display: grid;
+        gap: clamp(0.58rem, 0.85vw, 0.82rem);
+        max-width: none;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .eyebrow {
+        display: none;
+        margin: 0;
+        font-family: var(--sans);
+        font-size: 0.7rem;
+        line-height: 1.2;
+        letter-spacing: 0;
+        color: rgba(23, 21, 19, 0.48);
+      }
+
+      .hero-title {
+        margin: 0;
+        max-width: min(100%, 12.4ch);
+        min-height: 0;
+        font-family: var(--headline-serif);
+        font-size: clamp(4.1rem, 5vw, 6.65rem);
+        line-height: 0.91;
+        letter-spacing: 0;
+        font-weight: 400;
+        font-optical-sizing: auto;
+        font-kerning: normal;
+        text-align: left;
+        text-wrap: balance;
+        color: rgba(23, 21, 19, 0.82);
+        overflow-wrap: normal;
+        word-break: normal;
+      }
+
+      .hero-title a {
+        text-decoration: none;
+      }
+
+      .hero-dek {
+        max-width: 26rem;
+        margin: 0;
+        min-height: 0;
+        font-family: var(--sans);
+        font-size: clamp(1.28rem, 1.35vw, 1.72rem);
+        font-weight: 500;
+        line-height: 1.34;
+        color: rgba(23, 21, 19, 0.78);
+        text-align: left;
+        text-wrap: balance;
+        overflow-wrap: anywhere;
+      }
+
+      .hero-support {
+        display: grid;
+        align-content: start;
+        gap: clamp(0.62rem, 0.8vw, 0.9rem);
+        grid-template-rows: auto auto;
+        width: 100%;
+        height: auto;
+        max-width: 26rem;
+      }
+
+      .hero-actions {
+        margin-top: 0;
+      }
+
+      .text-cta {
+        display: inline-block;
+        padding-bottom: 0;
+        font-family: var(--sans);
+        font-size: clamp(0.82rem, 0.86vw, 1rem);
+        font-weight: 600;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+        color: rgba(23, 21, 19, 0.48);
+        border-bottom: 0;
+        transition: color 180ms ease, border-color 180ms ease;
+      }
+
+      .text-cta:hover {
+        color: rgba(23, 21, 19, 0.72);
+        border-color: rgba(23, 21, 19, 0.12);
+      }
+
+      .story-card-link {
+        display: block;
+      }
+
+      .story-card .story-card-link {
+        aspect-ratio: 3 / 4;
+        overflow: hidden;
+      }
+
+      .hero-media {
+        display: block;
+        width: auto;
+        min-width: 0;
+        max-width: 100%;
+        aspect-ratio: 0.78 / 1;
+        height: min(78svh, 860px);
+        overflow: hidden;
+        padding-top: 0;
+        margin: 0;
+        transform: translateX(clamp(-48px, -3vw, -28px));
+        justify-self: center;
+      }
+
+      .hero-image,
+      .story-image,
+      .explore-image {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border: 1px solid rgba(23, 21, 19, 0.08);
+        background: linear-gradient(180deg, var(--surface) 0%, var(--surface-deep) 100%);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.42);
+      }
+
+      .hero-image {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        max-height: none;
+        aspect-ratio: auto;
+        object-fit: contain;
+        object-position: center center;
+        border: 0;
+        background: #ffffff;
+        box-shadow: none;
+      }
+
+      .story-image {
+        height: 100%;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+        object-position: center center;
+      }
+
+      .new-wave-card-image {
+        object-position: center 20%;
+      }
+
+      .story-image--placeholder {
+        display: block;
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        border: 1px solid rgba(23, 21, 19, 0.08);
+        background:
+          linear-gradient(180deg, var(--surface-soft) 0%, var(--surface) 100%);
+      }
+
+      .explore-image {
+        aspect-ratio: 5 / 6;
+      }
+
+      .explore-image--placeholder {
+        display: block;
+        width: 100%;
+        aspect-ratio: 5 / 6;
+        border: 1px solid rgba(23, 21, 19, 0.08);
+        background:
+          linear-gradient(180deg, var(--surface-soft) 0%, var(--surface) 100%);
+      }
+
+      .explore-image--photo {
+        overflow: hidden;
+      }
+
+      .explore-image--photo img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .explore-image--vranec img {
+        object-position: center center;
+      }
+
+      .explore-image--longing img {
+        object-position: center center;
+      }
+
+      .explore-image--peppers img {
+        object-position: 72% 14%;
+      }
+
+      .explore-image--ohrid img {
+        object-position: center center;
+        filter: grayscale(1) contrast(1.08);
+      }
+
+      .media-placeholder {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        overflow: hidden;
+        width: 100%;
+        min-width: 0;
+        border: 1px solid rgba(23, 21, 19, 0.08);
+        background: linear-gradient(180deg, var(--surface) 0%, var(--surface-deep) 100%);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.42);
+      }
+
+      .media-placeholder::before,
+      .media-placeholder::after {
+        content: "";
+        position: absolute;
+        opacity: 0.8;
+      }
+
+      .media-placeholder::before {
+        top: 8%;
+        right: 10%;
+        width: clamp(86px, 11vw, 188px);
+        aspect-ratio: 4 / 5;
+        background:
+          linear-gradient(180deg, rgba(127, 82, 67, 0.24), rgba(127, 82, 67, 0.08));
+        transform: rotate(9deg);
+      }
+
+      .media-placeholder::after {
+        left: 8%;
+        bottom: 11%;
+        width: clamp(104px, 12vw, 210px);
+        aspect-ratio: 1;
+        background:
+          radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.28), rgba(23, 21, 19, 0.09));
+        border-radius: 999px;
+      }
+
+      .media-label {
+        position: relative;
+        z-index: 1;
+        display: inline-flex;
+        margin: 1.1rem;
+        padding: 0.48rem 0.74rem;
+        background: rgba(252, 250, 246, 0.84);
+        border: 1px solid rgba(23, 21, 19, 0.08);
+        font-family: var(--sans);
+        font-size: 0.64rem;
+        line-height: 1.2;
+        letter-spacing: 0;
+        color: rgba(23, 21, 19, 0.58);
+      }
+
+      .media-placeholder--hero {
+        aspect-ratio: 5 / 6.15;
+      }
+
+      .media-placeholder--hero::before {
+        top: 6%;
+        left: 50%;
+        right: auto;
+        width: clamp(168px, 21vw, 292px);
+        aspect-ratio: 3 / 4;
+        transform: translateX(-50%) rotate(5deg);
+      }
+
+      .media-placeholder--hero::after {
+        left: auto;
+        right: 9%;
+        bottom: 9%;
+        width: clamp(92px, 11vw, 166px);
+        aspect-ratio: 3 / 2;
+        border-radius: 0;
+        background:
+          linear-gradient(180deg, rgba(23, 21, 19, 0.15), rgba(23, 21, 19, 0.05));
+        transform: rotate(-8deg);
+      }
+
+      .media-placeholder--card {
+        aspect-ratio: 4 / 3.35;
+      }
+
+      .media-placeholder--card::before {
+        top: 14%;
+        right: 14%;
+        width: clamp(62px, 7vw, 112px);
+        aspect-ratio: 1;
+      }
+
+      .media-placeholder--card::after {
+        left: 8%;
+        bottom: 10%;
+        width: clamp(88px, 8vw, 124px);
+      }
+
+      .media-placeholder--feature {
+        aspect-ratio: 8 / 5.2;
+      }
+
+      .media-placeholder--mini {
+        aspect-ratio: 5 / 3.4;
+      }
+
+      .story-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: clamp(18px, 2vw, 28px);
+      }
+
+      .story-card,
+      .feature-story,
+      .stack-story,
+      .archive-group {
+        min-width: 0;
+      }
+
+      .story-card {
+        padding-top: 0.35rem;
+        border-top: 1px solid var(--rule-strong);
+      }
+
+      .story-card-copy {
+        padding-top: 1.15rem;
+      }
+
+      .story-card-kicker {
+        margin: 0;
+        font-family: var(--sans);
+        font-size: 0.68rem;
+        line-height: 1.2;
+        letter-spacing: 0;
+        color: rgba(23, 21, 19, 0.46);
+      }
+
+      .story-card-title,
+      .feature-story-title,
+      .stack-story-title,
+      .archive-link {
+        margin: 0.62rem 0 0;
+        font-family: var(--headline-serif);
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: 0;
+        font-optical-sizing: auto;
+        font-kerning: normal;
+        text-wrap: balance;
+        color: rgba(23, 21, 19, 0.84);
+      }
+
+      .story-card-title {
+        font-size: clamp(2.05rem, 1.7rem + 0.82vw, 2.75rem);
+      }
+
+      .story-card-meta,
+      .archive-meta {
+        margin: 0.95rem 0 0;
+        font-family: var(--sans);
+        font-size: 0.7rem;
+        line-height: 1.35;
+        letter-spacing: 0;
+        color: rgba(23, 21, 19, 0.46);
+      }
+
+      #selected-stories {
+        padding-top: clamp(104px, 10vw, 176px);
+      }
+
+      #selected-stories .section-frame {
+        position: relative;
+        border-top: 0;
+        padding-top: 18px;
+      }
+
+      #selected-stories .section-frame::before {
+        display: none;
+      }
+
+      .read-next-header {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        padding-bottom: clamp(18px, 2vw, 28px);
+        margin-bottom: clamp(28px, 4vw, 56px);
+        border-bottom: 1px solid var(--rule-strong);
+      }
+
+      .read-next-title {
+        margin: 0;
+        font-family: var(--headline-serif);
+        font-size: clamp(2rem, 2.8vw, 3.15rem);
+        line-height: 1;
+        letter-spacing: 0;
+        font-weight: 400;
+        font-optical-sizing: auto;
+        font-kerning: normal;
+        color: rgba(23, 21, 19, 0.84);
+      }
+
+      #selected-stories .story-card {
+        position: relative;
+        padding-top: 0;
+        border-top: 0;
+      }
+
+      @media (min-width: 1141px) {
+        #selected-stories .story-card + .story-card::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -17px;
+          width: 1px;
+          background: var(--rule);
+        }
+      }
+
+      #selected-stories .story-card-copy {
+        padding-top: 0.98rem;
+      }
+
+      #selected-stories .story-card-title {
+        margin-top: 0.56rem;
+      }
+
+      #catalogue {
+        padding-top: clamp(104px, 10vw, 176px);
+      }
+
+      #catalogue .section-frame {
+        border-top: 0;
+        padding-top: 18px;
+      }
+
+      #catalogue .read-next-title {
+        font-size: clamp(2.2rem, 1.82rem + 1.12vw, 3.45rem);
+        line-height: 1.01;
+      }
+
+      .catalogue-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: clamp(18px, 2vw, 32px);
+      }
+
+      #catalogue .story-card {
+        padding-top: 0;
+        border-top: 0;
+      }
+
+      #catalogue .story-card-copy {
+        padding-top: 0.98rem;
+      }
+
+      #catalogue .story-card-title {
+        margin-top: 0.56rem;
+      }
+
+      .explore-header {
+        margin-bottom: 1.35rem;
+      }
+
+      #field-notes .section-frame {
+        border-top: 0;
+      }
+
+      #field-notes .section-frame::before {
+        display: none;
+      }
+
+      .kinfolk-feature {
+        padding-top: clamp(132px, 14vw, 224px);
+        padding-bottom: clamp(152px, 15vw, 260px);
+        background: #ffffff;
+      }
+
+      .kinfolk-feature-frame {
+        display: grid;
+        justify-items: center;
+        text-align: center;
+      }
+
+      .kinfolk-feature-article {
+        display: grid;
+        justify-items: center;
+        width: 100%;
+      }
+
+      .kinfolk-feature-text-link,
+      .kinfolk-feature-media-link {
+        color: inherit;
+      }
+
+      .kinfolk-feature-title {
+        max-width: min(100%, 44rem);
+        margin: 0 auto;
+        font-family: var(--headline-serif);
+        font-size: clamp(2.65rem, 3.65vw, 3.85rem);
+        line-height: 1.08;
+        letter-spacing: 0;
+        font-weight: 400;
+        font-optical-sizing: auto;
+        font-kerning: normal;
+        color: rgba(23, 21, 19, 0.86);
+        text-wrap: balance;
+      }
+
+      .kinfolk-feature-media-link {
+        display: block;
+        width: clamp(230px, 23vw, 370px);
+        margin-top: clamp(58px, 6.2vw, 104px);
+      }
+
+      .kinfolk-feature-image {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 0;
+        background: transparent;
+      }
+
+      .tose-descendants {
+        padding-top: clamp(112px, 10.5vw, 188px);
+        padding-bottom: clamp(64px, 6vw, 112px);
+        background: #ffffff;
+      }
+
+      .tose-descendants-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.78fr);
+        gap: clamp(54px, 8vw, 150px);
+        align-items: start;
+      }
+
+      .tose-descendants-copy {
+        display: grid;
+        justify-items: start;
+        align-content: start;
+        padding-top: clamp(2px, 0.9vw, 18px);
+        min-width: 0;
+      }
+
+      .tose-descendants-kicker,
+      .tose-descendants-title {
+        margin: 0;
+        font-family: var(--headline-serif);
+        font-weight: 400;
+        font-optical-sizing: auto;
+        font-kerning: normal;
+        color: var(--foreground);
+        text-wrap: balance;
+      }
+
+      .tose-descendants-kicker {
+        font-size: clamp(2.65rem, 4.15vw, 5.45rem);
+        line-height: 0.88;
+        letter-spacing: 0;
+      }
+
+      .tose-descendants-title {
+        max-width: 24ch;
+        margin-top: 0.42em;
+        font-size: clamp(1.9rem, 2.8vw, 3.4rem);
+        line-height: 1.08;
+        letter-spacing: 0;
+        color: rgba(23, 21, 19, 0.72);
+      }
+
+      .tose-descendants-media {
+        display: block;
+        width: min(100%, 560px);
+        justify-self: end;
+        overflow: hidden;
+        aspect-ratio: 3 / 4;
+        color: inherit;
+        background: var(--surface-soft);
+      }
+
+      .tose-descendants-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+      }
+
+      .city-clock {
+        position: fixed;
+        bottom: clamp(14px, 1.6vw, 24px);
+        z-index: 80;
+        display: inline-flex;
+        align-items: baseline;
+        gap: 0.72em;
+        padding: 0.38rem 0.52rem;
+        color: rgba(23, 21, 19, 0.78);
+        font-family: "Space Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        font-size: clamp(0.72rem, 0.82vw, 0.92rem);
+        line-height: 1;
+        letter-spacing: 0.02em;
+        background: rgba(255, 255, 255, 0.74);
+        backdrop-filter: blur(8px);
+        pointer-events: none;
+      }
+
+      .city-clock--left {
+        left: clamp(14px, 1.8vw, 26px);
+      }
+
+      .city-clock--right {
+        right: clamp(14px, 1.8vw, 26px);
+      }
+
+      .city-clock__place,
+      .city-clock__time {
+        white-space: nowrap;
+      }
+
+      .city-clock__time {
+        font-variant-numeric: tabular-nums;
+      }
+
+      @media (max-width: 520px) {
+        .city-clock {
+          bottom: 8px;
+          gap: 0.42em;
+          padding: 0.28rem 0.34rem;
+          font-size: 0.58rem;
+          letter-spacing: 0;
+        }
+
+        .city-clock--left {
+          left: 6px;
+        }
+
+        .city-clock--right {
+          right: 6px;
+        }
+      }
+
+      .muzej-letter {
+        padding-top: clamp(76px, 8vw, 136px);
+        padding-bottom: clamp(76px, 8vw, 136px);
+        background: #ffffff;
+      }
+
+      .muzej-letter__layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.28fr) minmax(280px, 0.72fr);
+        gap: clamp(32px, 5vw, 88px);
+        align-items: end;
+      }
+
+      .muzej-letter__title {
+        margin: 0;
+        padding-bottom: clamp(15px, 1.4vw, 22px);
+        border-bottom: 1px solid rgba(23, 21, 19, 0.72);
+        font-family: var(--font-display);
+        font-size: clamp(2.05rem, 2.6vw, 3.25rem);
+        line-height: 1.08;
+        letter-spacing: 0;
+        font-weight: 400;
+        font-optical-sizing: auto;
+        text-wrap: balance;
+      }
+
+      .muzej-letter__form {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: clamp(18px, 3vw, 46px);
+        align-items: center;
+        min-width: 0;
+        padding-bottom: clamp(15px, 1.4vw, 22px);
+        border-bottom: 1px solid rgba(23, 21, 19, 0.72);
+      }
+
+      .muzej-letter__label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .muzej-letter__input {
+        width: 100%;
+        min-width: 0;
+        min-height: 2.65rem;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: var(--foreground);
+        font-size: clamp(1rem, 0.93rem + 0.18vw, 1.14rem);
+        line-height: 1.2;
+      }
+
+      .muzej-letter__input::placeholder {
+        color: rgba(23, 21, 19, 0.44);
+      }
+
+      .muzej-letter__button {
+        min-height: 2.65rem;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: var(--foreground);
+        font-size: 1rem;
+        line-height: 1.2;
+        cursor: pointer;
+      }
+
+      .muzej-letter__button:hover {
+        color: var(--muted);
+      }
+
+      .more-from-muzej {
+        margin-top: 0;
+        min-height: 100svh;
+        display: grid;
+        align-items: center;
+        padding-top: clamp(108px, 11vw, 180px);
+        padding-bottom: clamp(112px, 12vw, 196px);
+        background: #686F5B;
+        color: var(--foreground);
+      }
+
+      .more-from-muzej-frame {
+        display: grid;
+        gap: clamp(58px, 6vw, 96px);
+      }
+
+      .more-from-muzej-header {
+        text-align: center;
+        transform: translateY(calc(-1 * clamp(24px, 3vw, 44px)));
+      }
+
+    .more-from-muzej-title {
+      max-width: none;
+      margin: 0 0 0.3rem;
+      font-family: var(--headline-serif);
+      font-size: clamp(3rem, 5vw, 5.2rem);
+      line-height: 0.92;
+      letter-spacing: -0.015em;
+      font-weight: 400;
+      font-optical-sizing: auto;
+      font-kerning: normal;
+      color: var(--foreground);
+      text-wrap: balance;
+    }
+
+    .more-from-muzej-subtitle {
+      max-width: 78rem;
+      margin: 0 auto;
+      font-family: var(--headline-serif);
+      font-size: clamp(1rem, 1.675vw, 2rem);
+      line-height: 0.96;
+      letter-spacing: 0;
+      font-weight: 400;
+      font-optical-sizing: auto;
+      font-kerning: normal;
+      color: var(--foreground);
+      text-wrap: balance;
+    }
+
+    .more-from-muzej-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(22px, 2.8vw, 38px);
+    }
+
+      .more-from-muzej-card {
+        width: 80%;
+        min-width: 0;
+        justify-self: center;
+      }
+
+      .more-from-muzej-image {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        border: 1px solid rgba(23, 21, 19, 0.14);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.08));
+    }
+
+    .more-from-muzej-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .more-from-muzej-image-link {
+      display: block;
+      color: inherit;
+    }
+
+    .more-from-muzej-copy {
+      padding-top: 0.95rem;
+    }
+
+      .more-from-muzej .story-card-kicker {
+        color: rgba(23, 21, 19, 0.62);
+      }
+
+      .more-from-muzej .story-card-title {
+        font-size: clamp(1.45rem, 1.05rem + 0.9vw, 2.05rem);
+        line-height: 1.04;
+        letter-spacing: 0;
+        color: var(--foreground);
+      }
+
+      .now-playing {
+        margin-top: 0;
+        min-height: 100svh;
+        display: grid;
+        align-items: center;
+        padding-top: clamp(108px, 11vw, 180px);
+        padding-bottom: clamp(112px, 12vw, 196px);
+        background: #000;
+        color: #fff;
+      }
+
+      .now-playing-frame {
+        display: grid;
+        gap: clamp(42px, 5vw, 72px);
+      }
+
+      .now-playing-header {
+        text-align: center;
+      }
+
+      .now-playing-title {
+        margin: 0;
+        font-family: var(--headline-serif);
+        font-size: clamp(3rem, 5vw, 5.2rem);
+        line-height: 0.92;
+        letter-spacing: -0.015em;
+        font-weight: 400;
+        font-optical-sizing: auto;
+        font-kerning: normal;
+        color: #fff;
+      }
+
+      .now-playing-feature {
+        width: min(100%, 1180px);
+        margin: 0 auto;
+      }
+
+      .now-playing-media {
+        position: relative;
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        padding: 0;
+        border: 0;
+        overflow: hidden;
+        background: #111;
+        cursor: pointer;
+      }
+
+      .now-playing-media,
+      .now-playing-media:hover,
+      .now-playing-media:focus,
+      .now-playing-media:active,
+      .now-playing-media:visited {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        transform: none;
+        scale: 1;
+      }
+
+
+      .now-playing-media img,
+      .now-playing-media iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        object-fit: cover;
+      }
+
+      .now-playing-play {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: clamp(58px, 6vw, 84px);
+        height: clamp(58px, 6vw, 84px);
+        border: 1px solid rgba(255, 255, 255, 0.72);
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.46);
+        transform: translate(-50%, -50%);
+      }
+
+      .now-playing-play::after {
+        content: "";
+        position: absolute;
+        left: 52%;
+        top: 50%;
+        width: 0;
+        height: 0;
+        border-top: 9px solid transparent;
+        border-bottom: 9px solid transparent;
+        border-left: 15px solid #fff;
+        transform: translate(-38%, -50%);
+      }
+      .now-playing-caption {
+        width: 100%;
+        margin: 0.8rem auto 0;
+        font-family: var(--headline-serif);
+        font-size: clamp(0.95rem, 0.86rem + 0.28vw, 1.3rem);
+        line-height: 1.2;
+        letter-spacing: 0;
+        font-weight: 400;
+        text-align: center;
+        color: #fff;
+      }
+      .now-playing-caption a {
+        display: inline-block;
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .now-playing-caption a:hover {
+        text-decoration: underline;
+        text-underline-offset: 0.16em;
+      }
+
+
+      .editorial-spread {
+        padding-top: clamp(112px, 12vw, 220px);
+      }
+
+      .editorial-spread-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(18px, 2vw, 32px);
+      }
+
+      .editorial-spread-card {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        aspect-ratio: 4 / 5;
+        color: #fff;
+        background: var(--surface-deep);
+        text-decoration: none;
+      }
+
+      .editorial-spread-card img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: saturate(0.86) contrast(0.96);
+      }
+
+      .editorial-spread-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(23, 21, 19, 0) 40%, rgba(23, 21, 19, 0.28) 68%, rgba(23, 21, 19, 0.68) 100%);
+        pointer-events: none;
+      }
+
+      .editorial-spread-card--no-image-overlay img {
+        filter: none;
+      }
+
+      .editorial-spread-card--no-image-overlay::after {
+        display: none;
+      }
+
+      .editorial-spread-copy {
+        position: absolute;
+        z-index: 1;
+        right: clamp(18px, 3.2vw, 54px);
+        bottom: clamp(26px, 4.4vw, 68px);
+        left: clamp(18px, 3.2vw, 54px);
+        display: grid;
+        justify-items: center;
+        gap: 0.58rem;
+        text-align: center;
+      }
+
+      .editorial-spread-eyebrow {
+        margin: 0;
+        font-family: var(--sans);
+        font-size: clamp(0.68rem, 0.78vw, 0.82rem);
+        line-height: 1.2;
+        letter-spacing: 0;
+        color: rgba(255, 255, 255, 0.84);
+      }
+
+      .editorial-spread-title {
+        max-width: 13ch;
+        margin: 0;
+        font-family: var(--headline-serif);
+        font-size: clamp(2.3rem, 4vw, 4.7rem);
+        line-height: 0.98;
+        letter-spacing: 0;
+        font-weight: 400;
+        font-optical-sizing: auto;
+        font-kerning: normal;
+        text-wrap: balance;
+        color: #fff;
+      }
+
+      .explore-header-title {
+        max-width: none;
+      }
+
+      .explore-stack {
+        border-top: 1px solid var(--rule-strong);
+      }
+
+      .explore-row {
+        display: grid;
+        grid-template-columns: clamp(176px, 18vw, 248px) minmax(0, 1fr);
+        gap: clamp(24px, 3vw, 42px);
+        align-items: start;
+        padding: 30px 0;
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .explore-row-media {
+        min-width: 0;
+      }
+
+      .media-placeholder--gateway {
+        aspect-ratio: 5 / 6;
+      }
+
+      .explore-row-copy {
+        align-self: center;
+        min-width: 0;
+        max-width: 54rem;
+        padding-top: 0.25rem;
+      }
+
+      .explore-row-title {
+        margin: 0;
+        font-family: var(--headline-serif);
+        font-size: clamp(3.1rem, 5.3vw, 5.3rem);
+        line-height: 0.97;
+        letter-spacing: 0;
+        font-weight: 400;
+        font-optical-sizing: auto;
+        font-kerning: normal;
+        text-wrap: balance;
+      }
+
+      .explore-row-dek {
+        max-width: 32rem;
+        margin: 0.7rem 0 0;
+        font-size: 1rem;
+        line-height: 1.72;
+        color: var(--muted);
+        overflow-wrap: anywhere;
+      }
+
+      .explore-row-meta {
+        margin: 0.95rem 0 0;
+        font-family: var(--sans);
+        font-size: 0.7rem;
+        line-height: 1.35;
+        letter-spacing: 0;
+        color: rgba(23, 21, 19, 0.46);
+        overflow-wrap: anywhere;
+      }
+
+      .secondary-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+        gap: 40px;
+        align-items: start;
+      }
+
+      .feature-story-copy {
+        max-width: 35rem;
+        padding-top: 1.2rem;
+      }
+
+      .feature-story-title {
+        font-size: clamp(2.8rem, 2.28rem + 1.18vw, 4.15rem);
+      }
+
+      .feature-story-dek {
+        max-width: 28rem;
+        margin: 1rem 0 0;
+        font-size: 1rem;
+        line-height: 1.76;
+        color: var(--muted);
+        overflow-wrap: anywhere;
+      }
+
+      .stacked-stories {
+        display: grid;
+        gap: 0;
+        border-top: 1px solid var(--rule-strong);
+      }
+
+      .stack-story {
+        padding-top: 1.1rem;
+      }
+
+      .stack-story + .stack-story {
+        margin-top: 1.2rem;
+        padding-top: 1.2rem;
+        border-top: 1px solid var(--rule);
+      }
+
+      .stack-story-copy {
+        padding-top: 0.9rem;
+      }
+
+      .stack-story-title {
+        font-size: clamp(1.9rem, 1.64rem + 0.62vw, 2.35rem);
+      }
+
+      .archive-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 0.74fr) minmax(0, 1.26fr);
+        gap: 40px 56px;
+        align-items: start;
+      }
+
+      .archive-intro {
+        max-width: 27rem;
+        margin: 0;
+        font-size: 1.03rem;
+        line-height: 1.84;
+        color: var(--muted);
+        overflow-wrap: anywhere;
+      }
+
+      .archive-groups {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0 28px;
+      }
+
+      .archive-group {
+        padding-top: 0.5rem;
+        border-top: 1px solid var(--rule-strong);
+      }
+
+      .archive-group + .archive-group {
+        padding-left: 28px;
+        border-left: 1px solid var(--rule);
+      }
+
+      .archive-group-title {
+        margin: 0;
+        font-family: var(--sans);
+        font-size: 0.7rem;
+        line-height: 1.2;
+        letter-spacing: 0;
+        color: rgba(23, 21, 19, 0.5);
+      }
+
+      .archive-list {
+        display: grid;
+        gap: 0;
+        margin: 1.15rem 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .archive-item {
+        padding-top: 1.1rem;
+        margin-top: 1.1rem;
+        border-top: 1px solid var(--rule);
+      }
+
+      .archive-item:first-child {
+        margin-top: 0;
+      }
+
+      .archive-link {
+        display: inline-block;
+        font-size: 1.6rem;
+      }
+
+      .about-strip-frame {
+        border-top: 0;
+        border-bottom: 1px solid var(--rule);
+        padding-top: 34px;
+        padding-bottom: 34px;
+        background: #ffffff;
+      }
+
+      #newsletter-strip {
+        padding-top: clamp(48px, 6vw, 84px);
+      }
+
+      .about-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.94fr);
+        gap: 32px 56px;
+        align-items: start;
+      }
+
+      .about-statement {
+        max-width: 31rem;
+        margin: 0;
+        font-family: var(--headline-serif);
+        font-size: clamp(2.3rem, 1.82rem + 1.12vw, 3.5rem);
+        line-height: 1.04;
+        letter-spacing: 0;
+        font-weight: 400;
+        font-optical-sizing: auto;
+        font-kerning: normal;
+        text-wrap: balance;
+      }
+
+      #newsletter-strip .about-layout {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+      }
+
+      #newsletter-strip .about-statement {
+        max-width: none;
+        width: 100%;
+        margin: 0 auto;
+        font-size: clamp(1.85rem, 2.65vw, 2.9rem);
+        line-height: 1.05;
+        letter-spacing: -0.01em;
+        color: #B65A3C;
+        white-space: nowrap;
+        overflow-wrap: normal;
+      }
+
+      #newsletter-strip .about-strip-frame {
+        position: relative;
+        display: grid;
+        align-items: center;
+        min-height: clamp(150px, 18vw, 260px);
+        padding-top: 28px;
+        padding-bottom: 30px;
+        border-top: 0;
+        border-bottom: 0;
+      }
+
+      #newsletter-strip .about-strip-frame::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: min(1120px, calc(100% - 48px));
+        height: 1px;
+        background: var(--rule);
+        transform: translateX(-50%);
+      }
+
+      .newsletter-block {
+        display: grid;
+        gap: 1.15rem;
+      }
+
+      .newsletter-form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.9rem;
+      }
+
+      .newsletter-input {
+        flex: 1 1 14rem;
+        min-height: 3rem;
+        padding: 0 1.05rem;
+        border: 1px solid var(--rule-strong);
+        border-radius: 999px;
+        background: rgba(252, 250, 246, 0.78);
+        color: var(--foreground);
+      }
+
+      .newsletter-input::placeholder {
+        color: rgba(23, 21, 19, 0.4);
+      }
+
+      .newsletter-button {
+        min-height: 3rem;
+        padding: 0 1.22rem;
+        border: 1px solid var(--rule-strong);
+        border-radius: 999px;
+        background: transparent;
+        color: var(--foreground);
+        font-size: 0.74rem;
+        letter-spacing: 0;
+      }
+
+      .newsletter-note,
+      .footer-note {
+        margin: 0;
+        font-size: 0.92rem;
+        line-height: 1.8;
+        color: var(--muted);
+        overflow-wrap: anywhere;
+      }
+
+      .social-link {
+        display: inline-flex;
+        width: fit-content;
+        padding-bottom: 0.22rem;
+        border-bottom: 1px solid rgba(23, 21, 19, 0.2);
+        font-family: var(--sans);
+        font-size: 0.74rem;
+        line-height: 1.3;
+        letter-spacing: 0;
+        color: rgba(23, 21, 19, 0.68);
+      }
+
+      .site-footer {
+        margin-top: 0;
+        width: 100%;
+      }
+
+      .simple-footer {
+        padding: clamp(1.35rem, 3.2vw, 2.4rem) var(--page-x) clamp(2.5rem, 5vw, 4.2rem);
+        background: var(--background);
+        color: var(--foreground);
+      }
+
+      .simple-footer nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.7rem;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .simple-footer a,
+      .simple-footer span {
+        font-family: var(--sans);
+        font-size: 0.82rem;
+        line-height: 1.2;
+        letter-spacing: 0;
+      }
+
+      .simple-footer a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 180ms ease, text-decoration-color 180ms ease;
+      }
+
+      .simple-footer span {
+        color: rgba(23, 21, 19, 0.36);
+      }
+
+      .simple-footer a:hover {
+        color: rgba(23, 21, 19, 0.68);
+        text-decoration: underline;
+        text-underline-offset: 0.25em;
+      }
+
+      @media (max-width: 1140px) {
+        .header-frame {
+          grid-template-columns: 1fr;
+          justify-items: start;
+          gap: 0.85rem 1.25rem;
+        }
+
+        .header-tools {
+          justify-content: flex-start;
+        }
+
+        .hero-stage {
+          grid-template-columns: minmax(280px, 0.58fr) minmax(460px, 1fr);
+          max-width: min(100%, 1030px);
+          column-gap: clamp(34px, 5vw, 62px);
+          row-gap: 22px;
+          justify-content: center;
+          align-items: start;
+        }
+
+        .hero-text {
+          width: 100%;
+          min-width: 0;
+          padding-top: clamp(78px, 10vw, 128px);
+          align-content: start;
+          gap: 1.1rem;
+          justify-self: stretch;
+          max-width: none;
+          text-align: left;
+          transform: translateX(clamp(24px, 3.2vw, 42px));
+        }
+
+        .hero-copy {
+          display: block;
+          padding-top: 0;
+        }
+
+        .hero-media {
+          width: auto;
+          max-width: none;
+          aspect-ratio: 0.78 / 1;
+          height: min(72svh, 660px);
+          justify-self: center;
+          transform: translateX(clamp(-28px, -2.4vw, -14px));
+        }
+
+        .hero-image {
+          width: 100%;
+          height: 100%;
+          max-height: none;
+          object-fit: contain;
+        }
+
+        .hero-dek {
+          min-height: 0;
+        }
+
+        .hero-support {
+          width: 100%;
+          height: auto;
+          grid-template-rows: auto auto;
+          max-width: none;
+        }
+
+        .story-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 28px;
+        }
+
+        .explore-row {
+          grid-template-columns: clamp(154px, 23vw, 210px) minmax(0, 1fr);
+          gap: 22px;
+          padding: 26px 0;
+        }
+
+        .archive-group + .archive-group {
+          border-left: 0;
+        }
+
+        .secondary-layout,
+        .archive-layout,
+        .about-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .archive-groups {
+          grid-template-columns: 1fr 1fr;
+          gap: 28px;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .more-from-muzej-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 760px) {
+        .header-frame {
+          padding-top: 20px;
+          padding-bottom: 18px;
+        }
+
+        .brand-mark {
+          font-size: clamp(2.45rem, 11vw, 3.35rem);
+
+        }
+
+        .utility-panel {
+          min-width: 9.25rem;
+        }
+
+        .section {
+          padding-top: 48px;
+        }
+
+        .section-frame {
+          padding-top: 18px;
+        }
+
+        .section-head {
+          grid-template-columns: 1fr;
+          align-items: flex-start;
+          gap: 0.65rem;
+          margin-bottom: 1.45rem;
+        }
+
+        .section-title {
+          font-size: clamp(1.7rem, 9vw, 2.4rem);
+          line-height: 1.04;
+        }
+
+        .hero-feature {
+          padding-top: 18px;
+        }
+
+        .hero-stage {
+          grid-template-columns: 1fr;
+          max-width: none;
+          gap: 18px;
+          align-items: start;
+        }
+
+        .hero-title {
+          min-height: 0;
+          height: auto;
+          font-size: clamp(2.95rem, 12vw, 4.25rem);
+          line-height: 0.94;
+          max-width: 11.5ch;
+          text-align: left;
+        }
+
+        .hero-dek {
+          max-width: 32rem;
+          font-size: 0.98rem;
+          line-height: 1.48;
+          text-align: left;
+        }
+
+        .story-card-title {
+          font-size: 2.18rem;
+        }
+
+        .feature-story-title {
+          font-size: clamp(2.3rem, 10vw, 3.1rem);
+        }
+
+        .stack-story-title,
+        .archive-link {
+          font-size: 1.7rem;
+        }
+
+        .about-statement {
+          font-size: clamp(2rem, 9vw, 2.65rem);
+        }
+
+        #newsletter-strip .about-statement {
+          white-space: normal;
+        }
+
+        .section-title,
+        .story-card-title,
+        .explore-row-title,
+        .feature-story-title,
+        .stack-story-title,
+        .archive-link,
+        .about-statement {
+          overflow-wrap: anywhere;
+        }
+
+        .story-grid,
+        .catalogue-grid,
+        .editorial-spread-grid,
+        .archive-groups {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+
+        .editorial-spread {
+          padding-top: 72px;
+        }
+
+        .editorial-spread-title {
+          font-size: clamp(2.1rem, 10vw, 3.5rem);
+        }
+
+        .explore-header {
+          margin-bottom: 1rem;
+        }
+
+        .explore-row {
+          grid-template-columns: 112px minmax(0, 1fr);
+          gap: 16px;
+          padding: 18px 0;
+        }
+
+        .explore-row-title {
+          font-size: clamp(2.15rem, 9vw, 2.75rem);
+        }
+
+        .explore-row-dek {
+          margin-top: 0.5rem;
+          font-size: 0.94rem;
+          line-height: 1.6;
+        }
+
+        .explore-row-meta {
+          margin-top: 0.7rem;
+        }
+
+        .story-card,
+        .archive-group {
+          padding-right: 0;
+        }
+
+        .secondary-layout {
+          gap: 24px;
+        }
+
+        .media-placeholder--hero {
+          aspect-ratio: 5 / 6.4;
+        }
+
+        .media-placeholder--gateway {
+          aspect-ratio: 4 / 5;
+        }
+
+        .hero-text {
+          height: auto;
+          padding-top: 0;
+          transform: none;
+        }
+
+        .hero-media {
+          height: auto;
+          aspect-ratio: 0.86 / 1;
+        }
+
+        .hero-image {
+          width: 100%;
+          height: 100%;
+          max-height: none;
+          aspect-ratio: auto;
+          object-fit: cover;
+        }
+
+        .explore-image {
+          aspect-ratio: 4 / 5;
+        }
+
+        .media-label {
+          margin: 0.9rem;
+          font-size: 0.66rem;
+        }
+
+        #selected-stories {
+          padding-top: 72px;
+        }
+
+        #selected-stories .section-frame {
+          padding-top: 14px;
+        }
+
+        #selected-stories .section-frame::before {
+          display: none;
+        }
+
+        .read-next-header {
+          padding-bottom: 16px;
+          margin-bottom: 24px;
+        }
+
+        .read-next-title {
+          font-size: clamp(1.85rem, 9vw, 2.45rem);
+        }
+
+        #catalogue .read-next-title {
+          font-size: clamp(1.7rem, 9vw, 2.4rem);
+          line-height: 1.04;
+        }
+
+        .kinfolk-feature {
+          padding-top: 92px;
+          padding-bottom: 112px;
+        }
+
+        .kinfolk-feature-title {
+          max-width: min(100%, 19rem);
+          font-size: clamp(1.88rem, 8.6vw, 2.35rem);
+          line-height: 1.12;
+        }
+
+        .kinfolk-feature-media-link {
+          width: min(68vw, 280px);
+          margin-top: 42px;
+        }
+
+        .tose-descendants {
+          padding-top: 88px;
+          padding-bottom: 64px;
+        }
+
+        .tose-descendants-grid {
+          grid-template-columns: 1fr;
+          gap: 38px;
+        }
+
+        .tose-descendants-copy {
+          justify-items: center;
+          text-align: center;
+          padding-top: 0;
+        }
+
+        .tose-descendants-kicker {
+          font-size: clamp(2rem, 10vw, 3.35rem);
+          line-height: 0.92;
+        }
+
+        .tose-descendants-title {
+          max-width: 22ch;
+          font-size: clamp(1.5rem, 7vw, 2.25rem);
+          line-height: 1.12;
+        }
+
+        .tose-descendants-media {
+          width: min(82vw, 360px);
+          justify-self: center;
+        }
+
+        .muzej-letter {
+          padding-top: 72px;
+          padding-bottom: 72px;
+        }
+
+        .muzej-letter__layout {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+
+        .muzej-letter__title {
+          font-size: clamp(2.05rem, 9vw, 2.72rem);
+        }
+
+        .muzej-letter__form {
+          gap: 20px;
+        }
+
+        .more-from-muzej {
+          padding-top: 58px;
+          padding-bottom: 68px;
+        }
+
+        .more-from-muzej-frame {
+          gap: 40px;
+        }
+
+        .more-from-muzej-header {
+          transform: translateY(calc(-1 * clamp(12px, 4vw, 22px)));
+        }
+
+        .more-from-muzej-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .more-from-muzej-title {
+          font-size: clamp(2.45rem, 12vw, 3.35rem);
+        }
+
+        .more-from-muzej .story-card-title {
+          font-size: clamp(1.45rem, 7vw, 2rem);
+        }
+
+        #newsletter-strip .about-statement {
+          max-width: 11ch;
+          white-space: normal;
+          overflow-wrap: normal;
+          font-size: clamp(2rem, 10.5vw, 3.2rem);
+          line-height: 1.06;
+        }
+
+        #newsletter-strip .about-strip-frame {
+          min-height: 190px;
+          padding-top: 24px;
+          padding-bottom: 26px;
+        }
+
+        #selected-stories .story-card-copy {
+          padding-top: 0.86rem;
+        }
+
+        .about-strip-frame {
+          padding-top: 24px;
+          padding-bottom: 24px;
+        }
+
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: transparent;
+        pointer-events: none;
+      }
+
+      .site-header .header-frame,
+      .site-header .brand-mark,
+      .site-header .header-tools {
+        pointer-events: auto;
+      }
+
+      .site-header .brand-mark {
+        transform: translate3d(0, 0, 0);
+        transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+        will-change: transform;
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+      }
+
+      body.muzej-logo-hidden .site-header .brand-mark {
+        transform: translate3d(0, calc(-100% - 42px), 0);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .site-header .brand-mark {
+          transition: none;
+          will-change: auto;
+        }
+
+        body.muzej-logo-hidden .site-header .brand-mark {
+          transform: none;
+        }
+      }
+
+@media (max-width: 768px) {
+  .site-header { z-index: 2000; }
+  .site-header .header-frame { grid-template-columns: minmax(0, 1fr) auto; align-items: center; justify-items: stretch; gap: 1rem; }
+  .site-header .brand-mark { justify-self: start; min-width: 0; }
+  .site-header .header-tools { justify-self: end; justify-content: flex-end; margin-left: auto; position: relative; z-index: 2002; }
+  .site-header .utility-menu { position: static; }
+  .site-header .utility-trigger { position: relative; z-index: 2003; }
+  .site-header .utility-panel { position: fixed; inset: 0; left: 0; right: 0; top: 0; z-index: 2001; display: grid; align-content: center; width: 100vw; max-width: none; min-width: 0; height: 100vh; height: 100svh; padding: clamp(76px, 18vh, 128px) var(--page-x) 48px; border: 0; background: rgba(255, 255, 255, 0.98); box-shadow: none; overflow-y: auto; transform: none; }
+  .site-header .utility-panel-group { width: min(100%, 22rem); margin: 0 auto; }
+  .site-header .utility-panel-utility { margin-top: 0.8rem; padding-top: 0.85rem; }
+  .site-header .utility-panel .utility-link,
+  .site-header .utility-panel .utility-menu-item { justify-content: center; min-height: 2.75rem; padding: 0.72rem 0; text-align: center; }
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <div class="shell header-frame">
+          <a class="brand-mark" href="index.html" aria-label="Muzej home">MUZEJ</a>
+
+          <div class="header-tools">
+            <details class="utility-menu">
+              <summary class="utility-trigger" aria-label="Open navigation menu" aria-controls="homepage-navigation" aria-expanded="false">
+                <span class="utility-icon" aria-hidden="true">
+                  <span class="utility-icon-line"></span>
+                  <span class="utility-icon-line"></span>
+                  <span class="utility-icon-line"></span>
+                </span>
+              </summary>
+              <nav class="utility-panel" id="homepage-navigation" aria-label="Homepage navigation">
+                <div class="utility-panel-group">
+                  <a class="utility-link" href="index.html">Home</a>
+                  <a class="utility-link" href="#selected-stories">Selected Stories</a>
+                  <a class="utility-link" href="#now-playing">Now Playing</a>
+                  <a class="utility-link" href="#catalogue">Catalogue</a>
+                  <a class="utility-link" href="#field-notes">Field Notes</a>
+                  <a class="utility-link" href="about.html">About Muzej</a>
+                </div>
+                <div class="utility-panel-group utility-panel-utility">
+                  <a class="utility-link" href="mailto:muzej.mk@proton.me">Contact</a>
+                  <a class="utility-link" href="https://www.instagram.com/_muzej/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                </div>
+              </nav>
+            </details>
+          </div>
+        </div>
+      </header>
+
+      <main class="home">
+        <section
+          class="hero-feature"
+          id="hero-feature"
+          aria-labelledby="hero-title"
+        >
+          <div class="shell">
+            <article class="hero-grid" data-story="stranci-lead">
+              <div class="hero-stage">
+                <div class="hero-text">
+                  <div class="hero-copy">
+                    <p class="eyebrow">Interview | Art</p>
+                    <h1 class="hero-title" id="hero-title">
+                      <a href="./robert-gligorov.html">Robert Gligorov: Between the Dream and Reality</a>
+                    </h1>
+                  </div>
+
+                  <div class="hero-support">
+                    <p class="hero-dek">The artist on freedom, the art world, and the fear of death.</p>
+                    <div class="hero-actions">
+                      <a class="text-cta" href="./robert-gligorov.html">Read It Here</a>
+                    </div>
+                  </div>
+                </div>
+
+                <a class="hero-media story-card-link" href="./robert-gligorov.html">
+                  <img
+                    class="hero-image"
+                    src="./Assets/Robert%20Gligorov/For%20Website/Gligorov-01.png"
+                    alt="Robert Gligorov."
+                  />
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="selected-stories" aria-label="Selected Stories">
+          <div class="shell section-frame">
+            <div class="read-next-header">
+              <h2 class="read-next-title">Selected Stories</h2>
+            </div>
+
+            <div class="story-grid">
+              <article class="story-card">
+                <a class="story-card-link" href="./skopje-tange.html">
+                  <img
+                    class="story-image"
+                    src="./Assets/Kenzo%20Article/Tange%20Pics/final.png"
+                    alt="Editorial collage portrait with red geometric forms and brutalist architecture."
+                    loading="lazy"
+                  />
+                </a>
+                <div class="story-card-copy">
+                  <p class="story-card-kicker">Architecture | Urbanism</p>
+                  <h3 class="story-card-title">
+                    <a href="./skopje-tange.html">Tokyo on the Vardar</a>
+                  </h3>
+                </div>
+              </article>
+
+              <article class="story-card">
+                <a class="story-card-link" href="./prespa.html">
+                  <img
+                    class="story-image"
+                    src="./Assets/prespa-hero.jpeg"
+                    alt="Lake Prespa shoreline in soft evening light."
+                    loading="lazy"
+                  />
+                </a>
+                <div class="story-card-copy">
+                  <p class="story-card-kicker">Travel | Weekend Guide</p>
+                  <h3 class="story-card-title">
+                    <a href="./prespa.html">Prespa</a>
+                  </h3>
+                </div>
+              </article>
+
+              <article class="story-card">
+                <a class="story-card-link" href="./the-new-new-wave.html">
+                  <img
+                    class="story-image new-wave-card-image"
+                    src="./Assets/New%20Wave/New%20Wave%20Hero/new%20new%20wave.png"
+                    alt="Portrait collage of contemporary Macedonian filmmakers for The (New) New Wave article."
+                    loading="lazy"
+                  />
+                </a>
+                <div class="story-card-copy">
+                  <p class="story-card-kicker">Cinema</p>
+                  <h3 class="story-card-title">
+                    <a href="./the-new-new-wave.html">The (New) New Wave</a>
+                  </h3>
+                </div>
+              </article>
+
+              <article class="story-card">
+                <a class="story-card-link" href="./wearing-the-nation.html">
+                  <img
+                    class="story-image"
+                    src="./Assets/Wearing%20the%20Nation/nation-on-their-backs-index-portrait.png"
+                    alt="Portrait crop of Macedonian football shirts in red, yellow, and white."
+                    loading="lazy"
+                  />
+                </a>
+                <div class="story-card-copy">
+                  <p class="story-card-kicker">Sport | Design</p>
+                  <h3 class="story-card-title">
+                    <a href="./wearing-the-nation.html">The Nation on Their Backs</a>
+                  </h3>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section kinfolk-feature" id="ohrid-feature" aria-labelledby="ohrid-feature-title">
+          <div class="shell kinfolk-feature-frame">
+            <article class="kinfolk-feature-article">
+              <a class="kinfolk-feature-text-link" href="./lake-ohrid-architecture-memory.html">
+                <h2 class="kinfolk-feature-title" id="ohrid-feature-title">The Ohrid House and the Logic of Place</h2>
+              </a>
+              <a class="kinfolk-feature-media-link" href="./lake-ohrid-architecture-memory.html" aria-label="Read The Ohrid House and the Logic of Place">
+                <img
+                  class="kinfolk-feature-image"
+                  src="./Assets/Ohrid%20Architecture/Images/cover.png"
+                  alt="Black-and-white collage of Ohrid house architecture with white plaster and dark timber windows."
+                  loading="lazy"
+                />
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <section class="section now-playing" id="now-playing" aria-labelledby="now-playing-title">
+          <div class="shell now-playing-frame">
+            <div class="now-playing-header">
+              <h2 class="now-playing-title" id="now-playing-title">Now Playing</h2>
+            </div>
+
+            <article class="now-playing-feature">
+              <a
+                class="now-playing-media"
+                href="https://www.youtube.com/watch?v=zLmtG7q3k8s&t=156s"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Watch Rhythm and Sound (1955), directed by Trajče Popov on YouTube"
+              >
+                <img
+                  src="./Assets/In%20Rotation/now-playing-rhythm-and-sound.png"
+                  alt="Rhythm and Sound (1955), directed by Trajče Popov"
+                  loading="lazy"
+                />
+                <span class="now-playing-play" aria-hidden="true"></span>
+              </a>
+
+              <h3 class="now-playing-caption">
+                <a href="https://www.youtube.com/watch?v=zLmtG7q3k8s&t=156s" target="_blank" rel="noopener noreferrer">
+                  Rhythm and Sound (1955) | Directed by Trajče Popov
+                </a>
+              </h3>
+            </article>
+          </div>
+        </section>
+
+<section class="section editorial-spread" aria-label="Editorial features">
+          <div class="shell editorial-spread-grid">
+            <a class="editorial-spread-card editorial-spread-card--no-image-overlay" href="./five-books-with-macedonian-state.html">
+              <img
+                src="./Assets/5%20Books/Images/5BooksHero.png"
+                alt="Five Macedonian history book covers"
+                loading="lazy"
+                style="object-position: center top;"
+              />
+              <div class="editorial-spread-copy">
+                <p class="editorial-spread-eyebrow">Literature | History</p>
+                <h2 class="editorial-spread-title">Start Here: Five Books with Macedonian State</h2>
+              </div>
+            </a>
+
+            <a class="editorial-spread-card" href="./tattoo.html">
+              <img
+                src="./Assets/Tattoo/hero%20image.png"
+                alt="Tattoo (1991)."
+                loading="lazy"
+                style="object-position: center top;"
+              />
+              <div class="editorial-spread-copy">
+                <p class="editorial-spread-eyebrow">CineMacedonia</p>
+                <h2 class="editorial-spread-title">On a Film That Shaped the Macedonian Psyche</h2>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section class="section tose-descendants" id="vlado-feature" aria-labelledby="vlado-feature-title">
+          <div class="shell">
+            <article class="tose-descendants-grid">
+              <div class="tose-descendants-copy">
+                <p class="tose-descendants-kicker">
+                  <a href="./before-the-dawn.html">Vlado Janevski</a>
+                </p>
+                <h2 class="tose-descendants-title" id="vlado-feature-title">
+                  <a href="./before-the-dawn.html">Vlado Janevski gave Macedonia its first Eurovision entry, and its first taste of being seen.</a>
+                </h2>
+              </div>
+              <a class="tose-descendants-media" href="./before-the-dawn.html" aria-label="Read Before the Dawn">
+                <img
+                  class="tose-descendants-image"
+                  src="./Assets/Vlado/Pics/hero.png"
+                  alt="Vlado Janevski performing on a brightly lit stage in a blue suit."
+                  loading="lazy"
+                />
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <section class="section muzej-letter" aria-labelledby="muzej-letter-title">
+          <div class="shell">
+            <div class="muzej-letter__layout">
+              <h2 id="muzej-letter-title" class="muzej-letter__title">
+                Sign up for newsletters from Muzej
+              </h2>
+
+              <form
+                class="muzej-letter__form"
+                action="https://buttondown.com/api/emails/embed-subscribe/Muzej"
+                method="post"
+              >
+                <label class="muzej-letter__label" for="muzej-letter-email">
+                  Email Address
+                </label>
+                <input
+                  id="muzej-letter-email"
+                  class="muzej-letter__input"
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  autocomplete="email"
+                  required
+                />
+                <input type="hidden" value="1" name="embed" />
+                <button class="muzej-letter__button" type="submit">
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="catalogue" aria-labelledby="catalogue-title">
+          <div class="shell section-frame">
+            <div class="read-next-header">
+              <h2 class="read-next-title" id="catalogue-title">Catalogue</h2>
+            </div>
+
+            <div class="catalogue-grid">
+              <article class="story-card">
+                <a class="story-card-link" href="./vangel-naumovski.html">
+                  <img
+                    class="story-image"
+                    src="./Assets/Vangel/Website%20Pics/1.png"
+                    alt="Portrait of Vangel Naumovski seated before one of his paintings"
+                    loading="lazy"
+                  />
+                </a>
+                <div class="story-card-copy">
+                  <p class="story-card-kicker">Artist | Painting</p>
+                  <h3 class="story-card-title">
+                    <a href="./vangel-naumovski.html">The Metamorphosis of Vangel Naumovski</a>
+                  </h3>
+                </div>
+              </article>
+
+              <article class="story-card">
+                <a class="story-card-link" href="./martinoski.html">
+                  <img
+                    class="story-image"
+                    src="./Assets/Martinoski%20Article/Nikola%27s%20Hero%20Images/Martinoski%20Portrait.png"
+                    alt="Portrait-oriented collage image of Nikola Martinoski"
+                    loading="lazy"
+                  />
+                </a>
+                <div class="story-card-copy">
+                  <p class="story-card-kicker">Artist | Painting</p>
+                  <h3 class="story-card-title">
+                    <a href="./martinoski.html">The Many Faces of Nikola Martinoski</a>
+                  </h3>
+                </div>
+              </article>
+
+              <article class="story-card">
+                <a class="story-card-link" href="./macedonian-renaissance.html">
+                  <img
+                    class="story-image"
+                    src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/new-hero.png"
+                    alt="Collage detail of the Archangel Gabriel fresco and a painted hand against a blue field."
+                    loading="lazy"
+                  />
+                </a>
+                <div class="story-card-copy">
+                  <p class="story-card-kicker">Art | History</p>
+                  <h3 class="story-card-title">
+                    <a href="./macedonian-renaissance.html">Toward an Art History of the Macedonian Renaissance</a>
+                  </h3>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="field-notes" aria-labelledby="explore-title">
+          <div class="shell section-frame">
+            <div class="explore-header">
+              <h2 class="section-title explore-header-title" id="explore-title">
+                Field Notes
+              </h2>
+            </div>
+
+            <div class="explore-stack">
+              <a class="explore-row" href="./dodole.html">
+                <div class="explore-row-media">
+                  <div class="explore-image explore-image--photo">
+                    <img
+                      src="./Assets/Dodole/rain2.png"
+                      alt="Black-and-white archival photograph of women and girls gathered around a Macedonian rain-making ritual"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <div class="explore-row-copy">
+                  <h3 class="explore-row-title">Listen to a Rain-Invocation Field Recording</h3>
+                </div>
+              </a>
+
+              <a class="explore-row" href="./peppers.html">
+                <div class="explore-row-media">
+                  <div class="explore-image explore-image--photo explore-image--peppers">
+                    <img
+                      src="./Assets/Peppers/peppers.png"
+                      alt="Red peppers drying from a balcony above a garden"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <div class="explore-row-copy">
+                  <h3 class="explore-row-title">Peppers (Пиперки)</h3>
+                </div>
+              </a>
+
+              <a class="explore-row" href="./longing-for-south.html">
+                <div class="explore-row-media">
+                  <div class="explore-image explore-image--photo explore-image--longing">
+                    <img
+                      src="./Assets/Longing%20for%20the%20South/longing-for-the-south.jpg"
+                      alt="Lake Ohrid or Struga landscape evoking longing and memory"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <div class="explore-row-copy">
+                  <h3 class="explore-row-title">Konstantin Miladinov's "Longing for the South"</h3>
+                </div>
+              </a>
+
+              <a class="explore-row" href="./how-to-taste-vranec.html">
+                <div class="explore-row-media">
+                  <div class="explore-image explore-image--photo explore-image--vranec">
+                    <img
+                      src="./Assets/Vranec/vranec-tasting.jpg"
+                      alt="Wine being poured into a glass during a tasting"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <div class="explore-row-copy">
+                  <h3 class="explore-row-title">How to taste Vranec like a sommelier</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="section"
+          id="newsletter-strip"
+          aria-labelledby="newsletter-title"
+        >
+          <div class="shell about-strip-frame">
+            <div class="about-layout" id="about-strip">
+              <div>
+                <h2 class="about-statement" id="newsletter-title">
+                  Muzej is an English-language journal exploring Macedonian culture.
+                </h2>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <div class="city-clock city-clock--right" data-city-clock aria-live="off">
+        <span class="city-clock__place"></span>
+        <span class="city-clock__time"></span>
+      </div>
+
+      <footer class="site-footer simple-footer">
+        <nav aria-label="Footer navigation">
+          <a href="about.html">About Muzej</a>
+          <span aria-hidden="true">|</span>
+          <a href="mailto:muzej.mk@proton.me">Contact</a>
+          <span aria-hidden="true">|</span>
+          <a href="https://www.instagram.com/_muzej/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </nav>
+      </footer>
+    </div>
+
+    <script>
+      (function () {
+        var clocks = Array.prototype.slice.call(document.querySelectorAll("[data-city-clock]"));
+        var cities = [
+          { label: "Skopje", timeZone: "Europe/Skopje" },
+          { label: "Solun", timeZone: "Europe/Athens" },
+          { label: "Ohrid", timeZone: "Europe/Skopje" },
+          { label: "Bitola", timeZone: "Europe/Skopje" },
+          { label: "Resen", timeZone: "Europe/Skopje" }
+        ];
+
+        if (!clocks.length) {
+          return;
+        }
+
+        var shuffled = cities
+          .map(function (city) {
+            return { city: city, sort: Math.random() };
+          })
+          .sort(function (a, b) {
+            return a.sort - b.sort;
+          })
+          .map(function (entry) {
+            return entry.city;
+          });
+
+        clocks.forEach(function (clock, index) {
+          var city = shuffled[index % shuffled.length];
+          clock.dataset.timeZone = city.timeZone;
+          clock.querySelector(".city-clock__place").textContent = city.label;
+        });
+
+        function updateClocks() {
+          clocks.forEach(function (clock) {
+            var time = new Intl.DateTimeFormat("en-GB", {
+              hour: "2-digit",
+              minute: "2-digit",
+              second: "2-digit",
+              hour12: false,
+              timeZone: clock.dataset.timeZone
+            }).format(new Date());
+
+            clock.querySelector(".city-clock__time").textContent = time;
+          });
+        }
+
+        updateClocks();
+        window.setInterval(updateClocks, 1000);
+      })();
+
+    </script>
+
+    <script>
+      (function () {
+        var articles = {
+          quality: {
+            title: "Quality of Life Survey 2026",
+            href: "./quality-of-life.html",
+            meta: "Quality of Life | Urbanism",
+            dek: "A ranked survey of where everyday life works best across Macedonia.",
+            heroImage: "./Assets/Quality%20of%20Life/hero-final.png",
+            cardImage: "./Assets/Quality%20of%20Life/hero-final.png",
+            cardAlt: "Collage of a woman holding the Macedonian flag for the Quality of Life Survey 2026.",
+            alt: "Collage of a woman holding the Macedonian flag for the Quality of Life Survey 2026."
+          },
+          stranci: {
+            title: "Robert Gligorov: Between the Dream and Reality",
+            cardTitle: "Robert Gligorov",
+            href: "./robert-gligorov.html",
+            meta: "Interview | Art",
+            dek: "The artist on freedom, the art world, and the fear of death.",
+            heroImage: "./Assets/Robert%20Gligorov/For%20Website/Gligorov-01.png",
+  cardImage: "./Assets/Robert%20Gligorov/For%20Website/Gligorov-09.png?v=20260826-pale",
+            alt: "Robert Gligorov."
+          },
+          tokyo: {
+            title: "Tokyo on the Vardar",
+            href: "./skopje-tange.html",
+            meta: "Architecture | Urbanism",
+            dek: "The Japanese architect who dreamed a new Skopje.",
+            heroImage: "./Assets/Kenzo%20Article/Tange%20Pics/final.png",
+            alt: "Editorial collage portrait with red geometric forms and brutalist architecture."
+          },
+          nation: {
+            title: "The Nation on Their Backs",
+            href: "./wearing-the-nation.html",
+            meta: "Sport | Design",
+            dek: "Five Macedonian shirts, and what they reveal about design, memory, and the limits of reinvention.",
+            heroImage: "./Assets/Wearing%20the%20Nation/nation-on-their-backs-index-portrait.png",
+            alt: "Portrait crop of Macedonian football shirts in red, yellow, and white."
+          },
+          marko: {
+            title: "Marko Micov",
+            href: "./marko-micov.html",
+            meta: "Interview | Ballet",
+            dek: "From Skopje’s State Ballet School to Milwaukee Ballet, Marko Micov reflects on discipline, distance, and what it means to carry Macedonia onto the stage.",
+            heroImage: "./Assets/Marko%20Interview/Text%20and%20Photos/Images/unnamed.jpg",
+            cardImage: "./Assets/Marko%20Interview/Text%20and%20Photos/Images/Micov-Color-Photo_Rachel_Malehorn-17.jpg",
+            cardAlt: "Marko Micov ballet portrait.",
+            alt: "Marko Micov in a ballet portrait."
+          },
+          prespa: {
+            title: "Prespa",
+            href: "./prespa.html",
+            meta: "Travel | Weekend Guide",
+            dek: "A lake region of villages, mountain roads, beaches, wetlands, and quiet continuity.",
+            heroImage: "./Assets/prespa-hero.jpeg",
+            alt: "Lake Prespa shoreline in soft evening light."
+          },
+          newWave: {
+            title: "The (New) New Wave",
+            href: "./the-new-new-wave.html",
+            meta: "Cinema",
+            dek: "A new generation of Macedonian filmmakers is reshaping what the national screen can hold.",
+            heroImage: "./Assets/New%20Wave/New%20Wave%20Hero/new%20new%20wave.png",
+            imageClass: "new-wave-card-image",
+            alt: "Portrait collage of contemporary Macedonian filmmakers for The (New) New Wave article."
+          },
+          dodole: {
+            title: "Dodole",
+            href: "./dodole.html",
+            meta: "Video | Ritual Song",
+            dek: "A Macedonian rain-making ritual song filmed in Istibanja in 1987.",
+            heroImage: "./Assets/Dodole/rain2.png",
+            cardImage: "./Assets/Dodole/rain2.png",
+            cardAlt: "Black-and-white archival photograph of women and girls gathered around a Macedonian rain-making ritual.",
+            alt: "Black-and-white archival photograph of women and girls gathered around a Macedonian rain-making ritual."
+          }
+        };
+
+        var heroRotationSlugs = ["quality", "stranci", "tokyo", "nation"];
+        var selectedStorySlugs = ["tokyo", "prespa", "quality", "nation", "stranci", "newWave", "dodole"];
+        var selectedSlug = heroRotationSlugs[Math.floor(Math.random() * heroRotationSlugs.length)];
+        var selectedArticle = articles[selectedSlug];
+
+        function setLink(link, article) {
+          if (!link || !article) {
+            return;
+          }
+
+          link.href = article.href;
+        }
+
+        function setMetaContent(selector, value) {
+          var meta = document.querySelector(selector);
+
+          if (meta && value) {
+            meta.setAttribute("content", value);
+          }
+        }
+
+        function renderHero(slug, article) {
+          var hero = document.querySelector(".hero-grid");
+          var eyebrow = document.querySelector(".hero-copy .eyebrow");
+          var titleLink = document.querySelector(".hero-title a");
+          var dek = document.querySelector(".hero-dek");
+          var cta = document.querySelector(".hero-actions a");
+          var mediaLink = document.querySelector(".hero-media");
+          var image = document.querySelector(".hero-image");
+
+          if (!hero || !article) {
+            return;
+          }
+
+          hero.setAttribute("data-story", slug + "-lead");
+
+          if (eyebrow) {
+            eyebrow.textContent = article.meta;
+          }
+
+          if (titleLink) {
+            titleLink.textContent = article.title;
+            titleLink.href = article.href;
+          }
+
+          if (dek) {
+            dek.textContent = article.dek;
+          }
+
+          setLink(cta, article);
+          if (cta) {
+            cta.textContent = "Read It Here";
+          }
+          setLink(mediaLink, article);
+
+          if (image) {
+            image.src = article.heroImage;
+            image.alt = article.alt;
+          }
+
+          setMetaContent("meta[property=\"og:image\"]", article.heroImage);
+          setMetaContent("meta[name=\"twitter:image\"]", article.heroImage);
+        }
+
+        function renderStoryCard(article) {
+          var card = document.createElement("article");
+          var link = document.createElement("a");
+          var image = document.createElement("img");
+          var copy = document.createElement("div");
+          var kicker = document.createElement("p");
+          var title = document.createElement("h3");
+          var titleLink = document.createElement("a");
+
+          card.className = "story-card";
+          link.className = "story-card-link";
+          link.href = article.href;
+
+          image.className = article.imageClass ? "story-image " + article.imageClass : "story-image";
+          image.src = article.cardImage || article.heroImage;
+          image.alt = article.cardAlt || article.alt;
+          image.loading = "lazy";
+
+          copy.className = "story-card-copy";
+          kicker.className = "story-card-kicker";
+          kicker.textContent = article.meta;
+
+          title.className = "story-card-title";
+          titleLink.href = article.href;
+          titleLink.textContent = article.cardTitle || article.title;
+
+          link.appendChild(image);
+          title.appendChild(titleLink);
+          copy.appendChild(kicker);
+          copy.appendChild(title);
+          card.appendChild(link);
+          card.appendChild(copy);
+
+          return card;
+        }
+
+        function renderSelectedStories(activeSlug) {
+          var storyGrid = document.querySelector("#selected-stories .story-grid");
+
+          if (!storyGrid) {
+            return;
+          }
+
+          storyGrid.textContent = "";
+          selectedStorySlugs
+            .filter(function (slug) { return slug !== activeSlug; })
+            .slice(0, 4)
+            .forEach(function (slug) {
+              if (articles[slug]) {
+                storyGrid.appendChild(renderStoryCard(articles[slug]));
+              }
+            });
+        }
+
+        renderHero(selectedSlug, selectedArticle);
+        renderSelectedStories(selectedSlug);
+      })();
+
+      (function () {
+        var utilityMenu = document.querySelector(".utility-menu");
+
+        if (!utilityMenu) {
+          return;
+        }
+
+        var utilityTrigger = utilityMenu.querySelector(".utility-trigger");
+        var utilityLinks = utilityMenu.querySelectorAll(".utility-link");
+
+        function setUtilityMenuOpen(isOpen) {
+          utilityMenu.open = isOpen;
+
+          if (utilityTrigger) {
+            utilityTrigger.setAttribute("aria-expanded", String(isOpen));
+          }
+        }
+
+        utilityMenu.addEventListener("toggle", function () {
+          if (utilityTrigger) {
+            utilityTrigger.setAttribute("aria-expanded", String(utilityMenu.open));
+          }
+        });
+
+        utilityLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            setUtilityMenuOpen(false);
+          });
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && utilityMenu.open) {
+            setUtilityMenuOpen(false);
+
+            if (utilityTrigger) {
+              utilityTrigger.focus();
+            }
+          }
+        });
+
+        document.addEventListener("click", function (event) {
+          if (utilityMenu.open && !utilityMenu.contains(event.target)) {
+            setUtilityMenuOpen(false);
+          }
+        });
+      })();
+
+      (function () {
+        var previousY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+        var ticking = false;
+        var revealZone = 24;
+        var motionThreshold = 4;
+        var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+        function updateMuzejLogoVisibility() {
+          var currentY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+          var delta = currentY - previousY;
+
+          if (reducedMotion.matches) {
+            document.body.classList.remove("muzej-logo-hidden");
+            ticking = false;
+            return;
+          }
+
+          if (currentY <= revealZone) {
+            document.body.classList.remove("muzej-logo-hidden");
+          } else if (delta > motionThreshold) {
+            document.body.classList.add("muzej-logo-hidden");
+          } else if (delta < -motionThreshold) {
+            document.body.classList.remove("muzej-logo-hidden");
+          }
+
+          previousY = currentY;
+          ticking = false;
+        }
+
+        function requestMuzejLogoVisibility() {
+          if (!ticking) {
+            window.requestAnimationFrame(updateMuzejLogoVisibility);
+            ticking = true;
+          }
+        }
+
+        window.addEventListener("scroll", requestMuzejLogoVisibility, { passive: true });
+        window.addEventListener("resize", requestMuzejLogoVisibility);
+
+        if (reducedMotion.addEventListener) {
+          reducedMotion.addEventListener("change", requestMuzejLogoVisibility);
+        } else if (reducedMotion.addListener) {
+          reducedMotion.addListener(requestMuzejLogoVisibility);
+        }
+
+        updateMuzejLogoVisibility();
+      })();
+
+    </script>
+  </body>
+</html>
