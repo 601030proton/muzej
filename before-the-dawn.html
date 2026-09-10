@@ -91,6 +91,25 @@ a { color: inherit; }
 
 }
 
+.site-header .brand-mark {
+  position: relative;
+  width: 160px;
+  height: 32px;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.site-header .brand-mark-image {
+  position: absolute;
+  width: 198.68px;
+  max-width: none;
+  height: auto;
+  left: -19.53px;
+  top: -107.88px;
+  display: block;
+}
+
+
 .utility-link,
 .utility-menu-item {
   display: inline-flex;
@@ -735,6 +754,20 @@ body.muzej-logo-hidden .site-header .brand-mark {
   .site-header .utility-panel .utility-link,
   .site-header .utility-panel .utility-menu-item { justify-content: center; min-height: 2.75rem; padding: 0.72rem 0; text-align: center; }
 }
+
+
+@media (max-width: 768px) {
+  .site-header .brand-mark {
+    width: 124px;
+    height: 25px;
+  }
+
+  .site-header .brand-mark-image {
+    width: 153.97px;
+    left: -15.13px;
+    top: -83.62px;
+  }
+}
 </style>
 <link rel="stylesheet" href="more-from-muzej.css?v=20260810-plantin-final">
 <style>
@@ -769,7 +802,9 @@ body.muzej-logo-hidden .site-header .brand-mark {
 
 <header class="site-header">
   <div class="shell header-frame">
-    <a class="brand-mark" href="index.html" aria-label="Muzej home">Muzej</a>
+    <a class="brand-mark" href="index.html" aria-label="Muzej home">
+      <img class="brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png" alt="" aria-hidden="true">
+    </a>
 
     <div class="header-tools">
       <details class="utility-menu">
