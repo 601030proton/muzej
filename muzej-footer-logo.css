@@ -1,0 +1,28 @@
+/* Shared Muzej footer wordmark.
+   Uses the exact same transparent artwork as the site header. */
+.footer-brand-mark {
+  position: relative;
+  display: block;
+  width: clamp(220px, 20vw, 300px);
+  aspect-ratio: 5 / 1;
+  overflow: hidden;
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-brand-mark-image {
+  position: absolute;
+  width: 124.175%;
+  max-width: none;
+  height: auto;
+  left: -12.206%;
+  top: -337.125%;
+  display: block;
+  filter: invert(1);
+}
+
+@media (max-width: 720px) {
+  .footer-brand-mark {
+    width: clamp(190px, 56vw, 250px);
+  }
+}
