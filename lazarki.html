@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Ritual, song, dress and social life in Macedonia" name="description"/>
+<title>Lazarki | Muzej</title>
+<link href="./Assets/Font/Muzej%20Logo.ai.png" rel="icon" type="image/png"/>
+<link href="./Assets/Font/Muzej%20Logo.ai.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&amp;display=swap" rel="stylesheet"/>
+<link href="fonts.css" rel="stylesheet"/>
+<style>
+:root {
+  --background: #ffffff;
+  --foreground: #0f0e0d;
+  --white: #ffffff;
+  --ink: #0f0e0d;
+  --ink-soft: rgba(15, 14, 13, 0.62);
+  --ink-faint: rgba(15, 14, 13, 0.12);
+  --muted: #70675d;
+  --rule: rgba(23, 21, 19, 0.09);
+  --page-x: clamp(18px, 5.2vw, 72px);
+  --nav-h: clamp(88px, 10vw, 128px);
+  --feature-w: min(1280px, calc(100vw - (var(--page-x) * 2)));
+  --rail-gap: clamp(34px, 5.4vw, 84px);
+  --body-col: minmax(520px, 760px);
+  --body-tail: 0px;
+  --section-gap: clamp(48px, 8vw, 108px);
+  --content-max: 1520px;
+  --font-display: "plantin", Georgia, serif;
+  --font-wordmark: var(--font-display);
+  --serif: var(--font-display);
+        --headline-serif: var(--font-display);
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --article-serif: "adobe-jenson-pro", Georgia, serif;
+  --brand-serif: var(--font-wordmark);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--article-serif);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+.shell {
+  width: min(100%, var(--content-max));
+  margin: 0 auto;
+  padding-left: var(--page-x);
+  padding-right: var(--page-x);
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  background: var(--background);
+}
+.header-frame {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  padding-top: 28px;
+  padding-bottom: 24px;
+}
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-wordmark);
+  font-size: clamp(2.4rem, 1.9rem + 1.43vw, 3.76rem);
+  line-height: 0.92;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  white-space: nowrap;
+  text-decoration: none;
+
+}
+
+.site-header .brand-mark {
+  position: relative;
+  width: 160px;
+  height: 32px;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.site-header .brand-mark-image {
+  position: absolute;
+  width: 198.68px;
+  max-width: none;
+  height: auto;
+  left: -19.53px;
+  top: -107.88px;
+  display: block;
+}
+
+.utility-link,
+.utility-menu-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: rgba(23, 21, 19, 0.58);
+  text-decoration: none;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+.utility-link:hover,
+.utility-menu-item:hover {
+  color: var(--foreground);
+}
+.header-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.utility-menu {
+  position: relative;
+}
+.utility-menu summary {
+  list-style: none;
+}
+.utility-menu summary::-webkit-details-marker {
+  display: none;
+}
+.utility-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: color 180ms ease, opacity 180ms ease;
+}
+.utility-trigger:hover {
+  opacity: 0.72;
+}
+.utility-trigger:focus-visible {
+  outline: 2px solid rgba(141, 79, 61, 0.45);
+  outline-offset: 3px;
+}
+.utility-icon {
+  display: grid;
+  gap: 0.26rem;
+}
+.utility-icon-line {
+  display: block;
+  width: 1.45rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.88;
+}
+.utility-panel {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  right: 0;
+  z-index: 10;
+  display: grid;
+  min-width: 10rem;
+  padding: 0.45rem 0;
+  border: 1px solid rgba(23, 21, 19, 0.12);
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(23, 21, 19, 0.08);
+}
+.utility-panel-group {
+  display: grid;
+  gap: 0;
+}
+.utility-panel-utility {
+  margin-top: 0.25rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid rgba(23, 21, 19, 0.1);
+}
+.utility-panel .utility-link,
+.utility-panel .utility-menu-item {
+  justify-content: flex-start;
+  min-height: 0;
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  background: transparent;
+}
+.utility-panel-utility .utility-link {
+  font-size: 0.66rem;
+  letter-spacing: 0;
+  color: rgba(23, 21, 19, 0.52);
+}
+.utility-panel .utility-menu-item {
+  cursor: pointer;
+}
+.utility-panel .utility-link:hover,
+.utility-panel .utility-menu-item:hover {
+  background: rgba(23, 21, 19, 0.035);
+}
+
+main {
+  padding-top: clamp(24px, 3.2vw, 48px);
+}
+
+.feature {
+  padding:
+    clamp(0px, 0.6vw, 6px)
+    clamp(16px, 3vw, 40px)
+    clamp(56px, 8vw, 102px);
+}
+.feature-inner {
+  display: grid;
+  grid-template-columns: minmax(420px, 1.06fr) minmax(300px, 0.84fr);
+  gap: clamp(22px, 3.8vw, 52px);
+  align-items: stretch;
+  max-width: min(1320px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
+  margin: 0 auto;
+}
+.feature-media {
+  margin: 0;
+}
+.feature-media img {
+  width: 100%;
+  height: clamp(620px, 80vh, 920px);
+  object-fit: contain;
+  object-position: center top;
+  background: var(--white);
+}
+.feature-copy {
+  min-height: clamp(620px, 80vh, 920px);
+  max-width: 27rem;
+  margin: 0 auto;
+  padding: clamp(26px, 3.6vw, 42px) 0 clamp(20px, 3vw, 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.feature-title {
+  margin: 0;
+  color: var(--ink);
+  font-family: "plantin", Georgia, serif;
+  font-size: clamp(42px, 5.2vw, 82px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0;
+  text-transform: none;
+  text-wrap: balance;
+}
+.feature-title-break {
+  display: block;
+}
+.feature-byline {
+  margin: 0 0 auto;
+  color: var(--ink-soft);
+  font-size: clamp(16px, 1.18vw, 19px);
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+.feature-deck {
+  max-width: min(1380px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
+  margin: clamp(40px, 5vw, 78px) auto 0;
+  color: var(--ink);
+  font-family: "plantin", Georgia, serif;
+  font-size: clamp(32px, 3.05vw, 56px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+.article-shell {
+  max-width: var(--feature-w);
+  margin: 0 auto;
+  padding: 0 var(--page-x) clamp(32px, 4vw, 56px);
+}
+.content-row {
+  display: grid;
+  grid-template-columns: minmax(270px, 1fr) var(--body-col);
+  column-gap: var(--rail-gap);
+  align-items: start;
+}
+.article-body {
+  display: grid;
+  grid-template-columns: minmax(270px, 1fr) var(--body-col);
+  column-gap: var(--rail-gap);
+  align-items: start;
+  margin-bottom: var(--section-gap);
+}
+.content-row + .content-row {
+  margin-top: var(--section-gap);
+}
+.content-row .empty-rail,
+.article-body .empty-tail,
+.content-row .empty-tail {
+  min-height: 1px;
+}
+.article-body .empty-tail,
+.content-row .empty-tail {
+  display: none;
+}
+.article-body-media {
+  margin: 0;
+  align-self: start;
+  position: sticky;
+  top: calc(var(--nav-h) + clamp(12px, 2vw, 26px));
+}
+.article-body-media img {
+  width: 100%;
+  height: auto;
+}
+.article-body-media figcaption {
+  margin-top: 12px;
+  color: var(--ink-soft);
+  font-size: 8px;
+  letter-spacing: 0;
+}
+.article-body-copy {
+  min-width: 0;
+  justify-self: end;
+  width: min(100%, 520px);
+}
+
+.section-heading {
+  margin: 0 0 1.15em;
+  max-width: min(100%, 24ch);
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: 0;
+  text-wrap: normal;
+}
+
+.body-block p {
+  margin: 0;
+  font-size: clamp(23px, 1.65vw, 31px);
+  line-height: 1.46;
+}
+.body-block p + p,
+.body-block p + .section-heading {
+  margin-top: 1.95em;
+}
+
+.article-inline-media {
+  width: min(88%, 420px);
+  margin: clamp(52px, 7vw, 88px) auto;
+}
+.article-inline-media img {
+  width: 100%;
+  height: auto;
+}
+
+.pull-quote {
+  margin: 0;
+  max-width: none;
+  justify-self: end;
+  width: min(100%, 520px);
+  font-size: clamp(20px, 2.35vw, 26px);
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.gallery-reading {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 1.9vw, 24px);
+  margin: var(--section-gap) 0 0;
+}
+.gallery-reading-media,
+.gallery-reading-feature {
+  margin: 0;
+  aspect-ratio: 15 / 21;
+  overflow: hidden;
+}
+.gallery-reading-media img,
+.gallery-reading-feature img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-reading-side {
+  min-width: 0;
+}
+.article-body-lower {
+  margin-top: clamp(22px, 3vw, 34px);
+  margin-bottom: 0;
+}
+
+.more-from-muzej {
+  padding-top: clamp(32px, 4vw, 56px);
+  padding-bottom: clamp(82px, 10vw, 148px);
+  background: transparent;
+  color: var(--foreground);
+}
+.more-from-muzej-frame {
+  display: grid;
+  width: min(calc(100% - (var(--page-x) * 2)), 68rem);
+  max-width: 68rem;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  border-top: 2px solid var(--foreground);
+  padding-top: clamp(2.1rem, 4vw, 3.25rem);
+}
+.more-from-muzej-title {
+  max-width: none;
+  margin: 0;
+  font-family: var(--headline-serif);
+  font-size: clamp(1.45rem, 1vw + 1.1rem, 1.9rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 650;
+  font-optical-sizing: auto;
+}
+.related-list {
+  list-style: none;
+  margin: clamp(1.4rem, 2.5vw, 2rem) 0 0;
+  padding: 0;
+}
+.related-list li {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  padding: clamp(1.1rem, 1.8vw, 1.6rem) 0;
+  border-top: 1px solid var(--rule);
+  align-items: start;
+}
+.related-list li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+.related-list a {
+  font-family: var(--headline-serif);
+  font-size: clamp(1.1rem, 1.3vw + 0.7rem, 1.55rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+  font-optical-sizing: auto;
+  border-bottom: none;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+.related-list a:hover {
+  color: var(--muted);
+}
+.related-list .related-desc {
+  display: block;
+  margin-top: 0.45rem;
+  font-family: var(--sans);
+  font-size: clamp(0.82rem, 0.78rem + 0.18vw, 0.94rem);
+  line-height: 1.72;
+  letter-spacing: 0;
+  color: var(--muted);
+}
+
+.site-footer {
+  margin-top: 0;
+}
+.muzej-footer {
+  width: 100%;
+  padding: clamp(3.5rem, 7vw, 6rem) var(--page-x);
+  background: #000000;
+  color: #f7f2e9;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: minmax(320px, 620px) minmax(180px, 260px);
+  gap: clamp(3rem, 7vw, 6rem);
+  justify-content: center;
+  align-items: start;
+  width: min(100%, 1160px);
+  margin: 0 auto;
+}
+.footer-brand {
+  min-width: 0;
+}
+.footer-wordmark {
+  display: inline-flex;
+  font-family: var(--font-wordmark);
+  font-size: clamp(3.1rem, 5vw, 5rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: 0;
+  font-optical-sizing: auto;
+
+}
+.footer-statement {
+  max-width: 38.75rem;
+  margin: clamp(1.15rem, 1.8vw, 1.45rem) 0 0;
+  font-size: clamp(1rem, 1vw + 0.72rem, 1.15rem);
+  line-height: 1.5;
+  color: rgba(247, 242, 233, 0.86);
+}
+.muzej-footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-top: 0.28rem;
+}
+.muzej-footer .footer-links a {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 180ms ease, text-decoration-color 180ms ease;
+}
+.muzej-footer .footer-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  opacity: 0.86;
+}
+
+@media (max-width: 1080px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+
+  .muzej-footer .footer-links {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 1140px) {
+  .header-frame {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 0.85rem 1.25rem;
+  }
+  .header-tools {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 980px) {
+  .menu-button {
+    padding: 8px 0 6px 18px;
+  }
+  .menu-panel {
+    padding: 0 calc(var(--page-x) + 18px) 0 var(--page-x);
+    gap: 16px;
+  }
+  .menu-panel a {
+    width: min(100%, 22rem);
+    font-size: clamp(26px, 5vw, 42px);
+  }
+  .feature-inner {
+    grid-template-columns: minmax(300px, 0.94fr) minmax(300px, 0.9fr);
+    gap: clamp(24px, 4vw, 46px);
+    align-items: stretch;
+  }
+  .feature-media img {
+    height: clamp(500px, 70vh, 720px);
+  }
+  .feature-copy {
+    min-height: clamp(500px, 70vh, 720px);
+    max-width: 23rem;
+  }
+  .feature-title {
+    font-size: clamp(34px, 4.35vw, 58px);
+  }
+  .feature-deck {
+    margin-top: clamp(30px, 4.2vw, 48px);
+    font-size: clamp(16px, 2.05vw, 20px);
+  }
+  .content-row {
+    grid-template-columns: minmax(210px, 1fr) minmax(0, 660px);
+  }
+  .article-body {
+    grid-template-columns: minmax(210px, 1fr) minmax(0, 660px);
+  }
+}
+
+@media (max-width: 760px) {
+  .header-frame {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .brand-mark {
+    font-size: clamp(2.16rem, 10.15vw, 2.87rem);
+
+  }
+}
+
+@media (max-width: 720px) {
+  .header-frame {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .brand-mark {
+    font-size: clamp(2.16rem, 10.15vw, 2.87rem);
+
+  }
+  .menu-button {
+    gap: 7px;
+    padding: 8px 0 6px 16px;
+    margin-top: 1px;
+  }
+  .menu-panel {
+    padding: 0 calc(var(--page-x) + 6px) 0 var(--page-x);
+    gap: 14px;
+  }
+  .menu-panel a {
+    width: min(100%, 16rem);
+    font-size: clamp(22px, 9vw, 30px);
+    line-height: 1.08;
+  }
+  .menu-panel a:last-child {
+    font-size: 18px;
+  }
+  .feature {
+    padding:
+      4px
+      var(--page-x)
+      48px;
+  }
+  .feature-inner,
+  .article-body,
+  .content-row {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    text-align: left;
+  }
+  .feature-inner {
+    display: grid;
+    gap: 22px;
+  }
+  .feature-media img {
+    height: clamp(360px, 56vh, 470px);
+  }
+  .article-body {
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .gallery-reading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin: 40px 0 0;
+  }
+  .article-body-media {
+    position: static;
+  }
+  .gallery-reading-media {
+    position: static;
+  }
+  .article-body-lower {
+    margin-top: 18px;
+    margin-bottom: 0;
+  }
+  .content-row .empty-tail {
+    display: none;
+  }
+  .article-body .empty-tail {
+    display: none;
+  }
+  .feature-copy {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+  }
+  .feature-title {
+    font-size: clamp(30px, 8.2vw, 38px);
+    line-height: 1.03;
+    width: calc(100vw - (var(--page-x) * 2));
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+  .feature-byline {
+    margin: 28px 0 0;
+    font-size: 15px;
+  }
+  .feature-deck {
+    margin-top: 34px;
+    font-size: clamp(15px, 3.9vw, 18px);
+    line-height: 1.2;
+  }
+  .feature-title-break {
+    display: none;
+  }
+  .content-row + .content-row {
+    margin-top: 40px;
+  }
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: transparent;
+  pointer-events: none;
+}
+
+.site-header .header-frame,
+.site-header .brand-mark,
+.site-header .header-tools {
+  pointer-events: auto;
+}
+
+.site-header .brand-mark {
+  transform: translate3d(0, 0, 0);
+  transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.muzej-logo-hidden .site-header .brand-mark {
+  transform: translate3d(0, calc(-100% - 42px), 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header .brand-mark {
+    transition: none;
+    will-change: auto;
+  }
+
+  body.muzej-logo-hidden .site-header .brand-mark {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header { z-index: 2000; }
+  .site-header .header-frame { grid-template-columns: minmax(0, 1fr) auto; align-items: center; justify-items: stretch; gap: 1rem; }
+  .site-header .brand-mark { justify-self: start; min-width: 0; }
+  .site-header .header-tools { justify-self: end; justify-content: flex-end; margin-left: auto; position: relative; z-index: 2002; }
+  .site-header .utility-menu { position: static; }
+  .site-header .utility-trigger { position: relative; z-index: 2003; }
+  .site-header .utility-panel { position: fixed; inset: 0; left: 0; right: 0; top: 0; z-index: 2001; display: grid; align-content: center; width: 100vw; max-width: none; min-width: 0; height: 100vh; height: 100svh; padding: clamp(76px, 18vh, 128px) var(--page-x) 48px; border: 0; background: rgba(255, 255, 255, 0.98); box-shadow: none; overflow-y: auto; transform: none; }
+  .site-header .utility-panel-group { width: min(100%, 22rem); margin: 0 auto; }
+  .site-header .utility-panel-utility { margin-top: 0.8rem; padding-top: 0.85rem; }
+  .site-header .utility-panel .utility-link,
+  .site-header .utility-panel .utility-menu-item { justify-content: center; min-height: 2.75rem; padding: 0.72rem 0; text-align: center; }
+}
+
+.article-longform {
+  padding-bottom: clamp(72px, 9vw, 132px);
+}
+.article-longform .section-heading {
+  max-width: min(100%, 24ch);
+}
+.article-longform .section-heading:first-child {
+  margin-top: 0;
+}
+.article-longform .section-heading + p {
+  margin-top: 0;
+}
+.article-longform .ohrid-sketch-spread {
+  margin-bottom: 72px;
+}
+@media (max-width: 720px) {
+  .article-longform .ohrid-sketch-spread {
+    margin-bottom: 44px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .site-header .brand-mark {
+    width: 124px;
+    height: 25px;
+  }
+
+  .site-header .brand-mark-image {
+    width: 153.97px;
+    left: -15.13px;
+    top: -83.62px;
+  }
+}
+</style>
+<style>
+.ohrid-article .feature-title {
+  font-family: "plantin", Georgia, serif;
+  font-size: clamp(54px, 7.8vw, 132px);
+  font-weight: 400;
+  line-height: 0.86;
+  letter-spacing: 0;
+}
+.ohrid-article .feature-byline {
+  font-family: "plantin", Georgia, serif;
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(24px, 2.2vw, 38px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+.ohrid-article .feature-kicker {
+  display: none;
+  margin: 0;
+}
+.ohrid-article .feature-copy {
+  width: min(100%, 44rem);
+  max-width: none;
+  margin: 0 auto;
+  padding-top: clamp(108px, 16vh, 190px);
+  padding-bottom: clamp(22px, 3vw, 34px);
+  justify-content: space-between;
+  gap: clamp(72px, 14vh, 180px);
+}
+@media (min-width: 981px) {
+  .ohrid-article main {
+    padding-top: clamp(6px, 1.4vh, 14px);
+  }
+
+  .ohrid-article .feature {
+    padding-top: 0;
+    padding-bottom: clamp(48px, 5vh, 72px);
+  }
+
+  .ohrid-article .feature-inner {
+    height: clamp(600px, calc(100svh - var(--nav-h, 112px) - clamp(18px, 3svh, 32px)), 780px);
+    min-height: 0;
+    align-items: stretch;
+  }
+
+  .ohrid-article .feature-media,
+  .ohrid-article .feature-copy {
+    height: 100%;
+    min-height: 0;
+  }
+
+  .ohrid-article .feature-media img {
+    height: 100%;
+    max-height: 100%;
+  }
+
+  .ohrid-article .feature-copy {
+    padding-top: clamp(34px, 5vh, 76px);
+    padding-bottom: clamp(14px, 2.2vh, 28px);
+    gap: clamp(28px, 4.6vh, 64px);
+  }
+
+  .ohrid-article .feature-title {
+    font-size: clamp(48px, 6.1vw, 100px);
+  }
+
+  .ohrid-article .feature-byline {
+    font-size: clamp(22px, 1.9vw, 32px);
+  }
+
+  .ohrid-article .feature-deck {
+    margin-top: clamp(64px, 9svh, 118px);
+  }
+}
+@media (max-width: 980px) {
+  .ohrid-article .feature-title {
+    font-size: clamp(46px, 7.2vw, 78px);
+  }
+  .ohrid-article .feature-byline {
+    font-size: clamp(20px, 2.4vw, 30px);
+  }
+  .ohrid-article .feature-copy {
+    padding-top: clamp(72px, 12vh, 126px);
+    gap: clamp(58px, 10vh, 112px);
+  }
+}
+@media (max-width: 720px) {
+  .ohrid-article .feature-copy {
+    align-items: center;
+    text-align: center;
+    padding-top: 6px;
+    gap: clamp(48px, 14vw, 72px);
+  }
+  .ohrid-article .feature-title {
+    font-size: clamp(38px, 13.4vw, 62px);
+    line-height: 0.9;
+  }
+  .ohrid-article .feature-byline {
+    margin: 0;
+    font-size: clamp(20px, 6.2vw, 28px);
+  }
+}
+
+.ohrid-article .feature-title {
+  font-family: "plantin", Georgia, serif;
+  font-size: clamp(42px, 5.2vw, 82px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.ohrid-article .feature-byline {
+  margin: 0 0 auto;
+  color: var(--ink-soft);
+  font-family: var(--article-serif);
+  font-size: clamp(16px, 1.18vw, 19px);
+  line-height: 1.4;
+}
+.ohrid-article .feature-copy {
+  max-width: 27rem;
+  justify-content: flex-start;
+  gap: 0;
+}
+@media (max-width: 720px) {
+  .ohrid-article .feature-title {
+    font-size: clamp(30px, 8.2vw, 38px);
+    line-height: 1.03;
+    width: calc(100vw - (var(--page-x) * 2));
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+  .ohrid-article .feature-byline {
+    margin: 28px 0 0;
+    font-size: 15px;
+  }
+}
+</style>
+<link href="more-from-muzej.css?v=20260810-plantin-final" rel="stylesheet"/>
+<script defer="" src="more-from-muzej.js?v=20260810-plantin-final"></script>
+<style>
+.lazarki-article{--lz-ink:#11110f;--lz-muted:rgba(17,17,15,.58);--lz-rule:rgba(17,17,15,.16);--lz-soft:#f3f1eb}
+
+
+
+.lazarki-article .feature-media>div,.lazarki-article .article-body-media>div,.lazarki-article .article-inline-media>div,.lazarki-article .gallery-reading-media>div,.lazarki-article .gallery-reading-feature>div{border:0!important;background:linear-gradient(180deg,#f4f2ed 0%,#ece9e2 100%)!important}
+
+
+
+
+
+
+
+.lazarki-article .body-block>p{max-width:34rem;font-size:clamp(18px,1.35vw,22px);line-height:1.7;color:var(--lz-ink)}
+.lazarki-article .body-block>p+p{margin-top:1.45em}
+.lazarki-article .lazarki-intro{margin-bottom:clamp(110px,14vw,210px)}
+.lazarki-article .lazarki-intro>p:first-child{max-width:31rem;font-family:"plantin",Georgia,serif;font-size:clamp(30px,3.3vw,48px);line-height:1.1;letter-spacing:-.018em}
+.lazarki-article .chapter-heading{display:block;max-width:18ch;margin:clamp(96px,11vw,156px) 0 clamp(34px,4.5vw,62px);padding-top:clamp(18px,2vw,26px);border-top:1px solid var(--lz-ink);font-family:var(--headline-serif);font-size:clamp(38px,4.6vw,66px);font-weight:400;line-height:.96;letter-spacing:-.018em;text-wrap:balance}
+
+
+
+.lazarki-article .subhead{max-width:26ch;margin:clamp(48px,6vw,84px) 0 .9em;font-family:var(--headline-serif);font-size:clamp(24px,2.35vw,34px);font-weight:400;line-height:1.08;letter-spacing:-.01em}
+.lazarki-article .subhead+p{margin-top:0}
+.lazarki-article .fact-statement{max-width:33rem!important;margin:clamp(68px,8vw,120px) 0!important;padding:clamp(18px,2.4vw,28px) 0;border-top:1px solid var(--lz-ink);border-bottom:1px solid var(--lz-rule);font-family:"plantin",Georgia,serif;font-size:clamp(30px,3.25vw,48px)!important;line-height:1.08!important;letter-spacing:-.02em}
+.lazarki-article .ritual-sequence{max-width:40rem!important;margin:clamp(46px,5vw,76px) 0!important;padding:clamp(18px,2.4vw,28px) 0;border-top:1px solid var(--lz-rule);border-bottom:1px solid var(--lz-rule);font-family:var(--sans);font-size:clamp(.78rem,.72rem + .24vw,.95rem)!important;line-height:1.7!important;letter-spacing:.035em;text-transform:uppercase}
+.lazarki-article .data-list{max-width:40rem;margin:clamp(32px,4vw,58px) 0 clamp(54px,6vw,82px);border-top:1px solid var(--lz-ink)}
+.lazarki-article .data-row{display:grid;grid-template-columns:minmax(92px,.36fr) 1fr;gap:clamp(18px,3vw,40px);padding:14px 0 16px;border-bottom:1px solid var(--lz-rule);font-family:var(--sans);font-size:.82rem;line-height:1.45}
+.lazarki-article .data-row .data-key{color:var(--lz-muted)}
+.lazarki-article .regional-atlas{width:100%;max-width:100%;margin-top:clamp(36px,5vw,64px);margin-bottom:clamp(72px,8vw,112px);overflow:visible}
+.lazarki-article .regional-atlas table{width:100%;max-width:100%;table-layout:fixed;border-collapse:collapse;font-family:var(--sans);font-size:.72rem!important;line-height:1.45!important}
+.lazarki-article .regional-atlas th,.lazarki-article .regional-atlas td{padding:12px 14px 14px 0;border-top:1px solid var(--lz-rule);vertical-align:top;text-align:left;font-weight:400;overflow-wrap:anywhere;word-break:normal}
+.lazarki-article .regional-atlas th{padding-top:10px;border-top:1px solid var(--lz-ink);font-size:.64rem;letter-spacing:.09em;text-transform:uppercase;color:var(--lz-muted)}
+.lazarki-article .regional-atlas th:nth-child(1),.lazarki-article .regional-atlas td:nth-child(1){width:24%}.lazarki-article .regional-atlas th:nth-child(2),.lazarki-article .regional-atlas td:nth-child(2){width:44%}.lazarki-article .regional-atlas th:nth-child(3),.lazarki-article .regional-atlas td:nth-child(3){width:32%}.lazarki-article .regional-atlas td:first-child{font-family:var(--headline-serif);font-size:.96rem;line-height:1.2}
+.lazarki-article .evidence-list{margin-top:clamp(32px,4vw,58px);border-top:1px solid var(--lz-ink)}
+.lazarki-article .evidence-item{display:grid;grid-template-columns:minmax(180px,.82fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);padding:clamp(24px,3.5vw,44px) 0;border-bottom:1px solid var(--lz-rule)}
+.lazarki-article .evidence-claim{margin:0;font-family:"plantin",Georgia,serif;font-size:clamp(22px,2.3vw,34px);line-height:1.04;font-weight:400}
+.lazarki-article .evidence-answer{max-width:29rem;margin:0;font-size:clamp(16px,1.16vw,19px);line-height:1.68}
+.lazarki-article .research-status{margin-top:clamp(120px,14vw,210px);padding-top:clamp(22px,3vw,34px);border-top:2px solid var(--lz-ink)}
+.lazarki-article .research-status>h2{margin:0 0 clamp(28px,4vw,52px);font-family:var(--sans);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:400}
+.lazarki-article .research-status>p:first-of-type{font-family:"plantin",Georgia,serif;font-size:clamp(30px,3.1vw,46px);line-height:1.08;letter-spacing:-.02em}
+.lazarki-article .sources-section{margin-top:clamp(120px,14vw,210px);padding-top:20px;border-top:1px solid var(--lz-ink)}
+.lazarki-article .sources-section>h2{margin:0 0 28px;font-family:var(--sans);font-size:.64rem;line-height:1.2;letter-spacing:.12em;text-transform:uppercase;font-weight:400;color:var(--lz-muted)}
+.lazarki-article .sources-section>p{max-width:44rem;margin:0!important;padding:11px 0 13px;border-top:1px solid rgba(17,17,15,.1);font-family:var(--sans);font-size:.72rem!important;line-height:1.55!important;color:var(--lz-muted)}
+.lazarki-article .sources-section>p:first-of-type{border-top:0}
+.lazarki-article .gallery-reading{margin-top:clamp(100px,13vw,190px);margin-bottom:clamp(100px,13vw,190px)}
+@media(max-width:980px){.lazarki-article .article-body-media{position:static;width:min(100%,420px)}.lazarki-article .regional-atlas{width:100%;max-width:100%}}
+@media(max-width:720px){
+.lazarki-article .chapter-heading{max-width:none;margin-top:78px;margin-bottom:32px;padding-top:16px;font-size:clamp(34px,10.5vw,48px);line-height:.98}
+.lazarki-article .subhead{margin-top:42px;font-size:clamp(23px,7vw,31px);line-height:1.08}
+.lazarki-article .evidence-item{grid-template-columns:1fr;gap:16px}
+.lazarki-article .data-row{grid-template-columns:1fr;gap:6px}
+.lazarki-article .body-block>p{font-size:18px}
+}
+.lazarki-article .chapter-number,
+
+.lazarki-article .evidence-item{grid-template-columns:1fr;gap:16px}
+.lazarki-article .data-row{grid-template-columns:1fr;gap:6px}
+.lazarki-article .body-block>p{font-size:18px}
+}
+
+/* Blank image placeholders occupying the exact Ohrid template image slots. */
+.lazarki-article .feature-media > div {
+  display: block;
+  width: 100%;
+  height: clamp(620px, 80vh, 920px);
+  background: #f4f2ed;
+}
+.lazarki-article .article-body-media > div {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1.08;
+  background: #f4f2ed;
+}
+.lazarki-article .article-inline-media > div,
+.lazarki-article .gallery-reading-media > div,
+.lazarki-article .gallery-reading-feature > div {
+  background: #f4f2ed;
+}
+@media (min-width: 981px) {
+  .ohrid-article .feature-media > div {
+    height: 100%;
+    max-height: 100%;
+  }
+}
+@media (max-width: 980px) {
+  .lazarki-article .feature-media > div {
+    height: clamp(500px, 70vh, 720px);
+  }
+}
+@media (max-width: 720px) {
+  .lazarki-article .feature-media > div {
+    height: clamp(360px, 56vh, 470px);
+  }
+}
+</style></head>
+<body class="ohrid-article lazarki-article">
+<header class="site-header">
+<div class="shell header-frame">
+<a aria-label="Muzej home" class="brand-mark" href="index.html">
+<img alt="" aria-hidden="true" class="brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png"/>
+</a>
+<div class="header-tools">
+<details class="utility-menu">
+<summary aria-label="Open navigation menu" class="utility-trigger">
+<span aria-hidden="true" class="utility-icon">
+<span class="utility-icon-line"></span>
+<span class="utility-icon-line"></span>
+<span class="utility-icon-line"></span>
+</span>
+</summary>
+<nav aria-label="Site navigation" class="utility-panel">
+<div class="utility-panel-group">
+<a class="utility-link" href="index.html">Home</a>
+<a class="utility-link" href="index.html#selected-stories">Selected Stories</a>
+<a class="utility-link" href="index.html#in-rotation">In Rotation</a>
+<a class="utility-link" href="index.html#field-notes">Field Notes</a>
+<a class="utility-link" href="about.html">About Muzej</a>
+</div>
+<div class="utility-panel-group utility-panel-utility">
+<a class="utility-link" href="mailto:muzej.mk@proton.me">Contact</a>
+<a class="utility-link" href="https://www.instagram.com/muzej.mk/" rel="noopener noreferrer" target="_blank">Instagram</a>
+</div>
+</nav>
+</details>
+</div>
+</div>
+</header>
+<main>
+<header class="feature">
+<div class="feature-inner">
+<figure class="feature-media"><img alt="Women in traditional Macedonian dress gathered outdoors" src="./Assets/Lazarki/lazarki-03.png"/></figure>
+<div class="feature-copy">
+<p class="feature-byline">Words Ace Trajkovski</p>
+<h1 class="feature-title">Lazarki</h1>
+</div>
+</div>
+<p class="feature-deck">Ritual, song, dress and social life in Macedonia</p>
+</header>
+<article class="article-shell article-longform">
+<section class="content-row">
+<figure class="article-body-media"><img alt="Young women in traditional dress arranging flowers in a basket" decoding="async" loading="lazy" src="./Assets/Lazarki/lazarki-07.png"/></figure>
+<div class="article-body-copy body-block"><div class="lazarki-intro"><p>Lazarki is a group-based ritual practice associated with the calendrical cycle surrounding Lazarus Saturday and Palm Sunday. In its documented forms, girls and young women move through villages singing blessing songs, performing prescribed movements and dances, wearing ceremonial clothing, carrying ritual objects and receiving gifts from households they visit.</p><p>The objects used vary by locality and period and may include baskets, willow branches, staffs, umbrellas, hats and, in older descriptions, weapons.</p><p>Lazarki is not a single standardized custom. It is better understood as a family of localized ritual forms. Struga, Drimkol, Radoviš, Prespa, Dolni Polog, Kozjak, Kriva Palanka and other areas preserve different combinations of participants, costumes, songs, dances, props, ritual days and internal roles.</p><p>The common structure is more stable: a female or predominantly female group enters ordinary village space, addresses people and households through song, performs prescribed movement, confers blessing, receives gifts and continues to the next household.</p></div>
+<h2 class="chapter-heading">1. Injevo: The Willow</h2>
+<p>The 2024 fieldwork in Injevo, Radoviš, documents an active Lazarki practice directly rather than reconstructing it primarily from historical accounts or memory. The custom extends across two days.</p>
+<h3 class="subhead">Saturday: willow and monastery</h3>
+<p>The girls first go to a willow tree near a monastery. They select living branches and sing while gathering them, then return toward the monastery in procession carrying the branches.</p>
+<p>At the chapel entrance, each Lazarka attaches willow to the doorway. Villagers interviewed during the research could no longer explain why this was done; they knew that earlier generations had performed the gesture and continued it.</p>
+<p>Within the monastery complex, the girls sing in structured formations and place willow near or before the icon of the patron saint. The circuit continues through several religious sites, including monasteries dedicated to the Virgin Mary, St Michael the Archangel, St Spas and St Demeter, with the visits completed before sunset.</p>
+<h3 class="subhead">Sunday: households</h3>
+<p>On Sunday, the girls divide into smaller groups and move through the settlement. Household members receive appropriate songs, while gifts—including money—are collected.</p>
+<p>In Injevo, these are later combined with ritual bread or pogača and redistributed among the performers.</p>
+<p>The documented sequence connects:</p>
+<p class="ritual-sequence">tree branch → monastery → icon → village → household → gift → redistribution</p>
+<p>It is one of the clearest contemporary examples of Lazarki moving between natural, religious and domestic spaces.</p>
+<h3 class="subhead">Willow</h3>
+<p>Willow has more than one documented context.</p>
+<p>In Slavic Orthodox practice, willow substitutes for palm on Palm Sunday because it is locally available and buds early in spring. At the same time, Macedonian ethnographic interpretations have connected willow gathering with vegetation, fertility and seasonal regeneration.</p>
+<p>These interpretations should not be collapsed into one explanation.</p>
+<p>What can be documented is that willow belongs to the spring cycle, is ritually gathered and carried, enters religious and domestic ritual spaces and has an established Orthodox Palm Sunday association.</p>
+<p>What cannot currently be demonstrated is that the Injevo willow practice is an unchanged survival of a named pre-Christian Macedonian religion, or that the branch placed on the chapel door retains a recoverable ancient meaning.</p>
+<p>The Injevo participants themselves did not know the reason for that particular act.</p>
+<p class="fact-statement">The distinction is important: the gesture survives even where its local explanation has not.</p>
+<h2 class="chapter-heading">2. The Household</h2>
+<p>The household is one of the central spaces of Lazarki.</p>
+<p>Preparations traditionally begin several days before the procession. Historical descriptions most often record groups of approximately four to eight girls, although the age and composition of groups vary by locality and period.</p>
+<p>Girls learned songs from older women, prepared baskets and other objects and wore clothing that was exceptionally clean and festive. A commonly reported historical age range is approximately 12–17, but younger children and older unmarried women also appear in regional accounts.</p>
+<p>The procession generally began in the morning.</p>
+<p>The repertoire was not a single generic song repeated at every house. Songs could be selected according to the person or circumstances being addressed: an unmarried young man, bride, mother, child, elderly person, absent household member or prosperous house, as well as crops, livestock and other aspects of village life.</p>
+<p>Households could request particular songs for individual members.</p>
+<p>The nineteenth-century record is particularly important here. In the Miladinov brothers’ 1861 collection, Lazar songs from the Struga area are categorized according to their addressee, including songs for a small child, unmarried man, bride, woman with sons, childless woman whose husband is away, wealthy man and old man.</p>
+<p>The accompanying description records girls gathering by neighbourhood, selecting one girl as a ceremonial nevesta, and singing differently according to the age and status of the person encountered.</p>
+<p class="fact-statement">The household therefore does not receive an anonymous blessing. Its members are individually recognized through a repertoire adapted to their social position.</p>
+<h3 class="subhead">Blessing and reciprocity</h3>
+<p>The performance is followed by an exchange.</p>
+<p>Historical sources record gifts including food, eggs, cloth, clothing and money. Contemporary groups may collect money alongside eggs or food. These gifts were traditionally divided among the performers; in contemporary Injevo, money is still pooled and redistributed.</p>
+<p>The exchange is therefore better understood as ritual reciprocity than as payment for entertainment: the household receives blessing and social recognition, while the performers receive material acknowledgment.</p>
+<p>The ritual also has limits. Historical accounts describe Lazarki avoiding houses where a recent death had occurred.</p>
+<p>In contemporary Injevo, mourning still affects whether a household receives the ritual, although the length of mourning is now determined by the family.</p>
+<h3 class="subhead">The household threshold</h3>
+<p>The doorway is one of the ritual’s recurring spaces.</p>
+<p>The Lazarki arrive.</p>
+<p>A welcoming song marks entry.</p>
+<p>The household identifies who should be addressed.</p>
+<p>Dance may take place in the courtyard.</p>
+<p>Gifts are received.</p>
+<p>A farewell song marks departure.</p>
+<p>The group continues to the next house.</p>
+<p>The ritual therefore repeatedly converts private domestic spaces into temporary ceremonial spaces.</p>
+<p>In Injevo, this domestic network is preceded by a network of monasteries and religious sites.</p>
+<h2 class="chapter-heading">3. Song, Movement And Role</h2>
+<p>Song is one of the central media of Lazarki.</p>
+<p>Within the ritual framework, the singers are not merely describing a blessing: the performance of the song constitutes the blessing.</p>
+<p>Macedonian ritual dance-songs have been described as collective forms in which melody, rhythm and choreographic movement function together. Lazar songs are strongly associated with antiphonal or responsorial performance.</p>
+<p>Reported metres include 2/4 and 7/8. Depending on locality, one group may begin and another repeat, or singers may alternate in pairs or smaller groups.</p>
+<p>Veličkovska’s study of northeastern traditions distinguishes functional categories including:</p>
+<div class="data-list"><div class="data-row"><div class="data-key">na odenje / na šetanje</div><div class="data-value">Songs performed while moving</div></div><div class="data-row"><div class="data-key">na stojanje</div><div class="data-value">Songs performed while standing, often with the refrain Lazare</div></div><div class="data-row"><div class="data-key">na vrtenje / na igranje</div><div class="data-value">Songs directly associated with turning and dancing</div></div></div>
+<p>These categories demonstrate that the repertoire is connected to physical movement and spatial conditions. The music changes with what the performers are doing.</p>
+<h3 class="subhead">Roles within the group</h3>
+<p>The usual participant is an unmarried girl.</p>
+<p>The leading performer has different names according to locality, including tančarka, nevesta/nesta, matica, prednjica, navrhnica and zaveljvač. She may be the oldest or most accomplished participant and can speak or ceremonially greet the household on behalf of the group.</p>
+<p>Other systems distinguish prednjici or čelnici from srednjici and other positions. Vevčani records include the terms buljubaša, zavelvač and concluding singer.</p>
+<p>The organization can also include explicitly gendered roles.</p>
+<p>Maški Lazar and Ženski Lazar—Male and Female Lazar—are documented in some traditions.</p>
+<p>Masculine attributes may include a staff, hat, umbrella, sword or weapon. Historical descriptions from Kozjak record a girl in male clothing carrying a yatagan or knife at the front of the procession.</p>
+<p>The evidence does not establish a single explanation for the origin of these roles.</p>
+<h3 class="subhead">Movement</h3>
+<p>The documented movement vocabulary includes walking, braided steps, stamping, turns, jumps, interlacing or serpentine movement and alternating lines.</p>
+<p class="fact-statement">The result is not a single national choreography. It is a collection of regional choreographic systems.</p>
+<h3 class="subhead">Struga</h3>
+<p>The Struga region has some of the strongest documentation of the relationship between song and dance.</p>
+<p>Mihajlo Dimovski’s 1973 study records dance-songs including:</p>
+<div class="data-list"><div class="data-row"><div class="data-key"></div><div class="data-value">“Brala moma, Lazare, zelenika”</div></div><div class="data-row"><div class="data-key"></div><div class="data-value">“Kito Mito nevesto”</div></div><div class="data-row"><div class="data-key"></div><div class="data-value">“Vijur Vijur Gajdanot”</div></div></div>
+<p>In Tašmaruništa, Petar Avramovski records a specific relationship between song, kinship and dance: after “Kito Mito Nevesto,” the girls begin an oro, and the person who leads the dance should be a girl related to the household receiving the blessing.</p>
+<p>The same tradition could also carry a life-stage meaning. In the Struga area, a girl approaching marriage could occupy the final position in the chain, with the performance understood as the last time she would dance that particular ritual dance as an unmarried girl.</p>
+<p>The movement described for Brala moma zelenika is a calm open-circle dance moving to the right, without leaps.</p>
+<h2 class="chapter-heading">4. Dress, Status And Gender</h2>
+<p>Lazarki clothing is closely associated with bridal dress and adult female status.</p>
+<p>Historical participants could wear garments or ornaments normally associated with brides, sometimes for the first time. Petkovski interprets this as an initiatory dimension: the girl temporarily assumes the visual vocabulary of the marriageable or married woman.</p>
+<p>An older maxim cited in the literature held that it was shameful for a Lazarka to sing in old clothing. Newness, cleanliness and completeness were important, although the specific distinction from everyday clothing varied by locality.</p>
+<p class="fact-statement">There is no single Lazarki costume.</p>
+<p>In the Struga area, documented and reconstructed examples include white shirts, woven aprons, waistcoats or bodices, headcloths, necklaces and substantial displays of coins or metal ornaments. Baskets may be decorated with flowers or spring greenery.</p>
+<p>One Struga-region description lists a klašenik, shirt, belt, woven apron or bovča, headscarf and jewellery including head ornaments, earrings and chains bearing coins. Aprons could be vertically striped and decorated with coloured pompoms, metallic sequins and lace.</p>
+<p>In northeastern areas, some historical costumes approached bridal dress while being distinguished by particular headwear and props.</p>
+<p>In Sredorek, Žegligovo and Slavište, descriptions include the knitted kapa šehirlika, while umbrellas were carried specifically by the first two girls.</p>
+<p>In Prespa, the leading Lazarka could carry a willow staff and use it to knock on household doors.</p>
+<h3 class="subhead">Injevo</h3>
+<p>The 2024 fieldwork in Injevo provides detailed contemporary evidence:</p>
+<div class="data-list"><div class="data-row"><div class="data-key"></div><div class="data-value">White inner garments embroidered at the collar, sleeves and hem</div></div><div class="data-row"><div class="data-key"></div><div class="data-value">A dark woven outer apron with geometric, floral and animal motifs</div></div><div class="data-row"><div class="data-key"></div><div class="data-value">An embroidered or appliquéd narrow vest</div></div><div class="data-row"><div class="data-key"></div><div class="data-value">Thick socks</div></div><div class="data-row"><div class="data-key"></div><div class="data-value">Opanci</div></div><div class="data-row"><div class="data-key"></div><div class="data-value">Braided hair</div></div><div class="data-row"><div class="data-key"></div><div class="data-value">A red rose above the right ear</div></div><div class="data-row"><div class="data-key"></div><div class="data-value">Colourful necklaces</div></div></div>
+<p>One participant wore an elaborate beaded necklace resembling a snake.</p>
+<p>Informants reported that family matriarchs had once commissioned and passed down costumes, and that embroidery had previously communicated marital status more strictly than it does today.</p>
+<p>Costume consequently operates not simply as decoration but as part of the ritual’s system of status, age and gender.</p>
+<figure class="article-inline-media"><img alt="Two women in richly ornamented traditional dress" decoding="async" loading="lazy" src="./Assets/Lazarki/lazarki-09.png"/></figure>
+<h3 class="subhead">Maidenhood and courtship</h3>
+<p>Historical scholarship frequently uses the language of initiation, particularly where girls wear bridal attributes or perform a ritual dance for the final time before marriage.</p>
+<p>The evidence supports understanding Lazarki as connected to a transition in life stage, but it is not necessary to impose a rigid three-stage initiation model on every regional form.</p>
+<p>What is clear is that the ritual publicly distinguishes the participating girls from childhood. They move independently through village space, address household heads, handle gifts and money, perform inherited repertoire and wear garments associated with adult female status.</p>
+<p>Courtship is also present in the song corpus. Young men, girls, flowers, bridal imagery and hoped-for marriages recur throughout the repertoire.</p>
+<p>The girls are publicly visible, some wear bridal attributes, and particular songs identify unmarried men and women. Yet these elements operate within a sanctioned religious-seasonal procession rather than a straightforward courtship event.</p>
+<h2 class="chapter-heading">5. A Regional System</h2>
+<p>Lazarki cannot be described adequately through a single national model.</p>
+<p>The Struga region appears particularly rich in documentation, with evidence extending from the nineteenth century through twentieth-century ethnography and contemporary reporting. Even within Struško and Debarski Drimkol, practices differ.</p>
+<p>Some are associated with Lazarus Saturday; in Struga, related performances can extend into Palm Sunday. Some villages preserve separate male and female forms.</p>
+<h3 class="subhead">Struga and Drimkol</h3>
+<p>In Ložani, contemporary documentation describes Na konak, in which Lazarki spend the night before the feast in a newly built house. If a younger participant falls asleep, older girls may mischievously sew part of her clothing to the bedding.</p>
+<p>In Vevčani, the women’s Lazarus custom disappeared around the 1950s and was revived in 2016 by KUD Drimkol. Current participants gather at St Nicholas, sing the Lazarus troparion, decorate baskets, perform a Lazarus oro in the centre and divide into groups visiting upper and lower neighbourhoods.</p>
+<p>Vevčani also preserves or has revived a Maška Lazara tradition involving boys.</p>
+<p>In Struga proper, modern summaries describe connected activities across three days:</p>
+<div class="data-list"><div class="data-row"><div class="data-key">Friday</div><div class="data-value">Announcing the feast</div></div><div class="data-row"><div class="data-key">Saturday</div><div class="data-value">Associated with “Daj mi para Lazare”</div></div><div class="data-row"><div class="data-key">Palm Sunday</div><div class="data-value">Associated with “Vijur, vijur Gajdano”</div></div></div>
+<h3 class="subhead">Ohrid–Struga</h3>
+<p>Veličkovska’s territorial study identifies strong integration of ritual singing and dancing in the Ohrid–Struga lowland villages, including:</p>
+<p>Jankoec, Leskoec, Velgošti, Mešeišta, Trebeništa, Kosel, Livoišta, Volino, Moroišta, Ložani, Draslajca, Labuništa, Misleševo, Radožda, Vraništa, Vevčani and Modrič.</p>
+<h3 class="subhead">Northeast</h3>
+<p>In Kozjak and Kriva Palanka, accounts describe more strongly differentiated roles, masculine disguise, groups crossing between one another, umbrellas and weapons, as well as songs categorized by whether performers walk, stand or turn and dance.</p>
+<p>In Radoviš, Vijena Loza Vijena was performed three times in front of a household. Informants also remembered an oro following the songs with gajda and tapan accompaniment.</p>
+<p>In Prespa, the leading Lazarka could carry a willow staff.</p>
+<p>In Kozjak, historical descriptions record masculine dress and weapons.</p>
+<p>In Kriva Palanka / Slavište, documentation includes Male and Female Lazar, umbrellas and distinct walking, standing and turning song types.</p>
+<h3 class="subhead">Dolni Polog</h3>
+<p>In Dolni Polog, the available contemporary material comes from a filmed reconstruction rather than uninterrupted ritual practice.</p>
+<p>The project combined literature and field research with costume selection, scripting, rehearsal and filming.</p>
+<p>These distinctions are essential.</p>
+<p class="fact-statement">There is no single documented “Lazarki dance” or universal costume.</p>
+<p>There are regional systems within a broader ritual category.</p>
+<h3 class="subhead">Regional record</h3>
+<div class="regional-atlas">
+<table>
+<tr><th>Region / locality</th><th>Documented feature</th><th>Evidence</th></tr>
+<tr><td>Struga</td><td>Neighbourhood groups, ceremonial bride, person-specific songs, nineteenth-century record</td><td>Strong; documented from 1861 onward</td></tr>
+<tr><td>Tašmaruništa</td><td>“Kito Mito Nevesto”; oro led by a girl related to the household</td><td>Strong twentieth-century ethnographic documentation</td></tr>
+<tr><td>Ohrid–Struga field</td><td>Strong integration of ritual singing and dance</td><td>Strong regional ethnomusicological record</td></tr>
+<tr><td>Ložani</td><td>Na konak overnight custom</td><td>Contemporary local documentation</td></tr>
+<tr><td>Vevčani</td><td>Church gathering, baskets, neighbourhood groups, revival from 2016; Male Lazar tradition</td><td>Contemporary revival evidence</td></tr>
+<tr><td>Drimkol</td><td>Female and male Lazar forms in some villages</td><td>Contemporary continuity/revival evidence</td></tr>
+<tr><td>Injevo, Radoviš</td><td>Two-day willow, monastery and household sequence</td><td>Strong contemporary fieldwork</td></tr>
+<tr><td>Radoviš area</td><td>“Vijena Loza Vijena”; repeated dance; remembered gajda/tapan</td><td>Older fieldwork</td></tr>
+<tr><td>Prespa</td><td>Willow staff carried by leading Lazarka</td><td>Older ethnographic documentation</td></tr>
+<tr><td>Kozjak</td><td>Girl in masculine ritual dress; weapons in older descriptions</td><td>Strong but historical</td></tr>
+<tr><td>Kriva Palanka / Slavište</td><td>Male/Female Lazar, umbrella; walking, standing and turning song types</td><td>Strong ethnomusicological evidence</td></tr>
+<tr><td>Dolni Polog</td><td>Filmed reconstruction based on field and literature research</td><td>Reconstruction, not uninterrupted ritual</td></tr>
+</table>
+</div>
+<p>The regional evidence is strongest for Struga/Struško and Injevo, reasonably strong for northeastern regions and thinner for some other Macedonian areas.</p>
+<p>The available research does not yet support a complete village-by-village map of Lazarki across Macedonia.</p>
+</div>
+<div aria-hidden="true" class="empty-tail"></div>
+</section>
+<section class="gallery-reading ohrid-sketch-spread">
+<figure class="gallery-reading-media"><img alt="Women and girls in traditional dress dancing in a village square" decoding="async" loading="lazy" src="./Assets/Lazarki/lazarki-01.png"/></figure>
+<div class="gallery-reading-side">
+<figure class="gallery-reading-feature"><img alt="Young woman in richly ornamented traditional dress in a mountain village" decoding="async" loading="lazy" src="./Assets/Lazarki/lazarki-05.png"/></figure>
+</div>
+</section>
+<section class="content-row">
+<figure class="article-body-media"><img alt="Bare willow branch arranged against a pale blue background" decoding="async" loading="lazy" src="./Assets/Lazarki/lazarki-06.png"/></figure>
+<div class="article-body-copy body-block">
+<h2 class="chapter-heading">6. The Historical Record</h2>
+<p>The Miladinov brothers provided one of the most important early records of Lazar songs from the Struga area in 1861.</p>
+<p>The collection places Lazar songs alongside wedding, harvest and other calendrical song categories.</p>
+<p>Its accompanying description records house-to-house movement, neighbourhood organization, the ceremonial nevesta, decorative staffs and songs differentiated according to the age and status of the person addressed.</p>
+<p>The source is important precisely because it establishes what was documented in the nineteenth century.</p>
+<p class="fact-statement">It does not establish how ancient Lazarki is.</p>
+<p>There are no extant documents demonstrating a Lazarki procession in Macedonia before Christianization.</p>
+<p>The nineteenth-century record demonstrates that a developed form of the practice was already in circulation when the material was collected. It cannot, by itself, establish direct continuity from a pre-Christian ritual.</p>
+<h2 class="chapter-heading">7. Lazarus, Christianity And Older Ritual Forms</h2>
+<p>Lazarus Saturday commemorates Christ’s raising of Lazarus of Bethany from the dead in John 11 and directly precedes Palm Sunday.</p>
+<p>In Orthodox liturgical practice, the two feasts form a connected transition into Holy Week.</p>
+<p>The relationship between Lazarki and the biblical Lazarus, however, is not straightforward.</p>
+<p>Some popular explanations connect the girls’ house-to-house movement with Martha and Mary, suggesting that they spread news of Lazarus’s resurrection.</p>
+<p>Petkovski discusses this as a folk explanation of the procession. But John 11 does not describe Martha and Mary undertaking a house-to-house ritual procession.</p>
+<p>The connection is therefore better treated as a later Christian explanation of an existing ritual form rather than evidence that the Gospel itself prescribed Lazarki.</p>
+<h3 class="subhead">Pre-Christian interpretations</h3>
+<p>A number of Lazarki elements have been interpreted by comparative folklorists as archaic or agrarian:</p>
+<div class="data-list"><div class="data-row"><div class="data-key"></div><div class="data-value">Spring vegetation</div></div><div class="data-row"><div class="data-key"></div><div class="data-value">Blessings for fields and livestock</div></div><div class="data-row"><div class="data-key"></div><div class="data-value">Ritual circling</div></div><div class="data-row"><div class="data-key"></div><div class="data-value">Jumping</div></div><div class="data-row"><div class="data-key"></div><div class="data-value">Gendered disguise</div></div><div class="data-row"><div class="data-key"></div><div class="data-value">Fertility wishes</div></div><div class="data-row"><div class="data-key"></div><div class="data-value">Processional movement</div></div></div>
+<p>Veličkovska discusses interpretations of turning, stamping and jumping in relation to wind, crop growth and fertility.</p>
+<p>But similarity to older ritual structures is not proof of direct historical survival.</p>
+<p>Petkovski notes that there are no surviving documents demonstrating a Lazarki procession in Macedonia before Christianization.</p>
+<p>The ritual contains elements that do not derive obviously from the Lazarus Gospel narrative, but its ancient history remains uncertain.</p>
+<p>The strongest formulation is therefore narrower:</p>
+<p>Lazarki belongs to a Christian calendrical framework while incorporating ritual forms—vegetation, household blessing, courtship, processional movement and fertility-oriented song—that scholars associate with older Balkan and South Slavic spring traditions. Direct continuity from a specific pre-Christian cult has not been historically demonstrated.</p>
+<h2 class="chapter-heading">8. Continuity, Revival And Reconstruction</h2>
+<p>Lazarki survives in more than one cultural form.</p>
+<p>In Injevo, direct 2024 fieldwork documents an active household and monastery circuit.</p>
+<p>Around Struga and Drimkol, living village practices continue alongside teaching and preparation by churches and cultural organizations.</p>
+<p>In Vevčani, the women’s tradition was explicitly revived after a period of interruption.</p>
+<p>In Dolni Polog, filmed reconstruction has been used as a preservation strategy.</p>
+<p>Contemporary photographic exhibitions have also presented Lazarki as intangible heritage and visual culture.</p>
+<p>These should not be treated as identical forms of continuity.</p>
+<p class="fact-statement">A living household ritual is different from a community revival.</p>
+<p>A revival is different from a folkloric reconstruction.</p>
+<p>A reconstruction is different from a stage choreography.</p>
+<p>By the twentieth century, Lazarki material had also entered professional folklore institutions, including groups such as Tanec and Orce Nikolov.</p>
+<p>Once the material moves to the stage, the structure changes: the house disappears, the recipient of the blessing disappears, neighbourhood movement disappears, songs are selected for performance rather than household circumstance, and dance becomes choreography.</p>
+<p>The staged form is not necessarily false; it is a different cultural and artistic form from the ritual that generated it.</p>
+<h3 class="subhead">Transmission</h3>
+<p>Traditionally, songs were learned from mothers and grandmothers.</p>
+<p>Contemporary Injevo participants continue to learn through practice. One participant interviewed in 2024 had learned the repertoire only two months before the fieldwork, while others had participated for several years.</p>
+<p>This embodied transmission is both a strength and a vulnerability.</p>
+<p>The ritual can persist without written codification, but the explanations for individual gestures can disappear even while the gestures themselves continue.</p>
+<p>The Injevo willow practice is a particularly clear example: the action remains even though its local explanation has been lost.</p>
+<h2 class="chapter-heading">9. Reading Lazarki</h2>
+<p>One useful art-historical interpretation is to understand Lazarki as an archive maintained through women’s bodies.</p>
+<p>Songs were transmitted principally through women.</p>
+<p>Costumes were produced, preserved and inherited through domestic networks.</p>
+<p>Girls learned formations and movements from older participants.</p>
+<p>The ritual publicly presented the unmarried girl through bridal attributes and encoded rank within the group.</p>
+<p>Even masculine ceremonial roles could be performed by girls.</p>
+<p class="fact-statement">Much of this knowledge was never primarily stored in manuscripts or institutions. It existed in voice, textiles, gesture, posture, memory and repetition.</p>
+<p>Written collections preserve lyrics, but they cannot fully preserve the physical practice: which girl stood first, how a group entered, who was permitted to wear a particular ornament or why a branch had to be placed in a particular location.</p>
+<p>This is one reason the physical and social dimensions of Lazarki are as important as its surviving songs.</p>
+<h3 class="subhead">A visual system</h3>
+<p>Across the documented regional material, recurring visual forms include:</p>
+<p>line — girls moving one behind another</p>
+<p>circle / open circle — oro and encirclement</p>
+<p>paired opposition — groups singing toward one another</p>
+<p>braid — bodies passing through or around one another</p>
+<p>threshold — household or chapel doorway</p>
+<p>branch — living spring material carried into built space</p>
+<p>basket — receptacle for gifts and flowers</p>
+<p>veil / headcloth — ceremonial female dress</p>
+<p>coins and metal jewellery — display, sound and movement</p>
+<p>bride — the unmarried girl temporarily assuming bridal appearance</p>
+<p>cross-dressed leader — a female participant carrying masculine ritual attributes</p>
+<p>These elements help explain why Lazarki cannot be adequately described as simply a folk-song tradition.</p>
+<p>Its documented forms combine music, choreography, costume, objects, architecture, social hierarchy and movement through the village.</p>
+<h2 class="chapter-heading">10. What The Evidence Does Not Establish</h2><div class="evidence-list"><div class="evidence-item"><h3 class="evidence-claim">Lazarki is an ancient Macedonian pagan ritual later renamed after St Lazarus.</h3><p class="evidence-answer">The evidence does not demonstrate direct documentary continuity from a pre-Christian ritual.</p></div><div class="evidence-item"><h3 class="evidence-claim">All Lazarki are girls aged 10–17.</h3><p class="evidence-answer">Age varies historically and regionally. Younger children and older unmarried women also appear in the record.</p></div><div class="evidence-item"><h3 class="evidence-claim">The ritual always occurs on Lazarus Saturday.</h3><p class="evidence-answer">Some Struga-region practices extend into or occur on Palm Sunday, and related male and female forms can occupy different days.</p></div><div class="evidence-item"><h3 class="evidence-claim">Every Lazarka wears a flower crown.</h3><p class="evidence-answer">Headwear varies and includes veils, scarves, flowers, special caps and other forms.</p></div><div class="evidence-item"><h3 class="evidence-claim">The oro is the same everywhere.</h3><p class="evidence-answer">The choreographic record demonstrates substantial regional variation.</p></div><div class="evidence-item"><h3 class="evidence-claim">The willow proves a pagan fertility cult.</h3><p class="evidence-answer">Willow has an explicit Orthodox Palm Sunday context, and the specific meaning of the Injevo doorway gesture cannot currently be recovered.</p></div></div>
+<p>Several common statements about Lazarki go beyond the available evidence.</p>
+<section class="research-status"><h2 class="section-heading">RESEARCH STATUS</h2><p>The Lazarki record is unusually rich but uneven.</p><p>The Struga and Struško material has a particularly long documentary history, beginning with the Miladinov brothers in the nineteenth century and continuing through twentieth-century ethnographic and ethnomusicological research.</p><p>Injevo provides unusually strong contemporary evidence through direct fieldwork conducted in 2024 and published in 2025.</p><p>Northeastern Macedonian traditions are also supported by substantial ethnomusicological documentation.</p><p>Other areas remain less thoroughly documented.</p><p>The distinction between documented practice, historical description, community revival, reconstruction, staged performance and interpretation is therefore essential to any account of Lazarki.</p><p>The available evidence supports a picture of a highly varied ritual system in which song, movement, dress, household relationships, religious observance and seasonal practice are closely connected.</p><p>It does not support reducing that system to a single origin story.</p></section>
+<section class="sources-section"><h2 class="section-heading">SOURCES</h2><p>Tamayo, Jose Antonio Lorenzo and Meryem Madili. “The Lazarki Procession in Inyevo, Radoviš: Ritual and Tradition in North Macedonia.” Ethnographica et Folkloristica Carpathica 27 (2025): 65–90. Fieldwork conducted 27–28 April 2024. DOI: 10.47516/ethnographica/27/2025/15614.</p><p>Petkovski, Filip. “The Women’s Ritual Processions ‘Lazarki’ in Macedonia.” Venets: The Belogradchik Journal for Local History, Cultural Heritage and Folk Studies 5, no. 1 (2014): 107–127.</p><p>Veličkovska, Rodna. “Orovodnite pesni i nivnata teritorijalna distribucija vo makedonskoto tradicionalno obredno-pejačko izrazuvanje.” Godišen zbornik, Fakultet za muzička umetnost, UGD Štip 3 (2012): 149–154.</p><p>Dimovski, Mihajlo. “Lazarskite orovodni pesni vo Struga i Struško i nivnite etnokoreološki karakteristiki.” Makedonski folklor VI/12 (1973): 57–62.</p><p>Avramovski, Petar. “Lazarskite obredi i pesni vo selo Tašmaruništa, Struško.” Makedonski folklor XXV/50 (1992).</p><p>Domazetovski, Petko. “Lazarskite običai vo seloto Bidževo, Struško.” Reprinted/indexed in Makedonski folklor XXV/50.</p><p>Miladinov, Dimitar and Konstantin Miladinov. Folk Songs. Zagreb, 1861.</p><p>Petkovski, Bojan. “Filmuvana rekonstrukcija na obredot Lazarki od etničkiot predel Dolni Polog.” Yearbook – Faculty of Music Art 5 (2018/2019).</p><p>Orthodox Church in America. “Lazarus Saturday and Palm Sunday.”</p></section>
+</div>
+<div aria-hidden="true" class="empty-tail"></div>
+</section>
+</article>
+<section aria-labelledby="more-from-muzej-title" class="more-from-muzej" data-more-from-muzej=""></section>
+</main>
+<footer class="site-footer muzej-footer">
+<div class="footer-inner">
+<div class="footer-brand">
+<span class="footer-wordmark">Muzej</span>
+<p class="footer-statement">An editorial archive of Macedonian art, style, tradition, and culture.</p>
+</div>
+<nav aria-label="Footer navigation" class="footer-links">
+<a href="about.html">About Muzej</a>
+<a href="mailto:muzej.mk@proton.me">Contact</a>
+<a aria-label="Open Muzej on Instagram" href="https://www.instagram.com/muzej.mk/" rel="noopener noreferrer" target="_blank">Instagram</a>
+</nav>
+</div>
+</footer>
+<script>
+const menuButton = document.getElementById('menuButton');
+const menuPanel = document.getElementById('menuPanel');
+
+if (menuButton && menuPanel) {
+  const setMenuState = (isOpen) => {
+    menuPanel.classList.toggle('open', isOpen);
+    menuButton.classList.toggle('is-open', isOpen);
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+    menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  };
+
+  menuButton.addEventListener('click', () => {
+    setMenuState(!menuPanel.classList.contains('open'));
+  });
+
+  menuPanel.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setMenuState(false));
+  });
+}
+</script>
+<script>
+  (function () {
+    var previousY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+    var ticking = false;
+    var revealZone = 24;
+    var motionThreshold = 4;
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    function updateMuzejLogoVisibility() {
+      var currentY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+      var delta = currentY - previousY;
+
+      if (reducedMotion.matches) {
+        document.body.classList.remove("muzej-logo-hidden");
+        ticking = false;
+        return;
+      }
+
+      if (currentY <= revealZone) {
+        document.body.classList.remove("muzej-logo-hidden");
+      } else if (delta > motionThreshold) {
+        document.body.classList.add("muzej-logo-hidden");
+      } else if (delta < -motionThreshold) {
+        document.body.classList.remove("muzej-logo-hidden");
+      }
+
+      previousY = currentY;
+      ticking = false;
+    }
+
+    function requestMuzejLogoVisibility() {
+      if (!ticking) {
+        window.requestAnimationFrame(updateMuzejLogoVisibility);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener("scroll", requestMuzejLogoVisibility, { passive: true });
+    window.addEventListener("resize", requestMuzejLogoVisibility);
+
+    if (reducedMotion.addEventListener) {
+      reducedMotion.addEventListener("change", requestMuzejLogoVisibility);
+    } else if (reducedMotion.addListener) {
+      reducedMotion.addListener(requestMuzejLogoVisibility);
+    }
+
+    updateMuzejLogoVisibility();
+  })();
+</script>
+</body>
+</html>
