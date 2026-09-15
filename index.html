@@ -2187,6 +2187,200 @@
   .site-header .utility-panel .utility-menu-item { justify-content: center; min-height: 2.75rem; padding: 0.72rem 0; text-align: center; }
 }
 
+
+
+      /* Lazarki fashion hero — surgical homepage override */
+      .hero-feature--lazarki-fashion {
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+        background: #ffffff;
+      }
+
+      .hero-feature--lazarki-fashion .lazarki-fashion-shell {
+        width: 100%;
+        max-width: none;
+        padding-left: var(--page-x);
+        padding-right: var(--page-x);
+      }
+
+      .lazarki-fashion-hero {
+        position: relative;
+        min-height: max(650px, calc(100svh - 112px));
+        width: 100%;
+        overflow: hidden;
+        background: #ffffff;
+      }
+
+      .lazarki-fashion-meta {
+        position: absolute;
+        z-index: 5;
+        top: clamp(42px, 5.9vh, 68px);
+        left: 50%;
+        right: auto;
+        width: clamp(280px, 31vw, 460px);
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        font-family: var(--sans);
+        font-size: clamp(0.61rem, 0.56rem + 0.12vw, 0.72rem);
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #000000;
+        white-space: nowrap;
+      }
+
+      .lazarki-fashion-title {
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        bottom: clamp(16px, 1.9vw, 30px);
+        width: calc(100% + (var(--page-x) * 0.72));
+        margin: 0;
+        transform: translateX(-50%);
+        font-family: var(--sans);
+        font-size: clamp(9.5rem, 19vw, 22rem);
+        font-weight: 800;
+        line-height: 0.68;
+        letter-spacing: -0.082em;
+        text-align: center;
+        text-transform: uppercase;
+        color: #000000;
+        white-space: nowrap;
+        pointer-events: none;
+      }
+
+      .lazarki-fashion-title a {
+        color: inherit;
+        text-decoration: none;
+        pointer-events: auto;
+      }
+
+      .lazarki-fashion-media {
+        position: absolute;
+        z-index: 3;
+        top: clamp(64px, 8.4vh, 94px);
+        left: 50%;
+        display: block;
+        width: clamp(280px, 31vw, 460px);
+        height: clamp(420px, 60vh, 650px);
+        transform: translateX(-50%);
+        overflow: visible;
+        color: #000000;
+      }
+
+      .lazarki-fashion-media img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 45%;
+        filter: grayscale(1) contrast(1.06);
+        border: 0;
+        background: #f4f4f4;
+      }
+
+      .lazarki-fashion-vertical-tag,
+      .lazarki-fashion-inline-tag,
+      .lazarki-fashion-year {
+        z-index: 5;
+        font-family: var(--sans);
+        font-size: clamp(0.62rem, 0.58rem + 0.12vw, 0.74rem);
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: 0.04em;
+        color: #000000;
+        white-space: nowrap;
+      }
+
+      .lazarki-fashion-vertical-tag {
+        position: absolute;
+        top: 50%;
+        right: -1.15rem;
+        transform: translate(100%, -50%) rotate(-90deg);
+        transform-origin: left center;
+      }
+
+      .lazarki-fashion-inline-tag {
+        position: absolute;
+        left: -2.2rem;
+        bottom: clamp(62px, 8vh, 92px);
+      }
+
+      .lazarki-fashion-year {
+        position: absolute;
+        right: 0;
+        bottom: clamp(18px, 2vw, 32px);
+      }
+
+      @media (max-width: 900px) {
+        .lazarki-fashion-hero {
+          min-height: max(610px, calc(100svh - 104px));
+        }
+
+        .lazarki-fashion-media {
+          top: clamp(70px, 9vh, 92px);
+          width: clamp(250px, 44vw, 380px);
+          height: clamp(390px, 56vh, 560px);
+        }
+
+        .lazarki-fashion-title {
+          font-size: clamp(7.2rem, 20vw, 12.5rem);
+          bottom: 26px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .hero-feature--lazarki-fashion .lazarki-fashion-shell {
+          padding-left: 18px;
+          padding-right: 18px;
+        }
+
+        .lazarki-fashion-hero {
+          min-height: 620px;
+        }
+
+        .lazarki-fashion-meta {
+          top: 16px;
+          font-size: 0.56rem;
+          letter-spacing: 0.1em;
+        }
+
+        .lazarki-fashion-media {
+          top: 64px;
+          width: min(64vw, 300px);
+          height: 410px;
+        }
+
+        .lazarki-fashion-title {
+          width: calc(100% + 28px);
+          bottom: 54px;
+          font-size: clamp(5.2rem, 23vw, 7.7rem);
+          line-height: 0.72;
+          letter-spacing: -0.075em;
+        }
+
+        .lazarki-fashion-inline-tag {
+          left: -1rem;
+          bottom: 52px;
+          font-size: 0.58rem;
+        }
+
+        .lazarki-fashion-vertical-tag {
+          right: -0.75rem;
+          font-size: 0.56rem;
+        }
+
+        .lazarki-fashion-year {
+          right: 0;
+          bottom: 18px;
+          font-size: 0.58rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -2225,37 +2419,31 @@
 
       <main class="home">
         <section
-          class="hero-feature"
+          class="hero-feature hero-feature--lazarki-fashion"
           id="hero-feature"
           aria-labelledby="hero-title"
         >
-          <div class="shell">
-            <article class="hero-grid" data-story="stranci-lead">
-              <div class="hero-stage">
-                <div class="hero-text">
-                  <div class="hero-copy">
-                    <p class="eyebrow">Ritual</p>
-                    <h1 class="hero-title" id="hero-title">
-                      <a href="./lazarki.html">Lazarki</a>
-                    </h1>
-                  </div>
-
-                  <div class="hero-support">
-                    <p class="hero-dek">Through Lazarki, ritual, song, and dress travel door to door.</p>
-                    <div class="hero-actions">
-                      <a class="text-cta" href="./lazarki.html">Read It Here</a>
-                    </div>
-                  </div>
-                </div>
-
-                <a class="hero-media story-card-link" href="./lazarki.html">
-                  <img
-                    class="hero-image"
-                    src="./Assets/Lazarki/lazarki-03.png"
-                    alt="Women in traditional Macedonian dress gathered outdoors"
-                  />
-                </a>
+          <div class="shell lazarki-fashion-shell">
+            <article class="lazarki-fashion-hero" data-story="lazarki-lead">
+              <div class="lazarki-fashion-meta" aria-label="Article category and title note">
+                <span>ETHNOGRAPHY</span>
+                <span>KITO MITO NEVESTO</span>
               </div>
+
+              <h1 class="lazarki-fashion-title" id="hero-title">
+                <a href="./lazarki.html">LAZARKI</a>
+              </h1>
+
+              <a class="lazarki-fashion-media" href="./lazarki.html" aria-label="Read Lazarki">
+                <img
+                  src="./Assets/Lazarki/lazarki-06.png"
+                  alt="Girls performing Lazarki in traditional Macedonian dress"
+                />
+                <span class="lazarki-fashion-inline-tag">[ Na Vrtenje ]</span>
+                <span class="lazarki-fashion-vertical-tag">[ Dolni Polog i Struga ]</span>
+              </a>
+
+              <span class="lazarki-fashion-year" aria-label="Edition 2027">2027</span>
             </article>
           </div>
         </section>
