@@ -2473,23 +2473,6 @@
               </article>
 
               <article class="story-card">
-                <a class="story-card-link" href="./prespa.html">
-                  <img
-                    class="story-image"
-                    src="./Assets/prespa-hero.jpeg"
-                    alt="Lake Prespa shoreline in soft evening light."
-                    loading="lazy"
-                  />
-                </a>
-                <div class="story-card-copy">
-                  <p class="story-card-kicker">Travel | Weekend Guide</p>
-                  <h3 class="story-card-title">
-                    <a href="./prespa.html">Prespa</a>
-                  </h3>
-                </div>
-              </article>
-
-              <article class="story-card">
                 <a class="story-card-link" href="./the-new-new-wave.html">
                   <img
                     class="story-image new-wave-card-image"
@@ -2571,6 +2554,24 @@
                   Rhythm and Sound (1955) | Directed by Trajče Popov
                 </a>
               </h3>
+            </article>
+          </div>
+        </section>
+
+        <section class="section kinfolk-feature" id="prespa-feature" aria-labelledby="prespa-feature-title">
+          <div class="shell kinfolk-feature-frame">
+            <article class="kinfolk-feature-article">
+              <a class="kinfolk-feature-text-link" href="./prespa.html">
+                <h2 class="kinfolk-feature-title" id="prespa-feature-title">Prespa</h2>
+              </a>
+              <a class="kinfolk-feature-media-link" href="./prespa.html" aria-label="Read Prespa">
+                <img
+                  class="kinfolk-feature-image"
+                  src="./Assets/prespa-hero.jpeg"
+                  alt="Lake Prespa shoreline in soft evening light."
+                  loading="lazy"
+                />
+              </a>
             </article>
           </div>
         </section>
@@ -2967,7 +2968,7 @@
         };
 
         var heroRotationSlugs = ["quality", "stranci", "tokyo", "nation"];
-        var selectedStorySlugs = ["tokyo", "prespa", "quality", "nation", "venus", "newWave", "dodole"];
+        var selectedStorySlugs = ["tokyo", "quality", "nation", "venus", "newWave", "dodole"];
         var selectedSlug = heroRotationSlugs[Math.floor(Math.random() * heroRotationSlugs.length)];
         var selectedArticle = articles[selectedSlug];
 
