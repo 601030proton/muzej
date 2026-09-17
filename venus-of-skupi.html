@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="The Venus Pudica from Scupi is a monumental marble statue of Venus or Aphrodite discovered in July 2008 in the remains of the city's large thermal complex. Scupi was the Roman-era city of Colonia Flavia Scupinorum, located on the outskirts of present-day Skopje." name="description"/>
+<title>The Venus of Skupi | Muzej</title>
+<link href="./Assets/Font/Muzej%20Logo.ai.png" rel="icon" type="image/png"/>
+<link href="./Assets/Font/Muzej%20Logo.ai.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&amp;display=swap" rel="stylesheet">
+<link href="fonts.css" rel="stylesheet">
+<style>
+:root {
+  --background: #ffffff;
+  --foreground: #0f0e0d;
+  --white: #ffffff;
+  --ink: #0f0e0d;
+  --ink-soft: rgba(15, 14, 13, 0.62);
+  --ink-faint: rgba(15, 14, 13, 0.12);
+  --muted: #70675d;
+  --rule: rgba(23, 21, 19, 0.09);
+  --page-x: clamp(18px, 5.2vw, 72px);
+  --nav-h: clamp(88px, 10vw, 128px);
+  --feature-w: min(1280px, calc(100vw - (var(--page-x) * 2)));
+  --rail-gap: clamp(34px, 5.4vw, 84px);
+  --body-col: minmax(520px, 760px);
+  --body-tail: 0px;
+  --section-gap: clamp(48px, 8vw, 108px);
+  --content-max: 1520px;
+  --font-display: "plantin", Georgia, serif;
+  --font-wordmark: var(--font-display);
+  --serif: var(--font-display);
+        --headline-serif: var(--font-display);
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --article-serif: "adobe-jenson-pro", Georgia, serif;
+  --brand-serif: var(--font-wordmark);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--article-serif);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+.shell {
+  width: min(100%, var(--content-max));
+  margin: 0 auto;
+  padding-left: var(--page-x);
+  padding-right: var(--page-x);
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  background: var(--background);
+}
+.header-frame {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  padding-top: 28px;
+  padding-bottom: 24px;
+}
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-wordmark);
+  font-size: clamp(2.4rem, 1.9rem + 1.43vw, 3.76rem);
+  line-height: 0.92;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  white-space: nowrap;
+  text-decoration: none;
+
+}
+
+.site-header .brand-mark {
+  position: relative;
+  width: 160px;
+  height: 32px;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.site-header .brand-mark-image {
+  position: absolute;
+  width: 198.68px;
+  max-width: none;
+  height: auto;
+  left: -19.53px;
+  top: -107.88px;
+  display: block;
+}
+
+
+.utility-link,
+.utility-menu-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: rgba(23, 21, 19, 0.58);
+  text-decoration: none;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+.utility-link:hover,
+.utility-menu-item:hover {
+  color: var(--foreground);
+}
+.header-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.utility-menu {
+  position: relative;
+}
+.utility-menu summary {
+  list-style: none;
+}
+.utility-menu summary::-webkit-details-marker {
+  display: none;
+}
+.utility-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: color 180ms ease, opacity 180ms ease;
+}
+.utility-trigger:hover {
+  opacity: 0.72;
+}
+.utility-trigger:focus-visible {
+  outline: 2px solid rgba(141, 79, 61, 0.45);
+  outline-offset: 3px;
+}
+.utility-icon {
+  display: grid;
+  gap: 0.26rem;
+}
+.utility-icon-line {
+  display: block;
+  width: 1.45rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.88;
+}
+.utility-panel {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  right: 0;
+  z-index: 10;
+  display: grid;
+  min-width: 10rem;
+  padding: 0.45rem 0;
+  border: 1px solid rgba(23, 21, 19, 0.12);
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(23, 21, 19, 0.08);
+}
+.utility-panel-group {
+  display: grid;
+  gap: 0;
+}
+.utility-panel-utility {
+  margin-top: 0.25rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid rgba(23, 21, 19, 0.1);
+}
+.utility-panel .utility-link,
+.utility-panel .utility-menu-item {
+  justify-content: flex-start;
+  min-height: 0;
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  background: transparent;
+}
+.utility-panel-utility .utility-link {
+  font-size: 0.66rem;
+  letter-spacing: 0;
+  color: rgba(23, 21, 19, 0.52);
+}
+.utility-panel .utility-menu-item {
+  cursor: pointer;
+}
+.utility-panel .utility-link:hover,
+.utility-panel .utility-menu-item:hover {
+  background: rgba(23, 21, 19, 0.035);
+}
+
+main {
+  padding-top: clamp(24px, 3.2vw, 48px);
+}
+
+.feature {
+  padding:
+    clamp(0px, 0.6vw, 6px)
+    clamp(16px, 3vw, 40px)
+    clamp(56px, 8vw, 102px);
+}
+.feature-inner {
+  display: grid;
+  grid-template-columns: minmax(420px, 1.06fr) minmax(300px, 0.84fr);
+  gap: clamp(22px, 3.8vw, 52px);
+  align-items: stretch;
+  max-width: min(1320px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
+  margin: 0 auto;
+}
+.feature-media {
+  margin: 0;
+}
+.feature-media img {
+  width: 100%;
+  height: clamp(620px, 80vh, 920px);
+  object-fit: contain;
+  object-position: center top;
+  background: var(--white);
+}
+.feature-copy {
+  min-height: clamp(620px, 80vh, 920px);
+  max-width: 27rem;
+  margin: 0 auto;
+  padding: clamp(26px, 3.6vw, 42px) 0 clamp(20px, 3vw, 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.feature-title {
+  margin: 0;
+  color: var(--ink);
+  font-family: "plantin", Georgia, serif;
+  font-size: clamp(42px, 5.2vw, 82px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0;
+  text-transform: none;
+  text-wrap: balance;
+}
+.feature-title-break {
+  display: block;
+}
+.feature-byline {
+  margin: 0 0 auto;
+  color: var(--ink-soft);
+  font-size: clamp(16px, 1.18vw, 19px);
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+.feature-deck {
+  max-width: min(1380px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
+  margin: clamp(40px, 5vw, 78px) auto 0;
+  color: var(--ink);
+  font-family: "plantin", Georgia, serif;
+  font-size: clamp(32px, 3.05vw, 56px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+.article-shell {
+  max-width: var(--feature-w);
+  margin: 0 auto;
+  padding: 0 var(--page-x) clamp(32px, 4vw, 56px);
+}
+.content-row {
+  display: grid;
+  grid-template-columns: minmax(270px, 1fr) var(--body-col);
+  column-gap: var(--rail-gap);
+  align-items: start;
+}
+.article-body {
+  display: grid;
+  grid-template-columns: minmax(270px, 1fr) var(--body-col);
+  column-gap: var(--rail-gap);
+  align-items: start;
+  margin-bottom: var(--section-gap);
+}
+.content-row + .content-row {
+  margin-top: var(--section-gap);
+}
+.content-row .empty-rail,
+.article-body .empty-tail,
+.content-row .empty-tail {
+  min-height: 1px;
+}
+.article-body .empty-tail,
+.content-row .empty-tail {
+  display: none;
+}
+.article-body-media {
+  margin: 0;
+  align-self: start;
+  position: sticky;
+  top: calc(var(--nav-h) + clamp(12px, 2vw, 26px));
+}
+.article-body-media img {
+  width: 100%;
+  height: auto;
+}
+.article-body-media figcaption {
+  margin-top: 12px;
+  color: var(--ink-soft);
+  font-size: 8px;
+  letter-spacing: 0;
+}
+.article-body-copy {
+  min-width: 0;
+  justify-self: end;
+  width: min(100%, 520px);
+}
+
+.section-heading {
+  margin: 0;
+  max-width: 15ch;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+.body-block p {
+  margin: 0;
+  font-size: clamp(23px, 1.65vw, 31px);
+  line-height: 1.46;
+}
+.body-block p + p {
+  margin-top: 1.95em;
+}
+
+.pull-quote {
+  margin: 0;
+  max-width: none;
+  justify-self: end;
+  width: min(100%, 520px);
+  font-size: clamp(20px, 2.35vw, 26px);
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.gallery-reading {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 1.9vw, 24px);
+  margin: var(--section-gap) 0 0;
+}
+.gallery-reading-media,
+.gallery-reading-feature {
+  margin: 0;
+  aspect-ratio: 15 / 21;
+  overflow: hidden;
+}
+.gallery-reading-media img,
+.gallery-reading-feature img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-reading-side {
+  min-width: 0;
+}
+.article-body-lower {
+  margin-top: clamp(22px, 3vw, 34px);
+  margin-bottom: 0;
+}
+
+.more-from-muzej {
+  padding-top: clamp(32px, 4vw, 56px);
+  padding-bottom: clamp(82px, 10vw, 148px);
+  background: transparent;
+  color: var(--foreground);
+}
+.more-from-muzej-frame {
+  display: grid;
+  width: min(calc(100% - (var(--page-x) * 2)), 68rem);
+  max-width: 68rem;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  border-top: 2px solid var(--foreground);
+  padding-top: clamp(2.1rem, 4vw, 3.25rem);
+}
+.more-from-muzej-title {
+  max-width: none;
+  margin: 0;
+  font-family: var(--headline-serif);
+  font-size: clamp(1.45rem, 1vw + 1.1rem, 1.9rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 650;
+  font-optical-sizing: auto;
+}
+.related-list {
+  list-style: none;
+  margin: clamp(1.4rem, 2.5vw, 2rem) 0 0;
+  padding: 0;
+}
+.related-list li {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  padding: clamp(1.1rem, 1.8vw, 1.6rem) 0;
+  border-top: 1px solid var(--rule);
+  align-items: start;
+}
+.related-list li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+.related-list a {
+  font-family: var(--headline-serif);
+  font-size: clamp(1.1rem, 1.3vw + 0.7rem, 1.55rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+  font-optical-sizing: auto;
+  border-bottom: none;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+.related-list a:hover {
+  color: var(--muted);
+}
+.related-list .related-desc {
+  display: block;
+  margin-top: 0.45rem;
+  font-family: var(--sans);
+  font-size: clamp(0.82rem, 0.78rem + 0.18vw, 0.94rem);
+  line-height: 1.72;
+  letter-spacing: 0;
+  color: var(--muted);
+}
+
+.site-footer {
+  margin-top: 0;
+}
+.muzej-footer {
+  width: 100%;
+  padding: clamp(3.5rem, 7vw, 6rem) var(--page-x);
+  background: #000000;
+  color: #f7f2e9;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: minmax(320px, 620px) minmax(180px, 260px);
+  gap: clamp(3rem, 7vw, 6rem);
+  justify-content: center;
+  align-items: start;
+  width: min(100%, 1160px);
+  margin: 0 auto;
+}
+.footer-brand {
+  min-width: 0;
+}
+.footer-wordmark {
+  display: inline-flex;
+  font-family: var(--font-wordmark);
+  font-size: clamp(3.1rem, 5vw, 5rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: 0;
+  font-optical-sizing: auto;
+
+}
+.footer-statement {
+  max-width: 38.75rem;
+  margin: clamp(1.15rem, 1.8vw, 1.45rem) 0 0;
+  font-size: clamp(1rem, 1vw + 0.72rem, 1.15rem);
+  line-height: 1.5;
+  color: rgba(247, 242, 233, 0.86);
+}
+.muzej-footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-top: 0.28rem;
+}
+.muzej-footer .footer-links a {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 180ms ease, text-decoration-color 180ms ease;
+}
+.muzej-footer .footer-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  opacity: 0.86;
+}
+
+@media (max-width: 1080px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+
+  .muzej-footer .footer-links {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 1140px) {
+  .header-frame {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 0.85rem 1.25rem;
+  }
+  .header-tools {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 980px) {
+  .menu-button {
+    padding: 8px 0 6px 18px;
+  }
+  .menu-panel {
+    padding: 0 calc(var(--page-x) + 18px) 0 var(--page-x);
+    gap: 16px;
+  }
+  .menu-panel a {
+    width: min(100%, 22rem);
+    font-size: clamp(26px, 5vw, 42px);
+  }
+  .feature-inner {
+    grid-template-columns: minmax(300px, 0.94fr) minmax(300px, 0.9fr);
+    gap: clamp(24px, 4vw, 46px);
+    align-items: stretch;
+  }
+  .feature-media img {
+    height: clamp(500px, 70vh, 720px);
+  }
+  .feature-copy {
+    min-height: clamp(500px, 70vh, 720px);
+    max-width: 23rem;
+  }
+  .feature-title {
+    font-size: clamp(34px, 4.35vw, 58px);
+  }
+  .feature-deck {
+    margin-top: clamp(30px, 4.2vw, 48px);
+    font-size: clamp(16px, 2.05vw, 20px);
+  }
+  .content-row {
+    grid-template-columns: minmax(210px, 1fr) minmax(0, 660px);
+  }
+  .article-body {
+    grid-template-columns: minmax(210px, 1fr) minmax(0, 660px);
+  }
+}
+
+@media (max-width: 760px) {
+  .header-frame {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .brand-mark {
+    font-size: clamp(2.16rem, 10.15vw, 2.87rem);
+
+  }
+}
+
+@media (max-width: 720px) {
+  .header-frame {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .brand-mark {
+    font-size: clamp(2.16rem, 10.15vw, 2.87rem);
+
+  }
+  .menu-button {
+    gap: 7px;
+    padding: 8px 0 6px 16px;
+    margin-top: 1px;
+  }
+  .menu-panel {
+    padding: 0 calc(var(--page-x) + 6px) 0 var(--page-x);
+    gap: 14px;
+  }
+  .menu-panel a {
+    width: min(100%, 16rem);
+    font-size: clamp(22px, 9vw, 30px);
+    line-height: 1.08;
+  }
+  .menu-panel a:last-child {
+    font-size: 18px;
+  }
+  .feature {
+    padding:
+      4px
+      var(--page-x)
+      48px;
+  }
+  .feature-inner,
+  .article-body,
+  .content-row {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    text-align: left;
+  }
+  .feature-inner {
+    display: grid;
+    gap: 22px;
+  }
+  .feature-media img {
+    height: clamp(360px, 56vh, 470px);
+  }
+  .article-body {
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .gallery-reading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin: 40px 0 0;
+  }
+  .article-body-media {
+    position: static;
+  }
+  .gallery-reading-media {
+    position: static;
+  }
+  .article-body-lower {
+    margin-top: 18px;
+    margin-bottom: 0;
+  }
+  .content-row .empty-tail {
+    display: none;
+  }
+  .article-body .empty-tail {
+    display: none;
+  }
+  .feature-copy {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+  }
+  .feature-title {
+    font-size: clamp(30px, 8.2vw, 38px);
+    line-height: 1.03;
+    width: calc(100vw - (var(--page-x) * 2));
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+  .feature-byline {
+    margin: 28px 0 0;
+    font-size: 15px;
+  }
+  .feature-deck {
+    margin-top: 34px;
+    font-size: clamp(15px, 3.9vw, 18px);
+    line-height: 1.2;
+  }
+  .feature-title-break {
+    display: none;
+  }
+  .content-row + .content-row {
+    margin-top: 40px;
+  }
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: transparent;
+  pointer-events: none;
+}
+
+.site-header .header-frame,
+.site-header .brand-mark,
+.site-header .header-tools {
+  pointer-events: auto;
+}
+
+.site-header .brand-mark {
+  transform: translate3d(0, 0, 0);
+  transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.muzej-logo-hidden .site-header .brand-mark {
+  transform: translate3d(0, calc(-100% - 42px), 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header .brand-mark {
+    transition: none;
+    will-change: auto;
+  }
+
+  body.muzej-logo-hidden .site-header .brand-mark {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header { z-index: 2000; }
+  .site-header .header-frame { grid-template-columns: minmax(0, 1fr) auto; align-items: center; justify-items: stretch; gap: 1rem; }
+  .site-header .brand-mark { justify-self: start; min-width: 0; }
+  .site-header .header-tools { justify-self: end; justify-content: flex-end; margin-left: auto; position: relative; z-index: 2002; }
+  .site-header .utility-menu { position: static; }
+  .site-header .utility-trigger { position: relative; z-index: 2003; }
+  .site-header .utility-panel { position: fixed; inset: 0; left: 0; right: 0; top: 0; z-index: 2001; display: grid; align-content: center; width: 100vw; max-width: none; min-width: 0; height: 100vh; height: 100svh; padding: clamp(76px, 18vh, 128px) var(--page-x) 48px; border: 0; background: rgba(255, 255, 255, 0.98); box-shadow: none; overflow-y: auto; transform: none; }
+  .site-header .utility-panel-group { width: min(100%, 22rem); margin: 0 auto; }
+  .site-header .utility-panel-utility { margin-top: 0.8rem; padding-top: 0.85rem; }
+  .site-header .utility-panel .utility-link,
+  .site-header .utility-panel .utility-menu-item { justify-content: center; min-height: 2.75rem; padding: 0.72rem 0; text-align: center; }
+}
+
+
+@media (max-width: 768px) {
+  .site-header .brand-mark {
+    width: 124px;
+    height: 25px;
+  }
+
+  .site-header .brand-mark-image {
+    width: 153.97px;
+    left: -15.13px;
+    top: -83.62px;
+  }
+}
+</style>
+<link href="more-from-muzej.css?v=20260810-plantin-final" rel="stylesheet"/>
+<style>
+.vangel-article .feature-title {
+  font-family: "plantin", Georgia, serif;
+  font-size: clamp(42px, 5.2vw, 82px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+@media (max-width: 980px) {
+  .vangel-article .feature-title {
+    font-size: clamp(34px, 4.35vw, 58px);
+  }
+}
+
+@media (max-width: 720px) {
+  .vangel-article .feature-title {
+    font-size: clamp(30px, 8.2vw, 38px);
+    line-height: 1.03;
+    width: calc(100vw - (var(--page-x) * 2));
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+}
+</style>
+<script defer="" src="more-from-muzej.js?v=20260916-venus"></script>
+<link href="muzej-footer-logo.css?v=20260914" rel="stylesheet"/>
+</link></link><style>
+/* Empty image fields for Venus Pudica. */
+.venus-image-placeholder {
+  width: 100%;
+  background: #f4f2ed;
+}
+.feature-media .venus-image-placeholder {
+  height: clamp(620px, 80vh, 920px);
+}
+.article-body-media .venus-image-placeholder {
+  aspect-ratio: 4 / 5;
+}
+.gallery-reading-media .venus-image-placeholder,
+.gallery-reading-feature .venus-image-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+@media (max-width: 980px) {
+  .feature-media .venus-image-placeholder { height: clamp(500px, 70vh, 720px); }
+}
+@media (max-width: 720px) {
+  .feature-media .venus-image-placeholder { height: clamp(360px, 56vh, 470px); }
+}
+</style></head>
+<body class="kinfolk-article-hero vangel-article">
+<header class="site-header">
+<div class="shell header-frame">
+<a aria-label="Muzej home" class="brand-mark" href="index.html">
+<img alt="" aria-hidden="true" class="brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png"/>
+</a>
+<div class="header-tools">
+<details class="utility-menu">
+<summary aria-label="Open navigation menu" class="utility-trigger">
+<span aria-hidden="true" class="utility-icon">
+<span class="utility-icon-line"></span>
+<span class="utility-icon-line"></span>
+<span class="utility-icon-line"></span>
+</span>
+</summary>
+<nav aria-label="Site navigation" class="utility-panel">
+<div class="utility-panel-group">
+<a class="utility-link" href="index.html">Home</a>
+<a class="utility-link" href="index.html#selected-stories">Selected Stories</a>
+<a class="utility-link" href="index.html#in-rotation">In Rotation</a>
+<a class="utility-link" href="index.html#field-notes">Field Notes</a>
+<a class="utility-link" href="about.html">About Muzej</a>
+</div>
+<div class="utility-panel-group utility-panel-utility">
+<a class="utility-link" href="mailto:muzej.mk@proton.me">Contact</a>
+<a class="utility-link" href="https://www.instagram.com/muzej.mk/" rel="noopener noreferrer" target="_blank">Instagram</a>
+</div>
+</nav>
+</details>
+</div>
+</div>
+</header>
+<main>
+<header class="feature">
+<div class="feature-inner">
+<figure class="feature-media">
+<img alt="The Venus of Skupi as discovered during excavation." decoding="async" fetchpriority="high" loading="eager" src="./Assets/Venus%20Skupi/venusskupi_website-02.png"/></figure>
+<div class="feature-copy">
+<p class="feature-byline">Words Ace Trajkovski</p>
+<h1 class="feature-title">The Venus of Skupi</h1>
+</div>
+</div>
+<p aria-hidden="true" class="feature-deck"></p>
+</header>
+<article class="article-shell">
+<section class="article-body">
+<figure class="article-body-media">
+<img alt="Frontal view of the marble head associated with the Venus of Skupi." decoding="async" loading="lazy" src="./Assets/Venus%20Skupi/venusskupi_website-01.png"/></figure>
+<div class="article-body-copy body-block"><h2 class="section-heading">The Object</h2><p>The Venus Pudica from Scupi is a monumental marble statue of Venus or Aphrodite discovered in July 2008 in the remains of the city's large thermal complex. Scupi was the Roman-era city of Colonia Flavia Scupinorum, located on the outskirts of present-day Skopje.</p><p>The sculpture represents a nude female figure standing in contrapposto. Her weight falls primarily on the left leg, while the arms cross the body in the characteristic pudica gesture, simultaneously revealing and concealing the nude. A dolphin stands vertically beside the left leg.</p><p>Macedonian archaeological cataloguing identifies the sculpture as being carved from fine-grained white Parian marble. Its monumental scale and highly finished carving distinguish it from the small Venus statuettes and fragments more commonly encountered in Roman provincial contexts.</p><p>The sculpture is generally dated to the second century CE. Some secondary sources have proposed a third-century date, but the second-century dating is the stronger formulation for publication based on the archaeological and art-historical material currently available.</p><p>The figure belongs to the long classical tradition of the monumental female nude. The weight-bearing left leg establishes the principal axis of the figure, while the relaxed opposite leg produces a shift through the hips and torso characteristic of contrapposto. The arms introduce a contrasting movement across the body, creating a composition in which the figure's physical balance and gesture work together.</p><p>The arms are particularly important. They cross the nude body in the conventional pudica gesture, covering portions of the breasts and pubic region. The gesture does not simply conceal the body. By drawing attention to the areas being covered, it simultaneously emphasizes the nude. This tension between exposure and concealment is fundamental to the pudica type.</p><h2 class="section-heading">The Pudica Tradition</h2><p>The term pudica does not identify a single statue or a single ancient composition. It describes an iconographic family in which a nude female figure covers the breasts, the pubic area, or both.</p><p>The convention developed through the changing representation of the female nude in late Classical and Hellenistic sculpture. The gesture became one of the most recognizable ways in which Aphrodite or Venus could be represented as a nude figure.</p><p>The most important point of departure for the history of the female nude is the Aphrodite of Knidos by Praxiteles, created in the fourth century BCE. The original sculpture is lost, but its influence was extensive. The Knidian Aphrodite established the nude female deity as a major subject of monumental Greek sculpture and became one of the most frequently reproduced and reinterpreted images of antiquity.</p><p>Later sculptors did not simply reproduce the original figure mechanically. They developed new versions of the nude, changing the pose, proportions, gestures and relationship between the figure and its attributes. The pudica tradition belongs to this history of transformation.</p><p>The Scupi Venus should therefore not be described as a copy of Praxiteles' Aphrodite of Knidos. Praxiteles represents an important ancestral point in the development of the type, while the Scupi sculpture is a Roman Imperial work that belongs to a later and continually modified sculptural tradition.</p><p>The word pudica describes a visual convention rather than a statement about the figure's personality or character. The sculpture creates modesty through the act of covering while simultaneously presenting the nude body to view.</p><h2 class="section-heading">The Dolphin and the Marble</h2><p>The dolphin beside the figure's left leg has both iconographic and structural significance. As an attribute of Venus, the dolphin evokes the goddess's connection with the sea and her marine birth. Dolphins and other marine creatures appear in representations of Venus throughout ancient sculpture.</p><p>The dolphin also performs a practical function. Monumental marble figures are structurally vulnerable at narrow points such as the ankles and lower legs. Sculptors therefore incorporated additional elements into the composition to reinforce these areas. Dolphins, drapery, tree trunks, Erotes and vessels could function simultaneously as visual motifs and structural supports.</p><p>The dolphin at Scupi should be understood in this dual capacity. It contributes to the identification of the goddess while also helping to support the marble figure. Its presence acquires an additional visual resonance because the sculpture was found in a thermal complex organized around water. That relationship is suggestive, but the dolphin should not be treated as evidence of a uniquely local or Macedonian symbolism. Its association with Venus is already well established within the broader sculptural tradition.</p><p>The sculpture is identified in Macedonian cataloguing as being carved from Parian marble. Paros was one of the major sources of highly valued sculptural marble in the ancient Mediterranean. Fine-grained marble was particularly suited to the representation of the human body, allowing sculptors to produce refined transitions across the surface and a luminous treatment of flesh.</p><p>The use of Parian marble places the Scupi Venus within the wider material networks through which prized stone circulated throughout the Mediterranean.</p><p>The material is significant because it demonstrates access to a prestigious sculptural medium, but it does not by itself establish where the statue was carved. The identification of Parian marble cannot independently establish the workshop, sculptor or precise route by which the material or finished sculpture reached Scupi. The Medici Venus provides a useful comparison because it too is carved from Parian marble, although the two sculptures belong to different periods and specific sculptural traditions.</p></div>
+<div aria-hidden="true" class="empty-tail"></div>
+</section>
+<div class="content-row">
+<div aria-hidden="true" class="empty-rail"></div>
+<aside class="pull-quote">The sculpture creates modesty through the act of covering while simultaneously presenting the nude body to view.</aside>
+<div aria-hidden="true" class="empty-tail"></div>
+</div>
+<section aria-label="Venus Pudica image placeholders" class="gallery-reading">
+<figure class="gallery-reading-media">
+<img alt="Wider excavation view of the Venus of Skupi in situ." decoding="async" loading="lazy" src="./Assets/Venus%20Skupi/venusskupi_website-07.png"/></figure>
+<div class="gallery-reading-side">
+<figure class="gallery-reading-feature">
+<img alt="Three-quarter view of the marble head associated with the Venus of Skupi." decoding="async" loading="lazy" src="./Assets/Venus%20Skupi/venusskupi_website-03.png"/></figure>
+</div>
+</section>
+<section class="article-body article-body-lower">
+<figure class="article-body-media">
+<img alt="Full-length view of a Venus Pudica sculpture." decoding="async" loading="lazy" src="./Assets/Venus%20Skupi/venusskupi_website-04.png"/></figure>
+<div class="article-body-copy body-block"><h2 class="section-heading">Venus and the Baths</h2><p>The sculpture was discovered not in a temple or tomb but within the remains of the large thermal complex at Scupi.</p><p>Marina Ončevska Todorovska, who published the statue, interpreted its placement as part of the visual environment of the baths. Contemporary reporting records her describing the statue as having been buried where the bathhouse stood and as intended to be seen by bathers.</p><p>The setting is significant because Roman baths were environments in which water, the body, grooming, leisure, exercise, sociability and architectural display were brought together.</p><p>Venus was an especially appropriate figure for such an environment. Her mythology and iconography connected her with beauty, the nude body, bathing, adornment, pleasure and water. The Aphrodite of Knidos itself was understood as a goddess associated with bathing, and later representations of Venus continued to exploit this relationship.</p><p>The Scupi sculpture therefore brought an established image of the nude goddess into an architectural environment already concerned with the human body and water.</p><p>The evidence does not, however, establish that the bath complex contained a sanctuary to Venus or that the sculpture served as a cult image. Its placement is better understood through the documented interpretation of the statue as part of the visual environment of the baths.</p><p>There is also evidence for Venus within the religious landscape of Scupi. A study of Roman-period cults and material from the region cites both the Venus sculpture and a votive altar dedicated to Venus from Colonia Flavia Scupi.</p><p>This evidence establishes that Venus formed part of the city's religious landscape. It does not, however, prove that the sculpture from the baths was itself a cult object. The two forms of evidence belong to different contexts and should not be collapsed into a single interpretation.</p><p>The existence of the altar nevertheless provides useful context for understanding why the image of Venus could have occupied a place within the public and architectural environment of Scupi.</p><h2 class="section-heading">Scupi and the Sculpture</h2><p>Scupi was a Roman colonial city known as Colonia Flavia Scupinorum. Archaeological work has documented a substantial urban environment that included monumental public buildings, a theatre, baths, necropolises and later Christian architecture.</p><p>The Venus belongs to the period in which Scupi participated in the urban and material culture of the Roman Empire.</p><p>Its significance lies partly in the combination of scale, material, artistic type and context. A monumental Venus in Parian marble, based upon a prestigious Greek and Hellenistic sculptural tradition, was present within a major Roman urban complex in Macedonia.</p><p>The evidence does not require the conclusion that Scupi possessed a major sculptural workshop of its own. Nor does it establish the exact origin of the finished statue.</p><p>What it does demonstrate is the circulation of established Mediterranean artistic forms into Roman Macedonia. The sculpture therefore provides material evidence for the participation of Scupi in the broader visual culture of the Roman world.</p><p>The Scupi Venus is particularly significant in comparison with the other representations of Venus known from Roman-period Macedonia. Images of Aphrodite and Venus occur elsewhere in the region, including heads, statuettes and other figures associated with sites such as Stobi and Marvinci.</p><p>The Scupi sculpture differs in scale and ambition. It is a monumental figure rather than a small domestic or decorative object, and Macedonian archaeological literature repeatedly emphasizes the quality of its execution.</p><p>Its importance therefore lies not merely in the survival of another image of Venus but in the survival of a monumental and highly refined example of an important sculptural type.</p></div>
+<div aria-hidden="true" class="empty-tail"></div>
+</section>
+<section aria-label="Venus Pudica image placeholders" class="gallery-reading">
+<figure class="gallery-reading-media">
+<img alt="Close detail of a marble Venus face." decoding="async" loading="lazy" src="./Assets/Venus%20Skupi/venusskupi_website-06.png"/></figure>
+<div class="gallery-reading-side">
+<figure class="gallery-reading-feature">
+<div aria-hidden="true" class="venus-image-placeholder"></div></figure>
+</div>
+</section>
+<section class="article-body article-body-lower">
+<figure class="article-body-media">
+<img alt="Profile view of the marble head associated with the Venus of Skupi." decoding="async" loading="lazy" src="./Assets/Venus%20Skupi/venusskupi_website-05.png"/></figure>
+<div class="article-body-copy body-block"><h2 class="section-heading">Discovery and Reconstruction</h2><p>The statue was uncovered in July 2008 during excavation of the thermal complex at Scupi. The discovery attracted international attention because of the sculpture's scale, preservation and quality. By November 2008, Archaeology magazine had published the discovery under the headline "A Modest Venus." The contemporary account is useful because it records the early interpretation of the statue and its placement within the baths.</p><p>The statue was discovered in sixteen fragments, with portions of the feet and legs missing. The conservation process included analysis of the marble and salts, cleaning of the joining surfaces and the installation of mechanical reinforcement.</p><p>Stainless-steel elements and an internal support system were used to reconnect the fragments and restore the sculpture's structural stability. The system was designed to remain detachable and reversible.</p><p>The reconstruction is particularly relevant to the formal analysis because the sculpture's contrapposto had to be physically recovered from the surviving fragments.</p><p>The Venus seen today is therefore an ancient sculpture whose present configuration depends in part upon modern conservation. The restoration does not create a new composition; it reconstructs the spatial relationship indicated by the surviving evidence.</p><p>The Venus Pudica from Scupi belongs to one of antiquity's most important traditions of representing the female nude. Its formal language ultimately reaches back to the Aphrodite of Knidos and the transformation of the nude female deity that followed in Hellenistic sculpture. The pudica gesture became one of the principal conventions through which Aphrodite and Venus could be represented, and Roman sculptors repeatedly adapted these established types.</p><p>The Scupi sculpture represents one such Roman adaptation. Its monumental scale, refined execution and Parian marble place it within a sophisticated sculptural culture, while its association with the thermal complex connects the image to an architectural environment concerned with water, the body and public leisure.</p><p>Its presence at Scupi demonstrates the circulation of ancient artistic traditions within Roman Macedonia. The sculpture is therefore important not simply because a Roman Venus survived in the territory of present-day Vardar Macedonia, but because its form records the movement and transformation of a major classical sculptural tradition across time and geography.</p></div>
+<div aria-hidden="true" class="empty-tail"></div>
+</section>
+</article>
+<section aria-labelledby="more-from-muzej-title" class="more-from-muzej" data-more-from-muzej=""></section>
+</main>
+<footer class="site-footer muzej-footer">
+<div class="footer-inner">
+<div class="footer-brand">
+<a aria-label="Muzej home" class="footer-brand-mark" href="index.html"><img alt="" aria-hidden="true" class="footer-brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png"/></a>
+<p class="footer-statement">An editorial archive of Macedonian art, style, tradition, and culture.</p>
+</div>
+<nav aria-label="Footer navigation" class="footer-links">
+<a href="about.html">About Muzej</a>
+<a href="mailto:muzej.mk@proton.me">Contact</a>
+<a aria-label="Open Muzej on Instagram" href="https://www.instagram.com/muzej.mk/" rel="noopener noreferrer" target="_blank">Instagram</a>
+</nav>
+</div>
+</footer>
+<script>
+const menuButton = document.getElementById('menuButton');
+const menuPanel = document.getElementById('menuPanel');
+
+if (menuButton && menuPanel) {
+  const setMenuState = (isOpen) => {
+    menuPanel.classList.toggle('open', isOpen);
+    menuButton.classList.toggle('is-open', isOpen);
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+    menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  };
+
+  menuButton.addEventListener('click', () => {
+    setMenuState(!menuPanel.classList.contains('open'));
+  });
+
+  menuPanel.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setMenuState(false));
+  });
+}
+</script>
+<script>
+  (function () {
+    var previousY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+    var ticking = false;
+    var revealZone = 24;
+    var motionThreshold = 4;
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    function updateMuzejLogoVisibility() {
+      var currentY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+      var delta = currentY - previousY;
+
+      if (reducedMotion.matches) {
+        document.body.classList.remove("muzej-logo-hidden");
+        ticking = false;
+        return;
+      }
+
+      if (currentY <= revealZone) {
+        document.body.classList.remove("muzej-logo-hidden");
+      } else if (delta > motionThreshold) {
+        document.body.classList.add("muzej-logo-hidden");
+      } else if (delta < -motionThreshold) {
+        document.body.classList.remove("muzej-logo-hidden");
+      }
+
+      previousY = currentY;
+      ticking = false;
+    }
+
+    function requestMuzejLogoVisibility() {
+      if (!ticking) {
+        window.requestAnimationFrame(updateMuzejLogoVisibility);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener("scroll", requestMuzejLogoVisibility, { passive: true });
+    window.addEventListener("resize", requestMuzejLogoVisibility);
+
+    if (reducedMotion.addEventListener) {
+      reducedMotion.addEventListener("change", requestMuzejLogoVisibility);
+    } else if (reducedMotion.addListener) {
+      reducedMotion.addListener(requestMuzejLogoVisibility);
+    }
+
+    updateMuzejLogoVisibility();
+  })();
+</script>
+</body>
+</html>

@@ -1,6 +1,16 @@
 (function () {
   var articles = [
     {
+      slug: "venus-of-skupi",
+      href: "venus-of-skupi.html",
+      title: "The Venus of Skupi",
+      kicker: "Art | Antiquity",
+      dek: "A monumental Roman Venus from Skupi and the classical sculptural tradition that shaped her.",
+      image: "./Assets/Venus%20Skupi/venusskupi_website-02.png",
+      alt: "The Venus of Skupi as discovered during excavation.",
+      position: "center center"
+    },
+    {
       slug: "dodole",
       href: "dodole.html",
       title: "Dodole",
