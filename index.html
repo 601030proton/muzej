@@ -2954,11 +2954,20 @@
             cardImage: "./Assets/Dodole/rain2.png",
             cardAlt: "Black-and-white archival photograph of women and girls gathered around a Macedonian rain-making ritual.",
             alt: "Black-and-white archival photograph of women and girls gathered around a Macedonian rain-making ritual."
+          },
+          venus: {
+            title: "The Venus of Skupi",
+            href: "./venus-of-skupi.html",
+            meta: "Art | Antiquity",
+            heroImage: "./Assets/Venus/venusskupi_website-01.png",
+            cardImage: "./Assets/Venus/venusskupi_website-01.png",
+            cardAlt: "Marble head associated with the Venus of Skupi.",
+            alt: "Marble head associated with the Venus of Skupi."
           }
         };
 
         var heroRotationSlugs = ["quality", "stranci", "tokyo", "nation"];
-        var selectedStorySlugs = ["tokyo", "prespa", "quality", "nation", "stranci", "newWave", "dodole"];
+        var selectedStorySlugs = ["tokyo", "prespa", "quality", "nation", "venus", "newWave", "dodole"];
         var selectedSlug = heroRotationSlugs[Math.floor(Math.random() * heroRotationSlugs.length)];
         var selectedArticle = articles[selectedSlug];
 
