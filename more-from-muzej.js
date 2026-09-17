@@ -6,7 +6,7 @@
       title: "The Venus of Skupi",
       kicker: "Art | Antiquity",
       dek: "A monumental Roman Venus from Skupi and the classical sculptural tradition that shaped her.",
-      image: "./Assets/Venus%20Skupi/venusskupi_website-02.png",
+      image: "./Assets/Venus/venusskupi_website-02.png",
       alt: "The Venus of Skupi as discovered during excavation.",
       position: "center center"
     },
