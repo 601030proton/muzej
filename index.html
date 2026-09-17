@@ -2408,7 +2408,22 @@
   object-fit: contain;
 }
 </style>
-</link></link></head>
+</link></link>
+<style>
+/* Slightly more breathing room around the Ohrid feature only. */
+#ohrid-feature {
+  padding-top: clamp(148px, 15vw, 240px);
+  padding-bottom: clamp(168px, 16vw, 276px);
+}
+@media (max-width: 720px) {
+  #ohrid-feature {
+    padding-top: 104px;
+    padding-bottom: 124px;
+  }
+}
+</style>
+
+</head>
 <body>
 <div class="page">
 <header class="site-header">
@@ -2607,6 +2622,26 @@
 </div>
 </div>
 </section>
+
+<section aria-label="Interviews" class="section editorial-spread">
+<div class="shell editorial-spread-grid">
+<a class="editorial-spread-card editorial-spread-card--no-image-overlay" href="./marko-micov.html">
+<img alt="Marko Micov ballet portrait." loading="lazy" src="./Assets/Marko%20Interview/Text%20and%20Photos/Images/Micov-Color-Photo_Rachel_Malehorn-17.jpg" style="object-position: center top;"/>
+<div class="editorial-spread-copy">
+<p class="editorial-spread-eyebrow">Interview | Ballet</p>
+<h2 class="editorial-spread-title">Marko Micov Carries Macedonia With Him</h2>
+</div>
+</a>
+<a class="editorial-spread-card" href="./robert-gligorov.html">
+<img alt="Robert Gligorov." loading="lazy" src="./Assets/Robert%20Gligorov/For%20Website/Gligorov-01.png" style="object-position: center top;"/>
+<div class="editorial-spread-copy">
+<p class="editorial-spread-eyebrow">Interview</p>
+<h2 class="editorial-spread-title">Robert Gligorov: Between the Dream and Reality</h2>
+</div>
+</a>
+</div>
+</section>
+
 <section aria-labelledby="explore-title" class="section" id="field-notes">
 <div class="shell section-frame">
 <div class="explore-header">
