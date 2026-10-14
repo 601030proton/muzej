@@ -2491,7 +2491,7 @@
 <h2 class="kinfolk-feature-title" id="ohrid-feature-title">The Ohrid House and the Logic of Place</h2>
 </a>
 <a aria-label="Read The Ohrid House and the Logic of Place" class="kinfolk-feature-media-link" href="./lake-ohrid-architecture-memory.html">
-<img alt="Black-and-white collage of Ohrid house architecture with white plaster and dark timber windows." class="kinfolk-feature-image" loading="lazy" src="./Assets/Ohrid%20Architecture/Images/cover.png"/>
+<img alt="Black-and-white collage of Ohrid house architecture with white plaster and dark timber windows." class="kinfolk-feature-image" loading="lazy" src="./Assets/Ohrid%20Architecture/Images/BW%20Ohrid%20House/New%20Cover.png"/>
 </a>
 </article>
 </div>
@@ -2502,12 +2502,12 @@
 <h2 class="now-playing-title" id="now-playing-title">Now Playing</h2>
 </div>
 <article class="now-playing-feature">
-<a aria-label="Watch Rhythm and Sound (1955), directed by Trajče Popov on YouTube" class="now-playing-media" href="https://www.youtube.com/watch?v=zLmtG7q3k8s&amp;t=156s" rel="noopener noreferrer" target="_blank">
-<img alt="Rhythm and Sound (1955), directed by Trajče Popov" loading="lazy" src="./Assets/In%20Rotation/now-playing-rhythm-and-sound.png"/>
+<a aria-label="Watch Rhythm and Sound (1955), directed by Trajče Popov on YouTube" class="now-playing-media" data-now-playing-media href="https://www.youtube.com/watch?v=zLmtG7q3k8s&amp;t=156s" rel="noopener noreferrer" target="_blank">
+<img alt="Rhythm and Sound (1955), directed by Trajče Popov" data-now-playing-image loading="lazy" src="./Assets/In%20Rotation/now-playing-rhythm-and-sound.png"/>
 <span aria-hidden="true" class="now-playing-play"></span>
 </a>
 <h3 class="now-playing-caption">
-<a href="https://www.youtube.com/watch?v=zLmtG7q3k8s&amp;t=156s" rel="noopener noreferrer" target="_blank">
+<a data-now-playing-caption href="https://www.youtube.com/watch?v=zLmtG7q3k8s&amp;t=156s" rel="noopener noreferrer" target="_blank">
                   Rhythm and Sound (1955) | Directed by Trajče Popov
                 </a>
 </h3>
@@ -3074,5 +3074,48 @@
       })();
 
     </script>
+
+<script>
+(function () {
+  var choices = [
+    {
+      href: "https://www.youtube.com/watch?v=zLmtG7q3k8s&t=156s",
+      image: "./Assets/In%20Rotation/now-playing-rhythm-and-sound.png",
+      alt: "Rhythm and Sound (1955), directed by Trajče Popov",
+      caption: "Rhythm and Sound (1955) | Directed by Trajče Popov"
+    },
+    {
+      href: "https://youtu.be/bu4reJk0cNM?si=EW0vvARVbsFO1S5y",
+      image: "https://i.ytimg.com/vi/bu4reJk0cNM/hqdefault.jpg",
+      alt: "YouTube video thumbnail",
+      caption: "Watch on YouTube"
+    },
+    {
+      href: "https://youtu.be/0LTF3Sv5eoc?si=kIxv3v_-8cvx9SRP",
+      image: "https://i.ytimg.com/vi/0LTF3Sv5eoc/hqdefault.jpg",
+      alt: "YouTube video thumbnail",
+      caption: "Watch on YouTube"
+    }
+  ];
+
+  var selected = choices[Math.floor(Math.random() * choices.length)];
+  var media = document.querySelector("[data-now-playing-media]");
+  var image = document.querySelector("[data-now-playing-image]");
+  var caption = document.querySelector("[data-now-playing-caption]");
+
+  if (media) {
+    media.href = selected.href;
+    media.setAttribute("aria-label", selected.caption);
+  }
+  if (image) {
+    image.src = selected.image;
+    image.alt = selected.alt;
+  }
+  if (caption) {
+    caption.href = selected.href;
+    caption.textContent = selected.caption;
+  }
+})();
+</script>
 </body>
 </html>
