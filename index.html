@@ -2491,7 +2491,7 @@
 <h2 class="kinfolk-feature-title" id="ohrid-feature-title">The Ohrid House and the Logic of Place</h2>
 </a>
 <a aria-label="Read The Ohrid House and the Logic of Place" class="kinfolk-feature-media-link" href="./lake-ohrid-architecture-memory.html">
-<img alt="Black-and-white collage of Ohrid house architecture with white plaster and dark timber windows." class="kinfolk-feature-image" loading="lazy" src="./Assets/Ohrid%20Architecture/Images/BW%20Ohrid%20House/Ohrid-cover-20261014.png"/>
+<img alt="Black-and-white collage of Ohrid house architecture with white plaster and dark timber windows." class="kinfolk-feature-image" loading="lazy" src="./Assets/Ohrid%20Architecture/Images/BW%20Ohrid%20House/New%20Cover.png?v=20261014-final"/>
 </a>
 </article>
 </div>
@@ -2722,57 +2722,22 @@
 <script>
 (function () {
   var choices = [
-    {
-      href: "https://www.youtube.com/watch?v=zLmtG7q3k8s&t=156s",
-      image: "./Assets/In%20Rotation/now-playing-rhythm-and-sound.png",
-      alt: "Rhythm and Sound (1955), directed by Trajče Popov",
-      caption: "Rhythm and Sound (1955) | Directed by Trajče Popov"
-    },
-    {
-      href: "https://youtu.be/bu4reJk0cNM?si=EW0vvARVbsFO1S5y",
-      image: "https://img.youtube.com/vi/bu4reJk0cNM/hqdefault.jpg",
-      alt: "YouTube video thumbnail",
-      caption: "Watch on YouTube"
-    },
-    {
-      href: "https://youtu.be/0LTF3Sv5eoc?si=kIxv3v_-8cvx9SRP",
-      image: "https://img.youtube.com/vi/0LTF3Sv5eoc/hqdefault.jpg",
-      alt: "YouTube video thumbnail",
-      caption: "Watch on YouTube"
-    }
+    { href: "https://www.youtube.com/watch?v=zLmtG7q3k8s&t=156s", image: "./Assets/In%20Rotation/now-playing-rhythm-and-sound.png", alt: "Rhythm and Sound (1955), directed by Trajče Popov", caption: "Rhythm and Sound (1955) | Directed by Trajče Popov" },
+    { href: "https://youtu.be/bu4reJk0cNM?si=EW0vvARVbsFO1S5y", image: "https://i.ytimg.com/vi/bu4reJk0cNM/hqdefault.jpg", alt: "YouTube video thumbnail", caption: "Watch on YouTube" },
+    { href: "https://youtu.be/0LTF3Sv5eoc?si=kIxv3v_-8cvx9SRP", image: "https://i.ytimg.com/vi/0LTF3Sv5eoc/hqdefault.jpg", alt: "YouTube video thumbnail", caption: "Watch on YouTube" }
   ];
-
-  function randomIndex(max) {
-    if (window.crypto && window.crypto.getRandomValues) {
-      var values = new Uint32Array(1);
-      window.crypto.getRandomValues(values);
-      return values[0] % max;
-    }
-    return Math.floor(Math.random() * max);
-  }
-
   function applyNowPlaying() {
-    var media = document.querySelector("#now-playing .now-playing-media");
-    var image = document.querySelector("#now-playing .now-playing-media img");
-    var captionLink = document.querySelector("#now-playing .now-playing-caption a");
-
-    if (!media || !image || !captionLink) return;
-
-    var selected = choices[randomIndex(choices.length)];
-
-    media.href = selected.href;
-    media.setAttribute("aria-label", selected.alt);
-    image.src = selected.image;
-    image.alt = selected.alt;
-    captionLink.href = selected.href;
-    captionLink.textContent = selected.caption;
+    var media=document.querySelector("#now-playing .now-playing-media");
+    var image=document.querySelector("#now-playing .now-playing-media img");
+    var caption=document.querySelector("#now-playing .now-playing-caption a");
+    if(!media||!image||!caption)return;
+    var selected=choices[Math.floor(Math.random()*choices.length)];
+    media.href=selected.href; media.setAttribute("aria-label",selected.alt);
+    image.src=selected.image; image.alt=selected.alt;
+    caption.href=selected.href; caption.textContent=selected.caption;
   }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", applyNowPlaying, { once: true });
-  } else {
-    applyNowPlaying();
-  }
+  if(document.readyState==="loading") document.addEventListener("DOMContentLoaded",applyNowPlaying,{once:true});
+  else applyNowPlaying();
 })();
 </script>
 <script>
