@@ -1566,7 +1566,7 @@
         font-size: clamp(1.85rem, 2.65vw, 2.9rem);
         line-height: 1.05;
         letter-spacing: -0.01em;
-        color: #B65A3C;
+        color: #000000;
         white-space: nowrap;
         overflow-wrap: normal;
       }
@@ -2423,6 +2423,25 @@
 }
 </style>
 
+<style>
+/* Skopje lead: Swiss-modernist composition, scoped to homepage hero only. */
+.skopje-home-hero { padding: 0; background: #fff; }
+.skopje-home-hero-shell { max-width: none; }
+.skopje-home-hero-stage { display: grid; grid-template-columns: minmax(0, 1.18fr) minmax(0, 1fr); gap: clamp(22px, 3vw, 54px); min-height: min(780px, calc(100svh - 100px)); align-items: stretch; }
+.skopje-home-hero-copy { display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; min-width: 0; padding: 0 0 clamp(18px, 2.3vw, 36px); }
+.skopje-home-hero-copy h1 { margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: clamp(48px, 5.6vw, 102px); font-weight: 400; line-height: .91; letter-spacing: -.065em; color: #111; text-transform: lowercase; }
+.skopje-home-hero-copy h1 a { color: inherit; text-decoration: none; }
+.skopje-home-hero-meta { margin: clamp(24px, 3vw, 46px) 0 0; font-family: var(--sans); font-size: 10px; line-height: 1.3; letter-spacing: .04em; color: #444; }
+.skopje-home-hero-media { display: block; min-height: 0; overflow: hidden; }
+.skopje-home-hero-media img { display: block; width: 100%; height: 100%; max-height: 780px; object-fit: cover; object-position: center; }
+@media (max-width: 760px) {
+ .skopje-home-hero-stage { grid-template-columns: 1fr; min-height: 0; gap: 24px; }
+ .skopje-home-hero-copy { min-height: 260px; padding-bottom: 0; }
+ .skopje-home-hero-copy h1 { font-size: clamp(44px, 10.8vw, 76px); }
+ .skopje-home-hero-media { height: min(65svh, 540px); }
+ .skopje-home-hero-media img { height: 100%; }
+}
+</style>
 </head>
 <body>
 <div class="page">
@@ -2457,22 +2476,14 @@
 </div>
 </header>
 <main class="home">
-<section aria-labelledby="hero-title" class="hero-feature hero-feature--lazarki-fashion" id="hero-feature">
-<div class="shell lazarki-fashion-shell">
-<article class="lazarki-fashion-hero" data-story="lazarki-lead">
-<div aria-label="Article category and title note" class="lazarki-fashion-meta">
-<span>ETHNOGRAPHY</span>
-<span>KITO MITO NEVESTO</span>
+<section aria-labelledby="hero-title" class="hero-feature skopje-home-hero" id="hero-feature">
+<div class="shell skopje-home-hero-shell">
+<article class="skopje-home-hero-stage" data-story="skopje-brutalism-lead">
+<div class="skopje-home-hero-copy">
+<h1 id="hero-title"><a href="./skopje-brutalism-with-images.html">a spatial field guide<br/>to concrete skopje</a></h1>
+<p class="skopje-home-hero-meta">ARCHITECTURE / SKOPJE</p>
 </div>
-<h1 class="lazarki-fashion-title" id="hero-title">
-<a href="./lazarki.html">ЛАЗАРКИ</a>
-</h1>
-<a aria-label="Read Lazarki" class="lazarki-fashion-media" href="./lazarki.html">
-<img alt="Girls performing Lazarki in traditional Macedonian dress" src="./Assets/Lazarki/lazarki-01.png"/>
-<span class="lazarki-fashion-inline-tag">[ Na Vrtenje ]</span>
-<span class="lazarki-fashion-vertical-tag">[ Vijur Vijur Gajdanot ]</span>
-</a>
-<span aria-label="Edition 2027" class="lazarki-fashion-year">2027</span>
+<a class="skopje-home-hero-media" href="./skopje-brutalism-with-images.html" aria-label="Read A Spatial Field Guide to Concrete Skopje"><img src="./Assets/A%20Spatial%20Field%20Guide%20to%20Concrete%20Skopje/hero.png" alt="Architectural plan from Skopje's post-earthquake modernist period"/></a>
 </article>
 </div>
 </section>
@@ -2481,7 +2492,7 @@
 <div class="read-next-header">
 <h2 class="read-next-title">Selected Stories</h2>
 </div>
-<div class="story-grid"><article class="story-card"><a class="story-card-link" href="./skopje-tange.html"><img alt="Editorial collage portrait with red geometric forms and brutalist architecture." class="story-image" loading="lazy" src="./Assets/Kenzo%20Article/Tange%20Pics/final.png"/></a><div class="story-card-copy"><p class="story-card-kicker">Architecture | Urbanism</p><h3 class="story-card-title"><a href="./skopje-tange.html">Tokyo on the Vardar</a></h3></div></article><article class="story-card"><a class="story-card-link" href="./quality-of-life.html"><img alt="Collage for the Quality of Life Survey 2026." class="story-image" loading="lazy" src="./Assets/Quality%20of%20Life/hero-final.png"/></a><div class="story-card-copy"><p class="story-card-kicker">Quality of Life | Urbanism</p><h3 class="story-card-title"><a href="./quality-of-life.html">Quality of Life Survey 2026</a></h3></div></article><article class="story-card"><a class="story-card-link" href="./wearing-the-nation.html"><img alt="Portrait crop of Macedonian football shirts in red, yellow, and white." class="story-image" loading="lazy" src="./Assets/Wearing%20the%20Nation/nation-on-their-backs-index-portrait.png"/></a><div class="story-card-copy"><p class="story-card-kicker">Sport | Design</p><h3 class="story-card-title"><a href="./wearing-the-nation.html">The Nation on Their Backs</a></h3></div></article><article class="story-card"><a class="story-card-link" href="./venus-of-skupi.html"><img alt="Marble head associated with the Venus of Skupi." class="story-image" loading="lazy" src="./Assets/Venus/venusskupi_website-01.png"/></a><div class="story-card-copy"><p class="story-card-kicker">Art | Antiquity</p><h3 class="story-card-title"><a href="./venus-of-skupi.html">The Venus of Skupi</a></h3></div></article></div>
+<div class="story-grid"><article class="story-card"><a class="story-card-link" href="./lazarki.html"><img alt="Girls performing Lazarki in traditional Macedonian dress" class="story-image" loading="lazy" src="./Assets/Lazarki/lazarki-03.png"/></a><div class="story-card-copy"><p class="story-card-kicker">Ritual</p><h3 class="story-card-title"><a href="./lazarki.html">Lazarki</a></h3></div></article><article class="story-card"><a class="story-card-link" href="./quality-of-life.html"><img alt="Collage for the Quality of Life Survey 2026." class="story-image" loading="lazy" src="./Assets/Quality%20of%20Life/hero-final.png"/></a><div class="story-card-copy"><p class="story-card-kicker">Quality of Life | Urbanism</p><h3 class="story-card-title"><a href="./quality-of-life.html">Quality of Life Survey 2026</a></h3></div></article><article class="story-card"><a class="story-card-link" href="./wearing-the-nation.html"><img alt="Portrait crop of Macedonian football shirts in red, yellow, and white." class="story-image" loading="lazy" src="./Assets/Wearing%20the%20Nation/nation-on-their-backs-index-portrait.png"/></a><div class="story-card-copy"><p class="story-card-kicker">Sport | Design</p><h3 class="story-card-title"><a href="./wearing-the-nation.html">The Nation on Their Backs</a></h3></div></article><article class="story-card"><a class="story-card-link" href="./venus-of-skupi.html"><img alt="Marble head associated with the Venus of Skupi." class="story-image" loading="lazy" src="./Assets/Venus/venusskupi_website-01.png"/></a><div class="story-card-copy"><p class="story-card-kicker">Art | Antiquity</p><h3 class="story-card-title"><a href="./venus-of-skupi.html">The Venus of Skupi</a></h3></div></article></div>
 </div>
 </section>
 <section aria-labelledby="ohrid-feature-title" class="section kinfolk-feature" id="ohrid-feature">
@@ -2650,6 +2661,11 @@
               </h2>
 </div>
 <div class="explore-stack">
+<a class="explore-row" href="./skopje-tange.html">
+<div class="explore-row-media"><div class="explore-image explore-image--photo"><img alt="Kenzo Tange and the reconstruction of Skopje" loading="lazy" src="./Assets/Kenzo%20Article/Tange%20Pics/final.png"/></div></div>
+<div class="explore-row-copy"><h3 class="explore-row-title">Tokyo on the Vardar</h3></div>
+</a>
+
 <a class="explore-row" href="./dodole.html">
 <div class="explore-row-media">
 <div class="explore-image explore-image--photo">
@@ -2879,7 +2895,7 @@
         };
 
         var heroRotationSlugs = ["quality", "stranci", "tokyo", "nation"];
-        var selectedStorySlugs = ["tokyo", "quality", "nation", "venus"];
+        var selectedStorySlugs = ["stranci", "quality", "nation", "venus"];
         var selectedSlug = heroRotationSlugs[Math.floor(Math.random() * heroRotationSlugs.length)];
         var selectedArticle = articles[selectedSlug];
 
@@ -2995,7 +3011,6 @@
             });
         }
 
-        renderHero(selectedSlug, selectedArticle);
         renderSelectedStories(selectedSlug);
       })();
 
