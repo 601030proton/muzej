@@ -106,7 +106,7 @@
       title: "Tokyo on the Vardar",
       kicker: "Architecture | Urbanism",
       dek: "How Japanese urban theory found form in Macedonia.",
-      image: "./Assets/Kenzo%20Article/Tange%20Pics/final.png",
+      image: "./Assets/Kenzo%20Article/Tange%20Pics/kenzohero.png",
       alt: "Editorial collage portrait with red geometric forms and brutalist architecture.",
       position: "center center"
     },
