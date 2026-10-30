@@ -142,6 +142,7 @@
     },
     {
       slug: "the-stranci",
+      recommend: false,
       href: "the-stranci.html",
       title: "How to Be From Somewhere Else",
       kicker: "Field Notes | Internet",
@@ -283,7 +284,7 @@
     }
 
     var related = seededShuffle(articles.filter(function (article) {
-      return article.slug !== slug;
+      return article.slug !== slug && article.recommend !== false;
     }), "more-from-muzej:" + slug).slice(0, 3);
 
     section.className = "more-from-muzej";
