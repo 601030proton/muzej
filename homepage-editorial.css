@@ -123,21 +123,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
 .home #catalogue .story-card-copy{padding-top:18px}
 .home #catalogue .story-card-title{margin:0;font-size:clamp(24px,2vw,30px);line-height:1.12;max-width:none}
 
-/* Companion features: shared scale, alternating image and text. */
-.home #ohrid-feature,.home #prespa-feature{padding-top:0;padding-bottom:0;margin-top:112px}
-.home #ohrid-feature .kinfolk-feature-frame,.home #prespa-feature .kinfolk-feature-frame{width:100%;max-width:none}
-.home #ohrid-feature .kinfolk-feature-article,.home #prespa-feature .kinfolk-feature-article{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--home-gap);align-items:center;justify-items:stretch;min-height:0;padding:0}
-.home #ohrid-feature .kinfolk-feature-text-link,.home #prespa-feature .kinfolk-feature-text-link{position:static;display:block;width:auto;max-width:none;padding:0;transform:none;text-align:left;order:0}
-.home #ohrid-feature .kinfolk-feature-title,.home #prespa-feature .kinfolk-feature-title{font-size:clamp(40px,4.5vw,64px);line-height:1.04;max-width:13ch;margin:0;text-align:left}
-.home #ohrid-feature .kinfolk-feature-media-link,.home #prespa-feature .kinfolk-feature-media-link{display:block;width:100%;max-width:none;margin:0}
-.home #ohrid-feature .kinfolk-feature-image,.home #prespa-feature .kinfolk-feature-image{display:block;width:100%;height:auto;max-width:100%;max-height:none;margin:0;object-fit:contain}
-.home #prespa-feature .kinfolk-feature-media-link{grid-column:1;grid-row:1}
-.home #prespa-feature .kinfolk-feature-text-link{grid-column:2;grid-row:1}
-.home #vlado-feature{margin-top:112px;padding-top:0}
-@media(max-width:720px){
-.home #ohrid-feature,.home #prespa-feature,.home #vlado-feature{margin-top:64px}
-.home #ohrid-feature .kinfolk-feature-article,.home #prespa-feature .kinfolk-feature-article{grid-template-columns:1fr;gap:28px}
-.home #ohrid-feature .kinfolk-feature-title,.home #prespa-feature .kinfolk-feature-title{font-size:clamp(38px,9vw,48px);max-width:15ch}
-.home #prespa-feature .kinfolk-feature-text-link,.home #prespa-feature .kinfolk-feature-media-link{grid-column:auto;grid-row:auto}
-.home #prespa-feature .kinfolk-feature-text-link{order:-1}
-}
+
+/* Keep the distinct feature compositions, with less accumulated space. */
+.home #ohrid-feature{padding-top:96px;padding-bottom:64px;margin-top:0}
+.home #prespa-feature{padding-top:48px;padding-bottom:64px;margin-top:0}
+.home #catalogue .story-card-link{aspect-ratio:4/5}
+.home #catalogue .story-image{object-fit:cover;object-position:center}
+.home #catalogue .story-card-title,.home #catalogue .story-card-title a{font-family:'plantin',Georgia,serif;font-weight:400;font-size:clamp(24px,2vw,30px);line-height:1.12;letter-spacing:0;color:#000}
+@media(max-width:720px){.home #ohrid-feature{padding-top:64px;padding-bottom:40px}.home #prespa-feature{padding-top:24px;padding-bottom:48px}}
