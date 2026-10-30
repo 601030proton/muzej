@@ -496,6 +496,22 @@
 .about-contact{font-size:17px}
 .about-social-link{color:#000;font-size:14px}
 @media(max-width:760px){.about-editorial{grid-template-columns:1fr;gap:32px;margin-top:40px}.about-copy{width:100%}.about-copy h1{max-width:21ch}.about-purpose{max-width:28ch}.about-detail{font-size:19px}.about-image-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.about-image-strip img{height:auto;aspect-ratio:3/4;object-fit:cover}}
+</style><style>
+.museum-about{padding:clamp(40px,6vh,72px) 0 64px;color:#000}
+.museum-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(48px,7vw,110px);align-items:center;max-width:1440px;margin:auto}
+.museum-image{margin:0;max-width:520px;justify-self:end}
+.museum-image img{display:block;width:100%;height:auto}
+.museum-copy{max-width:510px}
+.museum-label{font:400 11px/1.4 var(--sans);margin:0 0 28px}
+.museum-copy h1{font:400 clamp(38px,3.7vw,54px)/1.06 var(--headline-serif);letter-spacing:-.015em;margin:0 0 28px}
+.museum-copy>p:not(.museum-label){font:400 19px/1.45 var(--serif);margin:0 0 20px}
+.museum-copy>p.museum-lead{font-size:24px;line-height:1.3;margin-bottom:24px}
+.museum-support{margin-top:32px}
+.museum-support>a{font:400 28px/1.2 var(--headline-serif);color:#000;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px}
+.museum-support p{font:400 13px/1.4 var(--sans);margin:12px 0 0}
+.museum-links{display:flex;gap:24px;flex-wrap:wrap;margin-top:32px}
+.museum-links a{font:400 12px/1.4 var(--sans);color:#000}
+@media(max-width:760px){.museum-layout{grid-template-columns:1fr;gap:32px}.museum-copy{max-width:none}.museum-image{width:100%;max-width:360px;justify-self:start}.museum-copy h1{font-size:42px}.museum-about{padding-top:28px}.museum-image img{max-height:45svh;object-fit:contain;object-position:left}.museum-label{margin-bottom:20px}}
 </style></head>
   <body>
     <div class="page">
@@ -533,34 +549,20 @@
         </div>
       </header>
 
-      <main class="about-page">
-        <section class="shell about-hero" aria-labelledby="about-title">
-          <div class="about-copy">
-            <p class="about-eyebrow">About Muzej</p>
-<h1 id="about-title">An independent journal of Macedonian art and culture.</h1>
-<div class="about-editorial">
-<p class="about-purpose">Muzej helps readers understand Macedonia through what its people make, build, and carry forward.</p>
-<div class="about-detail">
-<p>We publish essays, interviews, poetry, and field guides on the works, places, and practices that shape Macedonian life. Readers will find artists and their work, buildings and the ideas behind them, film and music, and traditions practiced in everyday life.</p>
-<p>Our coverage spans Vardar, Pirin, and Egej Macedonia, alongside Macedonian communities around the world. We write in English for readers at home and abroad, and for anyone encountering the culture for the first time.</p>
-<p>Muzej means “museum” in Macedonian. The journal brings historical material into conversation with contemporary work, giving close attention to what is being made today as well as what has been inherited.</p>
-<p>Founded and edited by <strong>Aleksandar Trajkovski</strong>, a designer and artist from the Macedonian diaspora.</p>
-<p class="about-contact">For story suggestions, contributions, or corrections, <a href="mailto:muzej.mk@proton.me">write to Muzej</a>. <a href="index.html#letter">Subscribe to the newsletter</a> for new articles and selections from the archive.</p>
-</div></div>
-            <div class="about-image-strip" aria-label="Muzej visual archive">
-              <img src="./Assets/About Photo/1.png" alt="Macedonian culture detail image" loading="lazy">
-              <img src="./Assets/About Photo/2.png" alt="Macedonian landscape or cultural image" loading="lazy">
-              <img src="./Assets/About Photo/3.png" alt="Macedonian archive image" loading="lazy">
-              <img src="./Assets/About Photo/4.png" alt="Macedonian craft or place image" loading="lazy">
-            </div>
-          </div>
-        </section>
-      </main>
+      <main class="museum-about" aria-labelledby="about-title">
+<div class="shell museum-layout">
+<figure class="museum-image"><img src="./Assets/About%20Photo/2.png" width="1080" height="1350" alt="Close detail of a carved marble face" fetchpriority="high"></figure>
+<div class="museum-copy">
+<p class="museum-label">About Muzej</p>
+<h1 id="about-title">A journal of<br>Macedonian culture.</h1>
+<p class="museum-lead">Muzej helps readers understand Macedonia through what its people make, build, and carry forward.</p>
+<p>Art, architecture, film, literature, and everyday traditions. Essays, conversations, and field guides from Vardar, Pirin, and Egej Macedonia—and Macedonian communities around the world.</p>
+<p>Independent and published in English. Founded and edited by Aleksandar Trajkovski, a designer and artist from the Macedonian diaspora.</p>
+<div class="museum-support"><a href="https://buy.stripe.com/7sYbIT0SJ5QoduX2Liao801" target="_blank" rel="noopener noreferrer">Support Muzej <span aria-hidden="true">↗</span></a><p>Help us keep publishing.</p></div>
+<nav class="museum-links" aria-label="Connect with Muzej"><a href="mailto:muzej.mk@proton.me">Contact</a><a href="index.html#letter">Newsletter</a><a href="https://www.instagram.com/_muzej/" target="_blank" rel="noopener noreferrer">Instagram</a></nav>
+</div></div></main>
 
-      <footer class="about-social">
-        <a class="about-social-link" href="https://www.instagram.com/_muzej/" target="_blank" rel="noopener noreferrer" aria-label="Follow Muzej on Instagram">Follow us on Instagram</a>
-        <a class="about-social-link" href="https://buy.stripe.com/7sYbIT0SJ5QoduX2Liao801" target="_blank" rel="noopener noreferrer" aria-label="Support Muzej through Stripe">Support Muzej</a>
-      </footer>
+      
     </div>
 
     <script>
