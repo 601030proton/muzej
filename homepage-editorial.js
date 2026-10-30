@@ -9,7 +9,6 @@
     frame.allowFullscreen=true;
     frame.referrerPolicy='strict-origin-when-cross-origin';
     var screen=document.getElementById('film-screen');screen.replaceChildren(frame);frame.focus();
-    document.getElementById('film-status').textContent='If playback is unavailable, open the film on YouTube.';
   });
   var archive=document.querySelector('.home-archive details');
   document.querySelectorAll('a[href="#archive"]').forEach(function(link){link.addEventListener('click',function(){if(archive)archive.open=true;});});

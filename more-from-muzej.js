@@ -141,17 +141,6 @@
       position: "center top"
     },
     {
-      slug: "the-stranci",
-      recommend: false,
-      href: "the-stranci.html",
-      title: "How to Be From Somewhere Else",
-      kicker: "Field Notes | Internet",
-      dek: "They came looking for a place the internet had not already flattened. They stayed for the ajvar.",
-      image: "./Assets/Stranci/Stranci%20Pix/stranci-index-portrait.png",
-      alt: "Three people posing for a phone camera against a yellow and pink painted backdrop with social media icons.",
-      position: "center center"
-    },
-    {
       slug: "lake-ohrid-architecture-memory",
       href: "lake-ohrid-architecture-memory.html",
       title: "The Ohrid House and the Logic of Place",
