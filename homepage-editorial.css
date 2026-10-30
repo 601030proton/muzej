@@ -93,5 +93,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
 .home .editorial-spread .editorial-spread-eyebrow{color:rgba(255,255,255,.84);margin:0;text-transform:none;letter-spacing:0}
 
 /* A little more space around the selected stories. */
-.home #selected-stories{padding-top:clamp(88px,9vw,124px);padding-bottom:28px}
-@media(max-width:720px){.home #selected-stories{padding-top:84px;padding-bottom:20px}.home #letter .muzej-letter__layout{background-size:calc(100% - 40px) 1px}}
+.home #selected-stories{padding-top:clamp(180px,15vw,220px);padding-bottom:80px}
+@media(max-width:720px){.home #selected-stories{padding-top:120px;padding-bottom:56px}.home #letter .muzej-letter__layout{background-size:calc(100% - 40px) 1px}}
+
+.home #selected-stories .read-next-header{margin-bottom:44px}
