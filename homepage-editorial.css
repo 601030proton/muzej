@@ -1,11 +1,11 @@
 /* Muzej: a paced editorial homepage. */
 :root{--home-rule:#d7d7d3;--home-muted:#62625c;--home-gap:clamp(28px,4.5vw,68px)}
 html{scroll-padding-top:105px} .home section{scroll-margin-top:105px}
-.site-header{background:rgba(255,255,255,.97);position:sticky;backdrop-filter:blur(10px)}
+.site-header{background:transparent;position:sticky;backdrop-filter:none}
 .site-header .header-frame{grid-template-columns:auto 1fr;gap:24px;position:relative;padding-top:26px;padding-bottom:26px}
 .publication-descriptor{grid-column:2;grid-row:1;margin:0;font:400 11px/1.5 Helvetica,Arial,sans-serif;max-width:22ch;color:var(--home-muted)}
 .header-tools{grid-column:2;grid-row:1;gap:28px}.desktop-nav{display:flex;gap:26px;align-items:center}.desktop-nav a{font:400 12px/1.4 Helvetica,Arial,sans-serif;text-decoration:none;color:#222}.desktop-nav a:hover{text-decoration:underline;text-underline-offset:5px}
-body.muzej-logo-hidden .site-header .brand-mark{transform:none}
+
 .home .section{padding-top:clamp(64px,7vw,100px)}
 .home .home-eyebrow,.home .editorial-spread-eyebrow,.home .story-card-kicker{font:400 10px/1.4 Helvetica,Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--home-muted);margin:0 0 16px}
 .home .skopje-home-hero-stage{grid-template-columns:1fr 1fr;gap:var(--home-gap);min-height:0;align-items:stretch}
@@ -82,3 +82,12 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
 .home .explore-row-title{font-size:29px}
 .home #field-notes{padding-top:80px}
 }
+
+/* Restore the original image-led spreads. */
+.home .interview-plates .editorial-spread-card{aspect-ratio:2/3}
+.home .interview-plates .editorial-spread-grid{gap:clamp(18px,2vw,32px)}
+.home .interview-plates .editorial-spread-eyebrow{color:rgba(255,255,255,.84);margin:0;text-transform:none;letter-spacing:0}
+.home #letter{border:0;padding-block:0}
+.home #letter > .shell{padding-block:0;border:0}.home #letter .muzej-letter__layout{padding-block:56px;border-block:1px solid var(--home-rule)}
+@media(max-width:720px){.home #letter .muzej-letter__layout{padding-block:36px}}
+.home .editorial-spread .editorial-spread-eyebrow{color:rgba(255,255,255,.84);margin:0;text-transform:none;letter-spacing:0}
