@@ -1469,138 +1469,6 @@
         }
       }
 
-      /* Article page: Muzej editorial poem template, inspired by a magazine poetry page. */
-      .poem-article-page {
-        padding-top: clamp(44px, 7vw, 104px);
-        padding-bottom: 0;
-      }
-
-      .poem-article-shell {
-        display: grid;
-        grid-template-columns: minmax(118px, 190px) minmax(0, 690px);
-        gap: clamp(24px, 4vw, 70px);
-        align-items: start;
-        justify-content: start;
-      }
-
-      .poem-article-main {
-        grid-column: 2;
-        min-width: 0;
-      }
-
-      .poem-article-rail {
-        position: sticky;
-        top: 112px;
-        min-width: 0;
-        padding-top: 0.85rem;
-        border-top: 1px solid var(--rule-strong);
-        color: rgba(23, 21, 19, 0.52);
-        font-family: var(--sans);
-        font-size: 0.74rem;
-        line-height: 1.65;
-      }
-
-      .poem-article-rail {
-        grid-column: 1;
-      }
-
-      .poem-rail-label,
-      .poem-kicker {
-        margin: 0;
-        font-family: var(--sans);
-        font-size: 0.68rem;
-        line-height: 1.2;
-        letter-spacing: 0;
-        color: rgba(23, 21, 19, 0.48);
-      }
-
-      .poem-rail-text {
-        margin: 0.7rem 0 0;
-      }
-
-      .poem-rail-place {
-        margin: 0.9rem 0 0;
-        padding-top: 0.48rem;
-        border-top: 1px solid var(--rule);
-      }
-
-      .poem-rail-list {
-        display: grid;
-        gap: 0.48rem;
-        margin: 0.9rem 0 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      .poem-rail-list li {
-        padding-top: 0.48rem;
-        border-top: 1px solid var(--rule);
-      }
-
-      .poem-kicker {
-        display: inline-flex;
-        margin-bottom: clamp(22px, 3vw, 34px);
-        padding-bottom: 0.38rem;
-        border-bottom: 1px solid rgba(23, 21, 19, 0.26);
-        color: var(--foreground);
-      }
-
-      .poem-title {
-        max-width: 11ch;
-        margin: 0;
-        font-family: var(--headline-serif);
-        font-size: clamp(3.25rem, 6.4vw, 6.35rem);
-        line-height: 0.96;
-        letter-spacing: -0.015em;
-        font-weight: 400;
-        font-optical-sizing: auto;
-        text-wrap: balance;
-      }
-
-      .poem-byline-block {
-        display: grid;
-        gap: 0.28rem;
-        margin-top: clamp(24px, 3vw, 38px);
-        padding-top: 1rem;
-        border-top: 1px solid var(--rule-strong);
-        font-size: 0.95rem;
-        line-height: 1.55;
-      }
-
-      .poem-byline-block p {
-        margin: 0;
-      }
-
-      .poem-byline-block strong {
-        font-weight: 500;
-      }
-
-      .poem-date-line {
-        color: rgba(23, 21, 19, 0.5);
-      }
-
-      .poem-body {
-        margin-top: clamp(46px, 6vw, 82px);
-      }
-
-      .poem-text {
-        max-width: 35rem;
-        font-family: var(--article-serif);
-        font-size: clamp(1.24rem, 1rem + 0.56vw, 1.58rem);
-        line-height: 1.58;
-        letter-spacing: -0.006em;
-        font-weight: 400;
-        font-optical-sizing: auto;
-      }
-
-      .poem-text p {
-        margin: 0 0 1.54em;
-      }
-
-      .poem-text p:last-child {
-        margin-bottom: 0;
-      }
-
       .more-from-muzej {
         display: block;
         align-items: normal;
@@ -1861,6 +1729,7 @@
   <link rel="stylesheet" href="more-from-muzej.css?v=20260810-plantin-final">
 <script src="more-from-muzej.js?v=20260810-plantin-final" defer></script>
 <link rel="stylesheet" href="muzej-footer-logo.css?v=20260914">
+<link rel="stylesheet" href="poetry.css?v=20261030">
 </head>
   <body>
     <div class="page">
@@ -1905,11 +1774,12 @@
           </aside>
 
           <article class="poem-article-main">
+            <p class="poem-kicker">Poetry</p>
             <h1 class="poem-title" id="poem-title">Peppers (Пиперки)</h1>
 
             <div class="poem-byline-block">
               <p>By <strong><a href="https://www.poetryfoundation.org/poets/blaze-koneski" target="_blank" rel="noopener noreferrer">Blaže Koneski</a></strong></p>
-              <p>Translated By <strong><a href="https://www.poetryfoundation.org/poets/kristian-josifoski" target="_blank" rel="noopener noreferrer">Kristian Josifoski</a></strong></p>
+              <p>Translated by <strong><a href="https://www.poetryfoundation.org/poets/kristian-josifoski" target="_blank" rel="noopener noreferrer">Kristian Josifoski</a></strong></p>
             </div>
 
             <section class="poem-body" id="poem-text" aria-label="Poem text">
@@ -2007,3 +1877,4 @@ make our beauty, our pride.</p>
     </script>
   </body>
 </html>
+
