@@ -97,3 +97,20 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
 @media(max-width:720px){.home #selected-stories{padding-top:120px;padding-bottom:56px}.home #letter .muzej-letter__layout{background-size:calc(100% - 40px) 1px}}
 
 .home #selected-stories .read-next-header{margin-bottom:44px}
+
+/* Correct media frames and keep the homepage on white. */
+.home{--home-muted:#000;color:#000}
+.home p,.home h1,.home h2,.home h3,.home a,.home .home-eyebrow,.home .story-card-kicker{color:#000}
+.home #vlado-feature .tose-descendants-media,.home #catalogue .story-card-link{aspect-ratio:auto;height:auto;overflow:visible;background:none}
+.home #vlado-feature .tose-descendants-title a{color:#000}
+.home #now-playing{background:#fff;color:#000;padding-block:48px}
+.home #now-playing .home-eyebrow,.home #now-playing .cinema-credit,.home #now-playing .film-fallback{color:#000}
+.home #now-playing .film-play{color:#fff}
+.home #prespa-feature .kinfolk-feature-article{min-height:0;padding:0;gap:24px}
+.home #prespa-feature .kinfolk-feature-title{font-size:clamp(40px,4.5vw,64px);max-width:none;margin:0}
+.home #prespa-feature .kinfolk-feature-media-link{width:min(100%,780px);margin:24px auto 0}
+.home #prespa-feature .kinfolk-feature-image{max-height:55svh;width:auto;max-width:100%;margin:auto;object-fit:contain}
+.home #letter .muzej-letter__layout{background-size:100% 1px}
+.home .explore-image{aspect-ratio:3/4!important;height:auto;overflow:hidden;background:none}
+.home .explore-image img{width:100%;height:100%;aspect-ratio:3/4;object-fit:cover}
+.home .editorial-spread .editorial-spread-title,.home .editorial-spread .editorial-spread-eyebrow{color:#fff}
