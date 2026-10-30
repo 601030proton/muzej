@@ -1,0 +1,63 @@
+/* Muzej feature system: shared across places and architecture. */
+.muzej-feature{--page-x:clamp(22px,5.2vw,80px);--feature-ink:#181818;--feature-muted:#646464;--feature-rule:#d5d5d5;--article-serif:"plantin",Georgia,serif;--rail-gap:clamp(32px,5vw,76px);background:#fff;color:var(--feature-ink)}
+.muzej-feature .shell,.muzej-feature .guide-wrap,.muzej-feature .article-shell,.muzej-feature .feature.reference-hero{width:calc(100% - var(--page-x)*2);max-width:1280px;margin-inline:auto;padding-inline:0}
+.muzej-feature .site-header .shell{padding-top:28px;padding-bottom:28px}
+.muzej-feature main{padding-top:20px}
+.muzej-feature .feature.reference-hero,.muzej-feature .guide-hero{padding-top:0;padding-bottom:0}
+.muzej-overline,.muzej-feature .guide-overline{display:flex;justify-content:space-between;gap:24px;margin:0 0 36px;padding-top:14px;border-top:1px solid var(--feature-ink);color:var(--feature-ink);font:400 10px/1.4 Helvetica,Arial,sans-serif;letter-spacing:.09em;text-transform:uppercase}
+.muzej-feature .reference-hero .feature-inner,.muzej-feature .guide-hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--rail-gap);align-items:stretch;min-height:0}
+.muzej-feature .reference-hero .feature-copy,.muzej-feature .guide-hero-grid>div{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;min-height:0;max-width:none;width:100%;margin:0;padding:28px 0 20px;text-align:left}
+.muzej-feature .reference-hero .feature-title,.muzej-feature .guide-title{max-width:10ch;width:100%;margin:0;font:400 clamp(48px,6.6vw,94px)/.99 "plantin",Georgia,serif;letter-spacing:-.025em;text-align:left;text-wrap:balance}
+.muzej-feature .reference-hero .feature-title{max-width:12ch}
+.muzej-feature .qol-hero-subtitle,.muzej-feature .guide-subtitle{max-width:24ch;margin:28px 0 0;color:var(--feature-ink);font:400 clamp(23px,2.25vw,32px)/1.22 "plantin",Georgia,serif;letter-spacing:0;text-align:left}
+.muzej-feature .skopje-guide{color:var(--feature-ink)}
+.muzej-feature .guide-byline{margin:auto 0 0;padding-top:36px;font:400 12px/1.5 Helvetica,Arial,sans-serif;color:var(--feature-muted)}
+.muzej-feature .reference-hero .feature-media{padding:0;margin:0;min-height:0;align-self:start}
+.muzej-feature .reference-hero .feature-media img,.muzej-feature .guide-hero-image img{width:100%;height:auto;aspect-ratio:4/5;max-height:none;object-fit:contain;object-position:top center;background:#fff}
+.muzej-feature .guide-hero-image figcaption,.muzej-feature .guide-image figcaption,.muzej-feature .ranking-caption{margin-top:10px;color:var(--feature-muted);font:400 11px/1.5 Helvetica,Arial,sans-serif}
+.muzej-feature .article-shell{padding-top:64px}
+.muzej-feature .article-deck{max-width:900px;margin-bottom:48px}
+.muzej-feature .article-intro p,.muzej-feature .guide-intro p,.muzej-feature .ranking-intro,.muzej-feature .guide-prose p{font:400 clamp(20px,1.65vw,23px)/1.5 "plantin",Georgia,serif;letter-spacing:0}
+.muzej-feature .article-intro{gap:24px}
+.muzej-feature .guide-deck{margin-top:64px;max-width:960px;font-size:clamp(26px,2.6vw,36px);line-height:1.25;letter-spacing:0}
+.muzej-feature .guide-intro{gap:var(--rail-gap)}
+.muzej-feature .ranking-entry,.muzej-feature .guide-entry{border-top:1px solid var(--feature-rule);padding-top:32px;padding-bottom:clamp(64px,8vw,108px)}
+.muzej-feature .ranking-entry,.muzej-feature .guide-entry-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:var(--rail-gap)}
+.muzej-feature .rank-head{margin-top:0;margin-bottom:30px}
+.muzej-feature .rank-title,.muzej-feature .rank-number,.muzej-feature .guide-heading,.muzej-feature .guide-number{font-family:"plantin",Georgia,serif;font-size:clamp(30px,3.25vw,46px);font-weight:400;line-height:1.08;letter-spacing:0}
+.muzej-feature .qol-award{font:400 12px/1.5 Helvetica,Arial,sans-serif;color:var(--feature-muted)}
+.muzej-feature .qol-section-label,.muzej-feature .qol-signal dt,.muzej-feature .guide-meta dt,.muzej-feature .guide-visit strong,.muzej-feature .guide-index-title,.muzej-feature .qol-navigation-title{font:400 10px/1.4 Helvetica,Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--feature-muted)}
+.muzej-feature .qol-guide-card{gap:28px}
+.muzej-feature .qol-signal,.muzej-feature .guide-meta{border-color:var(--feature-rule)}
+.muzej-feature .guide-meta{padding-top:14px;font-size:14px;color:var(--feature-ink)}
+.muzej-feature .guide-meta>div{padding:7px 0}
+.muzej-feature .guide-meta dt{padding-top:3px}
+.muzej-feature .guide-visit,.muzej-feature .guide-links,.muzej-feature .ranking-details summary{font-family:Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;color:var(--feature-muted)}
+.muzej-feature .ranking-details-body p{font:400 18px/1.5 "plantin",Georgia,serif}
+.muzej-feature .guide-reading,.muzej-feature .closing-note{border-top:1px solid var(--feature-rule);grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:var(--rail-gap);padding-top:28px}
+.muzej-feature .guide-reading h2,.muzej-feature .closing-note h2{font:400 clamp(30px,3.25vw,46px)/1.08 "plantin",Georgia,serif;letter-spacing:0}
+@media(max-width:720px){
+.muzej-feature main{padding-top:10px}
+.muzej-overline,.muzej-feature .guide-overline{font-size:9px;gap:16px;margin-bottom:24px}
+.muzej-feature .reference-hero .feature-inner,.muzej-feature .guide-hero-grid{grid-template-columns:1fr;gap:28px}
+.muzej-feature .reference-hero .feature-copy{grid-row:1;padding:0}
+.muzej-feature .guide-hero-grid>div{padding:0}
+.muzej-feature .reference-hero .feature-title,.muzej-feature .guide-title{font-size:clamp(48px,11vw,76px);max-width:12ch}
+.muzej-feature .guide-byline{margin-top:24px;padding-top:0}
+.muzej-feature .qol-hero-subtitle,.muzej-feature .guide-subtitle{margin-top:22px;font-size:25px}
+.muzej-feature .reference-hero .feature-media img,.muzej-feature .guide-hero-image img{max-height:580px;aspect-ratio:auto}
+.muzej-feature .article-shell{padding-top:40px}
+.muzej-feature .guide-deck{margin-top:40px}
+.muzej-feature .ranking-entry,.muzej-feature .guide-entry-grid,.muzej-feature .guide-intro,.muzej-feature .guide-reading,.muzej-feature .closing-note{grid-template-columns:1fr;gap:28px}
+.muzej-feature .ranking-media,.muzej-feature .guide-image{position:static}
+.muzej-feature .rank-head{margin-top:0}
+.muzej-feature .ranking-media-frame{max-width:100%}
+}
+/* A common, lightweight contents index. */
+.muzej-feature .qol-ranking-navigation,.muzej-feature .guide-index{border-top:1px solid var(--feature-rule);padding-top:16px;margin-bottom:56px}
+.muzej-feature .survey-index{border:0;background:transparent;gap:0 26px;margin:0;grid-template-columns:repeat(5,minmax(0,1fr))}
+.muzej-feature .survey-index li{border-bottom:1px solid var(--feature-rule)}
+.muzej-feature .survey-index a{display:flex;align-items:baseline;gap:12px;min-height:0;padding:16px 0;background:transparent}
+.muzej-feature .survey-index-number{font:400 11px/1.4 Helvetica,Arial,sans-serif;color:var(--feature-muted)}
+.muzej-feature .survey-index-title{font:400 14px/1.4 Helvetica,Arial,sans-serif}
+@media(max-width:720px){.muzej-feature .survey-index{grid-template-columns:repeat(2,minmax(0,1fr))}}
