@@ -88,6 +88,10 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
 .home .interview-plates .editorial-spread-grid{gap:clamp(18px,2vw,32px)}
 .home .interview-plates .editorial-spread-eyebrow{color:rgba(255,255,255,.84);margin:0;text-transform:none;letter-spacing:0}
 .home #letter{border:0;padding-block:0}
-.home #letter > .shell{padding-block:0;border:0}.home #letter .muzej-letter__layout{padding-block:56px;border-block:1px solid var(--home-rule)}
+.home #letter > .shell{padding-block:0;border:0}.home #letter .muzej-letter__layout{padding-block:56px;border:0;background:linear-gradient(var(--home-rule),var(--home-rule)) center top / calc(100% - 96px) 1px no-repeat,linear-gradient(var(--home-rule),var(--home-rule)) center bottom / calc(100% - 96px) 1px no-repeat}
 @media(max-width:720px){.home #letter .muzej-letter__layout{padding-block:36px}}
 .home .editorial-spread .editorial-spread-eyebrow{color:rgba(255,255,255,.84);margin:0;text-transform:none;letter-spacing:0}
+
+/* A little more space around the selected stories. */
+.home #selected-stories{padding-top:clamp(88px,9vw,124px);padding-bottom:28px}
+@media(max-width:720px){.home #selected-stories{padding-top:84px;padding-bottom:20px}.home #letter .muzej-letter__layout{background-size:calc(100% - 40px) 1px}}
