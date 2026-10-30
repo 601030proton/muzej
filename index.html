@@ -2440,7 +2440,69 @@
  .skopje-home-hero-media img { height: 100%; }
 }
 </style>
-<link href="homepage-editorial.css?v=20261030-catalogue-corrected" rel="stylesheet"/></head>
+<link href="homepage-editorial.css?v=20261030-catalogue-corrected" rel="stylesheet"/>
+<style id="ohrid-reference-layout">
+/* Centered editorial pause between Selected Stories and Interviews. */
+.home #ohrid-feature {
+  margin: 0;
+  padding: clamp(112px, 12vw, 240px) 0 clamp(112px, 10vw, 200px);
+  background: #fff;
+}
+.home #ohrid-feature .kinfolk-feature-article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  min-height: 0;
+  padding: 0;
+  text-align: center;
+}
+.home #ohrid-feature .kinfolk-feature-text-link {
+  display: block;
+  width: 100%;
+  max-width: none;
+  padding: 0;
+  text-align: center;
+}
+.home #ohrid-feature .kinfolk-feature-title {
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: var(--headline-serif);
+  font-size: clamp(38px, 3.75vw, 76px);
+  font-weight: 400;
+  line-height: 1.03;
+  color: #171513;
+  text-align: center;
+}
+.ohrid-feature-heading, .ohrid-feature-subtitle { display: block; }
+.ohrid-feature-heading { text-transform: uppercase; }
+.home #ohrid-feature .kinfolk-feature-media-link {
+  display: block;
+  flex: none;
+  width: clamp(190px, 15vw, 304px);
+  max-width: 100%;
+  margin: clamp(48px, 4.8vw, 98px) auto 0;
+}
+.home #ohrid-feature .kinfolk-feature-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  margin: 0;
+  object-fit: contain;
+}
+.home #ohrid-feature .ohrid-feature-caption {
+  margin: clamp(22px, 2vw, 40px) 0 0;
+  font: 400 clamp(13px, 1.1vw, 22px)/1.4 var(--sans);
+  color: #171513;
+}
+@media (max-width: 720px) {
+  .home #ohrid-feature { padding-top: 100px; padding-bottom: 100px; }
+  .home #ohrid-feature .kinfolk-feature-title { font-size: clamp(30px, 7vw, 48px); line-height: 1.08; }
+  .home #ohrid-feature .kinfolk-feature-media-link { width: min(48vw, 240px); margin-top: 44px; }
+}
+</style>
+</head>
 <body>
 <div class="page">
 <header class="site-header">
@@ -2493,11 +2555,12 @@
 <div class="shell kinfolk-feature-frame">
 <article class="kinfolk-feature-article">
 <a class="kinfolk-feature-text-link" href="./lake-ohrid-architecture-memory.html">
-<h2 class="kinfolk-feature-title" id="ohrid-feature-title">The Ohrid House and the Logic of Place</h2>
+<h2 class="kinfolk-feature-title" id="ohrid-feature-title"><span class="ohrid-feature-heading">The Ohrid House</span><span class="ohrid-feature-subtitle">The logic of place.</span></h2>
 </a>
 <a aria-label="Read The Ohrid House and the Logic of Place" class="kinfolk-feature-media-link" href="./lake-ohrid-architecture-memory.html">
 <img alt="Black-and-white collage of Ohrid house architecture with white plaster and dark timber windows." class="kinfolk-feature-image" height="1402" loading="lazy" src="./Assets/Ohrid%20Architecture/Images/BW%20Ohrid%20House/New%20Cover.png?v=20261014-final" width="1122"/>
 </a>
+<p class="ohrid-feature-caption">Architecture, Ohrid</p>
 </article>
 </div>
 </section><section aria-label="Interviews" class="section editorial-spread interview-plates" id="conversations">
