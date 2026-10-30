@@ -482,7 +482,21 @@
   }
 }
 </style>
-  </head>
+  <style>
+.about-page{padding-top:clamp(48px,7vw,96px);padding-bottom:64px;min-height:0;display:block;color:#000}
+.about-copy{width:100%;max-width:none}
+.about-eyebrow{font:400 11px/1.4 var(--sans);margin:0 0 28px;color:#000}
+.about-copy h1{font-size:clamp(40px,5.1vw,70px);line-height:1.06;max-width:21ch;color:#000}
+.about-editorial{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,88px);margin-top:64px;align-items:start}
+.about-purpose{font-family:var(--headline-serif);font-size:clamp(27px,2.7vw,36px);line-height:1.25;margin:0;max-width:24ch}
+.about-detail{font-family:var(--serif);font-size:20px;line-height:1.5}
+.about-detail p{margin:0 0 24px}
+.about-detail strong{font-weight:400}
+.about-detail a{color:#000;text-decoration:underline;text-underline-offset:4px}
+.about-contact{font-size:17px}
+.about-social-link{color:#000;font-size:14px}
+@media(max-width:760px){.about-editorial{grid-template-columns:1fr;gap:32px;margin-top:40px}.about-copy{width:100%}.about-copy h1{max-width:21ch}.about-purpose{max-width:28ch}.about-detail{font-size:19px}.about-image-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.about-image-strip img{height:auto;aspect-ratio:3/4;object-fit:cover}}
+</style></head>
   <body>
     <div class="page">
       <header class="site-header">
@@ -504,8 +518,9 @@
                 <div class="utility-panel-group">
                   <a class="utility-link" href="index.html">Home</a>
                   <a class="utility-link" href="index.html#selected-stories">Selected Stories</a>
-                  <a class="utility-link" href="index.html#in-rotation">In Rotation</a>
-                  <a class="utility-link" href="index.html#field-notes">Field Notes</a>
+                  <a class="utility-link" href="index.html#now-playing">Now Playing</a>
+                  <a class="utility-link" href="index.html#catalogue">Catalogue</a>
+<a class="utility-link" href="index.html#archive">Archive</a>
                   <a class="utility-link" href="about.html" aria-current="page">About Muzej</a>
                 </div>
                 <div class="utility-panel-group utility-panel-utility">
@@ -521,7 +536,17 @@
       <main class="about-page">
         <section class="shell about-hero" aria-labelledby="about-title">
           <div class="about-copy">
-            <h1 id="about-title">Muzej is an independent English-language magazine of Macedonian art, urbanism, tradition, and culture, made for a diaspora that carries that identity across borders and generations.</h1>
+            <p class="about-eyebrow">About Muzej</p>
+<h1 id="about-title">An independent journal of Macedonian art and culture.</h1>
+<div class="about-editorial">
+<p class="about-purpose">Muzej helps readers understand Macedonia through what its people make, build, and carry forward.</p>
+<div class="about-detail">
+<p>We publish essays, interviews, poetry, and field guides on the works, places, and practices that shape Macedonian life. Readers will find artists and their work, buildings and the ideas behind them, film and music, and traditions practiced in everyday life.</p>
+<p>Our coverage spans Vardar, Pirin, and Egej Macedonia, alongside Macedonian communities around the world. We write in English for readers at home and abroad, and for anyone encountering the culture for the first time.</p>
+<p>Muzej means “museum” in Macedonian. The journal brings historical material into conversation with contemporary work, giving close attention to what is being made today as well as what has been inherited.</p>
+<p>Founded and edited by <strong>Aleksandar Trajkovski</strong>, a designer and artist from the Macedonian diaspora.</p>
+<p class="about-contact">For story suggestions, contributions, or corrections, <a href="mailto:muzej.mk@proton.me">write to Muzej</a>. <a href="index.html#letter">Subscribe to the newsletter</a> for new articles and selections from the archive.</p>
+</div></div>
             <div class="about-image-strip" aria-label="Muzej visual archive">
               <img src="./Assets/About Photo/1.png" alt="Macedonian culture detail image" loading="lazy">
               <img src="./Assets/About Photo/2.png" alt="Macedonian landscape or cultural image" loading="lazy">
