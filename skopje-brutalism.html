@@ -980,14 +980,14 @@ body.muzej-logo-hidden .site-header .brand-mark {
 @media(max-width:720px) { .skopje-building-row .article-body-media { position: static; } }
 </style><style>
 /* Concrete Skopje: a restrained, page-specific editorial grid. */
-.skopje-guide{--guide-red:#c33324;--guide-rule:#d8d8d3;--guide-ink:#181818;background:#fff;color:var(--guide-ink)}
+.skopje-guide{--guide-accent:var(--guide-ink);--guide-rule:#d8d8d3;--guide-ink:#181818;background:#fff;color:var(--guide-ink)}
 .skopje-guide main{padding-top:28px}
 .guide-wrap{width:calc(100% - clamp(36px,9vw,144px));max-width:1360px;margin-inline:auto}
 .guide-hero{padding:30px 0 0}
 .guide-overline,.guide-byline,.guide-index-title,.guide-number,.guide-topic,.guide-meta,.guide-visit,.guide-links,.guide-image figcaption,.guide-hero-image figcaption,.guide-reading{font-family:Helvetica,Arial,sans-serif}
 .guide-overline{display:flex;justify-content:space-between;gap:20px;margin:0 0 38px;padding-top:15px;border-top:2px solid var(--guide-ink);font-size:11px;line-height:1.4;letter-spacing:.11em;text-transform:uppercase}
 .guide-hero-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(32px,6vw,96px);align-items:center}
-.guide-title{margin:0;font-family:Helvetica,Arial,sans-serif;font-size:clamp(64px,9.5vw,144px);font-weight:500;letter-spacing:-.07em;line-height:.87}
+.guide-title{margin:0;font-family:var(--font-display);font-size:clamp(64px,9.5vw,144px);font-weight:400;letter-spacing:0;line-height:.94}
 .guide-title span{display:block}
 .guide-subtitle{margin:30px 0 0;font:400 clamp(22px,2.6vw,36px)/1.15 'plantin',Georgia,serif;max-width:18ch}
 .guide-byline{margin:28px 0 0;font-size:12px;line-height:1.5;color:#555}
@@ -1002,18 +1002,18 @@ body.muzej-logo-hidden .site-header .brand-mark {
 .guide-index ol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 26px;margin:0;padding:0;list-style:none}
 .guide-index li{border-bottom:1px solid var(--guide-rule)}
 .guide-index a{display:flex;gap:14px;padding:14px 0;color:var(--guide-ink);text-decoration:none;font:400 14px/1.4 Helvetica,Arial,sans-serif}
-.guide-index a span{color:var(--guide-red);font-size:11px;font-variant-numeric:tabular-nums}
-.guide-index a:hover{color:var(--guide-red)}
+.guide-index a span{color:var(--guide-accent);font-size:11px;font-variant-numeric:tabular-nums}
+.guide-index a:hover{color:var(--guide-accent)}
 .guide-entry{scroll-margin-top:calc(var(--nav-h) + 22px);border-top:1px solid var(--guide-ink);padding:20px 0 clamp(72px,9vw,140px)}
 .guide-entry-head{display:grid;grid-template-columns:60px 1fr;column-gap:20px;align-items:start;margin-bottom:32px}
-.guide-number{font-size:clamp(28px,3.5vw,48px);line-height:1;color:var(--guide-red);letter-spacing:-.04em}
-.guide-heading{margin:0;font:500 clamp(30px,4.1vw,58px)/1.03 Helvetica,Arial,sans-serif;letter-spacing:-.045em;max-width:26ch;text-wrap:balance}
-.guide-abbr{font-size:.62em;letter-spacing:-.025em}
+.guide-number{font-family:var(--font-display);font-size:clamp(28px,3.5vw,48px);line-height:1;color:var(--guide-accent);letter-spacing:-.04em}
+.guide-heading{margin:0;font:400 clamp(30px,4.1vw,58px)/1.08 'plantin',Georgia,serif;letter-spacing:0;max-width:26ch;text-wrap:balance}
+.guide-abbr{font-size:.62em;letter-spacing:0}
 .guide-entry-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(36px,7vw,108px);align-items:start}
 .guide-image{position:sticky;top:calc(var(--nav-h) + 22px);margin:0;min-width:0}
 .guide-image img{display:block;width:100%;height:auto;max-height:calc(100svh - var(--nav-h) - 80px);object-fit:contain;object-position:top left}
 .guide-copy{min-width:0;max-width:680px}
-.guide-topic{margin:0 0 22px;font-size:11px;line-height:1.5;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:var(--guide-red)}
+.guide-topic{margin:0 0 22px;font-size:11px;line-height:1.5;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:var(--guide-accent)}
 .guide-meta{margin:0 0 30px;font-size:12px;line-height:1.55}
 .guide-meta>div{display:grid;grid-template-columns:80px minmax(0,1fr);gap:12px;border-top:1px solid var(--guide-rule);padding:9px 0}
 .guide-meta dt{color:#666}.guide-meta dd{margin:0}
@@ -1022,10 +1022,10 @@ body.muzej-logo-hidden .site-header .brand-mark {
 .guide-visit p{margin:0 0 12px}.guide-visit strong{display:block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;margin-bottom:5px}
 .guide-links{display:flex;flex-wrap:wrap;gap:10px 20px;font-size:11px;line-height:1.6;margin-top:20px}
 .skopje-guide .guide-wrap a:not(.guide-index a){color:inherit;text-decoration:underline;text-decoration-color:#aaa;text-underline-offset:4px}
-.skopje-guide .guide-wrap a:hover{color:var(--guide-red);text-decoration-color:var(--guide-red)}
-.skopje-guide .guide-wrap a:focus-visible{outline:2px solid var(--guide-red);outline-offset:5px}
+.skopje-guide .guide-wrap a:hover{color:var(--guide-accent);text-decoration-color:var(--guide-accent)}
+.skopje-guide .guide-wrap a:focus-visible{outline:2px solid var(--guide-accent);outline-offset:5px}
 .guide-ending{display:grid;grid-template-columns:5fr 6fr;gap:clamp(36px,7vw,108px);border-top:2px solid var(--guide-ink);padding:26px 0 70px}
-.guide-ending h2{margin:0;font:500 clamp(32px,4vw,54px)/1.03 Helvetica,Arial,sans-serif;letter-spacing:-.045em;max-width:13ch}
+.guide-ending h2{margin:0;font:400 clamp(32px,4vw,54px)/1.08 'plantin',Georgia,serif;letter-spacing:0;max-width:13ch}
 .guide-ending p{margin:0 0 1.2em;font:400 clamp(20px,1.9vw,27px)/1.4 'plantin',Georgia,serif}
 .guide-reading{border-top:1px solid var(--guide-ink);padding:20px 0 70px;font-size:13px;line-height:1.6}
 .guide-reading h2{margin:0 0 18px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:400}
