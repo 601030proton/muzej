@@ -2502,7 +2502,34 @@
   .home #ohrid-feature .kinfolk-feature-media-link { width: min(48vw, 240px); margin-top: 44px; }
 }
 </style>
-</head>
+<style id="feature-spacing-refinement">
+/* Independent editorial spreads, with room before and after each. */
+.home #now-playing{margin-top:0;padding-block:clamp(112px,11vw,180px)}
+.home #now-playing .cinema-layout{grid-template-columns:minmax(0,1fr) minmax(0,1.55fr);align-items:start;gap:clamp(48px,7vw,112px)}
+.home #now-playing .cinema-copy h2{font-size:clamp(40px,4.2vw,64px);line-height:1.06;max-width:10ch;margin-bottom:28px}
+.home #now-playing .cinema-credit{font-size:13px;line-height:1.5}
+.home #prespa-feature{margin:0;padding-block:clamp(112px,11vw,180px)}
+.home #prespa-feature .kinfolk-feature-media-link{margin-top:40px}
+.home #vlado-feature{padding-block:clamp(112px,11vw,180px)}
+.home #vlado-feature .tose-descendants-grid{grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);align-items:start;gap:clamp(64px,9vw,160px)}
+.home #vlado-feature .tose-descendants-copy{padding:0;max-width:none;text-align:left}
+.home #vlado-feature .tose-descendants-title{font:400 clamp(40px,4.1vw,66px)/1.06 'plantin',Georgia,serif;margin:0;max-width:none;letter-spacing:-.015em}
+.home #vlado-feature .tose-descendants-title span{display:block}
+.home #vlado-feature .vlado-name{text-transform:uppercase}
+.home #vlado-feature .vlado-caption{font:400 13px/1.5 Helvetica,Arial,sans-serif;margin:32px 0 0;color:#000}
+.home #vlado-feature .tose-descendants-media{width:100%;margin:0;align-self:start}
+.home #vlado-feature .tose-descendants-image{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+.home #ohrid-feature .kinfolk-feature-title{max-width:23ch;color:#000}
+@media(max-width:720px){
+.home #now-playing,.home #prespa-feature,.home #vlado-feature{padding-block:80px}
+.home #now-playing .cinema-layout,.home #vlado-feature .tose-descendants-grid{grid-template-columns:1fr;gap:36px}
+.home #now-playing .cinema-copy h2{max-width:none;font-size:40px;margin-bottom:18px}
+.home #vlado-feature .tose-descendants-title{font-size:40px}
+.home #vlado-feature .tose-descendants-media{width:min(100%,420px);justify-self:end}
+.home #prespa-feature .kinfolk-feature-title{font-size:38px}
+.home #prespa-feature .kinfolk-feature-media-link{margin-top:32px}
+}
+</style></head>
 <body>
 <div class="page">
 <header class="site-header">
@@ -2555,7 +2582,7 @@
 <div class="shell kinfolk-feature-frame">
 <article class="kinfolk-feature-article">
 <a class="kinfolk-feature-text-link" href="./lake-ohrid-architecture-memory.html">
-<h2 class="kinfolk-feature-title" id="ohrid-feature-title"><span class="ohrid-feature-heading">The Ohrid House</span><span class="ohrid-feature-subtitle">The logic of place.</span></h2>
+<h2 class="kinfolk-feature-title" id="ohrid-feature-title">The Ohrid House and the Logic of Place</h2>
 </a>
 <a aria-label="Read The Ohrid House and the Logic of Place" class="kinfolk-feature-media-link" href="./lake-ohrid-architecture-memory.html">
 <img alt="Black-and-white collage of Ohrid house architecture with white plaster and dark timber windows." class="kinfolk-feature-image" height="1402" loading="lazy" src="./Assets/Ohrid%20Architecture/Images/BW%20Ohrid%20House/New%20Cover.png?v=20261014-final" width="1122"/>
@@ -2584,7 +2611,7 @@
 <div class="shell kinfolk-feature-frame">
 <article class="kinfolk-feature-article">
 <a class="kinfolk-feature-text-link" href="./prespa.html">
-<h2 class="kinfolk-feature-title" id="prespa-feature-title">A weekend in Prespa</h2>
+<h2 class="kinfolk-feature-title" id="prespa-feature-title">Weekend Guide: Prespa</h2>
 </a>
 <a aria-label="Read Prespa" class="kinfolk-feature-media-link" href="./prespa.html">
 <img alt="Lake Prespa shoreline in soft evening light." class="kinfolk-feature-image" height="4005" loading="lazy" src="./Assets/prespa-hero.jpeg" style="aspect-ratio: 5999 / 4005;" width="5999"/>
@@ -2595,10 +2622,8 @@
 <div class="shell">
 <article class="tose-descendants-grid">
 <div class="tose-descendants-copy">
-<p class="tose-descendants-kicker">
-<a href="./before-the-dawn.html">Vlado Janevski</a>
-</p>
-<h2 class="tose-descendants-title" id="vlado-feature-title"><a href="./before-the-dawn.html">Before the Dawn</a></h2>
+<h2 class="tose-descendants-title" id="vlado-feature-title"><a href="./before-the-dawn.html"><span class="vlado-name">Vlado Janevski:</span><span>Before the Dawn</span></a></h2>
+<p class="vlado-caption">Music, 1998</p>
 </div>
 <a aria-label="Read Before the Dawn" class="tose-descendants-media" href="./before-the-dawn.html">
 <img alt="Vlado Janevski performing on a brightly lit stage in a blue suit." class="tose-descendants-image" height="1350" loading="lazy" src="./Assets/Vlado/Pics/hero.png" style="aspect-ratio: 1080 / 1350;" width="1080"/>
