@@ -24,8 +24,8 @@
       slug: "peppers",
       href: "peppers.html",
       title: "Peppers (Пиперки)",
-      kicker: "Poetry | Translation",
-      dek: "Blaže Koneski's ode to peppers, Prilep, autumn, and household pride.",
+      kicker: "Poetry",
+      dek: "Blaže Koneski’s depiction of Prilep’s markets and winter food preparations, translated by Kristian Josifoski.",
       image: "./Assets/Peppers/peppers.png",
       alt: "Red peppers drying from a balcony above a garden.",
       position: "center top"
@@ -154,8 +154,8 @@
       slug: "longing-for-south",
       href: "longing-for-south.html",
       title: "Konstantin Miladinov's Longing for the South",
-      kicker: "Poetry | Memory",
-      dek: "A lyric of distance, return, and the southern light that keeps calling.",
+      kicker: "Poetry",
+      dek: "Written during Miladinov’s stay in Russia, the poem names Ohrid and Struga as places of return.",
       image: "./Assets/Longing%20for%20the%20South/longing-for-the-south.jpg",
       alt: "Lake Ohrid or Struga landscape evoking longing and memory.",
       position: "center center"

@@ -57,24 +57,27 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .story-card-kicker { color: var(--muted); margin-bottom: 10px; }
 .story-card-title { font-size: var(--title-card); line-height: 1.12; }
 .story-card-title a:hover, .explore-row-title:hover, .editorial-spread-title:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
-/* A small plate with a large heading: the deliberate pause before the portraits. */
-#ohrid-feature { margin-top: 0; padding-block: clamp(100px, 10vw, 144px); }
+/* Selected Stories occupies its own reading moment before the Ohrid pause. */
+#selected-stories { min-height: 100svh; }
+/* The complete article title above a small, uncropped plate. */
+#ohrid-feature { margin-top: 0; padding-block: clamp(140px, 13vw, 190px); }
 #ohrid-feature .kinfolk-feature-article { text-align: center; }
-#ohrid-feature .kinfolk-feature-title { font-size: var(--title-feature); line-height: 1.06; letter-spacing: -.015em; }
-.ohrid-feature-subtitle { font: 400 clamp(27px, 3vw, 43px)/1.2 var(--serif); margin-top: 10px; }
+#ohrid-feature .kinfolk-feature-title { max-width: 22ch; margin-inline: auto; font-size: var(--title-feature); line-height: 1.06; letter-spacing: -.015em; }
 #ohrid-feature .kinfolk-feature-media-link { display: block; width: clamp(180px, 16vw, 240px); margin: 42px auto 0; }
 #ohrid-feature .kinfolk-feature-image { width: 100%; }
-.ohrid-feature-caption { font-size: 11px; margin-top: 18px; color: var(--muted); }
 #conversations { margin-top: 0; }
 .editorial-spread-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gutter); align-items: start; }
 .editorial-spread-card { display: block; min-width: 0; }
 .editorial-spread-card img { width: 100%; }
-.interview-plates .editorial-spread-card img { aspect-ratio: 3/4; object-fit: contain; background: #fff; }
+.interview-plates .editorial-spread-card img { height: auto; aspect-ratio: auto; }
 .editorial-spread-copy { padding-top: 22px; }
 .editorial-spread-eyebrow { color: var(--muted); margin-bottom: 10px; }
 .editorial-spread-title { font-size: clamp(32px, 3.3vw, 48px); line-height: 1.08; max-width: 25ch; }
 /* The film is horizontal; the poster is shown whole, including its edges. */
-.cinema-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.55fr); gap: var(--gutter); align-items: center; padding-block: 44px; border-block: 1px solid var(--rule); }
+.cinema-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.55fr); gap: var(--gutter); align-items: center; padding-block: 44px; position: relative; }
+.cinema-layout::before, .cinema-layout::after { content: ''; position: absolute; left: var(--page-x); right: var(--page-x); height: 1px; background: var(--rule); }
+.cinema-layout::before { top: 0; }
+.cinema-layout::after { bottom: 0; }
 .cinema-copy h2 { font-size: var(--title-feature); line-height: 1.04; max-width: 11ch; margin-top: 18px; }
 .cinema-credit { font-size: 12px; color: var(--muted); margin-top: 22px; }
 .film-screen { aspect-ratio: 16/9; background: #111; }
@@ -89,6 +92,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 #prespa-feature .kinfolk-feature-article { display: flex; flex-direction: column; gap: 28px; }
 #prespa-feature .kinfolk-feature-title { font-size: var(--title-feature); line-height: 1.08; }
 #prespa-feature .kinfolk-feature-image { width: 100%; }
+#vlado-feature { margin-top: 0; min-height: 110svh; padding-block: clamp(140px, 14vw, 210px); display: grid; align-items: center; }
 .tose-descendants-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: var(--gutter); align-items: center; }
 .tose-descendants-title { font-size: var(--title-feature); line-height: 1.08; }
 .tose-descendants-title span { display: block; }
@@ -96,8 +100,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .vlado-caption { font-size: 12px; color: var(--muted); margin-top: 24px; }
 .tose-descendants-media { width: min(100%, 420px); justify-self: end; }
 .tose-descendants-image { width: 100%; }
-#books-and-film .editorial-spread-card img { aspect-ratio: 4/3; object-fit: contain; }
-#books-and-film .editorial-spread-title { font-size: clamp(30px, 2.8vw, 40px); }
+#books-and-film { margin-top: 0; }
+#books-and-film .editorial-spread-card img { width: 100%; height: auto; aspect-ratio: auto; }
 .catalogue-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gutter); }
 .catalogue-grid .story-card-link { aspect-ratio: 3/4; }
 .muzej-letter__layout { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: var(--gutter); border-block: 1px solid var(--rule); padding-block: 48px; }
@@ -109,8 +113,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .explore-stack { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--gutter); }
 .explore-row { display: grid; grid-template-columns: 100px minmax(0, 1fr); gap: 24px; align-items: center; padding-block: 24px; border-bottom: 1px solid var(--rule); }
 .explore-row-title { font-size: clamp(23px, 2vw, 29px); line-height: 1.15; max-width: 23ch; }
-.explore-image { height: 120px; display: flex; align-items: center; }
-.explore-image img { width: 100%; max-height: 120px; object-fit: contain; }
+.explore-image { width: 100%; aspect-ratio: 3/4; overflow: hidden; }
+.explore-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .home-archive summary { display: flex; justify-content: space-between; align-items: center; padding-block: 24px; border-block: 1px solid var(--rule); font: 400 var(--title-section)/1.1 var(--serif); list-style: none; }
 .home-archive summary::-webkit-details-marker { display: none; }
 .archive-count { font: 400 12px/1.5 var(--sans); }
@@ -142,8 +146,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   .story-card-title { font-size: 25px; }
   .story-card-kicker { font-size: 10px; min-height: 29px; margin-bottom: 8px; }
   .story-card-copy { padding-top: 14px; }
-  #ohrid-feature { padding-block: 88px; }
-  .ohrid-feature-subtitle { font-size: 28px; }
+  #selected-stories { padding-bottom: 100px; }
+  #ohrid-feature { padding-block: 110px; }
+  #vlado-feature { min-height: 100svh; padding-block: 120px; }
   .editorial-spread-grid { grid-template-columns: 1fr; gap: 44px; }
   .editorial-spread-copy { padding-top: 18px; }
   .interview-plates .editorial-spread-card img { aspect-ratio: auto; }
@@ -162,7 +167,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   .explore-stack, .archive-list { grid-template-columns: 1fr; }
   .explore-row { grid-template-columns: 80px minmax(0, 1fr); gap: 22px; }
   .explore-row-title { font-size: 25px; }
-  .explore-image, .explore-image img { max-height: 100px; }
   .simple-footer nav { gap: 14px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
