@@ -36,8 +36,8 @@
       title: "Start Here: Five Books with Macedonian State",
       kicker: "Books | History",
       dek: "A collaboration with Macedonian State on five books that open different doors into Macedonian history, identity, and independence.",
-      image: "./Assets/5%20Books/Images/NewCovers%20Folder/five-books-new-hero.webp",
-      alt: "Five Macedonian history book covers",
+      image: "./Assets/5%20Books/Images/five-books-reading-hero.webp",
+      alt: "A reader holding Macedonia and the Macedonians: A History by Andrew Rossos, with a coffee cup.",
       position: "center top"
     },
     {
