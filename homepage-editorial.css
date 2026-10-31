@@ -57,10 +57,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .story-card-kicker { color: var(--muted); margin-bottom: 10px; }
 .story-card-title { font-size: var(--title-card); line-height: 1.12; }
 .story-card-title a:hover, .explore-row-title:hover, .editorial-spread-title:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
-/* Selected Stories occupies its own reading moment before the Ohrid pause. */
-#selected-stories { min-height: 100svh; }
 /* The complete article title above a small, uncropped plate. */
-#ohrid-feature { margin-top: 0; padding-block: clamp(140px, 13vw, 190px); }
+#ohrid-feature { margin-top: 0; padding-top: clamp(112px, 12vw, 172px); padding-bottom: clamp(140px, 13vw, 190px); }
 #ohrid-feature .kinfolk-feature-article { text-align: center; }
 #ohrid-feature .kinfolk-feature-title { max-width: 22ch; margin-inline: auto; font-size: var(--title-feature); line-height: 1.06; letter-spacing: -.015em; }
 #ohrid-feature .kinfolk-feature-media-link { display: block; width: clamp(180px, 16vw, 240px); margin: 42px auto 0; }
@@ -69,7 +67,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .editorial-spread-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gutter); align-items: start; }
 .editorial-spread-card { display: block; min-width: 0; }
 .editorial-spread-card img { width: 100%; }
-.interview-plates .editorial-spread-card img { height: auto; aspect-ratio: auto; }
+.interview-plates .editorial-spread-card img { width: 100%; height: auto; aspect-ratio: 3/4; object-fit: cover; object-position: center top; }
 .editorial-spread-copy { padding-top: 22px; }
 .editorial-spread-eyebrow { color: var(--muted); margin-bottom: 10px; }
 .editorial-spread-title { font-size: clamp(32px, 3.3vw, 48px); line-height: 1.08; max-width: 25ch; }
@@ -103,7 +101,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 #books-and-film { margin-top: 0; }
 #books-and-film .editorial-spread-card img { width: 100%; height: auto; aspect-ratio: auto; }
 .catalogue-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gutter); }
-.catalogue-grid .story-card-link { aspect-ratio: 3/4; }
+.catalogue-grid .story-card-link { aspect-ratio: 3/4; overflow: hidden; }
+.catalogue-grid .story-image { width: 100%; height: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center; }
 .muzej-letter__layout { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: var(--gutter); border-block: 1px solid var(--rule); padding-block: 48px; }
 .muzej-letter__title { font-size: var(--title-section); line-height: 1.15; }
 .letter-copy p { font: 400 20px/1.4 var(--serif); margin-top: 12px; }
@@ -146,12 +145,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   .story-card-title { font-size: 25px; }
   .story-card-kicker { font-size: 10px; min-height: 29px; margin-bottom: 8px; }
   .story-card-copy { padding-top: 14px; }
-  #selected-stories { padding-bottom: 100px; }
   #ohrid-feature { padding-block: 110px; }
   #vlado-feature { min-height: 100svh; padding-block: 120px; }
   .editorial-spread-grid { grid-template-columns: 1fr; gap: 44px; }
   .editorial-spread-copy { padding-top: 18px; }
-  .interview-plates .editorial-spread-card img { aspect-ratio: auto; }
   .cinema-layout, .tose-descendants-grid, .muzej-letter__layout { grid-template-columns: 1fr; gap: 28px; }
   .cinema-layout { padding-block: 30px; }
   .cinema-copy h2 { max-width: none; }
@@ -159,8 +156,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   .film-play { left: 12px; bottom: 12px; }
   .tose-descendants-media { width: 85%; }
   .catalogue-grid { grid-template-columns: 1fr; gap: 40px; }
-  .catalogue-grid .story-card-link { aspect-ratio: auto; }
-  .catalogue-grid .story-image { height: auto; max-height: 480px; }
   .catalogue-grid .story-card-kicker { min-height: 0; }
   .catalogue-grid .story-card-title { font-size: 30px; }
   .muzej-letter__layout { padding-block: 32px; }
