@@ -69,3 +69,18 @@
  letter-spacing:0!important;
 }
 @media(max-width:760px){:root{--muzej-body-size:19px}}
+
+/* Nested article formats use the same reading size as standard body blocks. */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.guide-prose>p,
+.guide-section>p:not(.guide-pull),
+.poem-text>p,
+.museum-copy>p:not(.museum-label),
+.body-copy>p,
+.itinerary-entry-body>p,
+.ranking-details-body>p{
+ font-family:var(--muzej-body-family)!important;
+ font-size:var(--muzej-body-size)!important;
+ line-height:var(--muzej-body-leading)!important;
+ letter-spacing:0!important;
+}
