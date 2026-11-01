@@ -824,18 +824,18 @@ body.muzej-logo-hidden .site-header .brand-mark {
 <style id="venus-sticky-opening">
 /* Title remains within the opening until the image and deck have passed. */
 .venus-sticky-opening .feature-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:start;height:auto;min-height:0}
-.venus-sticky-opening .feature-copy{position:sticky;top:100px;align-self:start;height:calc(100svh - 124px);min-height:0;max-width:none;width:100%;margin:0;padding:0 0 24px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;text-align:left;gap:24px}
+.venus-sticky-opening .feature-copy{position:sticky;top:100px;align-self:start;height:calc(100svh - 180px);min-height:0;max-width:none;width:100%;margin:0;padding:0 0 24px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;text-align:left;gap:24px}
 .venus-sticky-opening .feature-title{width:auto;max-width:100%;font-size:clamp(42px,5.2vw,82px);line-height:.98}
 .venus-sticky-opening .feature-byline{order:2;margin:0}
 .feature-scroll-column{min-width:0}
 .venus-sticky-opening .feature-media{margin:0;height:auto}
-.venus-sticky-opening .feature-media img{display:block;width:100%;height:calc(100svh - 124px);max-height:none;object-fit:cover}
+.venus-sticky-opening .feature-media img{display:block;width:100%;height:calc(100svh - 180px);max-height:none;object-fit:contain}
 .venus-sticky-opening .feature-deck{width:100%;max-width:none;margin:40px 0 0;padding:0 0 16px;font-size:clamp(22px,2.5vw,36px);line-height:1.25;text-align:left}
 @media(max-width:760px){
 .venus-sticky-opening .feature-inner{grid-template-columns:1fr;gap:28px}
 .venus-sticky-opening .feature-copy{position:static;height:auto;min-height:0;padding:0;gap:20px;order:0}
 .venus-sticky-opening .feature-title{font-size:clamp(30px,8.2vw,38px)}
-.venus-sticky-opening .feature-media img{height:auto;max-height:none;object-fit:contain}
+.venus-sticky-opening .feature-media img{height:auto;max-height:calc(100svh - 250px);object-fit:contain}
 .venus-sticky-opening .feature-deck{margin-top:28px;font-size:22px}
 }
 </style><style id="venus-editorial-details">
