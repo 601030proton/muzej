@@ -4,7 +4,7 @@ header:is(.muzej-sticky-opening,.venus-sticky-opening,.lazarki-sticky-opening) .
 header:is(.muzej-sticky-opening,.venus-sticky-opening,.lazarki-sticky-opening) .feature-media img{display:block;width:100%!important;max-width:100%!important;margin:0!important;padding:0;transform:none!important;object-position:left top!important}
 .article-shell .body-block .section-heading,.article-shell .body-block .chapter-heading{font-family:"plantin",Georgia,serif;font-size:30px;font-weight:400;line-height:1.1;letter-spacing:0;text-transform:none;white-space:normal;border:0;padding:0;max-width:100%;margin:64px 0 24px}
 .article-shell .body-block .section-heading:first-child,.article-shell .body-block .chapter-heading:first-child{margin-top:0}
-.nation-article .article-shell .body-block .section-heading{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:24px;line-height:1.2}
+.nation-article .article-shell .body-block .section-heading{font-family:"plantin",Georgia,serif;font-size:30px;line-height:1.1}
 .article-books .book-cover-figure{position:sticky;top:112px;align-self:start}
 .article-books .book-cover-figure img{max-height:calc(100svh - 150px);object-fit:contain;object-position:left top}
 .watch-hero .watch-hero-inner{gap:28px}
@@ -17,7 +17,7 @@ header:is(.muzej-sticky-opening,.venus-sticky-opening,.lazarki-sticky-opening) .
 @media(max-width:760px){
 .article-shell .body-block .section-heading,.article-shell .body-block .chapter-heading{font-size:26px;margin-top:52px;margin-bottom:22px}
 .article-shell .body-block .section-heading:first-child,.article-shell .body-block .chapter-heading:first-child{margin-top:0}
-.nation-article .article-shell .body-block .section-heading{font-size:22px}
+.nation-article .article-shell .body-block .section-heading{font-size:26px}
 .article-books .book-cover-figure{position:static}
 .article-books .book-cover-figure img{max-height:none}
 .watch-hero .watch-copy{grid-template-columns:1fr;gap:12px}
