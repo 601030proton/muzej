@@ -58,7 +58,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .story-card-title { font-size: var(--title-card); line-height: 1.12; }
 .story-card-title a:hover, .explore-row-title:hover, .editorial-spread-title:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
 /* The complete article title above a small, uncropped plate. */
-#ohrid-feature { margin-top: 0; padding-top: clamp(112px, 12vw, 172px); padding-bottom: clamp(140px, 13vw, 190px); }
+#ohrid-feature { margin-top: 0; padding-top: clamp(136px, 14vw, 200px); padding-bottom: clamp(164px, 15vw, 218px); }
 #ohrid-feature .kinfolk-feature-article { text-align: center; }
 #ohrid-feature .kinfolk-feature-title { max-width: 22ch; margin-inline: auto; font-size: var(--title-feature); line-height: 1.06; letter-spacing: -.015em; }
 #ohrid-feature .kinfolk-feature-media-link { display: block; width: clamp(180px, 16vw, 240px); margin: 42px auto 0; }
@@ -145,7 +145,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   .story-card-title { font-size: 25px; }
   .story-card-kicker { font-size: 10px; min-height: 29px; margin-bottom: 8px; }
   .story-card-copy { padding-top: 14px; }
-  #ohrid-feature { padding-block: 110px; }
+  #ohrid-feature { padding-block: 130px; }
   #vlado-feature { min-height: 100svh; padding-block: 120px; }
   .editorial-spread-grid { grid-template-columns: 1fr; gap: 44px; }
   .editorial-spread-copy { padding-top: 18px; }
