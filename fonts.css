@@ -84,3 +84,36 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
  line-height:var(--muzej-body-leading)!important;
  letter-spacing:0!important;
 }
+
+/* Consistent small editorial credits throughout Muzej. */
+body .feature-byline,
+body .guide-byline,
+body .article-byline,
+body .poem-byline-block,
+body .poem-byline-block p {
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+  font-size:11px !important;
+  font-weight:400 !important;
+  line-height:1.4 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+  color:#000 !important;
+}
+/* Keep each introduction below the initial hero screen. */
+header:is(.muzej-sticky-opening,.venus-sticky-opening,.lazarki-sticky-opening) .feature-media {
+  min-height:calc(100svh - 80px) !important;
+}
+header:is(.muzej-sticky-opening,.venus-sticky-opening,.lazarki-sticky-opening) .feature-media img {
+  height:calc(100svh - 180px) !important;
+  object-fit:contain !important;
+  object-position:left top !important;
+}
+@media(max-width:760px){
+  header:is(.muzej-sticky-opening,.venus-sticky-opening,.lazarki-sticky-opening) .feature-media {
+    min-height:calc(100svh - 180px) !important;
+  }
+  header:is(.muzej-sticky-opening,.venus-sticky-opening,.lazarki-sticky-opening) .feature-media img {
+    height:auto !important;
+    max-height:calc(100svh - 330px) !important;
+  }
+}
