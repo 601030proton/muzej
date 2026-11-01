@@ -1,6 +1,16 @@
 (function () {
   var articles = [
     {
+      slug: "robert-gligorov",
+      href: "robert-gligorov.html",
+      title: "Robert Gligorov: Between the Dream and Reality",
+      kicker: "Interview | Art",
+      dek: "A conversation with the Macedonian artist in Milan.",
+      image: "./Assets/Robert%20Gligorov/For%20Website/Gligorov-01.png",
+      alt: "Robert Gligorov.",
+      position: "center top"
+    },
+    {
       slug: "venus-of-skupi",
       href: "venus-of-skupi.html",
       title: "The Venus of Skupi",
@@ -257,7 +267,7 @@
       return article.slug === slug;
     });
 
-    if (!isArticle) {
+    if (!isArticle && !document.querySelector("main [data-more-from-muzej]")) {
       return;
     }
 
