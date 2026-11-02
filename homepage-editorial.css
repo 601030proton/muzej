@@ -1,0 +1,167 @@
+/* Homepage design system. This file owns homepage layout; article styles are independent. */
+:root {
+  --ink: #171513;
+  --muted: #605e59;
+  --rule: #deddd9;
+  --paper: #fff;
+  --serif: 'plantin', Georgia, serif;
+  --sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --page-x: clamp(22px, 5vw, 80px);
+  --gutter: clamp(20px, 3vw, 44px);
+  --section-space: clamp(64px, 7.5vw, 108px);
+  --title-feature: clamp(40px, 4.4vw, 64px);
+  --title-section: clamp(28px, 2.6vw, 36px);
+  --title-card: clamp(25px, 2.2vw, 32px);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 16px/1.5 var(--sans); -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+button, summary { cursor: pointer; }
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; text-wrap: balance; }
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible { outline: 2px solid #9d3528; outline-offset: 5px; }
+.sr-only, .muzej-letter__label { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.shell { width: min(100%, 1600px); padding-inline: var(--page-x); margin-inline: auto; }
+.section { margin-top: var(--section-space); }
+.header-frame { display: flex; align-items: center; justify-content: space-between; padding-block: 30px; }
+.brand-mark { display: block; position: relative; overflow: hidden; width: clamp(142px, 13vw, 186px); aspect-ratio: 1237 / 244; }
+.brand-mark-image { position: absolute; max-width: none; width: 124.17%; left: -12.21%; top: -341.8%; }
+.utility-menu { position: relative; }
+.utility-trigger { display: grid; place-items: center; width: 44px; height: 44px; list-style: none; }
+.utility-trigger::-webkit-details-marker { display: none; }
+.utility-icon { display: grid; gap: 5px; }
+.utility-icon-line { width: 23px; height: 1px; background: var(--ink); }
+.utility-panel { position: absolute; z-index: 10; right: 0; top: 48px; width: 210px; padding: 12px; background: white; border: 1px solid var(--rule); box-shadow: 0 10px 30px #0000000d; }
+.utility-panel-group { display: grid; }
+.utility-link { display: block; padding: 11px 10px; font-size: 13px; }
+.utility-link:hover { background: #f5f5f2; }
+.utility-panel-utility { border-top: 1px solid var(--rule); margin-top: 8px; padding-top: 8px; }
+.home-eyebrow, .story-card-kicker, .editorial-spread-eyebrow { font: 400 11px/1.45 var(--sans); letter-spacing: .07em; text-transform: uppercase; }
+.skopje-home-hero-stage { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: var(--gutter); align-items: end; }
+.skopje-home-hero-copy { padding-block: 30px; }
+.skopje-home-hero-copy h1 { font-size: clamp(64px, 8vw, 116px); line-height: .97; letter-spacing: -.025em; max-width: 9ch; margin-top: 24px; }
+.lead-deck { font: 400 clamp(23px, 2.1vw, 30px)/1.3 var(--serif); max-width: 27ch; margin: 28px 0; }
+.text-link { display: inline-block; font-size: 12px; padding-bottom: 5px; border-bottom: 1px solid; }
+.skopje-home-hero-media { display: block; width: min(100%, 570px); justify-self: end; }
+.skopje-home-hero-media img { width: 100%; }
+.read-next-header, .explore-header { padding-bottom: 18px; border-bottom: 1px solid var(--rule); margin-bottom: 30px; }
+.read-next-title, .explore-header-title { font-size: var(--title-section); line-height: 1.15; }
+.story-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gutter); }
+.story-card { min-width: 0; }
+.story-card-link { display: flex; align-items: center; aspect-ratio: 3/4; }
+.story-image { width: 100%; height: 100%; object-fit: contain; }
+.story-card-copy { padding-top: 18px; }
+.story-card-kicker { color: var(--muted); margin-bottom: 10px; }
+.story-card-title { font-size: var(--title-card); line-height: 1.12; }
+.story-card-title a:hover, .explore-row-title:hover, .editorial-spread-title:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
+/* The complete article title above a small, uncropped plate. */
+#ohrid-feature { margin-top: 0; padding-top: clamp(136px, 14vw, 200px); padding-bottom: clamp(164px, 15vw, 218px); }
+#ohrid-feature .kinfolk-feature-article { text-align: center; }
+#ohrid-feature .kinfolk-feature-title { max-width: 22ch; margin-inline: auto; font-size: var(--title-feature); line-height: 1.06; letter-spacing: -.015em; }
+#ohrid-feature .kinfolk-feature-media-link { display: block; width: clamp(180px, 16vw, 240px); margin: 42px auto 0; }
+#ohrid-feature .kinfolk-feature-image { width: 100%; }
+#conversations { margin-top: 0; }
+.editorial-spread-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gutter); align-items: start; }
+.editorial-spread-card { display: block; min-width: 0; }
+.editorial-spread-card img { width: 100%; }
+.interview-plates .editorial-spread-card img { width: 100%; height: auto; aspect-ratio: 3/4; object-fit: cover; object-position: center top; }
+.editorial-spread-copy { padding-top: 22px; }
+.editorial-spread-eyebrow { color: var(--muted); margin-bottom: 10px; }
+.editorial-spread-title { font-size: clamp(32px, 3.3vw, 48px); line-height: 1.08; max-width: 25ch; }
+/* The film is horizontal; the poster is shown whole, including its edges. */
+.cinema-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.55fr); gap: var(--gutter); align-items: center; padding-block: 44px; position: relative; }
+.cinema-layout::before, .cinema-layout::after { content: ''; position: absolute; left: var(--page-x); right: var(--page-x); height: 1px; background: var(--rule); }
+.cinema-layout::before { top: 0; }
+.cinema-layout::after { bottom: 0; }
+.cinema-copy h2 { font-size: var(--title-feature); line-height: 1.04; max-width: 11ch; margin-top: 18px; }
+.cinema-credit { font-size: 12px; color: var(--muted); margin-top: 22px; }
+.film-screen { aspect-ratio: 16/9; background: #111; }
+.film-poster { position: relative; width: 100%; height: 100%; display: block; padding: 0; border: 0; background: #111; color: white; }
+.film-poster img { width: 100%; height: 100%; object-fit: contain; }
+.film-play { position: absolute; bottom: 20px; left: 20px; display: flex; align-items: center; gap: 12px; background: #000b; padding: 10px 16px; font-size: 12px; }
+.film-play>span { font-size: 14px; }
+.film-screen iframe { width: 100%; height: 100%; border: 0; display: block; }
+.film-fallback { display: flex; justify-content: flex-end; gap: 24px; margin-top: 14px; font-size: 11px; }
+.film-fallback a { text-decoration: underline; text-underline-offset: 4px; }
+/* Prespa opens the composition horizontally after the two portrait spreads. */
+#prespa-feature .kinfolk-feature-article { display: flex; flex-direction: column; gap: 28px; }
+#prespa-feature .kinfolk-feature-title { font-size: var(--title-feature); line-height: 1.08; }
+#prespa-feature .kinfolk-feature-image { width: 100%; }
+#vlado-feature { margin-top: 0; min-height: 110svh; padding-block: clamp(140px, 14vw, 210px); display: grid; align-items: center; }
+.tose-descendants-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: var(--gutter); align-items: center; }
+.tose-descendants-title { font-size: var(--title-feature); line-height: 1.08; }
+.tose-descendants-title span { display: block; }
+.vlado-name { font: 400 11px/1.45 var(--sans); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 20px; }
+.vlado-caption { font-size: 12px; color: var(--muted); margin-top: 24px; }
+.tose-descendants-media { width: min(100%, 420px); justify-self: end; }
+.tose-descendants-image { width: 100%; }
+#books-and-film { margin-top: 0; }
+#books-and-film .editorial-spread-card img { width: 100%; height: auto; aspect-ratio: auto; }
+.catalogue-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gutter); }
+.catalogue-grid .story-card-link { aspect-ratio: 3/4; overflow: hidden; }
+.catalogue-grid .story-image { width: 100%; height: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center; }
+.muzej-letter__layout { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: var(--gutter); border-block: 1px solid var(--rule); padding-block: 48px; }
+.muzej-letter__title { font-size: var(--title-section); line-height: 1.15; }
+.letter-copy p { font: 400 20px/1.4 var(--serif); margin-top: 12px; }
+.muzej-letter__form { display: flex; border-bottom: 1px solid var(--ink); }
+.muzej-letter__input { min-width: 0; width: 100%; border: 0; background: transparent; border-radius: 0; padding: 15px 0; font-size: 14px; }
+.muzej-letter__button { background: transparent; border: 0; padding: 15px 0 15px 20px; font-size: 12px; }
+.explore-stack { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--gutter); }
+.explore-row { display: grid; grid-template-columns: 100px minmax(0, 1fr); gap: 24px; align-items: center; padding-block: 24px; border-bottom: 1px solid var(--rule); }
+.explore-row-title { font-size: clamp(23px, 2vw, 29px); line-height: 1.15; max-width: 23ch; }
+.explore-image { width: 100%; aspect-ratio: 3/4; overflow: hidden; }
+.explore-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.home-archive summary { display: flex; justify-content: space-between; align-items: center; padding-block: 24px; border-block: 1px solid var(--rule); font: 400 var(--title-section)/1.1 var(--serif); list-style: none; }
+.home-archive summary::-webkit-details-marker { display: none; }
+.archive-count { font: 400 12px/1.5 var(--sans); }
+.home-archive details[open] .archive-count>span { display: inline-block; transform: rotate(45deg); }
+.archive-body { padding-block: 28px; }
+.archive-body label { display: block; font-size: 12px; margin-bottom: 12px; }
+#archive-search { width: 100%; padding: 14px 0; border: 0; border-bottom: 1px solid var(--rule); background: white; font: 400 24px/1.3 var(--serif); border-radius: 0; }
+#archive-results { font-size: 12px; margin-block: 16px; }
+.archive-list { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--gutter); list-style: none; padding: 0; margin: 0; }
+.archive-list li { border-bottom: 1px solid var(--rule); }
+.archive-list a { display: block; padding-block: 16px; font: 400 23px/1.2 var(--serif); }
+[hidden] { display: none !important; }
+#newsletter-strip { margin-top: 56px; }
+.about-statement { text-align: center; font-size: 24px; line-height: 1.3; }
+.simple-footer { text-align: center; padding: 36px var(--page-x) 48px; }
+.simple-footer nav { display: flex; justify-content: center; gap: 20px; font-size: 11px; }
+@media (max-width: 1000px) {
+  .story-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 36px; }
+  .skopje-home-hero-copy h1 { font-size: clamp(60px, 8vw, 80px); }
+  .explore-row { grid-template-columns: 80px minmax(0, 1fr); gap: 18px; }
+}
+@media (max-width: 640px) {
+  .header-frame { padding-block: 18px; }
+  .skopje-home-hero-stage { grid-template-columns: 1fr; gap: 28px; }
+  .skopje-home-hero-copy { padding: 20px 0 0; }
+  .skopje-home-hero-copy h1 { font-size: clamp(60px, 16vw, 84px); margin-top: 18px; }
+  .lead-deck { font-size: 24px; margin-block: 20px; }
+  .skopje-home-hero-media { width: 100%; }
+  .story-card-title { font-size: 25px; }
+  .story-card-kicker { font-size: 10px; min-height: 29px; margin-bottom: 8px; }
+  .story-card-copy { padding-top: 14px; }
+  #ohrid-feature { padding-block: 130px; }
+  #vlado-feature { min-height: 100svh; padding-block: 120px; }
+  .editorial-spread-grid { grid-template-columns: 1fr; gap: 44px; }
+  .editorial-spread-copy { padding-top: 18px; }
+  .cinema-layout, .tose-descendants-grid, .muzej-letter__layout { grid-template-columns: 1fr; gap: 28px; }
+  .cinema-layout { padding-block: 30px; }
+  .cinema-copy h2 { max-width: none; }
+  .cinema-credit { margin-top: 16px; }
+  .film-play { left: 12px; bottom: 12px; }
+  .tose-descendants-media { width: 85%; }
+  .catalogue-grid { grid-template-columns: 1fr; gap: 40px; }
+  .catalogue-grid .story-card-kicker { min-height: 0; }
+  .catalogue-grid .story-card-title { font-size: 30px; }
+  .muzej-letter__layout { padding-block: 32px; }
+  .explore-stack, .archive-list { grid-template-columns: 1fr; }
+  .explore-row { grid-template-columns: 80px minmax(0, 1fr); gap: 22px; }
+  .explore-row-title { font-size: 25px; }
+  .simple-footer nav { gap: 14px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

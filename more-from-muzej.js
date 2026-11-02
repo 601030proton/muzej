@@ -1,6 +1,16 @@
 (function () {
   var articles = [
     {
+      slug: "robert-gligorov",
+      href: "robert-gligorov.html",
+      title: "Robert Gligorov: Between the Dream and Reality",
+      kicker: "Interview | Art",
+      dek: "A conversation with the Macedonian artist in Milan.",
+      image: "./Assets/Robert%20Gligorov/For%20Website/Gligorov-01.png",
+      alt: "Robert Gligorov.",
+      position: "center top"
+    },
+    {
       slug: "venus-of-skupi",
       href: "venus-of-skupi.html",
       title: "The Venus of Skupi",
@@ -24,8 +34,8 @@
       slug: "peppers",
       href: "peppers.html",
       title: "Peppers (Пиперки)",
-      kicker: "Poetry | Translation",
-      dek: "Blaže Koneski's ode to peppers, Prilep, autumn, and household pride.",
+      kicker: "Poetry",
+      dek: "Blaže Koneski’s depiction of Prilep’s markets and winter food preparations, translated by Kristian Josifoski.",
       image: "./Assets/Peppers/peppers.png",
       alt: "Red peppers drying from a balcony above a garden.",
       position: "center top"
@@ -36,8 +46,8 @@
       title: "Start Here: Five Books with Macedonian State",
       kicker: "Books | History",
       dek: "A collaboration with Macedonian State on five books that open different doors into Macedonian history, identity, and independence.",
-      image: "./Assets/5%20Books/Images/NewCovers%20Folder/five-books-new-hero.webp",
-      alt: "Five Macedonian history book covers",
+      image: "./Assets/5%20Books/Images/five-books-reading-hero.webp",
+      alt: "A reader holding Macedonia and the Macedonians: A History by Andrew Rossos, with a coffee cup.",
       position: "center top"
     },
     {
@@ -106,7 +116,7 @@
       title: "Tokyo on the Vardar",
       kicker: "Architecture | Urbanism",
       dek: "How Japanese urban theory found form in Macedonia.",
-      image: "./Assets/Kenzo%20Article/Tange%20Pics/final.png",
+      image: "./Assets/Kenzo%20Article/Tange%20Pics/kenzohero.png",
       alt: "Editorial collage portrait with red geometric forms and brutalist architecture.",
       position: "center center"
     },
@@ -141,17 +151,6 @@
       position: "center top"
     },
     {
-      slug: "the-stranci",
-      recommend: false,
-      href: "the-stranci.html",
-      title: "How to Be From Somewhere Else",
-      kicker: "Field Notes | Internet",
-      dek: "They came looking for a place the internet had not already flattened. They stayed for the ajvar.",
-      image: "./Assets/Stranci/Stranci%20Pix/stranci-index-portrait.png",
-      alt: "Three people posing for a phone camera against a yellow and pink painted backdrop with social media icons.",
-      position: "center center"
-    },
-    {
       slug: "lake-ohrid-architecture-memory",
       href: "lake-ohrid-architecture-memory.html",
       title: "The Ohrid House and the Logic of Place",
@@ -165,8 +164,8 @@
       slug: "longing-for-south",
       href: "longing-for-south.html",
       title: "Konstantin Miladinov's Longing for the South",
-      kicker: "Poetry | Memory",
-      dek: "A lyric of distance, return, and the southern light that keeps calling.",
+      kicker: "Poetry",
+      dek: "Written during Miladinov’s stay in Russia, the poem names Ohrid and Struga as places of return.",
       image: "./Assets/Longing%20for%20the%20South/longing-for-the-south.jpg",
       alt: "Lake Ohrid or Struga landscape evoking longing and memory.",
       position: "center center"
@@ -268,7 +267,7 @@
       return article.slug === slug;
     });
 
-    if (!isArticle) {
+    if (!isArticle && !document.querySelector("main [data-more-from-muzej]")) {
       return;
     }
 

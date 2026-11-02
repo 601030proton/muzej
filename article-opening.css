@@ -1,0 +1,19 @@
+/* Shared image-and-introduction opening for Muzej articles. */
+header.muzej-sticky-opening{padding:6px clamp(16px,3vw,40px) clamp(56px,8vw,102px)}
+header.muzej-sticky-opening .feature-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:start;height:auto;min-height:0;max-width:1320px;margin:0 auto}
+header.muzej-sticky-opening .feature-copy{position:sticky;top:100px;align-self:start;height:calc(100svh - 180px);min-height:0;max-width:none;width:100%;margin:0;padding:0 0 24px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;text-align:left;gap:24px;box-sizing:border-box}
+header.muzej-sticky-opening .feature-title{width:auto;max-width:100%;margin:0;font-family:"plantin",Georgia,serif;font-size:clamp(42px,5.2vw,82px);font-weight:400;line-height:.98;letter-spacing:0;text-transform:none;color:#000}
+header.muzej-sticky-opening .feature-byline{order:2;margin:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;font-weight:400;line-height:1.4;letter-spacing:.08em;text-transform:uppercase;color:#000}
+header.muzej-sticky-opening .feature-kicker{margin:0;font-size:12px;line-height:1.4}
+header.muzej-sticky-opening .feature-scroll-column{min-width:0}
+header.muzej-sticky-opening .feature-media{margin:0;height:auto;width:100%;max-width:none;min-height:0;aspect-ratio:auto}
+header.muzej-sticky-opening .feature-media img{display:block;width:100%;height:calc(100svh - 180px);max-height:none;min-height:0;object-fit:contain;object-position:left top}
+header.muzej-sticky-opening .feature-deck{width:100%;max-width:none;margin:40px 0 0;padding:0 0 16px;font-family:"plantin",Georgia,serif;font-size:clamp(22px,2.5vw,36px);font-weight:400;line-height:1.25;letter-spacing:0;text-align:left;color:#000;text-wrap:normal}
+@media(max-width:760px){
+header.muzej-sticky-opening{padding:4px var(--page-x,20px) 48px}
+header.muzej-sticky-opening .feature-inner{grid-template-columns:1fr;gap:28px}
+header.muzej-sticky-opening .feature-copy{position:static;height:auto;min-height:0;padding:0;gap:20px;order:0}
+header.muzej-sticky-opening .feature-title{font-size:clamp(30px,8.2vw,38px)}
+header.muzej-sticky-opening .feature-media img{height:auto;max-height:calc(100svh - 330px);object-fit:contain}
+header.muzej-sticky-opening .feature-deck{margin-top:28px;font-size:22px}
+}

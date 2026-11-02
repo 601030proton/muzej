@@ -1,0 +1,27 @@
+/* Muzej editorial details: shared alignment, credits and reading hierarchy. */
+html body main .feature-byline{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif!important;font-size:11px!important;font-weight:400!important;line-height:1.4!important;letter-spacing:.08em!important;text-transform:uppercase!important;color:#000!important}
+header:is(.muzej-sticky-opening,.venus-sticky-opening,.lazarki-sticky-opening) .feature-media{display:block;justify-content:initial;align-items:initial;width:100%;margin:0;padding:0}
+header:is(.muzej-sticky-opening,.venus-sticky-opening,.lazarki-sticky-opening) .feature-media img{display:block;width:100%!important;max-width:100%!important;margin:0!important;padding:0;transform:none!important;object-position:left top!important}
+.article-shell .body-block .section-heading,.article-shell .body-block .chapter-heading{font-family:"plantin",Georgia,serif;font-size:30px;font-weight:400;line-height:1.1;letter-spacing:0;text-transform:none;white-space:normal;border:0;padding:0;max-width:100%;margin:64px 0 24px}
+.article-shell .body-block .section-heading:first-child,.article-shell .body-block .chapter-heading:first-child{margin-top:0}
+.nation-article .article-shell .body-block .section-heading{font-family:"plantin",Georgia,serif;font-size:30px;line-height:1.1}
+.article-books .book-cover-figure{position:sticky;top:112px;align-self:start}
+.article-books .book-cover-figure img{max-height:calc(100svh - 150px);object-fit:contain;object-position:left top}
+.watch-hero .watch-hero-inner{gap:28px}
+.watch-hero .watch-copy{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 32px;align-items:end}
+.watch-hero .watch-kicker{grid-column:1/-1;font:400 11px/1.4 "Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.08em;margin:0}
+.watch-hero .watch-title{grid-column:1;margin:0;font:400 clamp(42px,5.2vw,72px)/1.02 "plantin",Georgia,serif;color:#000}
+.watch-recording{grid-column:1;margin:0;font:400 13px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000}
+.watch-hero .watch-source{grid-column:2;grid-row:2/4;margin:0 0 2px;justify-self:end;font-size:11px;line-height:1.4}
+.watch-hero .video-frame{width:min(100%,calc((100svh - 330px)*16/9));max-width:1160px;margin:0 auto 0 0;flex:none}
+@media(max-width:760px){
+.article-shell .body-block .section-heading,.article-shell .body-block .chapter-heading{font-size:26px;margin-top:52px;margin-bottom:22px}
+.article-shell .body-block .section-heading:first-child,.article-shell .body-block .chapter-heading:first-child{margin-top:0}
+.nation-article .article-shell .body-block .section-heading{font-size:26px}
+.article-books .book-cover-figure{position:static}
+.article-books .book-cover-figure img{max-height:none}
+.watch-hero .watch-copy{grid-template-columns:1fr;gap:12px}
+.watch-hero .watch-title{font-size:42px}
+.watch-hero .watch-source{grid-column:1;grid-row:auto;justify-self:start;margin:4px 0 0}
+.watch-hero .video-frame{width:100%}
+}

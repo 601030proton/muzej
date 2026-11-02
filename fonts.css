@@ -51,3 +51,69 @@
   font-style: normal;
   font-weight: 300;
 }
+
+/* Shared article body typography. Keep display, captions and metadata independent. */
+:root{--muzej-body-family:"plantin",Georgia,serif;--muzej-body-size:22px;--muzej-body-leading:1.55;--article-serif:var(--muzej-body-family)!important}
+:is(.body-block,.body-copy,.watch-prose,.poem-text,.guide-copy,.itinerary-entry-body,.ranking-details-body){font-family:var(--muzej-body-family)!important}
+:is(.body-block,.body-copy,.poem-text,.guide-copy,.itinerary-entry-body,.ranking-details-body)>p:not([class]),
+.watch-prose>p,
+.dodole-context>p,
+.guide-intro>p,
+.qol-method-copy>p,
+.ranking-intro,
+.poem-text{
+ font-family:var(--muzej-body-family)!important;
+ font-size:var(--muzej-body-size)!important;
+ line-height:var(--muzej-body-leading)!important;
+ font-weight:400;
+ letter-spacing:0!important;
+}
+@media(max-width:760px){:root{--muzej-body-size:19px}}
+
+/* Nested article formats use the same reading size as standard body blocks. */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.guide-prose>p,
+.guide-section>p:not(.guide-pull),
+.poem-text>p,
+.museum-copy>p:not(.museum-label),
+.body-copy>p,
+.itinerary-entry-body>p,
+.ranking-details-body>p{
+ font-family:var(--muzej-body-family)!important;
+ font-size:var(--muzej-body-size)!important;
+ line-height:var(--muzej-body-leading)!important;
+ letter-spacing:0!important;
+}
+
+/* Consistent small editorial credits throughout Muzej. */
+body .feature-byline,
+body .guide-byline,
+body .article-byline,
+body .poem-byline-block,
+body .poem-byline-block p {
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+  font-size:11px !important;
+  font-weight:400 !important;
+  line-height:1.4 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+  color:#000 !important;
+}
+/* Keep each introduction below the initial hero screen. */
+header:is(.muzej-sticky-opening,.venus-sticky-opening,.lazarki-sticky-opening) .feature-media {
+  min-height:calc(100svh - 80px) !important;
+}
+header:is(.muzej-sticky-opening,.venus-sticky-opening,.lazarki-sticky-opening) .feature-media img {
+  height:calc(100svh - 180px) !important;
+  object-fit:contain !important;
+  object-position:left top !important;
+}
+@media(max-width:760px){
+  header:is(.muzej-sticky-opening,.venus-sticky-opening,.lazarki-sticky-opening) .feature-media {
+    min-height:calc(100svh - 180px) !important;
+  }
+  header:is(.muzej-sticky-opening,.venus-sticky-opening,.lazarki-sticky-opening) .feature-media img {
+    height:auto !important;
+    max-height:calc(100svh - 330px) !important;
+  }
+}
