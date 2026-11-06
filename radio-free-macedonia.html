@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Nick Nasev remembers Macedonian radio in 1990s Adelaide, from cassette shops and dedications to the songs that divided a community." name="description"/>
+<title>Radio Free Macedonia | Muzej</title>
+<link href="./Assets/Font/Muzej%20Logo.ai.png" rel="icon" type="image/png"/>
+<link href="./Assets/Font/Muzej%20Logo.ai.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&amp;display=swap" rel="stylesheet"/>
+<link href="fonts.css?v=20261101-consistency-3" rel="stylesheet"/>
+<style>
+:root {
+  --background: #ffffff;
+  --foreground: #0f0e0d;
+  --white: #ffffff;
+  --ink: #0f0e0d;
+  --ink-soft: rgba(15, 14, 13, 0.62);
+  --ink-faint: rgba(15, 14, 13, 0.12);
+  --muted: #70675d;
+  --rule: rgba(23, 21, 19, 0.09);
+  --page-x: clamp(18px, 5.2vw, 72px);
+  --nav-h: clamp(88px, 10vw, 128px);
+  --feature-w: min(1280px, calc(100vw - (var(--page-x) * 2)));
+  --rail-gap: clamp(34px, 5.4vw, 84px);
+  --body-col: minmax(520px, 760px);
+  --body-tail: 0px;
+  --section-gap: clamp(48px, 8vw, 108px);
+  --content-max: 1520px;
+  --font-display: "plantin", Georgia, serif;
+  --font-wordmark: var(--font-display);
+  --serif: var(--font-display);
+        --headline-serif: var(--font-display);
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --article-serif: "adobe-jenson-pro", Georgia, serif;
+  --brand-serif: var(--font-wordmark);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--article-serif);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+.shell {
+  width: min(100%, var(--content-max));
+  margin: 0 auto;
+  padding-left: var(--page-x);
+  padding-right: var(--page-x);
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  background: var(--background);
+}
+.header-frame {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  padding-top: 28px;
+  padding-bottom: 24px;
+}
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-wordmark);
+  font-size: clamp(2.4rem, 1.9rem + 1.43vw, 3.76rem);
+  line-height: 0.92;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  white-space: nowrap;
+  text-decoration: none;
+
+}
+
+.site-header .brand-mark {
+  position: relative;
+  width: 160px;
+  height: 32px;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.site-header .brand-mark-image {
+  position: absolute;
+  width: 198.68px;
+  max-width: none;
+  height: auto;
+  left: -19.53px;
+  top: -107.88px;
+  display: block;
+}
+
+.utility-link,
+.utility-menu-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: rgba(23, 21, 19, 0.58);
+  text-decoration: none;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+.utility-link:hover,
+.utility-menu-item:hover {
+  color: var(--foreground);
+}
+.header-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.utility-menu {
+  position: relative;
+}
+.utility-menu summary {
+  list-style: none;
+}
+.utility-menu summary::-webkit-details-marker {
+  display: none;
+}
+.utility-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: color 180ms ease, opacity 180ms ease;
+}
+.utility-trigger:hover {
+  opacity: 0.72;
+}
+.utility-trigger:focus-visible {
+  outline: 2px solid rgba(141, 79, 61, 0.45);
+  outline-offset: 3px;
+}
+.utility-icon {
+  display: grid;
+  gap: 0.26rem;
+}
+.utility-icon-line {
+  display: block;
+  width: 1.45rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.88;
+}
+.utility-panel {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  right: 0;
+  z-index: 10;
+  display: grid;
+  min-width: 10rem;
+  padding: 0.45rem 0;
+  border: 1px solid rgba(23, 21, 19, 0.12);
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(23, 21, 19, 0.08);
+}
+.utility-panel-group {
+  display: grid;
+  gap: 0;
+}
+.utility-panel-utility {
+  margin-top: 0.25rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid rgba(23, 21, 19, 0.1);
+}
+.utility-panel .utility-link,
+.utility-panel .utility-menu-item {
+  justify-content: flex-start;
+  min-height: 0;
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  background: transparent;
+}
+.utility-panel-utility .utility-link {
+  font-size: 0.66rem;
+  letter-spacing: 0;
+  color: rgba(23, 21, 19, 0.52);
+}
+.utility-panel .utility-menu-item {
+  cursor: pointer;
+}
+.utility-panel .utility-link:hover,
+.utility-panel .utility-menu-item:hover {
+  background: rgba(23, 21, 19, 0.035);
+}
+
+main {
+  padding-top: clamp(24px, 3.2vw, 48px);
+}
+
+.feature {
+  padding:
+    clamp(0px, 0.6vw, 6px)
+    clamp(16px, 3vw, 40px)
+    clamp(56px, 8vw, 102px);
+}
+.feature-inner {
+  display: grid;
+  grid-template-columns: minmax(420px, 1.06fr) minmax(300px, 0.84fr);
+  gap: clamp(22px, 3.8vw, 52px);
+  align-items: stretch;
+  max-width: min(1320px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
+  margin: 0 auto;
+}
+.feature-media {
+  margin: 0;
+}
+.feature-media img {
+  width: 100%;
+  height: clamp(620px, 80vh, 920px);
+  object-fit: contain;
+  object-position: center top;
+  background: var(--white);
+}
+.feature-copy {
+  min-height: clamp(620px, 80vh, 920px);
+  max-width: 27rem;
+  margin: 0 auto;
+  padding: clamp(26px, 3.6vw, 42px) 0 clamp(20px, 3vw, 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.feature-title {
+  margin: 0;
+  color: var(--ink);
+  font-family: "plantin", Georgia, serif;
+  font-size: clamp(42px, 5.2vw, 82px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0;
+  text-transform: none;
+  text-wrap: balance;
+}
+.feature-title-break {
+  display: block;
+}
+.feature-byline {
+  margin: 0 0 auto;
+  color: var(--ink-soft);
+  font-size: clamp(16px, 1.18vw, 19px);
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+.feature-deck {
+  max-width: min(1380px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
+  margin: clamp(40px, 5vw, 78px) auto 0;
+  color: var(--ink);
+  font-family: "plantin", Georgia, serif;
+  font-size: clamp(32px, 3.05vw, 56px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+.article-shell {
+  max-width: var(--feature-w);
+  margin: 0 auto;
+  padding: 0 var(--page-x) clamp(32px, 4vw, 56px);
+}
+.content-row {
+  display: grid;
+  grid-template-columns: minmax(270px, 1fr) var(--body-col);
+  column-gap: var(--rail-gap);
+  align-items: start;
+}
+.article-body {
+  display: grid;
+  grid-template-columns: minmax(270px, 1fr) var(--body-col);
+  column-gap: var(--rail-gap);
+  align-items: start;
+  margin-bottom: var(--section-gap);
+}
+.content-row + .content-row {
+  margin-top: var(--section-gap);
+}
+.content-row .empty-rail,
+.article-body .empty-tail,
+.content-row .empty-tail {
+  min-height: 1px;
+}
+.article-body .empty-tail,
+.content-row .empty-tail {
+  display: none;
+}
+.article-body-media {
+  margin: 0;
+  align-self: start;
+  position: sticky;
+  top: calc(var(--nav-h) + clamp(12px, 2vw, 26px));
+}
+.article-body-media img {
+  width: 100%;
+  height: auto;
+}
+.article-body-media figcaption {
+  margin-top: 12px;
+  color: var(--ink-soft);
+  font-size: 8px;
+  letter-spacing: 0;
+}
+.article-body-copy {
+  min-width: 0;
+  justify-self: end;
+  width: min(100%, 520px);
+}
+
+.section-heading {
+  margin: 0 0 1.15em;
+  max-width: min(100%, 24ch);
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: 0;
+  text-wrap: normal;
+}
+
+.body-block p {
+  margin: 0;
+  font-size: clamp(23px, 1.65vw, 31px);
+  line-height: 1.46;
+}
+.body-block p + p,
+.body-block p + .section-heading {
+  margin-top: 1.95em;
+}
+
+.article-inline-media {
+  width: min(88%, 420px);
+  margin: clamp(52px, 7vw, 88px) auto;
+}
+.article-inline-media img {
+  width: 100%;
+  height: auto;
+}
+
+.pull-quote {
+  margin: 0;
+  max-width: none;
+  justify-self: end;
+  width: min(100%, 520px);
+  font-size: clamp(20px, 2.35vw, 26px);
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.gallery-reading {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 1.9vw, 24px);
+  margin: var(--section-gap) 0 0;
+}
+.gallery-reading-media,
+.gallery-reading-feature {
+  margin: 0;
+  aspect-ratio: 15 / 21;
+  overflow: hidden;
+}
+.gallery-reading-media img,
+.gallery-reading-feature img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-reading-side {
+  min-width: 0;
+}
+.article-body-lower {
+  margin-top: clamp(22px, 3vw, 34px);
+  margin-bottom: 0;
+}
+
+.more-from-muzej {
+  padding-top: clamp(32px, 4vw, 56px);
+  padding-bottom: clamp(82px, 10vw, 148px);
+  background: transparent;
+  color: var(--foreground);
+}
+.more-from-muzej-frame {
+  display: grid;
+  width: min(calc(100% - (var(--page-x) * 2)), 68rem);
+  max-width: 68rem;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  border-top: 2px solid var(--foreground);
+  padding-top: clamp(2.1rem, 4vw, 3.25rem);
+}
+.more-from-muzej-title {
+  max-width: none;
+  margin: 0;
+  font-family: var(--headline-serif);
+  font-size: clamp(1.45rem, 1vw + 1.1rem, 1.9rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 650;
+  font-optical-sizing: auto;
+}
+.related-list {
+  list-style: none;
+  margin: clamp(1.4rem, 2.5vw, 2rem) 0 0;
+  padding: 0;
+}
+.related-list li {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  padding: clamp(1.1rem, 1.8vw, 1.6rem) 0;
+  border-top: 1px solid var(--rule);
+  align-items: start;
+}
+.related-list li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+.related-list a {
+  font-family: var(--headline-serif);
+  font-size: clamp(1.1rem, 1.3vw + 0.7rem, 1.55rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+  font-optical-sizing: auto;
+  border-bottom: none;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+.related-list a:hover {
+  color: var(--muted);
+}
+.related-list .related-desc {
+  display: block;
+  margin-top: 0.45rem;
+  font-family: var(--sans);
+  font-size: clamp(0.82rem, 0.78rem + 0.18vw, 0.94rem);
+  line-height: 1.72;
+  letter-spacing: 0;
+  color: var(--muted);
+}
+
+.site-footer {
+  margin-top: 0;
+}
+.muzej-footer {
+  width: 100%;
+  padding: clamp(3.5rem, 7vw, 6rem) var(--page-x);
+  background: #000000;
+  color: #f7f2e9;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: minmax(320px, 620px) minmax(180px, 260px);
+  gap: clamp(3rem, 7vw, 6rem);
+  justify-content: center;
+  align-items: start;
+  width: min(100%, 1160px);
+  margin: 0 auto;
+}
+.footer-brand {
+  min-width: 0;
+}
+.footer-wordmark {
+  display: inline-flex;
+  font-family: var(--font-wordmark);
+  font-size: clamp(3.1rem, 5vw, 5rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: 0;
+  font-optical-sizing: auto;
+
+}
+.footer-statement {
+  max-width: 38.75rem;
+  margin: clamp(1.15rem, 1.8vw, 1.45rem) 0 0;
+  font-size: clamp(1rem, 1vw + 0.72rem, 1.15rem);
+  line-height: 1.5;
+  color: rgba(247, 242, 233, 0.86);
+}
+.muzej-footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-top: 0.28rem;
+}
+.muzej-footer .footer-links a {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 180ms ease, text-decoration-color 180ms ease;
+}
+.muzej-footer .footer-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  opacity: 0.86;
+}
+
+@media (max-width: 1080px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+
+  .muzej-footer .footer-links {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 1140px) {
+  .header-frame {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 0.85rem 1.25rem;
+  }
+  .header-tools {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 980px) {
+  .menu-button {
+    padding: 8px 0 6px 18px;
+  }
+  .menu-panel {
+    padding: 0 calc(var(--page-x) + 18px) 0 var(--page-x);
+    gap: 16px;
+  }
+  .menu-panel a {
+    width: min(100%, 22rem);
+    font-size: clamp(26px, 5vw, 42px);
+  }
+  .feature-inner {
+    grid-template-columns: minmax(300px, 0.94fr) minmax(300px, 0.9fr);
+    gap: clamp(24px, 4vw, 46px);
+    align-items: stretch;
+  }
+  .feature-media img {
+    height: clamp(500px, 70vh, 720px);
+  }
+  .feature-copy {
+    min-height: clamp(500px, 70vh, 720px);
+    max-width: 23rem;
+  }
+  .feature-title {
+    font-size: clamp(34px, 4.35vw, 58px);
+  }
+  .feature-deck {
+    margin-top: clamp(30px, 4.2vw, 48px);
+    font-size: clamp(16px, 2.05vw, 20px);
+  }
+  .content-row {
+    grid-template-columns: minmax(210px, 1fr) minmax(0, 660px);
+  }
+  .article-body {
+    grid-template-columns: minmax(210px, 1fr) minmax(0, 660px);
+  }
+}
+
+@media (max-width: 760px) {
+  .header-frame {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .brand-mark {
+    font-size: clamp(2.16rem, 10.15vw, 2.87rem);
+
+  }
+}
+
+@media (max-width: 720px) {
+  .header-frame {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .brand-mark {
+    font-size: clamp(2.16rem, 10.15vw, 2.87rem);
+
+  }
+  .menu-button {
+    gap: 7px;
+    padding: 8px 0 6px 16px;
+    margin-top: 1px;
+  }
+  .menu-panel {
+    padding: 0 calc(var(--page-x) + 6px) 0 var(--page-x);
+    gap: 14px;
+  }
+  .menu-panel a {
+    width: min(100%, 16rem);
+    font-size: clamp(22px, 9vw, 30px);
+    line-height: 1.08;
+  }
+  .menu-panel a:last-child {
+    font-size: 18px;
+  }
+  .feature {
+    padding:
+      4px
+      var(--page-x)
+      48px;
+  }
+  .feature-inner,
+  .article-body,
+  .content-row {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    text-align: left;
+  }
+  .feature-inner {
+    display: grid;
+    gap: 22px;
+  }
+  .feature-media img {
+    height: clamp(360px, 56vh, 470px);
+  }
+  .article-body {
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .gallery-reading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin: 40px 0 0;
+  }
+  .article-body-media {
+    position: static;
+  }
+  .gallery-reading-media {
+    position: static;
+  }
+  .article-body-lower {
+    margin-top: 18px;
+    margin-bottom: 0;
+  }
+  .content-row .empty-tail {
+    display: none;
+  }
+  .article-body .empty-tail {
+    display: none;
+  }
+  .feature-copy {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+  }
+  .feature-title {
+    font-size: clamp(30px, 8.2vw, 38px);
+    line-height: 1.03;
+    width: calc(100vw - (var(--page-x) * 2));
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+  .feature-byline {
+    margin: 28px 0 0;
+    font-size: 15px;
+  }
+  .feature-deck {
+    margin-top: 34px;
+    font-size: clamp(15px, 3.9vw, 18px);
+    line-height: 1.2;
+  }
+  .feature-title-break {
+    display: none;
+  }
+  .content-row + .content-row {
+    margin-top: 40px;
+  }
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: transparent;
+  pointer-events: none;
+}
+
+.site-header .header-frame,
+.site-header .brand-mark,
+.site-header .header-tools {
+  pointer-events: auto;
+}
+
+.site-header .brand-mark {
+  transform: translate3d(0, 0, 0);
+  transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.muzej-logo-hidden .site-header .brand-mark {
+  transform: translate3d(0, calc(-100% - 42px), 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header .brand-mark {
+    transition: none;
+    will-change: auto;
+  }
+
+  body.muzej-logo-hidden .site-header .brand-mark {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header { z-index: 2000; }
+  .site-header .header-frame { grid-template-columns: minmax(0, 1fr) auto; align-items: center; justify-items: stretch; gap: 1rem; }
+  .site-header .brand-mark { justify-self: start; min-width: 0; }
+  .site-header .header-tools { justify-self: end; justify-content: flex-end; margin-left: auto; position: relative; z-index: 2002; }
+  .site-header .utility-menu { position: static; }
+  .site-header .utility-trigger { position: relative; z-index: 2003; }
+  .site-header .utility-panel { position: fixed; inset: 0; left: 0; right: 0; top: 0; z-index: 2001; display: grid; align-content: center; width: 100vw; max-width: none; min-width: 0; height: 100vh; height: 100svh; padding: clamp(76px, 18vh, 128px) var(--page-x) 48px; border: 0; background: rgba(255, 255, 255, 0.98); box-shadow: none; overflow-y: auto; transform: none; }
+  .site-header .utility-panel-group { width: min(100%, 22rem); margin: 0 auto; }
+  .site-header .utility-panel-utility { margin-top: 0.8rem; padding-top: 0.85rem; }
+  .site-header .utility-panel .utility-link,
+  .site-header .utility-panel .utility-menu-item { justify-content: center; min-height: 2.75rem; padding: 0.72rem 0; text-align: center; }
+}
+
+.article-longform {
+  padding-bottom: clamp(72px, 9vw, 132px);
+}
+.article-longform .section-heading {
+  max-width: min(100%, 24ch);
+}
+.article-longform .section-heading:first-child {
+  margin-top: 0;
+}
+.article-longform .section-heading + p {
+  margin-top: 0;
+}
+.article-longform .ohrid-sketch-spread {
+  margin-bottom: 72px;
+}
+@media (max-width: 720px) {
+  .article-longform .ohrid-sketch-spread {
+    margin-bottom: 44px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .site-header .brand-mark {
+    width: 124px;
+    height: 25px;
+  }
+
+  .site-header .brand-mark-image {
+    width: 153.97px;
+    left: -15.13px;
+    top: -83.62px;
+  }
+}
+
+/* Keep the deck within the page grid at every screen width. */
+.lazarki-article .feature-deck {
+  width: var(--feature-w);
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: clamp(32px, 5vw, 64px) auto 0;
+  font-size: clamp(22px, 2.5vw, 36px);
+  line-height: 1.25;
+  text-wrap: pretty;
+}
+</style>
+<style>
+.ohrid-article .feature-title {
+  font-family: "plantin", Georgia, serif;
+  font-size: clamp(54px, 7.8vw, 132px);
+  font-weight: 400;
+  line-height: 0.86;
+  letter-spacing: 0;
+}
+.ohrid-article .feature-byline {
+  font-family: "plantin", Georgia, serif;
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(24px, 2.2vw, 38px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+.ohrid-article .feature-kicker {
+  display: none;
+  margin: 0;
+}
+.ohrid-article .feature-copy {
+  width: min(100%, 44rem);
+  max-width: none;
+  margin: 0 auto;
+  padding-top: clamp(108px, 16vh, 190px);
+  padding-bottom: clamp(22px, 3vw, 34px);
+  justify-content: space-between;
+  gap: clamp(72px, 14vh, 180px);
+}
+@media (min-width: 981px) {
+  .ohrid-article main {
+    padding-top: clamp(6px, 1.4vh, 14px);
+  }
+
+  .ohrid-article .feature {
+    padding-top: 0;
+    padding-bottom: clamp(48px, 5vh, 72px);
+  }
+
+  .ohrid-article .feature-inner {
+    height: clamp(600px, calc(100svh - var(--nav-h, 112px) - clamp(18px, 3svh, 32px)), 780px);
+    min-height: 0;
+    align-items: stretch;
+  }
+
+  .ohrid-article .feature-media,
+  .ohrid-article .feature-copy {
+    height: 100%;
+    min-height: 0;
+  }
+
+  .ohrid-article .feature-media img {
+    height: 100%;
+    max-height: 100%;
+  }
+
+  .ohrid-article .feature-copy {
+    padding-top: clamp(34px, 5vh, 76px);
+    padding-bottom: clamp(14px, 2.2vh, 28px);
+    gap: clamp(28px, 4.6vh, 64px);
+  }
+
+  .ohrid-article .feature-title {
+    font-size: clamp(48px, 6.1vw, 100px);
+  }
+
+  .ohrid-article .feature-byline {
+    font-size: clamp(22px, 1.9vw, 32px);
+  }
+
+  .ohrid-article .feature-deck {
+    margin-top: clamp(64px, 9svh, 118px);
+  }
+}
+@media (max-width: 980px) {
+  .ohrid-article .feature-title {
+    font-size: clamp(46px, 7.2vw, 78px);
+  }
+  .ohrid-article .feature-byline {
+    font-size: clamp(20px, 2.4vw, 30px);
+  }
+  .ohrid-article .feature-copy {
+    padding-top: clamp(72px, 12vh, 126px);
+    gap: clamp(58px, 10vh, 112px);
+  }
+}
+@media (max-width: 720px) {
+  .ohrid-article .feature-copy {
+    align-items: center;
+    text-align: center;
+    padding-top: 6px;
+    gap: clamp(48px, 14vw, 72px);
+  }
+  .ohrid-article .feature-title {
+    font-size: clamp(38px, 13.4vw, 62px);
+    line-height: 0.9;
+  }
+  .ohrid-article .feature-byline {
+    margin: 0;
+    font-size: clamp(20px, 6.2vw, 28px);
+  }
+}
+
+.ohrid-article .feature-title {
+  font-family: "plantin", Georgia, serif;
+  font-size: clamp(42px, 5.2vw, 82px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.ohrid-article .feature-byline {
+  margin: 0 0 auto;
+  color: var(--ink-soft);
+  font-family: var(--article-serif);
+  font-size: clamp(16px, 1.18vw, 19px);
+  line-height: 1.4;
+}
+.ohrid-article .feature-copy {
+  max-width: 27rem;
+  justify-content: flex-start;
+  gap: 0;
+}
+@media (max-width: 720px) {
+  .ohrid-article .feature-title {
+    font-size: clamp(30px, 8.2vw, 38px);
+    line-height: 1.03;
+    width: calc(100vw - (var(--page-x) * 2));
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+  .ohrid-article .feature-byline {
+    margin: 28px 0 0;
+    font-size: 15px;
+  }
+}
+</style>
+<link href="more-from-muzej.css?v=20260810-plantin-final" rel="stylesheet"/>
+<script defer="" src="more-from-muzej.js?v=20261101-robert-registry"></script>
+<style>
+.lazarki-article{--lz-ink:#11110f;--lz-muted:rgba(17,17,15,.58);--lz-rule:rgba(17,17,15,.16);--lz-soft:#f3f1eb}
+
+
+
+.lazarki-article .feature-media>div,.lazarki-article .article-body-media>div,.lazarki-article .article-inline-media>div,.lazarki-article .gallery-reading-media>div,.lazarki-article .gallery-reading-feature>div{border:0!important;background:linear-gradient(180deg,#f4f2ed 0%,#ece9e2 100%)!important}
+
+
+
+
+
+
+
+.lazarki-article .body-block>p{max-width:34rem;font-size:clamp(23px,1.65vw,31px);line-height:1.46;color:var(--lz-ink);font-weight:400}
+.lazarki-article .body-block>p+p{margin-top:1.45em}
+.lazarki-article .lazarki-intro{margin-bottom:clamp(110px,14vw,210px)}
+.lazarki-article .lazarki-intro>p:first-child{max-width:34rem;font-family:var(--article-serif);font-size:clamp(23px,1.65vw,31px);font-weight:400;line-height:1.46;letter-spacing:0}
+.lazarki-article .chapter-heading{display:block;max-width:100%;margin:clamp(58px,6.5vw,92px) 0 clamp(24px,3vw,38px);padding-top:clamp(14px,1.5vw,20px);border-top:1px solid var(--lz-ink);font-family:var(--headline-serif);font-size:clamp(38px,4.6vw,66px);font-weight:400;line-height:.96;letter-spacing:-.018em;text-wrap:normal}
+
+
+
+.lazarki-article .subhead{max-width:26ch;margin:clamp(48px,6vw,84px) 0 .9em;font-family:var(--headline-serif);font-size:clamp(24px,2.35vw,34px);font-weight:400;line-height:1.08;letter-spacing:-.01em}
+.lazarki-article .subhead+p{margin-top:0}
+.lazarki-article .fact-statement{max-width:33rem!important;margin:clamp(68px,8vw,120px) 0!important;padding:clamp(18px,2.4vw,28px) 0;border-top:1px solid var(--lz-ink);border-bottom:1px solid var(--lz-rule);font-family:"plantin",Georgia,serif;font-size:clamp(30px,3.25vw,48px)!important;line-height:1.08!important;letter-spacing:-.02em}
+.lazarki-article .ritual-sequence{max-width:40rem!important;margin:clamp(46px,5vw,76px) 0!important;padding:clamp(18px,2.4vw,28px) 0;border-top:1px solid var(--lz-rule);border-bottom:1px solid var(--lz-rule);font-family:var(--sans);font-size:clamp(.78rem,.72rem + .24vw,.95rem)!important;line-height:1.7!important;letter-spacing:.035em;text-transform:uppercase}
+.lazarki-article .data-list{max-width:40rem;margin:clamp(32px,4vw,58px) 0 clamp(54px,6vw,82px);border-top:1px solid var(--lz-ink)}
+.lazarki-article .data-row{display:grid;grid-template-columns:minmax(92px,.36fr) 1fr;gap:clamp(18px,3vw,40px);padding:14px 0 16px;border-bottom:1px solid var(--lz-rule);font-family:var(--sans);font-size:.82rem;line-height:1.45}
+.lazarki-article .data-row .data-key{color:var(--lz-muted)}
+.lazarki-article .regional-atlas{width:100%;max-width:100%;margin-top:clamp(36px,5vw,64px);margin-bottom:clamp(72px,8vw,112px);overflow:visible}
+.lazarki-article .regional-atlas table{width:100%;max-width:100%;table-layout:fixed;border-collapse:collapse;font-family:var(--sans);font-size:.72rem!important;line-height:1.45!important}
+.lazarki-article .regional-atlas th,.lazarki-article .regional-atlas td{padding:12px 14px 14px 0;border-top:1px solid var(--lz-rule);vertical-align:top;text-align:left;font-weight:400;overflow-wrap:anywhere;word-break:normal}
+.lazarki-article .regional-atlas th{padding-top:10px;border-top:1px solid var(--lz-ink);font-size:.64rem;letter-spacing:.09em;text-transform:uppercase;color:var(--lz-muted)}
+.lazarki-article .regional-atlas th:nth-child(1),.lazarki-article .regional-atlas td:nth-child(1){width:24%}.lazarki-article .regional-atlas th:nth-child(2),.lazarki-article .regional-atlas td:nth-child(2){width:44%}.lazarki-article .regional-atlas th:nth-child(3),.lazarki-article .regional-atlas td:nth-child(3){width:32%}.lazarki-article .regional-atlas td:first-child{font-family:var(--headline-serif);font-size:.96rem;line-height:1.2}
+.lazarki-article .evidence-list{margin-top:clamp(32px,4vw,58px);border-top:1px solid var(--lz-ink)}
+.lazarki-article .evidence-item{display:grid;grid-template-columns:minmax(180px,.82fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);padding:clamp(24px,3.5vw,44px) 0;border-bottom:1px solid var(--lz-rule)}
+.lazarki-article .evidence-claim{margin:0;font-family:"plantin",Georgia,serif;font-size:clamp(22px,2.3vw,34px);line-height:1.04;font-weight:400}
+.lazarki-article .evidence-answer{max-width:29rem;margin:0;font-size:clamp(16px,1.16vw,19px);line-height:1.68}
+.lazarki-article .research-status{margin-top:clamp(120px,14vw,210px);padding-top:clamp(22px,3vw,34px);border-top:2px solid var(--lz-ink)}
+.lazarki-article .research-status>h2{margin:0 0 clamp(28px,4vw,52px);font-family:var(--sans);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:400}
+.lazarki-article .research-status>p:first-of-type{font-family:"plantin",Georgia,serif;font-size:clamp(30px,3.1vw,46px);line-height:1.08;letter-spacing:-.02em}
+.lazarki-article .sources-section{margin-top:clamp(120px,14vw,210px);padding-top:20px;border-top:1px solid var(--lz-ink)}
+.lazarki-article .sources-section>h2{margin:0 0 28px;font-family:var(--sans);font-size:.64rem;line-height:1.2;letter-spacing:.12em;text-transform:uppercase;font-weight:400;color:var(--lz-muted)}
+.lazarki-article .sources-section>p{max-width:44rem;margin:0!important;padding:11px 0 13px;border-top:1px solid rgba(17,17,15,.1);font-family:var(--sans);font-size:.72rem!important;line-height:1.55!important;color:var(--lz-muted)}
+.lazarki-article .sources-section>p:first-of-type{border-top:0}
+.lazarki-article .gallery-reading{margin-top:clamp(100px,13vw,190px);margin-bottom:clamp(100px,13vw,190px)}
+@media(max-width:980px){.lazarki-article .article-body-media{position:static;width:min(100%,420px)}.lazarki-article .regional-atlas{width:100%;max-width:100%}}
+@media(max-width:720px){
+.lazarki-article .chapter-heading{max-width:none;margin-top:52px;margin-bottom:24px;padding-top:14px;font-size:clamp(34px,10.5vw,48px);line-height:.98}
+.lazarki-article .subhead{margin-top:42px;font-size:clamp(23px,7vw,31px);line-height:1.08}
+.lazarki-article .evidence-item{grid-template-columns:1fr;gap:16px}
+.lazarki-article .data-row{grid-template-columns:1fr;gap:6px}
+
+}
+.lazarki-article .chapter-number,
+
+.lazarki-article .evidence-item{grid-template-columns:1fr;gap:16px}
+.lazarki-article .data-row{grid-template-columns:1fr;gap:6px}
+
+}
+
+/* Blank image placeholders occupying the exact Ohrid template image slots. */
+.lazarki-article .feature-media > div {
+  display: block;
+  width: 100%;
+  height: clamp(620px, 80vh, 920px);
+  background: #f4f2ed;
+}
+.lazarki-article .article-body-media > div {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1.08;
+  background: #f4f2ed;
+}
+.lazarki-article .article-inline-media > div,
+.lazarki-article .gallery-reading-media > div,
+.lazarki-article .gallery-reading-feature > div {
+  background: #f4f2ed;
+}
+@media (min-width: 981px) {
+  .ohrid-article .feature-media > div {
+    height: 100%;
+    max-height: 100%;
+  }
+}
+@media (max-width: 980px) {
+  .lazarki-article .feature-media > div {
+    height: clamp(500px, 70vh, 720px);
+  }
+}
+@media (max-width: 720px) {
+  .lazarki-article .feature-media > div {
+    height: clamp(360px, 56vh, 470px);
+  }
+}
+</style><link href="muzej-footer-logo.css?v=20260914" rel="stylesheet"/>
+<style>/* Lazarki surgical spacing and alignment adjustments. */
+.lazarki-article .article-body-copy > .lazarki-intro {
+  margin-top: 1.45em;
+  margin-bottom: 1.45em;
+}
+.lazarki-article .content-row > .article-body-copy > .chapter-heading:first-child {
+  margin-top: 0;
+}
+</style><style id="lazarki-sticky-opening">
+/* Title remains within the opening until the image and deck have passed. */
+.lazarki-sticky-opening .feature-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:start;height:auto;min-height:0}
+.lazarki-sticky-opening .feature-copy{position:sticky;top:100px;align-self:start;height:calc(100svh - 124px);min-height:0;max-width:none;width:100%;margin:0;padding:0 0 24px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;text-align:left;gap:24px}
+.lazarki-sticky-opening .feature-title{width:auto;max-width:100%;font-size:clamp(42px,5.2vw,82px);line-height:.98}
+.lazarki-sticky-opening .feature-byline{order:2;margin:0}
+.feature-scroll-column{min-width:0}
+.lazarki-sticky-opening .feature-media{margin:0;height:auto}
+.lazarki-sticky-opening .feature-media img{display:block;width:100%;height:calc(100svh - 124px);max-height:none;object-fit:cover}
+.lazarki-sticky-opening .feature-deck{width:100%;max-width:none;margin:40px 0 0;padding:0 0 16px;font-size:clamp(22px,2.5vw,36px);line-height:1.25;text-align:left}
+@media(max-width:760px){
+.lazarki-sticky-opening .feature-inner{grid-template-columns:1fr;gap:28px}
+.lazarki-sticky-opening .feature-copy{position:static;height:auto;min-height:0;padding:0;gap:20px;order:0}
+.lazarki-sticky-opening .feature-title{font-size:clamp(30px,8.2vw,38px)}
+.lazarki-sticky-opening .feature-media img{height:auto;max-height:none;object-fit:contain}
+.lazarki-sticky-opening .feature-deck{margin-top:28px;font-size:22px}
+}
+</style><style id="article-section-headings">
+.lazarki-article .chapter-heading{font-family:"plantin",Georgia,serif;font-size:30px;font-weight:400;line-height:1.1;letter-spacing:0;text-transform:none;border:0;padding:0;margin:64px 0 24px}
+.lazarki-article .chapter-heading:first-child{margin-top:0}
+@media(max-width:760px){.lazarki-article .chapter-heading{font-size:26px;margin-top:52px;margin-bottom:22px}.lazarki-article .chapter-heading:first-child{margin-top:0}}
+</style>
+<link rel="stylesheet" href="article-system.css?v=20261101-consistency-3">
+<meta name="robots" content="noindex, nofollow">
+<style>
+.radio-article-page{color:#000;background:#fff;--radio-gap:clamp(36px,6vw,96px)}
+.radio-article-page .radio-main{padding:12px var(--page-x) 0;max-width:1520px;margin:auto}
+.radio-opening,.radio-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--radio-gap);align-items:start}
+.radio-title-column{min-width:0;align-self:end}
+.radio-title-column h1{font:400 clamp(48px,5.7vw,90px)/.97 "plantin",Georgia,serif;letter-spacing:-.025em;margin:32px 0}
+.radio-kicker,.radio-byline,.radio-object figcaption,.radio-spread-heading,.radio-pullquote>p,.radio-editor-note{font:400 11px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000}
+.radio-kicker,.radio-spread-heading{text-transform:uppercase;letter-spacing:.08em}
+.radio-byline strong{font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.radio-kicker,.radio-byline{margin:0}
+.radio-opening-column{min-width:0}
+.radio-object{margin:0;min-width:0}
+.artwork-blank{background:#f2f2f0;position:relative;aspect-ratio:1/1.45;width:100%}
+.artwork-blank>span{position:absolute;bottom:14px;left:16px;font:10px/1 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000}
+.radio-object figcaption{margin:13px 0 0;max-width:44em}
+.radio-hero-image{display:block;width:100%;height:calc(100svh - 160px);min-height:380px;object-fit:contain}
+.radio-deck{font:400 clamp(26px,2.6vw,38px)/1.2 "plantin",Georgia,serif;margin:0 0 22px;max-width:16em}
+.radio-article{margin-top:120px}
+.radio-row{margin:0 0 100px;scroll-margin-top:100px}
+.radio-rail{position:sticky;top:100px;align-self:start}
+.radio-rail .sleeve{width:76%}
+.radio-rail .sleeve .artwork-blank{max-height:calc(100svh - 200px)}
+.studio .artwork-blank{aspect-ratio:4/3}.landscape .artwork-blank{aspect-ratio:3/2}.insert .artwork-blank{aspect-ratio:1.8}.record .artwork-blank{aspect-ratio:1}
+.radio-prose{min-width:0;font:400 clamp(21px,1.65vw,25px)/1.46 "plantin",Georgia,serif}
+.radio-prose p{margin:0 0 1.25em}.radio-prose>div:last-child>p:last-child{margin-bottom:0}
+.radio-spread{margin:100px 0 120px}
+.radio-spread-heading{display:flex;justify-content:space-between;gap:20px;border-top:1px solid #000;padding-top:14px;margin-bottom:40px}
+.radio-sleeve-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:54px 38px}
+.radio-duet{display:grid;grid-template-columns:1.25fr .75fr;gap:var(--radio-gap);align-items:center;margin:110px 0 130px}
+.radio-pullquote{max-width:1000px;margin:110px auto 120px;text-align:center;padding:0 6vw}
+.radio-pullquote blockquote{font:400 clamp(32px,4.2vw,64px)/1.1 "plantin",Georgia,serif;margin:0 0 26px}
+.radio-pullquote>p{letter-spacing:.08em;text-transform:uppercase}
+.radio-editor-note{margin:24px 0 28px;padding:16px 0 0;border-top:1px solid #ccc;font-size:13px;line-height:1.6}
+.radio-editor-note p:last-child{margin-bottom:0}
+.radio-article-page a:focus-visible{outline:2px solid #000;outline-offset:5px}
+.radio-prose a{text-decoration-thickness:1px;text-underline-offset:4px}
+@media(max-width:760px){
+.radio-article-page .radio-main{padding:12px 20px 0}.radio-opening,.radio-row{grid-template-columns:1fr;gap:36px}
+.radio-title-column h1{font-size:clamp(42px,11vw,68px);margin:26px 0}
+.radio-hero-image{height:52svh;min-height:260px}.radio-deck{font-size:26px;margin-bottom:18px}.radio-article{margin-top:64px}
+.radio-row{margin-bottom:68px}.radio-rail{position:static}.radio-rail .sleeve{width:72%;margin:auto}.radio-rail .sleeve .artwork-blank{max-height:none}
+.radio-prose{font-size:22px;line-height:1.46}.radio-spread{margin:70px 0}.radio-sleeve-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 18px}
+.radio-duet{grid-template-columns:1fr;gap:40px;margin:70px 0}.radio-duet .sleeve{width:72%;margin:auto}.radio-pullquote{margin:70px auto;padding:0 8px}
+.radio-object figcaption{font-size:10px}
+}
+</style>
+</head>
+<body class="ohrid-article radio-article-page">
+<header class="site-header">
+<div class="shell header-frame">
+<a aria-label="Muzej home" class="brand-mark" href="index.html">
+<img alt="" aria-hidden="true" class="brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png"/>
+</a>
+<div class="header-tools">
+<details class="utility-menu">
+<summary aria-label="Open navigation menu" class="utility-trigger">
+<span aria-hidden="true" class="utility-icon">
+<span class="utility-icon-line"></span>
+<span class="utility-icon-line"></span>
+<span class="utility-icon-line"></span>
+</span>
+</summary>
+<nav aria-label="Site navigation" class="utility-panel">
+<div class="utility-panel-group">
+<a class="utility-link" href="index.html">Home</a>
+<a class="utility-link" href="index.html#selected-stories">Selected Stories</a>
+<a class="utility-link" href="index.html#in-rotation">In Rotation</a>
+<a class="utility-link" href="index.html#field-notes">Field Notes</a>
+<a class="utility-link" href="about.html">About Muzej</a>
+</div>
+<div class="utility-panel-group utility-panel-utility">
+<a class="utility-link" href="mailto:muzej.mk@proton.me">Contact</a>
+<a class="utility-link" href="https://www.instagram.com/_muzej/" rel="noopener noreferrer" target="_blank">Instagram</a>
+</div>
+</nav>
+</details>
+</div>
+</div>
+</header>
+<main id="main-content" class="radio-main"><header class="radio-opening"><div class="radio-title-column"><p class="radio-kicker">Music | Diaspora</p><h1>Radio Free Macedonia</h1><p class="radio-deck">Inside Macedonian community radio in Adelaide, Australia.</p><p class="radio-byline">Words <strong>Nick Nasev</strong></p></div><div class="radio-opening-column"><figure class="radio-object hero-object"><img class="radio-hero-image" src="./Assets/Radio%20Free%20Macedonia/RadioFreeMacedoniaHero.png" width="1536" height="2048" alt="Black cassette with a handwritten Macedonian turbofolk mix label" fetchpriority="high"></figure></div></header><article class="radio-article" aria-label="Radio Free Macedonia by Nick Nasev"><section class="radio-row" id="on-air"><div class="radio-rail"><figure class="radio-object studio"><div class="artwork-blank" role="img" aria-label="Image to be supplied: Nick Nasev in the studio, 2001"><span aria-hidden="true">02</span></div><figcaption>Taping my last Macedonian radio program in our studio in 2001, back when I had hair and wore the Old Navy jacket that was my “second skin” for a decade.</figcaption></figure></div><div class="radio-prose"><div data-source-paragraph="3"><p>I’d been listening to ethnic radio in Adelaide, Australia, for years. By the early 1990s, the Balkan wars were being fought on the airwaves, too.</p></div>
+<div data-source-paragraph="5"><p>I thought things needed a bit of a shake-up. At nineteen, I decided to make the change myself. I befriended Bosko and Cveta, the couple who had been doing the Macedonian program for years, and asked if I could join them. They immediately said yes. They’d been wanting to go on vacation for ages and needed someone to look after the program while they were away.</p><p>So they ushered me into the studio. Bosko showed me the ropes, and my radio career officially began.</p></div>
+<div data-source-paragraph="6"><p>It was all analog back then. A small studio had been set up in our Macedonian community center to record the programs and store the equipment, along with hundreds of records (33s and 45s) and cassettes. We taped everything onto broadcast reels using what was, even then, an ancient TEAC reel-to-reel recorder. It had a bit of a bite to it.</p><p>We had two hours of programming to fill: an hour on Friday nights and half an hour each on Saturday afternoons and Sunday mornings. Adelaide’s Macedonian community had held the Sunday 11:30 a.m. slot for decades. We’d tape on Thursday nights after work (or after classes, when I started), and with all the smoke breaks, it was well past midnight by the time we finished. Either Bosko or I would drop off the reels at the 5EBI-FM studio in downtown Adelaide in time for the first broadcast on Friday evening.</p></div></div></section><section class="radio-row" id="dedications"><div class="radio-rail"><figure class="radio-object sleeve"><div class="artwork-blank" role="img" aria-label="Image to be supplied: Petar Nechovski cassette sleeve"><span aria-hidden="true">03</span></div><figcaption>Petar Nechovski · sleeve to be supplied</figcaption></figure></div><div class="radio-prose"><div data-source-paragraph="8"><p>Visitors would often pop in to request dedications, usually for our Sunday show. We charged AU$10 per dedication, and a wedding could bring in enough requests to fill all three broadcasts. The money helped cover our broadcast dues. We were all volunteers.</p></div>
+<div data-source-paragraph="9"><p>Our listeners paid close attention to the dedications, for reasons both good and bad. Picking the right song for the occasion mattered, since people could read a bit too much into the lyrics. In the 1990s, for instance, there were a disproportionately large number of Macedonian neo-folk songs about Lena, a popular Macedonian name. One was Petar Nechovski’s “Lena, Lena Ubava Zhena” (“Lena, Lena, Beautiful Woman”). We’d steer people away from requesting it for any Lena, and we had quite a few in our community. In one line of the chorus, it sounds as though Nechovski is calling her fat.</p><p>Listeners also noticed who had put on a dedication and who hadn’t. Leave someone off the list of relatives, and people took it as a sign of a major falling-out. Any such omission could become the subject of hot gossip. Why hadn’t Dimche put on a song for his nephew’s birthday when his sister Fana had?</p></div>
+<div data-source-paragraph="10"><p>Putting dedications on our program was very much a case of keeping up appearances. People would show off by putting on a ridiculous number of them. My godmother did just that when my godsister got married the first time.</p><p>Sometimes the dedications reflected the delusions of the people making them. As I used to joke, a Macedonian couple might request a song for their grandson’s birthday. Nothing special there. But when they insisted that we play “I’m a ‘Clean’ Macedonian” (meaning full-blooded), and the grandson was called Gavin or Bruce, couldn’t say a word in Macedonian except perhaps <i>baba</i> (“grandmother”) and <i>dedo</i> (“grandfather”), and would be playing cricket with his mates when the show aired, all you could do was laugh in private.</p></div></div></section><section class="radio-spread" aria-label="Cassette sleeve collection"><div class="radio-spread-heading"><span>From the cassette collection</span><span>1990s</span></div><div class="radio-sleeve-grid"><figure class="radio-object sleeve"><div class="artwork-blank" role="img" aria-label="Image to be supplied: Vaska Ilieva cassette sleeve"><span aria-hidden="true">04</span></div><figcaption>Vaska Ilieva</figcaption></figure><figure class="radio-object sleeve"><div class="artwork-blank" role="img" aria-label="Image to be supplied: Elita cassette sleeve"><span aria-hidden="true">05</span></div><figcaption>Elita</figcaption></figure><figure class="radio-object sleeve"><div class="artwork-blank" role="img" aria-label="Image to be supplied: Džemo Redžepovski cassette sleeve"><span aria-hidden="true">06</span></div><figcaption>Džemo Redžepovski</figcaption></figure><figure class="radio-object sleeve"><div class="artwork-blank" role="img" aria-label="Image to be supplied: Alpina cassette sleeve"><span aria-hidden="true">07</span></div><figcaption>Alpina</figcaption></figure><figure class="radio-object sleeve"><div class="artwork-blank" role="img" aria-label="Image to be supplied: Faredin Kerimov cassette sleeve"><span aria-hidden="true">08</span></div><figcaption>Faredin Kerimov</figcaption></figure><figure class="radio-object sleeve"><div class="artwork-blank" role="img" aria-label="Image to be supplied: Kenan Tairovski cassette sleeve"><span aria-hidden="true">09</span></div><figcaption>Kenan Tairovski</figcaption></figure></div></section><section class="radio-row" id="the-tape-shops"><div class="radio-rail"><figure class="radio-object insert"><div class="artwork-blank" role="img" aria-label="Image to be supplied: Unfolded Macedonian cassette insert"><span aria-hidden="true">10</span></div><figcaption>Macedonian cassettes from the 1990s · unfolded insert</figcaption></figure></div><div class="radio-prose"><div data-source-paragraph="12"><p>If I wasn’t being paid for doing the radio program, I certainly made up for it in the amount of new Macedonian music I could get my hands on. It was mainly cassettes back then. We didn’t start using CDs until after 1999. I had full access to the tapes, and since they belonged to the community, I’d be reimbursed for what I bought. At AU$10 a pop, they weren’t cheap.</p></div>
+<div data-source-paragraph="13"><p>My main source was Zorro Records, a popular Macedonian cassette shop at Preston Market in Melbourne, run by the cheerful Zoran and named for his nickname. Every month I’d give Zorro a call. He’d enthusiastically run through the cassettes he was going to send me. Even if I didn’t like the singer, he wouldn’t take no for an answer. About a week later, a card would arrive in the mail telling me I could pick up the cassettes at the local post office, cash on delivery.</p><p>If Zorro didn’t have it, I’d try Gamon Video on Charles Street in Seddon, just around the corner from St. Elijah Macedonian Orthodox Church. Gamon Video was one of the many stores that opened after the VHS boom of the early 1980s. It catered mainly to the local Macedonian community and the wider Yugoslav community. Seddon, in Melbourne’s inner west, was heavily Macedonian in the 1970s and 1980s. Then the yuppies started coming in and gentrified the area.</p><p>Today, many of the Macedonians and other families, mostly from Mediterranean countries, have moved to the outer suburbs. People now pay more in monthly rent than the previous Macedonian owners paid to buy their homes outright. The area is full of fancy vegan restaurants and, of course, cafés.</p></div></div></section><section class="radio-row" id="changing-the-music"><div class="radio-rail"><figure class="radio-object sleeve"><div class="artwork-blank" role="img" aria-label="Image to be supplied: Elita cassette sleeve"><span aria-hidden="true">11</span></div><figcaption>Elita · sleeve to be supplied</figcaption></figure></div><div class="radio-prose"><div data-source-paragraph="14"><p>I’d joined the team to shake things up, and I certainly did when it came to the music. Out went the safe stuff: old Macedonian folk songs by the likes of Vaska Ilieva and newer folk melodies in the stale Valandovo style. In came the latest Macedonian pop music, particularly the newest and most controversial genre of the time, turbo-folk.</p><p>The program had played some turbo-folk before my time, particularly songs by Elita, the hottest Macedonian turbo-folk band of the day. Led by Cane Nikolovski, they’d played a brilliant concert in Adelaide in 1993. I made it my mission to push the envelope by playing music I liked, including music by Macedonian Roma stars with a distinctly Eastern sound. That ruffled some feathers. If the Serbs, Bosnians, Greeks, Turks, and even the previously straitlaced Bulgarians were playing this style of music, why not us? I was a kid then, and I knew what the other kids wanted. From the feedback I got, I was hitting the spot.</p><p>The elders had always wondered how to keep their “clean Macedonian” Gavins and Bruces interested in their heritage. Playing this music was doing just that.</p></div>
+<div data-source-paragraph="15"><p>My biggest critic was the local Macedonian Orthodox priest’s wife. In true Hyacinth Bucket style, she gave me some “kindly advice” on what sort of “respectable” music we should play. “You should take your cue from what they play on Radio Skopje,” she said. “You see, my dear child, Radio Skopje plays ‘respectable’ music—none of this turbo-folk noise, as it’s too ‘gypsy,’ ‘oriental,’ and ‘Islamic.’ We’re none of those. Now you be a good boy now.” I nodded politely and told her I’d keep her advice in mind.</p></div></div></section><section class="radio-row" id="the-offending-tape"><div class="radio-rail"><figure class="radio-object sleeve"><div class="artwork-blank" role="img" aria-label="Image to be supplied: Faredin Kerimov cassette identified by Nick"><span aria-hidden="true">12</span></div><figcaption>Faredin Kerimov · exact 1997 release to be confirmed</figcaption></figure></div><div class="radio-prose"><div data-source-paragraph="16"><p>The following week, I played a <a href="https://www.youtube.com/watch?v=ithAyl6FVBY">Džemo Redžepovski</a> song, an <a href="https://www.youtube.com/watch?v=tXzzgcciCSM">Alpina song</a>, and a Faredin Kerimov song that mixed Macedonian Roma turbo-folk, inspired by Turkish arabesque, with techno dance beats. I haven’t been able to find that song online, though the <a href="https://www.youtube.com/watch?v=gxhM7sU1L5Q">lead track</a> from his 1997 cassette is available.</p><p>I’d never heard so much praise for my song choices from Australian Macedonian children and teenagers. Many of them would otherwise never listen to the Macedonian program. They came up to tell me how much they’d loved that Faredin Kerimov song in particular. They never knew traditional Macedonian folk music could sound cool.</p></div>
+
+<div data-source-paragraph="18"><p>The priest’s wife was furious, or so I was told.</p></div>
+<div data-source-paragraph="19"><p>When she confronted me the following week, she tried a new tactic. She said she’d loved the songs I was playing, particularly the Faredin Kerimov song, or, in her words, “that gypsy number.” She barely concealed her contempt.</p><p>She’d become such an instant fan of Macedonian Roma turbo-folk that she asked if she could have the tape, as though she wanted to make a copy. I hadn’t come down in the last shower. I knew the trick. She meant to confiscate the offending material. You’d think the Scriptures would have guided the wife of a priest a little better. Wasn’t there something about “thou shalt not steal”? I’m sure it was in the fine print at the end of the Bible.</p><p>“That cassette is the property of the community and has to remain in the studio,” I told her. “You can buy the cassette yourself, since you’re such a fan. I can give you the details of where to get it.” <i>Quelle surprise</i>, she didn’t want the details. She didn’t bother me again, though she had some choice words to say about me behind my back, as if I’d never find out.</p></div>
+<div data-source-paragraph="20"><p>A few other songs I played just once became hits among the Macedonians of Adelaide. The local Macedonian band still plays <a href="https://www.youtube.com/watch?v=lWbq0vO9Yqs">this song</a> by the late Kenan Tairovski Keni at most functions.</p></div></div></section><section class="radio-duet" aria-label="Pop and rock sleeves"><figure class="radio-object insert"><div class="artwork-blank" role="img" aria-label="Image to be supplied: Leb i Sol cassette"><span aria-hidden="true">13</span></div><figcaption>Leb i Sol · edition to be supplied</figcaption></figure><figure class="radio-object sleeve"><div class="artwork-blank" role="img" aria-label="Image to be supplied: Toše Proeski cassette"><span aria-hidden="true">14</span></div><figcaption>Toše Proeski · edition to be supplied</figcaption></figure></section><section class="radio-row" id="pop-on-the-airwaves"><div class="radio-rail"><figure class="radio-object landscape"><div class="artwork-blank" role="img" aria-label="Image to be supplied: Cassette label and side A detail"><span aria-hidden="true">15</span></div><figcaption>Label detail · image to be supplied</figcaption></figure></div><div class="radio-prose"><div data-source-paragraph="21"><p>We rarely played Western-style Macedonian pop and played rock even less often. We had the cassettes and CDs, but our audience tended to be older and preferred folk music. Our airtime was limited, and for many listeners, ours was the only program where they could hear traditional Macedonian music. We gave it priority.</p><p>Cveta adored “Chukni vo drvo” (“Knock on Wood”), one of the few pop-rock songs sung in Macedonian by Leb i Sol, the Yugoslav-era Skopje rock band whose guitarist was Vlatko Stefanovski. She was always asking me to put it on the air.</p><p>The Croatian program came on immediately after ours on Sundays, so I’d occasionally end with a Macedonian song in the Dalmatian pop style that had been popular across Yugoslavia in the late 1980s and early 1990s. Some of these songs had even been recorded by Croatian singers, including Krunoslav Slabinac, known as Kićo, and Tatjana Matejaš, known as Tajči, who represented Yugoslavia at Eurovision in 1990. Before becoming a star in Yugoslavia and then moving to the United States, where she joined the Catholic music scene, Tajči had recorded a song in Macedonian.</p></div>
+<div data-source-paragraph="22"><p>When Macedonian pop took off in the late 1990s, I started playing more of its slick product. Everyone in Macedonia was raving about an up-and-coming star, Toše Proeski, and his early hits went into regular rotation on our program.</p><p>Once, after I ended a live broadcast from the 5EBI-FM studio with Proeski’s “<a href="https://www.youtube.com/watch?v=3DuwQDI0aN0">Morska Dzvezdo</a>” (“Starfish”), the station got a rare phone call. I didn’t have a cell phone, so I thought it was Bosko or someone from my family. Instead, it was a “loyal, longtime listener,” speaking angrily in English with a German accent. “This is supposed to be a family show. Why did you put on all that ‘jungle music’?” She meant the racist term for music associated with Black Americans.</p><p>I told her the Proeski song was the biggest hit in Macedonia. She wasn’t having any of it. I let her rant on, partly out of <i>schadenfreude</i>, until I’d had enough. I told her the song came from Macedonia, was sung in Macedonian, and was being played for our Macedonian audience. That was Macedonia today, I told her. Get with the program. Then I hung up.</p></div></div></section><section class="radio-row" id="the-y-word"><div class="radio-rail"><figure class="radio-object record"><div class="artwork-blank" role="img" aria-label="Image to be supplied: Nikola Badev Skopje Skopje record sleeve"><span aria-hidden="true">16</span></div><figcaption>Nikola Badev · Skopje, Skopje · record sleeve to be supplied</figcaption></figure></div><div class="radio-prose"><div data-source-paragraph="23"><p>The latest hits weren’t the only songs that caused a stir. The radio program had amassed an impressive collection of Macedonian records, many still in mint condition. If they’ve survived, as I suspect they have, they’d be collector’s items in Macedonia.</p><p>I thought I’d heard pretty much everything in the collection, but one day, flipping through the records, I came across “<a href="https://www.youtube.com/watch?v=zH7EMjMQCNA">Skopje, Skopje</a>” by the legendary Macedonian singer Nikola Badev. I asked Bosko why I’d never heard it. “You’ll know,” he said. We put it on our rickety Sony turntable. It was a sad song about the 1963 earthquake that devastated Skopje. “What’s wrong with this?” I asked. “Just wait,” Bosko said, with his trademark cheeky grin. Then we reached the last verse.</p></div>
+
+<div data-source-paragraph="25"><p>Badev sang, “Југославија нема да заборави”—“Yugoslavia will never forget.”</p></div>
+<div data-source-paragraph="26"><p>He’d said the Y word. No wonder I’d never heard the song.</p></div>
+<div data-source-paragraph="27"><p>Why was “Yugoslavia” such a no-go topic? Our community had close ties to Yugoslav Macedonia. Radio Skopje sent us special programs for Ilinden, St. Elijah’s Day, Macedonia’s national day. They commemorated the 1903 uprising against Ottoman rule as a “socialist” revolution led by “proven socialists.” It was the usual Yugoslav fare. After 1990, as ethnic nationalism took hold and the republics started becoming “democratic,” Radio Skopje sent us much the same scripts. The “proven socialists” were suddenly “proven democrats” who had led a “democratic revolution.”</p></div></div></section><aside class="radio-pullquote"><blockquote>“My grandmother’s first husband had died fighting on their side. She drummed that line about ‘Tito the traitor’ into me all the time.”</blockquote><p>Nick Nasev</p></aside><section class="radio-row" id="what-the-community-carried"><div class="radio-rail"><figure class="radio-object record"><div class="artwork-blank" role="img" aria-label="Image to be supplied: Original record label or reverse sleeve"><span aria-hidden="true">17</span></div><figcaption>The reverse side · image to be supplied</figcaption></figure></div><div class="radio-prose"><div data-source-paragraph="28"><p>The people who founded Adelaide’s Macedonian community set its political culture. Many were former guerrillas from Egej Macedonia, currently in Greece, who had fought on the Communist side in the Greek Civil War.</p><p>They could never forgive Tito, and therefore Yugoslavia, for closing the border and cutting off supplies in 1949. The Greek Communist Party leadership had sided with Stalin in his quarrel with Tito. When the guerrillas were defeated, many fled and never returned home. My grandmother’s first husband had died fighting on their side. She drummed that line about “Tito the traitor” into me all the time.</p><aside class="radio-editor-note" aria-label="Editor’s note"><p><strong>Editor’s note.</strong> Fighting broke out in Athens in December 1944. The civil war proper is generally dated 1946–49. Yugoslavia announced the closure of the border in July 1949, following the Tito–Stalin split and the Greek Communist Party’s alignment with Stalin. The closure cut a supply route before the government’s final offensive that August. Britain and later the United States provided military and economic aid to the government. <a href="https://history.state.gov/historicaldocuments/frus1949v06/d190">July 1949 diplomatic cable</a> · <a href="https://1997-2001.state.gov/background_notes/greece_9910_bgn.html">Historical chronology</a></p></aside></div>
+<div data-source-paragraph="29"><p>When I was nine, I asked my father why the Macedonian Hall didn’t celebrate Yugoslav National Day on November 29. (Yes, I was that kind of child, which I still find shocking.) He told me that once, before I was born, the hall had held a <i>vecherinka</i>, an evening social gathering, for November 29. Many Macedonians from Egej Macedonia, most of whom had no direct ties to Yugoslavia, boycotted it, so the hall never held another one. Anyone who wanted to celebrate could go to the Yugoslav Club. They certainly celebrated it there.</p><p>The community had strong political and cultural ties to Yugoslav Macedonia, rather than to the authorities in Belgrade, and by the 1980s, half its members had come from there. Even so, no one mentioned “Yugoslavia” in any official capacity. That extended to Macedonian Sunday school. Our textbooks came from Yugoslav Macedonia, and our Yugoslav-trained teachers followed an overtly socialist curriculum. They deftly ignored every reference to Yugoslavia or Tito.</p></div>
+<div data-source-paragraph="30"><p>The next time I heard “Skopje, Skopje” was in 2001, at a restaurant in Pirin Macedonia, currently in Bulgaria. Given the region’s touchy relationship with Yugoslavia under the Bulgarian Communist authorities, I wondered how the band would handle the last verse. I’d heard songs from neighboring Yugoslav Macedonia adapted to suit local politics before.</p><p>When the band reached the line, they sang “Macedonia” in place of “Yugoslavia.” That’s how most Macedonian singers and bands I hear perform the song these days. But the Macedonian public broadcaster has reaired a <a href="https://www.youtube.com/watch?v=zH7EMjMQCNA&amp;t=155s">performance filmed in 1990</a>, in Yugoslavia’s twilight. Yugoslavia won’t forget it.</p></div>
+</div></section></article><section aria-labelledby="more-from-muzej-title" class="more-from-muzej" data-more-from-muzej=""></section></main>
+<footer class="site-footer muzej-footer">
+<div class="footer-inner">
+<div class="footer-brand">
+<a aria-label="Muzej home" class="footer-brand-mark" href="index.html"><img alt="" aria-hidden="true" class="footer-brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png"/></a>
+<p class="footer-statement">An editorial archive of Macedonian art, style, tradition, and culture.</p>
+</div>
+<nav aria-label="Footer navigation" class="footer-links">
+<a href="about.html">About Muzej</a>
+<a href="mailto:muzej.mk@proton.me">Contact</a>
+<a aria-label="Open Muzej on Instagram" href="https://www.instagram.com/_muzej/" rel="noopener noreferrer" target="_blank">Instagram</a>
+</nav>
+</div>
+</footer>
+<script>
+const menuButton = document.getElementById('menuButton');
+const menuPanel = document.getElementById('menuPanel');
+
+if (menuButton && menuPanel) {
+  const setMenuState = (isOpen) => {
+    menuPanel.classList.toggle('open', isOpen);
+    menuButton.classList.toggle('is-open', isOpen);
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+    menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  };
+
+  menuButton.addEventListener('click', () => {
+    setMenuState(!menuPanel.classList.contains('open'));
+  });
+
+  menuPanel.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setMenuState(false));
+  });
+}
+</script>
+<script>
+  (function () {
+    var previousY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+    var ticking = false;
+    var revealZone = 24;
+    var motionThreshold = 4;
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    function updateMuzejLogoVisibility() {
+      var currentY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+      var delta = currentY - previousY;
+
+      if (reducedMotion.matches) {
+        document.body.classList.remove("muzej-logo-hidden");
+        ticking = false;
+        return;
+      }
+
+      if (currentY <= revealZone) {
+        document.body.classList.remove("muzej-logo-hidden");
+      } else if (delta > motionThreshold) {
+        document.body.classList.add("muzej-logo-hidden");
+      } else if (delta < -motionThreshold) {
+        document.body.classList.remove("muzej-logo-hidden");
+      }
+
+      previousY = currentY;
+      ticking = false;
+    }
+
+    function requestMuzejLogoVisibility() {
+      if (!ticking) {
+        window.requestAnimationFrame(updateMuzejLogoVisibility);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener("scroll", requestMuzejLogoVisibility, { passive: true });
+    window.addEventListener("resize", requestMuzejLogoVisibility);
+
+    if (reducedMotion.addEventListener) {
+      reducedMotion.addEventListener("change", requestMuzejLogoVisibility);
+    } else if (reducedMotion.addListener) {
+      reducedMotion.addListener(requestMuzejLogoVisibility);
+    }
+
+    updateMuzejLogoVisibility();
+  })();
+</script>
+</body>
+</html>
