@@ -66,8 +66,8 @@
       title: "The Many Faces of Nikola Martinoski",
       kicker: "Art | Painting",
       dek: "Martinoski stands at the hinge point where Macedonian painting became recognizably modern.",
-      image: "./Assets/Martinoski%20Article/Nikola%27s%20Hero%20Images/Martinoski%20Square.png",
-      alt: "Square collage portrait of Nikola Martinoski.",
+      image: "./Assets/Martinoski%20Article/Nikola%27s%20Hero%20Images/NewNikolaMartinoski%20copy.png",
+      alt: "Nikola Martinoski holding paintbrushes.",
       position: "center center"
     },
     {
