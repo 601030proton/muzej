@@ -1092,12 +1092,14 @@ body.muzej-logo-hidden .site-header .brand-mark {
 .radio-row{margin:0 0 100px;scroll-margin-top:100px}
 .radio-row.radio-continuation{margin-bottom:0}
 .radio-continuation-copy{min-width:0}
-.radio-continuation-copy > section{margin-bottom:100px;scroll-margin-top:100px}
+.radio-continuation-copy > section{scroll-margin-top:100px}
+.radio-continuation-copy > section:not(:last-child){margin-bottom:clamp(26.25px,2.0625vw,31.25px)}
+.radio-continuation-copy > section:last-child{margin-bottom:100px}
 .radio-rail{position:sticky;top:100px;align-self:start}
 .radio-rail .sleeve{width:76%}
 .radio-rail .sleeve .artwork-blank{max-height:calc(100svh - 200px)}
 .studio .artwork-blank{aspect-ratio:4/3}.landscape .artwork-blank{aspect-ratio:3/2}.insert .artwork-blank{aspect-ratio:1.8}.record .artwork-blank{aspect-ratio:1}
-.radio-dedications{margin-top:100px;scroll-margin-top:100px}
+.radio-dedications{scroll-margin-top:100px}
 .radio-dedications > div:last-child > p:last-child{margin-bottom:0}
 .radio-row > .radio-prose:only-child{grid-column:-2 / -1}
 .radio-prose{min-width:0;font:400 clamp(21px,1.65vw,25px)/1.46 "plantin",Georgia,serif}
@@ -1125,7 +1127,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
 .radio-article-page .radio-main{padding:12px 20px 0}.radio-opening,.radio-row{grid-template-columns:1fr;gap:36px}
 .radio-title-column h1{font-size:clamp(42px,11vw,68px);margin:26px 0}
 .radio-hero-image{height:52svh;min-height:260px}.radio-deck{font-size:26px;margin-bottom:18px}.radio-article{margin-top:64px}
-.radio-dedications{margin-top:68px}.radio-row,.radio-continuation-copy > section{margin-bottom:68px}.radio-rail{position:static}.radio-rail .sleeve{width:72%;margin:auto}.radio-rail .sleeve .artwork-blank{max-height:none}
+.radio-row,.radio-continuation-copy > section:last-child{margin-bottom:68px}.radio-continuation-copy > section:not(:last-child){margin-bottom:27.5px}.radio-rail{position:static}.radio-rail .sleeve{width:72%;margin:auto}.radio-rail .sleeve .artwork-blank{max-height:none}
 .radio-prose{font-size:22px;line-height:1.46}.radio-spread{margin:70px 0}.radio-sleeve-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 18px}
 .radio-duet{grid-template-columns:1fr;gap:40px;margin:70px 0}.radio-duet .sleeve{width:72%;margin:auto}.radio-pullquote{margin:70px auto;padding:0 8px}
 .radio-object figcaption{font-size:10px}
