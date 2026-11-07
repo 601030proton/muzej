@@ -126,8 +126,8 @@
       title: "Vranec",
       kicker: "Wine | Culture",
       dek: "The vineyards and cellar decisions behind Macedonia’s best-known red.",
-      image: "./Assets/Vranec/begniste-vineyards.webp",
-      alt: "Vineyards near Begnište in the Tikveš wine district.",
+      image: "./Assets/Vranec/tikves-02.png",
+      alt: "A man holding bunches of dark grapes in his hands.",
       position: "center 60%"
     },
     {
