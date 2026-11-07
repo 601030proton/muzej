@@ -13,14 +13,14 @@
       id: '0LTF3Sv5eoc',
       title: 'That Was the World of Vangel Naumovski',
       credit: '1980 · Documentary',
-      poster: 'https://i.ytimg.com/vi/0LTF3Sv5eoc/hqdefault.jpg',
+      poster: 'https://i.ytimg.com/vi/0LTF3Sv5eoc/maxresdefault.jpg',
       alt: 'YouTube thumbnail for That Was the World of Vangel Naumovski'
     },
     {
       id: 'bu4reJk0cNM',
       title: 'Republic in Flames',
       credit: '1969 · Film excerpt',
-      poster: 'https://i.ytimg.com/vi/bu4reJk0cNM/hqdefault.jpg',
+      poster: 'https://i.ytimg.com/vi/bu4reJk0cNM/maxresdefault.jpg',
       alt: 'YouTube thumbnail for Republic in Flames'
     }
   ];
