@@ -81,7 +81,11 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .film-screen { aspect-ratio: 16/9; background: #111; }
 .film-poster { position: relative; width: 100%; height: 100%; display: block; padding: 0; border: 0; background: #111; color: white; }
 .film-poster img { width: 100%; height: 100%; object-fit: contain; }
-.film-play { position: absolute; bottom: 20px; left: 20px; display: flex; align-items: center; gap: 12px; background: #000b; padding: 10px 16px; font-size: 12px; }
+.film-play { position: absolute; inset: 50% auto auto 50%; transform: translate(-50%, -50%); display: block; width: 24px; height: 28px; color: #fff; pointer-events: none; filter: drop-shadow(0 1px 4px #0006); transition: opacity .2s ease; }
+.film-play svg { display: block; width: 100%; height: 100%; }
+.film-poster { cursor: pointer; }
+.film-poster:hover .film-play { opacity: .75; }
+.film-poster:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 .film-play>span { font-size: 14px; }
 .film-screen iframe { width: 100%; height: 100%; border: 0; display: block; }
 .film-fallback { display: flex; justify-content: flex-end; gap: 24px; margin-top: 14px; font-size: 11px; }
@@ -153,7 +157,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   .cinema-layout { padding-block: 30px; }
   .cinema-copy h2 { max-width: none; }
   .cinema-credit { margin-top: 16px; }
-  .film-play { left: 12px; bottom: 12px; }
   .tose-descendants-media { width: 85%; }
   .catalogue-grid { grid-template-columns: 1fr; gap: 40px; }
   .catalogue-grid .story-card-kicker { min-height: 0; }
