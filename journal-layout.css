@@ -17,7 +17,7 @@
 .journal-layout .body-block > p:last-child{margin-bottom:0}
 .journal-layout .article-body-media{position:sticky;top:100px;align-self:start;width:min(88%,420px);margin:0}
 .journal-layout .article-body-media img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
-.journal-layout .article-inline-media{width:min(88%,420px);margin:52px 0}
+.journal-layout .article-inline-media{width:min(88%,420px);margin:52px auto}
 .journal-layout .article-body-media figcaption,.journal-layout .article-inline-media figcaption{font:400 11px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000;margin:13px 0 0}
 .journal-layout .gallery-reading{margin:100px 0 120px}
 .journal-layout .sources-section{margin-top:64px}
