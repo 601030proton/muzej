@@ -73,10 +73,10 @@
     {
       slug: "macedonian-renaissance",
       href: "macedonian-renaissance.html",
-      title: "Toward an Art History of the Macedonian Renaissance",
+      title: "Figures of Devotion",
       kicker: "Art | History",
-      dek: "From Saint Sophia and Nerezi to Dicho Zograf and the carved iconostases of the nineteenth-century revival.",
-      image: "./Assets/Macedonian%20Renaissance/Article%20Photos/web/hero.webp",
+      dek: "Four works of Macedonian sacred art reveal how painters shaped grief, movement, and devotion.",
+      image: "./Assets/Macedonian%20Renaissance/Article%20Photos/web/new-hero.png",
       alt: "Collage detail of the Archangel Gabriel fresco and a painted hand against a blue field.",
       position: "center center"
     },
@@ -123,12 +123,12 @@
     {
       slug: "how-to-taste-vranec",
       href: "how-to-taste-vranec.html",
-      title: "How to taste Vranec (like a sommelier)",
-      kicker: "Wine | Guide",
-      dek: "Dark fruit, firm tannin, and the problem of being too powerful.",
-      image: "./Assets/Vranec/vranec-tasting.jpg",
-      alt: "Wine being poured into a glass during a tasting.",
-      position: "center center"
+      title: "Vranec",
+      kicker: "Wine | Culture",
+      dek: "The vineyards and cellar decisions behind Macedonia’s best-known red.",
+      image: "./Assets/Vranec/begniste-vineyards.webp",
+      alt: "Vineyards near Begnište in the Tikveš wine district.",
+      position: "center 60%"
     },
     {
       slug: "prespa",

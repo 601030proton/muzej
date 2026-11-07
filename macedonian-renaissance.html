@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="A long view of Macedonian art, from Saint Sophia and Nerezi to Dicho Zograf, Bigorski, and the nineteenth-century revival.">
-<title>Toward an Art History of the Macedonian Renaissance | Muzej</title>
-<link rel="icon" type="image/png" href="./Assets/Font/Muzej%20Logo.ai.png">
-<link rel="apple-touch-icon" href="./Assets/Font/Muzej%20Logo.ai.png">
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&display=swap"
-/>
-<link rel="stylesheet" href="fonts.css?v=20261101-consistency-3">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Four works of Macedonian sacred art reveal how painters shaped grief, movement, and devotion.">
+<title>Figures of Devotion | Muzej</title>
+<link href="./Assets/Font/Muzej%20Logo.ai.png" rel="icon" type="image/png"/>
+<link href="./Assets/Font/Muzej%20Logo.ai.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&amp;display=swap" rel="stylesheet"/>
+<link href="fonts.css?v=20261101-consistency-3" rel="stylesheet"/>
 <style>
 :root {
   --background: #ffffff;
@@ -108,7 +105,6 @@ a { color: inherit; }
   top: -107.88px;
   display: block;
 }
-
 
 .utility-link,
 .utility-menu-item {
@@ -793,6 +789,17 @@ body.muzej-logo-hidden .site-header .brand-mark {
     top: -83.62px;
   }
 }
+
+/* Keep the deck within the page grid at every screen width. */
+.lazarki-article .feature-deck {
+  width: var(--feature-w);
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: clamp(32px, 5vw, 64px) auto 0;
+  font-size: clamp(22px, 2.5vw, 36px);
+  line-height: 1.25;
+  text-wrap: pretty;
+}
 </style>
 <style>
 .ohrid-article .feature-title {
@@ -898,61 +905,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
   }
 }
 
-.renaissance-article .feature-title {
-  font-size: clamp(40px, 5.15vw, 82px);
-  line-height: 0.9;
-}
-.renaissance-article .feature-media img {
-  width: auto;
-  max-width: 100%;
-  height: min(80svh, 920px);
-  max-height: 100%;
-  object-fit: contain;
-  object-position: center center;
-  background: var(--white);
-}
-.renaissance-article .section-heading {
-}
-.renaissance-article .gallery-reading-media,
-.renaissance-article .gallery-reading-feature {
-  aspect-ratio: auto;
-  overflow: visible;
-}
-.renaissance-article .gallery-reading-media img,
-.renaissance-article .gallery-reading-feature img {
-  aspect-ratio: 15 / 21;
-  height: auto;
-  object-fit: cover;
-}
-.renaissance-article .gallery-reading figcaption {
-  margin-top: 12px;
-  color: var(--ink-soft);
-  font-size: 8px;
-  letter-spacing: 0;
-  line-height: 1.35;
-}
-.renaissance-article .article-inline-media {
-  width: min(92%, 460px);
-}
-.renaissance-article .article-inline-media--peribleptos {
-  width: min(82%, 430px);
-  margin: 0 auto clamp(34px, 4vw, 54px);
-}
-.renaissance-article .article-inline-media--peribleptos figcaption {
-  margin-top: 12px;
-  color: var(--ink-soft);
-  font-size: 8px;
-  letter-spacing: 0;
-  line-height: 1.35;
-}
-@media (max-width: 720px) {
-  .renaissance-article .feature-title {
-    font-size: clamp(33px, 11.4vw, 54px);
-  }
-}
-
-.ohrid-article .feature-title,
-.renaissance-article .feature-title {
+.ohrid-article .feature-title {
   font-family: "plantin", Georgia, serif;
   font-size: clamp(42px, 5.2vw, 82px);
   font-weight: 400;
@@ -960,44 +913,243 @@ body.muzej-logo-hidden .site-header .brand-mark {
   letter-spacing: 0;
   text-transform: none;
 }
-.ohrid-article .feature-byline,
-.renaissance-article .feature-byline {
+.ohrid-article .feature-byline {
   margin: 0 0 auto;
   color: var(--ink-soft);
   font-family: var(--article-serif);
   font-size: clamp(16px, 1.18vw, 19px);
   line-height: 1.4;
 }
-.ohrid-article .feature-copy,
-.renaissance-article .feature-copy {
+.ohrid-article .feature-copy {
   max-width: 27rem;
   justify-content: flex-start;
   gap: 0;
 }
 @media (max-width: 720px) {
-  .ohrid-article .feature-title,
-  .renaissance-article .feature-title {
+  .ohrid-article .feature-title {
     font-size: clamp(30px, 8.2vw, 38px);
     line-height: 1.03;
     width: calc(100vw - (var(--page-x) * 2));
     max-width: 100%;
     overflow-wrap: break-word;
   }
-  .ohrid-article .feature-byline,
-  .renaissance-article .feature-byline {
+  .ohrid-article .feature-byline {
     margin: 28px 0 0;
     font-size: 15px;
   }
 }
 </style>
-<link rel="stylesheet" href="more-from-muzej.css?v=20260810-plantin-final">
-<script src="more-from-muzej.js?v=20261107-ohrid-hero" defer></script>
-<link rel="stylesheet" href="muzej-footer-logo.css?v=20260914">
-<link rel="stylesheet" href="article-opening.css?v=20261101">
+<link href="more-from-muzej.css?v=20260810-plantin-final" rel="stylesheet"/>
+<script defer="" src="more-from-muzej.js?v=20261107-figures-devotion"></script>
+<style>
+.lazarki-article{--lz-ink:#11110f;--lz-muted:rgba(17,17,15,.58);--lz-rule:rgba(17,17,15,.16);--lz-soft:#f3f1eb}
+
+
+
+.lazarki-article .feature-media>div,.lazarki-article .article-body-media>div,.lazarki-article .article-inline-media>div,.lazarki-article .gallery-reading-media>div,.lazarki-article .gallery-reading-feature>div{border:0!important;background:linear-gradient(180deg,#f4f2ed 0%,#ece9e2 100%)!important}
+
+
+
+
+
+
+
+.lazarki-article .body-block>p{max-width:34rem;font-size:clamp(23px,1.65vw,31px);line-height:1.46;color:var(--lz-ink);font-weight:400}
+.lazarki-article .body-block>p+p{margin-top:1.45em}
+.lazarki-article .lazarki-intro{margin-bottom:clamp(110px,14vw,210px)}
+.lazarki-article .lazarki-intro>p:first-child{max-width:34rem;font-family:var(--article-serif);font-size:clamp(23px,1.65vw,31px);font-weight:400;line-height:1.46;letter-spacing:0}
+.lazarki-article .chapter-heading{display:block;max-width:100%;margin:clamp(58px,6.5vw,92px) 0 clamp(24px,3vw,38px);padding-top:clamp(14px,1.5vw,20px);border-top:1px solid var(--lz-ink);font-family:var(--headline-serif);font-size:clamp(38px,4.6vw,66px);font-weight:400;line-height:.96;letter-spacing:-.018em;text-wrap:normal}
+
+
+
+.lazarki-article .subhead{max-width:26ch;margin:clamp(48px,6vw,84px) 0 .9em;font-family:var(--headline-serif);font-size:clamp(24px,2.35vw,34px);font-weight:400;line-height:1.08;letter-spacing:-.01em}
+.lazarki-article .subhead+p{margin-top:0}
+.lazarki-article .fact-statement{max-width:33rem!important;margin:clamp(68px,8vw,120px) 0!important;padding:clamp(18px,2.4vw,28px) 0;border-top:1px solid var(--lz-ink);border-bottom:1px solid var(--lz-rule);font-family:"plantin",Georgia,serif;font-size:clamp(30px,3.25vw,48px)!important;line-height:1.08!important;letter-spacing:-.02em}
+.lazarki-article .ritual-sequence{max-width:40rem!important;margin:clamp(46px,5vw,76px) 0!important;padding:clamp(18px,2.4vw,28px) 0;border-top:1px solid var(--lz-rule);border-bottom:1px solid var(--lz-rule);font-family:var(--sans);font-size:clamp(.78rem,.72rem + .24vw,.95rem)!important;line-height:1.7!important;letter-spacing:.035em;text-transform:uppercase}
+.lazarki-article .data-list{max-width:40rem;margin:clamp(32px,4vw,58px) 0 clamp(54px,6vw,82px);border-top:1px solid var(--lz-ink)}
+.lazarki-article .data-row{display:grid;grid-template-columns:minmax(92px,.36fr) 1fr;gap:clamp(18px,3vw,40px);padding:14px 0 16px;border-bottom:1px solid var(--lz-rule);font-family:var(--sans);font-size:.82rem;line-height:1.45}
+.lazarki-article .data-row .data-key{color:var(--lz-muted)}
+.lazarki-article .regional-atlas{width:100%;max-width:100%;margin-top:clamp(36px,5vw,64px);margin-bottom:clamp(72px,8vw,112px);overflow:visible}
+.lazarki-article .regional-atlas table{width:100%;max-width:100%;table-layout:fixed;border-collapse:collapse;font-family:var(--sans);font-size:.72rem!important;line-height:1.45!important}
+.lazarki-article .regional-atlas th,.lazarki-article .regional-atlas td{padding:12px 14px 14px 0;border-top:1px solid var(--lz-rule);vertical-align:top;text-align:left;font-weight:400;overflow-wrap:anywhere;word-break:normal}
+.lazarki-article .regional-atlas th{padding-top:10px;border-top:1px solid var(--lz-ink);font-size:.64rem;letter-spacing:.09em;text-transform:uppercase;color:var(--lz-muted)}
+.lazarki-article .regional-atlas th:nth-child(1),.lazarki-article .regional-atlas td:nth-child(1){width:24%}.lazarki-article .regional-atlas th:nth-child(2),.lazarki-article .regional-atlas td:nth-child(2){width:44%}.lazarki-article .regional-atlas th:nth-child(3),.lazarki-article .regional-atlas td:nth-child(3){width:32%}.lazarki-article .regional-atlas td:first-child{font-family:var(--headline-serif);font-size:.96rem;line-height:1.2}
+.lazarki-article .evidence-list{margin-top:clamp(32px,4vw,58px);border-top:1px solid var(--lz-ink)}
+.lazarki-article .evidence-item{display:grid;grid-template-columns:minmax(180px,.82fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);padding:clamp(24px,3.5vw,44px) 0;border-bottom:1px solid var(--lz-rule)}
+.lazarki-article .evidence-claim{margin:0;font-family:"plantin",Georgia,serif;font-size:clamp(22px,2.3vw,34px);line-height:1.04;font-weight:400}
+.lazarki-article .evidence-answer{max-width:29rem;margin:0;font-size:clamp(16px,1.16vw,19px);line-height:1.68}
+.lazarki-article .research-status{margin-top:clamp(120px,14vw,210px);padding-top:clamp(22px,3vw,34px);border-top:2px solid var(--lz-ink)}
+.lazarki-article .research-status>h2{margin:0 0 clamp(28px,4vw,52px);font-family:var(--sans);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:400}
+.lazarki-article .research-status>p:first-of-type{font-family:"plantin",Georgia,serif;font-size:clamp(30px,3.1vw,46px);line-height:1.08;letter-spacing:-.02em}
+.lazarki-article .sources-section{margin-top:clamp(120px,14vw,210px);padding-top:20px;border-top:1px solid var(--lz-ink)}
+.lazarki-article .sources-section>h2{margin:0 0 28px;font-family:var(--sans);font-size:.64rem;line-height:1.2;letter-spacing:.12em;text-transform:uppercase;font-weight:400;color:var(--lz-muted)}
+.lazarki-article .sources-section>p{max-width:44rem;margin:0!important;padding:11px 0 13px;border-top:1px solid rgba(17,17,15,.1);font-family:var(--sans);font-size:.72rem!important;line-height:1.55!important;color:var(--lz-muted)}
+.lazarki-article .sources-section>p:first-of-type{border-top:0}
+.lazarki-article .gallery-reading{margin-top:clamp(100px,13vw,190px);margin-bottom:clamp(100px,13vw,190px)}
+@media(max-width:980px){.lazarki-article .article-body-media{position:static;width:min(100%,420px)}.lazarki-article .regional-atlas{width:100%;max-width:100%}}
+@media(max-width:720px){
+.lazarki-article .chapter-heading{max-width:none;margin-top:52px;margin-bottom:24px;padding-top:14px;font-size:clamp(34px,10.5vw,48px);line-height:.98}
+.lazarki-article .subhead{margin-top:42px;font-size:clamp(23px,7vw,31px);line-height:1.08}
+.lazarki-article .evidence-item{grid-template-columns:1fr;gap:16px}
+.lazarki-article .data-row{grid-template-columns:1fr;gap:6px}
+
+}
+.lazarki-article .chapter-number,
+
+.lazarki-article .evidence-item{grid-template-columns:1fr;gap:16px}
+.lazarki-article .data-row{grid-template-columns:1fr;gap:6px}
+
+}
+
+/* Blank image placeholders occupying the exact Ohrid template image slots. */
+.lazarki-article .feature-media > div {
+  display: block;
+  width: 100%;
+  height: clamp(620px, 80vh, 920px);
+  background: #f4f2ed;
+}
+.lazarki-article .article-body-media > div {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1.08;
+  background: #f4f2ed;
+}
+.lazarki-article .article-inline-media > div,
+.lazarki-article .gallery-reading-media > div,
+.lazarki-article .gallery-reading-feature > div {
+  background: #f4f2ed;
+}
+@media (min-width: 981px) {
+  .ohrid-article .feature-media > div {
+    height: 100%;
+    max-height: 100%;
+  }
+}
+@media (max-width: 980px) {
+  .lazarki-article .feature-media > div {
+    height: clamp(500px, 70vh, 720px);
+  }
+}
+@media (max-width: 720px) {
+  .lazarki-article .feature-media > div {
+    height: clamp(360px, 56vh, 470px);
+  }
+}
+</style><link href="muzej-footer-logo.css?v=20260914" rel="stylesheet"/>
+<style>/* Lazarki surgical spacing and alignment adjustments. */
+.lazarki-article .article-body-copy > .lazarki-intro {
+  margin-top: 1.45em;
+  margin-bottom: 1.45em;
+}
+.lazarki-article .content-row > .article-body-copy > .chapter-heading:first-child {
+  margin-top: 0;
+}
+</style><style id="lazarki-sticky-opening">
+/* Title remains within the opening until the image and deck have passed. */
+.lazarki-sticky-opening .feature-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:start;height:auto;min-height:0}
+.lazarki-sticky-opening .feature-copy{position:sticky;top:100px;align-self:start;height:calc(100svh - 124px);min-height:0;max-width:none;width:100%;margin:0;padding:0 0 24px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;text-align:left;gap:24px}
+.lazarki-sticky-opening .feature-title{width:auto;max-width:100%;font-size:clamp(42px,5.2vw,82px);line-height:.98}
+.lazarki-sticky-opening .feature-byline{order:2;margin:0}
+.feature-scroll-column{min-width:0}
+.lazarki-sticky-opening .feature-media{margin:0;height:auto}
+.lazarki-sticky-opening .feature-media img{display:block;width:100%;height:calc(100svh - 124px);max-height:none;object-fit:cover}
+.lazarki-sticky-opening .feature-deck{width:100%;max-width:none;margin:40px 0 0;padding:0 0 16px;font-size:clamp(22px,2.5vw,36px);line-height:1.25;text-align:left}
+@media(max-width:760px){
+.lazarki-sticky-opening .feature-inner{grid-template-columns:1fr;gap:28px}
+.lazarki-sticky-opening .feature-copy{position:static;height:auto;min-height:0;padding:0;gap:20px;order:0}
+.lazarki-sticky-opening .feature-title{font-size:clamp(30px,8.2vw,38px)}
+.lazarki-sticky-opening .feature-media img{height:auto;max-height:none;object-fit:contain}
+.lazarki-sticky-opening .feature-deck{margin-top:28px;font-size:22px}
+}
+</style><style id="article-section-headings">
+.lazarki-article .chapter-heading{font-family:"plantin",Georgia,serif;font-size:30px;font-weight:400;line-height:1.1;letter-spacing:0;text-transform:none;border:0;padding:0;margin:64px 0 24px}
+.lazarki-article .chapter-heading:first-child{margin-top:0}
+@media(max-width:760px){.lazarki-article .chapter-heading{font-size:26px;margin-top:52px;margin-bottom:22px}.lazarki-article .chapter-heading:first-child{margin-top:0}}
+</style>
 <link rel="stylesheet" href="article-system.css?v=20261101-consistency-3">
+<style>
+.radio-article-page{color:#000;background:#fff;--radio-gap:clamp(36px,6vw,96px)}
+.radio-article-page .radio-main{padding:12px var(--page-x) 0;max-width:1520px;margin:auto}
+.radio-opening,.radio-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--radio-gap);align-items:start}
+.radio-title-column{min-width:0;align-self:end}
+.radio-title-column h1{font:400 clamp(48px,5.7vw,90px)/.97 "plantin",Georgia,serif;letter-spacing:-.025em;margin:32px 0}
+.radio-kicker,.radio-byline,.radio-object figcaption,.radio-spread-heading,.radio-editor-note{font:400 11px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000}
+.radio-kicker,.radio-spread-heading{text-transform:uppercase;letter-spacing:.08em}
+.radio-byline strong{font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.radio-kicker,.radio-byline{margin:0}
+.radio-opening-column{min-width:0}
+.radio-object{margin:0;min-width:0}
+.radio-sleeve-image{display:block;width:100%;height:auto}
+.radio-studio-photo img{display:block}
+.artwork-blank{background:#f2f2f0;position:relative;aspect-ratio:1/1.45;width:100%}
+.artwork-blank>span{position:absolute;bottom:14px;left:16px;font:10px/1 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000}
+.radio-object figcaption{margin:13px 0 0;max-width:44em}
+.radio-hero-image{display:block;width:100%;height:calc(100svh - 160px);min-height:380px;object-fit:contain}
+.radio-deck{font:400 clamp(26px,2.6vw,38px)/1.2 "plantin",Georgia,serif;margin:0 0 22px;max-width:16em}
+.radio-article{margin-top:120px}
+.radio-row{margin:0 0 100px;scroll-margin-top:100px}
+.radio-row.radio-continuation{margin-bottom:0}
+.radio-continuation-copy{min-width:0}
+.radio-continuation-copy > section{scroll-margin-top:100px}
+.radio-continuation-copy > section:not(:last-child){margin-bottom:clamp(26.25px,2.0625vw,31.25px)}
+.radio-continuation-copy > section:last-child{margin-bottom:100px}
+.radio-rail{position:sticky;top:100px;align-self:start}
+.radio-rail .sleeve{width:76%}
+.radio-rail .sleeve .artwork-blank{max-height:calc(100svh - 200px)}
+.studio .artwork-blank{aspect-ratio:4/3}.landscape .artwork-blank{aspect-ratio:3/2}.insert .artwork-blank{aspect-ratio:1.8}.record .artwork-blank{aspect-ratio:1}
+.radio-dedications{scroll-margin-top:100px}
+.radio-dedications > div:last-child > p:last-child{margin-bottom:0}
+.radio-row > .radio-prose:only-child{grid-column:-2 / -1}
+.radio-prose{min-width:0;font:400 clamp(21px,1.65vw,25px)/1.46 "plantin",Georgia,serif}
+.radio-prose p{margin:0 0 1.25em}.radio-prose>div:last-child>p:last-child{margin-bottom:0}
+.radio-spread{margin:100px 0 120px}
+.radio-spread-heading{display:flex;justify-content:space-between;gap:20px;border-top:1px solid #000;padding-top:14px;margin-bottom:40px}
+.radio-sleeve-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:54px 38px}
+
+.radio-spread[data-cassette-gallery]{width:min(100%,1020px);margin-inline:auto}
+.radio-sleeve-mat{aspect-ratio:33 / 35;overflow:hidden;background:#fff}
+.radio-sleeve-mat .radio-sleeve-image{height:100%;object-fit:contain;filter:brightness(1.045)}
+.radio-sleeve-mat--wide-margin .radio-sleeve-image{transform:scale(1.634)}
+.radio-gallery-controls{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:30px}
+.radio-gallery-controls[hidden],#radio-cassette-covers > [hidden]{display:none}
+.radio-gallery-controls button,.radio-gallery-controls span{font:400 11px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000}
+.radio-gallery-controls button{border:0;background:none;padding:12px 0;min-height:44px;cursor:pointer}
+.radio-gallery-controls button[aria-disabled="true"]{opacity:.45;cursor:default}
+.radio-gallery-controls span{font-variant-numeric:tabular-nums}
+.radio-duet{display:grid;grid-template-columns:1.25fr .75fr;gap:var(--radio-gap);align-items:center;margin:110px 0 130px}
+.radio-pullquote{max-width:1000px;margin:110px auto 120px;text-align:center;padding:0 6vw}
+.radio-pullquote blockquote{font:400 clamp(32px,4.2vw,64px)/1.1 "plantin",Georgia,serif;margin:0}
+.radio-editor-note{margin:24px 0 28px;padding:16px 0 0;border-top:1px solid #ccc;font-size:13px;line-height:1.6}
+.radio-editor-note p:last-child{margin-bottom:0}
+.radio-article-page a:focus-visible{outline:2px solid #000;outline-offset:5px}
+.radio-prose a{text-decoration-thickness:1px;text-underline-offset:4px}
+@media(max-width:760px){
+.radio-article-page .radio-main{padding:12px 20px 0}.radio-opening,.radio-row{grid-template-columns:1fr;gap:36px}
+.radio-title-column h1{font-size:clamp(42px,11vw,68px);margin:26px 0}
+.radio-hero-image{height:52svh;min-height:260px}.radio-deck{font-size:26px;margin-bottom:18px}.radio-article{margin-top:64px}
+.radio-row,.radio-continuation-copy > section:last-child{margin-bottom:68px}.radio-continuation-copy > section:not(:last-child){margin-bottom:27.5px}.radio-rail{position:static}.radio-rail .sleeve{width:72%;margin:auto}.radio-rail .sleeve .artwork-blank{max-height:none}
+.radio-prose{font-size:22px;line-height:1.46}.radio-spread{margin:70px 0}.radio-sleeve-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 18px}
+.radio-duet{grid-template-columns:1fr;gap:40px;margin:70px 0}.radio-duet .sleeve{width:72%;margin:auto}.radio-pullquote{margin:70px auto;padding:0 8px}
+.radio-object figcaption{font-size:10px}
+}
+</style>
 <link rel="stylesheet" href="bylines.css?v=20261107">
+<style>
+.sacred-art-page .radio-prose h2{font:400 30px/1.1 "plantin",Georgia,serif;margin:0 0 24px;letter-spacing:0}
+.sacred-art-page .radio-rail .article-inline-media{width:100%;max-width:none;margin:0}
+.sacred-art-page .radio-rail img{display:block;width:100%;height:auto;max-height:calc(100svh - 160px);object-fit:contain;object-position:left top}
+@media(max-width:760px){.sacred-art-page .radio-prose h2{font-size:26px}.sacred-art-page .radio-rail img{max-height:none}}
+</style><style>
+.sacred-art-page .sources-section{margin-top:64px;padding-top:20px;border-top:1px solid #11110f}
+.sacred-art-page .sources-section>h2{margin:0 0 28px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.64rem;line-height:1.2;letter-spacing:0;text-transform:none;font-weight:400;color:rgba(17,17,15,.58)}
+.sacred-art-page .sources-section>p{max-width:44rem;margin:0!important;padding:11px 0 13px;border-top:1px solid rgba(17,17,15,.1);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.72rem!important;line-height:1.55!important;color:rgba(17,17,15,.58)}
+.sacred-art-page .sources-section>p:first-of-type{border-top:0}
+.sacred-art-page .sources-section a{color:inherit;text-decoration:none}
+.sacred-art-page .sources-section a:hover{text-decoration:underline}
+</style>
+<link rel="stylesheet" href="editorial-sources.css?v=20261107-unified">
 </head>
-<body class="ohrid-article renaissance-article">
+<body class="ohrid-article radio-article-page sacred-art-page">
 
 <header class="site-header">
   <div class="shell header-frame">
@@ -1032,239 +1184,38 @@ body.muzej-logo-hidden .site-header .brand-mark {
   </div>
 </header>
 
-<main>
-  <header class="feature muzej-sticky-opening"><div class="feature-inner"><div class="feature-copy">
-        <p class="feature-byline muzej-byline">Words <strong>Aleksandar Trajkovski</strong></p>
-        <h1 class="feature-title">Toward an Art<br>History of the<br>Macedonian<br>Renaissance</h1>
-      </div><div class="feature-scroll-column"><figure class="feature-media">
-        <img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/new-hero.png" alt="Collage detail of an archangel fresco and a painted hand against a blue field.">
-      </figure><p class="feature-deck">From Saint Sophia and Nerezi to Dicho Zograf and the carved iconostases of the nineteenth-century revival, Macedonian art is a history of line, surface, and presence.</p></div></div></header>
-
-  <article class="article-shell article-longform">
-    <section class="content-row">
-      <figure class="article-body-media">
-        <img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/saint-sophia.webp" alt="Frescoed saints inside the Church of Saint Sophia in Ohrid." loading="lazy" decoding="async">
-        <figcaption>Saint Sophia, Ohrid</figcaption>
-      </figure>
-      <div class="article-body-copy body-block">
-        <p>The history of Macedonian art is repeatedly described through inheritance: the inheritance of Byzantium, of Ohrid, of the icon, of the monastery workshop. But inheritance is too passive a word for what the objects actually do. From the eleventh-century frescoes of Saint Sophia to the nineteenth-century icons of Dicho Zograf and the carved walnut iconostases of the Mijak masters, the most consequential Macedonian works are not acts of preservation alone. They are acts of formal pressure. Each period takes an established visual language—the frontal saint, the gold ground, the liturgical cycle, the basilica, the icon screen—and pushes it toward a new intensity.</p>
-
-        <p>The phrase “Macedonian Renaissance” properly refers, in Byzantine art history, to the cultural and classicizing revival associated with the Macedonian imperial dynasty after the end of Iconoclasm, particularly between 867 and 1056. Yet in Macedonia the term acquires a longer and more visually compelling afterlife. The classical composure of Middle Byzantine painting is followed by the psychological compression of Nerezi, the nervous linearity of Kurbinovo, the narrative congestion of Peribleptos, and, centuries later, by the resurgent monumentality of nineteenth-century church building, icon painting, woodcarving, and domestic architecture.</p>
-
-        <p>These moments do not form one uninterrupted style. What connects them is something more concrete: an extraordinary confidence in the ability of line and surface to produce presence. Macedonian art rarely treats the wall as neutral support. The wall becomes a field of bodies; the wooden screen becomes vegetation, narrative, and architecture at once; the icon panel becomes a compact mechanism of recognition. Even when the figure approaches naturalism, it never fully submits to the illusion of an open window. The image remains attached to its material surface, and it makes that attachment expressive.</p>
-
-        <h2 class="section-heading">The Classical Gravity of Saint Sophia</h2>
-
-        <p>Any survey must begin in Ohrid, not because the city contains a convenient sequence of monuments, but because Saint Sophia establishes the scale of the problem. Its principal eleventh-century fresco program was created during the episcopate of Archbishop Leo, 1037–1056. Branislav Todić has argued that Leo was not simply the patron but the decisive intelligence behind the iconographic program: its saints, liturgical subjects, and arrangement were deliberately coordinated rather than accumulated as conventional decoration.</p>
-
-        <p>Yet before the program is read, it is felt. Entering the sanctuary, one confronts a painted order in which the human body has become architectural. The figures are broad, heavily outlined, and slow. Faces are constructed from long noses, enlarged eyes, shadowed sockets, and abrupt planes of light. The modeling does not dissolve the figure into atmosphere; it consolidates it. Flesh appears dense, almost mineral.</p>
-
-        <p>In the apse, the enthroned Virgin occupies the conch above the Communion of the Apostles, where Christ officiates before the altar. The composition is not organized according to the casual optics of observed space. Its proportions are liturgical rather than naturalistic: figures expand or contract according to their role, and the architecture inside the painting clarifies the action rather than producing convincing depth. The ciborium, altar, apostles, and duplicated figure of Christ establish a solemn visual rhythm across the curved wall.</p>
-
-        <p>The fresco is often approached as theology rendered visible, which it is. But its pictorial achievement is equally specific. The curve of the apse prevents the scene from being perceived all at once. The apostles advance around the sanctuary wall in a measured sequence; the architecture of the church converts painted procession into actual spatial movement. Otto Demus’s account of Byzantine church decoration as an integrated spatial system is particularly relevant here: the image does not sit on the architecture like a framed painting. It becomes legible through the architecture.</p>
-
-        <p>The palette at Saint Sophia has none of the jeweled dematerialization associated with mosaic. Ochres, blue-greens, earthen reds, whites, and dark contours retain the granular opacity of fresco. The colors bind the figures to the plaster. This material weight is essential to their authority. Even when a robe is articulated through fine linear folds, the body remains compact. Light does not enter from outside the image; it is laid onto the face and garment in discrete strokes.</p>
-
-        <p>Compared with the aristocratic manuscripts usually invoked to define the Byzantine Macedonian Renaissance, Saint Sophia is less self-consciously antique. The classicism is present in the measured contrapposto of certain figures, the controlled fall of drapery, and the volumetric coherence of heads and bodies. But classical form has been stripped of display. It has become an instrument of monumentality.</p>
-
-        <p>The result is not realism but gravity. Saint Sophia establishes the body as a stable theological and pictorial unit: a form that can occupy the wall without appearing either trapped by it or detached from it.</p>
-
-        <h2 class="section-heading">Nerezi: The Invention of Intimacy</h2>
-
-        <p>A century later, at Saint Panteleimon in Gorno Nerezi, the body begins to break open. The church is securely dated by its inscription to 1164 and preserves one of the major ensembles of Komnenian fresco painting. It falls outside the Macedonian dynasty and its Renaissance in the strict chronological sense, but any history of the art of Macedonia that stops at dynastic periodization misses the transformation that occurred here.</p>
-
-        <p>The famous Lamentation is often reproduced as an early anticipation of Italian emotional naturalism. This comparison is understandable and mostly unhelpful. Nerezi does not become important because it resembles something that will later happen elsewhere. Its importance lies in the way Byzantine line is made to carry affect without surrendering the image’s formal discipline.</p>
-
-        <p>Christ’s body lies diagonally across the foreground, its extended shape establishing the composition’s emotional horizon. The Virgin bends over him until her face approaches his; Saint John collapses toward the dead hand; the surrounding mourners produce a chain of inclinations, gestures, and interrupted contours. Grief is not represented through facial expression alone. It travels through the entire composition as a series of bent axes.</p>
-
-        <p>The landscape remains spare. A rocky ground rises behind the figures, but it does not open into continuous natural space. Instead, its slopes echo the downward pull of the bodies. The image’s emotional force comes from this coordination of figure and setting: every form is made to lean toward the corpse.</p>
-
-        <p>The painters at Nerezi were attentive to minute physical signs—hands touching flesh, cheeks pressed together, torsos curved by mourning—but the scene never becomes anecdotal. The figures remain types even as they appear to suffer individually. This tension between canonical identity and bodily particularity is the fresco’s great invention.</p>
-
-        <p>Hans Belting’s distinction between an image that is contemplated aesthetically and an image encountered as a presence is useful here. At Nerezi, however, presence is no longer secured by frontal immobility alone. It is produced through contact. The painted body of Christ becomes the point toward which every other body is drawn.</p>
-
-        <p>The effect is intimate without becoming private. This is public grief, staged on the wall at monumental scale. The fresco allows the congregation to approach sacred history not through illusionistic entry into a distant past, but through a tightly compressed choreography of touch.</p>
-      </div>
-      <div class="empty-tail" aria-hidden="true"></div>
-    </section>
-
-    <section class="gallery-reading ohrid-sketch-spread">
-      <figure class="gallery-reading-media">
-        <img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/saint-sophia-2.webp" alt="Vault frescoes inside Saint Sophia in Ohrid." loading="lazy" decoding="async">
-      </figure>
-
-      <div class="gallery-reading-side">
-        <figure class="gallery-reading-feature">
-          <img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/saint-sophia-3.webp" alt="Painted fresco cycle on the interior walls and vaults of Saint Sophia." loading="lazy" decoding="async">
-        </figure>
-      </div>
-    </section>
-
-    <section class="content-row">
-      <figure class="article-body-media">
-        <img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/kurbinovo-archangel-full.webp" alt="Full figure of the Archangel Gabriel fresco at the Church of Saint George in Kurbinovo." loading="lazy" decoding="async">
-        <figcaption>Archangel Gabriel, Kurbinovo</figcaption>
-      </figure>
-      <div class="article-body-copy body-block">
-        <h2 class="section-heading">Kurbinovo: Line at the Point of Flight</h2>
-
-        <p>If Nerezi bends the figure under emotional pressure, Saint George at Kurbinovo almost releases it from gravity altogether. The fresco decoration began on April 25, 1191, according to the surviving inscription. The building itself is strikingly plain: a long single-nave church terminating in a semicircular apse. Its architectural austerity intensifies the shock of the interior, where the wall painting seems to move faster than the building can contain it.</p>
-
-        <p>The defining formal element at Kurbinovo is the line—not contour as boundary, but contour as velocity. Limbs lengthen; torsos twist; garments split into streams of parallel highlights. The figures possess bodies, but those bodies have been subjected to a linear energy that exceeds anatomy.</p>
-
-        <p>This is clearest in the Archangel Gabriel of the Annunciation. Gabriel advances with one arm extended, his body elongated across the field as though the divine message had acquired physical momentum. The wings do not merely identify him; their diagonals amplify his forward motion. His mantle wraps the torso and then escapes into a vortex of folds, while the narrow face remains preternaturally calm. Movement occurs everywhere except in the gaze.</p>
-
-        <p>The achievement is one of controlled contradiction. Gabriel is both swift and suspended. His drapery announces arrival while his body remains permanently poised at the threshold of the event. The painter has discovered how to represent speed without sequence: all phases of movement are compressed into a single figure.</p>
-
-        <p>UNESCO’s nomination documentation describes the Kurbinovo frescoes through their dynamism, slenderness, “whirlwind drapery,” and departure from classical pictorial norms. It also notes that the precise organization and origin of the workshop remain debated; proposals have ranged from a distinctive local group to painters working under a master trained in a major Byzantine center.</p>
-
-        <p>Lydie Hadermann-Misguich’s monograph on Kurbinovo remains fundamental because it treats the ensemble not as an isolated eccentricity but as a high point of late-twelfth-century Byzantine painting. The frescoes belong to a wider moment of mannered elongation and expressive abstraction, yet Kurbinovo pushes those tendencies toward a nearly calligraphic extremity.</p>
-
-        <p>Color participates in the same agitation. Blue fields hold figures whose garments are articulated in sharp green, white, red, and ochre intervals. Highlights do not gradually describe volume; they strike across it. The body is never fully dissolved, but it is made porous to the rhythm of the brush.</p>
-
-        <p>At Saint Sophia, drapery confirmed bodily mass. At Kurbinovo, drapery behaves like an independent nervous system. It registers forces that the body itself cannot visibly contain.</p>
-
-        <h2 class="section-heading">Peribleptos: The Image Becomes a Crowd</h2>
-
-        <figure class="article-inline-media article-inline-media--peribleptos">
-          <img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/church-virgin-mary-peribleptos.jpg" alt="Church of the Virgin Mary Peribleptos in Ohrid framed by leaves against a blue sky." width="1350" height="1800" loading="lazy" decoding="async">
-          <figcaption>Church of the Virgin Mary Peribleptos, Ohrid</figcaption>
-        </figure>
-
-        <p>The frescoes of the Virgin Peribleptos in Ohrid, dated 1294/95, inaugurate another pictorial world. The church’s painters, Michael Astrapas and Eutychios, left their names within the ensemble, making this the first documented work of a workshop that would become active across the central Balkans.</p>
-
-        <p>Where Kurbinovo achieves intensity through attenuation, Peribleptos achieves it through accumulation. The figures are heavier, the compositions denser, and the narrative field more crowded. Architecture proliferates behind the actors: walls, arcades, canopies, stairs, and compact urban structures divide and reconnect the scenes. The painted setting no longer functions merely as an emblematic backdrop. It becomes a compositional machine for staging multiple reactions.</p>
-
-        <p>The expanded Dormition of the Virgin exemplifies this new narrative appetite. The subject’s essential structure remains familiar: the Virgin’s body lies horizontally, Christ stands behind it holding her soul, and the apostles gather around. But the Peribleptos painters extend the event through crowds, secondary episodes, angels, architectural frames, and dramatically varied gestures. The scene becomes not a single action but a chain of simultaneous intensities. The church’s program similarly includes an extensive Passion cycle, the life of the Virgin, the life of John the Baptist, and unusual narthex imagery.</p>
-
-        <p>Faces at Peribleptos are less serene than those at Saint Sophia and less ethereal than those at Kurbinovo. Brows contract, cheeks swell, eyes glance sideways, mouths tense. Bodies occupy space with an almost uncomfortable abundance. Drapery gathers in thick, abrupt folds that enlarge the figures rather than setting them into flight.</p>
-
-        <p>The usual description of this painting as “Palaeologan humanism” catches only part of what is happening. The painters’ interest in emotion does not lead to psychological isolation. On the contrary, feeling becomes collective and contagious. One figure turns, another recoils, another reaches outward; each reaction generates the next. The image becomes a social field of gestures.</p>
-
-        <p>The small scale of many scenes increases their density. From a distance, the wall reads as a dark, continuous fabric. At closer range it breaks into episodes, faces, hands, and buildings. Peribleptos therefore demands two forms of looking: the first architectural, the second almost microscopic.</p>
-
-        <p>This double address distinguishes it from the frontal monumentality of Saint Sophia. The viewer is no longer held at a single visual distance. One is compelled to move closer, withdraw, and move again. Narrative has become spatially restless.</p>
-
-        <h2 class="section-heading">The Portable Image and the Ohrid Tradition</h2>
-
-        <p>The portable icon condenses the problems of monumental painting into a surface that can be carried, repositioned, kissed, screened, and illuminated. Ohrid’s icon collection demonstrates the extraordinary variety possible within what is too easily called a fixed convention. UNESCO notes the exceptional survival of icons and medieval fresco painting throughout the Ohrid region, where local and travelling painters worked across several centuries.</p>
-
-        <p>The icon does not abolish pictorial invention; it relocates it. Since the saint’s identity must remain legible, innovation concentrates in proportion, facial modeling, ornament, chromatic temperature, inscriptions, and the relation between figure and border. A shift in the width of a face, the curvature of an eyebrow, or the rhythm of gold highlights can transform the entire emotional register of the panel.</p>
-
-        <p>The gold ground is not empty space. It removes the figure from ordinary atmosphere while intensifying every painted edge. Against gold, the smallest deviation of contour becomes visible. The icon’s apparent stillness is therefore produced through extreme formal precision.</p>
-
-        <p>By the eighteenth and nineteenth centuries, Macedonian painters continued to use this inherited structure while gradually introducing softer flesh, greater textile detail, architectural motifs, floral ornament, and more complex spatial suggestions. The post-Byzantine icon is neither a degraded medieval image nor an incompletely modern painting. It is an elastic form capable of absorbing new kinds of description while maintaining its devotional legibility.</p>
-
-        <h2 class="section-heading">Dicho Zograf and the Intelligence of Repetition</h2>
-
-        <p>Dicho Zograf, born Dimitar Krstev Dichov in Tresonče in 1819, is the central painter of the nineteenth-century revival. Roughly two thousand icons have been associated with him and his workshop across Macedonia and the wider Balkans, though the borders between autograph work, workshop production, and later attribution are not always secure. His first known signed and dated icon is the Mother of God Pantohara of 1844, now in the Ohrid Icon Gallery.</p>
-
-        <p>Dicho’s importance is not that he abandoned the Byzantine tradition. He did something more difficult: he made its repetition newly productive.</p>
-
-        <p>His figures retain the frontal address, hieratic scale, gold field, and identifying inscriptions of Orthodox icon painting. Yet the faces are often more softly modeled than those of earlier post-Byzantine masters. Flesh passes through rose, ochre, olive, and white accents; eyes are sharply drawn but set within rounded sockets; garments combine strong contour with an increased appetite for pattern and material detail.</p>
-
-        <p>The resulting images exist in a productive tension between type and likeness. A saint must remain immediately recognizable, but Dicho allows subtle distinctions of age, temperament, and physical presence to enter the type. His old men do not merely possess white beards as attributes; the beard becomes a field of rhythmic brushwork. Episcopal vestments are not only signs of rank but surfaces crowded with crosses, jewels, borders, and colored intervals.</p>
-
-        <p>His 1844 Ermeneia, published in a critical edition by Sasho Cvetkovski, records technical recipes, iconographic instructions, inscriptions, and workshop procedures. The manual does not diminish Dicho’s authorship. It clarifies its nature. His art emerged from command of an inherited pictorial grammar: invention occurred through selection, adjustment, combination, speed, and consistency.</p>
-
-        <p>The modern cult of originality has made repetition difficult to see. In Dicho’s practice, repetition is not the opposite of thought. It is the medium through which thought becomes visible. Each new commission presents a different architectural scale, iconostasis, congregation, sequence of saints, and ensemble of colors. The painter’s task is to make the canonical image inhabit these conditions without losing its identity.</p>
-
-        <p>Dicho’s art is most compelling where the image appears at once ancient and unmistakably nineteenth century. The gilded field remains metaphysical; the flowers, architectural dividers, textile motifs, and facial modeling acknowledge a world increasingly attentive to tangible things. Rather than choosing between icon and painting, he holds both visual regimes in suspension.</p>
-
-      </div>
-      <div class="empty-tail" aria-hidden="true"></div>
-    </section>
-
-    <section class="gallery-reading ohrid-sketch-spread">
-      <figure class="gallery-reading-media">
-        <img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/st-nicholas-mavrovo.webp" alt="The partially submerged Church of Saint Nicholas in Mavrovo Lake." loading="lazy" decoding="async">
-        <figcaption>Church of Saint Nicholas, Mavrovo Lake. Built in 1850, with icons painted by Dicho Zograf.</figcaption>
-      </figure>
-
-      <div class="gallery-reading-side">
-        <figure class="gallery-reading-feature">
-          <img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/dicho-zograf.webp" alt="A brightly colored icon attributed to the tradition of Dicho Zograf." loading="lazy" decoding="async">
-          <figcaption>Dicho Zograf, nineteenth-century Macedonian icon painting.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="content-row">
-      <figure class="article-body-media">
-        <img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/bigorski.webp" alt="Bigorski Monastery and the surrounding mountain landscape." loading="lazy" decoding="async">
-        <figcaption>Bigorski Monastery</figcaption>
-      </figure>
-      <div class="article-body-copy body-block">
-        <h2 class="section-heading">Walnut in Motion: Bigorski and Saint Saviour</h2>
-
-        <p>The iconostasis is often treated as the frame around the real art—the icons. At Bigorski Monastery and the Church of Saint Saviour in Skopje, the frame overwhelms any such hierarchy. Carved from walnut in high relief, these screens constitute some of the most ambitious sculptural environments of the nineteenth-century Macedonian revival.</p>
-
-        <p>The Bigorski iconostasis was created during the monastery’s major early-nineteenth-century expansion and is associated with Petre Filipovski Garkata, Marko Filipovski, and Makarij Frčkovski. Its carved panels contain scenes from the Old and New Testaments embedded within an extraordinarily dense system of foliage, animals, architectural motifs, and human figures.</p>
-
-        <p>The first impression is excess. Vines curl into scrolls, scrolls become frames, frames open onto narrative scenes, and figures emerge from leaves before being absorbed again into ornament. But the density is not disorderly. The carving alternates between zones of high relief and deep shadow, creating a legible rhythm across the screen.</p>
-
-        <p>Walnut is made to behave as though it were soft, tensile material. Leaves fold, feathers overlap, beards separate into strands, and miniature bodies turn within spaces only centimeters deep. The technical bravura lies not simply in detail but in the control of negative space. Undercutting permits darkness to enter the object. The screen’s visual richness depends as much on the cavities between forms as on the forms themselves.</p>
-
-        <p>The iconostasis at Saint Saviour, completed in 1824 by Petre Filipovski Garkata and his workshop from Gari, produces a related effect. Its reliefs include biblical figures dressed in local costume and a remarkable representation of the craftsmen themselves. Their self-portraits do not rupture the sacred ensemble. They occupy it with the same compact physicality as the other figures, registering the presence of the workshop within the work.</p>
-
-        <p>The carved screen is not sculpture added to architecture. It is architecture made unstable by sculpture. Columns become stems; borders behave like branches; narrative panels appear as clearings inside an ornamental forest. The iconostasis maintains a strict liturgical division while making its own material boundary almost deliriously active.</p>
-
-        <p>This is where the distinction between ornament and image ceases to hold. Ornament carries narrative; narrative becomes pattern. The eye cannot remain fixed on a single scene because every border generates another form. The screen does not simply display sacred history—it gives sacred history the structure of endless proliferation.</p>
-
-        <h2 class="section-heading">Architecture as Composite Form</h2>
-
-        <p>The nineteenth-century revival was equally architectural. Andrej Damjanov and the broader tradition of Macedonian master builders developed large urban churches whose forms combined the longitudinal clarity of the basilica with domes, galleries, porticoes, arcades, towers, and a wide vocabulary of historical ornament. Damjanov’s churches were built across Macedonia and beyond; scholarship emphasizes the composite character of his architecture rather than its conformity to a single revival style.</p>
-
-        <p>“Eclectic” is too weak a description. These buildings are not collages of borrowed motifs. Their various languages are subordinated to the problem of scale: how to produce an interior capable of holding a large congregation while preserving the visual concentration of the sanctuary.</p>
-
-        <p>The exterior may be horizontally extended and relatively restrained, while the interior rises through columns, galleries, and painted or carved focal points. Architecture prepares a sequence of thresholds: street to porch, porch to nave, nave to iconostasis, iconostasis to altar. The building is experienced through progressive visual restriction and release.</p>
-
-        <p>This spatial logic is intensified by the relation between pale masonry, dark wooden furnishings, gilded icons, textile, metal, and painted walls. The nineteenth-century church interior is not stylistically unified in the modern sense. Its unity is cumulative. Architecture, carving, painting, and liturgical object build density around the eastern end.</p>
-
-        <p>The same workshop intelligence enters domestic architecture. The Robev House in Ohrid, rebuilt between 1861 and 1863 under the master builder Todor Petkov of Gari, is a double residence whose carved ceilings, cupboards, and interior ornament were produced by distinct teams. The two halves were intentionally differentiated, turning competitive craftsmanship into an organizing principle of the interior.</p>
-
-        <p>From the street, the house appears to grow lighter as it rises: a massive stone base supports projecting upper floors punctuated by increasingly numerous windows. Inside, the carved ceiling transforms the room into an inverted ornamental field. The center often behaves like a medallion or shallow dome, with radial geometries extending outward across the wooden surface.</p>
-
-        <p>The domestic ceiling repeats, in secular form, an effect already encountered in the church. Surface ceases to be passive enclosure. It gathers the room’s visual energy and redirects it toward a center.</p>
-
-        <h2 class="section-heading">From the Saint to the Sitter</h2>
-
-        <p>The final phase of the Macedonian revival is usually narrated as the emergence of secular painting. Dimitar Andonov-Papradishki, Gjorgji Zografski, Kosta Vangelov, and related painters continued to produce icons and frescoes while also turning toward portraiture, landscape, historical compositions, and scenes of everyday life. Some portraits were based on photographs, a practice recorded by the National Gallery of North Macedonia.</p>
-
-        <p>The change was not simply a move from “traditional” to “European” art. It involved a reorganization of pictorial attention.</p>
-
-        <p>In the icon, the face belongs to a known sacred identity. The painter’s task is to make that identity present through an established type. In the portrait, the face must distinguish one absent person from every other person. Small differences—an asymmetrical mouth, a particular beard, the fall of hair, the cut of clothing—acquire new importance.</p>
-
-        <p>Yet the early secular portrait often retains the icon’s frontal authority. Sitters occupy shallow space; bodies are presented with a certain rigidity; objects are selected for emblematic clarity. The neutral or architectural background replaces the gold field, but the figure continues to confront the viewer rather than casually inhabit a scene.</p>
-
-        <p>Photography intensifies likeness while preserving this frontal structure. The photograph offers the painter a fixed face and pose; painting reintroduces color, material texture, status, and scale. The resulting portrait is neither simply photographic nor fully academic. It retains the icon painter’s conviction that a face can dominate a surface.</p>
-
-        <p>Landscape and historical painting posed a different problem: the construction of continuous space. Here the artist had to move beyond the isolated sacred figure toward atmosphere, distance, narrative environment, and changing light. The transition was necessarily uneven. But its unevenness is what makes these works art-historically compelling. They show pictorial conventions being tested rather than replaced overnight.</p>
-
-        <h2 class="section-heading">A Renaissance of Surfaces</h2>
-
-        <p>The art of the Macedonian Renaissance cannot be reduced to a single return—to antiquity, to Byzantium, to folk tradition, or to Europe. Its history is visible instead as a sequence of transformations in the relation between figure and surface.</p>
-
-        <p>At Saint Sophia, the wall gives the body monumental gravity. At Nerezi, line bends the body into intimacy and grief. At Kurbinovo, line accelerates until anatomy becomes almost airborne. At Peribleptos, the wall fills with crowds, architecture, and simultaneous narrative. In the icons of Dicho Zograf, an inherited type becomes the basis for chromatic and descriptive variation. At Bigorski and Saint Saviour, the wooden boundary between nave and sanctuary grows into a sculptural cosmos. In the Robev House, carving leaves the church and reorganizes domestic space. In the first secular portraits, the frontal sacred figure becomes the individualized sitter.</p>
-
-        <p>This is not a march from abstraction to realism. Such a history would misunderstand nearly every major work. Macedonian art repeatedly moves in both directions at once: toward a greater description of the visible world and toward a stronger assertion of the image as a constructed surface.</p>
-
-        <p>Its central protagonist is therefore not the individual master, though masters matter, and not even the iconographic subject. It is the line: the grave contour at Saint Sophia, the grieving curve at Nerezi, the electric fold at Kurbinovo, the agitated gesture at Peribleptos, the precise boundary of Dicho’s saints, the line cut physically into walnut by the carvers of Gari.</p>
-
-        <p>Across nine centuries, this line changes speed, weight, medium, and scale. It can enclose a face, direct a procession, describe a wing, divide a garment, open a leaf, or turn a ceiling into a radial field. It is never merely decorative. It is the instrument through which the image acquires force.</p>
-
-        <p>That is the art-historical substance of the Macedonian Renaissance: not a rebirth of something lost, but the repeated discovery that a wall, a panel, or a piece of wood can still be made to live.</p>
-
-        <h2 class="section-heading">Selected scholarly grounding</h2>
-
-        <p>The account above draws particularly on Helen C. Evans and William D. Wixom’s The Glory of Byzantium for the Middle Byzantine context; Branislav Todić on the program of Saint Sophia; Lydie Hadermann-Misguich’s Kurbinovo: Les fresques de Saint-Georges et la peinture byzantine du XIIe siècle; Sašo Korunovski and Elizabeta Dimitrova’s Macédoine byzantine; Miodrag Marković on Michael Astrapas and Eutychios at Peribleptos; Sasho Cvetkovski’s critical work on Dicho Zograf and his Ermeneia; and the work of R. F. Hoddinott and Macedonian scholars including Dimitar Kornakov on the woodcarving tradition.</p>
-      </div>
-      <div class="empty-tail" aria-hidden="true"></div>
-    </section>
-  </article>
-
-  <section class="more-from-muzej" data-more-from-muzej aria-labelledby="more-from-muzej-title"></section>
-</main>
+<main id="main-content" class="radio-main"><header class="radio-opening"><div class="radio-title-column"><p class="radio-kicker">Art | History</p><h1>Figures of Devotion</h1><p class="radio-deck">Four works of Macedonian sacred art reveal how painters shaped grief, movement, and devotion.</p><p class="radio-byline muzej-byline">Words <strong>Aleksandar Trajkovski</strong></p></div><div class="radio-opening-column"><figure class="radio-object hero-object">
+        <img class="radio-hero-image" fetchpriority="high" src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/new-hero.png" alt="Collage detail of an archangel fresco and a painted hand against a blue field.">
+      </figure></div></header><article class="radio-article" aria-label="Figures of Devotion by Aleksandar Trajkovski"><section class="radio-row"><div class="radio-rail"><figure class="radio-object article-inline-media"><img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/nerezi-lamentation.webp" alt="The Virgin holds the dead Christ in the Lamentation fresco at Saint Panteleimon, Nerezi." loading="lazy" decoding="async"><figcaption><em>Lamentation</em>, 1164. Saint Panteleimon, Gorno Nerezi. <a href="https://commons.wikimedia.org/wiki/File:Meister_von_Nerezi_001.jpg">Public-domain reproduction</a>.</figcaption></figure></div><div class="radio-prose"><h2 class="section-heading">Nerezi</h2><p>At Saint Panteleimon in Gorno Nerezi, the Virgin draws the dead Christ toward her until their faces touch. His body stretches across her lap, while Saint John bends to hold his hand. The mourners crowd close. Their grief is carried by the weight of a head, the curve of a back, and the effort of holding a body that can no longer support itself.</p>
+<p>The church was built in 1164 by Alexios Komnenos, a nephew of Emperor John II Komnenos. Its patron belonged to the Byzantine imperial family. The painters’ names have not survived. Their <em>Lamentation</em> occupies a wall in a church whose small scale brings the painted mourners close to the congregation.</p>
+<p>Follow the figures from left to right. The Virgin’s dark mantle forms a broad curve around Christ’s head and shoulders. John’s bent torso continues the downward movement. At the feet, the other mourners close the group. Above them, the bare slopes of the landscape repeat the inclinations of the bodies. Almost everything directs attention toward the pale, horizontal figure of Christ.</p>
+<p>The painters leave little room for distraction. There is no elaborate architecture or distant view to explore. The blue background holds the figures together, and the rocky ground offers only a shallow space in which to gather. The restraint makes each contact easier to see. Mary presses her cheek against her son’s. John brings Christ’s hand toward his face. The body joins one mourner to the next.</p>
+<p>Nerezi rewards looking at hands as closely as faces. A face can identify sorrow, but the hands show what the mourners do with it. They cradle, lift, and hold. The subject belongs to sacred history, while these gestures are familiar from the care of any vulnerable body.</p>
+<p>That intimacy also depends on the setting. A reproduction isolates the scene as a picture. On the church wall, it belongs to a larger painted account of Christ’s life, encountered by people gathered for worship. Its tenderness has a public place.</p></div></section>
+<section class="radio-row"><div class="radio-rail"><figure class="radio-object article-inline-media"><img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/kurbinovo-archangel-full.webp" alt="The Archangel Gabriel steps forward in the Annunciation fresco at Kurbinovo." loading="lazy" decoding="async"><figcaption>Archangel Gabriel from the <em>Annunciation</em>, 1191. Saint George, Kurbinovo.</figcaption></figure></div><div class="radio-prose"><h2 class="section-heading">Kurbinovo</h2><p>Twenty-seven years later, the painters at Saint George in Kurbinovo gave the human figure a different kind of urgency. An inscription records the beginning of the church’s decoration on April 25, 1191. The building near Lake Prespa is a simple rectangle with a semicircular apse. Its interior contains a painted world far more elaborate than the exterior suggests.</p>
+<p>Gabriel, approaching the Virgin in the <em>Annunciation</em>, seems caught midway through a step. His forward arm announces his arrival. His wings rise behind him, and the fabric around his legs opens into long, looping folds. The figure is slender, with a small head above an unusually extended body. Those proportions give the movement its reach.</p>
+<p>Look at the cloth around the lower legs. Its pale edges twist outward, double back, and narrow into points. Some folds describe the body beneath them. Others carry the movement beyond the body, as though the garment were still responding to the angel’s arrival. The painters use drapery to make a stationary figure appear unsettled by motion.</p>
+<p>The face is comparatively composed. Gabriel’s attention remains directed toward the Virgin even as the fabric swirls around him. The contrast gives the figure a clear purpose. The limbs, wings, and folds all belong to a messenger moving toward someone.</p>
+<p>Nerezi gathers its mourners around a body. Kurbinovo opens Gabriel’s outline into the surrounding blue. Placing the two works beside one another makes the differences visible without requiring a story of artistic progress. They were made within the same broad religious culture, for different churches and different moments in the biblical narrative. Mourning draws the figures inward. An announcement sends an arm across the wall.</p>
+<p>The complete figure matters here. A photograph of the face preserves Gabriel’s expression but loses the long passage from shoulder to foot. Much of the painting’s energy resides in that distance, where the cloth repeatedly breaks away from the expected shape of a standing person.</p></div></section>
+<section class="radio-row"><div class="radio-rail"><figure class="radio-object article-inline-media"><img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/dicho-pantonhara-1844.webp" alt="Dicho Zograf’s Mother of God Pantonhara, with the crowned Virgin holding the Christ Child." loading="lazy" decoding="async"><figcaption>Dicho Zograf, <em>Mother of God Pantonhara</em>, 1844. Icon Gallery, Ohrid. <a href="https://commons.wikimedia.org/wiki/File:Mother_of_God_Pantonhara_-_Joy_to_All_-_Dich_Zograf_1844_Jovan_Kaneo_Church_Ohrid_2.jpg">Public-domain reproduction</a>.</figcaption></figure></div><div class="radio-prose"><h2 class="section-heading">Dicho Zograf</h2><p>By the nineteenth century, painters in Macedonia were working for church communities under Ottoman rule. Growing trade and craft production helped support new commissions. The village workshop remained an important place to learn a profession and organize work. Dicho Zograf established his own group in Tresonče after training with the painters Mihail of Samarina and his son.</p>
+<p>His <em>Mother of God Pantonhara</em>, painted in 1844 for Saint John at Kaneo, is now in Ohrid’s Icon Gallery. It is one of his early signed works. The Virgin holds the Christ Child on her left arm. Both wear crowns, and their garments present them with the splendor of rulers.</p>
+<p>The image is crowded with things to examine. Gold ornaments spread across the Virgin’s mantle. A green garment appears beneath it. The crowns, scepters, and patterned borders give the small panel a density quite different from Nerezi’s spare landscape. The eye moves between the faces and the decorated surfaces around them.</p>
+<p>Dicho handles those surfaces differently. The cloth is divided by crisp edges and repeated ornament, while the cheeks and the areas around the eyes change gradually from shadow to light. The faces appear softer than the elaborate clothing. Their relative simplicity gives the viewer somewhere to return after following the patterns.</p>
+<p>An icon painter worked with subjects that a congregation needed to recognize. The Virgin and Child had established poses, attributes, and inscriptions. Within those expectations, a painter could alter the width of a face, the shape of an eyebrow, the warmth of a cheek, or the spacing of ornaments. Close looking makes those decisions visible.</p>
+<p>The panel also changes the viewer’s relationship to the image. Gabriel at Kurbinovo belongs to the architecture and to the Virgin painted across from him. Dicho’s figures occupy a bounded object. The narrow border gathers their crowns, clothing, and faces into a surface that can be approached at close range. The work invites the eye to linger over details small enough to disappear in a view of the whole church.</p></div></section>
+<section class="radio-row"><div class="radio-rail"><figure class="radio-object article-inline-media"><img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/peribleptos-dormition.webp" width="2000" height="1265" alt="The Dormition of the Virgin at Peribleptos, with mourners around Mary’s bier and angels above." loading="lazy" decoding="async"><figcaption>Michael Astrapas and Eutychios, <em>Dormition of the Virgin</em>, 1294–95. Virgin Peribleptos, Ohrid. <a href="https://commons.wikimedia.org/wiki/File:Paintings_in_the_Church_of_the_Theotokos_Peribleptos_of_Ohrid_0273.jpg">Public-domain reproduction</a>.</figcaption></figure></div><div class="radio-prose"><h2 class="section-heading">Peribleptos</h2><p>The Virgin Peribleptos in Ohrid brings us back to the medieval church wall. A painted inscription dates its foundation to 1294–95 and names the patrons, Progonos Sgouros and his wife, Eudokia Komnene. The painters Michael Astrapas and Eutychios also left their names within the church’s decoration.</p>
+<p>In the <em>Dormition</em>, the Virgin lies on a bier surrounded by mourners. Behind her, Christ holds her soul in the form of a small, swaddled figure. Angels crowd the space above him. Higher still, apostles approach on clouds. The painting gathers several moments of the story around the still body at its base.</p>
+<p>The eye first meets a dense arrangement of heads and halos. Look longer and the crowd separates into individual responses. One man bends low over the bier. Others turn toward the Virgin or lean forward from behind their companions. Their overlapping shoulders leave very little unoccupied space.</p>
+<p>Buildings rise on either side of the gathering. Their pale walls and projecting roofs divide the crowd into smaller groups, while the angels form a steep central column. The architecture helps organize a scene that could otherwise dissolve into faces. It gives the eye routes through the painting, from the bed to the figures above.</p>
+<p>At Nerezi, grief is concentrated in a few bodies touching Christ. Here, the mourners arrive from across the painted world. People peer from openings in the buildings, while the clouds carry other figures toward the assembly. The central event draws in a whole community of witnesses.</p>
+<p>The Virgin’s dark garment remains a quiet shape amid this activity. The light-colored cloth beneath her makes its outline easy to follow. Around it, hands extend, heads incline, and robes break into angular folds. At the left end of the bier, a mourner bends until his face is almost level with hers.</p><section class="sources-section muzej-sources"><h2 class="section-heading">Sources</h2>
+<p>Evan Freeman. <a href="https://pressbooks.pub/smarthistoryguidetobyzantineart/chapter/byzantine-frescoes-at-saint-panteleimon-nerezi/">“Byzantine Frescoes at Saint Panteleimon, Nerezi.”</a> Smarthistory.</p>
+<p>Permanent Delegation of the Republic of North Macedonia. <a href="https://whc.unesco.org/en/tentativelists/6492/">“Church St. George (Sv Gjorgji) Kurbinovo.”</a> UNESCO World Heritage Centre, Tentative Lists submission, 2020.</p>
+<p>Milčo Georgievski. <a href="https://www.academia.edu/9843052/The_icon_of_the_Mother_of_God_Pantonhara_in_the_Icon_Gallery">“The Icon of the Mother of God Pantonhara in the Icon Gallery–Ohrid.”</a> <em>Ikonimaalari</em> 2 (2014), 70–79.</p>
+<p>Sasho Cvetkovski. <a href="https://www.ceeol.com/search/article-detail?id=216305">“The Iconography of Dicho Zograph in the Church of St. George, Lazaropole (Contributions to the Study of the Earliest Signed Works).”</a> <em>Problems of Art</em> 1 (2011), 24–28.</p>
+<p>José María Salvador González. <a href="https://www.revistamirabilia.com/issues/mirabilia-13-2011-2/article/death-virgin-mary-1295-macedonian-church-panagia-peribleptos">“The Death of the Virgin Mary (1295) in the Macedonian Church of the Panagia Peribleptos in Ohrid.”</a> <em>Mirabilia</em> 13 (2011).</p><p>Austrian Academy of Sciences, Tabula Imperii Byzantini. <a href="https://tib.oeaw.ac.at/balkan/explore/entity/116031">“Foundation of the Church of Virgin Peribleptos in Ohrid.”</a></p>
+</section></div></section></article><section class="more-from-muzej" data-more-from-muzej aria-labelledby="more-from-muzej-title"></section></main>
 
 <footer class="site-footer muzej-footer">
   <div class="footer-inner">

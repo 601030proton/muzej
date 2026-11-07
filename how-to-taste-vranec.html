@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Taste two Macedonian Vranec wines side by side, from the first impression of fruit to the feel of tannin at the table.">
-<title>How to Taste Vranec | МУЗЕЈ</title>
-<link rel="icon" type="image/png" href="./Assets/Font/Muzej%20Logo.ai.png">
-<link rel="apple-touch-icon" href="./Assets/Font/Muzej%20Logo.ai.png">
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&display=swap"
-/>
-<link rel="stylesheet" href="fonts.css?v=20261101-consistency-3">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="The vineyards and cellar decisions behind Macedonia’s best-known red.">
+<title>Vranec | Muzej</title>
+<link href="./Assets/Font/Muzej%20Logo.ai.png" rel="icon" type="image/png"/>
+<link href="./Assets/Font/Muzej%20Logo.ai.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&amp;display=swap" rel="stylesheet"/>
+<link href="fonts.css?v=20261101-consistency-3" rel="stylesheet"/>
 <style>
 :root {
   --background: #ffffff;
@@ -27,9 +24,9 @@
   --page-x: clamp(18px, 5.2vw, 72px);
   --nav-h: clamp(88px, 10vw, 128px);
   --feature-w: min(1280px, calc(100vw - (var(--page-x) * 2)));
-  --rail-gap: clamp(28px, 5vw, 76px);
-  --body-col: minmax(380px, 560px);
-  --body-tail: clamp(16px, 1.4vw, 24px);
+  --rail-gap: clamp(34px, 5.4vw, 84px);
+  --body-col: minmax(520px, 760px);
+  --body-tail: 0px;
   --section-gap: clamp(48px, 8vw, 108px);
   --content-max: 1520px;
   --font-display: "plantin", Georgia, serif;
@@ -108,7 +105,6 @@ a { color: inherit; }
   top: -107.88px;
   display: block;
 }
-
 
 .utility-link,
 .utility-menu-item {
@@ -242,8 +238,8 @@ main {
 .feature-media img {
   width: 100%;
   height: clamp(620px, 80vh, 920px);
-  object-fit: cover;
-  object-position: center center;
+  object-fit: contain;
+  object-position: center top;
   background: var(--white);
 }
 .feature-copy {
@@ -260,30 +256,34 @@ main {
 .feature-title {
   margin: 0;
   color: var(--ink);
-  font-size: clamp(38px, 4.9vw, 76px);
+  font-family: "plantin", Georgia, serif;
+  font-size: clamp(42px, 5.2vw, 82px);
   font-weight: 400;
-  line-height: 0.96;
-  letter-spacing: -0.015em;
+  line-height: 0.98;
+  letter-spacing: 0;
+  text-transform: none;
   text-wrap: balance;
 }
 .feature-title-break {
   display: block;
 }
 .feature-byline {
-  margin: auto 0 0;
+  margin: 0 0 auto;
   color: var(--ink-soft);
-  font-size: clamp(12px, 0.95vw, 14px);
+  font-size: clamp(16px, 1.18vw, 19px);
   letter-spacing: 0;
   line-height: 1.4;
 }
 .feature-deck {
-  max-width: min(1320px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
-  margin: clamp(28px, 4vw, 52px) auto 0;
+  max-width: min(1380px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
+  margin: clamp(40px, 5vw, 78px) auto 0;
   color: var(--ink);
-  font-size: clamp(17px, 1.55vw, 23px);
+  font-family: "plantin", Georgia, serif;
+  font-size: clamp(32px, 3.05vw, 56px);
   font-weight: 400;
-  line-height: 1.18;
-  letter-spacing: -0.02em;
+  line-height: 1.08;
+  letter-spacing: 0;
+  text-wrap: balance;
 }
 .article-shell {
   max-width: var(--feature-w);
@@ -292,13 +292,13 @@ main {
 }
 .content-row {
   display: grid;
-  grid-template-columns: minmax(240px, 1.08fr) var(--body-col) var(--body-tail);
+  grid-template-columns: minmax(270px, 1fr) var(--body-col);
   column-gap: var(--rail-gap);
   align-items: start;
 }
 .article-body {
   display: grid;
-  grid-template-columns: minmax(240px, 1.08fr) var(--body-col) var(--body-tail);
+  grid-template-columns: minmax(270px, 1fr) var(--body-col);
   column-gap: var(--rail-gap);
   align-items: start;
   margin-bottom: var(--section-gap);
@@ -310,6 +310,10 @@ main {
 .article-body .empty-tail,
 .content-row .empty-tail {
   min-height: 1px;
+}
+.article-body .empty-tail,
+.content-row .empty-tail {
+  display: none;
 }
 .article-body-media {
   margin: 0;
@@ -329,63 +333,44 @@ main {
 }
 .article-body-copy {
   min-width: 0;
+  justify-self: end;
+  width: min(100%, 520px);
 }
 
 .section-heading {
-  margin: 0;
-  max-width: 15ch;
+  margin: 0 0 1.15em;
+  max-width: min(100%, 24ch);
   font-size: clamp(30px, 4vw, 48px);
   font-weight: 400;
   line-height: 1.02;
   letter-spacing: 0;
+  text-wrap: normal;
 }
 
 .body-block p {
   margin: 0;
-  font-size: clamp(16px, 1.18vw, 18px);
-  line-height: 1.82;
+  font-size: clamp(23px, 1.65vw, 31px);
+  line-height: 1.46;
 }
-.body-block p + p {
-  margin-top: 1.75em;
+.body-block p + p,
+.body-block p + .section-heading {
+  margin-top: 1.95em;
 }
 
-.guide-section {
-  padding-top: clamp(34px, 5vw, 62px);
+.article-inline-media {
+  width: min(88%, 420px);
+  margin: clamp(52px, 7vw, 88px) auto;
 }
-.guide-section:first-child {
-  padding-top: 0;
-}
-.guide-section h2 {
-  margin: 0;
-  color: var(--ink);
-  font-size: clamp(31px, 3.2vw, 48px);
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: 0;
-}
-.guide-pull {
-  margin: 0.65em 0 0;
-  color: var(--ink);
-  font-size: clamp(20px, 2.15vw, 28px);
-  line-height: 1.14;
-  letter-spacing: 0;
-}
-.guide-section p:not(.guide-pull) {
-  margin: 1.15em 0 0;
-  color: var(--ink);
-  font-size: clamp(16px, 1.18vw, 18px);
-  line-height: 1.82;
-}
-.why-label {
-  color: var(--ink);
-  font-family: var(--sans);
-  font-size: 0.68em;
-  letter-spacing: 0;
+.article-inline-media img {
+  width: 100%;
+  height: auto;
 }
 
 .pull-quote {
   margin: 0;
   max-width: none;
+  justify-self: end;
+  width: min(100%, 520px);
   font-size: clamp(20px, 2.35vw, 26px);
   line-height: 1.12;
   letter-spacing: 0;
@@ -417,9 +402,6 @@ main {
   margin-bottom: 0;
 }
 
-.site-footer {
-  margin: 0;
-}
 .more-from-muzej {
   padding-top: clamp(32px, 4vw, 56px);
   padding-bottom: clamp(82px, 10vw, 148px);
@@ -485,6 +467,10 @@ main {
   line-height: 1.72;
   letter-spacing: 0;
   color: var(--muted);
+}
+
+.site-footer {
+  margin-top: 0;
 }
 .muzej-footer {
   width: 100%;
@@ -598,10 +584,10 @@ main {
     font-size: clamp(16px, 2.05vw, 20px);
   }
   .content-row {
-    grid-template-columns: minmax(170px, 0.82fr) minmax(0, 520px) clamp(14px, 1vw, 18px);
+    grid-template-columns: minmax(210px, 1fr) minmax(0, 660px);
   }
   .article-body {
-    grid-template-columns: minmax(170px, 0.82fr) minmax(0, 520px) clamp(14px, 1vw, 18px);
+    grid-template-columns: minmax(210px, 1fr) minmax(0, 660px);
   }
 }
 
@@ -693,15 +679,18 @@ main {
     padding: 0;
   }
   .feature-title {
-    font-size: clamp(32px, 10.5vw, 50px);
-    line-height: 0.98;
+    font-size: clamp(30px, 8.2vw, 38px);
+    line-height: 1.03;
+    width: calc(100vw - (var(--page-x) * 2));
+    max-width: 100%;
+    overflow-wrap: break-word;
   }
   .feature-byline {
     margin: 28px 0 0;
-    font-size: 11px;
+    font-size: 15px;
   }
   .feature-deck {
-    margin-top: 56px;
+    margin-top: 34px;
     font-size: clamp(15px, 3.9vw, 18px);
     line-height: 1.2;
   }
@@ -765,6 +754,28 @@ body.muzej-logo-hidden .site-header .brand-mark {
   .site-header .utility-panel .utility-menu-item { justify-content: center; min-height: 2.75rem; padding: 0.72rem 0; text-align: center; }
 }
 
+.article-longform {
+  padding-bottom: clamp(72px, 9vw, 132px);
+}
+.article-longform .section-heading {
+  max-width: min(100%, 24ch);
+}
+.article-longform .section-heading:first-child {
+  margin-top: 0;
+}
+.article-longform .section-heading + p {
+  margin-top: 0;
+}
+.article-longform .ohrid-sketch-spread {
+  margin-bottom: 72px;
+}
+@media (max-width: 720px) {
+  .article-longform .ohrid-sketch-spread {
+    margin-bottom: 44px;
+  }
+}
+
+
 
 @media (max-width: 768px) {
   .site-header .brand-mark {
@@ -778,16 +789,377 @@ body.muzej-logo-hidden .site-header .brand-mark {
     top: -83.62px;
   }
 }
+
+/* Keep the deck within the page grid at every screen width. */
+.lazarki-article .feature-deck {
+  width: var(--feature-w);
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: clamp(32px, 5vw, 64px) auto 0;
+  font-size: clamp(22px, 2.5vw, 36px);
+  line-height: 1.25;
+  text-wrap: pretty;
+}
 </style>
-<link rel="stylesheet" href="article-headlines.css">
-<link rel="stylesheet" href="more-from-muzej.css?v=20260810-plantin-final">
-<script src="more-from-muzej.js?v=20261107-ohrid-hero" defer></script>
-<link rel="stylesheet" href="muzej-footer-logo.css?v=20260914">
-<link rel="stylesheet" href="article-opening.css?v=20261101">
+<style>
+.ohrid-article .feature-title {
+  font-family: "plantin", Georgia, serif;
+  font-size: clamp(54px, 7.8vw, 132px);
+  font-weight: 400;
+  line-height: 0.86;
+  letter-spacing: 0;
+}
+.ohrid-article .feature-byline {
+  font-family: "plantin", Georgia, serif;
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(24px, 2.2vw, 38px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+.ohrid-article .feature-kicker {
+  display: none;
+  margin: 0;
+}
+.ohrid-article .feature-copy {
+  width: min(100%, 44rem);
+  max-width: none;
+  margin: 0 auto;
+  padding-top: clamp(108px, 16vh, 190px);
+  padding-bottom: clamp(22px, 3vw, 34px);
+  justify-content: space-between;
+  gap: clamp(72px, 14vh, 180px);
+}
+@media (min-width: 981px) {
+  .ohrid-article main {
+    padding-top: clamp(6px, 1.4vh, 14px);
+  }
+
+  .ohrid-article .feature {
+    padding-top: 0;
+    padding-bottom: clamp(48px, 5vh, 72px);
+  }
+
+  .ohrid-article .feature-inner {
+    height: clamp(600px, calc(100svh - var(--nav-h, 112px) - clamp(18px, 3svh, 32px)), 780px);
+    min-height: 0;
+    align-items: stretch;
+  }
+
+  .ohrid-article .feature-media,
+  .ohrid-article .feature-copy {
+    height: 100%;
+    min-height: 0;
+  }
+
+  .ohrid-article .feature-media img {
+    height: 100%;
+    max-height: 100%;
+  }
+
+  .ohrid-article .feature-copy {
+    padding-top: clamp(34px, 5vh, 76px);
+    padding-bottom: clamp(14px, 2.2vh, 28px);
+    gap: clamp(28px, 4.6vh, 64px);
+  }
+
+  .ohrid-article .feature-title {
+    font-size: clamp(48px, 6.1vw, 100px);
+  }
+
+  .ohrid-article .feature-byline {
+    font-size: clamp(22px, 1.9vw, 32px);
+  }
+
+  .ohrid-article .feature-deck {
+    margin-top: clamp(64px, 9svh, 118px);
+  }
+}
+@media (max-width: 980px) {
+  .ohrid-article .feature-title {
+    font-size: clamp(46px, 7.2vw, 78px);
+  }
+  .ohrid-article .feature-byline {
+    font-size: clamp(20px, 2.4vw, 30px);
+  }
+  .ohrid-article .feature-copy {
+    padding-top: clamp(72px, 12vh, 126px);
+    gap: clamp(58px, 10vh, 112px);
+  }
+}
+@media (max-width: 720px) {
+  .ohrid-article .feature-copy {
+    align-items: center;
+    text-align: center;
+    padding-top: 6px;
+    gap: clamp(48px, 14vw, 72px);
+  }
+  .ohrid-article .feature-title {
+    font-size: clamp(38px, 13.4vw, 62px);
+    line-height: 0.9;
+  }
+  .ohrid-article .feature-byline {
+    margin: 0;
+    font-size: clamp(20px, 6.2vw, 28px);
+  }
+}
+
+.ohrid-article .feature-title {
+  font-family: "plantin", Georgia, serif;
+  font-size: clamp(42px, 5.2vw, 82px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.ohrid-article .feature-byline {
+  margin: 0 0 auto;
+  color: var(--ink-soft);
+  font-family: var(--article-serif);
+  font-size: clamp(16px, 1.18vw, 19px);
+  line-height: 1.4;
+}
+.ohrid-article .feature-copy {
+  max-width: 27rem;
+  justify-content: flex-start;
+  gap: 0;
+}
+@media (max-width: 720px) {
+  .ohrid-article .feature-title {
+    font-size: clamp(30px, 8.2vw, 38px);
+    line-height: 1.03;
+    width: calc(100vw - (var(--page-x) * 2));
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+  .ohrid-article .feature-byline {
+    margin: 28px 0 0;
+    font-size: 15px;
+  }
+}
+</style>
+<link href="more-from-muzej.css?v=20260810-plantin-final" rel="stylesheet"/>
+<script defer="" src="more-from-muzej.js?v=20261107-vranec"></script>
+<style>
+.lazarki-article{--lz-ink:#11110f;--lz-muted:rgba(17,17,15,.58);--lz-rule:rgba(17,17,15,.16);--lz-soft:#f3f1eb}
+
+
+
+.lazarki-article .feature-media>div,.lazarki-article .article-body-media>div,.lazarki-article .article-inline-media>div,.lazarki-article .gallery-reading-media>div,.lazarki-article .gallery-reading-feature>div{border:0!important;background:linear-gradient(180deg,#f4f2ed 0%,#ece9e2 100%)!important}
+
+
+
+
+
+
+
+.lazarki-article .body-block>p{max-width:34rem;font-size:clamp(23px,1.65vw,31px);line-height:1.46;color:var(--lz-ink);font-weight:400}
+.lazarki-article .body-block>p+p{margin-top:1.45em}
+.lazarki-article .lazarki-intro{margin-bottom:clamp(110px,14vw,210px)}
+.lazarki-article .lazarki-intro>p:first-child{max-width:34rem;font-family:var(--article-serif);font-size:clamp(23px,1.65vw,31px);font-weight:400;line-height:1.46;letter-spacing:0}
+.lazarki-article .chapter-heading{display:block;max-width:100%;margin:clamp(58px,6.5vw,92px) 0 clamp(24px,3vw,38px);padding-top:clamp(14px,1.5vw,20px);border-top:1px solid var(--lz-ink);font-family:var(--headline-serif);font-size:clamp(38px,4.6vw,66px);font-weight:400;line-height:.96;letter-spacing:-.018em;text-wrap:normal}
+
+
+
+.lazarki-article .subhead{max-width:26ch;margin:clamp(48px,6vw,84px) 0 .9em;font-family:var(--headline-serif);font-size:clamp(24px,2.35vw,34px);font-weight:400;line-height:1.08;letter-spacing:-.01em}
+.lazarki-article .subhead+p{margin-top:0}
+.lazarki-article .fact-statement{max-width:33rem!important;margin:clamp(68px,8vw,120px) 0!important;padding:clamp(18px,2.4vw,28px) 0;border-top:1px solid var(--lz-ink);border-bottom:1px solid var(--lz-rule);font-family:"plantin",Georgia,serif;font-size:clamp(30px,3.25vw,48px)!important;line-height:1.08!important;letter-spacing:-.02em}
+.lazarki-article .ritual-sequence{max-width:40rem!important;margin:clamp(46px,5vw,76px) 0!important;padding:clamp(18px,2.4vw,28px) 0;border-top:1px solid var(--lz-rule);border-bottom:1px solid var(--lz-rule);font-family:var(--sans);font-size:clamp(.78rem,.72rem + .24vw,.95rem)!important;line-height:1.7!important;letter-spacing:.035em;text-transform:uppercase}
+.lazarki-article .data-list{max-width:40rem;margin:clamp(32px,4vw,58px) 0 clamp(54px,6vw,82px);border-top:1px solid var(--lz-ink)}
+.lazarki-article .data-row{display:grid;grid-template-columns:minmax(92px,.36fr) 1fr;gap:clamp(18px,3vw,40px);padding:14px 0 16px;border-bottom:1px solid var(--lz-rule);font-family:var(--sans);font-size:.82rem;line-height:1.45}
+.lazarki-article .data-row .data-key{color:var(--lz-muted)}
+.lazarki-article .regional-atlas{width:100%;max-width:100%;margin-top:clamp(36px,5vw,64px);margin-bottom:clamp(72px,8vw,112px);overflow:visible}
+.lazarki-article .regional-atlas table{width:100%;max-width:100%;table-layout:fixed;border-collapse:collapse;font-family:var(--sans);font-size:.72rem!important;line-height:1.45!important}
+.lazarki-article .regional-atlas th,.lazarki-article .regional-atlas td{padding:12px 14px 14px 0;border-top:1px solid var(--lz-rule);vertical-align:top;text-align:left;font-weight:400;overflow-wrap:anywhere;word-break:normal}
+.lazarki-article .regional-atlas th{padding-top:10px;border-top:1px solid var(--lz-ink);font-size:.64rem;letter-spacing:.09em;text-transform:uppercase;color:var(--lz-muted)}
+.lazarki-article .regional-atlas th:nth-child(1),.lazarki-article .regional-atlas td:nth-child(1){width:24%}.lazarki-article .regional-atlas th:nth-child(2),.lazarki-article .regional-atlas td:nth-child(2){width:44%}.lazarki-article .regional-atlas th:nth-child(3),.lazarki-article .regional-atlas td:nth-child(3){width:32%}.lazarki-article .regional-atlas td:first-child{font-family:var(--headline-serif);font-size:.96rem;line-height:1.2}
+.lazarki-article .evidence-list{margin-top:clamp(32px,4vw,58px);border-top:1px solid var(--lz-ink)}
+.lazarki-article .evidence-item{display:grid;grid-template-columns:minmax(180px,.82fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);padding:clamp(24px,3.5vw,44px) 0;border-bottom:1px solid var(--lz-rule)}
+.lazarki-article .evidence-claim{margin:0;font-family:"plantin",Georgia,serif;font-size:clamp(22px,2.3vw,34px);line-height:1.04;font-weight:400}
+.lazarki-article .evidence-answer{max-width:29rem;margin:0;font-size:clamp(16px,1.16vw,19px);line-height:1.68}
+.lazarki-article .research-status{margin-top:clamp(120px,14vw,210px);padding-top:clamp(22px,3vw,34px);border-top:2px solid var(--lz-ink)}
+.lazarki-article .research-status>h2{margin:0 0 clamp(28px,4vw,52px);font-family:var(--sans);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:400}
+.lazarki-article .research-status>p:first-of-type{font-family:"plantin",Georgia,serif;font-size:clamp(30px,3.1vw,46px);line-height:1.08;letter-spacing:-.02em}
+.lazarki-article .sources-section{margin-top:clamp(120px,14vw,210px);padding-top:20px;border-top:1px solid var(--lz-ink)}
+.lazarki-article .sources-section>h2{margin:0 0 28px;font-family:var(--sans);font-size:.64rem;line-height:1.2;letter-spacing:.12em;text-transform:uppercase;font-weight:400;color:var(--lz-muted)}
+.lazarki-article .sources-section>p{max-width:44rem;margin:0!important;padding:11px 0 13px;border-top:1px solid rgba(17,17,15,.1);font-family:var(--sans);font-size:.72rem!important;line-height:1.55!important;color:var(--lz-muted)}
+.lazarki-article .sources-section>p:first-of-type{border-top:0}
+.lazarki-article .gallery-reading{margin-top:clamp(100px,13vw,190px);margin-bottom:clamp(100px,13vw,190px)}
+@media(max-width:980px){.lazarki-article .article-body-media{position:static;width:min(100%,420px)}.lazarki-article .regional-atlas{width:100%;max-width:100%}}
+@media(max-width:720px){
+.lazarki-article .chapter-heading{max-width:none;margin-top:52px;margin-bottom:24px;padding-top:14px;font-size:clamp(34px,10.5vw,48px);line-height:.98}
+.lazarki-article .subhead{margin-top:42px;font-size:clamp(23px,7vw,31px);line-height:1.08}
+.lazarki-article .evidence-item{grid-template-columns:1fr;gap:16px}
+.lazarki-article .data-row{grid-template-columns:1fr;gap:6px}
+
+}
+.lazarki-article .chapter-number,
+
+.lazarki-article .evidence-item{grid-template-columns:1fr;gap:16px}
+.lazarki-article .data-row{grid-template-columns:1fr;gap:6px}
+
+}
+
+/* Blank image placeholders occupying the exact Ohrid template image slots. */
+.lazarki-article .feature-media > div {
+  display: block;
+  width: 100%;
+  height: clamp(620px, 80vh, 920px);
+  background: #f4f2ed;
+}
+.lazarki-article .article-body-media > div {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1.08;
+  background: #f4f2ed;
+}
+.lazarki-article .article-inline-media > div,
+.lazarki-article .gallery-reading-media > div,
+.lazarki-article .gallery-reading-feature > div {
+  background: #f4f2ed;
+}
+@media (min-width: 981px) {
+  .ohrid-article .feature-media > div {
+    height: 100%;
+    max-height: 100%;
+  }
+}
+@media (max-width: 980px) {
+  .lazarki-article .feature-media > div {
+    height: clamp(500px, 70vh, 720px);
+  }
+}
+@media (max-width: 720px) {
+  .lazarki-article .feature-media > div {
+    height: clamp(360px, 56vh, 470px);
+  }
+}
+</style><link href="muzej-footer-logo.css?v=20260914" rel="stylesheet"/>
+<style>/* Lazarki surgical spacing and alignment adjustments. */
+.lazarki-article .article-body-copy > .lazarki-intro {
+  margin-top: 1.45em;
+  margin-bottom: 1.45em;
+}
+.lazarki-article .content-row > .article-body-copy > .chapter-heading:first-child {
+  margin-top: 0;
+}
+</style><style id="lazarki-sticky-opening">
+/* Title remains within the opening until the image and deck have passed. */
+.lazarki-sticky-opening .feature-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:start;height:auto;min-height:0}
+.lazarki-sticky-opening .feature-copy{position:sticky;top:100px;align-self:start;height:calc(100svh - 124px);min-height:0;max-width:none;width:100%;margin:0;padding:0 0 24px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;text-align:left;gap:24px}
+.lazarki-sticky-opening .feature-title{width:auto;max-width:100%;font-size:clamp(42px,5.2vw,82px);line-height:.98}
+.lazarki-sticky-opening .feature-byline{order:2;margin:0}
+.feature-scroll-column{min-width:0}
+.lazarki-sticky-opening .feature-media{margin:0;height:auto}
+.lazarki-sticky-opening .feature-media img{display:block;width:100%;height:calc(100svh - 124px);max-height:none;object-fit:cover}
+.lazarki-sticky-opening .feature-deck{width:100%;max-width:none;margin:40px 0 0;padding:0 0 16px;font-size:clamp(22px,2.5vw,36px);line-height:1.25;text-align:left}
+@media(max-width:760px){
+.lazarki-sticky-opening .feature-inner{grid-template-columns:1fr;gap:28px}
+.lazarki-sticky-opening .feature-copy{position:static;height:auto;min-height:0;padding:0;gap:20px;order:0}
+.lazarki-sticky-opening .feature-title{font-size:clamp(30px,8.2vw,38px)}
+.lazarki-sticky-opening .feature-media img{height:auto;max-height:none;object-fit:contain}
+.lazarki-sticky-opening .feature-deck{margin-top:28px;font-size:22px}
+}
+</style><style id="article-section-headings">
+.lazarki-article .chapter-heading{font-family:"plantin",Georgia,serif;font-size:30px;font-weight:400;line-height:1.1;letter-spacing:0;text-transform:none;border:0;padding:0;margin:64px 0 24px}
+.lazarki-article .chapter-heading:first-child{margin-top:0}
+@media(max-width:760px){.lazarki-article .chapter-heading{font-size:26px;margin-top:52px;margin-bottom:22px}.lazarki-article .chapter-heading:first-child{margin-top:0}}
+</style>
 <link rel="stylesheet" href="article-system.css?v=20261101-consistency-3">
+<style>
+.radio-article-page{color:#000;background:#fff;--radio-gap:clamp(36px,6vw,96px)}
+.radio-article-page .radio-main{padding:12px var(--page-x) 0;max-width:1520px;margin:auto}
+.radio-opening,.radio-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--radio-gap);align-items:start}
+.radio-title-column{min-width:0;align-self:end}
+.radio-title-column h1{font:400 clamp(48px,5.7vw,90px)/.97 "plantin",Georgia,serif;letter-spacing:-.025em;margin:32px 0}
+.radio-kicker,.radio-byline,.radio-object figcaption,.radio-spread-heading,.radio-editor-note{font:400 11px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000}
+.radio-kicker,.radio-spread-heading{text-transform:uppercase;letter-spacing:.08em}
+.radio-byline strong{font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.radio-kicker,.radio-byline{margin:0}
+.radio-opening-column{min-width:0}
+.radio-object{margin:0;min-width:0}
+.radio-sleeve-image{display:block;width:100%;height:auto}
+.radio-studio-photo img{display:block}
+.artwork-blank{background:#f2f2f0;position:relative;aspect-ratio:1/1.45;width:100%}
+.artwork-blank>span{position:absolute;bottom:14px;left:16px;font:10px/1 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000}
+.radio-object figcaption{margin:13px 0 0;max-width:44em}
+.radio-hero-image{display:block;width:100%;height:calc(100svh - 160px);min-height:380px;object-fit:contain}
+.radio-deck{font:400 clamp(26px,2.6vw,38px)/1.2 "plantin",Georgia,serif;margin:0 0 22px;max-width:16em}
+.radio-article{margin-top:120px}
+.radio-row{margin:0 0 100px;scroll-margin-top:100px}
+.radio-row.radio-continuation{margin-bottom:0}
+.radio-continuation-copy{min-width:0}
+.radio-continuation-copy > section{scroll-margin-top:100px}
+.radio-continuation-copy > section:not(:last-child){margin-bottom:clamp(26.25px,2.0625vw,31.25px)}
+.radio-continuation-copy > section:last-child{margin-bottom:100px}
+.radio-rail{position:sticky;top:100px;align-self:start}
+.radio-rail .sleeve{width:76%}
+.radio-rail .sleeve .artwork-blank{max-height:calc(100svh - 200px)}
+.studio .artwork-blank{aspect-ratio:4/3}.landscape .artwork-blank{aspect-ratio:3/2}.insert .artwork-blank{aspect-ratio:1.8}.record .artwork-blank{aspect-ratio:1}
+.radio-dedications{scroll-margin-top:100px}
+.radio-dedications > div:last-child > p:last-child{margin-bottom:0}
+.radio-row > .radio-prose:only-child{grid-column:-2 / -1}
+.radio-prose{min-width:0;font:400 clamp(21px,1.65vw,25px)/1.46 "plantin",Georgia,serif}
+.radio-prose p{margin:0 0 1.25em}.radio-prose>div:last-child>p:last-child{margin-bottom:0}
+.radio-spread{margin:100px 0 120px}
+.radio-spread-heading{display:flex;justify-content:space-between;gap:20px;border-top:1px solid #000;padding-top:14px;margin-bottom:40px}
+.radio-sleeve-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:54px 38px}
+
+.radio-spread[data-cassette-gallery]{width:min(100%,1020px);margin-inline:auto}
+.radio-sleeve-mat{aspect-ratio:33 / 35;overflow:hidden;background:#fff}
+.radio-sleeve-mat .radio-sleeve-image{height:100%;object-fit:contain;filter:brightness(1.045)}
+.radio-sleeve-mat--wide-margin .radio-sleeve-image{transform:scale(1.634)}
+.radio-gallery-controls{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:30px}
+.radio-gallery-controls[hidden],#radio-cassette-covers > [hidden]{display:none}
+.radio-gallery-controls button,.radio-gallery-controls span{font:400 11px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000}
+.radio-gallery-controls button{border:0;background:none;padding:12px 0;min-height:44px;cursor:pointer}
+.radio-gallery-controls button[aria-disabled="true"]{opacity:.45;cursor:default}
+.radio-gallery-controls span{font-variant-numeric:tabular-nums}
+.radio-duet{display:grid;grid-template-columns:1.25fr .75fr;gap:var(--radio-gap);align-items:center;margin:110px 0 130px}
+.radio-pullquote{max-width:1000px;margin:110px auto 120px;text-align:center;padding:0 6vw}
+.radio-pullquote blockquote{font:400 clamp(32px,4.2vw,64px)/1.1 "plantin",Georgia,serif;margin:0}
+.radio-editor-note{margin:24px 0 28px;padding:16px 0 0;border-top:1px solid #ccc;font-size:13px;line-height:1.6}
+.radio-editor-note p:last-child{margin-bottom:0}
+.radio-article-page a:focus-visible{outline:2px solid #000;outline-offset:5px}
+.radio-prose a{text-decoration-thickness:1px;text-underline-offset:4px}
+@media(max-width:760px){
+.radio-article-page .radio-main{padding:12px 20px 0}.radio-opening,.radio-row{grid-template-columns:1fr;gap:36px}
+.radio-title-column h1{font-size:clamp(42px,11vw,68px);margin:26px 0}
+.radio-hero-image{height:52svh;min-height:260px}.radio-deck{font-size:26px;margin-bottom:18px}.radio-article{margin-top:64px}
+.radio-row,.radio-continuation-copy > section:last-child{margin-bottom:68px}.radio-continuation-copy > section:not(:last-child){margin-bottom:27.5px}.radio-rail{position:static}.radio-rail .sleeve{width:72%;margin:auto}.radio-rail .sleeve .artwork-blank{max-height:none}
+.radio-prose{font-size:22px;line-height:1.46}.radio-spread{margin:70px 0}.radio-sleeve-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 18px}
+.radio-duet{grid-template-columns:1fr;gap:40px;margin:70px 0}.radio-duet .sleeve{width:72%;margin:auto}.radio-pullquote{margin:70px auto;padding:0 8px}
+.radio-object figcaption{font-size:10px}
+}
+</style>
 <link rel="stylesheet" href="bylines.css?v=20261107">
+<style>
+/* Match each generated case to the proportions of a standard single cassette case. */
+[data-cassette-gallery] .radio-sleeve-mat .radio-sleeve-image--proportioned{transform:scaleX(var(--cassette-width,1));transform-origin:center}
+</style>
+<link rel="canonical" href="https://muzej.co/how-to-taste-vranec">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vranec | Muzej">
+<meta property="og:description" content="The vineyards and cellar decisions behind Macedonia’s best-known red.">
+<meta property="og:url" content="https://muzej.co/how-to-taste-vranec">
+<meta property="og:image" content="https://muzej.co/Assets/Vranec/begniste-vineyards.webp">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+.vranec-article-page .radio-title-column h1{max-width:10ch}
+.vranec-article-page .radio-opening .radio-hero-image{height:clamp(420px,calc(100svh - 190px),720px);min-height:0;object-fit:cover;object-position:50% 60%}
+.vranec-article-page .radio-rail .article-inline-media{width:100%;max-width:none;margin:0}
+.vranec-article-page .radio-rail img{display:block;width:100%;height:auto;max-height:calc(100svh - 180px);object-fit:contain;object-position:left top}
+.vranec-article-page .radio-prose>section{margin-bottom:54px}
+.vranec-article-page .radio-prose>section:last-of-type{margin-bottom:0}
+.vranec-article-page .radio-prose h2{font:400 30px/1.1 "plantin",Georgia,serif;letter-spacing:0;margin:0 0 24px}
+.vranec-article-page .radio-object figcaption a{color:inherit;text-decoration:none}
+.vranec-article-page .radio-object figcaption a:hover{text-decoration:underline}
+@media(max-width:760px){.vranec-article-page .radio-opening .radio-hero-image{height:auto;aspect-ratio:4/3}.vranec-article-page .radio-rail img{max-height:none}.vranec-article-page .radio-prose h2{font-size:26px}.vranec-article-page .radio-prose>section{margin-bottom:42px}}
+</style>
+<link rel="stylesheet" href="editorial-sources.css?v=20261107-unified">
 </head>
-<body class="kinfolk-article-hero">
+<body class="ohrid-article radio-article-page vranec-article-page">
 
 <header class="site-header">
   <div class="shell header-frame">
@@ -822,60 +1194,37 @@ body.muzej-logo-hidden .site-header .brand-mark {
   </div>
 </header>
 
-<main>
-  <header class="feature muzej-sticky-opening"><div class="feature-inner"><div class="feature-copy">
-        <p class="feature-byline muzej-byline">Words <strong>Aleksandar Trajkovski</strong></p>
-        <h1 class="feature-title">How to Taste Vranec</h1>
-      </div><div class="feature-scroll-column"><figure class="feature-media">
-        <img src="./Assets/Vranec/vranec-tasting.jpg" alt="Wine being poured into a glass during a tasting">
-      </figure><p class="feature-deck">Take a sip of Vranec. After you swallow, run your tongue along your upper gums. Can you still taste the fruit when you begin to feel that slight drag? Two Macedonian bottles give you a way to taste the difference.</p></div></div></header>
-
-  <article class="article-shell">
-    <section class="article-body">
-      <figure class="article-body-media">
-        <img src="./Assets/Vranec/vranec-vineyard-top.png" alt="Vineyard at sunset with mountains in the background">
-      </figure>
-
-      <div class="article-body-copy">
-<section class="guide-section">
-<h2>The first glass</h2>
-<p>Begin with Tikveš Classic Vranec. Tikveš is the name of both the wine district and the winery that makes this bottle. Vranec is the grape. Leave the back label unread for a moment. Once someone suggests black cherries, it becomes remarkably easy to smell them.</p>
-<p>Pour a little, leaving room to swirl. Smell the wine once while it is still, then again after a turn of the glass. If something reminds you of plum, stay with that thought. Is it the tart smell of a plum cut open, or the richer smell of plums cooking down for jam? Both descriptions start with the same fruit and take you somewhere quite different. Use whichever comes closest to what you smell, even if all you can say today is “ripe.”</p>
-<p>Now read the winery’s notes. Tikveš describes black cherry and damson, a small plum, alongside pronounced tannins and acidity. The last two are particularly easy to explore together. Take another sip and let it reach your gums. Tannin produces the friction you can also feel after drinking strong black tea. Acidity gets the saliva flowing. Your gums can feel dry at the very moment your mouth starts to water.</p>
-<p>Pause before the next sip. Which impression lasts longest? Perhaps the plum comes back as you breathe out. Perhaps the fruit fades while the grip remains. Either observation tells you more about this particular glass than its deep color could.</p>
-</section>
-      </div>
-
-      <div class="empty-tail" aria-hidden="true"></div>
-    </section>
-
-    <section class="article-body">
-      <figure class="article-body-media">
-        <img src="./Assets/Vranec/vranec-grapes-bottom.png" alt="Dark grape clusters hanging on the vine">
-      </figure>
-
-      <div class="article-body-copy">
-<section class="guide-section">
-<h2>A second pour</h2>
-<p>Pour Filovski Vranec into a second glass and keep a little Tikveš in the first. Both producers suggest serving their wines at 16–18°C (61–64°F). Use similar glasses and pour roughly equal amounts. Smell them in turn. It is much easier to catch a difference when you can go back to the first wine while the second is fresh in your mind.</p>
-<p>Filovski ages its Vranec with American oak for more than six months. The winery describes a toasted aroma alongside dark fruit. Try picking out the toast first, then return to the other glass. Which has the clearer fruit aroma? Which leaves a longer impression of fruit after you swallow? The answers may point to different bottles. Oak is one choice the grower has made, and these wines come from different producers. A difference you can taste is worth recording even when you cannot say exactly what caused it.</p>
-<p>Filovski calls its wine dry. If the fruit smells sweet to you, hold that thought as you taste. The smell of blackberry preserves can suggest sugar before the wine even touches your tongue. Taste again and ask whether you find sweetness on the tongue as well. This is also where the word “dry” can trip people up. On the label it refers to the wine’s sugar level. In a remark about how your gums feel, it describes the touch of tannin.</p>
-</section>
-<section class="guide-section">
-<h2>At the table</h2>
-<p>Save some of each wine for dinner. Both wineries suggest grilled meat. Try a bite of kebapče, then return to the glass where the tannin felt most pronounced. Does it catch at your gums quite as much now? Taste the other wine with the same food. You may find that the bottle you preferred on its own has changed places with the one you want alongside the meal.</p>
-<p>Write down the producer and the vintage from the label, then one thing you would remember a week later. “I liked the plum in the first glass, but went back to the second with the kebapčinja” is a perfectly useful tasting note. The next time somebody pours you a Vranec, you have a particular wine, and a particular dinner, to compare it with.</p>
-</section>
-<p><small>Producer notes: <a href="https://tikves.com.mk/wp-content/uploads/2024/01/FF_Classic_2023_Vranec.pdf">Tikveš Classic Vranec</a> · <a href="https://filovski.com.mk/vranec/">Filovski Vranec</a></small></p>
-      </div>
-
-      <div class="empty-tail" aria-hidden="true"></div>
-    </section>
-
-  </article>
-
-  <section class="more-from-muzej" data-more-from-muzej aria-labelledby="more-from-muzej-title"></section>
-</main>
+<main id="main-content" class="radio-main">
+<header class="radio-opening"><div class="radio-title-column"><p class="radio-kicker">Wine | Culture</p><h1>Vranec</h1><p class="radio-deck">The vineyards and cellar decisions behind Macedonia’s best-known red.</p><p class="radio-byline muzej-byline">Words <strong>Aleksandar Trajkovski</strong></p></div><div class="radio-opening-column"><figure class="radio-object hero-object"><img class="radio-hero-image" src="./Assets/Vranec/begniste-vineyards.webp" width="1920" height="1272" alt="Rows of vines and hills near Begnište in the Tikveš wine district." fetchpriority="high"><figcaption>Vineyards near Begnište, Tikveš. Photograph by <a href="https://commons.wikimedia.org/wiki/File:Лозови_насади_во_близина_на_Бегниште_2.jpg">Kiril Simeonovski</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Resized and cropped.</figcaption></figure></div></header>
+<article class="radio-article" aria-label="Vranec by Aleksandar Trajkovski"><div class="radio-row radio-continuation"><div class="radio-rail"><figure class="radio-object article-inline-media"><img src="./Assets/Vranec/tikves-cellar.webp" width="1920" height="1440" alt="Brick arches and stone walls along the passage to Tikveš Winery’s cellars." loading="lazy" decoding="async"><figcaption>Passage to the cellars at Tikveš Winery, 2016. Photograph by <a href="https://commons.wikimedia.org/wiki/File:Tikveš_Walkway_to_wine_cellars.jpg">Güldem Üstün</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>. Resized.</figcaption></figure></div><div class="radio-prose"><section><p>Vranec can reach the table as a youthful red, a softly sweet everyday wine, an oak-aged bottling, or part of a blend named for a particular vineyard. The grape gives these wines a family resemblance. The vineyard and the cellar account for much of their difference.</p>
+<p>In Macedonia, where Vranec is the leading red variety, its familiarity can obscure that range. Dark color and abundant fruit are easy to recognize. More revealing are the decisions behind them. Where was the fruit grown? How was it handled after harvest? What kind of wine did the producer intend to make?</p></section>
+<section aria-label="The vineyard"><h2>The vineyard</h2><p>Vranec is a Balkan grape, also known as Vranac, with roots in Montenegro. Its expansion in Macedonia is comparatively recent. In an account published by the Wine & Spirit Education Trust, Tikveš educator Zvonko Herceg traces its introduction to experimental plantings near Skopje after the Second World War. High yields helped it establish a place in Yugoslav wine production. Later attention to vineyard selection and lower yields opened other possibilities.</p>
+<p>Much of Macedonia’s Vranec grows in the central districts along the Vardar. Tikveš is both the name of a wine district and of the large winery in Kavadarci. They describe different things. A wine from the district may come from any of its producers, and the district itself contains considerable variation.</p>
+<p>Barovo gives that variation a precise address. Tikveš’s vineyards there reach roughly 700 meters, where Mediterranean influences meet the mountain climate around Kožuf. The winery attributes the site’s slower ripening and retention of acidity to the difference between daytime and nighttime temperatures. Heat alone gives an incomplete account of this landscape.</p>
+<p>Those conditions matter because ripeness has several aspects. Sweetness in the grape, the development of aromas, acidity, and the condition of skins and seeds all enter a grower’s judgment about harvest. A place name becomes useful when it tells us something about these growing conditions. “Macedonian red” covers a much larger territory than a single slope.</p>
+<p>Barovo Red also brings Vranec together with Kratošija. At Bela Voda, Tikveš combines it with Plavec. These blends place the grape within a composition. Knowing the other variety is part of understanding the wine.</p></section>
+<section aria-label="The cellar"><h2>The cellar</h2><p>After harvest, the winemaker has to decide how much to draw from the grapes. Contact with skins and seeds contributes color and tannin. The length of that contact affects the finished wine’s texture. The Australian Wine Research Institute identifies time on skins and seeds as a major influence on red wine’s sensory character, with the appropriate duration depending on the fruit and the season.</p>
+<p>Tannin supplies the drying, gripping sensation associated with many red wines. Its quality is worth considering alongside its quantity. A wine can feel fine-grained or coarse, supple or insistent. Deep color alone cannot tell us how comfortably those elements will sit together.</p>
+<p>Oak introduces another set of choices. The wood can contribute aromas associated with vanilla, clove, and toast. Barrel size, age, and the level of toasting affect its influence. A new barrel and one used for several vintages will leave different impressions. Time in wood becomes meaningful when considered with those details.</p>
+<p>Kamnik’s Terroir Vranec Grand Reserva 2018 illustrates a deliberately concentrated approach. The producer records partial drying of the grapes on the vine, followed by 24 months in new French and American oak barrels. The wine is dry and labeled at 16 percent alcohol. This is a specific interpretation of Vranec, shaped by vineyard treatment and extended maturation.</p>
+<p>A different intention is visible in Tikveš’s T’ga za jug, which the producer describes as semi-dry. Barovo Red is a blend, while the Kamnik bottling is entirely Vranec. These distinctions are more useful than treating every bottle bearing the grape’s name as a version of the same wine.</p>
+<p>Once those choices are understood, tasting has a purpose. Dark fruit may be accompanied by the spice of oak, the warmth of alcohol, or a firm tannic outline. The interesting question is how they relate. Fruit, acidity, tannin, and alcohol should be considered together, across the full length of a mouthful.</p></section>
+<section aria-label="At the table"><h2>At the table</h2><p>Serving temperature can change that relationship. Kamnik recommends 15–18°C (59–64°F) for its 2018 Grand Reserva, along with decanting. In a warm dining room, “room temperature” may be considerably warmer. A bottle’s service guidance deserves the same attention as its vintage.</p>
+<p>Food changes the encounter again. Salt, fat, acidity, sweetness, and chili can alter how a wine’s fruit, tannin, and alcohol are perceived. A salty, substantial dish can make a firm red feel more accommodating. Hot peppers can make a high-alcohol wine feel hotter. The whole plate matters, including its sauce and seasoning.</p>
+<p>Roast lamb, grilled meat, and mature cheese are among the producers’ suggested partners for these wines. They are useful starting points. At a Macedonian table, the difference between gently roasted peppers and a sharply hot relish may matter as much as the choice of meat. Pairing begins with what has actually been cooked.</p>
+<p>An everyday bottle and one kept for a particular dinner invite different expectations. Both deserve accurate identification and thoughtful service. A wine’s price or weight cannot settle whether it suits the occasion. There is pleasure in a red that stays fresh through a meal, just as there is in following a more concentrated wine as it opens.</p>
+<p>Keep the producer and vintage in mind when a bottle proves memorable. The next encounter with the same wine offers something specific to return to. Over time, a familiar grape becomes a record of particular places, harvests, and meals.</p></section>
+<section class="sources-section muzej-sources" aria-label="Sources"><h2 class="section-heading">Sources</h2><p><a href="https://winesofmacedonia.mk/vranec/">Association Wines of Macedonia. “Vranec.”</a></p>
+<p><a href="https://www.wsetglobal.com/knowledge-centre/blog/2021/october/05/discovering-vranec-and-north-macedonia">Zvonko Herceg. “Discovering Vranec and North Macedonia.” Wine & Spirit Education Trust, October 5, 2021.</a></p>
+<p><a href="https://tikves.com.mk/en/tikves-wine-region/">Tikveš Winery. “Tikveš Wine Region,” including Barovo and Bela Voda.</a></p>
+<p><a href="https://tikves.com.mk/en/vranecworldday-en/">Tikveš Winery. Vranec range, including Barovo Red, Bela Voda Red, and T’ga za jug.</a></p>
+<p><a href="https://www.awri.com.au/industry_support/winemaking_resources/winemaking-practices/winemaking-treatment-extended-post-fermentation-maceration/">Australian Wine Research Institute. “Winemaking Treatment—Extended Post-Fermentation Maceration.”</a></p>
+<p><a href="https://www.wsetglobal.com/news-insights/insight-opinion/why-is-oak-used-in-winemaking/">Wine & Spirit Education Trust. “Why Is Oak Used in Winemaking?”</a></p>
+<p><a href="https://www.wsetglobal.com/media/13022/wset_l2wines_sessionplans_en_may2023_issue2.pdf">Wine & Spirit Education Trust. Level 2 Award in Wines, session plans, May 2023, oak maturation.</a></p>
+<p><a href="https://chateaukamnik.com/our_wines_red.php">Chateau Kamnik. Terroir Vranec Grand Reserva 2018, production and service details.</a></p>
+<p><a href="https://www.wsetglobal.com/news-insights/insight-opinion/four-rules-to-masterful-food-and-wine-pairing/">Wine & Spirit Education Trust. “Four Rules for Food and Wine Pairing.”</a></p>
+<p><a href="https://www.wsetglobal.com/knowledge-centre/blog/2026/how-to-pair-drinks-with-spice">Aleesha Hansel. “How to Pair Drinks with Spice.” Wine & Spirit Education Trust.</a></p></section></div></div></article>
+<section class="more-from-muzej" data-more-from-muzej aria-labelledby="more-from-muzej-title"></section></main>
 
 <footer class="site-footer muzej-footer">
   <div class="footer-inner">
