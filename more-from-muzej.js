@@ -1,6 +1,16 @@
 (function () {
   var articles = [
     {
+      slug: "swallows",
+      href: "swallows.html",
+      title: "Swallows (Ластовици)",
+      kicker: "Poetry",
+      dek: "Blaže Koneski, translated by Kristian Josifoski.",
+      image: "./Assets/Swallows/swallows.png",
+      alt: "Violet and orange twilight above layers of dark mountain ridges.",
+      position: "center center"
+    },
+    {
       slug: "robert-gligorov",
       href: "robert-gligorov.html",
       title: "Robert Gligorov: Between the Dream and Reality",
