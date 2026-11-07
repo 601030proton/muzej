@@ -156,8 +156,8 @@
       title: "The Ohrid House and the Logic of Place",
       kicker: "Architecture | Urbanism",
       dek: "How one Macedonian vernacular tradition turned hillside, lake, climate, and craft into architecture.",
-      image: "./Assets/Ohrid%20Architecture/Images/cover.png",
-      alt: "Black-and-white collage of Ohrid house architecture with white plaster and dark timber windows.",
+      image: "./Assets/Ohrid%20Architecture/Images/BW%20Ohrid%20House/New%20Cover.png",
+      alt: "Collage of traditional Ohrid house architecture with white plaster, dark timber, and lake-facing windows",
       position: "center center"
     },
     {
