@@ -1727,11 +1727,19 @@
 </style>
 <link rel="stylesheet" href="article-headlines.css">
   <link rel="stylesheet" href="more-from-muzej.css?v=20260810-plantin-final">
-<script src="more-from-muzej.js?v=20261107-vlado-title" defer></script>
+<script src="more-from-muzej.js?v=20261107-ohrid-hero" defer></script>
 <link rel="stylesheet" href="muzej-footer-logo.css?v=20260914">
 <link rel="stylesheet" href="poetry.css?v=20261030">
 <link rel="stylesheet" href="article-system.css?v=20261101-consistency-3">
 <link rel="stylesheet" href="bylines.css?v=20261107">
+<style>
+.poem-language-control{display:flex;align-items:center;gap:14px;margin-top:46px;color:#000;font:400 11px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif}
+.poem-language-control[hidden],.poem-body[hidden]{display:none}
+.poem-language-control select{font:inherit;color:inherit;background:#fff;border:0;border-radius:0;padding:10px 32px 10px 12px;min-height:44px;cursor:pointer}
+.poem-language-control select:focus-visible{outline:2px solid #000;outline-offset:3px}
+.poem-article-main[data-poem-language] .poem-body{margin-top:28px}
+.poem-article-main[data-poem-language] .poem-language-label{display:none}
+</style>
 </head>
   <body>
     <div class="page">
@@ -1776,7 +1784,6 @@
           </aside>
 
           <article class="poem-article-main">
-            <p class="poem-kicker">Poetry</p>
             <h1 class="poem-title" id="poem-title">Longing for the South</h1>
 
             <div class="poem-byline-block">
@@ -1784,7 +1791,62 @@
               <p class="poem-date-line">1830–1862</p>
             </div>
 
-            <section class="poem-body" id="poem-text" aria-label="Poem text">
+            <div class="poem-language-control" hidden>
+<label for="poem-language">Language</label>
+<select id="poem-language" aria-controls="poem-original poem-text">
+<option value="en" selected>English</option>
+<option value="mk">Македонски</option>
+</select>
+</div>
+<section class="poem-body" id="poem-original" lang="mk" aria-labelledby="poem-original-label">
+<h2 class="poem-language-label" id="poem-original-label">Македонски</h2>
+<div class="poem-text">
+<p>Орелски крилја как да си метнех<br />
+и в наши стâрни да си прелетнех!<br />
+На наши места ја да си идам,<br />
+да видам Стамбол, Кукуш да видам,</p>
+
+<p>Да видам дали сâнце и тамо<br />
+мрачно угревјат, како и вамо.<br />
+Ако как овде сâнцето ме стретит,<br />
+ако пак мрачно сâнцето светит:</p>
+
+<p>На пâт далечни ја ке се стегнам,<br />
+и в други стâрни ке си побегнам,<br />
+каде сâнцето светло угревјат,<br />
+каде небото ѕвезди посевјат.</p>
+
+<p>Овде је мрачно и мрак м' обвива<br />
+и темна мâгла земја покрива:<br />
+мразој и снегој, и пепелници,<br />
+силни ветришта и вијулици,</p>
+
+<p>Околу мâгли и мразој земни,<br />
+а в’гради студој, и мисли темни.<br />
+Не, ја не можам овде да седам!<br />
+Не, ја не можам мразој да гледам!</p>
+
+<p>Дајте ми крилја ја да си метнам<br />
+и в наши стâрни да си прелетнам:<br />
+на наши места ја да си идам,<br />
+да видам Охрид, Струга да видам.</p>
+
+<p>Тамо зората греит душата<br />
+и сâнце светло зајдвит в гората.<br />
+Тамо дарбите природна сила<br />
+со сâта раскош ги растурила:</p>
+
+<p>Бистро езеро, гледаш, белеит<br />
+или од ветар синотемнеит:<br />
+поле погледниш, или планина<br />
+-сегде Божева је хубавина.</p>
+
+<p>Тамо по срце в кавал да свирам,<br />
+сâнце да зајдвит, ја да умирам!</p>
+</div>
+</section>
+<section class="poem-body" id="poem-text" lang="en" aria-labelledby="poem-translation-label">
+<h2 class="poem-language-label" id="poem-translation-label">English translation</h2>
               <div class="poem-text">
                 <p>How could I spread my eagle wings,<br />
 and fly to our lands<br />
@@ -1897,6 +1959,23 @@ There I can play the kaval in my heart,<br />
         updateMuzejLogoVisibility();
       })();
     </script>
-  </body>
+  <script>
+(function () {
+  var select = document.getElementById('poem-language');
+  var original = document.getElementById('poem-original');
+  var translation = document.getElementById('poem-text');
+  var main = select.closest('.poem-article-main');
+  function showLanguage() {
+    var language = select.value;
+    original.hidden = language !== 'mk';
+    translation.hidden = language !== 'en';
+    main.dataset.poemLanguage = language;
+  }
+  select.addEventListener('change', showLanguage);
+  showLanguage();
+  select.parentElement.hidden = false;
+})();
+</script>
+</body>
 </html>
 

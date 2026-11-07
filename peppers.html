@@ -1727,11 +1727,24 @@
 </style>
 <link rel="stylesheet" href="article-headlines.css">
   <link rel="stylesheet" href="more-from-muzej.css?v=20260810-plantin-final">
-<script src="more-from-muzej.js?v=20261107-vlado-title" defer></script>
+<script src="more-from-muzej.js?v=20261107-ohrid-hero" defer></script>
 <link rel="stylesheet" href="muzej-footer-logo.css?v=20260914">
 <link rel="stylesheet" href="poetry.css?v=20261030">
 <link rel="stylesheet" href="article-system.css?v=20261101-consistency-3">
 <link rel="stylesheet" href="bylines.css?v=20261107">
+<style>
+.poem-language-label{margin:0 0 28px;font:400 11px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000}
+#poem-original + #poem-text{margin-top:72px}
+@media(max-width:760px){#poem-original + #poem-text{margin-top:56px}}
+</style>
+<style>
+.poem-language-control{display:flex;align-items:center;gap:14px;margin-top:46px;color:#000;font:400 11px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif}
+.poem-language-control[hidden],.poem-body[hidden]{display:none}
+.poem-language-control select{font:inherit;color:inherit;background:#fff;border:0;border-radius:0;padding:10px 32px 10px 12px;min-height:44px;cursor:pointer}
+.poem-language-control select:focus-visible{outline:2px solid #000;outline-offset:3px}
+.poem-article-main[data-poem-language] .poem-body{margin-top:28px}
+.poem-article-main[data-poem-language] .poem-language-label{display:none}
+</style>
 </head>
   <body>
     <div class="page">
@@ -1776,7 +1789,6 @@
           </aside>
 
           <article class="poem-article-main">
-            <p class="poem-kicker">Poetry</p>
             <h1 class="poem-title" id="poem-title">Peppers (Пиперки)</h1>
 
             <div class="poem-byline-block">
@@ -1784,7 +1796,37 @@
               <p class="muzej-byline">Translated by <strong><a href="https://www.poetryfoundation.org/poets/kristian-josifoski" target="_blank" rel="noopener noreferrer">Kristian Josifoski</a></strong></p>
             </div>
 
-            <section class="poem-body" id="poem-text" aria-label="Poem text">
+            <div class="poem-language-control" hidden>
+<label for="poem-language">Language</label>
+<select id="poem-language" aria-controls="poem-original poem-text">
+<option value="en" selected>English</option>
+<option value="mk">Македонски</option>
+</select>
+</div>
+<section class="poem-body" id="poem-original" lang="mk" aria-labelledby="poem-original-label">
+<h2 class="poem-language-label" id="poem-original-label">Македонски</h2>
+<div class="poem-text">
+<p>Прилепското со пиперки се слави,<br />
+со купишта на пазарот ги има,<br />
+ги јадеме во салати, во тави,<br />
+во туршија ги чуваме за зима.</p>
+
+<p>Ги има живи и лути и благи,<br />
+и човек во нив го наоѓа лекот,<br />
+со сол и пипер сме крепеле снаги,<br />
+со пинџур ни е нам поубав векот.</p>
+
+<p>Ќе дојде есен со своите чари,<br />
+во низи пипер секој дом го скрила,<br />
+чардаците ги красат рујни шари</p>
+
+<p>и куќата е невестица мила.<br />
+И така кај нас од времиња стари<br />
+се создава убавина и сила.</p>
+</div>
+</section>
+<section class="poem-body" id="poem-text" lang="en" aria-labelledby="poem-translation-label">
+<h2 class="poem-language-label" id="poem-translation-label">English translation</h2>
               <div class="poem-text">
                 <p>In Prilep we celebrate with peppers.<br />
 We heap them in bushels in the bazaar.<br />
@@ -1877,6 +1919,23 @@ make our beauty, our pride.</p>
         updateMuzejLogoVisibility();
       })();
     </script>
-  </body>
+  <script>
+(function () {
+  var select = document.getElementById('poem-language');
+  var original = document.getElementById('poem-original');
+  var translation = document.getElementById('poem-text');
+  var main = select.closest('.poem-article-main');
+  function showLanguage() {
+    var language = select.value;
+    original.hidden = language !== 'mk';
+    translation.hidden = language !== 'en';
+    main.dataset.poemLanguage = language;
+  }
+  select.addEventListener('change', showLanguage);
+  showLanguage();
+  select.parentElement.hidden = false;
+})();
+</script>
+</body>
 </html>
 
