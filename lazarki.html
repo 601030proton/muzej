@@ -1068,6 +1068,44 @@ body.muzej-logo-hidden .site-header .brand-mark {
 @media(max-width:760px){.lazarki-article .chapter-heading{font-size:26px;margin-top:52px;margin-bottom:22px}.lazarki-article .chapter-heading:first-child{margin-top:0}}
 </style>
 <link rel="stylesheet" href="article-system.css?v=20261101-consistency-3">
+
+<style id="lazarki-radio-layout">
+.lazarki-article{color:#000;background:#fff;--lazarki-gap:clamp(36px,6vw,96px)}
+.lazarki-article main{padding:12px var(--page-x) 0;max-width:1520px;margin:auto}
+.lazarki-article .lazarki-opening,.lazarki-article .content-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--lazarki-gap);align-items:start}
+.lazarki-opening-copy{min-width:0;align-self:end}
+.lazarki-opening h1{font:400 clamp(48px,5.7vw,90px)/.97 "plantin",Georgia,serif;letter-spacing:-.025em;margin:32px 0;color:#000}
+.lazarki-deck{font:400 clamp(26px,2.6vw,38px)/1.2 "plantin",Georgia,serif;margin:0 0 22px;max-width:16em;color:#000}
+.lazarki-byline{font:400 11px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000;letter-spacing:.05em;text-transform:uppercase;margin:0}
+.lazarki-hero{margin:0;min-width:0}
+.lazarki-hero img{display:block;width:100%;height:calc(100svh - 160px);min-height:380px;object-fit:contain}
+.lazarki-article .article-shell{width:100%;max-width:none;margin:120px 0 0;padding:0}
+.lazarki-article .content-row{margin:0 0 100px}
+.lazarki-article .article-body-copy{min-width:0;width:100%;max-width:none;justify-self:stretch}
+.lazarki-article .body-block{font:400 clamp(21px,1.65vw,25px)/1.46 "plantin",Georgia,serif;color:#000}
+.lazarki-article .body-block > p{max-width:none;font:inherit;color:#000;margin:0 0 1.25em}
+.lazarki-article .body-block > p + p{margin-top:0}
+.lazarki-article .body-block > p:last-child{margin-bottom:0}
+.lazarki-article .article-body-media{position:sticky;top:100px;align-self:start;width:min(88%,420px);margin:0}
+.lazarki-article .article-body-media img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+.lazarki-article .article-inline-media{width:min(88%,420px);margin:52px 0}
+.lazarki-article .article-body-media figcaption,.lazarki-article .article-inline-media figcaption{font:400 11px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000;margin:13px 0 0}
+.lazarki-article .gallery-reading{margin:100px 0 120px}
+.lazarki-article .sources-section{margin-top:64px}
+@media(max-width:760px){
+.lazarki-article main{padding:12px 20px 0}
+.lazarki-article .lazarki-opening,.lazarki-article .content-row{grid-template-columns:1fr;gap:36px}
+.lazarki-opening h1{font-size:clamp(42px,11vw,68px);margin:26px 0}
+.lazarki-deck{font-size:26px;margin-bottom:18px}
+.lazarki-hero img{height:52svh;min-height:260px}
+.lazarki-article .article-shell{margin-top:64px}
+.lazarki-article .content-row{margin-bottom:68px}
+.lazarki-article .article-body-media{position:static}
+.lazarki-article .body-block{font-size:22px;line-height:1.46}
+.lazarki-article .article-body-media figcaption,.lazarki-article .article-inline-media figcaption{font-size:10px}
+.lazarki-article .gallery-reading{margin:70px 0}
+}
+</style>
 </head>
 <body class="ohrid-article lazarki-article">
 <header class="site-header">
@@ -1102,10 +1140,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
 </div>
 </header>
 <main>
-<header class="feature lazarki-sticky-opening"><div class="feature-inner"><div class="feature-copy">
-<p class="feature-byline">Words Ace Trajkovski</p>
-<h1 class="feature-title">Lazarki</h1>
-</div><div class="feature-scroll-column"><figure class="feature-media"><img alt="Women in traditional Macedonian dress gathered outdoors" src="./Assets/Lazarki/lazarki-03.png"/></figure><p class="feature-deck">Each spring, girls go from house to house in Macedonian villages, singing blessings for the families who welcome them. The songs are chosen for individual members of each household, while clothing, dances, and routes vary from village to village.</p></div></div></header>
+<header class="lazarki-opening"><div class="lazarki-opening-copy"><h1>Lazarki</h1><p class="lazarki-deck">Each spring, girls go from house to house in Macedonian villages, singing blessings for the families who welcome them. The songs are chosen for individual members of each household, while clothing, dances, and routes vary from village to village.</p><p class="lazarki-byline">Words Ace Trajkovski</p></div><figure class="lazarki-hero"><img alt="Women in traditional Macedonian dress gathered outdoors" src="./Assets/Lazarki/lazarki-03.png"/></figure></header>
 <article class="article-shell article-longform">
 <section class="content-row">
 <figure class="article-body-media"><img alt="Young women in traditional dress arranging flowers in a basket" decoding="async" loading="lazy" src="./Assets/Lazarki/lazarki-07.png"/></figure>
