@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta name="description" content="Four works of Macedonian sacred art reveal how painters and carvers shaped grief, movement, and devotion.">
 <title>Paint, Wood, and Sacred Space | Muzej</title>
-<link rel="icon" type="image/png" href="./Assets/Font/Muzej%20Logo.ai.png">
-<link rel="apple-touch-icon" href="./Assets/Font/Muzej%20Logo.ai.png">
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&display=swap"
-/>
-<link rel="stylesheet" href="fonts.css?v=20261101-consistency-3">
+<link href="./Assets/Font/Muzej%20Logo.ai.png" rel="icon" type="image/png"/>
+<link href="./Assets/Font/Muzej%20Logo.ai.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&amp;display=swap" rel="stylesheet"/>
+<link href="fonts.css?v=20261101-consistency-3" rel="stylesheet"/>
 <style>
 :root {
   --background: #ffffff;
@@ -108,7 +105,6 @@ a { color: inherit; }
   top: -107.88px;
   display: block;
 }
-
 
 .utility-link,
 .utility-menu-item {
@@ -794,14 +790,16 @@ body.muzej-logo-hidden .site-header .brand-mark {
   }
 }
 
-.renaissance-article .sources-section { margin-top: clamp(48px, 6vw, 80px); }
-.renaissance-article .sources-section .section-heading { font-family: var(--font-sans, Arial, sans-serif); font-size: 14px; line-height: 1.4; letter-spacing: 0; text-transform: none; }
-.renaissance-article .sources-section p { font-family: var(--font-sans, Arial, sans-serif); font-size: 14px; line-height: 1.65; }
-.renaissance-article .sources-section p + p { margin-top: 1.1em; }
-.renaissance-article .sources-section a { text-decoration: none; color: inherit; }
-.renaissance-article .sources-section a:hover { text-decoration: underline; }
-.renaissance-article .article-body-media figcaption { font-size: 11px; line-height: 1.5; color: #111; }
-.renaissance-article .article-body-media figcaption a { color: inherit; }
+/* Keep the deck within the page grid at every screen width. */
+.lazarki-article .feature-deck {
+  width: var(--feature-w);
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: clamp(32px, 5vw, 64px) auto 0;
+  font-size: clamp(22px, 2.5vw, 36px);
+  line-height: 1.25;
+  text-wrap: pretty;
+}
 </style>
 <style>
 .ohrid-article .feature-title {
@@ -907,61 +905,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
   }
 }
 
-.renaissance-article .feature-title {
-  font-size: clamp(40px, 5.15vw, 82px);
-  line-height: 0.9;
-}
-.renaissance-article .feature-media img {
-  width: auto;
-  max-width: 100%;
-  height: min(80svh, 920px);
-  max-height: 100%;
-  object-fit: contain;
-  object-position: center center;
-  background: var(--white);
-}
-.renaissance-article .section-heading {
-}
-.renaissance-article .gallery-reading-media,
-.renaissance-article .gallery-reading-feature {
-  aspect-ratio: auto;
-  overflow: visible;
-}
-.renaissance-article .gallery-reading-media img,
-.renaissance-article .gallery-reading-feature img {
-  aspect-ratio: 15 / 21;
-  height: auto;
-  object-fit: cover;
-}
-.renaissance-article .gallery-reading figcaption {
-  margin-top: 12px;
-  color: var(--ink-soft);
-  font-size: 8px;
-  letter-spacing: 0;
-  line-height: 1.35;
-}
-.renaissance-article .article-inline-media {
-  width: min(92%, 460px);
-}
-.renaissance-article .article-inline-media--peribleptos {
-  width: min(82%, 430px);
-  margin: 0 auto clamp(34px, 4vw, 54px);
-}
-.renaissance-article .article-inline-media--peribleptos figcaption {
-  margin-top: 12px;
-  color: var(--ink-soft);
-  font-size: 8px;
-  letter-spacing: 0;
-  line-height: 1.35;
-}
-@media (max-width: 720px) {
-  .renaissance-article .feature-title {
-    font-size: clamp(33px, 11.4vw, 54px);
-  }
-}
-
-.ohrid-article .feature-title,
-.renaissance-article .feature-title {
+.ohrid-article .feature-title {
   font-family: "plantin", Georgia, serif;
   font-size: clamp(42px, 5.2vw, 82px);
   font-weight: 400;
@@ -969,49 +913,239 @@ body.muzej-logo-hidden .site-header .brand-mark {
   letter-spacing: 0;
   text-transform: none;
 }
-.ohrid-article .feature-byline,
-.renaissance-article .feature-byline {
+.ohrid-article .feature-byline {
   margin: 0 0 auto;
   color: var(--ink-soft);
   font-family: var(--article-serif);
   font-size: clamp(16px, 1.18vw, 19px);
   line-height: 1.4;
 }
-.ohrid-article .feature-copy,
-.renaissance-article .feature-copy {
+.ohrid-article .feature-copy {
   max-width: 27rem;
   justify-content: flex-start;
   gap: 0;
 }
 @media (max-width: 720px) {
-  .ohrid-article .feature-title,
-  .renaissance-article .feature-title {
+  .ohrid-article .feature-title {
     font-size: clamp(30px, 8.2vw, 38px);
     line-height: 1.03;
     width: calc(100vw - (var(--page-x) * 2));
     max-width: 100%;
     overflow-wrap: break-word;
   }
-  .ohrid-article .feature-byline,
-  .renaissance-article .feature-byline {
+  .ohrid-article .feature-byline {
     margin: 28px 0 0;
     font-size: 15px;
   }
 }
 </style>
-<link rel="stylesheet" href="more-from-muzej.css?v=20260810-plantin-final">
-<script src="more-from-muzej.js?v=20261107-sacred-space" defer></script>
-<link rel="stylesheet" href="muzej-footer-logo.css?v=20260914">
-<link rel="stylesheet" href="article-opening.css?v=20261101">
+<link href="more-from-muzej.css?v=20260810-plantin-final" rel="stylesheet"/>
+<script defer="" src="more-from-muzej.js?v=20261107-sacred-space"></script>
+<style>
+.lazarki-article{--lz-ink:#11110f;--lz-muted:rgba(17,17,15,.58);--lz-rule:rgba(17,17,15,.16);--lz-soft:#f3f1eb}
+
+
+
+.lazarki-article .feature-media>div,.lazarki-article .article-body-media>div,.lazarki-article .article-inline-media>div,.lazarki-article .gallery-reading-media>div,.lazarki-article .gallery-reading-feature>div{border:0!important;background:linear-gradient(180deg,#f4f2ed 0%,#ece9e2 100%)!important}
+
+
+
+
+
+
+
+.lazarki-article .body-block>p{max-width:34rem;font-size:clamp(23px,1.65vw,31px);line-height:1.46;color:var(--lz-ink);font-weight:400}
+.lazarki-article .body-block>p+p{margin-top:1.45em}
+.lazarki-article .lazarki-intro{margin-bottom:clamp(110px,14vw,210px)}
+.lazarki-article .lazarki-intro>p:first-child{max-width:34rem;font-family:var(--article-serif);font-size:clamp(23px,1.65vw,31px);font-weight:400;line-height:1.46;letter-spacing:0}
+.lazarki-article .chapter-heading{display:block;max-width:100%;margin:clamp(58px,6.5vw,92px) 0 clamp(24px,3vw,38px);padding-top:clamp(14px,1.5vw,20px);border-top:1px solid var(--lz-ink);font-family:var(--headline-serif);font-size:clamp(38px,4.6vw,66px);font-weight:400;line-height:.96;letter-spacing:-.018em;text-wrap:normal}
+
+
+
+.lazarki-article .subhead{max-width:26ch;margin:clamp(48px,6vw,84px) 0 .9em;font-family:var(--headline-serif);font-size:clamp(24px,2.35vw,34px);font-weight:400;line-height:1.08;letter-spacing:-.01em}
+.lazarki-article .subhead+p{margin-top:0}
+.lazarki-article .fact-statement{max-width:33rem!important;margin:clamp(68px,8vw,120px) 0!important;padding:clamp(18px,2.4vw,28px) 0;border-top:1px solid var(--lz-ink);border-bottom:1px solid var(--lz-rule);font-family:"plantin",Georgia,serif;font-size:clamp(30px,3.25vw,48px)!important;line-height:1.08!important;letter-spacing:-.02em}
+.lazarki-article .ritual-sequence{max-width:40rem!important;margin:clamp(46px,5vw,76px) 0!important;padding:clamp(18px,2.4vw,28px) 0;border-top:1px solid var(--lz-rule);border-bottom:1px solid var(--lz-rule);font-family:var(--sans);font-size:clamp(.78rem,.72rem + .24vw,.95rem)!important;line-height:1.7!important;letter-spacing:.035em;text-transform:uppercase}
+.lazarki-article .data-list{max-width:40rem;margin:clamp(32px,4vw,58px) 0 clamp(54px,6vw,82px);border-top:1px solid var(--lz-ink)}
+.lazarki-article .data-row{display:grid;grid-template-columns:minmax(92px,.36fr) 1fr;gap:clamp(18px,3vw,40px);padding:14px 0 16px;border-bottom:1px solid var(--lz-rule);font-family:var(--sans);font-size:.82rem;line-height:1.45}
+.lazarki-article .data-row .data-key{color:var(--lz-muted)}
+.lazarki-article .regional-atlas{width:100%;max-width:100%;margin-top:clamp(36px,5vw,64px);margin-bottom:clamp(72px,8vw,112px);overflow:visible}
+.lazarki-article .regional-atlas table{width:100%;max-width:100%;table-layout:fixed;border-collapse:collapse;font-family:var(--sans);font-size:.72rem!important;line-height:1.45!important}
+.lazarki-article .regional-atlas th,.lazarki-article .regional-atlas td{padding:12px 14px 14px 0;border-top:1px solid var(--lz-rule);vertical-align:top;text-align:left;font-weight:400;overflow-wrap:anywhere;word-break:normal}
+.lazarki-article .regional-atlas th{padding-top:10px;border-top:1px solid var(--lz-ink);font-size:.64rem;letter-spacing:.09em;text-transform:uppercase;color:var(--lz-muted)}
+.lazarki-article .regional-atlas th:nth-child(1),.lazarki-article .regional-atlas td:nth-child(1){width:24%}.lazarki-article .regional-atlas th:nth-child(2),.lazarki-article .regional-atlas td:nth-child(2){width:44%}.lazarki-article .regional-atlas th:nth-child(3),.lazarki-article .regional-atlas td:nth-child(3){width:32%}.lazarki-article .regional-atlas td:first-child{font-family:var(--headline-serif);font-size:.96rem;line-height:1.2}
+.lazarki-article .evidence-list{margin-top:clamp(32px,4vw,58px);border-top:1px solid var(--lz-ink)}
+.lazarki-article .evidence-item{display:grid;grid-template-columns:minmax(180px,.82fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);padding:clamp(24px,3.5vw,44px) 0;border-bottom:1px solid var(--lz-rule)}
+.lazarki-article .evidence-claim{margin:0;font-family:"plantin",Georgia,serif;font-size:clamp(22px,2.3vw,34px);line-height:1.04;font-weight:400}
+.lazarki-article .evidence-answer{max-width:29rem;margin:0;font-size:clamp(16px,1.16vw,19px);line-height:1.68}
+.lazarki-article .research-status{margin-top:clamp(120px,14vw,210px);padding-top:clamp(22px,3vw,34px);border-top:2px solid var(--lz-ink)}
+.lazarki-article .research-status>h2{margin:0 0 clamp(28px,4vw,52px);font-family:var(--sans);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:400}
+.lazarki-article .research-status>p:first-of-type{font-family:"plantin",Georgia,serif;font-size:clamp(30px,3.1vw,46px);line-height:1.08;letter-spacing:-.02em}
+.lazarki-article .sources-section{margin-top:clamp(120px,14vw,210px);padding-top:20px;border-top:1px solid var(--lz-ink)}
+.lazarki-article .sources-section>h2{margin:0 0 28px;font-family:var(--sans);font-size:.64rem;line-height:1.2;letter-spacing:.12em;text-transform:uppercase;font-weight:400;color:var(--lz-muted)}
+.lazarki-article .sources-section>p{max-width:44rem;margin:0!important;padding:11px 0 13px;border-top:1px solid rgba(17,17,15,.1);font-family:var(--sans);font-size:.72rem!important;line-height:1.55!important;color:var(--lz-muted)}
+.lazarki-article .sources-section>p:first-of-type{border-top:0}
+.lazarki-article .gallery-reading{margin-top:clamp(100px,13vw,190px);margin-bottom:clamp(100px,13vw,190px)}
+@media(max-width:980px){.lazarki-article .article-body-media{position:static;width:min(100%,420px)}.lazarki-article .regional-atlas{width:100%;max-width:100%}}
+@media(max-width:720px){
+.lazarki-article .chapter-heading{max-width:none;margin-top:52px;margin-bottom:24px;padding-top:14px;font-size:clamp(34px,10.5vw,48px);line-height:.98}
+.lazarki-article .subhead{margin-top:42px;font-size:clamp(23px,7vw,31px);line-height:1.08}
+.lazarki-article .evidence-item{grid-template-columns:1fr;gap:16px}
+.lazarki-article .data-row{grid-template-columns:1fr;gap:6px}
+
+}
+.lazarki-article .chapter-number,
+
+.lazarki-article .evidence-item{grid-template-columns:1fr;gap:16px}
+.lazarki-article .data-row{grid-template-columns:1fr;gap:6px}
+
+}
+
+/* Blank image placeholders occupying the exact Ohrid template image slots. */
+.lazarki-article .feature-media > div {
+  display: block;
+  width: 100%;
+  height: clamp(620px, 80vh, 920px);
+  background: #f4f2ed;
+}
+.lazarki-article .article-body-media > div {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1.08;
+  background: #f4f2ed;
+}
+.lazarki-article .article-inline-media > div,
+.lazarki-article .gallery-reading-media > div,
+.lazarki-article .gallery-reading-feature > div {
+  background: #f4f2ed;
+}
+@media (min-width: 981px) {
+  .ohrid-article .feature-media > div {
+    height: 100%;
+    max-height: 100%;
+  }
+}
+@media (max-width: 980px) {
+  .lazarki-article .feature-media > div {
+    height: clamp(500px, 70vh, 720px);
+  }
+}
+@media (max-width: 720px) {
+  .lazarki-article .feature-media > div {
+    height: clamp(360px, 56vh, 470px);
+  }
+}
+</style><link href="muzej-footer-logo.css?v=20260914" rel="stylesheet"/>
+<style>/* Lazarki surgical spacing and alignment adjustments. */
+.lazarki-article .article-body-copy > .lazarki-intro {
+  margin-top: 1.45em;
+  margin-bottom: 1.45em;
+}
+.lazarki-article .content-row > .article-body-copy > .chapter-heading:first-child {
+  margin-top: 0;
+}
+</style><style id="lazarki-sticky-opening">
+/* Title remains within the opening until the image and deck have passed. */
+.lazarki-sticky-opening .feature-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:start;height:auto;min-height:0}
+.lazarki-sticky-opening .feature-copy{position:sticky;top:100px;align-self:start;height:calc(100svh - 124px);min-height:0;max-width:none;width:100%;margin:0;padding:0 0 24px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;text-align:left;gap:24px}
+.lazarki-sticky-opening .feature-title{width:auto;max-width:100%;font-size:clamp(42px,5.2vw,82px);line-height:.98}
+.lazarki-sticky-opening .feature-byline{order:2;margin:0}
+.feature-scroll-column{min-width:0}
+.lazarki-sticky-opening .feature-media{margin:0;height:auto}
+.lazarki-sticky-opening .feature-media img{display:block;width:100%;height:calc(100svh - 124px);max-height:none;object-fit:cover}
+.lazarki-sticky-opening .feature-deck{width:100%;max-width:none;margin:40px 0 0;padding:0 0 16px;font-size:clamp(22px,2.5vw,36px);line-height:1.25;text-align:left}
+@media(max-width:760px){
+.lazarki-sticky-opening .feature-inner{grid-template-columns:1fr;gap:28px}
+.lazarki-sticky-opening .feature-copy{position:static;height:auto;min-height:0;padding:0;gap:20px;order:0}
+.lazarki-sticky-opening .feature-title{font-size:clamp(30px,8.2vw,38px)}
+.lazarki-sticky-opening .feature-media img{height:auto;max-height:none;object-fit:contain}
+.lazarki-sticky-opening .feature-deck{margin-top:28px;font-size:22px}
+}
+</style><style id="article-section-headings">
+.lazarki-article .chapter-heading{font-family:"plantin",Georgia,serif;font-size:30px;font-weight:400;line-height:1.1;letter-spacing:0;text-transform:none;border:0;padding:0;margin:64px 0 24px}
+.lazarki-article .chapter-heading:first-child{margin-top:0}
+@media(max-width:760px){.lazarki-article .chapter-heading{font-size:26px;margin-top:52px;margin-bottom:22px}.lazarki-article .chapter-heading:first-child{margin-top:0}}
+</style>
 <link rel="stylesheet" href="article-system.css?v=20261101-consistency-3">
+<style>
+.radio-article-page{color:#000;background:#fff;--radio-gap:clamp(36px,6vw,96px)}
+.radio-article-page .radio-main{padding:12px var(--page-x) 0;max-width:1520px;margin:auto}
+.radio-opening,.radio-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--radio-gap);align-items:start}
+.radio-title-column{min-width:0;align-self:end}
+.radio-title-column h1{font:400 clamp(48px,5.7vw,90px)/.97 "plantin",Georgia,serif;letter-spacing:-.025em;margin:32px 0}
+.radio-kicker,.radio-byline,.radio-object figcaption,.radio-spread-heading,.radio-editor-note{font:400 11px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000}
+.radio-kicker,.radio-spread-heading{text-transform:uppercase;letter-spacing:.08em}
+.radio-byline strong{font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.radio-kicker,.radio-byline{margin:0}
+.radio-opening-column{min-width:0}
+.radio-object{margin:0;min-width:0}
+.radio-sleeve-image{display:block;width:100%;height:auto}
+.radio-studio-photo img{display:block}
+.artwork-blank{background:#f2f2f0;position:relative;aspect-ratio:1/1.45;width:100%}
+.artwork-blank>span{position:absolute;bottom:14px;left:16px;font:10px/1 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000}
+.radio-object figcaption{margin:13px 0 0;max-width:44em}
+.radio-hero-image{display:block;width:100%;height:calc(100svh - 160px);min-height:380px;object-fit:contain}
+.radio-deck{font:400 clamp(26px,2.6vw,38px)/1.2 "plantin",Georgia,serif;margin:0 0 22px;max-width:16em}
+.radio-article{margin-top:120px}
+.radio-row{margin:0 0 100px;scroll-margin-top:100px}
+.radio-row.radio-continuation{margin-bottom:0}
+.radio-continuation-copy{min-width:0}
+.radio-continuation-copy > section{scroll-margin-top:100px}
+.radio-continuation-copy > section:not(:last-child){margin-bottom:clamp(26.25px,2.0625vw,31.25px)}
+.radio-continuation-copy > section:last-child{margin-bottom:100px}
+.radio-rail{position:sticky;top:100px;align-self:start}
+.radio-rail .sleeve{width:76%}
+.radio-rail .sleeve .artwork-blank{max-height:calc(100svh - 200px)}
+.studio .artwork-blank{aspect-ratio:4/3}.landscape .artwork-blank{aspect-ratio:3/2}.insert .artwork-blank{aspect-ratio:1.8}.record .artwork-blank{aspect-ratio:1}
+.radio-dedications{scroll-margin-top:100px}
+.radio-dedications > div:last-child > p:last-child{margin-bottom:0}
+.radio-row > .radio-prose:only-child{grid-column:-2 / -1}
+.radio-prose{min-width:0;font:400 clamp(21px,1.65vw,25px)/1.46 "plantin",Georgia,serif}
+.radio-prose p{margin:0 0 1.25em}.radio-prose>div:last-child>p:last-child{margin-bottom:0}
+.radio-spread{margin:100px 0 120px}
+.radio-spread-heading{display:flex;justify-content:space-between;gap:20px;border-top:1px solid #000;padding-top:14px;margin-bottom:40px}
+.radio-sleeve-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:54px 38px}
+
+.radio-spread[data-cassette-gallery]{width:min(100%,1020px);margin-inline:auto}
+.radio-sleeve-mat{aspect-ratio:33 / 35;overflow:hidden;background:#fff}
+.radio-sleeve-mat .radio-sleeve-image{height:100%;object-fit:contain;filter:brightness(1.045)}
+.radio-sleeve-mat--wide-margin .radio-sleeve-image{transform:scale(1.634)}
+.radio-gallery-controls{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:30px}
+.radio-gallery-controls[hidden],#radio-cassette-covers > [hidden]{display:none}
+.radio-gallery-controls button,.radio-gallery-controls span{font:400 11px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000}
+.radio-gallery-controls button{border:0;background:none;padding:12px 0;min-height:44px;cursor:pointer}
+.radio-gallery-controls button[aria-disabled="true"]{opacity:.45;cursor:default}
+.radio-gallery-controls span{font-variant-numeric:tabular-nums}
+.radio-duet{display:grid;grid-template-columns:1.25fr .75fr;gap:var(--radio-gap);align-items:center;margin:110px 0 130px}
+.radio-pullquote{max-width:1000px;margin:110px auto 120px;text-align:center;padding:0 6vw}
+.radio-pullquote blockquote{font:400 clamp(32px,4.2vw,64px)/1.1 "plantin",Georgia,serif;margin:0}
+.radio-editor-note{margin:24px 0 28px;padding:16px 0 0;border-top:1px solid #ccc;font-size:13px;line-height:1.6}
+.radio-editor-note p:last-child{margin-bottom:0}
+.radio-article-page a:focus-visible{outline:2px solid #000;outline-offset:5px}
+.radio-prose a{text-decoration-thickness:1px;text-underline-offset:4px}
+@media(max-width:760px){
+.radio-article-page .radio-main{padding:12px 20px 0}.radio-opening,.radio-row{grid-template-columns:1fr;gap:36px}
+.radio-title-column h1{font-size:clamp(42px,11vw,68px);margin:26px 0}
+.radio-hero-image{height:52svh;min-height:260px}.radio-deck{font-size:26px;margin-bottom:18px}.radio-article{margin-top:64px}
+.radio-row,.radio-continuation-copy > section:last-child{margin-bottom:68px}.radio-continuation-copy > section:not(:last-child){margin-bottom:27.5px}.radio-rail{position:static}.radio-rail .sleeve{width:72%;margin:auto}.radio-rail .sleeve .artwork-blank{max-height:none}
+.radio-prose{font-size:22px;line-height:1.46}.radio-spread{margin:70px 0}.radio-sleeve-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 18px}
+.radio-duet{grid-template-columns:1fr;gap:40px;margin:70px 0}.radio-duet .sleeve{width:72%;margin:auto}.radio-pullquote{margin:70px auto;padding:0 8px}
+.radio-object figcaption{font-size:10px}
+}
+</style>
 <link rel="stylesheet" href="bylines.css?v=20261107">
 <style>
-body.renaissance-article .article-shell .body-block .sources-section .section-heading { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.4; margin: 0 0 20px; }
-.renaissance-article .article-body-media img { max-height: calc(100svh - 160px); object-fit: contain; object-position: left top; }
-@media (max-width: 760px) { .renaissance-article .article-body-media img { max-height: none; } }
-</style>
-</head>
-<body class="ohrid-article renaissance-article">
+.sacred-art-page .radio-prose h2{font:400 30px/1.1 "plantin",Georgia,serif;margin:0 0 24px;letter-spacing:0}
+.sacred-art-page .radio-rail .article-inline-media{width:100%;max-width:none;margin:0}
+.sacred-art-page .radio-rail img{display:block;width:100%;height:auto;max-height:calc(100svh - 160px);object-fit:contain;object-position:left top}
+.sacred-art-page .sources-section{margin-top:64px}
+.sacred-art-page .sources-section h2,.sacred-art-page .sources-section p{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.65}
+.sacred-art-page .sources-section p{margin-bottom:1.1em}
+.sacred-art-page .sources-section a{text-decoration:none;color:#000}
+.sacred-art-page .sources-section a:hover{text-decoration:underline}
+@media(max-width:760px){.sacred-art-page .radio-prose h2{font-size:26px}.sacred-art-page .radio-rail img{max-height:none}}
+</style></head>
+<body class="ohrid-article radio-article-page sacred-art-page">
 
 <header class="site-header">
   <div class="shell header-frame">
@@ -1046,45 +1180,27 @@ body.renaissance-article .article-shell .body-block .sources-section .section-he
   </div>
 </header>
 
-<main>
-  <header class="feature muzej-sticky-opening"><div class="feature-inner"><div class="feature-copy">
-        <p class="feature-byline muzej-byline">Words <strong>Aleksandar Trajkovski</strong></p>
-        <h1 class="feature-title">Paint, Wood,<br>and Sacred Space</h1>
-      </div><div class="feature-scroll-column"><figure class="feature-media">
-        <img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/new-hero.png" alt="Collage detail of an archangel fresco and a painted hand against a blue field.">
-      </figure><p class="feature-deck">Four works of Macedonian sacred art reveal how painters and carvers shaped grief, movement, and devotion.</p></div></div></header>
-
-  <article class="article-shell article-longform">
-<section class="content-row">
-<figure class="article-body-media"><img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/nerezi-lamentation.webp" alt="The Virgin holds the dead Christ in the Lamentation fresco at Saint Panteleimon, Nerezi." loading="lazy" decoding="async"><figcaption><em>Lamentation</em>, 1164. Saint Panteleimon, Gorno Nerezi. <a href="https://commons.wikimedia.org/wiki/File:Meister_von_Nerezi_001.jpg">Public-domain reproduction</a>.</figcaption></figure>
-<div class="article-body-copy body-block"><h2 class="section-heading">Nerezi</h2><p>At Saint Panteleimon in Gorno Nerezi, the Virgin draws the dead Christ toward her until their faces touch. His body stretches across her lap, while Saint John bends to hold his hand. The mourners crowd close. Their grief is carried by the weight of a head, the curve of a back, and the effort of holding a body that can no longer support itself.</p>
+<main id="main-content" class="radio-main"><header class="radio-opening"><div class="radio-title-column"><p class="radio-kicker">Art | History</p><h1>Paint, Wood, and Sacred Space</h1><p class="radio-deck">Four works of Macedonian sacred art reveal how painters and carvers shaped grief, movement, and devotion.</p><p class="radio-byline muzej-byline">Words <strong>Aleksandar Trajkovski</strong></p></div><div class="radio-opening-column"><figure class="radio-object hero-object">
+        <img class="radio-hero-image" fetchpriority="high" src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/new-hero.png" alt="Collage detail of an archangel fresco and a painted hand against a blue field.">
+      </figure></div></header><article class="radio-article" aria-label="Paint, Wood, and Sacred Space by Aleksandar Trajkovski"><section class="radio-row"><div class="radio-rail"><figure class="radio-object article-inline-media"><img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/nerezi-lamentation.webp" alt="The Virgin holds the dead Christ in the Lamentation fresco at Saint Panteleimon, Nerezi." loading="lazy" decoding="async"><figcaption><em>Lamentation</em>, 1164. Saint Panteleimon, Gorno Nerezi. <a href="https://commons.wikimedia.org/wiki/File:Meister_von_Nerezi_001.jpg">Public-domain reproduction</a>.</figcaption></figure></div><div class="radio-prose"><h2 class="section-heading">Nerezi</h2><p>At Saint Panteleimon in Gorno Nerezi, the Virgin draws the dead Christ toward her until their faces touch. His body stretches across her lap, while Saint John bends to hold his hand. The mourners crowd close. Their grief is carried by the weight of a head, the curve of a back, and the effort of holding a body that can no longer support itself.</p>
 <p>The church was built in 1164 by Alexios Komnenos, a nephew of Emperor John II Komnenos. Its patron belonged to the Byzantine imperial family. The painters’ names have not survived. Their <em>Lamentation</em> occupies a wall in a church whose small scale brings the painted mourners close to the congregation.</p>
 <p>Follow the figures from left to right. The Virgin’s dark mantle forms a broad curve around Christ’s head and shoulders. John’s bent torso continues the downward movement. At the feet, the other mourners close the group. Above them, the bare slopes of the landscape repeat the inclinations of the bodies. Almost everything directs attention toward the pale, horizontal figure of Christ.</p>
 <p>The painters leave little room for distraction. There is no elaborate architecture or distant view to explore. The blue background holds the figures together, and the rocky ground offers only a shallow space in which to gather. The restraint makes each contact easier to see. Mary presses her cheek against her son’s. John brings Christ’s hand toward his face. The body joins one mourner to the next.</p>
 <p>Nerezi rewards looking at hands as closely as faces. A face can identify sorrow, but the hands show what the mourners do with it. They cradle, lift, and hold. The subject belongs to sacred history, while these gestures are familiar from the care of any vulnerable body.</p>
-<p>That intimacy also depends on the setting. A reproduction isolates the scene as a picture. On the church wall, it belongs to a larger painted account of Christ’s life, encountered by people gathered for worship. Its tenderness has a public place.</p></div>
-</section>
-<section class="content-row">
-<figure class="article-body-media"><img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/kurbinovo-archangel-full.webp" alt="The Archangel Gabriel steps forward in the Annunciation fresco at Kurbinovo." loading="lazy" decoding="async"><figcaption>Archangel Gabriel from the <em>Annunciation</em>, 1191. Saint George, Kurbinovo.</figcaption></figure>
-<div class="article-body-copy body-block"><h2 class="section-heading">Kurbinovo</h2><p>Twenty-seven years later, the painters at Saint George in Kurbinovo gave the human figure a different kind of urgency. An inscription records the beginning of the church’s decoration on April 25, 1191. The building near Lake Prespa is a simple rectangle with a semicircular apse. Its interior contains a painted world far more elaborate than the exterior suggests.</p>
+<p>That intimacy also depends on the setting. A reproduction isolates the scene as a picture. On the church wall, it belongs to a larger painted account of Christ’s life, encountered by people gathered for worship. Its tenderness has a public place.</p></div></section>
+<section class="radio-row"><div class="radio-rail"><figure class="radio-object article-inline-media"><img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/kurbinovo-archangel-full.webp" alt="The Archangel Gabriel steps forward in the Annunciation fresco at Kurbinovo." loading="lazy" decoding="async"><figcaption>Archangel Gabriel from the <em>Annunciation</em>, 1191. Saint George, Kurbinovo.</figcaption></figure></div><div class="radio-prose"><h2 class="section-heading">Kurbinovo</h2><p>Twenty-seven years later, the painters at Saint George in Kurbinovo gave the human figure a different kind of urgency. An inscription records the beginning of the church’s decoration on April 25, 1191. The building near Lake Prespa is a simple rectangle with a semicircular apse. Its interior contains a painted world far more elaborate than the exterior suggests.</p>
 <p>Gabriel, approaching the Virgin in the <em>Annunciation</em>, seems caught midway through a step. His forward arm announces his arrival. His wings rise behind him, and the fabric around his legs opens into long, looping folds. The figure is slender, with a small head above an unusually extended body. Those proportions give the movement its reach.</p>
 <p>Look at the cloth around the lower legs. Its pale edges twist outward, double back, and narrow into points. Some folds describe the body beneath them. Others carry the movement beyond the body, as though the garment were still responding to the angel’s arrival. The painters use drapery to make a stationary figure appear unsettled by motion.</p>
 <p>The face is comparatively composed. Gabriel’s attention remains directed toward the Virgin even as the fabric swirls around him. The contrast gives the figure a clear purpose. The limbs, wings, and folds all belong to a messenger moving toward someone.</p>
 <p>Nerezi gathers its mourners around a body. Kurbinovo opens Gabriel’s outline into the surrounding blue. Placing the two works beside one another makes the differences visible without requiring a story of artistic progress. They were made within the same broad religious culture, for different churches and different moments in the biblical narrative. Mourning draws the figures inward. An announcement sends an arm across the wall.</p>
-<p>The complete figure matters here. A photograph of the face preserves Gabriel’s expression but loses the long passage from shoulder to foot. Much of the painting’s energy resides in that distance, where the cloth repeatedly breaks away from the expected shape of a standing person.</p></div>
-</section>
-<section class="content-row">
-<figure class="article-body-media"><img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/dicho-pantonhara-1844.webp" alt="Dicho Zograf’s Mother of God Pantonhara, with the crowned Virgin holding the Christ Child." loading="lazy" decoding="async"><figcaption>Dicho Zograf, <em>Mother of God Pantonhara</em>, 1844. Icon Gallery, Ohrid. <a href="https://commons.wikimedia.org/wiki/File:Mother_of_God_Pantonhara_-_Joy_to_All_-_Dich_Zograf_1844_Jovan_Kaneo_Church_Ohrid_2.jpg">Public-domain reproduction</a>.</figcaption></figure>
-<div class="article-body-copy body-block"><h2 class="section-heading">Dicho Zograf</h2><p>By the nineteenth century, painters in Macedonia were working for church communities under Ottoman rule. Growing trade and craft production helped support new commissions. The village workshop remained an important place to learn a profession and organize work. Dicho Zograf established his own group in Tresonče after training with the painters Mihail of Samarina and his son.</p>
+<p>The complete figure matters here. A photograph of the face preserves Gabriel’s expression but loses the long passage from shoulder to foot. Much of the painting’s energy resides in that distance, where the cloth repeatedly breaks away from the expected shape of a standing person.</p></div></section>
+<section class="radio-row"><div class="radio-rail"><figure class="radio-object article-inline-media"><img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/dicho-pantonhara-1844.webp" alt="Dicho Zograf’s Mother of God Pantonhara, with the crowned Virgin holding the Christ Child." loading="lazy" decoding="async"><figcaption>Dicho Zograf, <em>Mother of God Pantonhara</em>, 1844. Icon Gallery, Ohrid. <a href="https://commons.wikimedia.org/wiki/File:Mother_of_God_Pantonhara_-_Joy_to_All_-_Dich_Zograf_1844_Jovan_Kaneo_Church_Ohrid_2.jpg">Public-domain reproduction</a>.</figcaption></figure></div><div class="radio-prose"><h2 class="section-heading">Dicho Zograf</h2><p>By the nineteenth century, painters in Macedonia were working for church communities under Ottoman rule. Growing trade and craft production helped support new commissions. The village workshop remained an important place to learn a profession and organize work. Dicho Zograf established his own group in Tresonče after training with the painters Mihail of Samarina and his son.</p>
 <p>His <em>Mother of God Pantonhara</em>, painted in 1844 for Saint John at Kaneo, is now in Ohrid’s Icon Gallery. It is one of his early signed works. The Virgin holds the Christ Child on her left arm. Both wear crowns, and their garments present them with the splendor of rulers.</p>
 <p>The image is crowded with things to examine. Gold ornaments spread across the Virgin’s mantle. A green garment appears beneath it. The crowns, scepters, and patterned borders give the small panel a density quite different from Nerezi’s spare landscape. The eye moves between the faces and the decorated surfaces around them.</p>
 <p>Dicho handles those surfaces differently. The cloth is divided by crisp edges and repeated ornament, while the cheeks and the areas around the eyes change gradually from shadow to light. The faces appear softer than the elaborate clothing. Their relative simplicity gives the viewer somewhere to return after following the patterns.</p>
 <p>An icon painter worked with subjects that a congregation needed to recognize. The Virgin and Child had established poses, attributes, and inscriptions. Within those expectations, a painter could alter the width of a face, the shape of an eyebrow, the warmth of a cheek, or the spacing of ornaments. Close looking makes those decisions visible.</p>
-<p>The panel also changes the viewer’s relationship to the image. Gabriel at Kurbinovo belongs to the architecture and to the Virgin painted across from him. Dicho’s figures occupy a bounded object. The narrow border gathers their crowns, clothing, and faces into a surface that can be approached at close range. The work invites the eye to linger over details small enough to disappear in a view of the whole church.</p></div>
-</section>
-<section class="content-row">
-<figure class="article-body-media"><img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/saint-saviour-carving.webp" alt="Small carved figures amid foliage in the walnut iconostasis at Saint Saviour, Skopje." loading="lazy" decoding="async"><figcaption>Iconostasis detail, Saint Saviour, Skopje, completed 1824. Photograph, resized and converted to WebP, by <a href="https://commons.wikimedia.org/wiki/File:Ottoman_figures,_Iconostasis_in_the_Church_of_Sveti_Spas,_Northern_Macedonia.jpg">Sait Can Kutsal</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</figcaption></figure>
-<div class="article-body-copy body-block"><h2 class="section-heading">Saint Saviour</h2><p>At Saint Saviour in Skopje, the surface becomes deep enough to cast its own shadows. Petre Filipovski Garkata and artisans from Gari completed the church’s walnut iconostasis in 1824. The carved screen separates the congregation’s space from the sanctuary, carrying icons within a structure of columns, doors, and relief panels.</p>
+<p>The panel also changes the viewer’s relationship to the image. Gabriel at Kurbinovo belongs to the architecture and to the Virgin painted across from him. Dicho’s figures occupy a bounded object. The narrow border gathers their crowns, clothing, and faces into a surface that can be approached at close range. The work invites the eye to linger over details small enough to disappear in a view of the whole church.</p></div></section>
+<section class="radio-row"><div class="radio-rail"><figure class="radio-object article-inline-media"><img src="./Assets/Macedonian%20Renaissance/Article%20Photos/web/saint-saviour-carving.webp" alt="Small carved figures amid foliage in the walnut iconostasis at Saint Saviour, Skopje." loading="lazy" decoding="async"><figcaption>Iconostasis detail, Saint Saviour, Skopje, completed 1824. Photograph, resized and converted to WebP, by <a href="https://commons.wikimedia.org/wiki/File:Ottoman_figures,_Iconostasis_in_the_Church_of_Sveti_Spas,_Northern_Macedonia.jpg">Sait Can Kutsal</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</figcaption></figure></div><div class="radio-prose"><h2 class="section-heading">Saint Saviour</h2><p>At Saint Saviour in Skopje, the surface becomes deep enough to cast its own shadows. Petre Filipovski Garkata and artisans from Gari completed the church’s walnut iconostasis in 1824. The carved screen separates the congregation’s space from the sanctuary, carrying icons within a structure of columns, doors, and relief panels.</p>
 <p>From a distance, the carving gathers into a dark, densely worked band. Move closer and separate forms emerge. Leaves curl away from stems. Small bodies turn beneath arches. Figures occupy pockets in the foliage, and the borders around a scene generate further branches and scrolls. There is a great deal to see within a few inches of wood.</p>
 <p>The effect depends on how far the carvers cut into the material. Shallow marks can describe a fold or a strand of hair. Deeper cuts open spaces behind an arm, a leaf, or the edge of a garment. These recesses remain dark when the projecting surfaces catch the light. The contrast helps a miniature figure separate from the crowded panel around it.</p>
 <p>The screen also brings sacred narrative into the visible world of its makers. Biblical figures wear local dress. The workshop included representations of the craftsmen themselves within the carving. Alongside the religious subjects, the work preserves an account of clothing, tools, and the people who knew how to handle them.</p>
@@ -1095,12 +1211,7 @@ body.renaissance-article .article-shell .body-block .sources-section .section-he
 <p>Milčo Georgievski. <a href="https://www.academia.edu/9843052/The_icon_of_the_Mother_of_God_Pantonhara_in_the_Icon_Gallery">“The Icon of the Mother of God Pantonhara in the Icon Gallery–Ohrid.”</a> <em>Ikonimaalari</em> 2 (2014), 70–79.</p>
 <p>Sasho Cvetkovski. <a href="https://www.ceeol.com/search/article-detail?id=216305">“The Iconography of Dicho Zograph in the Church of St. George, Lazaropole (Contributions to the Study of the Earliest Signed Works).”</a> <em>Problems of Art</em> 1 (2011), 24–28.</p>
 <p>Nada Andonovska. <a href="https://sharinghistory.museumwnf.org/database_item.php?id=object%3BAWE%3Bmc%3B48%3Ben">“Iconostasis.”</a> Museum of Macedonia, Skopje, in Museum With No Frontiers’ <em>Sharing History</em>.</p>
-</section></div>
-</section>
-</article>
-
-  <section class="more-from-muzej" data-more-from-muzej aria-labelledby="more-from-muzej-title"></section>
-</main>
+</section></div></section></article><section class="more-from-muzej" data-more-from-muzej aria-labelledby="more-from-muzej-title"></section></main>
 
 <footer class="site-footer muzej-footer">
   <div class="footer-inner">
