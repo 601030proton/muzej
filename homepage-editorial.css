@@ -165,3 +165,11 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   .simple-footer nav { gap: 14px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Select one lead story and place its counterpart farther down the page. */
+html:not([data-home-lead="radio"]) [data-home-slot="hero"][data-home-story="radio"],
+html:not([data-home-lead="radio"]) [data-home-slot="secondary"][data-home-story="concrete"],
+html[data-home-lead="radio"] [data-home-slot="hero"][data-home-story="concrete"],
+html[data-home-lead="radio"] [data-home-slot="secondary"][data-home-story="radio"] { display: none; }
+.home [data-home-story="radio"] img { aspect-ratio: 3 / 4; object-fit: contain; background: #fff; }
+.home-feature-caption { margin-top: 20px; font: 400 11px/1.5 var(--sans); text-transform: uppercase; letter-spacing: .08em; }

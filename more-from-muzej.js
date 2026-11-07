@@ -93,7 +93,7 @@
     {
       slug: "before-the-dawn",
       href: "before-the-dawn.html",
-      title: "Before the Dawn",
+      title: "Eurovision 1998: Vlado Janevski",
       kicker: "Music | Eurovision",
       dek: "Vlado Janevski gave Macedonia its first Eurovision entry, and its first taste of being seen.",
       image: "./Assets/Vlado/Pics/hero.png",

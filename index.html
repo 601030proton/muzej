@@ -19,9 +19,10 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="fonts.css?v=20261101-consistency-3" rel="stylesheet"/>
 
-<link href="homepage-editorial.css?v=20261031-ohrid-space" rel="stylesheet"/>
+<link href="homepage-editorial.css?v=20261107-features" rel="stylesheet"/>
 
 <link rel="stylesheet" href="article-system.css?v=20261101-consistency-3">
+<script>document.documentElement.dataset.homeLead = Math.random() < 0.5 ? "concrete" : "radio";</script>
 </head>
 <body>
 <div class="page">
@@ -55,16 +56,21 @@
 </div>
 </div>
 </header>
-<main class="home"><section aria-labelledby="hero-title" class="hero-feature skopje-home-hero" id="hero-feature">
-<div class="shell skopje-home-hero-shell">
-<article class="skopje-home-hero-stage" data-story="skopje-brutalism-lead">
+<main class="home"><section aria-label="Featured story" class="hero-feature skopje-home-hero" id="hero-feature"><div class="shell skopje-home-hero-shell">
+<article data-home-slot="hero" data-home-story="concrete" class="skopje-home-hero-stage" data-story="skopje-brutalism-lead">
 <div class="skopje-home-hero-copy">
 <p class="home-eyebrow">Architecture | Skopje</p><h1 id="hero-title"><a href="./skopje-brutalism.html">Concrete Skopje</a></h1>
 <p class="lead-deck">Modern architecture in post-earthquake Skopje.</p><a class="text-link" href="./skopje-brutalism.html">Explore the guide <span aria-hidden="true">↗</span></a></div>
 <a aria-label="Read Concrete Skopje: A Field Guide" class="skopje-home-hero-media" href="./skopje-brutalism.html"><img alt="Skopje’s Central Post Office and telecommunications complex" fetchpriority="high" height="6000" src="./Assets/A%20Spatial%20Field%20Guide%20to%20Concrete%20Skopje/Telecommunications%20Centre%20and%20Central%20Post%20Office.png" width="4500"/></a>
 </article>
+<article data-home-slot="hero" data-home-story="radio" class="skopje-home-hero-stage">
+<div class="skopje-home-hero-copy">
+<p class="home-eyebrow">Music | Diaspora</p><h1 id="radio-home-title"><a href="./radio-free-macedonia.html">Radio Free Macedonia</a></h1>
+<p class="lead-deck">Inside Macedonian community radio in Adelaide, Australia.</p><a class="text-link" href="./radio-free-macedonia.html">Read the story <span aria-hidden="true">↗</span></a>
 </div>
-</section><section aria-label="Selected Stories" class="section" id="selected-stories">
+<a aria-label="Read Radio Free Macedonia" class="skopje-home-hero-media" href="./radio-free-macedonia.html"><img alt="Black cassette with a handwritten Macedonian mix label and rotating reels" fetchpriority="high" src="./Assets/Radio%20Free%20Macedonia/radio-free-macedonia-hero.gif" width="950" height="714"/></a>
+</article>
+</div></section><section aria-label="Selected Stories" class="section" id="selected-stories">
 <div class="shell section-frame">
 <div class="read-next-header">
 <h2 class="read-next-title">Selected Stories</h2>
@@ -110,19 +116,16 @@
 </a>
 </article>
 </div>
-</section><section aria-labelledby="vlado-feature-title" class="section home-vlado" id="vlado-feature">
-<div class="shell">
-<article class="tose-descendants-grid">
-<div class="tose-descendants-copy">
-<h2 class="tose-descendants-title" id="vlado-feature-title"><a href="./before-the-dawn.html"><span class="vlado-name">Vlado Janevski:</span><span>Before the Dawn</span></a></h2>
-<p class="vlado-caption">Music, 1998</p>
-</div>
-<a aria-label="Read Before the Dawn" class="tose-descendants-media" href="./before-the-dawn.html">
-<img alt="Vlado Janevski performing on a brightly lit stage in a blue suit." class="tose-descendants-image" height="1350" loading="lazy" src="./Assets/Vlado/Pics/hero.png" style="aspect-ratio: 1080 / 1350;" width="1080"/>
-</a>
+</section><section aria-label="Also featured" class="section home-secondary-feature" id="secondary-feature"><div class="shell">
+<article class="tose-descendants-grid" data-home-slot="secondary" data-home-story="radio">
+<div class="tose-descendants-copy"><h2 class="tose-descendants-title"><a href="./radio-free-macedonia.html">Radio Free Macedonia</a></h2><p class="home-feature-caption">Music | Diaspora</p></div>
+<a aria-label="Read Radio Free Macedonia" class="tose-descendants-media" href="./radio-free-macedonia.html"><img class="tose-descendants-image" src="./Assets/Radio%20Free%20Macedonia/radio-free-macedonia-hero.gif" alt="Black cassette with a handwritten Macedonian mix label and rotating reels" width="950" height="714" loading="lazy"/></a>
 </article>
-</div>
-</section><section aria-label="Editorial features" class="section editorial-spread" id="books-and-film">
+<article class="tose-descendants-grid" data-home-slot="secondary" data-home-story="concrete">
+<div class="tose-descendants-copy"><h2 class="tose-descendants-title"><a href="./skopje-brutalism.html">Concrete Skopje</a></h2><p class="home-feature-caption">Architecture | Skopje</p></div>
+<a aria-label="Read Concrete Skopje" class="tose-descendants-media" href="./skopje-brutalism.html"><img class="tose-descendants-image" src="./Assets/A%20Spatial%20Field%20Guide%20to%20Concrete%20Skopje/Telecommunications%20Centre%20and%20Central%20Post%20Office.png" alt="Skopje’s Central Post Office and telecommunications complex" width="4500" height="6000" loading="lazy"/></a>
+</article>
+</div></section><section aria-label="Editorial features" class="section editorial-spread" id="books-and-film">
 <div class="shell editorial-spread-grid">
 <a class="editorial-spread-card editorial-spread-card--no-image-overlay" href="./five-books-with-macedonian-state.html">
 <img alt="A reader holding Macedonia and the Macedonians: A History by Andrew Rossos, with a coffee cup." loading="lazy" src="./Assets/5%20Books/Images/five-books-reading-hero.webp" style="object-position: center top;"/>
@@ -200,6 +203,7 @@
 <h2 class="section-title explore-header-title" id="explore-title">Further reading</h2>
 </div>
 <div class="explore-stack">
+<a class="explore-row" href="./before-the-dawn.html"><div class="explore-row-media"><div class="explore-image explore-image--photo"><img src="./Assets/Vlado/Pics/hero.png" alt="Vlado Janevski performing on stage in a blue suit" width="1080" height="1350" loading="lazy"/></div></div><div class="explore-row-copy"><h3 class="explore-row-title">Eurovision 1998: Vlado Janevski</h3></div></a>
 <a class="explore-row" href="./skopje-tange.html">
 <div class="explore-row-media"><div class="explore-image explore-image--photo"><img alt="Kenzo Tange and the reconstruction of Skopje" height="6000" loading="lazy" src="./Assets/Kenzo%20Article/Tange%20Pics/kenzohero.png" width="4500"/></div></div>
 <div class="explore-row-copy"><h3 class="explore-row-title">Tokyo on the Vardar</h3></div>
@@ -246,7 +250,7 @@
 </a>
 </div>
 </div>
-</section><section class="section home-archive" id="archive"><div class="shell"><details><summary>Archive <span class="archive-count">20 stories <span aria-hidden="true">+</span></span></summary><div class="archive-body"><label for="archive-search">Find a story, person, or place</label><input autocomplete="off" id="archive-search" placeholder="Search the archive" type="search"/><p id="archive-results" role="status"></p><ul class="archive-list"><li><a href="./skopje-brutalism.html">Concrete Skopje</a></li><li><a href="./lazarki.html">Lazarki</a></li><li><a href="./quality-of-life.html">Where to Live in Macedonia</a></li><li><a href="./wearing-the-nation.html">The Nation on Their Backs</a></li><li><a href="./venus-of-skupi.html">The Venus of Skupi</a></li><li><a href="./lake-ohrid-architecture-memory.html">The Ohrid House and the Logic of Place</a></li><li><a href="./five-books-with-macedonian-state.html">Start Here: Five Books with Macedonian State</a></li><li><a href="./tattoo.html">On a Film That Shaped the Macedonian Psyche</a></li><li><a href="./vangel-naumovski.html">The Metamorphosis of Vangel Naumovski</a></li><li><a href="./martinoski.html">The Many Faces of Nikola Martinoski</a></li><li><a href="./macedonian-renaissance.html">Toward an Art History of the Macedonian Renaissance</a></li><li><a href="./marko-micov.html">Marko Micov Carries Macedonia With Him</a></li><li><a href="./robert-gligorov.html">Robert Gligorov: Between the Dream and Reality</a></li><li><a href="./skopje-tange.html">Tokyo on the Vardar</a></li><li><a href="./dodole.html">Dodole</a></li><li><a href="./peppers.html">Peppers (Пиперки)</a></li><li><a href="./longing-for-south.html">Longing for the South (Т'га за југ)</a></li><li><a href="./how-to-taste-vranec.html">How to taste Vranec (like a sommelier)</a></li><li><a href="./before-the-dawn.html">Before the Dawn</a></li><li><a href="./prespa.html">Prespa</a></li></ul></div></details></div></section><section aria-labelledby="newsletter-title" class="section" id="newsletter-strip">
+</section><section class="section home-archive" id="archive"><div class="shell"><details><summary>Archive <span class="archive-count">21 stories <span aria-hidden="true">+</span></span></summary><div class="archive-body"><label for="archive-search">Find a story, person, or place</label><input autocomplete="off" id="archive-search" placeholder="Search the archive" type="search"/><p id="archive-results" role="status"></p><ul class="archive-list"><li><a href="./radio-free-macedonia.html">Radio Free Macedonia</a></li><li><a href="./skopje-brutalism.html">Concrete Skopje</a></li><li><a href="./lazarki.html">Lazarki</a></li><li><a href="./quality-of-life.html">Where to Live in Macedonia</a></li><li><a href="./wearing-the-nation.html">The Nation on Their Backs</a></li><li><a href="./venus-of-skupi.html">The Venus of Skupi</a></li><li><a href="./lake-ohrid-architecture-memory.html">The Ohrid House and the Logic of Place</a></li><li><a href="./five-books-with-macedonian-state.html">Start Here: Five Books with Macedonian State</a></li><li><a href="./tattoo.html">On a Film That Shaped the Macedonian Psyche</a></li><li><a href="./vangel-naumovski.html">The Metamorphosis of Vangel Naumovski</a></li><li><a href="./martinoski.html">The Many Faces of Nikola Martinoski</a></li><li><a href="./macedonian-renaissance.html">Toward an Art History of the Macedonian Renaissance</a></li><li><a href="./marko-micov.html">Marko Micov Carries Macedonia With Him</a></li><li><a href="./robert-gligorov.html">Robert Gligorov: Between the Dream and Reality</a></li><li><a href="./skopje-tange.html">Tokyo on the Vardar</a></li><li><a href="./dodole.html">Dodole</a></li><li><a href="./peppers.html">Peppers (Пиперки)</a></li><li><a href="./longing-for-south.html">Longing for the South (Т'га за југ)</a></li><li><a href="./how-to-taste-vranec.html">How to taste Vranec (like a sommelier)</a></li><li><a href="./before-the-dawn.html">Eurovision 1998: Vlado Janevski</a></li><li><a href="./prespa.html">Prespa</a></li></ul></div></details></div></section><section aria-labelledby="newsletter-title" class="section" id="newsletter-strip">
 <div class="shell about-strip-frame">
 <div class="about-layout" id="about-strip">
 <div>
