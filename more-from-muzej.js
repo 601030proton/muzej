@@ -73,9 +73,9 @@
     {
       slug: "macedonian-renaissance",
       href: "macedonian-renaissance.html",
-      title: "Paint, Wood, and Sacred Space",
+      title: "Figures of Devotion",
       kicker: "Art | History",
-      dek: "Four works of Macedonian sacred art reveal how painters and carvers shaped grief, movement, and devotion.",
+      dek: "Four works of Macedonian sacred art reveal how painters shaped grief, movement, and devotion.",
       image: "./Assets/Macedonian%20Renaissance/Article%20Photos/web/new-hero.png",
       alt: "Collage detail of the Archangel Gabriel fresco and a painted hand against a blue field.",
       position: "center center"
