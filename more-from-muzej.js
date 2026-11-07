@@ -53,9 +53,9 @@
     {
       slug: "marko-micov",
       href: "marko-micov.html",
-      title: "Marko Micov",
+      title: "Marko Micov on Ballet",
       kicker: "Interview | Ballet",
-      dek: "From Skopje’s State Ballet School to Milwaukee Ballet, Marko Micov reflects on discipline, distance, and what it means to carry Macedonia onto the stage.",
+      dek: "The Macedonian dancer discusses his training in Skopje and his career at Milwaukee Ballet.",
       image: "./Assets/Marko%20Interview/Text%20and%20Photos/Images/Micov-Color-Photo_Rachel_Malehorn-17.jpg",
       alt: "Marko Micov ballet portrait.",
       position: "center top"
