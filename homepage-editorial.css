@@ -90,7 +90,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 #prespa-feature .kinfolk-feature-article { display: flex; flex-direction: column; gap: 28px; }
 #prespa-feature .kinfolk-feature-title { font-size: var(--title-feature); line-height: 1.08; }
 #prespa-feature .kinfolk-feature-image { width: 100%; }
-#vlado-feature { margin-top: 0; min-height: 110svh; padding-block: clamp(140px, 14vw, 210px); display: grid; align-items: center; }
+#secondary-feature { margin-top: clamp(88px, 9vw, 144px); padding-bottom: clamp(96px, 10vw, 160px); }
 .tose-descendants-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: var(--gutter); align-items: center; }
 .tose-descendants-title { font-size: var(--title-feature); line-height: 1.08; }
 .tose-descendants-title span { display: block; }
@@ -146,7 +146,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   .story-card-kicker { font-size: 10px; min-height: 29px; margin-bottom: 8px; }
   .story-card-copy { padding-top: 14px; }
   #ohrid-feature { padding-block: 130px; }
-  #vlado-feature { min-height: 100svh; padding-block: 120px; }
+  #secondary-feature { margin-top: 72px; padding-bottom: 80px; }
   .editorial-spread-grid { grid-template-columns: 1fr; gap: 44px; }
   .editorial-spread-copy { padding-top: 18px; }
   .cinema-layout, .tose-descendants-grid, .muzej-letter__layout { grid-template-columns: 1fr; gap: 28px; }
