@@ -123,12 +123,12 @@
     {
       slug: "how-to-taste-vranec",
       href: "how-to-taste-vranec.html",
-      title: "How to taste Vranec (like a sommelier)",
-      kicker: "Wine | Guide",
-      dek: "Dark fruit, firm tannin, and the problem of being too powerful.",
-      image: "./Assets/Vranec/vranec-tasting.jpg",
-      alt: "Wine being poured into a glass during a tasting.",
-      position: "center center"
+      title: "Vranec",
+      kicker: "Wine | Culture",
+      dek: "The vineyards and cellar decisions behind Macedonia’s best-known red.",
+      image: "./Assets/Vranec/begniste-vineyards.webp",
+      alt: "Vineyards near Begnište in the Tikveš wine district.",
+      position: "center 60%"
     },
     {
       slug: "prespa",
