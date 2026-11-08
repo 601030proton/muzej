@@ -1,6 +1,16 @@
 (function () {
   var articles = [
     {
+      slug: "radio-free-macedonia",
+      href: "radio-free-macedonia.html",
+      title: "Radio Free Macedonia",
+      kicker: "Music | Diaspora",
+      dek: "Inside Macedonian community radio in Adelaide, Australia.",
+      image: "./Assets/Radio%20Free%20Macedonia/radio-free-macedonia-18-cassettes.gif",
+      alt: "Eighteen Macedonian music cassettes rotating on a white background.",
+      position: "center center"
+    },
+    {
       slug: "swallows",
       href: "swallows.html",
       title: "Swallows (Ластовици)",
