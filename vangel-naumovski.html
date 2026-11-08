@@ -1,19 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="The Metamorphosis of Vangel Naumovski. An essay from МУЗЕЈ on the Ohrid artist’s abundant, biological, and cosmological world.">
-<title>The Metamorphosis of Vangel Naumovski | МУЗЕЈ</title>
-<link rel="icon" type="image/png" href="./Assets/Font/Muzej%20Logo.ai.png">
-<link rel="apple-touch-icon" href="./Assets/Font/Muzej%20Logo.ai.png">
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&display=swap"
-/>
-<link rel="stylesheet" href="fonts.css?v=20261101-consistency-3">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="A closer look at Vangel Naumovski’s paintings, ink drawings, and architectural experiments in Ohrid." name="description"/>
+<title>The Metamorphosis of Vangel Naumovski | Muzej</title>
+<link href="./Assets/Font/Muzej%20Logo.ai.png" rel="icon" type="image/png"/>
+<link href="./Assets/Font/Muzej%20Logo.ai.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&amp;display=swap" rel="stylesheet"/>
+<link href="fonts.css?v=20261101-consistency-3" rel="stylesheet"/>
 <style>
 :root {
   --background: #ffffff;
@@ -108,7 +106,6 @@ a { color: inherit; }
   top: -107.88px;
   display: block;
 }
-
 
 .utility-link,
 .utility-menu-item {
@@ -342,12 +339,13 @@ main {
 }
 
 .section-heading {
-  margin: 0;
-  max-width: 15ch;
+  margin: 0 0 1.15em;
+  max-width: min(100%, 24ch);
   font-size: clamp(30px, 4vw, 48px);
   font-weight: 400;
   line-height: 1.02;
   letter-spacing: 0;
+  text-wrap: normal;
 }
 
 .body-block p {
@@ -355,8 +353,18 @@ main {
   font-size: clamp(23px, 1.65vw, 31px);
   line-height: 1.46;
 }
-.body-block p + p {
+.body-block p + p,
+.body-block p + .section-heading {
   margin-top: 1.95em;
+}
+
+.article-inline-media {
+  width: min(88%, 420px);
+  margin: clamp(52px, 7vw, 88px) auto;
+}
+.article-inline-media img {
+  width: 100%;
+  height: auto;
 }
 
 .pull-quote {
@@ -747,6 +755,28 @@ body.muzej-logo-hidden .site-header .brand-mark {
   .site-header .utility-panel .utility-menu-item { justify-content: center; min-height: 2.75rem; padding: 0.72rem 0; text-align: center; }
 }
 
+.article-longform {
+  padding-bottom: clamp(72px, 9vw, 132px);
+}
+.article-longform .section-heading {
+  max-width: min(100%, 24ch);
+}
+.article-longform .section-heading:first-child {
+  margin-top: 0;
+}
+.article-longform .section-heading + p {
+  margin-top: 0;
+}
+.article-longform .ohrid-sketch-spread {
+  margin-bottom: 72px;
+}
+@media (max-width: 720px) {
+  .article-longform .ohrid-sketch-spread {
+    margin-bottom: 44px;
+  }
+}
+
+
 
 @media (max-width: 768px) {
   .site-header .brand-mark {
@@ -760,10 +790,123 @@ body.muzej-logo-hidden .site-header .brand-mark {
     top: -83.62px;
   }
 }
+
+/* Keep the deck within the page grid at every screen width. */
+.lazarki-article .feature-deck {
+  width: var(--feature-w);
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: clamp(32px, 5vw, 64px) auto 0;
+  font-size: clamp(22px, 2.5vw, 36px);
+  line-height: 1.25;
+  text-wrap: pretty;
+}
 </style>
-<link rel="stylesheet" href="more-from-muzej.css?v=20261108-full-cassette">
 <style>
-.vangel-article .feature-title {
+.ohrid-article .feature-title {
+  font-family: "plantin", Georgia, serif;
+  font-size: clamp(54px, 7.8vw, 132px);
+  font-weight: 400;
+  line-height: 0.86;
+  letter-spacing: 0;
+}
+.ohrid-article .feature-byline {
+  font-family: "plantin", Georgia, serif;
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(24px, 2.2vw, 38px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+.ohrid-article .feature-kicker {
+  display: none;
+  margin: 0;
+}
+.ohrid-article .feature-copy {
+  width: min(100%, 44rem);
+  max-width: none;
+  margin: 0 auto;
+  padding-top: clamp(108px, 16vh, 190px);
+  padding-bottom: clamp(22px, 3vw, 34px);
+  justify-content: space-between;
+  gap: clamp(72px, 14vh, 180px);
+}
+@media (min-width: 981px) {
+  .ohrid-article main {
+    padding-top: clamp(6px, 1.4vh, 14px);
+  }
+
+  .ohrid-article .feature {
+    padding-top: 0;
+    padding-bottom: clamp(48px, 5vh, 72px);
+  }
+
+  .ohrid-article .feature-inner {
+    height: clamp(600px, calc(100svh - var(--nav-h, 112px) - clamp(18px, 3svh, 32px)), 780px);
+    min-height: 0;
+    align-items: stretch;
+  }
+
+  .ohrid-article .feature-media,
+  .ohrid-article .feature-copy {
+    height: 100%;
+    min-height: 0;
+  }
+
+  .ohrid-article .feature-media img {
+    height: 100%;
+    max-height: 100%;
+  }
+
+  .ohrid-article .feature-copy {
+    padding-top: clamp(34px, 5vh, 76px);
+    padding-bottom: clamp(14px, 2.2vh, 28px);
+    gap: clamp(28px, 4.6vh, 64px);
+  }
+
+  .ohrid-article .feature-title {
+    font-size: clamp(48px, 6.1vw, 100px);
+  }
+
+  .ohrid-article .feature-byline {
+    font-size: clamp(22px, 1.9vw, 32px);
+  }
+
+  .ohrid-article .feature-deck {
+    margin-top: clamp(64px, 9svh, 118px);
+  }
+}
+@media (max-width: 980px) {
+  .ohrid-article .feature-title {
+    font-size: clamp(46px, 7.2vw, 78px);
+  }
+  .ohrid-article .feature-byline {
+    font-size: clamp(20px, 2.4vw, 30px);
+  }
+  .ohrid-article .feature-copy {
+    padding-top: clamp(72px, 12vh, 126px);
+    gap: clamp(58px, 10vh, 112px);
+  }
+}
+@media (max-width: 720px) {
+  .ohrid-article .feature-copy {
+    align-items: center;
+    text-align: center;
+    padding-top: 6px;
+    gap: clamp(48px, 14vw, 72px);
+  }
+  .ohrid-article .feature-title {
+    font-size: clamp(38px, 13.4vw, 62px);
+    line-height: 0.9;
+  }
+  .ohrid-article .feature-byline {
+    margin: 0;
+    font-size: clamp(20px, 6.2vw, 28px);
+  }
+}
+
+.ohrid-article .feature-title {
   font-family: "plantin", Georgia, serif;
   font-size: clamp(42px, 5.2vw, 82px);
   font-weight: 400;
@@ -771,214 +914,337 @@ body.muzej-logo-hidden .site-header .brand-mark {
   letter-spacing: 0;
   text-transform: none;
 }
-
-@media (max-width: 980px) {
-  .vangel-article .feature-title {
-    font-size: clamp(34px, 4.35vw, 58px);
-  }
+.ohrid-article .feature-byline {
+  margin: 0 0 auto;
+  color: var(--ink-soft);
+  font-family: var(--article-serif);
+  font-size: clamp(16px, 1.18vw, 19px);
+  line-height: 1.4;
 }
-
+.ohrid-article .feature-copy {
+  max-width: 27rem;
+  justify-content: flex-start;
+  gap: 0;
+}
 @media (max-width: 720px) {
-  .vangel-article .feature-title {
+  .ohrid-article .feature-title {
     font-size: clamp(30px, 8.2vw, 38px);
     line-height: 1.03;
     width: calc(100vw - (var(--page-x) * 2));
     max-width: 100%;
     overflow-wrap: break-word;
   }
+  .ohrid-article .feature-byline {
+    margin: 28px 0 0;
+    font-size: 15px;
+  }
 }
 </style>
-<script src="more-from-muzej.js?v=20261107-ohrid-hero" defer></script>
-<link rel="stylesheet" href="muzej-footer-logo.css?v=20260914">
-<link rel="stylesheet" href="article-opening.css?v=20261101">
+<link href="more-from-muzej.css?v=20261108-full-cassette" rel="stylesheet"/>
+<script defer="" src="more-from-muzej.js?v=20261107-ohrid-hero"></script>
+<style>
+.lazarki-article{--lz-ink:#11110f;--lz-muted:rgba(17,17,15,.58);--lz-rule:rgba(17,17,15,.16);--lz-soft:#f3f1eb}
+
+
+
+.lazarki-article .feature-media>div,.lazarki-article .article-body-media>div,.lazarki-article .article-inline-media>div,.lazarki-article .gallery-reading-media>div,.lazarki-article .gallery-reading-feature>div{border:0!important;background:linear-gradient(180deg,#f4f2ed 0%,#ece9e2 100%)!important}
+
+
+
+
+
+
+
+.lazarki-article .body-block>p{max-width:34rem;font-size:clamp(23px,1.65vw,31px);line-height:1.46;color:var(--lz-ink);font-weight:400}
+.lazarki-article .body-block>p+p{margin-top:1.45em}
+.lazarki-article .lazarki-intro{margin-bottom:clamp(110px,14vw,210px)}
+.lazarki-article .lazarki-intro>p:first-child{max-width:34rem;font-family:var(--article-serif);font-size:clamp(23px,1.65vw,31px);font-weight:400;line-height:1.46;letter-spacing:0}
+.lazarki-article .chapter-heading{display:block;max-width:100%;margin:clamp(58px,6.5vw,92px) 0 clamp(24px,3vw,38px);padding-top:clamp(14px,1.5vw,20px);border-top:1px solid var(--lz-ink);font-family:var(--headline-serif);font-size:clamp(38px,4.6vw,66px);font-weight:400;line-height:.96;letter-spacing:-.018em;text-wrap:normal}
+
+
+
+.lazarki-article .subhead{max-width:26ch;margin:clamp(48px,6vw,84px) 0 .9em;font-family:var(--headline-serif);font-size:clamp(24px,2.35vw,34px);font-weight:400;line-height:1.08;letter-spacing:-.01em}
+.lazarki-article .subhead+p{margin-top:0}
+.lazarki-article .fact-statement{max-width:33rem!important;margin:clamp(68px,8vw,120px) 0!important;padding:clamp(18px,2.4vw,28px) 0;border-top:1px solid var(--lz-ink);border-bottom:1px solid var(--lz-rule);font-family:"plantin",Georgia,serif;font-size:clamp(30px,3.25vw,48px)!important;line-height:1.08!important;letter-spacing:-.02em}
+.lazarki-article .ritual-sequence{max-width:40rem!important;margin:clamp(46px,5vw,76px) 0!important;padding:clamp(18px,2.4vw,28px) 0;border-top:1px solid var(--lz-rule);border-bottom:1px solid var(--lz-rule);font-family:var(--sans);font-size:clamp(.78rem,.72rem + .24vw,.95rem)!important;line-height:1.7!important;letter-spacing:.035em;text-transform:uppercase}
+.lazarki-article .data-list{max-width:40rem;margin:clamp(32px,4vw,58px) 0 clamp(54px,6vw,82px);border-top:1px solid var(--lz-ink)}
+.lazarki-article .data-row{display:grid;grid-template-columns:minmax(92px,.36fr) 1fr;gap:clamp(18px,3vw,40px);padding:14px 0 16px;border-bottom:1px solid var(--lz-rule);font-family:var(--sans);font-size:.82rem;line-height:1.45}
+.lazarki-article .data-row .data-key{color:var(--lz-muted)}
+.lazarki-article .regional-atlas{width:100%;max-width:100%;margin-top:clamp(36px,5vw,64px);margin-bottom:clamp(72px,8vw,112px);overflow:visible}
+.lazarki-article .regional-atlas table{width:100%;max-width:100%;table-layout:fixed;border-collapse:collapse;font-family:var(--sans);font-size:.72rem!important;line-height:1.45!important}
+.lazarki-article .regional-atlas th,.lazarki-article .regional-atlas td{padding:12px 14px 14px 0;border-top:1px solid var(--lz-rule);vertical-align:top;text-align:left;font-weight:400;overflow-wrap:anywhere;word-break:normal}
+.lazarki-article .regional-atlas th{padding-top:10px;border-top:1px solid var(--lz-ink);font-size:.64rem;letter-spacing:.09em;text-transform:uppercase;color:var(--lz-muted)}
+.lazarki-article .regional-atlas th:nth-child(1),.lazarki-article .regional-atlas td:nth-child(1){width:24%}.lazarki-article .regional-atlas th:nth-child(2),.lazarki-article .regional-atlas td:nth-child(2){width:44%}.lazarki-article .regional-atlas th:nth-child(3),.lazarki-article .regional-atlas td:nth-child(3){width:32%}.lazarki-article .regional-atlas td:first-child{font-family:var(--headline-serif);font-size:.96rem;line-height:1.2}
+.lazarki-article .evidence-list{margin-top:clamp(32px,4vw,58px);border-top:1px solid var(--lz-ink)}
+.lazarki-article .evidence-item{display:grid;grid-template-columns:minmax(180px,.82fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);padding:clamp(24px,3.5vw,44px) 0;border-bottom:1px solid var(--lz-rule)}
+.lazarki-article .evidence-claim{margin:0;font-family:"plantin",Georgia,serif;font-size:clamp(22px,2.3vw,34px);line-height:1.04;font-weight:400}
+.lazarki-article .evidence-answer{max-width:29rem;margin:0;font-size:clamp(16px,1.16vw,19px);line-height:1.68}
+.lazarki-article .research-status{margin-top:clamp(120px,14vw,210px);padding-top:clamp(22px,3vw,34px);border-top:2px solid var(--lz-ink)}
+.lazarki-article .research-status>h2{margin:0 0 clamp(28px,4vw,52px);font-family:var(--sans);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:400}
+.lazarki-article .research-status>p:first-of-type{font-family:"plantin",Georgia,serif;font-size:clamp(30px,3.1vw,46px);line-height:1.08;letter-spacing:-.02em}
+.lazarki-article .sources-section{margin-top:clamp(120px,14vw,210px);padding-top:20px;border-top:1px solid var(--lz-ink)}
+.lazarki-article .sources-section>h2{margin:0 0 28px;font-family:var(--sans);font-size:.64rem;line-height:1.2;letter-spacing:.12em;text-transform:uppercase;font-weight:400;color:var(--lz-muted)}
+.lazarki-article .sources-section>p{max-width:44rem;margin:0!important;padding:11px 0 13px;border-top:1px solid rgba(17,17,15,.1);font-family:var(--sans);font-size:.72rem!important;line-height:1.55!important;color:var(--lz-muted)}
+.lazarki-article .sources-section>p:first-of-type{border-top:0}
+.lazarki-article .gallery-reading{margin-top:clamp(100px,13vw,190px);margin-bottom:clamp(100px,13vw,190px)}
+@media(max-width:980px){.lazarki-article .article-body-media{position:static;width:min(100%,420px)}.lazarki-article .regional-atlas{width:100%;max-width:100%}}
+@media(max-width:720px){
+.lazarki-article .chapter-heading{max-width:none;margin-top:52px;margin-bottom:24px;padding-top:14px;font-size:clamp(34px,10.5vw,48px);line-height:.98}
+.lazarki-article .subhead{margin-top:42px;font-size:clamp(23px,7vw,31px);line-height:1.08}
+.lazarki-article .evidence-item{grid-template-columns:1fr;gap:16px}
+.lazarki-article .data-row{grid-template-columns:1fr;gap:6px}
+
+}
+.lazarki-article .chapter-number,
+
+.lazarki-article .evidence-item{grid-template-columns:1fr;gap:16px}
+.lazarki-article .data-row{grid-template-columns:1fr;gap:6px}
+
+}
+
+/* Blank image placeholders occupying the exact Ohrid template image slots. */
+.lazarki-article .feature-media > div {
+  display: block;
+  width: 100%;
+  height: clamp(620px, 80vh, 920px);
+  background: #f4f2ed;
+}
+.lazarki-article .article-body-media > div {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1.08;
+  background: #f4f2ed;
+}
+.lazarki-article .article-inline-media > div,
+.lazarki-article .gallery-reading-media > div,
+.lazarki-article .gallery-reading-feature > div {
+  background: #f4f2ed;
+}
+@media (min-width: 981px) {
+  .ohrid-article .feature-media > div {
+    height: 100%;
+    max-height: 100%;
+  }
+}
+@media (max-width: 980px) {
+  .lazarki-article .feature-media > div {
+    height: clamp(500px, 70vh, 720px);
+  }
+}
+@media (max-width: 720px) {
+  .lazarki-article .feature-media > div {
+    height: clamp(360px, 56vh, 470px);
+  }
+}
+</style><link href="muzej-footer-logo.css?v=20260914" rel="stylesheet"/>
+<style>/* Lazarki surgical spacing and alignment adjustments. */
+.lazarki-article .article-body-copy > .lazarki-intro {
+  margin-top: 1.45em;
+  margin-bottom: 1.45em;
+}
+.lazarki-article .content-row > .article-body-copy > .chapter-heading:first-child {
+  margin-top: 0;
+}
+</style><style id="lazarki-sticky-opening">
+/* Title remains within the opening until the image and deck have passed. */
+.lazarki-sticky-opening .feature-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:start;height:auto;min-height:0}
+.lazarki-sticky-opening .feature-copy{position:sticky;top:100px;align-self:start;height:calc(100svh - 124px);min-height:0;max-width:none;width:100%;margin:0;padding:0 0 24px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;text-align:left;gap:24px}
+.lazarki-sticky-opening .feature-title{width:auto;max-width:100%;font-size:clamp(42px,5.2vw,82px);line-height:.98}
+.lazarki-sticky-opening .feature-byline{order:2;margin:0}
+.feature-scroll-column{min-width:0}
+.lazarki-sticky-opening .feature-media{margin:0;height:auto}
+.lazarki-sticky-opening .feature-media img{display:block;width:100%;height:calc(100svh - 124px);max-height:none;object-fit:cover}
+.lazarki-sticky-opening .feature-deck{width:100%;max-width:none;margin:40px 0 0;padding:0 0 16px;font-size:clamp(22px,2.5vw,36px);line-height:1.25;text-align:left}
+@media(max-width:760px){
+.lazarki-sticky-opening .feature-inner{grid-template-columns:1fr;gap:28px}
+.lazarki-sticky-opening .feature-copy{position:static;height:auto;min-height:0;padding:0;gap:20px;order:0}
+.lazarki-sticky-opening .feature-title{font-size:clamp(30px,8.2vw,38px)}
+.lazarki-sticky-opening .feature-media img{height:auto;max-height:none;object-fit:contain}
+.lazarki-sticky-opening .feature-deck{margin-top:28px;font-size:22px}
+}
+</style><style id="article-section-headings">
+.lazarki-article .chapter-heading{font-family:"plantin",Georgia,serif;font-size:30px;font-weight:400;line-height:1.1;letter-spacing:0;text-transform:none;border:0;padding:0;margin:64px 0 24px}
+.lazarki-article .chapter-heading:first-child{margin-top:0}
+@media(max-width:760px){.lazarki-article .chapter-heading{font-size:26px;margin-top:52px;margin-bottom:22px}.lazarki-article .chapter-heading:first-child{margin-top:0}}
+</style>
 <link rel="stylesheet" href="article-system.css?v=20261101-consistency-3">
+<style>
+.radio-article-page{color:#000;background:#fff;--radio-gap:clamp(36px,6vw,96px)}
+.radio-article-page .radio-main{padding:12px var(--page-x) 0;max-width:1520px;margin:auto}
+.radio-opening,.radio-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--radio-gap);align-items:start}
+.radio-title-column{min-width:0;align-self:end}
+.radio-title-column h1{font:400 clamp(48px,5.7vw,90px)/.97 "plantin",Georgia,serif;letter-spacing:-.025em;margin:32px 0}
+.radio-kicker,.radio-byline,.radio-object figcaption,.radio-spread-heading,.radio-editor-note{font:400 11px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000}
+.radio-kicker,.radio-spread-heading{text-transform:uppercase;letter-spacing:.08em}
+.radio-byline strong{font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.radio-kicker,.radio-byline{margin:0}
+.radio-opening-column{min-width:0}
+.radio-object{margin:0;min-width:0}
+.radio-sleeve-image{display:block;width:100%;height:auto}
+.radio-studio-photo img{display:block}
+.artwork-blank{background:#f2f2f0;position:relative;aspect-ratio:1/1.45;width:100%}
+.artwork-blank>span{position:absolute;bottom:14px;left:16px;font:10px/1 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000}
+.radio-object figcaption{margin:13px 0 0;max-width:44em}
+.radio-hero-image{display:block;width:94%;margin-inline:auto;height:calc(100svh - 160px);min-height:380px;object-fit:contain;background:#fff}
+.radio-deck{font:400 clamp(26px,2.6vw,38px)/1.2 "plantin",Georgia,serif;margin:0 0 22px;max-width:16em}
+.radio-article{margin-top:120px}
+.radio-row{margin:0 0 100px;scroll-margin-top:100px}
+.radio-row.radio-continuation{margin-bottom:0}
+.radio-continuation-copy{min-width:0}
+.radio-continuation-copy > section{scroll-margin-top:100px}
+.radio-continuation-copy > section:not(:last-child){margin-bottom:clamp(26.25px,2.0625vw,31.25px)}
+.radio-continuation-copy > section:last-child{margin-bottom:100px}
+.radio-rail{position:sticky;top:100px;align-self:start}
+/* Keep the complete image and caption inside the sticky viewport. */
+@media(min-width:761px){
+.radio-rail > .radio-object{
+  display:flex;flex-direction:column;
+  max-height:calc(100vh - 124px);
+  max-height:calc(100svh - 124px);
+  margin:0 auto;
+}
+.radio-rail > .radio-object > img{
+  display:block;width:100%;height:auto;min-height:0;flex:0 1 auto;
+  object-fit:contain;object-position:center top;
+}
+.radio-rail > .radio-object > figcaption{flex:0 0 auto}
+}
+.radio-rail .sleeve{width:76%}
+.radio-rail .sleeve .artwork-blank{max-height:calc(100svh - 200px)}
+.studio .artwork-blank{aspect-ratio:4/3}.landscape .artwork-blank{aspect-ratio:3/2}.insert .artwork-blank{aspect-ratio:1.8}.record .artwork-blank{aspect-ratio:1}
+.radio-dedications{scroll-margin-top:100px}
+.radio-dedications > div:last-child > p:last-child{margin-bottom:0}
+.radio-row > .radio-prose:only-child{grid-column:-2 / -1}
+.radio-prose{min-width:0;font:400 clamp(21px,1.65vw,25px)/1.46 "plantin",Georgia,serif}
+.radio-prose p{margin:0 0 1.25em}.radio-prose>div:last-child>p:last-child{margin-bottom:0}
+.radio-spread{margin:100px 0 120px}
+.radio-spread-heading{display:flex;justify-content:space-between;gap:20px;border-top:1px solid #000;padding-top:14px;margin-bottom:40px}
+.radio-sleeve-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:54px 38px}
+
+.radio-spread[data-cassette-gallery]{width:min(100%,1020px);margin-inline:auto}
+.radio-sleeve-mat{aspect-ratio:33 / 35;overflow:hidden;background:#fff}
+.radio-sleeve-mat .radio-sleeve-image{height:100%;object-fit:contain;filter:brightness(1.045)}
+.radio-sleeve-mat--wide-margin .radio-sleeve-image{transform:scale(1.4)}
+.radio-sleeve-grid .radio-object figcaption{font:400 14px/1.35 "plantin",Georgia,serif;letter-spacing:0}
+.radio-gallery-controls{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:30px}
+.radio-gallery-controls[hidden],#radio-cassette-covers > [hidden]{display:none}
+.radio-gallery-controls button,.radio-gallery-controls span{font:400 11px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000}
+.radio-gallery-controls button{border:0;background:none;padding:12px 0;min-height:44px;cursor:pointer}
+.radio-gallery-controls button[aria-disabled="true"]{opacity:.45;cursor:default}
+.radio-gallery-controls span{font-variant-numeric:tabular-nums}
+.radio-duet{display:grid;grid-template-columns:1.25fr .75fr;gap:var(--radio-gap);align-items:center;margin:110px 0 130px}
+.radio-pullquote{max-width:1000px;margin:110px auto 120px;text-align:center;padding:0 6vw}
+.radio-pullquote blockquote{font:400 clamp(32px,4.2vw,64px)/1.1 "plantin",Georgia,serif;margin:0}
+.radio-editor-note{margin:24px 0 28px;padding:16px 0 0;border-top:1px solid #ccc;font-size:13px;line-height:1.6}
+.radio-editor-note p:last-child{margin-bottom:0}
+.radio-article-page a:focus-visible{outline:2px solid #000;outline-offset:5px}
+.radio-prose a{text-decoration-thickness:1px;text-underline-offset:4px}
+@media(max-width:760px){
+.radio-article-page .radio-main{padding:12px 20px 0}.radio-opening,.radio-row{grid-template-columns:1fr;gap:36px}
+.radio-title-column h1{font-size:clamp(42px,11vw,68px);margin:26px 0}
+.radio-hero-image{height:52svh;min-height:260px}.radio-deck{font-size:26px;margin-bottom:18px}.radio-article{margin-top:64px}
+.radio-row,.radio-continuation-copy > section:last-child{margin-bottom:68px}.radio-continuation-copy > section:not(:last-child){margin-bottom:27.5px}.radio-rail{position:static}.radio-rail .sleeve{width:72%;margin:auto}.radio-rail .sleeve .artwork-blank{max-height:none}
+.radio-prose{font-size:22px;line-height:1.46}.radio-spread{margin:70px 0}.radio-sleeve-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 18px}
+.radio-duet{grid-template-columns:1fr;gap:40px;margin:70px 0}.radio-duet .sleeve{width:72%;margin:auto}.radio-pullquote{margin:70px auto;padding:0 8px}
+.radio-object figcaption{font-size:10px}
+}
+</style>
 <link rel="stylesheet" href="bylines.css?v=20261107">
+
+<link href="editorial-sources.css?v=20261031" rel="stylesheet">
+<style id="vangel-radio-layout">
+.vangel-radio-page .radio-title-column h1{font-size:clamp(44px,4.4vw,70px);max-width:none}
+.vangel-radio-page .radio-hero-image{width:100%;height:calc(100svh - 150px);min-height:0;object-fit:contain;object-position:center}
+.vangel-radio-page .radio-row:last-child{margin-bottom:0}
+.vangel-radio-page .radio-rail>.radio-object{width:100%;margin:0}
+.vangel-radio-page .radio-rail img{width:100%;height:auto}
+.vangel-radio-page .vangel-catalog-work{max-width:480px}
+.vangel-radio-page .vangel-catalog-work img{max-height:590px}
+.vangel-artwork-spread{width:min(100%,920px);margin:0 auto 100px}
+.vangel-artwork-spread img{width:100%;height:auto;max-width:718px;margin:0 auto}
+.vangel-artwork-spread figcaption{margin:16px auto 0;max-width:718px}
+.vangel-radio-page .sources-section.muzej-sources,
+.vangel-radio-page .sources-section.muzej-sources>h2.section-heading,
+.vangel-radio-page .sources-section.muzej-sources>p{color:#000}
+@media(max-width:760px){
+.vangel-radio-page .radio-title-column h1{font-size:clamp(36px,9vw,60px);max-width:none}
+.vangel-radio-page .radio-hero-image{height:auto;max-height:none}
+.vangel-radio-page .vangel-catalog-work{max-width:100%}
+.vangel-radio-page .vangel-catalog-work img{max-height:70svh;object-fit:contain}
+.vangel-artwork-spread{margin-bottom:68px}
+}
+</style>
 </head>
-<body class="kinfolk-article-hero vangel-article">
-
+<body class="radio-article-page vangel-radio-page">
 <header class="site-header">
-  <div class="shell header-frame">
-    <a class="brand-mark" href="index.html" aria-label="Muzej home">
-      <img class="brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png" alt="" aria-hidden="true">
-    </a>
-
-    <div class="header-tools">
-      <details class="utility-menu">
-        <summary class="utility-trigger" aria-label="Open navigation menu">
-          <span class="utility-icon" aria-hidden="true">
-            <span class="utility-icon-line"></span>
-            <span class="utility-icon-line"></span>
-            <span class="utility-icon-line"></span>
-          </span>
-        </summary>
-        <nav class="utility-panel" aria-label="Site navigation">
-          <div class="utility-panel-group">
-            <a class="utility-link" href="index.html">Home</a>
-            <a class="utility-link" href="index.html#selected-stories">Selected Stories</a>
-            <a class="utility-link" href="index.html#now-playing">Now Playing</a>
-            <a class="utility-link" href="index.html#catalogue">Catalogue</a>
+<div class="shell header-frame">
+<a aria-label="Muzej home" class="brand-mark" href="index.html">
+<img alt="" aria-hidden="true" class="brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png"/>
+</a>
+<div class="header-tools">
+<details class="utility-menu">
+<summary aria-label="Open navigation menu" class="utility-trigger">
+<span aria-hidden="true" class="utility-icon">
+<span class="utility-icon-line"></span>
+<span class="utility-icon-line"></span>
+<span class="utility-icon-line"></span>
+</span>
+</summary>
+<nav aria-label="Site navigation" class="utility-panel">
+<div class="utility-panel-group">
+<a class="utility-link" href="index.html">Home</a>
+<a class="utility-link" href="index.html#selected-stories">Selected Stories</a>
+<a class="utility-link" href="index.html#now-playing">Now Playing</a>
+<a class="utility-link" href="index.html#catalogue">Catalogue</a>
 <a class="utility-link" href="index.html#archive">Archive</a>
-            <a class="utility-link" href="about.html">About Muzej</a>
-          </div>
-          <div class="utility-panel-group utility-panel-utility">
-            <a class="utility-link" href="mailto:muzej.mk@proton.me">Contact</a>
-            <a class="utility-link" href="https://www.instagram.com/_muzej/" target="_blank" rel="noopener noreferrer">Instagram</a>
-          </div>
-        </nav>
-      </details>
-    </div>
-  </div>
+<a class="utility-link" href="about.html">About Muzej</a>
+</div>
+<div class="utility-panel-group utility-panel-utility">
+<a class="utility-link" href="mailto:muzej.mk@proton.me">Contact</a>
+<a class="utility-link" href="https://www.instagram.com/_muzej/" rel="noopener noreferrer" target="_blank">Instagram</a>
+</div>
+</nav>
+</details>
+</div>
+</div>
 </header>
-
-<main>
-  <header class="feature muzej-sticky-opening"><div class="feature-inner"><div class="feature-copy">
-        <p class="feature-byline muzej-byline">Words <strong>Aleksandar Trajkovski</strong></p>
-        <h1 class="feature-title">The Metamorphosis of Vangel Naumovski</h1>
-      </div><div class="feature-scroll-column"><figure class="feature-media">
-        <img src="./Assets/Vangel/Website%20Pics/1.png" alt="Portrait of Vangel Naumovski seated before one of his paintings">
-      </figure><p class="feature-deck">The Lake, the Body, and the Cosmos.</p></div></div></header>
-
-  <article class="article-shell">
-    <section class="article-body">
-      <figure class="article-body-media">
-        <img src="./Assets/Vangel/Website%20Pics/4.png" alt="Vangel Naumovski painting in his studio">
-      </figure>
-
-      <div class="article-body-copy body-block">
-        <p>The first fact about a painting by Vangel Naumovski is its abundance.</p>
-
-        <p>Forms multiply, swell, divide, and encroach upon one another. A plant becomes a limb; a limb becomes a current; a current twists into an orbit. Eyes, seeds, mouths, shells, eggs, flowers, and planets share the same soft anatomy. Nothing is permitted to remain isolated. Everything approaches everything else.</p>
-
-        <p>Naumovski’s paintings do not represent a stable world. They present a world caught in the act of becoming.</p>
-
-        <p>The usual categories—landscape, figure painting, fantasy, abstraction—are of limited use here. A landscape presumes a distinction between the observer and what is observed. Naumovski abolishes that distinction. The human body is not situated in nature. It is one of nature’s temporary arrangements.</p>
-
-        <p>Naumovski imagines existence as a condition of perpetual exchange. Matter passes between categories. The botanical becomes anatomical; the anatomical becomes geological; the microscopic becomes astronomical. His paintings insist that these divisions are habits of perception rather than qualities inherent in the world. The lake, the body, and the cosmos are three scales of the same image.</p>
-
-        <p>Naumovski was born on March 22, 1924, in Skrebatno, near Ohrid, and spent most of his life in the Ohrid region. He died there on June 13, 2006. These biographical facts matter not because the paintings can be reduced to place, but because Lake Ohrid gave him a visual grammar: currents, shells, aquatic plants, eggs, endemic organisms, reflected light, depths that remain unseen from the surface.</p>
-
-        <p>He did not need to leave Ohrid imaginatively because Ohrid already contained several worlds: the visible landscape, the submerged ecosystem, the microscopic organism, the ancient lake, the mythic setting, the cosmic analogy. His art proceeds by enlargement. The smallest living form can become a landscape. A seed can become a planet. A lake can become a model of the universe.</p>
-
-        <p>Naumovski’s route into art was irregular. He left primary school young and worked in a succession of manual occupations. He enrolled at the secondary art school in Skopje in 1945 and was expelled in 1947, reportedly as “untalented.” In 1948, he began working as a draftsman in an Ohrid woodcarving workshop. He painted alongside other forms of employment for years, joined the Association of Fine Artists of Macedonia in 1967, and became a full-time independent artist in 1969. The expulsion from art school is an attractive story because it offers a clean reversal: the institution rejects the artist, history vindicates him.</p>
-
-        <p>Naumovski’s art was not produced by rejection alone. It was produced through duration: years of looking, drawing, working, and slowly discovering which forms could carry his imagination. To call him self-taught is correct, but insufficient. Every artist is taught by something. Naumovski was taught by the materials of work, by the traditions and images around him, and above all by nature understood not as scenery but as process. His earliest paintings still belong to the recognizable world. <i>Sleeping Girl</i> of 1959 places a human figure inside an abundant natural setting. <i>Youthful Landscape</i> of 1960 is dark and terrestrial, a nocturnal scene in which vegetation remains vegetation, earth remains earth, and the picture can still be entered as a place.</p>
-
-        <p>His first solo exhibitions took place in Ohrid and Struga in 1954, followed by exhibitions in Skopje, Bitola, Prilep, and elsewhere. In 1963, his work was shown at Zagreb’s Gallery of Primitive Art. Exhibitions in Rome, London, Milan, Paris, Toronto, Munich, Thessaloniki, Zagreb, and Zürich followed over the next two decades.</p>
-
-        <p>The institutional category through which he first became visible internationally was naïve or “primitive” art. The designation was understandable. Naumovski was largely self-taught. His early paintings contained simplified figures, narrative elements, and a freedom from academic perspective. He entered an exhibition system that had already learned how to present artists outside official modernism as authentic, instinctive, and untouched by intellectual culture But “naïve” can describe an artist’s relation to an institution more easily than it describes the art.</p>
-
-        <p>Naumovski’s mature paintings are not naïve in their construction. They are highly organized acts of visual instability. Their surfaces may appear spontaneous, but their metamorphoses are controlled. A curved contour is made to serve several identities. A shape can be read as bodily, floral, aquatic, and celestial without becoming completely any one of them. This ambiguity is not decorative. It is the subject.</p>
-
-        <p>The paintings train the eye to abandon certainty. Recognition occurs, then fails. A viewer sees a body, then a landscape; an eye, then an egg; a plant, then an organ. Each interpretation is immediately displaced by another. The image remains active because it cannot be concluded. Naumovski’s world is one in which resemblance has replaced identity.</p>
-
-        <p>By the later 1960s and 1970s, his figures had ceased to occupy conventional space. In works such as <i>Vardar Girl</i> and <i>In a Whirlwind of Wind Bloom</i>, anatomy is elongated into ribbons, petals, streams, and arabesques. The body no longer appears as a bounded object. It spreads.</p>
-      </div>
-      <div class="empty-tail" aria-hidden="true"></div>
-    </section>
-
-    <div class="content-row">
-      <div class="empty-rail" aria-hidden="true"></div>
-      <aside class="pull-quote">Nothing is merely itself. Everything is alive.</aside>
-      <div class="empty-tail" aria-hidden="true"></div>
-    </div>
-
-    <section class="gallery-reading" aria-label="Selected paintings by Vangel Naumovski">
-      <figure class="gallery-reading-media">
-        <img src="./Assets/Vangel/Website%20Pics/New2.png" alt="Vivid yellow, red, and green organic composition by Vangel Naumovski" loading="lazy">
-      </figure>
-
-      <div class="gallery-reading-side">
-        <figure class="gallery-reading-feature">
-          <img src="./Assets/Vangel/Website%20Pics/vangel-blue-composition.jpg" alt="Blue and violet biomorphic composition by Vangel Naumovski" loading="lazy">
-        </figure>
-      </div>
-    </section>
-
-    <section class="article-body article-body-lower">
-      <figure class="article-body-media">
-        <img src="./Assets/Vangel/Website%20Pics/5.png" alt="Black-and-white profile portrait of Vangel Naumovski">
-      </figure>
-
-      <div class="article-body-copy body-block">
-        <p>This is why his paintings differ from the more familiar forms of Surrealism with which they are sometimes compared. Surrealism frequently turned inward, toward dream, repression, private symbol, and the theatre of the unconscious. Naumovski’s work is less concerned with decoding the individual psyche than with dissolving it. The images are fantastic, but they do not feel detached from material existence. Their strangeness comes from observing nature too closely and then refusing to stop at the ordinary scale of perception.</p>
-
-        <p>Accounts associated with the 2024 centenary of his birth state that Naumovski worked with the Hydrobiological Institute in Ohrid, viewing endemic organisms through microscopes and drawing them when microphotography was not readily available there. Surviving drawings are reported to include endemic Ohrid snails. This history has not yet been fully verified through a digitized scientific or personnel archive, and it should therefore be stated with caution. But the visual connection is difficult to ignore.</p>
-
-        <p>Naumovski’s forms often resemble things seen through magnification: membranes, microorganisms, molluscan bodies, cellular structures, reproductive forms. These are not copied as scientific illustrations. They are translated into an imaginative language in which scale becomes unstable. Microscopy is already a kind of fantasy. It reveals that the familiar world is composed of forms that appear alien when enlarged. Naumovski’s paintings extend this discovery. The strange is not elsewhere. It is inside what appears ordinary. A cell contains the image of a world.</p>
-
-        <p>His black-and-white drawings make the structure of this visual language especially clear. Without the seduction of intense color, works such as <i>Sin of Youth</i>, <i>Great Excitement</i>, and <i>Universe</i> reveal how much depends on contour, density, and interlocking silhouettes. Forms fold into one another. Tonal transitions create depth, then flatten it. An opening may become a cavity, a pupil, an entrance, or a void. The drawings show that Naumovski’s art is not primarily an art of color. It is an art of continuity. Color intensifies that continuity.</p>
-
-        <p>Titles such as <i>Black Cradle of Bright Life</i>, <i>Cosmic Egg</i>, <i>Lake Bride</i>, <i>Pearls of Youth</i>, <i>Prohibited Thoughts</i>, <i>Atlantis</i>, and <i>Lacustrine Galaxy</i> provide clues without stabilizing the images. They join words from incompatible scales and categories. A cradle may be black while life is bright. A bride may be a lake. A galaxy may be lacustrine. The title performs in language what the painting performs in form: it brings distant things together until the distance between them appears artificial.</p>
-
-        <p>Among Naumovski’s most persistent images is the egg. Its symbolism is obvious and inexhaustible: fertility, origin, enclosure, potential. But in his work, the egg is not simply a symbol attached to the painting. It is a structural model for his universe. An egg is a bounded form containing transformation. It is both object and process. It appears complete while concealing an event that has not yet occurred. This tension made it an ideal form for Naumovski, whose paintings repeatedly imagine matter on the verge of becoming something else.</p>
-
-        <p>In <i>Heavenly Vision</i> of 1995, egg-like forms appear within a mature cosmic composition. The biological object has expanded into an astronomical one. Yet the change in scale does not change its meaning. Planet and embryo remain interchangeable images of beginning.</p>
-
-        <p>The cosmic paintings of the late 1970s and 1980s are sometimes treated as a later departure, as though Naumovski had moved from the lake to the galaxy. But the galaxy was already present in the lake. Works such as <i>Galaxy from the Other Side of the Sun</i>, <i>Horizontal Galaxy</i>, and <i>Spiral Galaxy</i> enlarge an existing vocabulary. Tendrils become orbital paths. Cells become planets. Currents become cosmic forces. The change is not from nature to space, but from one scale of nature to another.</p>
-
-        <p>Naumovski’s cosmos is not empty. It is bodily. Space itself seems capable of reproduction. The universe is usually pictured as the sublime negation of the human body: vast, cold, and indifferent. Naumovski refuses this opposition. His universe has organs. It flowers. The paintings are crowded because life is crowded.</p>
-
-        <p>Naumovski’s 1970 exhibition at Galerie Mona Lisa in Paris became the setting for the most famous story attached to his career. Later Macedonian cultural accounts report that Salvador Dalí visited the exhibition and described Naumovski as a “painter from fairy tales,” praising the Mediterranean, biological, and scientific qualities of the work.</p>
-
-        <p>Naumovski does not require Dalí’s authorization. The encounter is historically interesting because it suggests that his visual language could be recognized beyond the Yugoslav naïve-art framework. It does not explain the work.</p>
-
-        <p>Across decades, Naumovski returned to a limited set of fundamental forms: the egg, the spiral, the tendril, the opening, the eye, the flower, the submerged body. Repetition here is not exhaustion. The same organic language extended beyond painting. Naumovski also worked in sculpture, poetry, music, and architectural design. From at least 1965, he produced architectural models, sometimes using alternative names such as Nav Muan, Van San Skrebatski, and Saravan.</p>
-
-        <p>Reported projects included futuristic lakeside villas, a proposed Hotel Eros, and a model-sculpture submitted to the 1967 competition for the future Macedonian Opera and Ballet building. Nine architectural models were displayed during his 2024 centenary exhibition.</p>
-
-        <p>These projects were not secondary hobbies detached from the paintings. They transferred the same problem into space: how to make a structure appear alive. Curving walls, sculptural openings, and organic volumes replaced the rigid separation between building and landscape. Architecture became another kind of body. The house was no longer an object placed on the earth but a form imagined as growing from it.</p>
-      </div>
-
-      <div class="empty-tail" aria-hidden="true"></div>
-    </section>
-
-    <section class="gallery-reading" aria-label="Vangel Naumovski’s studio and public legacy">
-      <figure class="gallery-reading-media">
-        <img src="./Assets/Vangel/Website%20Pics/vangel-studio.jpg" alt="Vangel Naumovski painting inside his organically designed Ohrid studio" loading="lazy">
-      </figure>
-
-      <div class="gallery-reading-side">
-        <figure class="gallery-reading-feature">
-          <img src="./Assets/Vangel/Website%20Pics/3.png" alt="A large mural honoring Vangel Naumovski on a building in Ohrid" loading="lazy">
-        </figure>
-      </div>
-    </section>
-
-    <section class="article-body article-body-lower">
-      <figure class="article-body-media">
-        <img src="./Assets/Vangel/Website%20Pics/New3.png" alt="Pastel biomorphic painting with intertwined figures and flowers by Vangel Naumovski" loading="lazy">
-      </figure>
-
-      <div class="article-body-copy body-block">
-        <p>His house and studio in Ohrid may be the closest he came to making the world of the paintings inhabitable. Accounts describe a modernist residence with horizontal windows and brick bands, combined with curved stonework, a sculptural entrance, a planted courtyard, water, and an organically shaped studio façade. It served as a residence, workplace, and informal cultural meeting point. The total artwork is often imagined as an act of control: the artist designs everything. Naumovski’s house suggests a different ambition. Not control, but continuity. Painting, building, garden, water, and daily life were made to participate in one environment.</p>
-
-        <p>His 2016–2017 National Gallery retrospective assembled approximately one hundred works from different phases of his career. The exhibition affirmed his place in Macedonian art history while also exposing the limits of the existing scholarship. His paintings are known; his wider practice is not. The architectural models, poetry, music, sculptures, and scientific drawings remain much less studied.</p>
-
-        <p>The centenary exhibitions and commemorations of 2024 renewed attention to his work. Conservation was undertaken on a significant group of paintings owned by the St. Erasmus hospital in Ohrid. A mural was created, a square was named after him, and public calls were made for a permanent museum or display.</p>
-
-        <p>His inclusion in <i>Weaving Worlds: Collections in Conversation</i>, presented in Ljubljana from April 2025 to February 2026, placed his work within an ecological and post-human framework. This context seems contemporary, but it also reveals what was always present.</p>
-
-        <p>Naumovski’s paintings had already imagined the human as porous, unstable, and inseparable from nonhuman life. They do not propose ecology as an ethical lesson. They do something more radical: they make separateness visually impossible.</p>
-
-        <p>The category of the human survives only as one shape among others. It is recognizable, often eroticized, sometimes central, but never autonomous. The body belongs to the lake and the lake to the cosmos. Each is contained within the other. To look at Naumovski only as a regional naïve painter is therefore to misunderstand the scale of his project. The art is regional in its source and cosmological in its ambition. Its specificity is precisely what allows it to expand.</p>
-
-        <p>Lake Ohrid was not a picturesque subject for Naumovski. It was evidence. It showed that a bounded place could contain unfathomable age, microscopic life, submerged forms, folklore, memory, and continual biological transformation. It offered him not an image to reproduce, but a model of existence.</p>
-
-        <p>The deepest subject of Naumovski’s paintings is not fantasy. It is metamorphosis.</p>
-
-        <p>Fantasy usually means escape from the real. Naumovski’s art proposes the opposite: that reality becomes fantastic when its divisions are no longer taken for granted. Body, plant, animal, water, planet—these are names imposed on a continuum of forms.</p>
-
-        <p>His paintings ask the viewer to see too much at once. A flower is an organ. An organ is a landscape. A landscape is a body. An egg is a planet. A lake is a galaxy. Nothing is merely itself. Everything is alive.</p>
-      </div>
-
-      <div class="empty-tail" aria-hidden="true"></div>
-    </section>
-  </article>
-
-  <section class="more-from-muzej" data-more-from-muzej aria-labelledby="more-from-muzej-title"></section>
+<main id="main-content" class="radio-main">
+<header class="radio-opening"><div class="radio-title-column"><p class="radio-kicker">Art | Ohrid</p><h1>The Metamorphosis of Vangel Naumovski</h1><p class="radio-deck">Painting, drawing, and architecture in the world of Vangel Naumovski.</p><p class="radio-byline muzej-byline">Words <strong>Aleksandar Trajkovski</strong></p></div><div class="radio-opening-column"><figure class="radio-object hero-object"><img class="radio-hero-image" src="./Assets/Vangel/Website%20Pics/1.png" width="1080" height="1350" alt="Portrait of Vangel Naumovski seated before one of his paintings" fetchpriority="high"></figure></div></header>
+<article class="radio-article" aria-label="The Metamorphosis of Vangel Naumovski by Aleksandar Trajkovski">
+<div class="radio-row"><div class="radio-rail"><figure class="radio-object "><img src="./Assets/Vangel/Website%20Pics/4.png" alt="Vangel Naumovski working on a painting in his studio" loading="lazy" decoding="async"><figcaption>Naumovski at work in his studio.</figcaption></figure></div><div class="radio-prose"><section aria-label="A body taking shape"><p>In <i>Vardar Girl</i> (1977), a woman’s torso rises from two pale, rounded legs. Above her breasts, the outline gives way to a red loop, a blue curve, and a cluster of fine, curling lines. A small yellow form hangs over her abdomen. You can recognize the body, but following its edges takes you into something closer to a flower or an instrument.</p>
+<p>Naumovski makes that transition surprisingly easy to follow. The warm flesh stands out against a dark blue-green ground; thin white lines carry the eye across the larger shapes. The picture has enough recognizable anatomy to hold your attention while its upper half slips into another arrangement. Its erotic charge comes partly from this uncertainty about where the figure ends.</p>
+<p>This is a useful place to begin with the Ohrid painter. His best-known pictures can look overwhelmingly elaborate at first, crowded with colored bulbs, ribbons, petals, and openings. Look longer and their construction becomes clearer. Broad shapes establish a framework, while finer lines connect them. The apparent profusion depends on decisions about what to emphasize and what to leave dark.</p>
+<p>Born in 1924 in Skrebatno, near Ohrid, Naumovski worked at several trades before establishing himself as an artist. The National Gallery’s retrospective catalog records his enrollment at art school in Skopje in 1945 and his expulsion two years later. He subsequently worked as a draftsman in a woodcarving atelier and, from 1963, at Ohrid’s construction and design company Trudbenik. He became an independent painter in 1969.</p>
+<p>That history gives the familiar description “self-taught” some necessary detail. Drawing was part of his working life. Painting developed alongside practical employment, and his interests eventually extended into architectural models. The route was uneven, but the work itself shows sustained attention to the behavior of a line.</p>
+<p>His early reception placed him within naïve art. A 1963 exhibition at Zagreb’s Gallery of Primitive Art helped establish that association, and the category remains part of his exhibition history. It tells us something about the institutions through which he became known. By itself, however, it leaves much of the mature painting unexplained.</p></section></div></div>
+<section class="vangel-artwork-spread" aria-label="Youthful Landscape, 1960">
+<figure class="radio-object "><img src="./Assets/Vangel/Works/youthful-landscape-1960.jpg" alt="A dark wooded landscape with slender trunks, pale leaves, and blue sky" loading="lazy" decoding="async"><figcaption><i>Youthful Landscape</i>, 1960. Oil on plywood, 42 × 100 cm. Reproduced in the National Gallery’s 2016 retrospective catalog.</figcaption></figure>
+</section>
+<div class="radio-row"><div class="radio-rail"><figure class="radio-object vangel-catalog-work"><img src="./Assets/Vangel/Works/vardar-girl-1977.jpg" alt="A softly modeled female torso surrounded by red, blue, white, and yellow curling forms on a dark ground" loading="lazy" decoding="async"><figcaption><i>Vardar Girl</i>, 1977. Oil on canvas, 130 × 90 cm. National Gallery retrospective catalog, 2016.</figcaption></figure></div><div class="radio-prose"><section aria-label="From landscape to figure"><p>The change is easier to see by comparing the paintings. In <i>Youthful Landscape</i> (1960), slender trees rise through a dark, horizontal woodland. Their pale leaves are individually articulated. Gaps between the trunks allow a route into the distance, and a strip of blue sky holds the upper edge of the scene. However unusual the vegetation, the picture remains organized as a place.</p>
+<p>Already, the foliage supplies much of its rhythm. A tall branch near the center divides into pale, feathered sprays; smaller stems repeat that movement across the foreground. The attention given to each leaf makes the woodland feel cultivated by the painter, with light distributed carefully through the dark.</p>
+<p>Seventeen years later, <i>Vardar Girl</i> retains the dark background and delicate branching lines, but the ground no longer offers a clear position for the figure. Colored forms gather around her instead. The difference is more specific than a movement from realism to fantasy: Naumovski has changed the means by which the picture holds together.</p>
+<p>In the landscape, trees establish depth. In the later work, a loop can pass around the body and return the eye to the surface. The thin lines do much of this work, crossing larger areas of blue, red, and flesh without breaking their rhythm. Their precision prevents the composition from dissolving into an assortment of decorative shapes.</p>
+<p>The body also brings a different kind of intimacy. Its rounded forms are modeled softly, while the surrounding curves can be sharply edged or almost weightless. That contrast between flesh and line gives the painting its tension. Identifying every shape would explain less than noticing how differently they seem to occupy the same space.</p></section></div></div>
+<div class="radio-row"><div class="radio-rail"><figure class="radio-object vangel-catalog-work"><img src="./Assets/Vangel/Works/universe-1979.jpg" alt="A male profile surrounded by pale sweeping curves and small ovals in a finely textured black-and-white drawing" loading="lazy" decoding="async"><figcaption><i>Universe</i>, 1979. Ink on paper, 71 × 104 cm. National Gallery retrospective catalog, 2016.</figcaption></figure></div><div class="radio-prose"><section aria-label="Drawing and the lake"><p>The ink drawing <i>Universe</i> (1979) makes the importance of line especially clear. A recognizable male profile faces right. Forms stream back from the head, while a broad pale curve sweeps beneath it. Small white ovals sit against a field of finely worked gray. The face provides an immediate point of recognition; everything around it extends the movement beyond the skull.</p>
+<p>Color cannot do the separating here. Naumovski builds the image through the contrast between untouched light areas, dense blacks, and a granular middle tone. The long pale curves remain legible because their edges are exact. They guide you around the head, then out toward the right-hand margin.</p>
+<p>The drawing gives a useful answer to the idea that his paintings depend mainly on their brilliant palette. The same control operates in black and white. In both media, a substantial form can be crossed by something as light as a thread, and a small opening can redirect the entire composition.</p>
+<p>Lake Ohrid offered a particular environment for this attention to living forms. Writing in <i>Porta 3</i> in 2024, architect Ivana Grupče reported that Naumovski had drawn endemic organisms for Ohrid’s Hydrobiological Institute. Her account reproduces a sheet of snail studies and describes work made through observation under a microscope.</p>
+<p>That account gives the biological imagery a concrete connection to his working life. It does not make every painted curve an illustration of a particular organism. A shell, an organ, and a petal can suggest different readings of the same form, and the pictures leave room for those readings to coexist.</p>
+<p>The titles sometimes encourage the change of scale: <i>Universe</i>, <i>Galaxy Eye</i>, <i>Horizontal Galaxy</i>. Yet the ink drawing does not require an explanation about astronomy to become compelling. Its expansive movement begins with a head and a carefully controlled sweep of white across gray.</p></section></div></div>
+<div class="radio-row"><div class="radio-rail"><figure class="radio-object "><img src="./Assets/Vangel/Website%20Pics/vangel-studio.jpg" alt="Naumovski seated at work behind the broad glazed opening of his rounded stone studio" loading="lazy" decoding="async"><figcaption>The artist at his Ohrid studio.</figcaption></figure></div><div class="radio-prose"><section aria-label="Architecture and the studio"><p>Naumovski also pursued these interests in three dimensions. Grupče’s account of the 2024 centenary exhibition records nine architectural models, including a proposal for a lakeside villa and a model associated with the 1967 opera and ballet competition in Skopje. Photographs document a terracotta design for Hotel Eros. These were proposals through which he tested curved forms as volumes.</p>
+<p>The distinction matters. On a canvas, a pale ribbon can hover without support. A building has to accommodate entrances, rooms, circulation, and structure. His models raise the question of how much of the paintings’ freedom could survive those demands. Their interest lies in the attempt to give his visual language another set of conditions.</p>
+<p>His Ohrid house and studio offer a more tangible encounter with that ambition. In the studio photograph, small stones cover a rounded façade, interrupted by a broad opening. The rough, closely packed surface gives the building a texture quite different from the smooth forms in his paintings. Through the glass, the artist and his work occupy the space together.</p>
+<p>Grupče describes a garden with sculpture and water, and an entrance whose curving stonework continues into the boundary wall. Her account draws on a visit to the property and on recollections from Naumovski’s son, Rubens. The house becomes useful evidence of how his interests met in everyday surroundings.</p>
+<p>Later exhibitions have continued to change the context in which the paintings are seen. The National Gallery’s 2016–2017 retrospective brought together about one hundred works. In 2025–2026, <i>Weaving Worlds: Collections in Conversation</i> in Ljubljana included Naumovski within a broader examination of art’s relationship with nature. The exhibition connected works from Skopje’s Museum of Contemporary Art and Ljubljana’s Moderna galerija.</p>
+<p>Those contexts invite another look, but the pictures reward a more immediate kind of attention too. Return to the thin white curve passing around the figure in <i>Vardar Girl</i>. It has little weight and almost no descriptive obligation, yet it keeps the surrounding forms in motion. Much of Naumovski’s skill is there: in the measured line that allows an extravagant picture to remain clear.</p></section><section class="sources-section muzej-sources" aria-label="Sources"><h2 class="section-heading">Sources</h2>
+<p><a href="https://arhiva.zaum.mk/wp-content/uploads/2019/10/2016_12_23_Vangel_Naumovski_retrospektivna_izlozba.pdf">Maja Chankulovska-Mihajlovska. <i>Vangel Naumovski: Retrospective Exhibition.</i> National Gallery of Macedonia, 2016. Biography, artwork titles, dates, and reproductions.</a></p>
+<p><a href="https://nationalgallery.mk/retrospektivna-izlozhba-vangel-naum/">National Gallery of Macedonia. Retrospective exhibition announcement, December 21, 2016.</a></p>
+<p><a href="https://www.porta3.mk/100-godini-od-ragjanjeto-na-vangel-naumovski-golemiot-ohridski-slikar-od-bajkite-i-vizioner-za-arhitekturata/">Ivana Grupče. “100 Years Since the Birth of Vangel Naumovski.” <i>Porta 3</i>, May 7, 2024. Architecture, studio, and scientific drawings.</a></p>
+<p><a href="https://msu.mk/exhibition/weaving-worlds-collections-in-conversation/">Museum of Contemporary Art, Skopje. <i>Weaving Worlds: Collections in Conversation</i>, April 24, 2025–February 8, 2026.</a></p>
+</section></div></div>
+</article>
+<section class="more-from-muzej" data-more-from-muzej aria-labelledby="more-from-muzej-title"></section>
 </main>
-
-
 <footer class="site-footer muzej-footer">
   <div class="footer-inner">
     <div class="footer-brand">
