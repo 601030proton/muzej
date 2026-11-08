@@ -1162,37 +1162,27 @@ body.muzej-logo-hidden .site-header .brand-mark {
 <style id="vranec-bottle-gallery">
 .wine-gallery{width:min(100%,1020px);margin:90px auto 100px;color:#000}
 .wine-gallery-heading{display:flex;justify-content:space-between;gap:20px;margin:0 0 32px;padding-top:14px;border-top:1px solid #000;font:400 11px/1.5 var(--sans);letter-spacing:.08em;text-transform:uppercase}
-.wine-gallery-hint{letter-spacing:0;text-transform:none}
 .wine-gallery-track{display:flex;gap:38px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
 .wine-gallery-track::-webkit-scrollbar{display:none}
 .wine-card{flex:0 0 calc((100% - 76px)/3);min-width:0;scroll-snap-align:start;margin:0}
-.wine-bottle-button{display:block;width:100%;padding:20px 22px 12px;border:0;background:#fff;cursor:zoom-in}
-.wine-bottle-button img{display:block;width:100%;height:350px;object-fit:contain;object-position:center bottom}
+.wine-bottle-media{display:block;width:100%;padding:20px 22px 12px;background:#fff}
+.wine-bottle-media img{display:block;width:100%;height:350px;object-fit:contain;object-position:center bottom}
 .wine-card figcaption{margin:18px 0 0;font:400 15px/1.35 "plantin",Georgia,serif}
 .wine-card figcaption span{display:block;margin-top:5px;font:400 11px/1.5 var(--sans)}
 .wine-gallery-controls{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:26px;font:400 11px/1.5 var(--sans)}
-.wine-gallery-controls button,.wine-dialog button{padding:12px 0;min-height:44px;border:0;background:transparent;color:#000;font:400 11px/1.5 var(--sans);cursor:pointer}
+.wine-gallery-controls button{padding:12px 0;min-height:44px;border:0;background:transparent;color:#000;font:400 11px/1.5 var(--sans);cursor:pointer}
 .wine-gallery-controls button:disabled{opacity:.35;cursor:default}
 .wine-gallery-credit{margin:20px 0 0;font:400 10px/1.5 var(--sans)}
 .wine-gallery-credit a{color:inherit;text-underline-offset:3px}
-.wine-gallery button:focus-visible,.wine-gallery-track:focus-visible,.wine-dialog button:focus-visible{outline:2px solid #000;outline-offset:4px}
-.wine-dialog{width:min(calc(100% - 36px),560px);max-height:calc(100svh - 36px);padding:20px 28px 28px;border:0;background:#fff;color:#000;overflow:auto}
-.wine-dialog::backdrop{background:rgba(0,0,0,.55)}
-.wine-dialog-toolbar{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-bottom:14px}
-.wine-dialog h2{margin:0;font:400 24px/1.15 "plantin",Georgia,serif}
-.wine-label-view{width:min(100%,380px);aspect-ratio:1;margin:0 auto;overflow:hidden;background:#fff}
-.wine-label-view img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 85%}
-.wine-label-view.is-full-bottle img{object-fit:contain;object-position:center}
-.wine-dialog-caption{margin:18px 0 0;font:400 12px/1.5 var(--sans)}
+.wine-gallery button:focus-visible,.wine-gallery-track:focus-visible:focus-visible{outline:2px solid #000;outline-offset:4px}
 @media(max-width:760px){
 .wine-gallery{margin:58px auto 68px}
 .wine-gallery-heading{margin-bottom:22px;gap:12px;flex-wrap:wrap}
 .wine-gallery-track{gap:22px}
 .wine-card{flex-basis:calc((100% - 22px)/2)}
-.wine-bottle-button{padding:12px 8px}
-.wine-bottle-button img{height:260px}
+.wine-bottle-media{padding:12px 8px}
+.wine-bottle-media img{height:260px}
 .wine-card figcaption{font-size:14px}
-.wine-dialog{padding:16px 20px 24px}
 }
 @media(prefers-reduced-motion:reduce){.wine-gallery-track{scroll-behavior:auto}}
 </style>
@@ -1251,22 +1241,16 @@ body.muzej-logo-hidden .site-header .brand-mark {
 </div></div>
 
 <section class="wine-gallery" aria-label="Vranec bottle collection">
-<p class="wine-gallery-heading"><span>Selected bottles</span><span class="wine-gallery-hint">Select a bottle to see its label</span></p>
+<p class="wine-gallery-heading"><span>Selected bottles</span></p>
 <div class="wine-gallery-track" tabindex="0" role="group" aria-label="Browse four wine bottles" id="wine-gallery-track">
-<figure class="wine-card"><button type="button" class="wine-bottle-button" aria-label="Enlarge Vranec label" aria-haspopup="dialog" data-wine-name="Vranec" data-wine-detail="Tikveš · Vranec"><img src="./Assets/Vranec/Bottles/vranec.webp" alt="Tikveš Vranec bottle with a white label and red capsule" loading="lazy" decoding="async"></button><figcaption>Vranec<span>Tikveš · Vranec</span></figcaption></figure>
-<figure class="wine-card"><button type="button" class="wine-bottle-button" aria-label="Enlarge T’ga za jug label" aria-haspopup="dialog" data-wine-name="T’ga za jug" data-wine-detail="Tikveš · Semi-dry Vranec"><img src="./Assets/Vranec/Bottles/tga-za-jug.webp" alt="Tikveš T’ga za jug bottle with a black and red label" loading="lazy" decoding="async"></button><figcaption>T’ga za jug<span>Tikveš · Semi-dry Vranec</span></figcaption></figure>
-<figure class="wine-card"><button type="button" class="wine-bottle-button" aria-label="Enlarge Barovo Red label" aria-haspopup="dialog" data-wine-name="Barovo Red" data-wine-detail="Tikveš · Vranec and Kratošija"><img src="./Assets/Vranec/Bottles/barovo-red.webp" alt="Barovo Red bottle with a white typographic label" loading="lazy" decoding="async"></button><figcaption>Barovo Red<span>Tikveš · Vranec and Kratošija</span></figcaption></figure>
-<figure class="wine-card"><button type="button" class="wine-bottle-button" aria-label="Enlarge Bela Voda Red label" aria-haspopup="dialog" data-wine-name="Bela Voda Red" data-wine-detail="Tikveš · Vranec and Plavec"><img src="./Assets/Vranec/Bottles/bela-voda-red.webp" alt="Bela Voda Red bottle with a white typographic label" loading="lazy" decoding="async"></button><figcaption>Bela Voda Red<span>Tikveš · Vranec and Plavec</span></figcaption></figure>
+<figure class="wine-card"><div class="wine-bottle-media"><img src="./Assets/Vranec/Bottles/vranec.webp" alt="Tikveš Vranec bottle with a white label and red capsule" loading="lazy" decoding="async"></div><figcaption>Vranec<span>Tikveš · Vranec</span></figcaption></figure>
+<figure class="wine-card"><div class="wine-bottle-media"><img src="./Assets/Vranec/Bottles/tga-za-jug.webp" alt="Tikveš T’ga za jug bottle with a black and red label" loading="lazy" decoding="async"></div><figcaption>T’ga za jug<span>Tikveš · Semi-dry Vranec</span></figcaption></figure>
+<figure class="wine-card"><div class="wine-bottle-media"><img src="./Assets/Vranec/Bottles/barovo-red.webp" alt="Barovo Red bottle with a white typographic label" loading="lazy" decoding="async"></div><figcaption>Barovo Red<span>Tikveš · Vranec and Kratošija</span></figcaption></figure>
+<figure class="wine-card"><div class="wine-bottle-media"><img src="./Assets/Vranec/Bottles/bela-voda-red.webp" alt="Bela Voda Red bottle with a white typographic label" loading="lazy" decoding="async"></div><figcaption>Bela Voda Red<span>Tikveš · Vranec and Plavec</span></figcaption></figure>
 </div>
 <div class="wine-gallery-controls" hidden><button type="button" data-wine-previous aria-controls="wine-gallery-track">← Previous</button><span data-wine-status aria-live="polite"></span><button type="button" data-wine-next aria-controls="wine-gallery-track">Next →</button></div>
 <p class="wine-gallery-credit">Bottle photographs: <a href="https://tikves.com.mk/en/vranecworldday-en/" target="_blank" rel="noopener noreferrer">Tikveš</a></p>
 </section>
-<dialog class="wine-dialog" aria-labelledby="wine-dialog-title">
-<div class="wine-dialog-toolbar"><h2 id="wine-dialog-title"></h2><button type="button" data-wine-close aria-label="Close bottle detail">Close ×</button></div>
-<div class="wine-label-view"><img alt=""></div>
-<p class="wine-dialog-caption"></p>
-<button type="button" data-wine-toggle>View full bottle</button>
-</dialog>
 
 <div class="radio-row radio-continuation"><div class="radio-empty-rail" aria-hidden="true"></div><div class="radio-prose"><section aria-label="At the table"><h2>At the table</h2><p>Serving temperature can change that relationship. Kamnik recommends 15–18°C (59–64°F) for its 2018 Grand Reserva, along with decanting. In a warm dining room, “room temperature” may be considerably warmer. A bottle’s service guidance deserves the same attention as its vintage.</p>
 <p>Food changes the encounter again. Salt, fat, acidity, sweetness, and chili can alter how a wine’s fruit, tannin, and alcohol are perceived. A salty, substantial dish can make a firm red feel more accommodating. Hot peppers can make a high-alcohol wine feel hotter. The whole plate matters, including its sauce and seasoning.</p>
@@ -1408,35 +1392,7 @@ if (menuButton && menuPanel) {
   window.addEventListener("resize", update);
   controls.hidden = false;
   update();
-  const dialog = document.querySelector(".wine-dialog");
-  const view = dialog.querySelector(".wine-label-view");
-  const detailImage = view.querySelector("img");
-  const toggle = dialog.querySelector("[data-wine-toggle]");
-  let opener;
-  gallery.querySelectorAll(".wine-bottle-button").forEach(button => {
-    button.addEventListener("click", () => {
-      opener = button;
-      const image = button.querySelector("img");
-      detailImage.src = image.currentSrc || image.src;
-      detailImage.alt = image.alt + ", enlarged detail";
-      dialog.querySelector("h2").textContent = button.dataset.wineName;
-      dialog.querySelector(".wine-dialog-caption").textContent = button.dataset.wineDetail;
-      view.classList.remove("is-full-bottle");
-      toggle.textContent = "View full bottle";
-      dialog.showModal();
-    });
-  });
-  toggle.addEventListener("click", () => {
-    const full = view.classList.toggle("is-full-bottle");
-    toggle.textContent = full ? "View label detail" : "View full bottle";
-  });
-  dialog.querySelector("[data-wine-close]").addEventListener("click", () => dialog.close());
-  dialog.addEventListener("click", event => {
-    if (event.target !== dialog) return;
-    const rect = dialog.getBoundingClientRect();
-    if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
-  });
-  dialog.addEventListener("close", () => { if (opener) opener.focus(); });
+
 })();
 </script>
 </body>
