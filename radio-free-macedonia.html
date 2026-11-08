@@ -1095,6 +1095,20 @@ body.muzej-logo-hidden .site-header .brand-mark {
 .radio-continuation-copy > section:not(:last-child){margin-bottom:clamp(26.25px,2.0625vw,31.25px)}
 .radio-continuation-copy > section:last-child{margin-bottom:100px}
 .radio-rail{position:sticky;top:100px;align-self:start}
+/* Keep the complete image and caption inside the sticky viewport. */
+@media(min-width:761px){
+.radio-rail > .radio-object{
+  display:flex;flex-direction:column;
+  max-height:calc(100vh - 124px);
+  max-height:calc(100svh - 124px);
+  margin:0 auto;
+}
+.radio-rail > .radio-object > img{
+  display:block;width:100%;height:auto;min-height:0;flex:0 1 auto;
+  object-fit:contain;object-position:center top;
+}
+.radio-rail > .radio-object > figcaption{flex:0 0 auto}
+}
 .radio-rail .sleeve{width:76%}
 .radio-rail .sleeve .artwork-blank{max-height:calc(100svh - 200px)}
 .studio .artwork-blank{aspect-ratio:4/3}.landscape .artwork-blank{aspect-ratio:3/2}.insert .artwork-blank{aspect-ratio:1.8}.record .artwork-blank{aspect-ratio:1}
@@ -1111,6 +1125,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
 .radio-sleeve-mat{aspect-ratio:33 / 35;overflow:hidden;background:#fff}
 .radio-sleeve-mat .radio-sleeve-image{height:100%;object-fit:contain;filter:brightness(1.045)}
 .radio-sleeve-mat--wide-margin .radio-sleeve-image{transform:scale(1.634)}
+.radio-sleeve-grid .radio-object figcaption{font:400 14px/1.35 "plantin",Georgia,serif;letter-spacing:0}
 .radio-gallery-controls{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:30px}
 .radio-gallery-controls[hidden],#radio-cassette-covers > [hidden]{display:none}
 .radio-gallery-controls button,.radio-gallery-controls span{font:400 11px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000}
