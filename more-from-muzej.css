@@ -156,3 +156,13 @@
     padding-top: clamp(40px, 11vw, 56px);
   }
 }
+
+/* Show the entire cassette GIF within the shared card frame. */
+.more-from-muzej .more-from-muzej-card-link[href$="radio-free-macedonia.html"] .more-from-muzej-card-image {
+  background: #fff;
+}
+.more-from-muzej .more-from-muzej-card-link[href$="radio-free-macedonia.html"] .more-from-muzej-card-image img {
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+}
