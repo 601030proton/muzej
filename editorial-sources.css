@@ -1,8 +1,12 @@
 /* Shared sources treatment for Muzej's editorial articles. */
-body main .sources-section.muzej-sources{box-sizing:border-box;width:100%;max-width:520px;margin-top:64px;padding:20px 0 0;border-top:1px solid #11110f;color:rgba(17,17,15,.58)}
-body main .sources-section.muzej-sources>h2.section-heading{max-width:none;margin:0 0 24px;padding:0;border:0;font:400 30px/1.1 "plantin",Georgia,serif;letter-spacing:0;text-transform:none;white-space:normal;color:rgba(17,17,15,.58)}
-body main .sources-section.muzej-sources>p{max-width:none;margin:0!important;padding:11px 0 13px;border-top:1px solid rgba(17,17,15,.1);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.72rem!important;font-weight:400;line-height:1.55!important;letter-spacing:0;color:rgba(17,17,15,.58)}
-body main .sources-section.muzej-sources>p:first-of-type{border-top:0}
-body main .sources-section.muzej-sources a{font:inherit;color:inherit;text-decoration:none}
-body main .sources-section.muzej-sources a:hover{text-decoration:underline;text-underline-offset:3px}
+body main .sources-section.muzej-sources{box-sizing:border-box;width:100%;max-width:520px;margin-top:64px;padding:20px 0 0;border-top:1px solid #11110f;color:#000}
+body main .sources-section.muzej-sources>h2.section-heading{max-width:none;margin:0 0 24px;padding:0;border:0;font:400 30px/1.1 "plantin",Georgia,serif;letter-spacing:0;text-transform:none;white-space:normal;color:#000}
+body main .sources-section.muzej-sources>p,
+body main .muzej-source-list>li{max-width:none;margin:0!important;padding:11px 0 13px;border-top:1px solid rgba(17,17,15,.1);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.72rem!important;font-weight:400;line-height:1.55!important;letter-spacing:0;color:#000}
+body main .sources-section.muzej-sources>p:first-of-type,
+body main .muzej-source-list>li:first-child{border-top:0}
+body main :is(.sources-section.muzej-sources,.muzej-source-list) a{font:inherit;color:inherit;text-decoration:none}
+body main :is(.sources-section.muzej-sources,.muzej-source-list) a:hover{text-decoration:underline;text-underline-offset:3px}
 @media(max-width:760px){body main .sources-section.muzej-sources>h2.section-heading{font-size:26px;margin-bottom:22px}}
+
+body main .muzej-source-list{width:100%;max-width:520px;list-style:none;padding:0}
