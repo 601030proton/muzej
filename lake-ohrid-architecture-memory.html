@@ -947,6 +947,17 @@ body.muzej-logo-hidden .site-header .brand-mark {
 <link rel="stylesheet" href="article-system.css?v=20261101-consistency-3">
 <link rel="stylesheet" href="bylines.css?v=20261107">
 <link rel="stylesheet" href="journal-layout.css?v=20261107">
+<link rel="stylesheet" href="editorial-sources.css?v=20261107-unified">
+<style>
+.journal-kicker{margin:0;color:#000;font:400 11px/1.5 var(--sans);letter-spacing:.08em;text-transform:uppercase}
+.journal-layout .journal-hero img{min-height:0}
+@media (min-width:761px){
+  .journal-layout .content-row > .article-body-media img{max-height:calc(100svh - 124px);object-position:left top}
+}
+@media (max-width:760px){
+  .journal-layout .journal-hero img{height:auto;max-height:52svh}
+}
+</style>
 </head>
 <body class="ohrid-article journal-layout">
 <header class="site-header">
@@ -982,7 +993,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
 </div>
 </header>
 <main>
-<header class="journal-opening"><div class="journal-opening-copy"><h1>The Ohrid House and the Logic of Place</h1><p class="journal-deck">Why Ohrid’s old houses widen as they rise, and how families lived in them through the seasons.</p><p class="journal-byline muzej-byline">Words <strong>Aleksandar Trajkovski</strong></p></div><figure class="journal-hero"><img alt="Collage of black-and-white lake water above a terracotta-toned Ohrid house." src="./Assets/Ohrid%20Architecture/Images/BW%20Ohrid%20House/ohrid-house-collage.webp" width="1086" height="1448"/></figure></header>
+<header class="journal-opening"><div class="journal-opening-copy"><p class="journal-kicker">Architecture | Ohrid</p><h1>The Ohrid House and the Logic of Place</h1><p class="journal-deck">Why Ohrid’s old houses widen as they rise, and how families lived in them through the seasons.</p><p class="journal-byline muzej-byline">Words <strong>Aleksandar Trajkovski</strong></p></div><figure class="journal-hero"><img alt="Collage of black-and-white lake water above a terracotta-toned Ohrid house." src="./Assets/Ohrid%20Architecture/Images/BW%20Ohrid%20House/ohrid-house-collage.webp" width="1086" height="1448"/></figure></header>
 <article class="article-shell article-longform">
 <section class="content-row">
 <figure class="article-body-media">
@@ -1005,7 +1016,6 @@ body.muzej-logo-hidden .site-header .brand-mark {
 </figure>
 
 </div>
-<div aria-hidden="true" class="empty-tail"></div>
 </section>
 <section class="gallery-reading ohrid-sketch-spread">
 <figure class="gallery-reading-media">
@@ -1031,12 +1041,13 @@ body.muzej-logo-hidden .site-header .brand-mark {
 <p>UNESCO has warned about the effects of development and inappropriate alterations on the historic town. A renovation can preserve a familiar silhouette while losing much of what made the building work. Consider a timber strip applied to a finished wall. It can reproduce the dark line you see from the street. In a bondruk wall, the timber is the frame, with plaster laid over the lattice between its members.</p>
 <p>Walk back down the hill and the house changes again. The windows slip out of sight, and the stone base comes back into view. A few steps earlier you could see where someone might have spent a summer evening. Now you’re close enough to touch the wall that kept the street outside.</p>
 
+<section class="sources-section muzej-sources" aria-label="Sources">
 <h2 class="section-heading">Sources</h2>
-<p><a href="https://flore.unifi.it/retrieve/e398c37f-7676-179a-e053-3705fe0a4cff/OHRID%27S%20ANCIENT%20URBAN%20ARCHITECTURE%20BY%20BORIS%20%C4%8CIPAN%20AND%20DU%C5%A0AN%20GRABRIJAN.pdf">Serena Acciai, “Ohrid’s Ancient Urban Architecture by Boris Čipan and Dušan Grabrijan.”</a><br>
-<a href="https://scindeks-clanci.ceon.rs/data/pdf/1821-3952/2016/1821-39521601023T.pdf">Radmila Tomovska and Ana Radivojević, “The Role of Master-Builder in Development of Traditional Ohrid House.”</a><br>
-<a href="https://whc.unesco.org/en/list/99/">UNESCO World Heritage Centre, “Natural and Cultural Heritage of the Ohrid Region.”</a></p>
+<p><a href="https://flore.unifi.it/retrieve/e398c37f-7676-179a-e053-3705fe0a4cff/OHRID%27S%20ANCIENT%20URBAN%20ARCHITECTURE%20BY%20BORIS%20%C4%8CIPAN%20AND%20DU%C5%A0AN%20GRABRIJAN.pdf">Serena Acciai, “Ohrid’s Ancient Urban Architecture by Boris Čipan and Dušan Grabrijan.”</a></p>
+<p><a href="https://scindeks-clanci.ceon.rs/data/pdf/1821-3952/2016/1821-39521601023T.pdf">Radmila Tomovska and Ana Radivojević, “The Role of Master-Builder in Development of Traditional Ohrid House.”</a></p>
+<p><a href="https://whc.unesco.org/en/list/99/">UNESCO World Heritage Centre, “Natural and Cultural Heritage of the Ohrid Region.”</a></p>
+</section>
 </div>
-<div aria-hidden="true" class="empty-tail"></div>
 </section>
 </article>
 <section aria-labelledby="more-from-muzej-title" class="more-from-muzej" data-more-from-muzej=""></section>
