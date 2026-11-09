@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html class="radio-page" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -1069,6 +1069,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
 </style>
 <link rel="stylesheet" href="article-system.css?v=20261101-consistency-3">
 <style>
+.radio-page{color-scheme:only light;background:#fff}
 .radio-article-page{color:#000;background:#fff;--radio-gap:clamp(36px,6vw,96px)}
 .radio-article-page .radio-main{padding:12px var(--page-x) 0;max-width:1520px;margin:auto}
 .radio-opening,.radio-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--radio-gap);align-items:start}
@@ -1080,9 +1081,10 @@ body.muzej-logo-hidden .site-header .brand-mark {
 .radio-kicker,.radio-byline{margin:0}
 .radio-opening-column{min-width:0}
 .radio-object{margin:0;min-width:0}
+.radio-article-page :is(.radio-main,.radio-opening,.radio-opening-column,.radio-spread,.radio-sleeve-grid,.radio-object,.radio-sleeve-image){background-color:#fff}
 .radio-sleeve-image{display:block;width:100%;height:auto}
 .radio-studio-photo img{display:block}
-.artwork-blank{background:#f2f2f0;position:relative;aspect-ratio:1/1.45;width:100%}
+.artwork-blank{background:#fff;position:relative;aspect-ratio:1/1.45;width:100%}
 .artwork-blank>span{position:absolute;bottom:14px;left:16px;font:10px/1 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000}
 .radio-object figcaption{margin:13px 0 0;max-width:44em}
 .radio-hero-image{display:block;width:94%;margin-inline:auto;height:calc(100svh - 160px);min-height:380px;object-fit:contain;background:#fff}
