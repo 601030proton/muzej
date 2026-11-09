@@ -1161,8 +1161,18 @@ body.muzej-logo-hidden .site-header .brand-mark {
 @media (max-width: 760px) {
   html.radio-page,
   html.radio-page body.radio-article-page,
-  .radio-article-page :is(.radio-main, .radio-article, .radio-opening, .radio-opening-column, .radio-row, .radio-rail, .radio-spread, .radio-sleeve-grid, .radio-sleeve-mat, .radio-object, .radio-hero-image, .radio-sleeve-image, .more-from-muzej) {
+  .radio-article-page :is(.radio-main, .radio-article, .radio-opening, .radio-opening-column, .radio-row, .radio-rail, .radio-spread, .radio-sleeve-grid, .more-from-muzej) {
     background: #ffffff !important;
+  }
+
+  /* Blend white image margins into the same surface as the article. */
+  .radio-article-page :is(.hero-object, .radio-hero-image, .radio-sleeve-mat, .radio-sleeve-image),
+  .radio-article-page .radio-object.sleeve {
+    background: transparent;
+  }
+
+  .radio-article-page :is(.radio-hero-image, .radio-sleeve-image) {
+    mix-blend-mode: multiply;
   }
 }
 </style>
