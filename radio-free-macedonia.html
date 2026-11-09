@@ -3,6 +3,7 @@
 <html class="radio-page" lang="en">
 <head>
 <meta charset="utf-8"/>
+<meta name="theme-color" content="#ffffff"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Nick Nasev remembers Macedonian radio in 1990s Adelaide, from cassette shops and dedications to the songs that divided a community." name="description"/>
 <title>Radio Free Macedonia | Muzej</title>
@@ -1155,6 +1156,15 @@ body.muzej-logo-hidden .site-header .brand-mark {
 <style>
 /* Match each generated case to the proportions of a standard single cassette case. */
 [data-cassette-gallery] .radio-sleeve-mat .radio-sleeve-image--proportioned{transform:scaleX(var(--cassette-width,1));transform-origin:center}
+</style>
+<style>
+@media (max-width: 760px) {
+  html.radio-page,
+  html.radio-page body.radio-article-page,
+  .radio-article-page :is(.radio-main, .radio-article, .radio-opening, .radio-opening-column, .radio-row, .radio-rail, .radio-spread, .radio-sleeve-grid, .radio-sleeve-mat, .radio-object, .radio-hero-image, .radio-sleeve-image, .more-from-muzej) {
+    background: #ffffff !important;
+  }
+}
 </style>
 </head>
 <body class="ohrid-article radio-article-page">
