@@ -1170,6 +1170,12 @@ body.muzej-logo-hidden .site-header .brand-mark {
     background: transparent;
   }
 
+  /* Keep every mobile surface white, including the cassette gallery mats. */
+  .radio-article-page :is(.radio-sleeve-mat, .radio-object, .radio-sleeve-grid, #radio-cassette-covers) {
+    background-color: #ffffff !important;
+  }
+  /* Multiply removes visible off-white rectangular image mats against white
+     without changing the page color or cassette placement. */
   .radio-article-page :is(.radio-hero-image, .radio-sleeve-image) {
     mix-blend-mode: multiply;
   }
