@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Vodici in Bituše: the women, songs, bread, and ritual crosses of a Macedonian mountain village." name="description"/>
+<title>Vodici in Bituše | Muzej</title>
+<link href="./Assets/Font/Muzej%20Logo.ai.png" rel="icon" type="image/png"/>
+<link href="./Assets/Font/Muzej%20Logo.ai.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&amp;display=swap" rel="stylesheet"/>
+<link href="fonts.css?v=20261101-consistency-3" rel="stylesheet"/>
+<style>
+:root {
+  --background: #ffffff;
+  --foreground: #0f0e0d;
+  --white: #ffffff;
+  --ink: #0f0e0d;
+  --ink-soft: rgba(15, 14, 13, 0.62);
+  --ink-faint: rgba(15, 14, 13, 0.12);
+  --muted: #70675d;
+  --rule: rgba(23, 21, 19, 0.09);
+  --page-x: clamp(18px, 5.2vw, 72px);
+  --nav-h: clamp(88px, 10vw, 128px);
+  --feature-w: min(1280px, calc(100vw - (var(--page-x) * 2)));
+  --rail-gap: clamp(34px, 5.4vw, 84px);
+  --body-col: minmax(520px, 760px);
+  --body-tail: 0px;
+  --section-gap: clamp(48px, 8vw, 108px);
+  --content-max: 1520px;
+  --font-display: "plantin", Georgia, serif;
+  --font-wordmark: var(--font-display);
+  --serif: var(--font-display);
+        --headline-serif: var(--font-display);
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --article-serif: "adobe-jenson-pro", Georgia, serif;
+  --brand-serif: var(--font-wordmark);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--article-serif);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+.shell {
+  width: min(100%, var(--content-max));
+  margin: 0 auto;
+  padding-left: var(--page-x);
+  padding-right: var(--page-x);
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  background: var(--background);
+}
+.header-frame {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  padding-top: 28px;
+  padding-bottom: 24px;
+}
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-wordmark);
+  font-size: clamp(2.4rem, 1.9rem + 1.43vw, 3.76rem);
+  line-height: 0.92;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  white-space: nowrap;
+  text-decoration: none;
+
+}
+
+.site-header .brand-mark {
+  position: relative;
+  width: 160px;
+  height: 32px;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.site-header .brand-mark-image {
+  position: absolute;
+  width: 198.68px;
+  max-width: none;
+  height: auto;
+  left: -19.53px;
+  top: -107.88px;
+  display: block;
+}
+
+.utility-link,
+.utility-menu-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: rgba(23, 21, 19, 0.58);
+  text-decoration: none;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+.utility-link:hover,
+.utility-menu-item:hover {
+  color: var(--foreground);
+}
+.header-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.utility-menu {
+  position: relative;
+}
+.utility-menu summary {
+  list-style: none;
+}
+.utility-menu summary::-webkit-details-marker {
+  display: none;
+}
+.utility-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: color 180ms ease, opacity 180ms ease;
+}
+.utility-trigger:hover {
+  opacity: 0.72;
+}
+.utility-trigger:focus-visible {
+  outline: 2px solid rgba(141, 79, 61, 0.45);
+  outline-offset: 3px;
+}
+.utility-icon {
+  display: grid;
+  gap: 0.26rem;
+}
+.utility-icon-line {
+  display: block;
+  width: 1.45rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.88;
+}
+.utility-panel {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  right: 0;
+  z-index: 10;
+  display: grid;
+  min-width: 10rem;
+  padding: 0.45rem 0;
+  border: 1px solid rgba(23, 21, 19, 0.12);
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(23, 21, 19, 0.08);
+}
+.utility-panel-group {
+  display: grid;
+  gap: 0;
+}
+.utility-panel-utility {
+  margin-top: 0.25rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid rgba(23, 21, 19, 0.1);
+}
+.utility-panel .utility-link,
+.utility-panel .utility-menu-item {
+  justify-content: flex-start;
+  min-height: 0;
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  background: transparent;
+}
+.utility-panel-utility .utility-link {
+  font-size: 0.66rem;
+  letter-spacing: 0;
+  color: rgba(23, 21, 19, 0.52);
+}
+.utility-panel .utility-menu-item {
+  cursor: pointer;
+}
+.utility-panel .utility-link:hover,
+.utility-panel .utility-menu-item:hover {
+  background: rgba(23, 21, 19, 0.035);
+}
+
+main {
+  padding-top: clamp(24px, 3.2vw, 48px);
+}
+
+.feature {
+  padding:
+    clamp(0px, 0.6vw, 6px)
+    clamp(16px, 3vw, 40px)
+    clamp(56px, 8vw, 102px);
+}
+.feature-inner {
+  display: grid;
+  grid-template-columns: minmax(420px, 1.06fr) minmax(300px, 0.84fr);
+  gap: clamp(22px, 3.8vw, 52px);
+  align-items: stretch;
+  max-width: min(1320px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
+  margin: 0 auto;
+}
+.feature-media {
+  margin: 0;
+}
+.feature-media img {
+  width: 100%;
+  height: clamp(620px, 80vh, 920px);
+  object-fit: contain;
+  object-position: center top;
+  background: var(--white);
+}
+.feature-copy {
+  min-height: clamp(620px, 80vh, 920px);
+  max-width: 27rem;
+  margin: 0 auto;
+  padding: clamp(26px, 3.6vw, 42px) 0 clamp(20px, 3vw, 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.feature-title {
+  margin: 0;
+  color: var(--ink);
+  font-family: "plantin", Georgia, serif;
+  font-size: clamp(42px, 5.2vw, 82px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0;
+  text-transform: none;
+  text-wrap: balance;
+}
+.feature-title-break {
+  display: block;
+}
+.feature-byline {
+  margin: 0 0 auto;
+  color: var(--ink-soft);
+  font-size: clamp(16px, 1.18vw, 19px);
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+.feature-deck {
+  max-width: min(1380px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
+  margin: clamp(40px, 5vw, 78px) auto 0;
+  color: var(--ink);
+  font-family: "plantin", Georgia, serif;
+  font-size: clamp(32px, 3.05vw, 56px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+.article-shell {
+  max-width: var(--feature-w);
+  margin: 0 auto;
+  padding: 0 var(--page-x) clamp(32px, 4vw, 56px);
+}
+.content-row {
+  display: grid;
+  grid-template-columns: minmax(270px, 1fr) var(--body-col);
+  column-gap: var(--rail-gap);
+  align-items: start;
+}
+.article-body {
+  display: grid;
+  grid-template-columns: minmax(270px, 1fr) var(--body-col);
+  column-gap: var(--rail-gap);
+  align-items: start;
+  margin-bottom: var(--section-gap);
+}
+.content-row + .content-row {
+  margin-top: var(--section-gap);
+}
+.content-row .empty-rail,
+.article-body .empty-tail,
+.content-row .empty-tail {
+  min-height: 1px;
+}
+.article-body .empty-tail,
+.content-row .empty-tail {
+  display: none;
+}
+.article-body-media {
+  margin: 0;
+  align-self: start;
+  position: sticky;
+  top: calc(var(--nav-h) + clamp(12px, 2vw, 26px));
+}
+.article-body-media img {
+  width: 100%;
+  height: auto;
+}
+.article-body-media figcaption {
+  margin-top: 12px;
+  color: var(--ink-soft);
+  font-size: 8px;
+  letter-spacing: 0;
+}
+.article-body-copy {
+  min-width: 0;
+  justify-self: end;
+  width: min(100%, 520px);
+}
+
+.section-heading {
+  margin: 0 0 1.15em;
+  max-width: min(100%, 24ch);
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: 0;
+  text-wrap: normal;
+}
+
+.body-block p {
+  margin: 0;
+  font-size: clamp(23px, 1.65vw, 31px);
+  line-height: 1.46;
+}
+.body-block p + p,
+.body-block p + .section-heading {
+  margin-top: 1.95em;
+}
+
+.article-inline-media {
+  width: min(88%, 420px);
+  margin: clamp(52px, 7vw, 88px) auto;
+}
+.article-inline-media img {
+  width: 100%;
+  height: auto;
+}
+
+.pull-quote {
+  margin: 0;
+  max-width: none;
+  justify-self: end;
+  width: min(100%, 520px);
+  font-size: clamp(20px, 2.35vw, 26px);
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.gallery-reading {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 1.9vw, 24px);
+  margin: var(--section-gap) 0 0;
+}
+.gallery-reading-media,
+.gallery-reading-feature {
+  margin: 0;
+  aspect-ratio: 15 / 21;
+  overflow: hidden;
+}
+.gallery-reading-media img,
+.gallery-reading-feature img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-reading-side {
+  min-width: 0;
+}
+.article-body-lower {
+  margin-top: clamp(22px, 3vw, 34px);
+  margin-bottom: 0;
+}
+
+.more-from-muzej {
+  padding-top: clamp(32px, 4vw, 56px);
+  padding-bottom: clamp(82px, 10vw, 148px);
+  background: transparent;
+  color: var(--foreground);
+}
+.more-from-muzej-frame {
+  display: grid;
+  width: min(calc(100% - (var(--page-x) * 2)), 68rem);
+  max-width: 68rem;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  border-top: 2px solid var(--foreground);
+  padding-top: clamp(2.1rem, 4vw, 3.25rem);
+}
+.more-from-muzej-title {
+  max-width: none;
+  margin: 0;
+  font-family: var(--headline-serif);
+  font-size: clamp(1.45rem, 1vw + 1.1rem, 1.9rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 650;
+  font-optical-sizing: auto;
+}
+.related-list {
+  list-style: none;
+  margin: clamp(1.4rem, 2.5vw, 2rem) 0 0;
+  padding: 0;
+}
+.related-list li {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  padding: clamp(1.1rem, 1.8vw, 1.6rem) 0;
+  border-top: 1px solid var(--rule);
+  align-items: start;
+}
+.related-list li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+.related-list a {
+  font-family: var(--headline-serif);
+  font-size: clamp(1.1rem, 1.3vw + 0.7rem, 1.55rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+  font-optical-sizing: auto;
+  border-bottom: none;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+.related-list a:hover {
+  color: var(--muted);
+}
+.related-list .related-desc {
+  display: block;
+  margin-top: 0.45rem;
+  font-family: var(--sans);
+  font-size: clamp(0.82rem, 0.78rem + 0.18vw, 0.94rem);
+  line-height: 1.72;
+  letter-spacing: 0;
+  color: var(--muted);
+}
+
+.site-footer {
+  margin-top: 0;
+}
+.muzej-footer {
+  width: 100%;
+  padding: clamp(3.5rem, 7vw, 6rem) var(--page-x);
+  background: #000000;
+  color: #f7f2e9;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: minmax(320px, 620px) minmax(180px, 260px);
+  gap: clamp(3rem, 7vw, 6rem);
+  justify-content: center;
+  align-items: start;
+  width: min(100%, 1160px);
+  margin: 0 auto;
+}
+.footer-brand {
+  min-width: 0;
+}
+.footer-wordmark {
+  display: inline-flex;
+  font-family: var(--font-wordmark);
+  font-size: clamp(3.1rem, 5vw, 5rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: 0;
+  font-optical-sizing: auto;
+
+}
+.footer-statement {
+  max-width: 38.75rem;
+  margin: clamp(1.15rem, 1.8vw, 1.45rem) 0 0;
+  font-size: clamp(1rem, 1vw + 0.72rem, 1.15rem);
+  line-height: 1.5;
+  color: rgba(247, 242, 233, 0.86);
+}
+.muzej-footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-top: 0.28rem;
+}
+.muzej-footer .footer-links a {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 180ms ease, text-decoration-color 180ms ease;
+}
+.muzej-footer .footer-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  opacity: 0.86;
+}
+
+@media (max-width: 1080px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+
+  .muzej-footer .footer-links {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 1140px) {
+  .header-frame {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 0.85rem 1.25rem;
+  }
+  .header-tools {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 980px) {
+  .menu-button {
+    padding: 8px 0 6px 18px;
+  }
+  .menu-panel {
+    padding: 0 calc(var(--page-x) + 18px) 0 var(--page-x);
+    gap: 16px;
+  }
+  .menu-panel a {
+    width: min(100%, 22rem);
+    font-size: clamp(26px, 5vw, 42px);
+  }
+  .feature-inner {
+    grid-template-columns: minmax(300px, 0.94fr) minmax(300px, 0.9fr);
+    gap: clamp(24px, 4vw, 46px);
+    align-items: stretch;
+  }
+  .feature-media img {
+    height: clamp(500px, 70vh, 720px);
+  }
+  .feature-copy {
+    min-height: clamp(500px, 70vh, 720px);
+    max-width: 23rem;
+  }
+  .feature-title {
+    font-size: clamp(34px, 4.35vw, 58px);
+  }
+  .feature-deck {
+    margin-top: clamp(30px, 4.2vw, 48px);
+    font-size: clamp(16px, 2.05vw, 20px);
+  }
+  .content-row {
+    grid-template-columns: minmax(210px, 1fr) minmax(0, 660px);
+  }
+  .article-body {
+    grid-template-columns: minmax(210px, 1fr) minmax(0, 660px);
+  }
+}
+
+@media (max-width: 760px) {
+  .header-frame {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .brand-mark {
+    font-size: clamp(2.16rem, 10.15vw, 2.87rem);
+
+  }
+}
+
+@media (max-width: 720px) {
+  .header-frame {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .brand-mark {
+    font-size: clamp(2.16rem, 10.15vw, 2.87rem);
+
+  }
+  .menu-button {
+    gap: 7px;
+    padding: 8px 0 6px 16px;
+    margin-top: 1px;
+  }
+  .menu-panel {
+    padding: 0 calc(var(--page-x) + 6px) 0 var(--page-x);
+    gap: 14px;
+  }
+  .menu-panel a {
+    width: min(100%, 16rem);
+    font-size: clamp(22px, 9vw, 30px);
+    line-height: 1.08;
+  }
+  .menu-panel a:last-child {
+    font-size: 18px;
+  }
+  .feature {
+    padding:
+      4px
+      var(--page-x)
+      48px;
+  }
+  .feature-inner,
+  .article-body,
+  .content-row {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    text-align: left;
+  }
+  .feature-inner {
+    display: grid;
+    gap: 22px;
+  }
+  .feature-media img {
+    height: clamp(360px, 56vh, 470px);
+  }
+  .article-body {
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .gallery-reading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin: 40px 0 0;
+  }
+  .article-body-media {
+    position: static;
+  }
+  .gallery-reading-media {
+    position: static;
+  }
+  .article-body-lower {
+    margin-top: 18px;
+    margin-bottom: 0;
+  }
+  .content-row .empty-tail {
+    display: none;
+  }
+  .article-body .empty-tail {
+    display: none;
+  }
+  .feature-copy {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+  }
+  .feature-title {
+    font-size: clamp(30px, 8.2vw, 38px);
+    line-height: 1.03;
+    width: calc(100vw - (var(--page-x) * 2));
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+  .feature-byline {
+    margin: 28px 0 0;
+    font-size: 15px;
+  }
+  .feature-deck {
+    margin-top: 34px;
+    font-size: clamp(15px, 3.9vw, 18px);
+    line-height: 1.2;
+  }
+  .feature-title-break {
+    display: none;
+  }
+  .content-row + .content-row {
+    margin-top: 40px;
+  }
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: transparent;
+  pointer-events: none;
+}
+
+.site-header .header-frame,
+.site-header .brand-mark,
+.site-header .header-tools {
+  pointer-events: auto;
+}
+
+.site-header .brand-mark {
+  transform: translate3d(0, 0, 0);
+  transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.muzej-logo-hidden .site-header .brand-mark {
+  transform: translate3d(0, calc(-100% - 42px), 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header .brand-mark {
+    transition: none;
+    will-change: auto;
+  }
+
+  body.muzej-logo-hidden .site-header .brand-mark {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header { z-index: 2000; }
+  .site-header .header-frame { grid-template-columns: minmax(0, 1fr) auto; align-items: center; justify-items: stretch; gap: 1rem; }
+  .site-header .brand-mark { justify-self: start; min-width: 0; }
+  .site-header .header-tools { justify-self: end; justify-content: flex-end; margin-left: auto; position: relative; z-index: 2002; }
+  .site-header .utility-menu { position: static; }
+  .site-header .utility-trigger { position: relative; z-index: 2003; }
+  .site-header .utility-panel { position: fixed; inset: 0; left: 0; right: 0; top: 0; z-index: 2001; display: grid; align-content: center; width: 100vw; max-width: none; min-width: 0; height: 100vh; height: 100svh; padding: clamp(76px, 18vh, 128px) var(--page-x) 48px; border: 0; background: rgba(255, 255, 255, 0.98); box-shadow: none; overflow-y: auto; transform: none; }
+  .site-header .utility-panel-group { width: min(100%, 22rem); margin: 0 auto; }
+  .site-header .utility-panel-utility { margin-top: 0.8rem; padding-top: 0.85rem; }
+  .site-header .utility-panel .utility-link,
+  .site-header .utility-panel .utility-menu-item { justify-content: center; min-height: 2.75rem; padding: 0.72rem 0; text-align: center; }
+}
+
+.article-longform {
+  padding-bottom: clamp(72px, 9vw, 132px);
+}
+.article-longform .section-heading {
+  max-width: min(100%, 24ch);
+}
+.article-longform .section-heading:first-child {
+  margin-top: 0;
+}
+.article-longform .section-heading + p {
+  margin-top: 0;
+}
+.article-longform .ohrid-sketch-spread {
+  margin-bottom: 72px;
+}
+@media (max-width: 720px) {
+  .article-longform .ohrid-sketch-spread {
+    margin-bottom: 44px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .site-header .brand-mark {
+    width: 124px;
+    height: 25px;
+  }
+
+  .site-header .brand-mark-image {
+    width: 153.97px;
+    left: -15.13px;
+    top: -83.62px;
+  }
+}
+
+/* Keep the deck within the page grid at every screen width. */
+.lazarki-article .feature-deck {
+  width: var(--feature-w);
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: clamp(32px, 5vw, 64px) auto 0;
+  font-size: clamp(22px, 2.5vw, 36px);
+  line-height: 1.25;
+  text-wrap: pretty;
+}
+</style>
+<style>
+.ohrid-article .feature-title {
+  font-family: "plantin", Georgia, serif;
+  font-size: clamp(54px, 7.8vw, 132px);
+  font-weight: 400;
+  line-height: 0.86;
+  letter-spacing: 0;
+}
+.ohrid-article .feature-byline {
+  font-family: "plantin", Georgia, serif;
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(24px, 2.2vw, 38px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+.ohrid-article .feature-kicker {
+  display: none;
+  margin: 0;
+}
+.ohrid-article .feature-copy {
+  width: min(100%, 44rem);
+  max-width: none;
+  margin: 0 auto;
+  padding-top: clamp(108px, 16vh, 190px);
+  padding-bottom: clamp(22px, 3vw, 34px);
+  justify-content: space-between;
+  gap: clamp(72px, 14vh, 180px);
+}
+@media (min-width: 981px) {
+  .ohrid-article main {
+    padding-top: clamp(6px, 1.4vh, 14px);
+  }
+
+  .ohrid-article .feature {
+    padding-top: 0;
+    padding-bottom: clamp(48px, 5vh, 72px);
+  }
+
+  .ohrid-article .feature-inner {
+    height: clamp(600px, calc(100svh - var(--nav-h, 112px) - clamp(18px, 3svh, 32px)), 780px);
+    min-height: 0;
+    align-items: stretch;
+  }
+
+  .ohrid-article .feature-media,
+  .ohrid-article .feature-copy {
+    height: 100%;
+    min-height: 0;
+  }
+
+  .ohrid-article .feature-media img {
+    height: 100%;
+    max-height: 100%;
+  }
+
+  .ohrid-article .feature-copy {
+    padding-top: clamp(34px, 5vh, 76px);
+    padding-bottom: clamp(14px, 2.2vh, 28px);
+    gap: clamp(28px, 4.6vh, 64px);
+  }
+
+  .ohrid-article .feature-title {
+    font-size: clamp(48px, 6.1vw, 100px);
+  }
+
+  .ohrid-article .feature-byline {
+    font-size: clamp(22px, 1.9vw, 32px);
+  }
+
+  .ohrid-article .feature-deck {
+    margin-top: clamp(64px, 9svh, 118px);
+  }
+}
+@media (max-width: 980px) {
+  .ohrid-article .feature-title {
+    font-size: clamp(46px, 7.2vw, 78px);
+  }
+  .ohrid-article .feature-byline {
+    font-size: clamp(20px, 2.4vw, 30px);
+  }
+  .ohrid-article .feature-copy {
+    padding-top: clamp(72px, 12vh, 126px);
+    gap: clamp(58px, 10vh, 112px);
+  }
+}
+@media (max-width: 720px) {
+  .ohrid-article .feature-copy {
+    align-items: center;
+    text-align: center;
+    padding-top: 6px;
+    gap: clamp(48px, 14vw, 72px);
+  }
+  .ohrid-article .feature-title {
+    font-size: clamp(38px, 13.4vw, 62px);
+    line-height: 0.9;
+  }
+  .ohrid-article .feature-byline {
+    margin: 0;
+    font-size: clamp(20px, 6.2vw, 28px);
+  }
+}
+
+.ohrid-article .feature-title {
+  font-family: "plantin", Georgia, serif;
+  font-size: clamp(42px, 5.2vw, 82px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.ohrid-article .feature-byline {
+  margin: 0 0 auto;
+  color: var(--ink-soft);
+  font-family: var(--article-serif);
+  font-size: clamp(16px, 1.18vw, 19px);
+  line-height: 1.4;
+}
+.ohrid-article .feature-copy {
+  max-width: 27rem;
+  justify-content: flex-start;
+  gap: 0;
+}
+@media (max-width: 720px) {
+  .ohrid-article .feature-title {
+    font-size: clamp(30px, 8.2vw, 38px);
+    line-height: 1.03;
+    width: calc(100vw - (var(--page-x) * 2));
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+  .ohrid-article .feature-byline {
+    margin: 28px 0 0;
+    font-size: 15px;
+  }
+}
+</style>
+<link href="more-from-muzej.css?v=20261108-full-cassette" rel="stylesheet"/>
+<script defer="" src="more-from-muzej.js?v=20261107-ohrid-hero"></script>
+<style>
+.lazarki-article{--lz-ink:#11110f;--lz-muted:rgba(17,17,15,.58);--lz-rule:rgba(17,17,15,.16);--lz-soft:#f3f1eb}
+
+
+
+.lazarki-article .feature-media>div,.lazarki-article .article-body-media>div,.lazarki-article .article-inline-media>div,.lazarki-article .gallery-reading-media>div,.lazarki-article .gallery-reading-feature>div{border:0!important;background:linear-gradient(180deg,#f4f2ed 0%,#ece9e2 100%)!important}
+
+
+
+
+
+
+
+.lazarki-article .body-block>p{max-width:34rem;font-size:clamp(23px,1.65vw,31px);line-height:1.46;color:var(--lz-ink);font-weight:400}
+.lazarki-article .body-block>p+p{margin-top:1.45em}
+.lazarki-article .lazarki-intro{margin-bottom:clamp(110px,14vw,210px)}
+.lazarki-article .lazarki-intro>p:first-child{max-width:34rem;font-family:var(--article-serif);font-size:clamp(23px,1.65vw,31px);font-weight:400;line-height:1.46;letter-spacing:0}
+.lazarki-article .chapter-heading{display:block;max-width:100%;margin:clamp(58px,6.5vw,92px) 0 clamp(24px,3vw,38px);padding-top:clamp(14px,1.5vw,20px);border-top:1px solid var(--lz-ink);font-family:var(--headline-serif);font-size:clamp(38px,4.6vw,66px);font-weight:400;line-height:.96;letter-spacing:-.018em;text-wrap:normal}
+
+
+
+.lazarki-article .subhead{max-width:26ch;margin:clamp(48px,6vw,84px) 0 .9em;font-family:var(--headline-serif);font-size:clamp(24px,2.35vw,34px);font-weight:400;line-height:1.08;letter-spacing:-.01em}
+.lazarki-article .subhead+p{margin-top:0}
+.lazarki-article .fact-statement{max-width:33rem!important;margin:clamp(68px,8vw,120px) 0!important;padding:clamp(18px,2.4vw,28px) 0;border-top:1px solid var(--lz-ink);border-bottom:1px solid var(--lz-rule);font-family:"plantin",Georgia,serif;font-size:clamp(30px,3.25vw,48px)!important;line-height:1.08!important;letter-spacing:-.02em}
+.lazarki-article .ritual-sequence{max-width:40rem!important;margin:clamp(46px,5vw,76px) 0!important;padding:clamp(18px,2.4vw,28px) 0;border-top:1px solid var(--lz-rule);border-bottom:1px solid var(--lz-rule);font-family:var(--sans);font-size:clamp(.78rem,.72rem + .24vw,.95rem)!important;line-height:1.7!important;letter-spacing:.035em;text-transform:uppercase}
+.lazarki-article .data-list{max-width:40rem;margin:clamp(32px,4vw,58px) 0 clamp(54px,6vw,82px);border-top:1px solid var(--lz-ink)}
+.lazarki-article .data-row{display:grid;grid-template-columns:minmax(92px,.36fr) 1fr;gap:clamp(18px,3vw,40px);padding:14px 0 16px;border-bottom:1px solid var(--lz-rule);font-family:var(--sans);font-size:.82rem;line-height:1.45}
+.lazarki-article .data-row .data-key{color:var(--lz-muted)}
+.lazarki-article .regional-atlas{width:100%;max-width:100%;margin-top:clamp(36px,5vw,64px);margin-bottom:clamp(72px,8vw,112px);overflow:visible}
+.lazarki-article .regional-atlas table{width:100%;max-width:100%;table-layout:fixed;border-collapse:collapse;font-family:var(--sans);font-size:.72rem!important;line-height:1.45!important}
+.lazarki-article .regional-atlas th,.lazarki-article .regional-atlas td{padding:12px 14px 14px 0;border-top:1px solid var(--lz-rule);vertical-align:top;text-align:left;font-weight:400;overflow-wrap:anywhere;word-break:normal}
+.lazarki-article .regional-atlas th{padding-top:10px;border-top:1px solid var(--lz-ink);font-size:.64rem;letter-spacing:.09em;text-transform:uppercase;color:var(--lz-muted)}
+.lazarki-article .regional-atlas th:nth-child(1),.lazarki-article .regional-atlas td:nth-child(1){width:24%}.lazarki-article .regional-atlas th:nth-child(2),.lazarki-article .regional-atlas td:nth-child(2){width:44%}.lazarki-article .regional-atlas th:nth-child(3),.lazarki-article .regional-atlas td:nth-child(3){width:32%}.lazarki-article .regional-atlas td:first-child{font-family:var(--headline-serif);font-size:.96rem;line-height:1.2}
+.lazarki-article .evidence-list{margin-top:clamp(32px,4vw,58px);border-top:1px solid var(--lz-ink)}
+.lazarki-article .evidence-item{display:grid;grid-template-columns:minmax(180px,.82fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);padding:clamp(24px,3.5vw,44px) 0;border-bottom:1px solid var(--lz-rule)}
+.lazarki-article .evidence-claim{margin:0;font-family:"plantin",Georgia,serif;font-size:clamp(22px,2.3vw,34px);line-height:1.04;font-weight:400}
+.lazarki-article .evidence-answer{max-width:29rem;margin:0;font-size:clamp(16px,1.16vw,19px);line-height:1.68}
+.lazarki-article .research-status{margin-top:clamp(120px,14vw,210px);padding-top:clamp(22px,3vw,34px);border-top:2px solid var(--lz-ink)}
+.lazarki-article .research-status>h2{margin:0 0 clamp(28px,4vw,52px);font-family:var(--sans);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:400}
+.lazarki-article .research-status>p:first-of-type{font-family:"plantin",Georgia,serif;font-size:clamp(30px,3.1vw,46px);line-height:1.08;letter-spacing:-.02em}
+.lazarki-article .sources-section{margin-top:clamp(120px,14vw,210px);padding-top:20px;border-top:1px solid var(--lz-ink)}
+.lazarki-article .sources-section>h2{margin:0 0 28px;font-family:var(--sans);font-size:.64rem;line-height:1.2;letter-spacing:.12em;text-transform:uppercase;font-weight:400;color:var(--lz-muted)}
+.lazarki-article .sources-section>p{max-width:44rem;margin:0!important;padding:11px 0 13px;border-top:1px solid rgba(17,17,15,.1);font-family:var(--sans);font-size:.72rem!important;line-height:1.55!important;color:var(--lz-muted)}
+.lazarki-article .sources-section>p:first-of-type{border-top:0}
+.lazarki-article .gallery-reading{margin-top:clamp(100px,13vw,190px);margin-bottom:clamp(100px,13vw,190px)}
+@media(max-width:980px){.lazarki-article .article-body-media{position:static;width:min(100%,420px)}.lazarki-article .regional-atlas{width:100%;max-width:100%}}
+@media(max-width:720px){
+.lazarki-article .chapter-heading{max-width:none;margin-top:52px;margin-bottom:24px;padding-top:14px;font-size:clamp(34px,10.5vw,48px);line-height:.98}
+.lazarki-article .subhead{margin-top:42px;font-size:clamp(23px,7vw,31px);line-height:1.08}
+.lazarki-article .evidence-item{grid-template-columns:1fr;gap:16px}
+.lazarki-article .data-row{grid-template-columns:1fr;gap:6px}
+
+}
+.lazarki-article .chapter-number,
+
+.lazarki-article .evidence-item{grid-template-columns:1fr;gap:16px}
+.lazarki-article .data-row{grid-template-columns:1fr;gap:6px}
+
+}
+
+/* Blank image placeholders occupying the exact Ohrid template image slots. */
+.lazarki-article .feature-media > div {
+  display: block;
+  width: 100%;
+  height: clamp(620px, 80vh, 920px);
+  background: #f4f2ed;
+}
+.lazarki-article .article-body-media > div {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1.08;
+  background: #f4f2ed;
+}
+.lazarki-article .article-inline-media > div,
+.lazarki-article .gallery-reading-media > div,
+.lazarki-article .gallery-reading-feature > div {
+  background: #f4f2ed;
+}
+@media (min-width: 981px) {
+  .ohrid-article .feature-media > div {
+    height: 100%;
+    max-height: 100%;
+  }
+}
+@media (max-width: 980px) {
+  .lazarki-article .feature-media > div {
+    height: clamp(500px, 70vh, 720px);
+  }
+}
+@media (max-width: 720px) {
+  .lazarki-article .feature-media > div {
+    height: clamp(360px, 56vh, 470px);
+  }
+}
+.vodici-media-placeholder{background:#f5f3ef;min-height:300px;display:grid;place-items:center}.vodici-media-placeholder>div{padding:24px;color:#777;font:12px Helvetica,Arial,sans-serif;text-align:center}.lazarki-hero.vodici-media-placeholder{min-height:440px}</style><link href="muzej-footer-logo.css?v=20260914" rel="stylesheet"/>
+<style>/* Lazarki surgical spacing and alignment adjustments. */
+.lazarki-article .article-body-copy > .lazarki-intro {
+  margin-top: 1.45em;
+  margin-bottom: 1.45em;
+}
+.lazarki-article .content-row > .article-body-copy > .chapter-heading:first-child {
+  margin-top: 0;
+}
+</style><style id="lazarki-sticky-opening">
+/* Title remains within the opening until the image and deck have passed. */
+.lazarki-sticky-opening .feature-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:start;height:auto;min-height:0}
+.lazarki-sticky-opening .feature-copy{position:sticky;top:100px;align-self:start;height:calc(100svh - 124px);min-height:0;max-width:none;width:100%;margin:0;padding:0 0 24px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;text-align:left;gap:24px}
+.lazarki-sticky-opening .feature-title{width:auto;max-width:100%;font-size:clamp(42px,5.2vw,82px);line-height:.98}
+.lazarki-sticky-opening .feature-byline{order:2;margin:0}
+.feature-scroll-column{min-width:0}
+.lazarki-sticky-opening .feature-media{margin:0;height:auto}
+.lazarki-sticky-opening .feature-media img{display:block;width:100%;height:calc(100svh - 124px);max-height:none;object-fit:cover}
+.lazarki-sticky-opening .feature-deck{width:100%;max-width:none;margin:40px 0 0;padding:0 0 16px;font-size:clamp(22px,2.5vw,36px);line-height:1.25;text-align:left}
+@media(max-width:760px){
+.lazarki-sticky-opening .feature-inner{grid-template-columns:1fr;gap:28px}
+.lazarki-sticky-opening .feature-copy{position:static;height:auto;min-height:0;padding:0;gap:20px;order:0}
+.lazarki-sticky-opening .feature-title{font-size:clamp(30px,8.2vw,38px)}
+.lazarki-sticky-opening .feature-media img{height:auto;max-height:none;object-fit:contain}
+.lazarki-sticky-opening .feature-deck{margin-top:28px;font-size:22px}
+}
+</style><style id="article-section-headings">
+.lazarki-article .chapter-heading{font-family:"plantin",Georgia,serif;font-size:30px;font-weight:400;line-height:1.1;letter-spacing:0;text-transform:none;border:0;padding:0;margin:64px 0 24px}
+.lazarki-article .chapter-heading:first-child{margin-top:0}
+@media(max-width:760px){.lazarki-article .chapter-heading{font-size:26px;margin-top:52px;margin-bottom:22px}.lazarki-article .chapter-heading:first-child{margin-top:0}}
+</style>
+<link rel="stylesheet" href="article-system.css?v=20261101-consistency-3">
+
+<style id="lazarki-radio-layout">
+.lazarki-article{color:#000;background:#fff;--lazarki-gap:clamp(36px,6vw,96px)}
+.lazarki-article main{padding:12px var(--page-x) 0;max-width:1520px;margin:auto}
+.lazarki-article .lazarki-opening,.lazarki-article .content-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--lazarki-gap);align-items:start}
+.lazarki-opening-copy{min-width:0;align-self:end}
+.lazarki-kicker{font:400 11px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000;text-transform:uppercase;letter-spacing:.08em;margin:0}
+.lazarki-opening h1{font:400 clamp(48px,5.7vw,90px)/.97 "plantin",Georgia,serif;letter-spacing:-.025em;margin:32px 0;color:#000}
+.lazarki-deck{font:400 clamp(26px,2.6vw,38px)/1.2 "plantin",Georgia,serif;margin:0 0 22px;max-width:16em;color:#000}
+.lazarki-byline{font:400 11px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000;letter-spacing:.05em;text-transform:uppercase;margin:0}
+.lazarki-hero{margin:0;min-width:0}
+.lazarki-hero img{display:block;width:100%;height:calc(100svh - 160px);min-height:380px;object-fit:contain}
+.lazarki-article .article-shell{width:100%;max-width:none;margin:120px 0 0;padding:0}
+.lazarki-article .content-row{margin:0 0 100px}
+.lazarki-article .article-body-copy{min-width:0;width:100%;max-width:none;justify-self:stretch}
+.lazarki-article .body-block{font:400 clamp(21px,1.65vw,25px)/1.46 "plantin",Georgia,serif;color:#000}
+.lazarki-article .body-block > p{max-width:none;font:inherit;color:#000;margin:0 0 1.25em}
+.lazarki-article .body-block > p + p{margin-top:0}
+.lazarki-article .body-block > p:last-child{margin-bottom:0}
+.lazarki-article .article-body-media{position:sticky;top:100px;align-self:start;width:min(88%,420px);margin:0}
+.lazarki-article .article-body-media img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+.lazarki-article .article-inline-media{width:min(88%,420px);margin:52px auto}
+.lazarki-article .article-body-media figcaption,.lazarki-article .article-inline-media figcaption{font:400 11px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000;margin:13px 0 0}
+.lazarki-article .gallery-reading{margin:100px 0 120px}
+.lazarki-article .sources-section{margin-top:64px}
+@media(max-width:760px){
+.lazarki-article main{padding:12px 20px 0}
+.lazarki-article .lazarki-opening,.lazarki-article .content-row{grid-template-columns:1fr;gap:36px}
+.lazarki-opening h1{font-size:clamp(42px,11vw,68px);margin:26px 0}
+.lazarki-deck{font-size:26px;margin-bottom:18px}
+.lazarki-hero img{height:52svh;min-height:260px}
+.lazarki-article .article-shell{margin-top:64px}
+.lazarki-article .content-row{margin-bottom:68px}
+.lazarki-article .article-body-media{position:static}
+.lazarki-article .body-block{font-size:22px;line-height:1.46}
+.lazarki-article .article-body-media figcaption,.lazarki-article .article-inline-media figcaption{font-size:10px}
+.lazarki-article .gallery-reading{margin:70px 0}
+}
+</style>
+<link rel="stylesheet" href="bylines.css?v=20261107">
+<style>.lazarki-article .sources-section > h2{text-transform:none;letter-spacing:0}</style>
+<link rel="stylesheet" href="editorial-sources.css?v=20261109-sources">
+</head>
+<body class="ohrid-article lazarki-article">
+<header class="site-header">
+<div class="shell header-frame">
+<a aria-label="Muzej home" class="brand-mark" href="index.html">
+<img alt="" aria-hidden="true" class="brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png"/>
+</a>
+<div class="header-tools">
+<details class="utility-menu">
+<summary aria-label="Open navigation menu" class="utility-trigger">
+<span aria-hidden="true" class="utility-icon">
+<span class="utility-icon-line"></span>
+<span class="utility-icon-line"></span>
+<span class="utility-icon-line"></span>
+</span>
+</summary>
+<nav aria-label="Site navigation" class="utility-panel">
+<div class="utility-panel-group">
+<a class="utility-link" href="index.html">Home</a>
+<a class="utility-link" href="index.html#selected-stories">Selected Stories</a>
+<a class="utility-link" href="index.html#now-playing">Now Playing</a>
+<a class="utility-link" href="index.html#catalogue">Catalogue</a>
+<a class="utility-link" href="index.html#archive">Archive</a>
+<a class="utility-link" href="about.html">About Muzej</a>
+</div>
+<div class="utility-panel-group utility-panel-utility">
+<a class="utility-link" href="mailto:muzej.mk@proton.me">Contact</a>
+<a class="utility-link" href="https://www.instagram.com/_muzej/" rel="noopener noreferrer" target="_blank">Instagram</a>
+</div>
+</nav>
+</details>
+</div>
+</div>
+</header>
+<main><header class="lazarki-opening"><div class="lazarki-opening-copy"><p class="lazarki-kicker">Ritual</p><h1>Vodici in Bituše</h1><p class="lazarki-deck">Every January, the women of a mountain village carry bread and song through a celebration that brings families home.</p><p class="lazarki-byline muzej-byline">Words <strong>Aleksandar Trajkovski</strong></p></div><figure class="lazarki-hero vodici-media-placeholder"><div role="img" aria-label="Photograph pending licensing">Photograph pending licensing</div></figure></header>
+<article class="article-shell article-longform"><section class="content-row"><figure class="article-body-media vodici-media-placeholder"><div role="img" aria-label="Documentary photograph pending licensing">Documentary photograph pending licensing</div></figure><div class="article-body-copy body-block">
+<p>At midnight, three girls set out for the village fountain. They gather dogwood branches and return with water for ceremonial bread. Gunshots mark the occasion. It is January in Bituše, on the slopes of Mount Dešat, and preparations for Vodici have begun.</p>
+<p>The Orthodox feast of Epiphany takes an elaborate form here. Over several days, ritual crosses pass between households, women sing songs that name the families involved, and bread is carried through the village. At the center are two <i>kumstva</i>, whose responsibilities change hands each year. In 2019, Vodici in Bituše received official recognition as intangible cultural heritage of exceptional significance.</p>
+<h2 class="chapter-heading">Bread and water</h2><p>At midnight before Vasilica, three girls went to the Bigrišča fountain to collect water. Coins were placed in the water, dogwood branches were gathered, and gunshots marked the occasion. Ethnographers Fima Atanasova and Vladimir Bočev recorded these preparations during fieldwork in Bituše in 1990 and 1991.</p>
+<p>The water was used to make ceremonial bread at the homes of the incoming <i>kumovi</i>. A girl whose parents were both living prepared an odd number of loaves, commonly five, seven, or nine, joined in a circular form. A portion was kept through the year beside the ritual cross.</p>
+<p>On January 17, as the outgoing <i>kumovi</i> prepared to take the crosses to Saint John Bigorski Monastery, two women stood on stools and twisted red and white thread while singing. Atanasova and Bočev interpreted the gesture as protective, associated with fertility and well-being. The crosses later returned with blessed water, or <i>ajazmo</i>, for the village households.</p>
+<h2 class="chapter-heading">The kumstarki</h2><p>The women known as <i>kumstarki</i> gather in embroidered clothing, woven aprons, jewelry, and elaborate head coverings. Carrying ceremonial bread on their heads, they move through the village toward the church of Saint Archangel Michael.</p>
+<p>Their songs address Saint John and the households receiving the crosses. Some verses incorporate family members’ names, making the performance specific to the people being honored. Clothing, too, can pass through families, worn by one generation and kept for the next.</p>
+<p>Many people who take part no longer live in Bituše throughout the year. Vodici brings them back into the same streets and houses, where the responsibilities of <i>kumstvo</i> pass from one household to another.</p>
+<h2 class="chapter-heading">The songs</h2><p>“Добре ми дојде, Свети Јоване” — “Welcome, Saint John” — accompanies more than one moment of the ceremony, from preparing bread to welcoming the new <i>kum</i>. The words can change with the household.</p>
+<p>In research published in 2025, Melita Ivanovska identified four songs continuing in the documented contemporary celebration: “Добре ми дојде, Свети Јоване,” “Јадите, пијте, веселите се,” “Петор и Павле две ора водет,” and “Збогум, со здравје, Свети Јоване.” Earlier ethnographers recorded a wider repertoire.</p>
+<p>Ivanovska describes changing verses alongside recognizable local melodic and rhythmic features. Women sing principally together, sometimes joined by men. These are songs for particular actions, rather than performances detached from the ceremony.</p>
+<h2 class="chapter-heading">Jovanovo oro</h2><p>At the church, the women gather for Jovanovo oro. Atanasova and Bočev observed three to five rounds of the ceremonial dance. Sometimes the song ended before the dance did; the women continued their steps in silence, completing what the researchers called <i>nemo oro</i>.</p>
+<p>After the procession, the bread is cut and shared. The next year, another set of households takes responsibility for the crosses, and the preparations begin again.</p>
+<p>Each January, people return to Bituše to take part. Some know the songs from childhood; others must learn them. The ceremony depends on both.</p>
+<section class="sources-section muzej-sources"><h2 class="section-heading">Sources</h2>
+<p>Atanasova, Fima, and Vladimir Bočev. “Некои магиски елементи во изведувањето на обичајот Водици во селото Битуше.” <i>Етнолог</i> 1, no. 1 (1992): 98–107.</p>
+<p>Ivanovska, Melita. “Транзицијата на обредните водичарски песни во Западна Македонија по примерот на селото Битуше (Долна Река) од крајот на XX век до денес.” <i>Македонски фолклор</i> 88 (2025): 139–155.</p>
+<p>Rękas, Joanna. “Збор, гест, текст.” <i>Спектар</i> 61 (2013): 174–195.</p>
+<p>Rękas, Joanna. “Pamięć o granicach.” <i>Slavia Meridionalis</i> 16 (2016): 565–591.</p>
+<p><a href="https://npmavrovo.org.mk/%D0%BE%D0%B1%D0%B8%D1%87%D0%B0%D0%B8-2/">Mavrovo National Park: Customs</a>.</p>
+</section></div></section></article>
+<section aria-labelledby="more-from-muzej-title" class="more-from-muzej" data-more-from-muzej=""></section>
+</main>
+<footer class="site-footer muzej-footer">
+<div class="footer-inner">
+<div class="footer-brand">
+<a aria-label="Muzej home" class="footer-brand-mark" href="index.html"><img alt="" aria-hidden="true" class="footer-brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png"/></a>
+<p class="footer-statement">An editorial archive of Macedonian art, style, tradition, and culture.</p>
+</div>
+<nav aria-label="Footer navigation" class="footer-links">
+<a href="about.html">About Muzej</a>
+<a href="mailto:muzej.mk@proton.me">Contact</a>
+<a aria-label="Open Muzej on Instagram" href="https://www.instagram.com/_muzej/" rel="noopener noreferrer" target="_blank">Instagram</a>
+</nav>
+</div>
+</footer>
+<script>
+const menuButton = document.getElementById('menuButton');
+const menuPanel = document.getElementById('menuPanel');
+
+if (menuButton && menuPanel) {
+  const setMenuState = (isOpen) => {
+    menuPanel.classList.toggle('open', isOpen);
+    menuButton.classList.toggle('is-open', isOpen);
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+    menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  };
+
+  menuButton.addEventListener('click', () => {
+    setMenuState(!menuPanel.classList.contains('open'));
+  });
+
+  menuPanel.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setMenuState(false));
+  });
+}
+</script>
+<script>
+  (function () {
+    var previousY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+    var ticking = false;
+    var revealZone = 24;
+    var motionThreshold = 4;
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    function updateMuzejLogoVisibility() {
+      var currentY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+      var delta = currentY - previousY;
+
+      if (reducedMotion.matches) {
+        document.body.classList.remove("muzej-logo-hidden");
+        ticking = false;
+        return;
+      }
+
+      if (currentY <= revealZone) {
+        document.body.classList.remove("muzej-logo-hidden");
+      } else if (delta > motionThreshold) {
+        document.body.classList.add("muzej-logo-hidden");
+      } else if (delta < -motionThreshold) {
+        document.body.classList.remove("muzej-logo-hidden");
+      }
+
+      previousY = currentY;
+      ticking = false;
+    }
+
+    function requestMuzejLogoVisibility() {
+      if (!ticking) {
+        window.requestAnimationFrame(updateMuzejLogoVisibility);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener("scroll", requestMuzejLogoVisibility, { passive: true });
+    window.addEventListener("resize", requestMuzejLogoVisibility);
+
+    if (reducedMotion.addEventListener) {
+      reducedMotion.addEventListener("change", requestMuzejLogoVisibility);
+    } else if (reducedMotion.addListener) {
+      reducedMotion.addListener(requestMuzejLogoVisibility);
+    }
+
+    updateMuzejLogoVisibility();
+  })();
+</script>
+</body>
+</html>
