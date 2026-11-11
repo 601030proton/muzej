@@ -1178,13 +1178,12 @@ body.muzej-logo-hidden .site-header .brand-mark {
      without changing the page color or cassette placement. */
   /* Mobile-only: lift the near-white pixels baked into cassette scans to
      paper white, so the rectangular scan edges disappear against the page. */
-  .radio-article-page .radio-sleeve-image {
-    mix-blend-mode: normal;
-    filter: brightness(1.14) contrast(1.035) !important;
-  }
+  .radio-article-page .radio-sleeve-image,
   .radio-article-page .radio-hero-image {
-    mix-blend-mode: normal;
-    filter: brightness(1.08) contrast(1.025);
+    mix-blend-mode: normal !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    opacity: 1;
   }
 }
 </style>
