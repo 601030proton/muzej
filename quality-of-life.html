@@ -1229,6 +1229,14 @@ main > .more-from-muzej[data-more-from-muzej] {
 /* Match Bitola’s supplied 3:4 photograph without side gutters. */
 #bitola .ranking-media-frame { aspect-ratio: 3 / 4; background: transparent; }
 #bitola .ranking-media img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; transform: none; }
+@media(min-width:981px){
+  /* Reserve the sticky top offset, caption, and bottom breathing room. */
+  #bitola .ranking-media{
+    width:min(100%,calc((100svh - var(--nav-h) - clamp(12px,2vw,26px) - 48px)*.75));
+    max-width:100%;
+  }
+}
+
 </style>
 </head>
 <body class="muzej-feature">
