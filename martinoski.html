@@ -860,15 +860,19 @@ body.muzej-logo-hidden .site-header .brand-mark {
 .martinoski-radio-page .radio-title-column h1{font-size:clamp(44px,4.4vw,70px);max-width:none}
 .martinoski-radio-page .radio-hero-image{width:100%;height:calc(100svh - 150px);min-height:0;object-fit:contain;object-position:center}
 .martinoski-radio-page .radio-row:last-child{margin-bottom:0}
-.martinoski-radio-page .radio-rail>.radio-object{width:100%;margin:0}
-.martinoski-radio-page .radio-rail img{width:100%;height:auto}
-.martinoski-gallery{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:var(--radio-gap);align-items:center;max-width:1120px;margin:100px auto 120px}
-.martinoski-gallery img{display:block;width:100%;height:auto;max-height:72svh;object-fit:contain}
+.martinoski-radio-page .radio-rail>.radio-object{width:100%;max-width:480px;margin:0}
+.martinoski-radio-page .radio-rail img{width:100%;height:auto;max-height:min(590px,calc(100svh - 170px));object-fit:contain;object-position:left top}
+.martinoski-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--radio-gap);align-items:center;width:min(100%,960px);margin:100px auto 120px}
+.martinoski-gallery .radio-object{width:100%;max-width:480px;margin-inline:auto}
+.martinoski-gallery img{display:block;width:100%;height:auto;max-height:min(590px,56svh);object-fit:contain}
 @media(max-width:760px){
 .martinoski-radio-page .radio-title-column h1{font-size:clamp(36px,9vw,60px);max-width:none}
 .martinoski-radio-page .radio-hero-image{height:auto;max-height:none}
 .martinoski-gallery{grid-template-columns:1fr;gap:40px;margin:70px auto}
-.martinoski-gallery img{max-height:none}
+.martinoski-radio-page .radio-rail>.radio-object{max-width:100%}
+.martinoski-radio-page .radio-rail img{max-height:70svh}
+.martinoski-gallery{width:min(100%,480px)}
+.martinoski-gallery img{max-height:70svh}
 }
 </style>
 </head>
