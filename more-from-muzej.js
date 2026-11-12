@@ -83,7 +83,7 @@
     {
       slug: "martinoski",
       href: "martinoski.html",
-      title: "The Many Faces of Nikola Martinoski",
+      title: "Nikola Martinoski: Becoming a Painter",
       kicker: "Art | Painting",
       dek: "Martinoski stands at the hinge point where Macedonian painting became recognizably modern.",
       image: "./Assets/Martinoski%20Article/Nikola%27s%20Hero%20Images/NewNikolaMartinoski%20copy.png",
@@ -103,7 +103,7 @@
     {
       slug: "vangel-naumovski",
       href: "vangel-naumovski.html",
-      title: "The Metamorphosis of Vangel Naumovski",
+      title: "Vangel Naumovski: Forms of Life",
       kicker: "Art | Painting",
       dek: "The Lake, the Body, and the Cosmos.",
       image: "./Assets/Vangel/Website%20Pics/1.png",
