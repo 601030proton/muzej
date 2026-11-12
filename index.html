@@ -19,10 +19,10 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="fonts.css?v=20261101-consistency-3" rel="stylesheet"/>
 
-<link href="homepage-editorial.css?v=20261112-traditions" rel="stylesheet"/>
+<link href="homepage-editorial.css?v=20261112-three-heroes" rel="stylesheet"/>
 
 <link rel="stylesheet" href="article-system.css?v=20261101-consistency-3">
-<script>document.documentElement.dataset.homeLead = Math.random() < 0.5 ? "concrete" : "radio";</script>
+<script>document.documentElement.dataset.homeLead = ["concrete", "radio", "quality"][Math.floor(Math.random() * 3)];</script>
 </head>
 <body>
 <div class="page">
@@ -72,12 +72,19 @@
 </div>
 <a aria-label="Read Radio Free Macedonia" class="skopje-home-hero-media" href="./radio-free-macedonia.html"><img alt="Eighteen Macedonian music cassettes rotating on a white background" fetchpriority="high" src="./Assets/Radio%20Free%20Macedonia/radio-free-macedonia-18-cassettes.gif" width="1600" height="1200"/></a>
 </article>
+<article data-home-slot="hero" data-home-story="quality" class="skopje-home-hero-stage">
+<div class="skopje-home-hero-copy">
+<p class="home-eyebrow">Quality of Life | Urbanism</p><h1 id="quality-home-title"><a href="./quality-of-life.html">Where to Live in Macedonia</a></h1>
+<p class="lead-deck">Muzej’s editorial ranking of ten places for year-round life.</p><a class="text-link" href="./quality-of-life.html">Explore the ranking <span aria-hidden="true">↗</span></a>
+</div>
+<a aria-label="Read Where to Live in Macedonia" class="skopje-home-hero-media" href="./quality-of-life.html"><img alt="Collage of a woman holding a Macedonian flag" fetchpriority="high" src="./Assets/Quality%20of%20Life/hero-final.png" width="1080" height="1350"/></a>
+</article>
 </div></section><section aria-label="Selected Stories" class="section" id="selected-stories">
 <div class="shell section-frame">
 <div class="read-next-header">
 <h2 class="read-next-title">Selected Stories</h2>
 </div>
-<div class="story-grid"><article class="story-card"><a class="story-card-link" href="./skopje-tange.html"><img alt="Kenzo Tange and the reconstruction of Skopje" class="story-image" height="6000" loading="lazy" src="./Assets/Kenzo%20Article/Tange%20Pics/kenzohero.png" width="4500"/></a><div class="story-card-copy"><p class="story-card-kicker">Architecture | Skopje</p><h3 class="story-card-title"><a href="./skopje-tange.html">Tokyo on the Vardar</a></h3></div></article><article class="story-card"><a class="story-card-link" href="./quality-of-life.html"><img alt="Collage for the Where to Live in Macedonia." class="story-image" style="aspect-ratio: 3 / 4; object-fit: cover;" height="1350" loading="lazy" src="./Assets/Quality%20of%20Life/hero-final.png" width="1080"/></a><div class="story-card-copy"><p class="story-card-kicker">Quality of Life | Urbanism</p><h3 class="story-card-title"><a href="./quality-of-life.html">Where to Live in Macedonia</a></h3></div></article><article class="story-card"><a class="story-card-link" href="./wearing-the-nation.html"><img alt="Portrait crop of Macedonian football shirts in red, yellow, and white." class="story-image" height="1451" loading="lazy" src="./Assets/Wearing%20the%20Nation/nation-on-their-backs-index-portrait.png" width="1084"/></a><div class="story-card-copy"><p class="story-card-kicker">Sport | Design</p><h3 class="story-card-title"><a href="./wearing-the-nation.html">The Nation on Their Backs</a></h3></div></article><article class="story-card"><a class="story-card-link" href="./venus-of-skupi.html"><img alt="Marble head associated with the Venus of Skupi." class="story-image" height="6001" loading="lazy" src="./Assets/Venus/venusskupi_website-01.png" width="4500"/></a><div class="story-card-copy"><p class="story-card-kicker">Art | Antiquity</p><h3 class="story-card-title"><a href="./venus-of-skupi.html">The Venus of Skupi</a></h3></div></article></div>
+<div class="story-grid"><article class="story-card"><a class="story-card-link" href="./skopje-tange.html"><img alt="Kenzo Tange and the reconstruction of Skopje" class="story-image" height="6000" loading="lazy" src="./Assets/Kenzo%20Article/Tange%20Pics/kenzohero.png" width="4500"/></a><div class="story-card-copy"><p class="story-card-kicker">Architecture | Skopje</p><h3 class="story-card-title"><a href="./skopje-tange.html">Tokyo on the Vardar</a></h3></div></article><article class="story-card" data-home-slot="selected" data-home-story="quality"><a class="story-card-link" href="./quality-of-life.html"><img alt="Collage for the Where to Live in Macedonia." class="story-image" style="aspect-ratio: 3 / 4; object-fit: cover;" height="1350" loading="lazy" src="./Assets/Quality%20of%20Life/hero-final.png" width="1080"/></a><div class="story-card-copy"><p class="story-card-kicker">Quality of Life | Urbanism</p><h3 class="story-card-title"><a href="./quality-of-life.html">Where to Live in Macedonia</a></h3></div></article><article class="story-card" data-home-slot="selected" data-home-story="concrete"><a class="story-card-link" href="./skopje-brutalism.html"><img alt="Skopje’s Central Post Office and telecommunications complex" class="story-image" height="6000" loading="lazy" src="./Assets/A%20Spatial%20Field%20Guide%20to%20Concrete%20Skopje/Telecommunications%20Centre%20and%20Central%20Post%20Office.png" width="4500"/></a><div class="story-card-copy"><p class="story-card-kicker">Architecture | Skopje</p><h3 class="story-card-title"><a href="./skopje-brutalism.html">Concrete Skopje</a></h3></div></article><article class="story-card"><a class="story-card-link" href="./wearing-the-nation.html"><img alt="Portrait crop of Macedonian football shirts in red, yellow, and white." class="story-image" height="1451" loading="lazy" src="./Assets/Wearing%20the%20Nation/nation-on-their-backs-index-portrait.png" width="1084"/></a><div class="story-card-copy"><p class="story-card-kicker">Sport | Design</p><h3 class="story-card-title"><a href="./wearing-the-nation.html">The Nation on Their Backs</a></h3></div></article><article class="story-card"><a class="story-card-link" href="./venus-of-skupi.html"><img alt="Marble head associated with the Venus of Skupi." class="story-image" height="6001" loading="lazy" src="./Assets/Venus/venusskupi_website-01.png" width="4500"/></a><div class="story-card-copy"><p class="story-card-kicker">Art | Antiquity</p><h3 class="story-card-title"><a href="./venus-of-skupi.html">The Venus of Skupi</a></h3></div></article></div>
 </div>
 </section><section aria-labelledby="ohrid-feature-title" class="section kinfolk-feature" id="ohrid-feature">
 <div class="shell kinfolk-feature-frame">

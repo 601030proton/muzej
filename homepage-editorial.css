@@ -169,11 +169,15 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
-/* Select one lead story and place its counterpart farther down the page. */
-html:not([data-home-lead="radio"]) [data-home-slot="hero"][data-home-story="radio"],
+/* Rotate three lead stories, keeping each visible in only one homepage slot. */
+html:not([data-home-lead="radio"]):not([data-home-lead="quality"]) [data-home-slot="hero"]:not([data-home-story="concrete"]),
+html[data-home-lead="radio"] [data-home-slot="hero"]:not([data-home-story="radio"]),
+html[data-home-lead="quality"] [data-home-slot="hero"]:not([data-home-story="quality"]),
+html:not([data-home-lead="quality"]) [data-home-slot="selected"][data-home-story="concrete"],
+html[data-home-lead="quality"] [data-home-slot="selected"][data-home-story="quality"],
 html:not([data-home-lead="radio"]) [data-home-slot="secondary"][data-home-story="concrete"],
-html[data-home-lead="radio"] [data-home-slot="hero"][data-home-story="concrete"],
 html[data-home-lead="radio"] [data-home-slot="secondary"][data-home-story="radio"] { display: none; }
+.home [data-home-slot="hero"][data-home-story="quality"] img { aspect-ratio: 3 / 4; object-fit: cover; }
 .home [data-home-story="radio"] img { aspect-ratio: 3 / 4; object-fit: contain; background: #fff; }
 .home-feature-caption { margin-top: 20px; font: 400 11px/1.5 var(--sans); text-transform: uppercase; letter-spacing: .08em; }
 
