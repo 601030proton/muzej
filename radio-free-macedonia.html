@@ -1170,8 +1170,20 @@ body.muzej-logo-hidden .site-header .brand-mark {
     background: transparent;
   }
 
-  .radio-article-page :is(.radio-hero-image, .radio-sleeve-image) {
-    mix-blend-mode: multiply;
+  /* Keep every mobile surface white, including the cassette gallery mats. */
+  .radio-article-page :is(.radio-sleeve-mat, .radio-object, .radio-sleeve-grid, #radio-cassette-covers) {
+    background-color: #ffffff !important;
+  }
+  /* Multiply removes visible off-white rectangular image mats against white
+     without changing the page color or cassette placement. */
+  /* Mobile-only: lift the near-white pixels baked into cassette scans to
+     paper white, so the rectangular scan edges disappear against the page. */
+  .radio-article-page .radio-sleeve-image,
+  .radio-article-page .radio-hero-image {
+    mix-blend-mode: normal !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    opacity: 1;
   }
 }
 </style>

@@ -757,6 +757,17 @@ body.muzej-logo-hidden .site-header .brand-mark {
 .gallery-reading--single > .gallery-reading-media{grid-column:1 / -1;aspect-ratio:auto}
 .gallery-reading--single > .gallery-reading-media img{height:auto}
 </style>
+<style>
+@media (min-width: 761px) {
+  .article-body-media {
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100svh - var(--nav-h) - clamp(12px, 2vw, 26px) - 24px);
+  }
+  .article-body-media img { min-height: 0; object-fit: contain; object-position: left top; }
+  .article-body-media figcaption { flex-shrink: 0; }
+}
+</style>
 </head>
 <body class="kinfolk-article-hero">
 
@@ -803,8 +814,8 @@ body.muzej-logo-hidden .site-header .brand-mark {
   <article class="article-shell">
     <section class="article-body">
       <figure class="article-body-media">
-        <img src="./Assets/Kenzo Article/Tange Pics/e73a14_2adf63977e274b93ab6dca86396ee1c1~mv2.jpg" alt="Ruined building and crowds in Skopje after the 1963 earthquake.">
-        <figcaption>Skopje in the immediate aftermath of the 1963 earthquake.</figcaption>
+        <img src="./Assets/Kenzo%20Article/Tange%20Pics/ken-01.png" alt="Three men seated in front of a large architectural model in a black-and-white photograph." width="1536" height="2048" loading="lazy" decoding="async">
+        <figcaption>Three men seated in front of an architectural model.</figcaption>
       </figure>
 
       <div class="article-body-copy body-block">
@@ -843,8 +854,8 @@ body.muzej-logo-hidden .site-header .brand-mark {
 
     <section class="article-body article-body-lower">
       <figure class="article-body-media">
-        <img src="./Assets/Kenzo Article/Tange Pics/A vintage postcard view of the “Cyril &amp; Methodius” University of Skopje..jpg" alt="Vintage postcard view of the University of Skopje campus.">
-        <figcaption>A Yugoslav-era postcard view of the University of Skopje.</figcaption>
+        <img src="./Assets/Kenzo%20Article/Tange%20Pics/ken-02.png" alt="Color view of a scale model with towers and elevated walkways beside a river." width="1536" height="2048" loading="lazy" decoding="async">
+        <figcaption>A model of the proposed reconstruction of central Skopje.</figcaption>
       </figure>
 
       <div class="article-body-copy body-block">
