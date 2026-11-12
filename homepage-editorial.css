@@ -91,8 +91,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .film-fallback { display: flex; justify-content: flex-end; gap: 24px; margin-top: 14px; font-size: 11px; }
 .film-fallback a { text-decoration: underline; text-underline-offset: 4px; }
 /* Prespa opens the composition horizontally after the two portrait spreads. */
-#prespa-feature .kinfolk-feature-article { display: flex; flex-direction: column; gap: 28px; }
-#prespa-feature .kinfolk-feature-title { font-size: var(--title-feature); line-height: 1.08; }
+#prespa-feature .kinfolk-feature-article { display: flex; flex-direction: column; gap: 22px; max-width: 880px; margin-inline: auto; }
+#prespa-feature .kinfolk-feature-title { font-size: clamp(32px, 3.3vw, 48px); line-height: 1.08; }
 #prespa-feature .kinfolk-feature-image { width: 100%; }
 #secondary-feature { margin-top: clamp(88px, 9vw, 144px); padding-bottom: clamp(96px, 10vw, 160px); }
 .tose-descendants-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: var(--gutter); align-items: center; }
