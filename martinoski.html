@@ -875,6 +875,25 @@ body.muzej-logo-hidden .site-header .brand-mark {
 .martinoski-gallery img{max-height:70svh}
 }
 </style>
+
+<style id="martinoski-spread-and-quote">
+.martinoski-gallery{
+  width:100%;max-width:none;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  gap:var(--radio-gap);margin:110px auto 120px;
+}
+.martinoski-gallery .radio-object{width:100%;max-width:none;margin:0}
+.martinoski-gallery img{width:100%;height:auto;max-height:none}
+.martinoski-quote-row{margin:0 0 100px}
+.martinoski-quote-row .pull-quote{
+  grid-column:2;justify-self:start;width:100%;max-width:520px;margin:0;
+  padding:0;text-align:left;font:italic 400 clamp(20px,2.35vw,26px)/1.12 "plantin",Georgia,serif;
+}
+@media(max-width:760px){
+  .martinoski-gallery{width:100%;grid-template-columns:1fr;gap:40px;margin:70px auto}
+  .martinoski-quote-row{margin-bottom:68px}
+  .martinoski-quote-row .pull-quote{grid-column:1}
+}
+</style>
 </head>
 <body class="radio-article-page martinoski-radio-page">
 
@@ -939,7 +958,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
 
         <p>By the middle of the 1930s, Martinoski’s treatment of his figures had become gentler. He continued to find models in Skopje’s Roma neighborhoods, painting children, mothers, and wet nurses. The National Gallery’s catalog describes this phase as lyrical realism, followed by a stronger social realism between 1938 and 1941. Clothing, posture, and expression became ways of registering poverty and resignation. The people he painted remained recognizable individuals even when he exaggerated a feature or altered the proportions of a body.</p>
       </section></div></div>
-<aside class="radio-pullquote"><blockquote>A mother and child offered him a recurring composition within which to make those adjustments.</blockquote></aside>
+<div class="radio-row martinoski-quote-row"><aside class="pull-quote">A mother and child offered him a recurring composition within which to make those adjustments.</aside></div>
 <section class="martinoski-gallery" aria-label="Selected paintings by Nikola Martinoski"><figure class="radio-object">
         <img loading="lazy" decoding="async" src="./Assets/Martinoski Article/Martinoski Paintings/martinoski-spread-1.png" alt="Still life painting by Nikola Martinoski with a wine bottle, glass, and fruit">
       </figure><figure class="radio-object">
