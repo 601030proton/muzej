@@ -1225,18 +1225,19 @@ main > .more-from-muzej[data-more-from-muzej] {
 </style><link rel="stylesheet" href="muzej-features.css">
 <link rel="stylesheet" href="article-system.css?v=20261101-consistency-3">
 <link rel="stylesheet" href="editorial-sources.css?v=20261109-sources">
-<style>
-/* Match Bitola’s supplied 3:4 photograph without side gutters. */
-#bitola .ranking-media-frame { aspect-ratio: 3 / 4; background: transparent; }
-#bitola .ranking-media img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; transform: none; }
+<style id="qol-consistent-ranking-images">
+/* One image frame and sticky sizing rule for every ranked city. */
+.muzej-feature .ranking-media-frame{aspect-ratio:4/5}
+.muzej-feature .ranking-media img{
+  display:block;width:100%;height:100%;object-fit:cover;
+  object-position:var(--image-position,center center);transform:none;
+}
 @media(min-width:981px){
-  /* Reserve the sticky top offset, caption, and bottom breathing room. */
-  #bitola .ranking-media{
-    width:min(100%,calc((100svh - var(--nav-h) - clamp(12px,2vw,26px) - 48px)*.75));
+  .muzej-feature .ranking-media{
+    width:min(100%,calc((100svh - var(--nav-h) - clamp(12px,2vw,26px) - 48px)*.8));
     max-width:100%;
   }
 }
-
 </style>
 </head>
 <body class="muzej-feature">
