@@ -799,8 +799,103 @@ body.muzej-logo-hidden .site-header .brand-mark {
 <link rel="stylesheet" href="article-opening.css?v=20261101">
 <link rel="stylesheet" href="article-system.css?v=20261101-consistency-3">
 <link rel="stylesheet" href="bylines.css?v=20261107">
+<style id="vlado-current-article-layout">
+.radio-article-page{color:#000;background:#fff;--radio-gap:clamp(36px,6vw,96px)}
+.radio-article-page .radio-main{padding:12px var(--page-x) 0;max-width:1520px;margin:auto}
+.radio-opening,.radio-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--radio-gap);align-items:start}
+.radio-title-column{min-width:0;align-self:end}
+.radio-title-column h1{font:400 clamp(48px,5.7vw,90px)/.97 "plantin",Georgia,serif;letter-spacing:-.025em;margin:32px 0}
+.radio-kicker,.radio-byline,.radio-object figcaption,.radio-spread-heading,.radio-editor-note{font:400 11px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000}
+.radio-kicker,.radio-spread-heading{text-transform:uppercase;letter-spacing:.08em}
+.radio-byline strong{font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.radio-kicker,.radio-byline{margin:0}
+.radio-opening-column{min-width:0}
+.radio-object{margin:0;min-width:0}
+.radio-sleeve-image{display:block;width:100%;height:auto}
+.radio-studio-photo img{display:block}
+.artwork-blank{background:#f2f2f0;position:relative;aspect-ratio:1/1.45;width:100%}
+.artwork-blank>span{position:absolute;bottom:14px;left:16px;font:10px/1 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000}
+.radio-object figcaption{margin:13px 0 0;max-width:44em}
+.radio-hero-image{display:block;width:94%;margin-inline:auto;height:calc(100svh - 160px);min-height:380px;object-fit:contain;background:#fff}
+.radio-deck{font:400 clamp(26px,2.6vw,38px)/1.2 "plantin",Georgia,serif;margin:0 0 22px;max-width:16em}
+.radio-article{margin-top:120px}
+.radio-row{margin:0 0 100px;scroll-margin-top:100px}
+.radio-row.radio-continuation{margin-bottom:0}
+.radio-continuation-copy{min-width:0}
+.radio-continuation-copy > section{scroll-margin-top:100px}
+.radio-continuation-copy > section:not(:last-child){margin-bottom:clamp(26.25px,2.0625vw,31.25px)}
+.radio-continuation-copy > section:last-child{margin-bottom:100px}
+.radio-rail{position:sticky;top:100px;align-self:start}
+/* Keep the complete image and caption inside the sticky viewport. */
+@media(min-width:761px){
+.radio-rail > .radio-object{
+  display:flex;flex-direction:column;
+  max-height:calc(100vh - 124px);
+  max-height:calc(100svh - 124px);
+  margin:0 auto;
+}
+.radio-rail > .radio-object > img{
+  display:block;width:100%;height:auto;min-height:0;flex:0 1 auto;
+  object-fit:contain;object-position:center top;
+}
+.radio-rail > .radio-object > figcaption{flex:0 0 auto}
+}
+.radio-rail .sleeve{width:76%}
+.radio-rail .sleeve .artwork-blank{max-height:calc(100svh - 200px)}
+.studio .artwork-blank{aspect-ratio:4/3}.landscape .artwork-blank{aspect-ratio:3/2}.insert .artwork-blank{aspect-ratio:1.8}.record .artwork-blank{aspect-ratio:1}
+.radio-dedications{scroll-margin-top:100px}
+.radio-dedications > div:last-child > p:last-child{margin-bottom:0}
+.radio-row > .radio-prose:only-child{grid-column:-2 / -1}
+.radio-prose{min-width:0;font:400 clamp(21px,1.65vw,25px)/1.46 "plantin",Georgia,serif}
+.radio-prose p{margin:0 0 1.25em}.radio-prose>div:last-child>p:last-child{margin-bottom:0}
+.radio-spread{margin:100px 0 120px}
+.radio-spread-heading{display:flex;justify-content:space-between;gap:20px;border-top:1px solid #000;padding-top:14px;margin-bottom:40px}
+.radio-sleeve-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:54px 38px}
+
+.radio-spread[data-cassette-gallery]{width:min(100%,1020px);margin-inline:auto}
+.radio-sleeve-mat{aspect-ratio:33 / 35;overflow:hidden;background:#fff}
+.radio-sleeve-mat .radio-sleeve-image{height:100%;object-fit:contain;filter:brightness(1.045)}
+.radio-sleeve-mat--wide-margin .radio-sleeve-image{transform:scale(1.4)}
+.radio-sleeve-grid .radio-object figcaption{font:400 14px/1.35 "plantin",Georgia,serif;letter-spacing:0}
+.radio-gallery-controls{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:30px}
+.radio-gallery-controls[hidden],#radio-cassette-covers > [hidden]{display:none}
+.radio-gallery-controls button,.radio-gallery-controls span{font:400 11px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000}
+.radio-gallery-controls button{border:0;background:none;padding:12px 0;min-height:44px;cursor:pointer}
+.radio-gallery-controls button[aria-disabled="true"]{opacity:.45;cursor:default}
+.radio-gallery-controls span{font-variant-numeric:tabular-nums}
+.radio-duet{display:grid;grid-template-columns:1.25fr .75fr;gap:var(--radio-gap);align-items:center;margin:110px 0 130px}
+.radio-pullquote{max-width:1000px;margin:110px auto 120px;text-align:center;padding:0 6vw}
+.radio-pullquote blockquote{font:400 clamp(32px,4.2vw,64px)/1.1 "plantin",Georgia,serif;margin:0}
+.radio-editor-note{margin:24px 0 28px;padding:16px 0 0;border-top:1px solid #ccc;font-size:13px;line-height:1.6}
+.radio-editor-note p:last-child{margin-bottom:0}
+.radio-article-page a:focus-visible{outline:2px solid #000;outline-offset:5px}
+.radio-prose a{text-decoration-thickness:1px;text-underline-offset:4px}
+@media(max-width:760px){
+.radio-article-page .radio-main{padding:12px 20px 0}.radio-opening,.radio-row{grid-template-columns:1fr;gap:36px}
+.radio-title-column h1{font-size:clamp(42px,11vw,68px);margin:26px 0}
+.radio-hero-image{height:52svh;min-height:260px}.radio-deck{font-size:26px;margin-bottom:18px}.radio-article{margin-top:64px}
+.radio-row,.radio-continuation-copy > section:last-child{margin-bottom:68px}.radio-continuation-copy > section:not(:last-child){margin-bottom:27.5px}.radio-rail{position:static}.radio-rail .sleeve{width:72%;margin:auto}.radio-rail .sleeve .artwork-blank{max-height:none}
+.radio-prose{font-size:22px;line-height:1.46}.radio-spread{margin:70px 0}.radio-sleeve-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 18px}
+.radio-duet{grid-template-columns:1fr;gap:40px;margin:70px 0}.radio-duet .sleeve{width:72%;margin:auto}.radio-pullquote{margin:70px auto;padding:0 8px}
+.radio-object figcaption{font-size:10px}
+}
+
+.vlado-radio-page .radio-title-column h1{font-size:clamp(44px,4.4vw,70px);max-width:none}
+.vlado-radio-page .radio-hero-image{width:100%;height:calc(100svh - 150px);min-height:0;object-fit:contain;object-position:center}
+.vlado-radio-page .radio-row:last-child{margin-bottom:0}
+.vlado-radio-page .radio-rail>.radio-object{display:block;width:min(100%,472px,calc((100svh - 150px)*.8));max-width:none;max-height:none;margin:0}
+.vlado-radio-page .radio-rail>.radio-object>img{display:block;width:100%;height:auto;aspect-ratio:4/5;max-height:none;flex:none;object-fit:cover;object-position:center}
+.vlado-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--radio-gap);align-items:start;width:100%;margin:110px auto 120px}
+.vlado-gallery img{display:block;width:100%;height:auto}
+@media(max-width:760px){
+.vlado-radio-page .radio-title-column h1{font-size:clamp(36px,9vw,60px)}
+.vlado-radio-page .radio-hero-image{height:auto;max-height:none}
+.vlado-radio-page .radio-rail>.radio-object{width:100%;max-width:none}
+.vlado-gallery{grid-template-columns:1fr;gap:40px;margin:70px auto}
+}
+</style>
 </head>
-<body class="kinfolk-article-hero vlado-article">
+<body class="radio-article-page vlado-radio-page">
 <header class="site-header">
 <div class="shell header-frame">
 <a aria-label="Muzej home" class="brand-mark" href="index.html">
@@ -833,48 +928,26 @@ body.muzej-logo-hidden .site-header .brand-mark {
 </div>
 </div>
 </header>
-<main>
-<header class="feature muzej-sticky-opening"><div class="feature-inner"><div class="feature-copy">
-<p class="feature-byline muzej-byline">Words <strong>Aleksandar Trajkovski</strong></p>
-<h1 class="feature-title">Eurovision 1998: Vlado Janevski</h1>
-</div><div class="feature-scroll-column"><figure class="feature-media">
-<img alt="Vlado Janevski performing on a brightly lit stage in a blue suit" src="./Assets/Vlado/Pics/hero.png"/>
-</figure><p class="feature-deck">Vlado Janevski, “Ne zori, zoro,” and Macedonia’s Eurovision debut in 1998.</p></div></div></header>
-<article class="article-shell">
-<section class="article-body">
-<figure class="article-body-media">
-<img alt="Portrait of a young Vlado Janevski resting his chin on his folded hands" src="./Assets/Vlado/Pics/jan2.png"/>
-</figure>
-<div class="article-body-copy body-block"><p>On May 9, 1998, Vlado Janevski closed the Eurovision Song Contest in Birmingham with “Ne zori, zoro.” Twenty-four entries had preceded him. His was the first to represent independent Macedonia on the televised Eurovision stage, and the first sung in Macedonian.</p><p>The song was a plea to delay the morning. Composed by Grigor Koprov, with lyrics by Janevski, it concerned a troubled love affair, family opposition, and a man drinking through the night. Macedonia had chosen a familiar kind of lament for an unfamiliar occasion: its debut in a competition it had already tried to enter two years earlier.</p><p>That earlier attempt belonged to Kaliopi. In 1996, she was selected to perform “Samo ti,” but an audio-only qualifying round decided which countries would reach the televised final. The song did not advance. Macedonia’s first Eurovision entry existed as a recording; viewers of the final never saw it performed.</p><p>Janevski therefore arrived in Birmingham with a distinction that Kaliopi had been denied. Whatever happened in the voting, his performance would become the starting point of the country’s televised Eurovision history.</p><p>He already had a career behind him. Born in Skopje in 1960, Janevski had played in bands before establishing himself as a solo singer. His first album, Parče duša, appeared in 1993. A Makfest victory with “Eden baknež” followed in 1994. By the time he entered the 1998 national selection, he was an established figure in Macedonian pop.</p><p>The selection took place on March 7 at Universal Hall in Skopje. Twenty songs competed, with the winner chosen by telephone vote. Kaliopi returned to the contest. Karolina Gočeva was in the lineup, as were Dule &amp; Koki, Suzana Spasovska, and a young Toše Proeski performing with Megatim Plus.</p><p>The list is striking in retrospect. Several singers who would later represent Macedonia at Eurovision were competing for the same place that evening. Karolina finished fourth, Toše eighth, and Kaliopi ninth. Janevski won with 38,642 votes, ahead of Sašo Gigov-Giš’s 34,774 for “Samovilska svadba.”</p><p>The result sent a solo balladeer to Birmingham. The song’s English version was titled “Somebody Stop the Dawn.” Janevski would perform the Macedonian original.</p></div>
-<div aria-hidden="true" class="empty-tail"></div>
-</section>
+<main id="main-content" class="radio-main"><header class="radio-opening"><div class="radio-title-column"><p class="radio-kicker">Music | Eurovision</p><h1>Eurovision 1998: Vlado Janevski</h1><p class="radio-deck">Vlado Janevski, “Ne zori, zoro,” and Macedonia’s Eurovision debut in 1998.</p><p class="radio-byline muzej-byline">Words <strong>Aleksandar Trajkovski</strong></p></div><div class="radio-opening-column"><figure class="radio-object hero-object"><img class="radio-hero-image" fetchpriority="high" decoding="async" alt="Vlado Janevski performing on a brightly lit stage in a blue suit" src="./Assets/Vlado/Pics/hero.png"/></figure></div></header>
+<article class="radio-article" aria-label="Eurovision 1998: Vlado Janevski by Aleksandar Trajkovski">
+<div class="radio-row"><div class="radio-rail"><figure class="radio-object">
+<img loading="lazy" decoding="async" alt="Portrait of a young Vlado Janevski resting his chin on his folded hands" src="./Assets/Vlado/Pics/jan2.png"/>
+</figure></div><div class="radio-prose"><section aria-label="Macedonia’s Eurovision debut"><p>On May 9, 1998, Vlado Janevski closed the Eurovision Song Contest in Birmingham with “Ne zori, zoro.” Twenty-four entries had preceded him. His was the first to represent independent Macedonia on the televised Eurovision stage, and the first sung in Macedonian.</p><p>The song was a plea to delay the morning. Composed by Grigor Koprov, with lyrics by Janevski, it concerned a troubled love affair, family opposition, and a man drinking through the night. Macedonia had chosen a familiar kind of lament for an unfamiliar occasion: its debut in a competition it had already tried to enter two years earlier.</p><p>That earlier attempt belonged to Kaliopi. In 1996, she was selected to perform “Samo ti,” but an audio-only qualifying round decided which countries would reach the televised final. The song did not advance. Macedonia’s first Eurovision entry existed as a recording; viewers of the final never saw it performed.</p><p>Janevski therefore arrived in Birmingham with a distinction that Kaliopi had been denied. Whatever happened in the voting, his performance would become the starting point of the country’s televised Eurovision history.</p><p>He already had a career behind him. Born in Skopje in 1960, Janevski had played in bands before establishing himself as a solo singer. His first album, Parče duša, appeared in 1993. A Makfest victory with “Eden baknež” followed in 1994. By the time he entered the 1998 national selection, he was an established figure in Macedonian pop.</p><p>The selection took place on March 7 at Universal Hall in Skopje. Twenty songs competed, with the winner chosen by telephone vote. Kaliopi returned to the contest. Karolina Gočeva was in the lineup, as were Dule &amp; Koki, Suzana Spasovska, and a young Toše Proeski performing with Megatim Plus.</p><p>The list is striking in retrospect. Several singers who would later represent Macedonia at Eurovision were competing for the same place that evening. Karolina finished fourth, Toše eighth, and Kaliopi ninth. Janevski won with 38,642 votes, ahead of Sašo Gigov-Giš’s 34,774 for “Samovilska svadba.”</p><p>The result sent a solo balladeer to Birmingham. The song’s English version was titled “Somebody Stop the Dawn.” Janevski would perform the Macedonian original.</p></section></div></div>
+<section class="vlado-gallery" aria-label="Macedonian Eurovision performers"><figure class="radio-object">
 
-<section aria-label="Macedonian Eurovision performers" class="gallery-reading">
-<figure class="gallery-reading-media">
-<div class="gallery-reading-frame">
-<img alt="Karolina Gočeva performing at the Eurovision Song Contest in 2007" loading="lazy" src="./Assets/Vlado/Pics/karolina-goceva-2007.png"/>
-</div>
+<img decoding="async" alt="Karolina Gočeva performing at the Eurovision Song Contest in 2007" loading="lazy" src="./Assets/Vlado/Pics/karolina-goceva-2007.png"/>
+
 <figcaption>Karolina Gočeva, 2007</figcaption>
-</figure>
-<div class="gallery-reading-side">
-<figure class="gallery-reading-feature">
-<div class="gallery-reading-frame">
-<img alt="Tamara Todevska performing at the Eurovision Song Contest in 2019" loading="lazy" src="./Assets/Vlado/Pics/tamara-todevska-2019.png"/>
-</div>
+</figure><figure class="radio-object">
+
+<img decoding="async" alt="Tamara Todevska performing at the Eurovision Song Contest in 2019" loading="lazy" src="./Assets/Vlado/Pics/tamara-todevska-2019.png"/>
+
 <figcaption>Tamara Todevska, 2019</figcaption>
-</figure>
-</div>
-</section>
-<section class="article-body article-body-lower">
-<figure class="article-body-media">
-<img alt="Vlado Janevski singing into a microphone in a blue suit" loading="lazy" src="./Assets/Vlado/Pics/jan.png"/>
-</figure>
-<div class="article-body-copy body-block"><p>The title addresses dawn directly: “Ne zori, zoro.” Its repetition makes the request easy to grasp even before the rest of the story is understood. The singer wants the night to continue because morning threatens to end the little refuge he has left.</p><p>In Janevski’s lyrics, the lover also addresses his mother. The woman he wants is subject to her family’s wishes; his distress becomes drinking and the prospect of a drunken dance. These details give the song a social setting. The relationship involves parents, permission, and expectations beyond the couple themselves.</p><p>The song can be read as a lament about the limits of personal choice. Its speaker has words for his distress but little power over the circumstances causing it. Asking dawn to wait becomes a way of asking for time when there is no clear solution.</p><p>This is a more useful place to begin listening than with the burden of national representation. “Ne zori, zoro” has its own small drama. Janevski wrote a lyric about a particular predicament, and that lyric became the first Macedonian-language song performed in a Eurovision final.</p><p>The political context nevertheless appeared on screen. Macedonia competed under the provisional designation “FYR Macedonia,” a consequence of the name dispute. The broadcast placed that designation beside a performer singing in Macedonian. A viewer did not need to understand the dispute to encounter its effects in the presentation of the entry.</p><p>Birmingham also belonged to a different period of Eurovision production. The 1998 contest still used a live orchestra; national-language rules remained in force. Both would change the following year. Janevski’s debut thus came at the end of one version of the contest, before English-language entries and recorded accompaniment became more widespread.</p><p>He performed last, twenty-fifth in the running order, and finished nineteenth with sixteen points. Six came from Croatia, four from Slovenia, and three each from Romania and Slovakia. The result kept Macedonia out of the 1999 contest under the relegation system then in use. The next appearance came in 2000, with XXL.</p><p>A modest placing and another year’s absence make an awkward beginning for a national Eurovision story. They also help explain why the performance is remembered chiefly as a debut. Its place in the record is precise: this was the first occasion on which a Macedonian entry reached the televised final.</p><p>Later performances would bring stronger results. Karolina returned twice, in 2002 and 2007; Toše represented Macedonia in 2004. Elena Risteska finished twelfth in 2006. In 2019, Tamara Todevska won the jury vote with “Proud” and placed seventh overall, Macedonia’s best finish.</p><p>Those later entries make the 1998 selection especially interesting to revisit. Karolina and Toše appear there before their own Eurovision appearances, competing against the singer who would go first. The national final records a generation of Macedonian pop sharing a stage before their careers took different directions.</p><p>For Janevski, Eurovision was one performance within a much longer recording career. The songs that established him at home preceded Birmingham, and his albums and collaborations continued afterward. Sixteen points tell us how one international competition received “Ne zori, zoro”; they tell us little about the audience he already had in Macedonia.</p><p>At the end of the recording, the international history is still ahead of him: the results, the relegation, the later entries. Janevski is in a blue suit, singing in Macedonian. His request is the one he brought from Skopje: “Ne zori, zoro.”</p></div>
-<div aria-hidden="true" class="empty-tail"></div>
-</section>
-</article>
-<section aria-labelledby="more-from-muzej-title" class="more-from-muzej" data-more-from-muzej=""></section>
-</main>
+</figure></section>
+<div class="radio-row"><div class="radio-rail"><figure class="radio-object">
+<img loading="lazy" decoding="async" alt="Vlado Janevski singing into a microphone in a blue suit" src="./Assets/Vlado/Pics/jan.png"/>
+</figure></div><div class="radio-prose"><section aria-label="Ne zori, zoro"><p>The title addresses dawn directly: “Ne zori, zoro.” Its repetition makes the request easy to grasp even before the rest of the story is understood. The singer wants the night to continue because morning threatens to end the little refuge he has left.</p><p>In Janevski’s lyrics, the lover also addresses his mother. The woman he wants is subject to her family’s wishes; his distress becomes drinking and the prospect of a drunken dance. These details give the song a social setting. The relationship involves parents, permission, and expectations beyond the couple themselves.</p><p>The song can be read as a lament about the limits of personal choice. Its speaker has words for his distress but little power over the circumstances causing it. Asking dawn to wait becomes a way of asking for time when there is no clear solution.</p><p>This is a more useful place to begin listening than with the burden of national representation. “Ne zori, zoro” has its own small drama. Janevski wrote a lyric about a particular predicament, and that lyric became the first Macedonian-language song performed in a Eurovision final.</p><p>The political context nevertheless appeared on screen. Macedonia competed under the provisional designation “FYR Macedonia,” a consequence of the name dispute. The broadcast placed that designation beside a performer singing in Macedonian. A viewer did not need to understand the dispute to encounter its effects in the presentation of the entry.</p><p>Birmingham also belonged to a different period of Eurovision production. The 1998 contest still used a live orchestra; national-language rules remained in force. Both would change the following year. Janevski’s debut thus came at the end of one version of the contest, before English-language entries and recorded accompaniment became more widespread.</p><p>He performed last, twenty-fifth in the running order, and finished nineteenth with sixteen points. Six came from Croatia, four from Slovenia, and three each from Romania and Slovakia. The result kept Macedonia out of the 1999 contest under the relegation system then in use. The next appearance came in 2000, with XXL.</p><p>A modest placing and another year’s absence make an awkward beginning for a national Eurovision story. They also help explain why the performance is remembered chiefly as a debut. Its place in the record is precise: this was the first occasion on which a Macedonian entry reached the televised final.</p><p>Later performances would bring stronger results. Karolina returned twice, in 2002 and 2007; Toše represented Macedonia in 2004. Elena Risteska finished twelfth in 2006. In 2019, Tamara Todevska won the jury vote with “Proud” and placed seventh overall, Macedonia’s best finish.</p><p>Those later entries make the 1998 selection especially interesting to revisit. Karolina and Toše appear there before their own Eurovision appearances, competing against the singer who would go first. The national final records a generation of Macedonian pop sharing a stage before their careers took different directions.</p><p>For Janevski, Eurovision was one performance within a much longer recording career. The songs that established him at home preceded Birmingham, and his albums and collaborations continued afterward. Sixteen points tell us how one international competition received “Ne zori, zoro”; they tell us little about the audience he already had in Macedonia.</p><p>At the end of the recording, the international history is still ahead of him: the results, the relegation, the later entries. Janevski is in a blue suit, singing in Macedonian. His request is the one he brought from Skopje: “Ne zori, zoro.”</p></section></div></div>
+</article><section class="more-from-muzej" data-more-from-muzej aria-labelledby="more-from-muzej-title"></section></main>
 <footer class="site-footer muzej-footer">
 <div class="footer-inner">
 <div class="footer-brand">
