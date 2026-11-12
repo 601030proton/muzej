@@ -1174,6 +1174,21 @@ body.muzej-logo-hidden .site-header .brand-mark {
 }
 </style>
 <link rel="stylesheet" href="editorial-sources.css?v=20261109-sources">
+
+<style id="vangel-consistent-image-frames">
+/* A single frame size for every image in the left reading column. */
+.vangel-radio-page .radio-rail > .radio-object{
+  display:block;width:min(100%,472px,calc((100svh - 150px)*.8));
+  max-width:none;max-height:none;margin:0;
+}
+.vangel-radio-page .radio-rail > .radio-object > img{
+  display:block;width:100%;height:auto;aspect-ratio:4/5;
+  max-height:none;flex:none;object-fit:cover;object-position:center;
+}
+@media(max-width:760px){
+  .vangel-radio-page .radio-rail > .radio-object{width:100%;max-width:none}
+}
+</style>
 </head>
 <body class="radio-article-page vangel-radio-page">
 <header class="site-header">
