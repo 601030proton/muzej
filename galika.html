@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Galika, the electronic music gathering in Galičnik from Macedonian label Bare Minimum."/>
+<title>Galika | МУЗЕЈ</title>
+<link href="./Assets/Muzej%20Logo/MuzejNewWord.png" rel="icon" type="image/png"/>
+<link href="./Assets/Muzej%20Logo/MuzejNewWord.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&amp;display=swap" rel="stylesheet"/>
+<style>
+@font-face {
+  font-family: "plantin";
+  src: url("https://use.typekit.net/af/73d2e3/00000000000000007735baf2/31/l?subset_id=1&fvd=n4&v=3") format("woff2"),
+       url("https://use.typekit.net/af/73d2e3/00000000000000007735baf2/31/d?subset_id=1&fvd=n4&v=3") format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "plantin";
+  src: url("https://use.typekit.net/af/4179dd/00000000000000007735baef/31/l?subset_id=1&fvd=i4&v=3") format("woff2"),
+       url("https://use.typekit.net/af/4179dd/00000000000000007735baef/31/d?subset_id=1&fvd=i4&v=3") format("woff");
+  font-display: swap;
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "plantin";
+  src: url("https://use.typekit.net/af/d2d7b4/00000000000000007735baec/31/l?subset_id=1&fvd=n7&v=3") format("woff2"),
+       url("https://use.typekit.net/af/d2d7b4/00000000000000007735baec/31/d?subset_id=1&fvd=n7&v=3") format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "plantin";
+  src: url("https://use.typekit.net/af/358f1b/00000000000000007735baee/31/l?subset_id=1&fvd=i7&v=3") format("woff2"),
+       url("https://use.typekit.net/af/358f1b/00000000000000007735baee/31/d?subset_id=1&fvd=i7&v=3") format("woff");
+  font-display: swap;
+  font-style: italic;
+  font-weight: 700;
+}
+
+
+@media (max-width: 768px) {
+  .site-header .brand-mark {
+    width: 124px;
+    height: 25px;
+  }
+
+  .site-header .brand-mark-image {
+    width: 153.97px;
+    left: -15.13px;
+    top: -83.62px;
+  }
+}
+</style>
+<style>
+:root {
+  --background: #ffffff;
+  --foreground: #0f0e0d;
+  --white: #ffffff;
+  --ink: #0f0e0d;
+  --ink-soft: rgba(15, 14, 13, 0.62);
+  --ink-faint: rgba(15, 14, 13, 0.12);
+  --muted: #70675d;
+  --rule: rgba(23, 21, 19, 0.09);
+  --page-x: clamp(18px, 5.2vw, 72px);
+  --nav-h: clamp(88px, 10vw, 128px);
+  --feature-w: min(1280px, calc(100vw - (var(--page-x) * 2)));
+  --rail-gap: clamp(34px, 5.4vw, 84px);
+  --body-col: minmax(520px, 760px);
+  --body-tail: 0px;
+  --section-gap: clamp(48px, 8vw, 108px);
+  --content-max: 1520px;
+  --font-display: "plantin";
+  --font-wordmark: "plantin";
+  --serif: var(--font-display);
+  --headline-serif: var(--font-display);
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --article-serif: "adobe-jenson-pro", serif;
+  --brand-serif: "plantin";
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--article-serif);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+.shell {
+  width: min(100%, var(--content-max));
+  margin: 0 auto;
+  padding-left: var(--page-x);
+  padding-right: var(--page-x);
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  background: var(--background);
+}
+.header-frame {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  padding-top: 28px;
+  padding-bottom: 24px;
+}
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-wordmark);
+  font-size: clamp(3rem, 2.1rem + 2.55vw, 5.35rem);
+  line-height: 0.82;
+  letter-spacing: 0.055em;
+  font-weight: 300;
+  font-optical-sizing: auto;
+  white-space: nowrap;
+  text-transform: uppercase;
+
+  text-decoration: none;
+}
+
+.site-header .brand-mark {
+  position: relative;
+  width: 160px;
+  height: 32px;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.site-header .brand-mark-image {
+  position: absolute;
+  width: 198.68px;
+  max-width: none;
+  height: auto;
+  left: -19.53px;
+  top: -107.88px;
+  display: block;
+}
+
+.brand-mark:link,
+.brand-mark:visited { text-decoration: none; }
+
+.utility-link,
+.utility-menu-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: rgba(23, 21, 19, 0.58);
+  text-decoration: none;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+.utility-link:hover,
+.utility-menu-item:hover {
+  color: var(--foreground);
+}
+.header-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.utility-menu {
+  position: relative;
+}
+.utility-menu summary {
+  list-style: none;
+}
+.utility-menu summary::-webkit-details-marker {
+  display: none;
+}
+.utility-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: color 180ms ease, opacity 180ms ease;
+}
+.utility-trigger:hover {
+  opacity: 0.72;
+}
+.utility-trigger:focus-visible {
+  outline: 2px solid rgba(141, 79, 61, 0.45);
+  outline-offset: 3px;
+}
+.utility-icon {
+  display: grid;
+  gap: 0.26rem;
+}
+.utility-icon-line {
+  display: block;
+  width: 1.45rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.88;
+}
+.utility-panel {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  right: 0;
+  z-index: 10;
+  display: grid;
+  min-width: 10rem;
+  padding: 0.45rem 0;
+  border: 1px solid rgba(23, 21, 19, 0.12);
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(23, 21, 19, 0.08);
+}
+.utility-panel-group {
+  display: grid;
+  gap: 0;
+}
+.utility-panel-utility {
+  margin-top: 0.25rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid rgba(23, 21, 19, 0.1);
+}
+.utility-panel .utility-link,
+.utility-panel .utility-menu-item {
+  justify-content: flex-start;
+  min-height: 0;
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  background: transparent;
+}
+.utility-panel-utility .utility-link {
+  font-size: 0.66rem;
+  letter-spacing: 0;
+  color: rgba(23, 21, 19, 0.52);
+}
+.utility-panel .utility-menu-item {
+  cursor: pointer;
+}
+.utility-panel .utility-link:hover,
+.utility-panel .utility-menu-item:hover {
+  background: rgba(23, 21, 19, 0.035);
+}
+
+main {
+  padding-top: 0;
+}
+
+.feature {
+  width: 100%;
+  background: var(--white);
+}
+.feature-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0;
+  align-items: stretch;
+  max-width: none;
+  min-height: clamp(620px, calc(100svh - var(--nav-h)), 900px);
+  margin: 0;
+}
+.feature-media {
+  margin: 0;
+  min-height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  background: var(--white);
+}
+.feature-media img {
+  display: block;
+  width: min(86%, 720px);
+  max-width: 86%;
+  height: auto;
+  max-height: min(74vh, 760px);
+  object-fit: contain;
+  object-position: center center;
+  margin: 0 auto;
+}
+.feature--stranci .feature-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.feature--stranci .feature-media img {
+  width: auto;
+  max-width: min(92%, 760px);
+  height: min(84vh, 840px);
+  max-height: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 981px) {
+  .feature--stranci .feature-media img {
+    transform: translateX(-6%);
+  }
+}
+.feature-copy {
+  min-height: inherit;
+  max-width: 27rem;
+  margin: 0 auto;
+  padding: clamp(72px, 8vw, 136px) 0 clamp(72px, 8vw, 128px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.feature-title {
+  margin: 0;
+  color: var(--ink);
+  font-family: "plantin";
+  font-size: clamp(42px, 5.2vw, 82px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0;
+  text-transform: none;
+  text-wrap: balance;
+}
+.feature-title-break {
+  display: block;
+}
+.feature-byline {
+  margin: 0 0 auto;
+  color: var(--ink-soft);
+  font-size: clamp(16px, 1.18vw, 19px);
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+.feature-deck {
+  max-width: min(1380px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
+  margin: clamp(40px, 5vw, 78px) auto 0;
+  color: var(--ink);
+  font-family: "plantin";
+  font-size: clamp(32px, 3.05vw, 56px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+.article-interview-hero {
+  padding-bottom: clamp(132px, 12vw, 210px);
+}
+.article-interview-hero .feature-deck {
+  margin-bottom: 0;
+}
+.article-shell {
+  max-width: var(--feature-w);
+  margin: 0 auto;
+  padding: 0 var(--page-x) clamp(84px, 10vw, 132px);
+}
+.content-row {
+  display: grid;
+  grid-template-columns: minmax(270px, 1fr) var(--body-col);
+  column-gap: var(--rail-gap);
+  align-items: start;
+}
+.article-body {
+  display: grid;
+  grid-template-columns: minmax(270px, 1fr) var(--body-col);
+  column-gap: var(--rail-gap);
+  align-items: start;
+  margin-bottom: var(--section-gap);
+}
+.content-row + .content-row {
+  margin-top: var(--section-gap);
+}
+.content-row .empty-rail,
+.article-body .empty-tail,
+.content-row .empty-tail {
+  min-height: 1px;
+}
+.article-body-media {
+  margin: 0;
+  align-self: start;
+  position: sticky;
+  top: calc(var(--nav-h) + clamp(12px, 2vw, 26px));
+}
+.article-body-media img {
+  width: 100%;
+  height: auto;
+}
+.article-body-media--portrait img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+.article-body-media figcaption {
+  margin-top: 12px;
+  color: var(--ink-soft);
+  font-size: 8px;
+  letter-spacing: 0;
+}
+.article-body-copy {
+  min-width: 0;
+  justify-self: end;
+  width: min(100%, 520px);
+}
+.article-inline-media {
+  width: min(88%, 420px);
+  margin: clamp(52px, 7vw, 88px) auto;
+}
+.article-inline-media img {
+  width: 100%;
+  height: auto;
+}
+
+.section-heading {
+  margin: 0;
+  max-width: 15ch;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+.body-block p {
+  margin: 0;
+  font-size: clamp(23px, 1.65vw, 31px);
+  line-height: 1.46;
+}
+.body-block p + p {
+  margin-top: 1.95em;
+}
+
+.article-photo-credits {
+  margin-top: clamp(18px, 3vw, 34px);
+}
+.photo-credit-note {
+  margin: 0;
+  justify-self: end;
+  width: min(100%, 520px);
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: clamp(11px, 0.82vw, 13px);
+  line-height: 1.55;
+  letter-spacing: 0;
+  padding-top: 14px;
+}
+.photo-credit-note p {
+  margin: 0;
+}
+.photo-credit-note p + p {
+  margin-top: 0.18rem;
+}
+.photo-credit-heading {
+  margin-bottom: 0.45rem;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.pull-quote {
+  margin: 0;
+  max-width: none;
+  justify-self: end;
+  width: min(100%, 520px);
+  font-size: clamp(20px, 2.35vw, 26px);
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.gallery-reading {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 1.9vw, 24px);
+  margin: var(--section-gap) 0 0;
+}
+.gallery-reading-media,
+.gallery-reading-feature {
+  margin: 0;
+}
+.gallery-reading-frame {
+  aspect-ratio: 15 / 21;
+  overflow: hidden;
+}
+.gallery-reading-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-reading-media figcaption,
+.gallery-reading-feature figcaption {
+  margin-top: 12px;
+  color: var(--ink-soft);
+  font-size: 8px;
+  letter-spacing: 0;
+}
+.gallery-reading-side {
+  min-width: 0;
+}
+.article-body-lower {
+  margin-top: clamp(22px, 3vw, 34px);
+  margin-bottom: 0;
+}
+
+.more-from-muzej {
+  padding-top: clamp(70px, 9vw, 132px);
+  padding-bottom: clamp(82px, 10vw, 148px);
+  background: transparent;
+  color: var(--foreground);
+}
+.more-from-muzej-frame {
+  display: grid;
+  width: min(calc(100% - (var(--page-x) * 2)), 68rem);
+  max-width: 68rem;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  border-top: 2px solid var(--foreground);
+  padding-top: clamp(2.1rem, 4vw, 3.25rem);
+}
+.more-from-muzej-title {
+  max-width: none;
+  margin: 0;
+  font-family: var(--headline-serif);
+  font-size: clamp(1.45rem, 1vw + 1.1rem, 1.9rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 650;
+  font-optical-sizing: auto;
+}
+.related-list {
+  list-style: none;
+  margin: clamp(1.4rem, 2.5vw, 2rem) 0 0;
+  padding: 0;
+}
+.related-list li {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  padding: clamp(1.1rem, 1.8vw, 1.6rem) 0;
+  border-top: 1px solid var(--rule);
+  align-items: start;
+}
+.related-list li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+.related-list a {
+  font-family: var(--headline-serif);
+  font-size: clamp(1.1rem, 1.3vw + 0.7rem, 1.55rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+  font-optical-sizing: auto;
+  border-bottom: none;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+.related-list a:hover {
+  color: var(--muted);
+}
+.related-list .related-desc {
+  display: block;
+  margin-top: 0.45rem;
+  font-family: var(--sans);
+  font-size: clamp(0.82rem, 0.78rem + 0.18vw, 0.94rem);
+  line-height: 1.72;
+  letter-spacing: 0;
+  color: var(--muted);
+}
+
+.more-from-muzej-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(22px, 2.8vw, 38px);
+  margin-top: clamp(1.4rem, 2.5vw, 2rem);
+}
+.more-from-muzej-card {
+  min-width: 0;
+}
+.more-from-muzej-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.more-from-muzej-card-image {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border: 1px solid rgba(23, 21, 19, 0.14);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.08));
+}
+.more-from-muzej-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.more-from-muzej-card-copy {
+  padding-top: 0.95rem;
+}
+.more-from-muzej-card-kicker {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: rgba(23, 21, 19, 0.62);
+}
+.more-from-muzej-card-title {
+  margin: 0.62rem 0 0;
+  font-family: var(--headline-serif);
+  font-size: clamp(1.35rem, 0.95rem + 0.85vw, 1.95rem);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  font-optical-sizing: auto;
+  text-wrap: balance;
+}
+.more-from-muzej-card-title a {
+  color: var(--foreground);
+  text-decoration: none;
+}
+.more-from-muzej-card-title a:hover {
+  color: var(--muted);
+}
+.more-from-muzej-card-dek {
+  margin: 0.55rem 0 0;
+  font-family: var(--sans);
+  font-size: clamp(0.82rem, 0.78rem + 0.18vw, 0.94rem);
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .more-from-muzej-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .more-from-muzej-card-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.site-footer {
+  margin-top: 0;
+}
+.muzej-footer {
+  width: 100%;
+  padding: clamp(3.5rem, 7vw, 6rem) var(--page-x);
+  background: #000000;
+  color: #f7f2e9;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: minmax(320px, 620px) minmax(180px, 260px);
+  gap: clamp(3rem, 7vw, 6rem);
+  justify-content: center;
+  align-items: start;
+  width: min(100%, 1160px);
+  margin: 0 auto;
+}
+.footer-brand {
+  min-width: 0;
+}
+.footer-wordmark {
+  display: inline-flex;
+  font-family: var(--font-wordmark);
+  font-size: clamp(3.1rem, 5vw, 5rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: 0;
+  font-optical-sizing: auto;
+
+}
+.footer-statement {
+  max-width: 38.75rem;
+  margin: clamp(1.15rem, 1.8vw, 1.45rem) 0 0;
+  font-size: clamp(1rem, 1vw + 0.72rem, 1.15rem);
+  line-height: 1.5;
+  color: rgba(247, 242, 233, 0.86);
+}
+.muzej-footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-top: 0.28rem;
+}
+.muzej-footer .footer-links a {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 180ms ease, text-decoration-color 180ms ease;
+}
+.muzej-footer .footer-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  opacity: 0.86;
+}
+
+@media (max-width: 1080px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+
+  .muzej-footer .footer-links {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 1140px) {
+  .header-frame {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 0.85rem 1.25rem;
+  }
+  .header-tools {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 980px) {
+  .menu-button {
+    padding: 8px 0 6px 18px;
+  }
+  .menu-panel {
+    padding: 0 calc(var(--page-x) + 18px) 0 var(--page-x);
+    gap: 16px;
+  }
+  .menu-panel a {
+    width: min(100%, 22rem);
+    font-size: clamp(26px, 5vw, 42px);
+  }
+  .feature-inner {
+    grid-template-columns: minmax(300px, 0.94fr) minmax(300px, 0.9fr);
+    gap: clamp(24px, 4vw, 46px);
+    align-items: stretch;
+  }
+  .feature-media img {
+    max-height: clamp(460px, 64vh, 660px);
+  }
+  .feature-copy {
+    min-height: clamp(460px, 64vh, 660px);
+    max-width: 23rem;
+  }
+  .feature-title {
+    font-size: clamp(34px, 4.35vw, 58px);
+  }
+  .content-row {
+    grid-template-columns: minmax(210px, 1fr) minmax(0, 660px);
+  }
+  .article-body {
+    grid-template-columns: minmax(210px, 1fr) minmax(0, 660px);
+  }
+}
+
+@media (max-width: 760px) {
+  .header-frame {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .brand-mark {
+    font-size: clamp(2.45rem, 11vw, 3.35rem);
+
+  }
+}
+
+@media (max-width: 720px) {
+  .header-frame {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .brand-mark {
+    font-size: clamp(2.45rem, 11vw, 3.35rem);
+
+  }
+  .menu-button {
+    gap: 7px;
+    padding: 8px 0 6px 16px;
+    margin-top: 1px;
+  }
+  .menu-panel {
+    padding: 0 calc(var(--page-x) + 6px) 0 var(--page-x);
+    gap: 14px;
+  }
+  .menu-panel a {
+    width: min(100%, 16rem);
+    font-size: clamp(22px, 9vw, 30px);
+    line-height: 1.08;
+  }
+  .menu-panel a:last-child {
+    font-size: 18px;
+  }
+  .feature {
+    padding:
+      4px
+      var(--page-x)
+      48px;
+  }
+  .feature--stranci {
+    padding-bottom: 34px;
+  }
+  .feature-inner,
+  .article-body,
+  .content-row {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    text-align: left;
+  }
+  .feature-inner {
+    display: grid;
+    gap: 22px;
+  }
+  .feature-media img {
+    max-height: clamp(330px, 52vh, 430px);
+  }
+  .article-body {
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .gallery-reading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin: 40px 0 0;
+  }
+  .article-body-media {
+    position: static;
+  }
+  .gallery-reading-media {
+    position: static;
+  }
+  .article-body-lower {
+    margin-top: 18px;
+    margin-bottom: 0;
+  }
+  .content-row .empty-tail {
+    display: none;
+  }
+  .article-body .empty-tail {
+    display: none;
+  }
+  .feature-copy {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+  }
+  .feature-title {
+    font-size: clamp(30px, 8.2vw, 38px);
+    line-height: 1.03;
+    width: calc(100vw - (var(--page-x) * 2));
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+  .feature-byline {
+    margin: 28px 0 0;
+    font-size: 15px;
+  }
+  .feature-title-break {
+    display: block;
+  }
+  .content-row + .content-row {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 980px) {
+  .feature--stranci {
+    padding: 0 0 clamp(48px, 9vw, 82px);
+  }
+
+  .feature--stranci .feature-inner {
+    grid-template-columns: 1fr;
+    gap: 0;
+    min-height: 0;
+  }
+
+  .feature--stranci .feature-copy {
+    min-height: auto;
+    padding:
+      clamp(54px, 12vw, 96px)
+      var(--page-x)
+      clamp(42px, 8vw, 70px);
+  }
+
+  .feature--stranci .feature-media {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+    width: 100%;
+  }
+
+  .feature--stranci .feature-media img {
+    width: auto;
+    max-width: 96%;
+    height: 100%;
+    max-height: none;
+  }
+
+  .feature-deck {
+    margin-top: clamp(30px, 4.2vw, 48px);
+    font-size: clamp(16px, 2.05vw, 20px);
+  }
+  .article-interview-hero .feature-deck {
+    margin-bottom: 0;
+  }
+  .article-interview-hero {
+    padding-bottom: clamp(72px, 13vw, 112px);
+  }
+}
+
+@media (max-width: 720px) {
+  .feature--stranci .feature-media {
+    aspect-ratio: 4 / 5;
+  }
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: transparent;
+  pointer-events: none;
+}
+
+.site-header .header-frame,
+.site-header .brand-mark,
+.site-header .header-tools {
+  pointer-events: auto;
+}
+
+.site-header .brand-mark {
+  transform: translate3d(0, 0, 0);
+  transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.muzej-logo-hidden .site-header .brand-mark {
+  transform: translate3d(0, calc(-100% - 42px), 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header .brand-mark {
+    transition: none;
+    will-change: auto;
+  }
+
+  body.muzej-logo-hidden .site-header .brand-mark {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header { z-index: 2000; }
+  .site-header .header-frame { grid-template-columns: minmax(0, 1fr) auto; align-items: center; justify-items: stretch; gap: 1rem; }
+  .site-header .brand-mark { justify-self: start; min-width: 0; }
+  .site-header .header-tools { justify-self: end; justify-content: flex-end; margin-left: auto; position: relative; z-index: 2002; }
+  .site-header .utility-menu { position: static; }
+  .site-header .utility-trigger { position: relative; z-index: 2003; }
+  .site-header .utility-panel { position: fixed; inset: 0; left: 0; right: 0; top: 0; z-index: 2001; display: grid; align-content: center; width: 100vw; max-width: none; min-width: 0; height: 100vh; height: 100svh; padding: clamp(76px, 18vh, 128px) var(--page-x) 48px; border: 0; background: rgba(255, 255, 255, 0.98); box-shadow: none; overflow-y: auto; transform: none; }
+  .site-header .utility-panel-group { width: min(100%, 22rem); margin: 0 auto; }
+  .site-header .utility-panel-utility { margin-top: 0.8rem; padding-top: 0.85rem; }
+  .site-header .utility-panel .utility-link,
+  .site-header .utility-panel .utility-menu-item { justify-content: center; min-height: 2.75rem; padding: 0.72rem 0; text-align: center; }
+}
+
+.body-block .interview-question {
+  margin: clamp(2.35rem, 4vw, 3.35rem) 0 0.85rem;
+  font-family: var(--headline-serif);
+  font-size: clamp(1.42rem, 1.08rem + 0.92vw, 2.15rem);
+  line-height: 1.08;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-optical-sizing: auto;
+}
+.body-block .interview-question:first-child {
+  margin-top: 0;
+}
+.body-block .interview-question + p {
+  margin-top: 0;
+}
+</style>
+<link href="more-from-muzej.css?v=20261113-radio-seamless" rel="stylesheet"/>
+<script defer="" src="more-from-muzej.js?v=20261113-lazarki-hero"></script>
+<link rel="stylesheet" href="fonts.css?v=20261101-consistency-3">
+<link rel="stylesheet" href="article-opening.css?v=20261101">
+<link rel="stylesheet" href="article-system.css?v=20261101-consistency-3">
+<link rel="stylesheet" href="bylines.css?v=20261107">
+<link rel="stylesheet" href="journal-layout.css?v=20261107">
+<style id="marko-end-spacing">
+.journal-layout .article-interview > .article-body:last-of-type{margin-bottom:0}
+.journal-layout .article-interview > .article-photo-credits{margin:40px 0 0}
+.journal-layout .article-photo-credits .photo-credit-note{padding-top:0}
+@media(max-width:760px){.journal-layout .article-interview > .article-photo-credits{margin-top:32px}}
+</style>
+<link rel="stylesheet" href="article-intro.css?v=20261113-deck-below-fold-2">
+
+<meta name="robots" content="noindex,follow"/>
+<link rel="canonical" href="https://muzej.co/galika.html"/>
+<meta property="og:title" content="Galika | Muzej"/>
+<meta property="og:description" content="A Macedonian record label takes its dance floor into the mountains."/>
+<meta property="og:image" content="https://muzej.co/Assets/Galika/galika-poster.jpg"/>
+<link rel="stylesheet" href="editorial-sources.css?v=20261109-sources"/>
+<style>
+.galika-article{--foreground:#000;--ink:#000;--ink-soft:#000;color:#000;background:#fff}
+.galika-article .journal-opening h1{font-size:clamp(80px,11vw,170px);line-height:.9;letter-spacing:-.035em}
+.galika-kicker{font:400 11px/1.5 var(--sans);letter-spacing:.06em;text-transform:uppercase}
+.galika-article .journal-hero{display:flex;align-items:flex-start;justify-content:center}
+.galika-article .journal-hero img{width:100%;height:calc(100svh - 160px);min-height:0;object-fit:contain;object-position:center top}
+.galika-caption{font:400 11px/1.5 var(--sans);margin:18px 0 0}
+.galika-article .article-body-media{width:min(88%,420px)}
+.galika-article .article-body-media img{max-height:calc(100svh - 180px);object-fit:contain;object-position:left top}
+.galika-details{font:400 12px/1.55 var(--sans);margin:30px 0 0;max-width:420px}
+.galika-details dt{margin-top:18px;font-size:10px;letter-spacing:.06em;text-transform:uppercase}
+.galika-details dd{margin:4px 0 0}
+.galika-listen{margin-top:32px;font:400 12px/1.5 var(--sans)}
+.galika-listen a{text-underline-offset:4px}
+.galika-player{width:100%;height:42px;border:0;margin-top:20px;display:block}
+.galika-article .sources-section{max-width:none}
+.galika-article .article-body:last-of-type{margin-bottom:0}
+@media(max-width:760px){
+.galika-article .journal-opening h1{font-size:clamp(74px,21vw,112px)}
+.galika-article .journal-hero img{height:auto;max-height:calc(100svh - 270px);width:100%}
+.galika-article header.muzej-intro-opening>.muzej-intro-media>figure{min-height:0}
+.galika-article .article-body-media{width:min(100%,420px)}
+.galika-article .article-body-media img{max-height:none}
+}
+</style>
+</head>
+<body class="kinfolk-article-hero journal-layout galika-article"><header class="site-header">
+<div class="shell header-frame">
+<a aria-label="Muzej home" class="brand-mark" href="index.html">
+<img alt="" aria-hidden="true" class="brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png"/>
+</a>
+<div class="header-tools">
+<details class="utility-menu">
+<summary aria-label="Open navigation menu" class="utility-trigger">
+<span aria-hidden="true" class="utility-icon">
+<span class="utility-icon-line"></span>
+<span class="utility-icon-line"></span>
+<span class="utility-icon-line"></span>
+</span>
+</summary>
+<nav aria-label="Site navigation" class="utility-panel">
+<div class="utility-panel-group">
+<a class="utility-link" href="index.html">Home</a>
+<a class="utility-link" href="index.html#selected-stories">Selected Stories</a>
+<a class="utility-link" href="index.html#now-playing">Now Playing</a>
+<a class="utility-link" href="index.html#catalogue">Catalogue</a>
+<a class="utility-link" href="index.html#archive">Archive</a>
+<a class="utility-link" href="about.html">About Muzej</a>
+</div>
+<div class="utility-panel-group utility-panel-utility">
+<a class="utility-link" href="mailto:muzej.mk@proton.me">Contact</a>
+<a class="utility-link" href="https://www.instagram.com/_muzej/" rel="noopener noreferrer" target="_blank">Instagram</a>
+</div>
+</nav>
+</details>
+</div>
+</div>
+</header>
+
+<main>
+<header class="journal-opening muzej-intro-opening" aria-labelledby="article-title">
+<div class="journal-opening-copy muzej-intro-title"><p class="galika-kicker">Music | Galičnik</p><h1 id="article-title">Galika</h1><p class="journal-byline muzej-byline">Words <strong>Aleksandar Trajkovski</strong></p></div>
+<div class="muzej-intro-media"><figure class="journal-hero"><img src="./Assets/Galika/galika-poster.jpg" alt="Galika’s original festival poster, a textured collage of landscape, woven patterns, and traditional dress." fetchpriority="high" decoding="async"/></figure><p class="journal-deck muzej-intro-deck">A Macedonian record label takes its dance floor into the mountains.</p><p class="galika-caption">Galika, first edition. Original event artwork via Resident Advisor.</p></div>
+</header>
+<article class="article-shell">
+<section class="article-body">
+<aside class="article-body-media" aria-label="The first edition"><dl class="galika-details"><dt>First edition</dt><dd>August 1, 2026<br>18:00–06:00</dd><dt>Location</dt><dd>Sherpa Horse Ranch<br>Galičnik, Macedonia</dd><dt>Program</dt><dd>Aceedo &amp; Sasho Uzun<br>BASHKKA<br>Emi Ermilova<br>MADAMI (live)<br>Mongo &amp; Omaru<br>Soul Case</dd><dt>Organized by</dt><dd>Bare Minimum</dd></dl></aside>
+<div class="article-body-copy body-block"><p>At Galika, the address is part of the appeal: a horse ranch in Galičnik, with an electronic music program running from evening into the following morning. Organized by the Macedonian label Bare Minimum, the first edition brought BASHKKA onto a bill with Aceedo &amp; Sasho Uzun, Emi Ermilova, MADAMI, Mongo &amp; Omaru, and Soul Case.</p>
+<p>The August 1, 2026 program set out a twelve-hour night at Sherpa Horse Ranch, with MADAMI billed live and sound supplied by Phonolux through a d&amp;b audiotechnik system. The capacity was limited. The setting was expansive; the format kept the gathering to one night.</p>
+<p>Behind the event is a smaller, more sustained story about people putting music into circulation. Bare Minimum began its catalog with Sasho Uzun’s <em>Da Funk</em>, released in October 2025. Four tracks, artwork by David Manev, mastering by RV Audio: a first record with its own visual identity and a direct connection to Skopje’s clubs.</p>
+<p>Uzun worked at Sektor 909 as both a resident DJ and booking manager. Those jobs put him in charge of different parts of the same exchange: the records being played and the people invited to play them. The label identifies the club as an influence on the EP.</p>
+<p>A release party followed at Klub1212 in November 2025. Aceedo, Uzun, and Soul Case shared that bill, then appeared together again at Galika. The project had a record and a set of working relationships before it had a mountain festival.</p></div>
+</section>
+<section class="article-body">
+<aside class="article-body-media" aria-label="Listen to Bare Minimum"><figure style="margin:0"><a href="https://bare-minimum.bandcamp.com/album/da-funk"><img src="./Assets/Galika/da-funk.jpg" alt="Cover artwork by David Manev for Sasho Uzun’s Da Funk EP, Bare Minimum catalog BM001." loading="lazy" decoding="async"/></a><figcaption>Sasho Uzun, <em>Da Funk</em> (BM001).<br>Artwork David Manev.</figcaption></figure><div class="galika-listen"><a href="https://bare-minimum.bandcamp.com/album/da-funk">Listen to Da Funk ↗</a><iframe class="galika-player" title="Listen to Sasho Uzun — Da Funk on Bandcamp" loading="lazy" src="https://bandcamp.com/EmbeddedPlayer/album=3259626246/size=small/bgcol=ffffff/linkcol=000000/artwork=none/transparent=true/" seamless><a href="https://bare-minimum.bandcamp.com/album/da-funk">Da Funk by Sasho Uzun</a></iframe></div></aside>
+<div class="article-body-copy body-block"><p>Ermilova’s involvement reaches into another part of that history. She began playing house music in 2008, according to a British Council biography published a decade later. In 2018 she was already a co-owner and resident of Longbus, a collective organizing parties in different locations.</p>
+<p>Her Refuge Worldwide profile offers a good detail about how that musical life formed: her father’s records from the 1980s and 1990s have effectively become hers, too. Alongside house and electro, the profile names ambient, new wave, disco, post-punk, and dub. A festival lineup can be read as a list of genres; it can also be read as a meeting of record collections.</p>
+<p>Soul Case arrived at dance music through sample-based hip-hop, soul, and disco. His biography dates the formation of Oubli, a project he founded with two friends, to winter 2018. Across these artists, playing music and making opportunities to play it have developed together.</p>
+<p>BASHKKA brought a different set of connections. Born in Munich, she spent a decade in New York, where Brooklyn’s trans community helped shape her life and work. Her practice has taken her through BLITZ and Panorama Bar; her 2024 Resident Advisor interview discusses the people and dance floors behind that trajectory.</p>
+<p>Galika’s own announcement placed welcome and self-expression alongside its musical program, with an explicit policy against discrimination and harmful behavior. That promise belongs to the practical work of running a party, as much as booking the DJs or choosing the sound system.</p>
+<p>The festival’s name comes with a character in its promotional writing: a mare, a village girl, a fairy. The announcement invokes Ilinden and imagines a gathering bound to its surroundings. It gives the project a local identity while leaving the musicians room to bring their own references.</p>
+<p>For a listener discovering this part of Macedonia, there are several ways in: a DJ whose collection starts with her father’s records, a producer shaped by Sektor 909, or a label’s first four tracks. Galika puts them on the same bill, at an address worth remembering.</p><section class="sources-section muzej-sources" aria-labelledby="sources-title"><h2 class="section-heading" id="sources-title">Sources</h2><p><a href="https://ra.co/events/2473755">Galika. Organizer’s event announcement, Resident Advisor.</a></p><p><a href="https://mktickets.mk/event/galika/">Galika. Program and production details, MKTickets.</a></p><p><a href="https://bare-minimum.bandcamp.com/album/da-funk">Sasho Uzun. Da Funk, BM001. Bare Minimum, October 20, 2025.</a></p><p><a href="https://ra.co/events/2295771">BM001 Release Party. Klub1212, November 14, 2025.</a></p><p><a href="https://ra.co/dj/sashouzun/biography">Sasho Uzun. Artist biography, Resident Advisor.</a></p><p><a href="https://www.britishcouncil.mk/en/programmes/arts/our-work-film/playuk-arcadia/music-programme">PlayUK music program. British Council, November 2018.</a></p><p><a href="https://refugeworldwide.com/artists/ermilova">Ermilova. Artist profile, Refuge Worldwide.</a></p><p><a href="https://ra.co/dj/soulcase/biography">Soul Case. Artist biography, Resident Advisor.</a></p><p><a href="https://ra.co/exchange/750">EX.718 BASHKKA. Resident Advisor, June 20, 2024.</a></p></section></div>
+</section>
+</article>
+<section aria-labelledby="more-from-muzej-title" class="more-from-muzej" data-more-from-muzej=""></section>
+</main>
+<footer class="site-footer muzej-footer">
+<div class="footer-inner">
+<div class="footer-brand">
+<span class="footer-wordmark">Muzej</span>
+<p class="footer-statement">An editorial archive of Macedonian art, style, tradition, and culture.</p>
+</div>
+<nav aria-label="Footer navigation" class="footer-links">
+<a href="about.html">About Muzej</a>
+<a href="mailto:muzej.mk@proton.me">Contact</a>
+<a aria-label="Open Muzej on Instagram" href="https://www.instagram.com/_muzej/" rel="noopener noreferrer" target="_blank">Instagram</a>
+</nav>
+</div>
+</footer>
+
+<script>
+  (function () {
+    var previousY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+    var ticking = false;
+    var revealZone = 24;
+    var motionThreshold = 4;
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    function updateMuzejLogoVisibility() {
+      var currentY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+      var delta = currentY - previousY;
+
+      if (reducedMotion.matches) {
+        document.body.classList.remove("muzej-logo-hidden");
+        ticking = false;
+        return;
+      }
+
+      if (currentY <= revealZone) {
+        document.body.classList.remove("muzej-logo-hidden");
+      } else if (delta > motionThreshold) {
+        document.body.classList.add("muzej-logo-hidden");
+      } else if (delta < -motionThreshold) {
+        document.body.classList.remove("muzej-logo-hidden");
+      }
+
+      previousY = currentY;
+      ticking = false;
+    }
+
+    function requestMuzejLogoVisibility() {
+      if (!ticking) {
+        window.requestAnimationFrame(updateMuzejLogoVisibility);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener("scroll", requestMuzejLogoVisibility, { passive: true });
+    window.addEventListener("resize", requestMuzejLogoVisibility);
+
+    if (reducedMotion.addEventListener) {
+      reducedMotion.addEventListener("change", requestMuzejLogoVisibility);
+    } else if (reducedMotion.addListener) {
+      reducedMotion.addListener(requestMuzejLogoVisibility);
+    }
+
+    updateMuzejLogoVisibility();
+  })();
+</script>
+</body>
+</html>
