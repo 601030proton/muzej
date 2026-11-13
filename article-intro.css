@@ -1,0 +1,17 @@
+/* Restore Muzej's image-and-deck opening: the headline stays in view until the introduction has passed. */
+header.muzej-intro-opening{align-items:start}
+header.muzej-intro-opening>.muzej-intro-title{
+position:sticky;top:100px;align-self:start;height:calc(100svh - 160px);min-height:0;
+display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;gap:24px;
+padding:0;margin:0;min-width:0;
+}
+header.muzej-intro-opening>.muzej-intro-title>h1{order:1;margin:0}
+header.muzej-intro-opening>.muzej-intro-title>[class*="kicker"]{order:0;margin:0}
+header.muzej-intro-opening>.muzej-intro-title>[class*="byline"]{order:2;margin:0}
+header.muzej-intro-opening>.muzej-intro-title>.vodici-photo-credit{order:3;margin:0}
+header.muzej-intro-opening>.muzej-intro-media{min-width:0;align-self:start}
+header.muzej-intro-opening .muzej-intro-deck{width:100%;max-width:none;margin:40px 0 0;padding:0;text-align:left}
+@media(max-width:760px){
+header.muzej-intro-opening>.muzej-intro-title{position:static;height:auto;min-height:0;gap:20px;padding:0}
+header.muzej-intro-opening .muzej-intro-deck{margin-top:28px}
+}
