@@ -1,6 +1,16 @@
 (function () {
   var articles = [
     {
+      slug: "lazarki",
+      href: "lazarki.html",
+      title: "Lazarki",
+      kicker: "Ritual",
+      dek: "Girls carry spring blessings from house to house through song.",
+      image: "./Assets/Lazarki/lazarki-07.png",
+      alt: "Young women in traditional dress arranging flowers in a basket.",
+      position: "center center"
+    },
+    {
       slug: "radio-free-macedonia",
       href: "radio-free-macedonia.html",
       title: "Radio Free Macedonia",
