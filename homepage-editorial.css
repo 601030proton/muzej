@@ -199,9 +199,8 @@ html[data-home-lead="radio"] [data-home-slot="secondary"][data-home-story="radio
 
 /* A small shop interlude, kept within the journal's editorial margins. */
 .home-shop{color:#000}
-.home-shop-frame{max-width:1120px;margin-inline:auto;padding-block:34px 40px;border-block:1px solid var(--rule)}
-.home-shop-heading{display:flex;align-items:baseline;justify-content:space-between;gap:24px}
-.home-shop-layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(32px,7vw,100px);align-items:center;margin-top:26px}
+.home-shop-frame{width:100%;margin-inline:auto;padding-top:32px;border-top:1px solid var(--rule)}
+.home-shop-layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(32px,7vw,100px);align-items:center;margin-top:0}
 .home-shop-image{display:grid;grid-template:1fr/1fr;max-width:430px;aspect-ratio:1/1;position:relative}
 .home-shop-image img{grid-area:1/1;display:block;width:100%;height:100%;object-fit:contain;transition:opacity .3s ease}
 .home-shop-back{opacity:0}
@@ -210,5 +209,5 @@ html[data-home-lead="radio"] [data-home-slot="secondary"][data-home-story="radio
 .home-shop-copy>p{font:400 21px/1.4 var(--serif);max-width:28ch;margin-top:20px}
 .home-shop-copy>p.home-shop-price{font:400 12px/1.5 var(--sans);margin-top:20px}
 .home-shop-links{display:flex;flex-wrap:wrap;gap:24px;margin-top:28px}
-@media(max-width:640px){.home-shop-frame{padding-block:26px 36px}.home-shop-layout{grid-template-columns:1fr;gap:20px;margin-top:20px}.home-shop-image{width:86%;max-width:360px;margin-inline:auto}.home-shop-copy h2{font-size:36px;max-width:none}.home-shop-copy>p{font-size:20px}.home-shop-links{margin-top:24px}}
+@media(max-width:640px){.home-shop-frame{padding-top:26px}.home-shop-layout{grid-template-columns:1fr;gap:20px;margin-top:0}.home-shop-image{width:86%;max-width:360px;margin-inline:auto}.home-shop-copy h2{font-size:36px;max-width:none}.home-shop-copy>p{font-size:20px}.home-shop-links{margin-top:24px}}
 @media(prefers-reduced-motion:reduce){.home-shop-image img{transition:none}}
