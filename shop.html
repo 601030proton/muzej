@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shop | Muzej</title>
-    <meta name="description" content="The Muzej Shop, home of the Skopje Venus Tee.">
+    <meta name="description" content="Clothing from Muzej. Discover the Skopje Venus Tee and the story behind its excavation photograph from Scupi.">
 <link rel="icon" type="image/png" href="./Assets/Font/Muzej%20Logo.ai.png">
 <link rel="apple-touch-icon" href="./Assets/Font/Muzej%20Logo.ai.png">
 
@@ -484,22 +484,7 @@
 }
 </style>
   <link rel="stylesheet" href="article-system.css?v=20261101-consistency-3">
-<style>
-.shop-page{max-width:1080px;margin:0 auto;padding:clamp(48px,7vw,96px) 0 80px;color:#000}
-.shop-page h1{font:400 clamp(48px,7vw,84px)/1 var(--headline-serif);margin:0 0 44px}
-.venus-tee{border-top:1px solid #11110f;padding-top:24px}
-.venus-tee-title{font:400 clamp(30px,4vw,46px)/1.1 var(--headline-serif);margin:0 0 12px;scroll-margin-top:100px}
-.venus-tee-description{font:400 19px/1.45 var(--serif);max-width:36rem;margin:0}
-.venus-tee-views{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(10px,2vw,24px);margin:28px 0}
-.venus-tee-views figure{margin:0}
-.venus-tee-views img{display:block;width:100%;height:auto;background:#fff}
-.venus-tee-views figcaption,.venus-tee-price,.shop-story,.shop-buy{font:400 .8rem/1.5 var(--sans)}
-.venus-tee-views figcaption{margin-top:8px}
-.venus-tee-purchase{display:flex;align-items:center;flex-wrap:wrap;gap:16px;margin:0 0 16px}
-.venus-tee-price{margin:0}
-.shop-buy{display:inline-block;padding:12px 18px;background:#11110f;color:#fff;text-decoration:none}
-.shop-story{color:inherit;text-decoration:underline;text-underline-offset:3px}
-</style>
+<link rel="stylesheet" href="shop-editorial.css?v=20261113-shop-1">
 </head>
   <body>
     <div class="page">
@@ -539,26 +524,32 @@
       </header>
 
       <main class="shell shop-page" aria-labelledby="shop-title">
-<h1 id="shop-title">Shop</h1>
-<section class="venus-tee" aria-labelledby="venus-tee-title">
-  <h2 class="venus-tee-title" id="venus-tee-title">Skopje Venus Tee</h2>
-  <p class="venus-tee-description">A white, boxy-fit tee with a photograph of the Venus of Scupi at the excavation site on the front and “SKOPJE VENUS” below the back collar.</p>
-  <div class="venus-tee-views">
-    <figure>
-      <img src="./Assets/Venus/skopje-venus-tee-front.webp" alt="Front of the white tee with a black-and-white excavation photograph of the Venus of Scupi." width="1000" height="1000" loading="lazy" decoding="async">
-      <figcaption>Front</figcaption>
-    </figure>
-    <figure>
-      <img src="./Assets/Venus/skopje-venus-tee-back.webp" alt="Back of the white tee with small SKOPJE VENUS lettering below the collar." width="1000" height="1000" loading="lazy" decoding="async">
-      <figcaption>Back</figcaption>
-    </figure>
-  </div>
-  <div class="venus-tee-purchase">
-    <p class="venus-tee-price">From $35 USD</p>
-    <a class="shop-buy" href="https://muzej.printful.me/product/unisex-venus-of-skupi-crew-neck-boxy-t-shirt">Buy the tee</a>
-  </div>
-  <a class="shop-story" href="venus-of-skupi.html">Read The Venus of Skupi</a>
+<header class="shop-masthead"><h1 id="shop-title">Muzej Shop</h1><a href="index.html">Back to the journal</a></header>
+<section class="shop-product" aria-labelledby="venus-tee-title" id="skopje-venus">
+<div class="shop-gallery" aria-label="Product photographs">
+<figure class="shop-plate" id="tee-front"><button class="shop-enlarge" type="button" aria-label="Enlarge front view"><img src="./Assets/Venus/skopje-venus-tee-front.webp" alt="Front of the white Skopje Venus tee, printed with a black-and-white excavation photograph." width="1000" height="1000" fetchpriority="high" decoding="async"></button></figure>
+<figure class="shop-plate" id="tee-back" hidden><button class="shop-enlarge" type="button" aria-label="Enlarge back view"><img src="./Assets/Venus/skopje-venus-tee-back.webp" alt="Back of the white tee, with SKOPJE VENUS lettering below the collar." width="1000" height="1000" decoding="async"></button></figure>
+<div class="shop-view-controls" aria-label="Choose a product view"><button type="button" aria-pressed="true" aria-controls="tee-front" data-view="front">Front</button><button type="button" aria-pressed="false" aria-controls="tee-back" data-view="back">Back</button></div>
+</div>
+<div class="shop-product-copy">
+<p class="shop-kicker">Muzej — Clothing</p>
+<h2 id="venus-tee-title">Skopje Venus Tee</h2>
+<p class="shop-price">From $35 USD</p>
+<p class="shop-description">A photograph from the excavation at Scupi, printed on a white, boxy-fit tee. “SKOPJE VENUS” sits below the back collar.</p>
+<a class="shop-purchase" href="https://muzej.printful.me/product/unisex-venus-of-skupi-crew-neck-boxy-t-shirt"><span>Choose size &amp; purchase</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
+<div class="shop-details">
+<details><summary>Details</summary><ul><li>100% cotton · 180 g/m²</li><li>White, boxy fit with dropped shoulders</li><li>Ribbed crew neck</li><li>Black-and-white photograph on the front</li><li>Small “SKOPJE VENUS” lettering on the back</li></ul></details>
+<details><summary>Ordering &amp; delivery</summary><p>Made to order. Choose your size and see current pricing, availability, and delivery options in our store before purchasing.</p></details>
+</div>
+<a class="shop-story-link" href="#the-story">The story behind the image</a>
+</div>
 </section>
+<section class="shop-origin" id="the-story" aria-labelledby="origin-title">
+<figure><a href="venus-of-skupi.html"><img src="./Assets/Venus/venusskupi_website-02.png" width="4501" height="6000" alt="The Venus of Scupi lying exposed in the soil during excavation." loading="lazy" decoding="async"></a><figcaption class="shop-plate-caption">Scupi, 2008. The moment of discovery.</figcaption></figure>
+<div class="shop-origin-copy"><p class="shop-kicker">From the journal</p><h2 id="origin-title">The Venus of Skupi</h2><p>Unearthed in a Roman bathhouse in 2008, the marble figure offers a glimpse of an ancient city near Skopje. The excavation photograph is the starting point for the tee.</p><a class="shop-story-link" href="venus-of-skupi.html">Read the story</a></div>
+</section>
+<footer class="shop-footer"><span>Muzej</span><nav aria-label="Shop footer"><a href="about.html">About</a><a href="mailto:muzej.mk@proton.me">Contact</a><a href="https://www.instagram.com/_muzej/" target="_blank" rel="noopener noreferrer">Instagram</a></nav></footer>
+<dialog class="shop-zoom" aria-label="Enlarged product photograph"><form method="dialog"><button aria-label="Close enlarged photograph">Close</button></form><img alt="" width="1000" height="1000"></dialog>
 </main>
 
 
@@ -611,5 +602,14 @@
         updateMuzejLogoVisibility();
       })();
     </script>
-  </body>
+  <script>
+(function(){
+var views=document.querySelectorAll('[data-view]');
+views.forEach(function(button){button.addEventListener('click',function(){views.forEach(function(item){var selected=item===button;item.setAttribute('aria-pressed',String(selected));document.getElementById('tee-'+item.dataset.view).hidden=!selected;});});});
+var zoom=document.querySelector('.shop-zoom');
+document.querySelectorAll('.shop-enlarge').forEach(function(button){button.addEventListener('click',function(){if(!zoom||!zoom.showModal)return;var source=button.querySelector('img');var image=zoom.querySelector('img');image.src=source.src;image.alt=source.alt;zoom.showModal();});});
+if(zoom)zoom.addEventListener('click',function(event){if(event.target===zoom)zoom.close();});
+})();
+</script>
+</body>
 </html>
