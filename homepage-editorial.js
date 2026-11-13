@@ -1,5 +1,32 @@
 /* Reader-triggered playback: no remote player is loaded before a click. */
 (function(){
+  var weekend = document.getElementById('prespa-feature');
+  if (weekend) {
+    var isKrusevo = Math.random() < 0.5;
+    weekend.dataset.weekendGuide = isKrusevo ? 'krusevo' : 'prespa';
+    if (isKrusevo) {
+      var guideTitle = 'Weekend Guide: Kruševo';
+      var guideHref = './krusevo.html';
+      weekend.querySelector('.kinfolk-feature-title').textContent = guideTitle;
+      weekend.querySelector('.kinfolk-feature-text-link').href = guideHref;
+      var guideLink = weekend.querySelector('.kinfolk-feature-media-link');
+      guideLink.href = guideHref;
+      guideLink.setAttribute('aria-label', 'Read Weekend Guide: Kruševo');
+      var guideVideo = document.createElement('video');
+      guideVideo.className = 'kinfolk-feature-image';
+      guideVideo.autoplay = true;
+      guideVideo.muted = true;
+      guideVideo.defaultMuted = true;
+      guideVideo.loop = true;
+      guideVideo.playsInline = true;
+      guideVideo.preload = 'metadata';
+      guideVideo.poster = './Assets/Krusevo/krusevo-hero-poster.jpg';
+      guideVideo.src = './Assets/Krusevo/krusevo-hero.mp4';
+      guideVideo.setAttribute('aria-hidden', 'true');
+      guideVideo.style.cssText = 'display:block;width:100%;height:auto;aspect-ratio:5999 / 4005;object-fit:cover;';
+      guideLink.replaceChildren(guideVideo);
+    }
+  }
   var films = [
     {
       id: 'zLmtG7q3k8s',
