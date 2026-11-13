@@ -1226,6 +1226,17 @@ main > .more-from-muzej[data-more-from-muzej] {
 <link rel="stylesheet" href="article-system.css?v=20261101-consistency-3">
 <link rel="stylesheet" href="editorial-sources.css?v=20261109-sources">
 <style id="qol-consistent-ranking-images">
+@media(min-width:721px){
+  /* Keep the complete opening photograph inside shorter desktop windows. */
+  .muzej-feature .reference-hero .feature-media{
+    width:min(100%,calc((100svh - 220px)*.8));
+  }
+  .muzej-feature .reference-hero .feature-media img{
+    width:100%;height:auto;max-height:calc(100svh - 220px);
+    object-fit:contain;object-position:top left;
+  }
+}
+
 /* One image frame and sticky sizing rule for every ranked city. */
 .muzej-feature .ranking-media-frame{aspect-ratio:4/5}
 .muzej-feature .ranking-media img{
