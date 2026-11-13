@@ -166,3 +166,7 @@
   object-position: center;
   transform: none;
 }
+
+/* Radio Free: the white cassette plate must never inherit a page-specific frame. */
+.more-from-muzej .more-from-muzej-card-link[href$="radio-free-macedonia.html"] .more-from-muzej-card-image,
+.more-from-muzej .more-from-muzej-card-link[href$="radio-free-macedonia.html"] .more-from-muzej-card-image img{border:0!important;box-shadow:none!important;background:#fff!important}
