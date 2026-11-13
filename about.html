@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Muzej</title>
+    <title>About Muzej | Founded by Aleksandar Trajkovski</title>
+    <meta name="description" content="Muzej is an independent magazine and cultural platform founded by Aleksandar Trajkovski, a Detroit-based designer, artist, publisher, educator, and designer for the NBA." />
+    <link rel="canonical" href="https://muzej.co/about" />
+    <meta property="og:title" content="About Muzej | Aleksandar Trajkovski" />
+    <meta property="og:description" content="An independent magazine and cultural platform devoted to Macedonian art, architecture, film, music, and tradition." />
+    <meta property="og:url" content="https://muzej.co/about" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"AboutPage","@id":"https://muzej.co/about#page","url":"https://muzej.co/about","name":"About Muzej | Founded by Aleksandar Trajkovski","about":[{"@id":"https://muzej.co/about#muzej"},{"@id":"https://muzej.co/about#aleksandar-trajkovski"}]},{"@type":"Organization","@id":"https://muzej.co/about#muzej","name":"Muzej","url":"https://muzej.co/","founder":{"@id":"https://muzej.co/about#aleksandar-trajkovski"}},{"@type":"Person","@id":"https://muzej.co/about#aleksandar-trajkovski","name":"Aleksandar Trajkovski","jobTitle":"Designer, artist, publisher, and educator","description":"Detroit-based designer and artist, designer for the NBA, founder and editor of Muzej, creator of Grand Circus Magazine, author of Framed, and instructor at the Ann Arbor Art Center."}]}</script>
 <link rel="icon" type="image/png" href="./Assets/Font/Muzej%20Logo.ai.png">
 <link rel="apple-touch-icon" href="./Assets/Font/Muzej%20Logo.ai.png">
 
@@ -512,6 +518,14 @@
 .museum-links{display:flex;gap:24px;flex-wrap:wrap;margin-top:32px}
 .museum-links a{font:400 12px/1.4 var(--sans);color:#000}
 @media(max-width:760px){.museum-layout{grid-template-columns:1fr;gap:32px}.museum-copy{max-width:none}.museum-image{width:100%;max-width:360px;justify-self:start}.museum-copy h1{font-size:42px}.museum-about{padding-top:28px}.museum-image img{max-height:45svh;object-fit:contain;object-position:left}.museum-label{margin-bottom:20px}}
+.museum-layout{align-items:start}
+.museum-copy{padding-top:clamp(0px,2vw,28px)}
+.support-arrow{font-family:var(--sans)}
+.museum-founder{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(48px,7vw,110px);margin:clamp(72px,9vw,128px) auto 0}
+.founder-heading{width:100%;max-width:520px;justify-self:end;padding-top:clamp(0px,2vw,28px)}
+.founder-heading .museum-label{margin-bottom:20px}
+.founder-heading h2{font:400 clamp(34px,3.7vw,54px)/1.06 var(--headline-serif);letter-spacing:-.015em;margin:0}
+@media(max-width:760px){.museum-founder{grid-template-columns:1fr;gap:28px;margin-top:64px}.founder-heading{max-width:none;padding-top:0}.museum-copy{padding-top:0}.founder-heading h2{font-size:38px}}
 </style><link rel="stylesheet" href="article-system.css?v=20261101-consistency-3">
 </head>
   <body>
@@ -555,11 +569,17 @@
 <figure class="museum-image"><img src="./Assets/About%20Photo/2.png" width="1080" height="1350" alt="Close detail of a carved marble face" fetchpriority="high"></figure>
 <div class="museum-copy">
 <h1 id="about-title">A journal of<br>Macedonian culture.</h1>
-<p>Muzej publishes essays, conversations, and field guides on art, architecture, and everyday life—from Vardar, Pirin, and Egej to Macedonian communities around the world.</p>
-<p>An independent journal published in English, Muzej was founded and is edited by Aleksandar Trajkovski, a designer and artist from the Macedonian diaspora.</p>
-<div class="museum-support"><a href="https://buy.stripe.com/7sYbIT0SJ5QoduX2Liao801" target="_blank" rel="noopener noreferrer">Support Muzej <span aria-hidden="true">↗</span></a></div>
+<p>Muzej is an independent magazine and cultural platform devoted to Macedonian art, architecture, film, music, and tradition. Through publishing and public programming, it connects the work of artists, the record of the past, and the experience of contemporary life in Macedonia and its diaspora.</p>
+<p>Founded by Aleksandar Trajkovski, Muzej encompasses editorial, design, screenings, and conversation. Its first public event brought audiences to Lowkey Cinema for a screening and discussion of <em>Before the Rain</em>.</p>
+<div class="museum-support"><a href="https://buy.stripe.com/7sYbIT0SJ5QoduX2Liao801" target="_blank" rel="noopener noreferrer">Support Muzej <span class="support-arrow" aria-hidden="true">↗</span></a></div>
 <nav class="museum-links" aria-label="Connect with Muzej"><a href="mailto:muzej.mk@proton.me">Contact</a><a href="index.html#letter">Newsletter</a><a href="https://www.instagram.com/_muzej/" target="_blank" rel="noopener noreferrer">Instagram</a></nav>
-</div></div></main>
+</div></div>
+<section class="shell museum-founder" aria-labelledby="founder-title">
+<div class="founder-heading"><p class="museum-label">Founder &amp; Editor</p><h2 id="founder-title">Aleksandar<br>Trajkovski</h2></div>
+<div class="museum-copy">
+<p>Aleksandar Trajkovski is a Detroit-based designer, artist, publisher, and educator whose career spans professional sports, independent media, public radio, and arts education. He is a designer for the NBA, built Detroit’s art and culture publication <em>Grand Circus Magazine</em>, and is the author of <em>Framed</em>, a book created in collaboration with WDET, Detroit’s public radio station. He teaches classical drawing and painting at the Ann Arbor Art Center.</p>
+<p>Muzej is his most comprehensive undertaking, bringing editorial vision, visual identity, and cultural programming under one direction. As founder and editor, Trajkovski is building an enduring institution for Macedonian culture, with a place in both public discourse and public life.</p>
+</div></section></main>
 
       
     </div>
