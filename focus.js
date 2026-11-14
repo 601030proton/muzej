@@ -26,7 +26,8 @@
   function schedule() {
     clearInterval(timer); timer = null;
     if (playing && inView && !document.hidden && !viewer.open && indexPanel.hidden) timer = setInterval(function () { select(current + 1, false); }, 6500);
-    play.textContent = playing ? 'Pause' : 'Play';
+    play.dataset.playing = String(playing);
+    play.title = playing ? 'Pause slideshow' : 'Play slideshow';
     play.setAttribute('aria-label', playing ? 'Pause automatic slideshow' : 'Play automatic slideshow');
   }
   function select(n, manual) {
@@ -71,7 +72,8 @@
   indexToggle.addEventListener('click', function () {
     var open = indexPanel.hidden; indexPanel.hidden = !open;
     indexToggle.setAttribute('aria-expanded', String(open));
-    indexToggle.innerHTML = open ? 'Close index <span>×</span>' : 'All images <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M3 3h10v10"/></svg>';
+    indexToggle.setAttribute('aria-label', open ? 'Close image index' : 'View all images');
+    indexToggle.title = open ? 'Close image index' : 'View all images';
     if (open) playing = false; schedule();
   });
   function openViewer() { playing = false; paintViewer(); viewer.showModal(); schedule(); }
