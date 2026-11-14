@@ -182,7 +182,8 @@ html[data-home-lead="radio"] [data-home-slot="secondary"][data-home-story="radio
 .home-feature-caption { margin-top: 20px; font: 400 11px/1.5 var(--sans); text-transform: uppercase; letter-spacing: .08em; }
 
 /* A focused four-story collection beneath Cinema. */
-#traditions { background: #fff; color: #000; margin-top: clamp(88px, 9vw, 144px); padding-bottom: 16px; }
+#traditions { background: #fff; color: #000; margin-top: clamp(96px, 12vw, 160px); padding-bottom: 0; }
+#traditions + #prespa-feature { margin-top: clamp(96px, 12vw, 160px); }
 #traditions .traditions-title { font: 400 clamp(34px, 3.4vw, 48px)/1.12 var(--serif); text-align: center; margin: 0 0 clamp(40px, 5vw, 72px); }
 .traditions-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(22px, 2.2vw, 36px); max-width: 1180px; margin-inline: auto; }
 .traditions-card { min-width: 0; }
@@ -194,6 +195,7 @@ html[data-home-lead="radio"] [data-home-slot="secondary"][data-home-story="radio
 @media (min-width:641px) and (max-width:980px) { .traditions-grid { grid-template-columns:repeat(2,minmax(0,1fr)); row-gap:40px; } }
 @media (max-width: 640px) {
   #traditions { margin-top: 72px; padding-bottom: 0; }
+  #traditions + #prespa-feature { margin-top: 80px; }
   .traditions-grid { grid-template-columns: 1fr; gap: 44px; }
   .traditions-card h3 { font-size: 30px; margin-top: 18px; }
 }
