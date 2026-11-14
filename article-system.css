@@ -1,4 +1,3 @@
-@import url("muzej-header.css?v=20261114-canonical-1");
 /* Muzej editorial details: shared alignment, credits and reading hierarchy. */
 html body main .feature-byline{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif!important;font-size:11px!important;font-weight:400!important;line-height:1.4!important;letter-spacing:.08em!important;text-transform:uppercase!important;color:#000!important}
 header:is(.muzej-sticky-opening,.venus-sticky-opening,.lazarki-sticky-opening) .feature-media{display:block;justify-content:initial;align-items:initial;width:100%;margin:0;padding:0}
