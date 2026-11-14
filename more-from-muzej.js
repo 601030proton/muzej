@@ -1,6 +1,16 @@
 (function () {
   var articles = [
     {
+      slug: "rusalii",
+      href: "rusalii.html",
+      title: "Rusalii",
+      kicker: "Ritual",
+      dek: "The sword dancers of Sekirnik.",
+      image: "./Assets/Rusalii/rusalii-01.webp",
+      alt: "Restored and colorized archival portrait of a Rusalii dancer.",
+      position: "center center"
+    },
+    {
       slug: "lazarki",
       href: "lazarki.html",
       title: "Lazarki",
