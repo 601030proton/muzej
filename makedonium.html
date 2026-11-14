@@ -7,8 +7,339 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media print{.site-header,.chapter-index,.image-instruction,.tabbar,.research,footer,dialog{display:none!important}.masthead{margin-top:10px}h1{font-size:100px}.hero img{height:auto}.chapter{break-before:page}.opening,.archive-layout,.unbuilt,.context-layout,.landscape-layout,.interior-layout,.detail-layout,.closing-text{display:block}.archive-desk{position:static}.archive-panel[hidden]{display:block!important}.prose{max-width:none;font-size:12pt}.act-heading{margin:30px 0}.act-heading h2{font-size:40px}.archive-prose{padding-top:30px}.sheet-image img{max-height:400px}.hero,.section-plate,.landscape,.interior,.night{break-inside:avoid}.opening,.centered,.closing-text{margin:40px auto}.historical-dates{display:flex;gap:30px}.section-reading,.route,.credits{break-inside:avoid}.night img{max-height:600px}figure{margin:30px auto}figcaption{font-size:8pt}}
 .archive-layout>*{min-width:0}.sheet-image img{width:100%;height:auto}
-</style></head><body>
-<header class="site-header"><a class="wordmark" href="index.html" aria-label="Muzej home"><img style="display:block;width:100px;height:auto" src="./Assets/Muzej%20Logo/MuzejNewWord.png" alt="Muzej"></a><span class="micro">An independent journal of Macedonian culture</span><a class="micro" href="#research">Research notes ↗</a></header>
+</style><link rel="stylesheet" href="muzej-footer-logo.css?v=20260914"><style id="muzej-shared-chrome">:root{--page-x:clamp(22px,5.2vw,80px);--content-max:1520px;--background:#fff;--foreground:#000;--font-display:"plantin",Georgia,serif;--font-wordmark:var(--font-display);--sans:"Helvetica Neue",Helvetica,Arial,sans-serif}.shell{
+  width: min(100%, var(--content-max));
+  margin: 0 auto;
+  padding-left: var(--page-x);
+  padding-right: var(--page-x);
+}
+.site-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  background: var(--background);
+}
+.header-frame{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  padding-top: 28px;
+  padding-bottom: 24px;
+}
+.brand-mark{
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-wordmark);
+  font-size: clamp(2.4rem, 1.9rem + 1.43vw, 3.76rem);
+  line-height: 0.92;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  white-space: nowrap;
+  text-decoration: none;
+
+}
+.site-header .brand-mark{
+  position: relative;
+  width: 160px;
+  height: 32px;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+.site-header .brand-mark-image{
+  position: absolute;
+  width: 198.68px;
+  max-width: none;
+  height: auto;
+  left: -19.53px;
+  top: -107.88px;
+  display: block;
+}
+.utility-link,
+.utility-menu-item{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: rgba(23, 21, 19, 0.58);
+  text-decoration: none;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+.utility-link:hover,
+.utility-menu-item:hover{
+  color: var(--foreground);
+}
+.header-tools{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.utility-menu{
+  position: relative;
+}
+.utility-menu summary{
+  list-style: none;
+}
+.utility-menu summary::-webkit-details-marker{
+  display: none;
+}
+.utility-trigger{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: color 180ms ease, opacity 180ms ease;
+}
+.utility-trigger:hover{
+  opacity: 0.72;
+}
+.utility-trigger:focus-visible{
+  outline: 2px solid rgba(141, 79, 61, 0.45);
+  outline-offset: 3px;
+}
+.utility-icon{
+  display: grid;
+  gap: 0.26rem;
+}
+.utility-icon-line{
+  display: block;
+  width: 1.45rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.88;
+}
+.utility-panel{
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  right: 0;
+  z-index: 10;
+  display: grid;
+  min-width: 10rem;
+  padding: 0.45rem 0;
+  border: 1px solid rgba(23, 21, 19, 0.12);
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(23, 21, 19, 0.08);
+}
+.utility-panel-group{
+  display: grid;
+  gap: 0;
+}
+.utility-panel-utility{
+  margin-top: 0.25rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid rgba(23, 21, 19, 0.1);
+}
+.utility-panel .utility-link,
+.utility-panel .utility-menu-item{
+  justify-content: flex-start;
+  min-height: 0;
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  background: transparent;
+}
+.utility-panel-utility .utility-link{
+  font-size: 0.66rem;
+  letter-spacing: 0;
+  color: rgba(23, 21, 19, 0.52);
+}
+.utility-panel .utility-menu-item{
+  cursor: pointer;
+}
+.utility-panel .utility-link:hover,
+.utility-panel .utility-menu-item:hover{
+  background: rgba(23, 21, 19, 0.035);
+}
+.site-footer{
+  margin-top: 0;
+}
+.muzej-footer{
+  width: 100%;
+  padding: clamp(3.5rem, 7vw, 6rem) var(--page-x);
+  background: #000000;
+  color: #f7f2e9;
+}
+.footer-inner{
+  display: grid;
+  grid-template-columns: minmax(320px, 620px) minmax(180px, 260px);
+  gap: clamp(3rem, 7vw, 6rem);
+  justify-content: center;
+  align-items: start;
+  width: min(100%, 1160px);
+  margin: 0 auto;
+}
+.footer-brand{
+  min-width: 0;
+}
+.footer-wordmark{
+  display: inline-flex;
+  font-family: var(--font-wordmark);
+  font-size: clamp(3.1rem, 5vw, 5rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: 0;
+  font-optical-sizing: auto;
+
+}
+.footer-statement{
+  max-width: 38.75rem;
+  margin: clamp(1.15rem, 1.8vw, 1.45rem) 0 0;
+  font-size: clamp(1rem, 1vw + 0.72rem, 1.15rem);
+  line-height: 1.5;
+  color: rgba(247, 242, 233, 0.86);
+}
+.muzej-footer .footer-links{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-top: 0.28rem;
+}
+.muzej-footer .footer-links a{
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 180ms ease, text-decoration-color 180ms ease;
+}
+.muzej-footer .footer-links a:hover{
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  opacity: 0.86;
+}
+@media (max-width: 1080px){.footer-inner{
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+.muzej-footer .footer-links{
+    padding-top: 0;
+  }}
+@media (max-width: 1140px){.header-frame{
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 0.85rem 1.25rem;
+  }
+.header-tools{
+    justify-content: flex-start;
+  }}
+@media (max-width: 760px){.header-frame{
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+.brand-mark{
+    font-size: clamp(2.16rem, 10.15vw, 2.87rem);
+
+  }}
+@media (max-width: 720px){.header-frame{
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+.brand-mark{
+    font-size: clamp(2.16rem, 10.15vw, 2.87rem);
+
+  }}
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: transparent;
+  pointer-events: none;
+}
+.site-header .header-frame,
+.site-header .brand-mark,
+.site-header .header-tools{
+  pointer-events: auto;
+}
+.site-header .brand-mark{
+  transform: translate3d(0, 0, 0);
+  transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+body.muzej-logo-hidden .site-header .brand-mark{
+  transform: translate3d(0, calc(-100% - 42px), 0);
+}
+@media (prefers-reduced-motion: reduce){.site-header .brand-mark{
+    transition: none;
+    will-change: auto;
+  }
+body.muzej-logo-hidden .site-header .brand-mark{
+    transform: none;
+  }}
+@media (max-width: 768px){.site-header{ z-index: 2000; }
+.site-header .header-frame{ grid-template-columns: minmax(0, 1fr) auto; align-items: center; justify-items: stretch; gap: 1rem; }
+.site-header .brand-mark{ justify-self: start; min-width: 0; }
+.site-header .header-tools{ justify-self: end; justify-content: flex-end; margin-left: auto; position: relative; z-index: 2002; }
+.site-header .utility-menu{ position: static; }
+.site-header .utility-trigger{ position: relative; z-index: 2003; }
+.site-header .utility-panel{ position: fixed; inset: 0; left: 0; right: 0; top: 0; z-index: 2001; display: grid; align-content: center; width: 100vw; max-width: none; min-width: 0; height: 100vh; height: 100svh; padding: clamp(76px, 18vh, 128px) var(--page-x) 48px; border: 0; background: rgba(255, 255, 255, 0.98); box-shadow: none; overflow-y: auto; transform: none; }
+.site-header .utility-panel-group{ width: min(100%, 22rem); margin: 0 auto; }
+.site-header .utility-panel-utility{ margin-top: 0.8rem; padding-top: 0.85rem; }
+.site-header .utility-panel .utility-link,
+  .site-header .utility-panel .utility-menu-item{ justify-content: center; min-height: 2.75rem; padding: 0.72rem 0; text-align: center; }}
+@media (max-width: 768px){.site-header .brand-mark{
+    width: 124px;
+    height: 25px;
+  }
+.site-header .brand-mark-image{
+    width: 153.97px;
+    left: -15.13px;
+    top: -83.62px;
+  }}
+@media print{.guide-index,.site-header,.site-footer,.more-from-muzej{display:none}}.site-header{display:block;max-width:none;margin:0;padding:0;gap:normal}.site-header .shell{width:calc(100% - var(--page-x)*2);max-width:1280px;margin-inline:auto;padding-inline:0}.site-header .header-frame{padding-top:28px;padding-bottom:28px}.site-header .utility-trigger{margin:0}.site-header summary:after{content:none}.site-header details{border:0}.site-header .utility-panel{font-family:var(--sans)}.site-footer{display:block;max-width:none;margin:0}.masthead h1{font:400 clamp(48px,6.6vw,94px)/.99 "plantin",Georgia,serif;letter-spacing:-.025em}.masthead{max-width:1422px;margin:28px auto 40px;padding-inline:var(--page-x)}.masthead h1{margin:32px 0}.act-heading h2,.unbuilt-title h3{font-family:"plantin",Georgia,serif;letter-spacing:-.025em}body{font-family:"plantin",Georgia,serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}.hero{padding-inline:var(--page-x)}@media(max-width:600px){.masthead{margin-top:20px}.masthead h1{font-size:clamp(48px,11vw,76px)}}</style></head><body>
+<header class="site-header">
+<div class="shell header-frame">
+<a aria-label="Muzej home" class="brand-mark" href="index.html">
+<img alt="" aria-hidden="true" class="brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png">
+</a>
+<div class="header-tools">
+<details class="utility-menu">
+<summary aria-label="Open navigation menu" class="utility-trigger">
+<span aria-hidden="true" class="utility-icon">
+<span class="utility-icon-line"></span>
+<span class="utility-icon-line"></span>
+<span class="utility-icon-line"></span>
+</span>
+</summary>
+<nav aria-label="Site navigation" class="utility-panel">
+<div class="utility-panel-group">
+<a class="utility-link" href="index.html">Home</a>
+<a class="utility-link" href="index.html#selected-stories">Selected Stories</a>
+<a class="utility-link" href="index.html#now-playing">Now Playing</a>
+<a class="utility-link" href="index.html#catalogue">Catalogue</a>
+<a class="utility-link" href="index.html#archive">Archive</a>
+<a class="utility-link" href="about.html">About Muzej</a>
+</div>
+<div class="utility-panel-group utility-panel-utility">
+<a class="utility-link" href="mailto:muzej.mk@proton.me">Contact</a>
+<a class="utility-link" href="https://www.instagram.com/_muzej/" rel="noopener noreferrer" target="_blank">Instagram</a>
+</div>
+</nav>
+</details>
+</div>
+</div>
+</header>
+
 <main id="top">
 <section class="masthead"><div class="title-line"><span class="micro">Architecture | Kruševo</span><span class="micro">1974</span></div><h1>Makedonium</h1><div class="masthead-bottom"><p>A memorial imagined<br>through space, light, and sound.</p><span class="byline">Words Aleksandar Trajkovski</span></div></section>
 <figure class="hero"><button class="image-open" data-open-image aria-label="Inspect the 1973 construction photograph"><img src="./Assets/Makedonium/construction-1973.jpg" alt="Makedonium under construction, 1973. Grabul Family Archive, MoMA collection. The exposed reinforcement gives the finished silhouette a material history." loading="lazy"></button><figcaption>Makedonium under construction, 1973. Grabul Family Archive, MoMA collection. The exposed reinforcement gives the finished silhouette a material history. <sup class="refs"><a href="#source-4">4</a></sup></figcaption></figure>
@@ -51,7 +382,20 @@
 <details><summary>Photographs and credits</summary><div class="detail-content"><p>Grabul Family Archive / MoMA: sketch, competition perspective, construction photograph. Valentin Jeck: outdoor classroom. Boris Jurmovski / MАРХ: interior. Roberto Conte: relief. Yang Xiao: light-painted night exterior. Neda Firfova’s portfolio: photograph of the technical section as reproduced in the artist book.</p></div></details>
 <details id="source-panel"><summary><span>04</span> Sources and object records</summary><div class="detail-content"><section id="sources" class="sources"><div class="section-heading"><span>Reference desk</span><h2>Sources and visual records</h2></div><ol><li id="source-1"><a href="https://muzejkrusevo.mk/?lang=en&amp;page_id=1362">Museum of Kruševo — Ilinden Monument</a></li><li id="source-2"><a href="https://www.moma.org/collection/works/217597">MoMA — 1971 sketch, object 810.2018</a></li><li id="source-3"><a href="https://www.moma.org/collection/works/217572">MoMA — 1972 competition perspective, object 809.2018</a></li><li id="source-4"><a href="https://www.moma.org/collection/works/217599">MoMA — construction photograph, 1973</a></li><li id="source-5"><a href="https://arhiva.zaum.mk/wp-content/uploads/2020/03/2006_06_29_Jordan_Grabuloski_Grabul_Omaz.pdf">National Gallery of Macedonia — Jordan Grabuloski: Homage, 2006, especially printed pp. 42–45</a></li><li id="source-6"><a href="https://arhiv.mk/izlozbi-makedonija-niz-vekovite/">State Archives — Macedonia through the centuries; ASNOM chronology</a></li><li id="source-7"><a href="https://api.drum.lib.umd.edu/server/api/core/bitstreams/5878fd75-f19a-4520-99ae-75d987b570ea/content">Raino Eetu Isto — Monumental Endeavors, PhD dissertation, 2018, chapter 3</a></li><li id="source-8"><a href="https://hristinaivanoska.com/wp-content/uploads/2023/02/Makedonium_Dramaturgy-of-the-Unfinished_SMALL.pdf">Yane Calovski and Hristina Ivanoska — Makedonium: Dramaturgy of the Unfinished, artist-hosted PDF</a></li><li id="source-9"><a href="https://www.nedafirfova.work/work/makedonium-dramaturgy-of-the-unfinished">Neda Firfova — artist-book design and photographed spreads, 2020</a></li><li id="source-10"><a href="https://www.zilbermangallery.com/exhibitions/40-residual-entries-yane-calovski/">Zilberman — Residual Entries, 2024, project and unrealized room</a></li><li id="source-11"><a href="https://heritage.gov.mk/2026/07/24/%D1%81%D1%82%D1%80%D1%83%D1%87%D0%B5%D0%BD-%D1%83%D0%B2%D0%B8%D0%B4-%D0%BD%D0%B0-%D0%B2%D0%B8%D1%82%D1%80%D0%B0%D0%B6%D0%B8%D1%82%D0%B5-%D0%BE%D0%B4-%D0%B1%D0%BE%D1%80%D0%BA%D0%BE-%D0%BB%D0%B0%D0%B7/nggallery/image/002_krush/">National Conservation Centre — stained-glass inspection, July 24, 2026</a></li><li id="source-12"><a href="https://marh.mk/grupa_denes/">MАРХ — Group Denes, with manifesto and historical sources</a></li><li id="source-13"><a href="https://marh.mk/makedonium-jurmovski/">MАРХ — Makedonium photographed by Boris Jurmovski, 2021</a></li><li id="source-14"><a href="https://marh.mk/makedonium/">MАРХ — Makedonium construction archive, 2025</a></li><li id="source-15"><a href="https://www.inhiu.com/eternal-monuments-in-the-dark?pgid=ko32vlw2-c4784e7a-ccbe-4ab9-8057-d562693ba6a5">Yang Xiao — Eternal Monuments in the Dark; Makedonium photograph</a></li><li id="source-16"><a href="https://www.flickr.com/photos/conte/54686370294">Roberto Conte — Makedonium relief, photographed August 15, 2017</a></li><li id="source-17"><a href="https://www.moma.org/collection/works/273821">MoMA — Valentin Jeck, Makedonium, 2016</a></li><li id="source-18"><a href="https://ifs.mk/dialogues-artistiques-franco-macedoniens-patrimoine-et-creation-contemporaine/?lang=fr">Institut français de Skopje — Makedonium programme, May 2026</a></li><li id="source-19"><a href="https://www.aica-macedonia.org.mk/wp/?p=1388">AICA Macedonia — 2022 symposium; Calovski project presentation</a></li><li id="source-20"><a href="https://www.archdaily.com/252452/ad-classics-makedonium-jordan-grabulovski-and-iskra-grabulovski">ArchDaily — 2012 feature; conflicting figures retained for comparison</a></li><li id="source-21"><a href="https://www.spomenikdatabase.org/krusevo">Spomenik Database — Kruševo; detailed secondary-source lead</a></li><li id="source-22"><a href="https://www.slobodenpecat.mk/vo-kabinetot-na-pretsedatelot-e-otvorena-izlozhbata-zad-makedoniumot/">Sloboden Pečat — Behind Makedonium exhibition, 2022</a></li><li id="source-23"><a href="https://isie.org.mk/wp-content/uploads/2022/09/MK_Monumental_MK.pdf">ISIE — Monumental, Macedonian edition, Kruševo entry, printed pp. 70–71</a></li><li id="source-24"><a href="https://www.nbrm.mk/wbstorage/files/annual_report_1993.pdf">National Bank — Annual Report 1993, currency issue chronology</a></li></ol></section></div></details>
 <p class="edition-note">Muzej · Architecture · November 14, 2026</p></aside>
-</main><footer><a class="wordmark" href="index.html">Muzej</a><span class="micro">What its people make, build, and carry forward.</span><a class="micro" href="#top">Back to top ↑</a></footer>
+</main><footer class="site-footer muzej-footer">
+<div class="footer-inner">
+<div class="footer-brand">
+<a aria-label="Muzej home" class="footer-brand-mark" href="index.html"><img alt="" aria-hidden="true" class="footer-brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png"></a>
+<p class="footer-statement">An editorial archive of Macedonian art, style, tradition, and culture.</p>
+</div>
+<nav aria-label="Footer navigation" class="footer-links">
+<a href="about.html">About Muzej</a>
+<a href="mailto:muzej.mk@proton.me">Contact</a>
+<a aria-label="Open Muzej on Instagram" href="https://www.instagram.com/_muzej/" rel="noopener noreferrer" target="_blank">Instagram</a>
+</nav>
+</div>
+</footer>
+
 <dialog id="image-viewer" aria-label="Image inspection"><div class="viewer-bar"><span class="micro" id="viewer-position">Image inspection</span><div><button id="zoom-out" aria-label="Zoom out">−</button><button id="zoom-in" aria-label="Zoom in">+</button><button id="viewer-close">Close ×</button></div></div><div class="viewer-canvas" tabindex="0" aria-label="Scrollable enlarged image"><img id="viewer-image" alt=""></div><p id="viewer-caption"></p></dialog>
 <script>
 const tabs=[...document.querySelectorAll('[role=tab]')];
@@ -64,4 +408,53 @@ document.getElementById('viewer-close').addEventListener('click',()=>viewer.clos
 document.getElementById('zoom-in').addEventListener('click',()=>setZoom(zoom+.5));document.getElementById('zoom-out').addEventListener('click',()=>setZoom(zoom-.5));
 function openReference(hash){const target=document.getElementById(hash.slice(1));if(!target)return;let parent=target.closest('details');while(parent){parent.open=true;parent=parent.parentElement.closest('details')}requestAnimationFrame(()=>target.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}))}
 document.querySelectorAll('.refs a').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();history.replaceState(null,'',a.hash);openReference(a.hash)}));if(location.hash.startsWith('#source-'))openReference(location.hash);
-</script></body></html>
+</script><script>
+  (function () {
+    var previousY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+    var ticking = false;
+    var revealZone = 24;
+    var motionThreshold = 4;
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    function updateMuzejLogoVisibility() {
+      var currentY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+      var delta = currentY - previousY;
+
+      if (reducedMotion.matches) {
+        document.body.classList.remove("muzej-logo-hidden");
+        ticking = false;
+        return;
+      }
+
+      if (currentY <= revealZone) {
+        document.body.classList.remove("muzej-logo-hidden");
+      } else if (delta > motionThreshold) {
+        document.body.classList.add("muzej-logo-hidden");
+      } else if (delta < -motionThreshold) {
+        document.body.classList.remove("muzej-logo-hidden");
+      }
+
+      previousY = currentY;
+      ticking = false;
+    }
+
+    function requestMuzejLogoVisibility() {
+      if (!ticking) {
+        window.requestAnimationFrame(updateMuzejLogoVisibility);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener("scroll", requestMuzejLogoVisibility, { passive: true });
+    window.addEventListener("resize", requestMuzejLogoVisibility);
+
+    if (reducedMotion.addEventListener) {
+      reducedMotion.addEventListener("change", requestMuzejLogoVisibility);
+    } else if (reducedMotion.addListener) {
+      reducedMotion.addListener(requestMuzejLogoVisibility);
+    }
+
+    updateMuzejLogoVisibility();
+  })();
+</script>
+</body></html>
