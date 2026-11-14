@@ -1466,21 +1466,6 @@ body.muzej-logo-hidden .site-header .brand-mark {
   margin-top: 1em;
 }
 
-/* Snowy opening with gentle motion; keep the summer footage out of the hero. */
-.weekender-hero-media .krusevo-winter-hero {
-  object-position: center 48%;
-  filter: saturate(.72) contrast(1.02);
-  transform-origin: 50% 48%;
-  animation: krusevo-winter-drift 22s ease-in-out infinite alternate;
-}
-@keyframes krusevo-winter-drift {
-  from { transform: scale(1); }
-  to { transform: scale(1.055); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .weekender-hero-media .krusevo-winter-hero { animation: none; }
-}
-
 </style>
 <link rel="stylesheet" href="article-headlines.css">
 <style>
@@ -1594,7 +1579,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
 </header>
 
 <main>
-<section class="weekender-hero" aria-labelledby="weekenderTitle"><div class="weekender-hero-media" aria-hidden="true"><img class="krusevo-winter-hero" src="./Assets/Krusevo/winter-town.webp" alt="" width="1080" height="1440" fetchpriority="high" decoding="async"></div><div class="weekender-hero-overlay" aria-hidden="true"></div><div class="weekender-hero-inner"><div class="weekender-hero-copy"><p class="weekender-kicker">Weekend Guide</p><span class="weekender-rule" aria-hidden="true"></span><h1 class="weekender-title" id="weekenderTitle">Kruševo</h1><p class="weekender-dek">Ski mornings, painted houses, and a weekend in the mountains.</p></div></div></section>
+<section class="weekender-hero" aria-labelledby="weekenderTitle"><div class="weekender-hero-media" aria-hidden="true"><video autoplay muted loop playsinline preload="auto" poster="./Assets/Krusevo/krusevo-hero-poster.jpg"><source src="./Assets/Krusevo/krusevo-hero.mp4" type="video/mp4"></video></div><div class="weekender-hero-overlay" aria-hidden="true"></div><div class="weekender-hero-inner"><div class="weekender-hero-copy"><p class="weekender-kicker">Weekend Guide</p><span class="weekender-rule" aria-hidden="true"></span><h1 class="weekender-title" id="weekenderTitle">Kruševo</h1><p class="weekender-dek">Ski mornings, painted houses, and a weekend in the mountains.</p></div></div></section>
 
 <article class="weekender-shell">
 <section class="section-frame" id="overview"><aside class="section-rail"><nav aria-label="Jump to sections" class="jump-nav"><p class="jump-nav-label">Jump to:</p><ul class="jump-nav-list"><li><a href="#overview">Overview</a></li><li><a href="#recommendations">Plan the weekend</a></li><li><a href="#itinerary">Itinerary</a></li></ul></nav></aside><div class="section-main"><div class="intro-meta"><span></span></div><p class="section-label">Overview</p><div class="body-copy"><p>In Kruševo, a chairlift connects the town to the ski slopes through a beech forest. Spend the morning learning to turn on snow, then come down for paintings, a box of lokum, and a swim before dinner. The pleasures of a winter weekend here are close enough to fit into two days without spending them in the car.</p><p>The town rewards time on foot, too. Nineteenth-century houses climb the hillside, their upper floors projecting over the lanes. Nikola Martinoski’s paintings occupy one of those houses; on Gumenje, Makedonium and the Toše Proeski Memorial House give the next morning a very different scale. This route puts skiing first on Saturday and keeps Sunday’s cultural stops together, with proper meals between them.</p></div><div class="krusevo-overview-gallery"><figure class="support-figure winter-overview-photo"><img alt="Kruševo rooftops at sunset" class="overview-image" decoding="async" height="1440" loading="lazy" src="./Assets/Krusevo/town-sunset.webp" width="1080"/><figcaption class="itinerary-caption">Kruševo</figcaption></figure><figure class="support-figure winter-overview-photo"><div class="vila-gora-crop"><img alt="Painted façades and Vila Gora in Kruševo’s old town" class="overview-image" decoding="async" height="1440" loading="lazy" src="./Assets/Krusevo/old-town-vilagora.webp" width="1080"/></div><figcaption class="itinerary-caption">Vila Gora · Wander-Lush</figcaption></figure></div></div></section>
