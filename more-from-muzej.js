@@ -1,10 +1,20 @@
 (function () {
   var articles = [
     {
+      slug: "vodici-in-bituse",
+      href: "vodici-in-bituse.html",
+      title: "Vodici in Bituše",
+      kicker: "Traditions",
+      dek: "Bread, song, and a year of responsibility in a mountain village.",
+      image: "./Assets/Vodici/web/vodici-05-retouched.webp",
+      alt: "A woman carrying a wicker basket against the snowy mountains of Bituše.",
+      position: "center center"
+    },
+    {
       slug: "rusalii",
       href: "rusalii.html",
       title: "Rusalii",
-      kicker: "Ritual",
+      kicker: "Traditions",
       dek: "The sword dancers of Sekirnik.",
       image: "./Assets/Rusalii/rusalii-01.webp",
       alt: "Restored and colorized archival portrait of a Rusalii dancer.",
@@ -14,7 +24,7 @@
       slug: "lazarki",
       href: "lazarki.html",
       title: "Lazarki",
-      kicker: "Ritual",
+      kicker: "Traditions",
       dek: "Girls carry spring blessings from house to house through song.",
       image: "./Assets/Lazarki/lazarki-07.png",
       alt: "Young women in traditional dress arranging flowers in a basket.",
@@ -64,8 +74,8 @@
       slug: "dodole",
       href: "dodole.html",
       title: "Dodole",
-      kicker: "Video | Ritual Song",
-      dek: "A Macedonian rain-making ritual song filmed in Istibanja in 1987.",
+      kicker: "Traditions",
+      dek: "A rain-making custom of song, water, greenery, and shared hopes for the harvest.",
       image: "./Assets/Dodole/rain2.png",
       alt: "Black-and-white archival photograph of women and girls gathered around a Macedonian rain-making ritual.",
       position: "center top"
@@ -322,9 +332,16 @@
       main.appendChild(section);
     }
 
-    var related = seededShuffle(articles.filter(function (article) {
+    var isTraditions = section.getAttribute("data-more-from-muzej") === "traditions";
+    var traditionsOrder = ["vodici-in-bituse", "lazarki", "rusalii", "dodole"];
+    var candidates = articles.filter(function (article) {
       return article.slug !== slug && article.recommend !== false;
-    }), "more-from-muzej:" + slug).slice(0, 3);
+    });
+    var related = isTraditions ? traditionsOrder.filter(function (item) {
+      return item !== slug;
+    }).map(function (item) {
+      return candidates.find(function (article) { return article.slug === item; });
+    }).filter(Boolean) : seededShuffle(candidates, "more-from-muzej:" + slug).slice(0, 3);
 
     section.className = "more-from-muzej";
     section.setAttribute("aria-labelledby", "more-from-muzej-title");
@@ -340,7 +357,7 @@
     heading.style.fontFamily = '"plantin", Georgia, serif';
     heading.style.fontWeight = "400";
     heading.style.fontStyle = "normal";
-    heading.textContent = "More from Muzej";
+    heading.textContent = isTraditions ? "More in Traditions" : "More from Muzej";
     grid.className = "more-from-muzej-card-grid";
 
     related.forEach(function (article) {
