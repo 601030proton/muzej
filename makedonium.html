@@ -1054,7 +1054,8 @@ body.muzej-logo-hidden .site-header .brand-mark {
   font-size: 13px;
   font-weight: 400;
 }
-.skopje-guide .guide-meta > div { border: 0; padding: 5px 0; }
+.skopje-guide .guide-meta > div { grid-template-columns: 110px minmax(0, 1fr); column-gap: 16px; border: 0; padding: 5px 0; }
+.skopje-guide .guide-meta dt, .skopje-guide .guide-meta dd { min-width: 0; overflow-wrap: anywhere; }
 .skopje-guide .guide-meta dt { color: #70675d; }
 .skopje-guide .guide-visit {
   border-top-color: var(--guide-rule);
