@@ -1,0 +1,189 @@
+/* Focus: contemporary art features. Scoped to preserve Muzej's other formats. */
+:root{--background:#fff;--foreground:#000;--ink:#000;--white:#fff;--page-x:clamp(22px,5.2vw,80px);--content-max:1520px;--sans:"Helvetica Neue",Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:110px}body{margin:0;background:#fff;color:#000;font-family:"plantin",Georgia,serif;-webkit-font-smoothing:antialiased}img{display:block;max-width:100%}a{color:inherit}button{font:inherit;color:inherit}figure,p,h1,h2,blockquote{margin:0}button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid #000;outline-offset:6px}
+.skip-link{position:fixed;left:20px;top:-100px;z-index:100;padding:12px;background:#fff;font:14px var(--sans)}.skip-link:focus{top:16px}
+.site-header{position:fixed;inset:0 0 auto;z-index:40;background:transparent;pointer-events:none}.site-header a,.site-header details{pointer-events:auto}
+.shell {
+  width: min(100%, var(--content-max));
+  margin: 0 auto;
+  padding-left: var(--page-x);
+  padding-right: var(--page-x);
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  background: var(--background);
+}
+.header-frame {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  padding-top: 28px;
+  padding-bottom: 24px;
+}
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-wordmark);
+  font-size: clamp(3rem, 2.1rem + 2.55vw, 5.35rem);
+  line-height: 0.82;
+  letter-spacing: 0.055em;
+  font-weight: 300;
+  font-optical-sizing: auto;
+  white-space: nowrap;
+  text-transform: uppercase;
+
+  text-decoration: none;
+}
+
+.site-header .brand-mark {
+  position: relative;
+  width: 160px;
+  height: 32px;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.site-header .brand-mark-image {
+  position: absolute;
+  width: 198.68px;
+  max-width: none;
+  height: auto;
+  left: -19.53px;
+  top: -107.88px;
+  display: block;
+}
+
+.brand-mark:link,
+.brand-mark:visited { text-decoration: none; }
+
+.utility-link,
+.utility-menu-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: rgba(23, 21, 19, 0.58);
+  text-decoration: none;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+.utility-link:hover,
+.utility-menu-item:hover {
+  color: var(--foreground);
+}
+.header-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.utility-menu {
+  position: relative;
+}
+.utility-menu summary {
+  list-style: none;
+}
+.utility-menu summary::-webkit-details-marker {
+  display: none;
+}
+.utility-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: color 180ms ease, opacity 180ms ease;
+}
+.utility-trigger:hover {
+  opacity: 0.72;
+}
+.utility-trigger:focus-visible {
+  outline: 2px solid rgba(141, 79, 61, 0.45);
+  outline-offset: 3px;
+}
+.utility-icon {
+  display: grid;
+  gap: 0.26rem;
+}
+.utility-icon-line {
+  display: block;
+  width: 1.45rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.88;
+}
+.utility-panel {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  right: 0;
+  z-index: 10;
+  display: grid;
+  min-width: 10rem;
+  padding: 0.45rem 0;
+  border: 1px solid rgba(23, 21, 19, 0.12);
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(23, 21, 19, 0.08);
+}
+.utility-panel-group {
+  display: grid;
+  gap: 0;
+}
+.utility-panel-utility {
+  margin-top: 0.25rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid rgba(23, 21, 19, 0.1);
+}
+.utility-panel .utility-link,
+.utility-panel .utility-menu-item {
+  justify-content: flex-start;
+  min-height: 0;
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  background: transparent;
+}
+.utility-panel-utility .utility-link {
+  font-size: 0.66rem;
+  letter-spacing: 0;
+  color: rgba(23, 21, 19, 0.52);
+}
+.utility-panel .utility-menu-item {
+  cursor: pointer;
+}
+.utility-panel .utility-link:hover,
+.utility-panel .utility-menu-item:hover {
+  background: rgba(23, 21, 19, 0.035);
+}
+
+.site-header .brand-mark{transition:transform .25s ease,opacity .25s ease}.muzej-logo-hidden .site-header .brand-mark{transform:translateY(-75px);opacity:0;pointer-events:none}.utility-panel{background:#fff;color:#000}.utility-panel .utility-link{color:#000}
+.focus-frame{width:min(100%,1520px);padding-inline:var(--page-x);margin-inline:auto}
+.focus-opening{padding-top:145px}.focus-masthead{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px}.focus-label,.focus-series,.focus-byline,.focus-contents,.focus-page figcaption,.focus-quotation>p,.focus-endmatter{font-family:var(--sans);font-size:12px;line-height:1.55}.focus-label{letter-spacing:.07em;text-transform:uppercase}.focus-label span{margin-left:28px}.focus-series{font-size:12px}.focus-opening h1{font:400 clamp(65px,9.45vw,151px)/.97 "plantin",Georgia,serif;letter-spacing:-.047em;margin:0 0 55px;white-space:nowrap}
+.focus-opening-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.88fr);gap:clamp(70px,9vw,150px);align-items:end}.focus-portrait{max-width:550px}.focus-portrait img{width:100%;height:auto}.focus-image-button{display:block;width:100%;padding:0;border:0;background:transparent;text-align:left;cursor:zoom-in}.focus-page figcaption{margin-top:14px;font-size:11px;line-height:1.5;max-width:560px;color:#000}.focus-introduction{padding-bottom:27px}.focus-deck{font:400 clamp(33px,3.6vw,57px)/1.08 "plantin",Georgia,serif;letter-spacing:-.018em}.focus-standfirst{font:400 clamp(22px,2.05vw,31px)/1.34 "plantin",Georgia,serif;margin-top:35px;max-width:490px}.focus-byline{margin-top:40px;font-size:11px}.focus-byline strong{font-weight:500;font-variant-caps:small-caps;letter-spacing:.04em}.focus-contents{display:flex;gap:23px;flex-wrap:wrap;margin-top:36px}.focus-contents a{text-decoration:none;border-bottom:1px solid #000;padding-bottom:4px}.focus-contents a:hover{opacity:.6}
+.focus-chapter{display:grid;grid-template-columns:1fr 1fr;gap:clamp(60px,9vw,145px);padding-top:150px}.focus-chapter-heading{align-self:start;position:sticky;top:115px}.focus-chapter-heading h2{font:400 clamp(44px,4.8vw,72px)/1.04 "plantin",Georgia,serif;letter-spacing:-.025em;margin-top:22px}.focus-prose{max-width:650px;font:400 22px/1.55 "plantin",Georgia,serif}.focus-prose p+p{margin-top:26px}.focus-prose em{font-style:italic}
+.focus-bridge{margin-top:90px;padding-right:calc(var(--page-x) + 12%)}.focus-bridge img{width:100%;height:auto}.focus-performance{margin-top:90px;max-width:1080px;padding-inline:100px}.focus-performance img{width:100%;height:auto}.focus-performance figcaption{max-width:700px}
+.focus-quotation{padding-top:125px;padding-bottom:10px}.focus-quotation blockquote{max-width:1120px;font:400 clamp(44px,5.5vw,82px)/1.1 "plantin",Georgia,serif;letter-spacing:-.025em}.focus-quotation>p{margin-top:26px;font-size:11px}
+.focus-pair{display:grid;grid-template-columns:1fr 1fr;gap:clamp(35px,7vw,110px);align-items:start;margin-top:90px}.focus-pair figure:last-child{margin-top:150px}.focus-pair img{width:100%;height:auto}.focus-closing{display:grid;grid-template-columns:1fr 1fr;gap:clamp(60px,9vw,145px);padding-top:110px}.focus-closing .focus-prose{grid-column:2}
+.focus-endmatter{display:grid;grid-template-columns:1fr 1fr;gap:clamp(60px,9vw,145px);padding-top:130px;padding-bottom:50px}.focus-endmatter h2{font:400 14px/1.4 var(--sans);margin-bottom:24px}.focus-endmatter p{font:400 13px/1.65 var(--sans)}.focus-artist-note{max-width:350px}.focus-artist-note>a{display:inline-block;margin-top:22px;font-size:12px;text-decoration:none}.focus-sources p+p{margin-top:18px}.focus-sources a{text-decoration:none}.focus-sources a:hover{text-decoration:underline}.focus-page .more-from-muzej{--foreground:#000;--ink:#000;--muted:#000}.focus-page .more-from-muzej-frame{border:0}
+.site-footer{background:#000;color:#fff;margin-top:70px;padding:65px var(--page-x)}.footer-inner{max-width:1360px;margin:auto;display:flex;justify-content:space-between;align-items:end;gap:50px}.footer-statement{font:14px/1.5 var(--sans);margin-top:25px;max-width:360px}.footer-links{display:flex;gap:24px;font:12px/1.5 var(--sans)}.footer-links a{text-decoration:none}
+.focus-lightbox{border:0;padding:50px 4vw 25px;background:#fff;color:#000;width:min(1400px,96vw);max-width:96vw;max-height:96dvh}.focus-lightbox::backdrop{background:rgba(0,0,0,.85)}.focus-lightbox figure{margin:auto;max-width:100%}.focus-lightbox img{max-height:78dvh;max-width:100%;width:auto;height:auto;object-fit:contain;margin:auto}.focus-lightbox figcaption{max-width:800px;margin:15px auto 0}.focus-lightbox-close{position:absolute;right:22px;top:16px;background:transparent;border:0;cursor:pointer;font:13px/1.4 var(--sans)}
+@media(min-width:1600px){.focus-portrait{max-width:590px}}
+@media(max-width:980px){.focus-opening-grid{gap:55px}.focus-introduction{padding-bottom:0}.focus-deck{font-size:34px}.focus-standfirst{font-size:24px}.focus-chapter,.focus-closing,.focus-endmatter{gap:50px;grid-template-columns:.75fr 1fr}.focus-prose{font-size:21px}.focus-performance{padding-inline:var(--page-x);max-width:850px}.focus-chapter-heading h2{font-size:46px}}
+@media(max-width:700px){html{scroll-padding-top:90px}.header-frame{padding-top:24px;padding-bottom:20px}.site-header .brand-mark{width:124px;height:25px}.site-header .brand-mark-image{width:153.97px;left:-15.13px;top:-83.62px}.focus-opening{padding-top:112px}.focus-masthead{margin-bottom:22px}.focus-label,.focus-series{font-size:10px}.focus-label span{margin-left:16px}.focus-opening h1{font-size:clamp(36px,10.9vw,75px);letter-spacing:-.045em;margin-bottom:32px}.focus-opening-grid{display:flex;flex-direction:column;gap:32px;align-items:stretch}.focus-portrait{max-width:none}.focus-deck{font-size:36px}.focus-standfirst{font-size:24px;margin-top:23px}.focus-byline{margin-top:25px}.focus-contents{margin-top:28px;gap:25px;font-size:12px}.focus-chapter{display:block;padding-top:90px}.focus-chapter-heading{position:static;margin-bottom:32px}.focus-chapter-heading h2{font-size:44px;margin-top:14px}.focus-chapter-heading h2 br{display:none}.focus-prose{font-size:19px;line-height:1.56}.focus-prose p+p{margin-top:24px}.focus-bridge{padding-right:var(--page-x);margin-top:46px}.focus-performance{margin-top:46px}.focus-quotation{padding-top:80px}.focus-quotation blockquote{font-size:40px}.focus-quotation>p{font-size:10px;margin-top:22px}.focus-pair{grid-template-columns:1fr;gap:42px;margin-top:46px}.focus-pair figure:last-child{margin-top:0}.focus-page figcaption{font-size:10px;margin-top:11px}.focus-closing{display:block;padding-top:60px}.focus-endmatter{grid-template-columns:1fr;gap:48px;padding-top:80px;padding-bottom:15px}.focus-endmatter p{font-size:12px}.footer-inner{align-items:start;flex-direction:column;gap:40px}.footer-links{flex-wrap:wrap}.site-footer{padding-block:48px;margin-top:35px}.focus-lightbox{padding-inline:15px}.focus-lightbox img{max-height:73dvh}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.site-header .brand-mark{transition:none}}
+
+@media(min-width:701px){.focus-opening{padding-top:120px}.focus-opening h1{margin-bottom:38px}.focus-portrait img{max-height:calc(100svh - 380px);width:auto;max-width:100%;object-fit:contain}.focus-opening-grid{align-items:end}}
