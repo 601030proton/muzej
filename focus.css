@@ -211,3 +211,14 @@ body.muzej-logo-hidden .site-header .brand-mark{transform:translate3d(0,calc(-10
 @media(max-width:760px){.site-header .header-frame{padding-top:20px;padding-bottom:18px}}
 @media(max-width:700px){.work-heading{padding-top:40px;padding-bottom:35px}}
 @media(prefers-reduced-motion:reduce){.site-header .brand-mark{transition:none;will-change:auto}body.muzej-logo-hidden .site-header .brand-mark{transform:none}}
+
+/* Sources follow the standard Muzej article ending. */
+.focus-page .sources-section{margin-top:64px;padding-top:20px;border-top:1px solid #000}
+.focus-page .sources-section>h2{margin:0 0 28px;font:400 .64rem/1.2 var(--sans);letter-spacing:0;text-transform:none;color:#000}
+.focus-page .sources-section>p{max-width:44rem;margin:0!important;padding:11px 0 13px;border-top:1px solid rgba(17,17,15,.1);font:400 .72rem/1.55 var(--sans);color:#000}
+.focus-page .sources-section>p:first-of-type{border-top:0}
+.focus-page .sources-section a{text-decoration:none}
+.focus-page .sources-section a:hover{text-decoration:underline}
+.work-image-credits{margin-top:36px;font:400 11px/1.6 var(--sans)}
+.work-image-credits summary{cursor:pointer;padding:10px 0}
+.work-image-credits>p{margin-top:18px}
