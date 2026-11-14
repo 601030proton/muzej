@@ -39,12 +39,16 @@
       image.src = w.src; image.alt = w.alt;
       image.removeAttribute('width'); image.removeAttribute('height');
       title.textContent = label(w); medium.textContent = w.medium; note.textContent = w.note;
+      document.getElementById('work-photo-credit').textContent = w.caption;
       count.textContent = number(current + 1) + ' / ' + number(works.length);
       document.querySelectorAll('.work-thumb').forEach(function (thumb) {
         if (Number(thumb.dataset.work) === current) thumb.setAttribute('aria-current', 'true');
         else thumb.removeAttribute('aria-current');
       });
       image.classList.remove('is-changing');
+      var strip = document.querySelector('.work-filmstrip');
+      var selected = document.querySelector('.work-thumb[aria-current]');
+      if (!manual && selected) strip.scrollTo({left:selected.offsetLeft-strip.offsetLeft-strip.clientWidth/2+selected.clientWidth/2,behavior:reduce.matches?'auto':'smooth'});
       if (manual) document.getElementById('work-announcement').textContent = label(w) + ', image ' + (current + 1) + ' of ' + works.length;
     }
     if (reduce.matches || manual) commit();
@@ -67,7 +71,7 @@
   indexToggle.addEventListener('click', function () {
     var open = indexPanel.hidden; indexPanel.hidden = !open;
     indexToggle.setAttribute('aria-expanded', String(open));
-    indexToggle.innerHTML = open ? 'Close index <span>×</span>' : 'All images <span>↗</span>';
+    indexToggle.innerHTML = open ? 'Close index <span>×</span>' : 'All images <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M3 3h10v10"/></svg>';
     if (open) playing = false; schedule();
   });
   function openViewer() { playing = false; paintViewer(); viewer.showModal(); schedule(); }
