@@ -1,0 +1,45 @@
+/* Canonical Muzej masthead geometry, taken directly from the homepage.
+   All article headers use this rule; individual features must not rescale or reposition the wordmark. */
+.site-header .shell.header-frame{
+  width:min(100%,1600px)!important;
+  margin-inline:auto!important;
+  padding:30px clamp(22px,5vw,80px)!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:0!important;
+}
+.site-header .brand-mark{
+  display:block!important;
+  position:relative!important;
+  overflow:hidden!important;
+  width:clamp(142px,13vw,186px)!important;
+  height:auto!important;
+  min-width:0!important;
+  max-width:none!important;
+  aspect-ratio:1237 / 244!important;
+  flex:0 0 auto!important;
+  margin:0!important;
+  padding:0!important;
+}
+.site-header .brand-mark-image{
+  position:absolute!important;
+  display:block!important;
+  max-width:none!important;
+  width:124.17%!important;
+  height:auto!important;
+  left:-12.21%!important;
+  top:-341.8%!important;
+}
+.site-header .header-tools{margin:0!important;flex:0 0 auto!important}
+.site-header .utility-trigger{
+  display:grid!important;
+  place-items:center!important;
+  width:44px!important;
+  height:44px!important;
+  min-height:0!important;
+  padding:0!important;
+}
+@media(max-width:640px){
+  .site-header .shell.header-frame{padding-block:18px!important}
+}
