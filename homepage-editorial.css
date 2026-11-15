@@ -26,3 +26,8 @@
 @media(max-width:700px){.lead{min-height:calc(100svh - 80px);padding-bottom:0}.lead-media{height:auto;aspect-ratio:4/5}.lead-media--cassette{aspect-ratio:4/3}.muzej-letter__layout{grid-template-columns:1fr;gap:24px}}
 
 .film-fallback{grid-column:2;display:flex;justify-content:flex-end;gap:20px;font-size:11px;margin-top:-20px}.film-fallback a{text-decoration:underline;text-underline-offset:4px}@media(max-width:700px){.film-fallback{grid-column:1;margin-top:-12px}}
+
+/* Galika uses the same headline typography as the conversation features. */
+.galika .feature-copy h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,3.3vw,47px);line-height:1.12;letter-spacing:-.01em}
+@media(max-width:700px){.galika .feature-copy h2{font-size:29px}}
+@media(max-width:400px){.galika .feature-copy h2{font-size:36px}}
