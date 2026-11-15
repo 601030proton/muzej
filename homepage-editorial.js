@@ -10,7 +10,7 @@
  document.querySelectorAll('.utility-panel a').forEach(a=>a.addEventListener('click',()=>menu.open=false));
  document.addEventListener('keydown',e=>{if(e.key==='Escape')menu.open=false;});
  document.addEventListener('click',e=>{if(!menu.contains(e.target))menu.open=false;});
- const guides={krusevo:{href:'krusevo.html',title:'Weekend Guide: Kruševo',src:'./Assets/Krusevo/krusevo-hero-poster.jpg',alt:'A view of Kruševo and its surrounding mountain landscape',deck:'A mountain town of steep streets, museums, and places to linger.'},prespa:{href:'prespa.html',title:'Weekend Guide: Prespa',src:'./Assets/Homepage/prespa-hero.webp',alt:'View across Lake Prespa toward the surrounding mountains',deck:'Villages, lakeside tables, and a weekend beside the water.'}};
+ const guides={krusevo:{href:'krusevo.html',title:'Kruševo',src:'./Assets/Krusevo/krusevo-hero-poster.jpg',alt:'A view of Kruševo and its surrounding mountain landscape',deck:'A mountain town of steep streets, museums, and places to linger.'},prespa:{href:'prespa.html',title:'Prespa',src:'./Assets/Homepage/prespa-hero.webp',alt:'View across Lake Prespa toward the surrounding mountains',deck:'Villages, lakeside tables, and a weekend beside the water.'}};
  function setGuideMedia(key,guide){
  const link=document.querySelector('#weekend-image-link');
  if(key==='krusevo'){
@@ -88,3 +88,4 @@
  const entries=[...document.querySelectorAll('.archive-entry')];
  document.querySelector('#archive-search').addEventListener('input',e=>{const q=e.target.value.toLocaleLowerCase().trim();let count=0;entries.forEach(li=>{li.hidden=!li.textContent.toLocaleLowerCase().includes(q);if(!li.hidden)count++;});document.querySelector('#archive-status').textContent=q?count+' '+(count===1?'story':'stories')+' found':'';});
 })();
+
