@@ -226,14 +226,18 @@ html[data-home-lead="radio"] [data-home-slot="secondary"][data-home-story="radio
 .home-focus-link:hover h2{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
 @media(max-width:640px){.home-focus{margin-block:72px}.home-focus-caption{padding-top:20px}}
 
-/* A fixed pair after the Weekend Guide: music and architecture. */
-#secondary-feature .secondary-story-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gutter); }
-.secondary-story { min-width: 0; }
-.secondary-story-media { display: block; aspect-ratio: 1; overflow: hidden; }
-.secondary-story-media img { width: 100%; height: 100%; object-fit: contain; }
-.secondary-story-copy { margin-top: 24px; }
-.secondary-story-copy h2 { font-size: clamp(30px, 3vw, 46px); line-height: 1.1; }
-.secondary-story-copy .home-feature-caption { margin-top: 12px; color: #000; }
-@media (max-width: 760px) {
-  #secondary-feature .secondary-story-pair { grid-template-columns: 1fr; gap: 64px; }
+/* One architectural plate separates the editorial pair from Catalogue. */
+.home-makedonium { margin-top: clamp(112px, 12vw, 176px); margin-bottom: clamp(112px, 12vw, 176px); }
+.makedonium-feature-layout { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 80px); align-items: end; }
+.makedonium-feature-media { display: block; overflow: hidden; aspect-ratio: 3 / 2; }
+.makedonium-feature-media img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center bottom; }
+.makedonium-feature-copy { padding-bottom: 4px; }
+.makedonium-feature-copy h2 { font-size: clamp(36px, 4vw, 58px); line-height: 1.06; letter-spacing: -.015em; }
+.makedonium-feature-copy .home-feature-caption { margin-top: 18px; color: #000; }
+.home-makedonium + #catalogue { margin-top: 0; }
+@media (max-width: 700px) {
+  .home-makedonium { margin-block: 88px; }
+  .makedonium-feature-layout { grid-template-columns: 1fr; gap: 24px; }
+  .makedonium-feature-copy h2 { font-size: 38px; }
+  .makedonium-feature-copy .home-feature-caption { margin-top: 12px; }
 }
