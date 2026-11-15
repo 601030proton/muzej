@@ -31,3 +31,14 @@
 .galika .feature-copy h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,3.3vw,47px);line-height:1.12;letter-spacing:-.01em}
 @media(max-width:700px){.galika .feature-copy h2{font-size:29px}}
 @media(max-width:400px){.galika .feature-copy h2{font-size:36px}}
+
+
+/* Longer titles use deliberate phrase breaks within the shared headline style. */
+.lead-bottom{justify-content:flex-end}
+.quality-title-line{display:block}
+.lead-stage[data-lead="quality"] h1{font-size:clamp(42px,5.4vw,82px);max-width:none}
+.lead-stage[data-lead="quality"] .quality-title-line{white-space:nowrap}
+.selected-quality .quality-title-line{white-space:nowrap}
+@media(max-width:700px){.selected-quality h3{font-size:clamp(19px,4.8vw,26px)}}
+/* Keep the shop connected to the closing story selection. */
+.shop{margin-top:clamp(64px,6vw,88px)}
