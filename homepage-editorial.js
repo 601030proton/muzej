@@ -1,3 +1,24 @@
+/* Featured stories stay in one place and advance only at the reader's request. */
+(function(){
+ var track=document.getElementById('hero-slides');
+ if(!track)return;
+ var slides=Array.from(track.children),previous=document.getElementById('hero-prev'),next=document.getElementById('hero-next'),position=document.getElementById('hero-position');
+ var current=0,scheduled=false;
+ var reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+ function update(){
+  current=Math.max(0,Math.min(slides.length-1,Math.round(track.scrollLeft/track.clientWidth)));
+  previous.disabled=current===0;next.disabled=current===slides.length-1;
+  position.textContent=String(current+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');
+  slides.forEach(function(slide,i){slide.inert=i!==current;slide.setAttribute('aria-hidden',String(i!==current));});
+ }
+ function go(index){track.scrollTo({left:Math.max(0,Math.min(slides.length-1,index))*track.clientWidth,behavior:reduced.matches?'instant':'smooth'});}
+ previous.addEventListener('click',function(){go(current-1);});next.addEventListener('click',function(){go(current+1);});
+ track.addEventListener('scroll',function(){if(!scheduled){scheduled=true;requestAnimationFrame(function(){update();scheduled=false;});}},{passive:true});
+ track.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();go(current+1);}if(e.key==='ArrowLeft'){e.preventDefault();go(current-1);}});
+ var width=track.clientWidth;
+ window.addEventListener('resize',function(){if(track.clientWidth!==width){width=track.clientWidth;track.scrollTo({left:current*width,behavior:'instant'});}});
+ update();
+})();
 /* Reader-triggered playback: no remote player is loaded before a click. */
 (function(){
   var weekend = document.getElementById('prespa-feature');

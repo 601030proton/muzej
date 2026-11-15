@@ -169,16 +169,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
-/* Rotate three lead stories, keeping each visible in only one homepage slot. */
-html:not([data-home-lead="radio"]):not([data-home-lead="quality"]) [data-home-slot="hero"]:not([data-home-story="concrete"]),
-html[data-home-lead="radio"] [data-home-slot="hero"]:not([data-home-story="radio"]),
-html[data-home-lead="quality"] [data-home-slot="hero"]:not([data-home-story="quality"]),
-html:not([data-home-lead="quality"]) [data-home-slot="selected"][data-home-story="concrete"],
-html[data-home-lead="quality"] [data-home-slot="selected"][data-home-story="quality"],
-html:not([data-home-lead="radio"]) [data-home-slot="secondary"][data-home-story="concrete"],
-html[data-home-lead="radio"] [data-home-slot="secondary"][data-home-story="radio"] { display: none; }
-.home [data-home-slot="hero"][data-home-story="quality"] img { aspect-ratio: 3 / 4; object-fit: cover; }
-.home [data-home-story="radio"] img { aspect-ratio: 3 / 4; object-fit: contain; background: #fff; }
 .home-feature-caption { margin-top: 20px; font: 400 11px/1.5 var(--sans); text-transform: uppercase; letter-spacing: .08em; }
 
 /* A focused four-story collection beneath Cinema. */
@@ -240,4 +230,41 @@ html[data-home-lead="radio"] [data-home-slot="secondary"][data-home-story="radio
   .makedonium-feature-layout { grid-template-columns: 1fr; gap: 24px; }
   .makedonium-feature-copy h2 { font-size: 38px; }
   .makedonium-feature-copy .home-feature-caption { margin-top: 12px; }
+}
+
+/* Reader-controlled lead: scroll, swipe, or use the arrows. */
+:root { --ink:#000; --muted:#000; }
+#hero-slides { display:flex; gap:0; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; padding-inline:0; width:calc(100% - 2 * var(--page-x)); max-width:calc(1600px - 2 * var(--page-x)); overscroll-behavior-x:contain; }
+#hero-slides::-webkit-scrollbar { display:none; }
+#hero-slides > article { flex:0 0 100%; min-width:0; scroll-snap-align:start; scroll-snap-stop:always; }
+#hero-slides .skopje-home-hero-media { width:100%; max-width:570px; }
+#hero-slides .skopje-home-hero-media img { width:100%; height:clamp(400px,43vw,620px); object-fit:contain; }
+#hero-slides .skopje-home-hero-copy h1 { font-size:clamp(56px,6.7vw,100px); max-width:11ch; }
+.hero-navigation { display:flex; align-items:center; justify-content:space-between; margin-top:24px; }
+.hero-position { font:400 11px/1.5 var(--sans); letter-spacing:.08em; }
+.hero-buttons { display:flex; gap:12px; }
+.hero-buttons button { display:grid; place-items:center; width:44px; height:44px; border:1px solid var(--rule); border-radius:50%; background:transparent; color:#000; font-size:22px; }
+.hero-buttons button:hover { border-color:#000; }
+.hero-buttons button:disabled { opacity:.3; cursor:default; }
+#selected-stories { margin-top:clamp(80px,8vw,120px); }
+#selected-stories .story-card-link:has(img[src*="Galika"]) { padding:12px; }
+#ohrid-feature { padding-top:clamp(112px,11vw,160px); padding-bottom:clamp(128px,12vw,176px); }
+.home-focus-feature { max-width:1040px; }
+.home-focus-caption { max-width:780px; margin-inline:auto; }
+.home-focus-intro { max-width:52ch; margin:20px auto 0; font:400 clamp(20px,2vw,25px)/1.4 var(--serif); text-wrap:pretty; }
+#traditions { margin-top:160px; }
+#traditions + #prespa-feature { margin-top:160px; }
+#books-and-film { margin-top:clamp(96px,10vw,144px); }
+@media(max-width:640px) {
+ #hero-slides { scroll-padding:0; }
+ #hero-slides > article { display:flex; flex-direction:column; align-items:stretch; gap:28px; }
+ #hero-slides .skopje-home-hero-copy { min-height:280px; }
+ #hero-slides .skopje-home-hero-copy h1 { font-size:clamp(49px,13vw,72px); max-width:12ch; }
+ #hero-slides .skopje-home-hero-media img { height:390px; height:clamp(280px,94vw,420px); }
+ .hero-navigation { margin-top:18px; }
+ #selected-stories { margin-top:72px; }
+ #ohrid-feature { padding-block:100px 112px; }
+ #traditions { margin-top:88px; }
+ #traditions + #prespa-feature { margin-top:88px; }
+ #books-and-film { margin-top:88px; }
 }
