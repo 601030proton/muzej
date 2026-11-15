@@ -1,53 +1,24 @@
-/* Featured stories stay in one place and advance only at the reader's request. */
-(function(){
- var track=document.getElementById('hero-slides');
- if(!track)return;
- var slides=Array.from(track.children),previous=document.getElementById('hero-prev'),next=document.getElementById('hero-next'),position=document.getElementById('hero-position');
- var current=0,scheduled=false;
- var reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
- function update(){
-  current=Math.max(0,Math.min(slides.length-1,Math.round(track.scrollLeft/track.clientWidth)));
-  previous.disabled=current===0;next.disabled=current===slides.length-1;
-  position.textContent=String(current+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');
-  slides.forEach(function(slide,i){slide.inert=i!==current;slide.setAttribute('aria-hidden',String(i!==current));});
+(()=>{
+ const stages=[...document.querySelectorAll('[data-lead]')];
+ let current=0;
+ function setLead(index){current=(index+stages.length)%stages.length;stages.forEach((e,i)=>e.hidden=i!==current);document.body.dataset.currentLead=stages[current].dataset.lead;document.querySelector('#lead-count').textContent='Featured story: '+stages[current].querySelector('h1').innerText.replace(/\s+/g,' ');}
+ document.querySelector('#lead-next').addEventListener('click',()=>setLead(current+1));
+ document.querySelector('#lead-previous').addEventListener('click',()=>setLead(current-1));
+ setLead(0);
+ document.querySelector('.lead').addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();setLead(current+1);}if(e.key==='ArrowLeft'){e.preventDefault();setLead(current-1);}});
+ const menu=document.querySelector('.utility-menu');
+ document.querySelectorAll('.utility-panel a').forEach(a=>a.addEventListener('click',()=>menu.open=false));
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')menu.open=false;});
+ document.addEventListener('click',e=>{if(!menu.contains(e.target))menu.open=false;});
+ const guides={krusevo:{href:'krusevo.html',title:'Weekend Guide: Kruševo',src:'./Assets/Krusevo/krusevo-hero-poster.jpg',alt:'A view of Kruševo and its surrounding mountain landscape',deck:'A mountain town of steep streets, museums, and places to linger.'},prespa:{href:'prespa.html',title:'Weekend Guide: Prespa',src:'./Assets/Homepage/prespa-hero.webp',alt:'View across Lake Prespa toward the surrounding mountains',deck:'Villages, lakeside tables, and a weekend beside the water.'}};
+ function setGuideMedia(key,guide){
+ const link=document.querySelector('#weekend-image-link');
+ if(key==='krusevo'){
+ const video=document.createElement('video');video.id='weekend-image';video.autoplay=true;video.muted=true;video.defaultMuted=true;video.loop=true;video.playsInline=true;video.preload='metadata';video.poster='./Assets/Krusevo/krusevo-hero-poster.jpg';video.src='./Assets/Krusevo/krusevo-hero.mp4';video.setAttribute('aria-label',guide.alt);link.replaceChildren(video);
+ }else{const img=document.createElement('img');img.id='weekend-image';img.src=guide.src;img.alt=guide.alt;img.loading='lazy';link.replaceChildren(img);}
  }
- function go(index){track.scrollTo({left:Math.max(0,Math.min(slides.length-1,index))*track.clientWidth,behavior:reduced.matches?'instant':'smooth'});}
- previous.addEventListener('click',function(){go(current-1);});next.addEventListener('click',function(){go(current+1);});
- track.addEventListener('scroll',function(){if(!scheduled){scheduled=true;requestAnimationFrame(function(){update();scheduled=false;});}},{passive:true});
- track.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();go(current+1);}if(e.key==='ArrowLeft'){e.preventDefault();go(current-1);}});
- var width=track.clientWidth;
- window.addEventListener('resize',function(){if(track.clientWidth!==width){width=track.clientWidth;track.scrollTo({left:current*width,behavior:'instant'});}});
- update();
-})();
-/* Reader-triggered playback: no remote player is loaded before a click. */
-(function(){
-  var weekend = document.getElementById('prespa-feature');
-  if (weekend) {
-    var isKrusevo = Math.random() < 0.5;
-    weekend.dataset.weekendGuide = isKrusevo ? 'krusevo' : 'prespa';
-    if (isKrusevo) {
-      var guideTitle = 'Weekend Guide: Kruševo';
-      var guideHref = './krusevo.html';
-      weekend.querySelector('.kinfolk-feature-title').textContent = guideTitle;
-      weekend.querySelector('.kinfolk-feature-text-link').href = guideHref;
-      var guideLink = weekend.querySelector('.kinfolk-feature-media-link');
-      guideLink.href = guideHref;
-      guideLink.setAttribute('aria-label', 'Read Weekend Guide: Kruševo');
-      var guideVideo = document.createElement('video');
-      guideVideo.className = 'kinfolk-feature-image';
-      guideVideo.autoplay = true;
-      guideVideo.muted = true;
-      guideVideo.defaultMuted = true;
-      guideVideo.loop = true;
-      guideVideo.playsInline = true;
-      guideVideo.preload = 'metadata';
-      guideVideo.poster = './Assets/Krusevo/krusevo-hero-poster.jpg';
-      guideVideo.src = './Assets/Krusevo/krusevo-hero.mp4';
-      guideVideo.setAttribute('aria-hidden', 'true');
-      guideVideo.style.cssText = 'display:block;width:100%;height:auto;aspect-ratio:5999 / 4005;object-fit:cover;';
-      guideLink.replaceChildren(guideVideo);
-    }
-  }
+ setGuideMedia('krusevo',guides.krusevo);
+ document.querySelectorAll('[data-guide]').forEach(b=>b.addEventListener('click',()=>{const guide=guides[b.dataset.guide];document.querySelectorAll('[data-guide]').forEach(e=>e.setAttribute('aria-pressed',String(e===b)));setGuideMedia(b.dataset.guide,guide);document.querySelector('#weekend-title-link').textContent=guide.title;document.querySelector('#weekend-deck').textContent=guide.deck;['#weekend-image-link','#weekend-title-link','#weekend-read-link'].forEach(s=>document.querySelector(s).href='https://muzej.co/'+guide.href);}));
   var films = [
     {
       id: 'zLmtG7q3k8s',
@@ -77,9 +48,12 @@
     var film = films[Math.floor(Math.random() * films.length)];
     var cinema = document.getElementById('now-playing');
     var poster = play.querySelector('img');
-    var fallback = cinema.querySelector('.film-fallback');
-    document.getElementById('now-playing-title').textContent = film.title;
-    cinema.querySelector('.cinema-credit').textContent = film.credit;
+    var fallback = document.createElement('p'); fallback.className='film-fallback'; cinema.querySelector('.cinema-layout').appendChild(fallback);
+    document.getElementById('cinema-title').textContent = film.title;
+    cinema.querySelector('.eyebrow').textContent='Cinema';
+    cinema.querySelector('.cinema-copy>p:not(.eyebrow)').textContent=film.credit;
+    cinema.querySelector('.small-link').href='https://www.youtube.com/watch?v='+film.id;
+    cinema.querySelector('.film-caption').textContent = film.credit;
     play.setAttribute('aria-label', 'Play ' + film.title);
     poster.src = film.poster;
     poster.alt = film.alt;
@@ -106,13 +80,11 @@
       frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
       frame.allowFullscreen = true;
       frame.referrerPolicy = 'strict-origin-when-cross-origin';
-      document.getElementById('film-screen').replaceChildren(frame);
+      cinema.querySelector('.film-screen').replaceChildren(frame);
       frame.focus();
     });
   }
-  var archive=document.querySelector('.home-archive details');
-  document.querySelectorAll('a[href="#archive"]').forEach(function(link){link.addEventListener('click',function(){if(archive)archive.open=true;});});
-  if(location.hash==='#archive'&&archive)archive.open=true;
-  var input=document.getElementById('archive-search');
-  if(input){var items=Array.from(document.querySelectorAll('.archive-list li'));input.addEventListener('input',function(){var query=input.value.trim().toLocaleLowerCase();var visible=0;items.forEach(function(item){item.hidden=!item.textContent.toLocaleLowerCase().includes(query);if(!item.hidden)visible++;});document.getElementById('archive-results').textContent=query?(visible?visible+(visible===1?' story found':' stories found'):'No stories found. Try a different name or place.'):'';});}
+ const archive=document.querySelector('#archive details');document.querySelectorAll('a[href="#archive"]').forEach(a=>a.addEventListener('click',()=>archive.open=true));if(location.hash==='#archive')archive.open=true;
+ const entries=[...document.querySelectorAll('.archive-entry')];
+ document.querySelector('#archive-search').addEventListener('input',e=>{const q=e.target.value.toLocaleLowerCase().trim();let count=0;entries.forEach(li=>{li.hidden=!li.textContent.toLocaleLowerCase().includes(q);if(!li.hidden)count++;});document.querySelector('#archive-status').textContent=q?count+' '+(count===1?'story':'stories')+' found':'';});
 })();
