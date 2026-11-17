@@ -8,11 +8,11 @@
 <meta property="og:title" content="Where to Live in Macedonia | Muzej 2026">
 <meta property="og:description" content="Ten places for year-round life across Macedonia: Muzej’s 2026 editorial ranking, with practical tradeoffs and linked sources.">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://muzej.co/Assets/Quality%20of%20Life/hero-final.png">
+<meta property="og:image" content="https://muzej.co/Assets/Quality%20of%20Life/poppy-house-hero.webp">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Where to Live in Macedonia | Muzej 2026">
 <meta name="twitter:description" content="Ten places for year-round life across Macedonia: Muzej’s 2026 editorial ranking, with practical tradeoffs and linked sources.">
-<meta name="twitter:image" content="https://muzej.co/Assets/Quality%20of%20Life/hero-final.png">
+<meta name="twitter:image" content="https://muzej.co/Assets/Quality%20of%20Life/poppy-house-hero.webp">
 <link rel="stylesheet" href="fonts.css?v=20261101-consistency-3">
 <style>
 :root {
@@ -1229,12 +1229,15 @@ main > .more-from-muzej[data-more-from-muzej] {
 @media(min-width:721px){
   /* Keep the complete opening photograph inside shorter desktop windows. */
   .muzej-feature .reference-hero .feature-media{
-    width:min(100%,calc((100svh - 220px)*.8));
+    width:min(100%,calc((100svh - 220px)*.75));
   }
   .muzej-feature .reference-hero .feature-media img{
     width:100%;height:auto;max-height:calc(100svh - 220px);
-    object-fit:contain;object-position:top left;
+    aspect-ratio:3/4;object-fit:contain;object-position:top left;
   }
+}
+@media(max-width:720px){
+  .muzej-feature .reference-hero .feature-media img{aspect-ratio:3/4}
 }
 
 /* One image frame and sticky sizing rule for every ranked city. */
@@ -1293,7 +1296,7 @@ main > .more-from-muzej[data-more-from-muzej] {
     <p class="muzej-overline"><span>Places | Macedonia</span><span>Quality of Life / 2026</span></p>
     <div class="feature-inner">
       <figure class="feature-media">
-        <img src="./Assets/Quality%20of%20Life/hero-final.png" alt="Collage of a woman holding the Macedonian flag for Muzej’s 2026 quality-of-life editorial ranking." width="1080" height="1350" decoding="async" fetchpriority="high">
+        <img src="./Assets/Quality%20of%20Life/poppy-house-hero.webp" alt="Miniature Macedonian house nestled in a red poppy against a blue sky." width="1086" height="1448" decoding="async" fetchpriority="high">
       </figure>
 
       <div class="feature-copy">
