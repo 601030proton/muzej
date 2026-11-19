@@ -119,7 +119,7 @@ main .cinema .home-story-headline {
 }
 
 .opening-story h2 {
-  font-size: clamp(21px, 2.45svh, 24px);
+  font-size: clamp(20px, 2.3svh, 23px);
   line-height: 1.09;
   letter-spacing: -.015em;
   text-wrap: pretty;
