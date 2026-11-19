@@ -1,11 +1,4 @@
 (()=>{
- const stages=[...document.querySelectorAll('[data-lead]')];
- let current=0;
- function setLead(index){current=(index+stages.length)%stages.length;stages.forEach((e,i)=>e.hidden=i!==current);document.body.dataset.currentLead=stages[current].dataset.lead;document.querySelector('#lead-count').textContent='Featured story: '+stages[current].querySelector('h1').innerText.replace(/\s+/g,' ');}
- document.querySelector('#lead-next').addEventListener('click',()=>setLead(current+1));
- document.querySelector('#lead-previous').addEventListener('click',()=>setLead(current-1));
- setLead(0);
- document.querySelector('.lead').addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();setLead(current+1);}if(e.key==='ArrowLeft'){e.preventDefault();setLead(current-1);}});
  const menu=document.querySelector('.utility-menu');
  document.querySelectorAll('.utility-panel a').forEach(a=>a.addEventListener('click',()=>menu.open=false));
  document.addEventListener('keydown',e=>{if(e.key==='Escape')menu.open=false;});
