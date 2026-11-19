@@ -110,16 +110,9 @@ main .cinema .home-story-headline {
   padding-left: var(--gap);
 }
 
-.opening-story {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) clamp(76px, 9.2vw, 132px);
-  gap: clamp(12px, 1.25vw, 18px);
-  align-items: start;
-}
-
 .opening-story + .opening-story {
-  margin-top: clamp(24px, 3vw, 42px);
-  padding-top: clamp(24px, 3vw, 42px);
+  margin-top: clamp(18px, 1.7vw, 28px);
+  padding-top: clamp(18px, 1.7vw, 28px);
   border-top: 1px solid var(--rule);
 }
 
@@ -132,13 +125,13 @@ main .cinema .home-story-headline {
 }
 
 .opening-story-deck {
+  margin-top: 9px;
   font: 400 16px/1.4 var(--serif);
 }
 
 .opening-story-image {
-  display: block;
-  width: 100%;
-  aspect-ratio: 1;
+  aspect-ratio: 16 / 9;
+  max-height: 18svh;
 }
 
 .opening-story-image img {
@@ -207,6 +200,10 @@ main .focus .home-story-headline {
     padding: 24px 0 0;
   }
 
+  .opening-story-image {
+    max-height: none;
+  }
+
   .opening-story + .opening-story {
     border: 0;
     margin: 0;
@@ -217,10 +214,6 @@ main .focus .home-story-headline {
 @media (max-width: 580px) {
   .opening-stories {
     grid-template-columns: minmax(0, 1fr);
-  }
-
-  .opening-story {
-    grid-template-columns: minmax(0, 1fr) 94px;
   }
 
   .opening-story + .opening-story {
