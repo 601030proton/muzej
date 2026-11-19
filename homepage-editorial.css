@@ -106,15 +106,15 @@ main .cinema .home-story-headline {
 }
 
 .opening-stories {
-  width: min(100%, calc(clamp(136px, 17.5svh, 184px) + var(--gap) + 1px));
+  width: min(100%, calc(clamp(118px, calc(22svh - 46px), 180px) + var(--gap) + 1px));
   justify-self: center;
   border-left: 1px solid var(--rule);
   padding-left: var(--gap);
 }
 
 .opening-story + .opening-story {
-  margin-top: clamp(18px, 1.7vw, 28px);
-  padding-top: clamp(18px, 1.7vw, 28px);
+  margin-top: clamp(16px, 1.4vw, 22px);
+  padding-top: clamp(16px, 1.4vw, 22px);
   border-top: 1px solid var(--rule);
 }
 
@@ -176,6 +176,25 @@ main .focus .home-story-headline {
   max-width: 44ch;
   text-wrap: pretty;
   margin: 16px auto 22px;
+}
+
+@media (min-width: 901px) and (max-height: 820px) {
+  .home-opening {
+    padding-block: 24px;
+  }
+
+  .opening-lead-image {
+    max-height: 51svh;
+  }
+
+  .opening-lead-copy {
+    padding-top: 24px;
+  }
+
+  .opening-story + .opening-story {
+    margin-top: 12px;
+    padding-top: 12px;
+  }
 }
 
 @media (max-width: 900px) {
