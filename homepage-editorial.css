@@ -106,6 +106,8 @@ main .cinema .home-story-headline {
 }
 
 .opening-stories {
+  width: min(100%, calc(clamp(136px, 17.5svh, 184px) + var(--gap) + 1px));
+  justify-self: center;
   border-left: 1px solid var(--rule);
   padding-left: var(--gap);
 }
@@ -117,7 +119,7 @@ main .cinema .home-story-headline {
 }
 
 .opening-story h2 {
-  font-size: clamp(24px, 2.45vw, 37px);
+  font-size: clamp(21px, 2.45svh, 24px);
   line-height: 1.09;
   letter-spacing: -.015em;
   text-wrap: pretty;
@@ -126,11 +128,8 @@ main .cinema .home-story-headline {
 
 .opening-story-deck {
   margin-top: 9px;
-  font: 400 16px/1.4 var(--serif);
-}
-
-.opening-story-image {
-  width: min(100%, clamp(100px, 14.5svh, 156px));
+  font: 400 15px/1.4 var(--serif);
+  text-wrap: pretty;
 }
 
 .opening-story-image img {
@@ -191,6 +190,7 @@ main .focus .home-story-headline {
 
   .opening-stories {
     display: grid;
+    width: min(100%, calc(420px + var(--gap)));
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--gap);
     border: 0;
@@ -198,8 +198,8 @@ main .focus .home-story-headline {
     padding: 24px 0 0;
   }
 
-  .opening-story-image {
-    width: min(100%, clamp(138px, 27svh, 210px));
+  .opening-story h2 {
+    font-size: 24px;
   }
 
   .opening-story + .opening-story {
@@ -211,6 +211,7 @@ main .focus .home-story-headline {
 
 @media (max-width: 580px) {
   .opening-stories {
+    width: min(100%, 210px);
     grid-template-columns: minmax(0, 1fr);
   }
 
