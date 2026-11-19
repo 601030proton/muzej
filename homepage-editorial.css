@@ -254,3 +254,39 @@ main .focus .home-story-headline {
     padding: 0;
   }
 }
+
+/* Keep the Traditions heading centered while the arrows sit on its right. */
+.traditions .section-heading { position: relative; }
+.traditions-controls {
+  position: absolute;
+  inset-inline-end: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 4px;
+}
+.traditions-controls[hidden],
+#traditions-stories > [hidden] { display: none; }
+.traditions-controls button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.traditions-controls button:hover { background: rgba(0, 0, 0, .045); }
+.traditions-controls button:focus-visible { outline: 1px solid currentColor; outline-offset: -2px; }
+.traditions .chorapi-card-media img { object-fit: contain; background: #fff; }
+
+@media (max-width: 500px) {
+  .traditions .section-heading:has(.traditions-controls:not([hidden])) {
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .traditions-controls { position: static; transform: none; }
+}

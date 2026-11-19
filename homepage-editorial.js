@@ -82,3 +82,31 @@
  document.querySelector('#archive-search').addEventListener('input',e=>{const q=e.target.value.toLocaleLowerCase().trim();let count=0;entries.forEach(li=>{li.hidden=!li.textContent.toLocaleLowerCase().includes(q);if(!li.hidden)count++;});document.querySelector('#archive-status').textContent=q?count+' '+(count===1?'story':'stories')+' found':'';});
 })();
 
+
+// Show four stories at a time, including on the existing two-column mobile grid.
+(() => {
+  const stories = document.querySelector('#traditions-stories');
+  const controls = document.querySelector('.traditions-controls');
+  const visibleCount = 4;
+  if (!stories || !controls || stories.children.length <= visibleCount) return;
+
+  function updateVisibleStories() {
+    Array.from(stories.children).forEach((story, index) => {
+      story.hidden = index >= visibleCount;
+    });
+  }
+
+  controls.querySelectorAll('button[data-step]').forEach((button) => {
+    button.addEventListener('click', () => {
+      if (button.dataset.step === '1') {
+        stories.append(stories.firstElementChild);
+      } else {
+        stories.prepend(stories.lastElementChild);
+      }
+      updateVisibleStories();
+    });
+  });
+
+  updateVisibleStories();
+  controls.hidden = false;
+})();
