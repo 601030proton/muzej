@@ -1,6 +1,16 @@
 (function () {
   var articles = [
     {
+      slug: "velimir-zernovski",
+      href: "velimir-zernovski.html",
+      title: "Velimir Zernovski’s Gold Pietà",
+      kicker: "Art | Focus",
+      dek: "The Macedonian pavilion at the 2026 Venice Biennale.",
+      image: "./Assets/Zernovski/pieta-installation.webp",
+      alt: "A gold-foil Pietà installed in a former Venetian chapel.",
+      position: "center center"
+    },
+    {
       slug: "vodici-in-bituse",
       href: "vodici-in-bituse.html",
       title: "Vodici in Bituše",
