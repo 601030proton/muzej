@@ -130,14 +130,12 @@ main .cinema .home-story-headline {
 }
 
 .opening-story-image {
-  aspect-ratio: 16 / 9;
-  max-height: 18svh;
+  width: min(100%, clamp(100px, 14.5svh, 156px));
 }
 
 .opening-story-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
 }
 
 .opening-lead,
@@ -201,7 +199,7 @@ main .focus .home-story-headline {
   }
 
   .opening-story-image {
-    max-height: none;
+    width: min(100%, clamp(138px, 27svh, 210px));
   }
 
   .opening-story + .opening-story {
