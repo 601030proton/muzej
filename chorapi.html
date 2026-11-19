@@ -1131,8 +1131,35 @@ body.muzej-logo-hidden .site-header .brand-mark {
 </style>
 <link rel="stylesheet" href="muzej-header.css?v=20261114-canonical-2">
 <link rel="canonical" href="https://muzej.co/chorapi.html"/>
+<style id="chorapi-portrait-frames">
+.chorapi-article .chorapi-photo-frame {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  position: relative;
+  background: #fff;
+}
+.chorapi-article .lazarki-hero .chorapi-photo-frame {
+  width: min(100%, max(285px, calc(75svh - 120px)));
+  margin-inline: auto;
+}
+.chorapi-article figure .chorapi-photo-frame > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
+}
+@media (max-width: 760px) {
+  .chorapi-article .lazarki-hero .chorapi-photo-frame {
+    width: min(100%, max(195px, 39svh));
+  }
+}
+</style>
 </head>
-<body class="ohrid-article lazarki-article rusalii-article">
+<body class="ohrid-article lazarki-article rusalii-article chorapi-article">
 <header class="site-header">
 <div class="shell header-frame">
 <a aria-label="Muzej home" class="brand-mark" href="index.html">
@@ -1173,13 +1200,13 @@ body.muzej-logo-hidden .site-header .brand-mark {
 <p class="lazarki-byline muzej-byline">Words <strong>Aleksandar Trajkovski</strong></p>
 </div>
 <div class="muzej-intro-media">
-<figure class="lazarki-hero"><img src="./Assets/Chorapi/stockings.webp" alt="Two black wool stockings with broad floral bands at the cuffs, individual motifs on the feet and red markings on the toes" width="639" height="985" fetchpriority="high"/><figcaption>Men’s stockings, Gorni Polog, late nineteenth to early twentieth century. Photograph by the Museum of Macedonia, inventory 1110.</figcaption></figure>
+<figure class="lazarki-hero"><div class="chorapi-photo-frame"><img src="./Assets/Chorapi/stockings.webp" alt="Two black wool stockings with broad floral bands at the cuffs, individual motifs on the feet and red markings on the toes" width="639" height="985" fetchpriority="high"/></div><figcaption>Men’s stockings, Gorni Polog, late nineteenth to early twentieth century. Photograph by the Museum of Macedonia, inventory 1110.</figcaption></figure>
 <p class="lazarki-deck muzej-intro-deck">Black wool, metal-wrapped thread and embroidered flowers on a pair of men’s stockings from Gorni Polog.</p>
 </div>
 </header>
 <article class="article-shell article-longform">
 <section class="content-row">
-<figure class="article-body-media"><img src="./Assets/Chorapi/servia-met.webp?v=white-background" alt="Two wool stockings with cream cuffs and red and gold patterned bands displayed on leg forms" width="600" height="620" loading="lazy" decoding="async"/><figcaption>Men’s wool and metal-thread stockings from Serfidže, Egej Macedonia, fourth quarter of the nineteenth century. <a href="https://www.metmuseum.org/art/collection/search/158354">The Metropolitan Museum of Art, 2009.300.3419a, b.</a></figcaption></figure>
+<figure class="article-body-media"><div class="chorapi-photo-frame"><img src="./Assets/Chorapi/servia-met.webp?v=white-background" alt="Two wool stockings with cream cuffs and red and gold patterned bands displayed on leg forms" width="600" height="620" loading="lazy" decoding="async"/></div><figcaption>Men’s wool and metal-thread stockings from Serfidže, Egej Macedonia, fourth quarter of the nineteenth century. <a href="https://www.metmuseum.org/art/collection/search/158354">The Metropolitan Museum of Art, 2009.300.3419a, b.</a></figcaption></figure>
 <div class="article-body-copy body-block">
 <p>Most of the length of these stockings is black. Just below the top edge, a band of blue, pink and red flowers runs through green leaves. Pale metallic borders sit above and below it. Lower down, the flowers return on the foot, and small red marks cover the toes. Between the two concentrations of pattern there is a long stretch of plain wool.</p>
 <p>The Museum of Macedonia dates the pair to the late nineteenth or early twentieth century and records it as part of men’s dress from Gorni Polog. The stockings are knitted in black wool and <i>srma</i>, a term the museum uses here for silver- and gold-wrapped thread. The flowers were worked in colored wool embroidery. The same black ground is visible through both kinds of ornament.</p>
@@ -1190,7 +1217,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
 </div>
 </section>
 <section class="content-row">
-<figure class="article-body-media"><img src="./Assets/Chorapi/ensemble.webp" alt="Museum flat lay of a striped short coat, white trousers with black edging, and the two embroidered stockings" width="702" height="985" loading="lazy" decoding="async"/><figcaption>A striped silk <i>mintan</i>, white <i>čakširi</i> and the stockings. Photograph by the Museum of Macedonia.</figcaption></figure>
+<figure class="article-body-media"><div class="chorapi-photo-frame"><img src="./Assets/Chorapi/ensemble.webp" alt="Museum flat lay of a striped short coat, white trousers with black edging, and the two embroidered stockings" width="702" height="985" loading="lazy" decoding="async"/></div><figcaption>A striped silk <i>mintan</i>, white <i>čakširi</i> and the stockings. Photograph by the Museum of Macedonia.</figcaption></figure>
 <div class="article-body-copy body-block">
 <h2 class="chapter-heading">With the rest of the clothes</h2>
 <p>The museum also photographed these stockings beside a striped silk <i>mintan</i>, a short coat, and white canvas <i>čakširi</i> edged in black braid. All three pieces are cataloged as men’s clothing from Gorni Polog. Against the trousers, the black wool is emphatic. The fine stripes of the coat and the much larger flowers of the stockings give the ensemble two very different scales of pattern. The museum layout shows the pieces together. It leaves open how much of the upper band a wearer would have exposed.</p>
