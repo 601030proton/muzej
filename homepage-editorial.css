@@ -27,12 +27,6 @@
 
 .film-fallback{grid-column:2;display:flex;justify-content:flex-end;gap:20px;font-size:11px;margin-top:-20px}.film-fallback a{text-decoration:underline;text-underline-offset:4px}@media(max-width:700px){.film-fallback{grid-column:1;margin-top:-12px}}
 
-/* Galika uses the same headline typography as the conversation features. */
-.galika .feature-copy h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,3.3vw,47px);line-height:1.12;letter-spacing:-.01em}
-@media(max-width:700px){.galika .feature-copy h2{font-size:29px}}
-@media(max-width:400px){.galika .feature-copy h2{font-size:36px}}
-
-
 /* Longer titles use deliberate phrase breaks within the shared headline style. */
 .lead-bottom{justify-content:flex-end}
 .quality-title-line{display:block}
@@ -51,3 +45,22 @@ main .section .home-section-headline{font:400 var(--home-section-size)/1.12 var(
 .lead .lead-stage h1{font:400 var(--home-lead-size)/1.02 var(--serif);letter-spacing:-.025em;max-width:none}
 @media(max-width:700px){:root{--home-story-size:24px;--home-section-size:28px;--home-lead-size:clamp(42px,11vw,68px)}}
 @media(max-width:400px){:root{--home-story-size:22px}}
+
+/* Standalone music and cinema features have room for larger titles. */
+main .galika .home-story-headline,
+main .cinema .home-story-headline {
+  font-size: clamp(38px, 3.65vw, 52px);
+  line-height: 1.04;
+  letter-spacing: -.018em;
+}
+
+.galika .feature-copy > p:not(.eyebrow) {
+  font-size: clamp(19px, 1.55vw, 22px);
+  max-width: 30ch;
+  margin-top: 14px;
+}
+
+.cinema .cinema-copy > p:not(.eyebrow) {
+  font-size: 18px;
+  margin: 15px 0 20px;
+}
