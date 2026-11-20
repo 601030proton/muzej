@@ -136,8 +136,8 @@
       title: "Borko Lazeski: Painting in Public",
       kicker: "Art | Painting",
       dek: "A railway-station fresco, a second life in Prilep, and stained glass at Makedonium.",
-      image: "./Assets/Lazeski/skopje-station-fresco.webp",
-      alt: "Lazeski’s fresco stretches above the concourse of Skopje’s old railway station.",
+      image: "./Assets/Lazeski/lazeski-ilinden-hero.webp",
+      alt: "Borko Lazeski seated beside his Ilinden 1903 mural.",
       position: "center center"
     },
     {
