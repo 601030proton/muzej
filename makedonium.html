@@ -1140,7 +1140,7 @@ body main .sources-section.muzej-sources>p{max-width:520px}
 .makedonium-feature .feature-media.makedonium-figure {
   display: flex;
   justify-content: center;
-  min-height: 0 !important;
+  min-height: calc(100svh - 90px);
   width: min(100%, max(270px, calc(75svh - 115px)));
   aspect-ratio: auto;
   margin-inline: auto;
@@ -1200,6 +1200,12 @@ body main .sources-section.muzej-sources>p{max-width:520px}
 }
 .makedonium-feature .guide-intro { grid-template-columns: 1fr; }
 .makedonium-feature .guide-prose { max-width: 36em; }
+@media (max-width: 760px) {
+  .makedonium-feature .feature-media.makedonium-figure {
+    min-height: calc(100svh - 180px);
+    justify-content: flex-start;
+  }
+}
 @media (max-width: 640px) {
   .makedonium-feature .feature-media.makedonium-figure { width: 100%; }
   .makedonium-feature .guide-image.makedonium-full-plate { max-width: 480px; }
@@ -1260,9 +1266,9 @@ body main .sources-section.muzej-sources>p{max-width:520px}
 <div class="guide-entry-grid">
 <figure class="guide-image makedonium-figure makedonium-full-plate">
 <div class="makedonium-plate">
-<button type="button" class="image-open" data-open-image style="--image-ratio: 3 / 4" data-image-caption="The approach to the dome. Photograph Marjan Petkovski, 2013. Cropped and converted to black and white." aria-label="Enlarge the ramp rising straight toward Makedonium’s entrance"><img src="./Assets/Makedonium/approach-petkovski.webp" alt="the ramp rising straight toward Makedonium’s entrance" width="900" height="1200" loading="lazy" decoding="async"></button>
+<button type="button" class="image-open" data-open-image style="--image-ratio: 3 / 4" data-image-caption="Model of the Ilinden Monument, showing the approach to the dome." aria-label="Enlarge the model of Makedonium and its approach"><img src="./Assets/Makedonium/approach-model.webp" alt="Black-and-white photograph of a model of Makedonium, with a stepped approach leading to the dome" width="1207" height="1303" loading="lazy" decoding="async"></button>
 </div>
-<figcaption><span>The approach to the dome. Photograph Marjan Petkovski, 2013. Cropped and converted to black and white. <a href="https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B0%D0%BA%D0%B5%D0%B4%D0%BE%D0%BD%D0%B8%D1%83%D0%BC_-_%D0%9A%D1%80%D1%83%D1%88%D0%B5%D0%B2%D0%BE.jpg">Original</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.</span></figcaption>
+<figcaption>Model of the Ilinden Monument, showing the approach to the dome.</figcaption>
 </figure>
 <div class="guide-copy"><div class="guide-prose">
 <p>The monument begins with broken chains. Farther along the hillside, a crypt holds fifty-eight inscribed forms modeled on the cherry-wood cannon. Two curved walls carrying Petar Mazev’s ceramic mosaics enclose an outdoor classroom. Only after these spaces does the route reach the dome.<sup class="refs"><a href="#source-1">1</a></sup></p>

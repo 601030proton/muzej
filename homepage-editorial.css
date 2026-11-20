@@ -33,9 +33,10 @@ main .section .home-section-headline{font:400 var(--home-section-size)/1.12 var(
 @media(max-width:700px){:root{--home-story-size:24px;--home-section-size:28px}}
 @media(max-width:400px){:root{--home-story-size:22px}}
 
-/* Standalone music and cinema features have room for larger titles. */
+/* Standalone features have room for larger titles. */
 main .galika .home-story-headline,
-main .cinema .home-story-headline {
+main .cinema .home-story-headline,
+main .makedonium .home-story-headline {
   font-size: clamp(38px, 3.65vw, 52px);
   line-height: 1.04;
   letter-spacing: -.018em;
@@ -279,7 +280,8 @@ main .focus .home-story-headline {
 }
 .traditions-controls button:hover { background: rgba(0, 0, 0, .045); }
 .traditions-controls button:focus-visible { outline: 1px solid currentColor; outline-offset: -2px; }
-.traditions .chorapi-card-media img { object-fit: contain; background: #fff; }
+.traditions .chorapi-card-media { background: #cfb39c; isolation: isolate; }
+.traditions .chorapi-card-media img { object-fit: contain; mix-blend-mode: multiply; }
 
 @media (max-width: 500px) {
   .traditions .section-heading:has(.traditions-controls:not([hidden])) {

@@ -351,7 +351,8 @@
       return item !== slug;
     }).map(function (item) {
       return candidates.find(function (article) { return article.slug === item; });
-    }).filter(Boolean) : seededShuffle(candidates, "more-from-muzej:" + slug).slice(0, 3);
+    }).filter(Boolean) : seededShuffle(candidates, "more-from-muzej:" + slug);
+    related = related.slice(0, 3);
 
     section.className = "more-from-muzej";
     section.setAttribute("aria-labelledby", "more-from-muzej-title");
