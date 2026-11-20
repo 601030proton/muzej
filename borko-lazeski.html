@@ -52,7 +52,14 @@ a { color: inherit; text-underline-offset: .16em; }
 .profile-rail { position: sticky; top: 100px; }
 .profile-rail img { display: block; width: 100%; height: auto; max-height: calc(100svh - 165px); object-fit: contain; object-position: left top; }
 .profile-rail figcaption { max-width: 48ch; margin-top: 12px; }
-.profile-row-text .profile-prose { grid-column: 2; }
+.profile-wide, .profile-studies { max-width: 1120px; margin: clamp(60px, 8vw, 110px) auto; }
+.profile-wide img, .profile-studies img { display: block; width: 100%; height: auto; }
+.profile-wide figcaption, .profile-studies figcaption { margin-top: 12px; }
+.profile-study-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 2vw, 28px); }
+.profile-study-grid img { aspect-ratio: 3 / 4; object-fit: contain; background: #f7f4ef; }
+@media (max-width: 560px) {
+  .profile-study-grid { grid-template-columns: minmax(0, 1fr); }
+}
 .profile-prose { min-width: 0; font: 400 clamp(21px, 1.65vw, 25px)/1.46 var(--muzej-body-family); }
 .profile-section-title { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .profile-prose p { margin: 0 0 1.25em; }
@@ -74,7 +81,6 @@ body main.profile-main > .sources-section.muzej-sources { margin-left: calc((100
   .profile-prose { font-size: 22px; }
   .profile-rail { position: static; }
   .profile-rail img { max-height: 65svh; }
-  .profile-row-text .profile-prose { grid-column: auto; }
   body main.profile-main > .sources-section.muzej-sources { margin-left: 0; max-width: 520px; }
   .footer-inner { align-items: flex-start; flex-direction: column; }
 }
@@ -142,14 +148,33 @@ body main.profile-main > .sources-section.muzej-sources { margin-left: calc((100
       </div>
     </section>
 
-    <section class="profile-row profile-row-text" aria-labelledby="public-room">
+    <figure class="profile-wide">
+      <img src="./Assets/Lazeski/ilinden-artist.webp" width="1223" height="864" alt="Lazeski sits beside a mural filled with fighters and horses, with painting supplies at his feet." loading="lazy" decoding="async">
+      <figcaption>Borko Lazeski beside <i>Ilinden 1903</i>. AI-assisted color image.</figcaption>
+    </figure>
+
+    <section class="profile-row" aria-labelledby="public-room">
+      <figure class="profile-rail">
+        <img src="./Assets/Lazeski/ilinden-mural.webp" width="1357" height="768" alt="Fighters gather around a rocky outcrop under a banner in Lazeski’s Ilinden composition." loading="lazy" decoding="async">
+        <figcaption><i>Ilinden 1903</i>. AI-assisted reproduction.</figcaption>
+      </figure>
       <div class="profile-prose">
         <h2 class="profile-section-title" id="public-room">A room people already used</h2>
         <p>Lazeski was born in Prilep in 1917. He studied in Belgrade and completed his training in Sofia in 1943. After the war, he went to Paris, where he studied fresco, mosaic, and stained glass and took classes with the Cubist painter André Lhote. Back in Skopje, he became the first manager and organizer of what is now the National Gallery of Macedonia, alongside a founding generation that included <a href="./martinoski.html">Nikola Martinoski</a> and Lazar Ličenoski.</p>
+        <p>Before the railway commission, Lazeski painted <i>Ilinden 1903</i> for the Army Hall in Skopje. The studies below let you see him working out the poses one at a time. Raised arms, a turning torso, and the bend of a leg had to read on their own before they could carry the eye through a crowded wall.</p>
         <p>At the station, he was painting for people occupied with departures, bags, and tickets. He spoke of fresco as a medium that belonged to everyone around it. The choice of a concourse made that idea practical. A person could encounter a large modernist painting on an ordinary journey through town.</p>
         <p>The 1963 earthquake destroyed the original fresco. Decades later, Lazeski and his assistants returned to the composition at the Marko Cepenkov Cultural Center in Prilep. The new building gave them two lobbies, so the long sequence had to be divided. The Prilep version was unveiled in 1993, after his death. Its arrangement records a second encounter between the painting and a building, with a different walk from one scene to the next.</p>
       </div>
     </section>
+
+    <figure class="profile-studies">
+      <div class="profile-study-grid">
+        <img src="./Assets/Lazeski/ilinden-study-01.webp" width="960" height="1202" alt="Pencil study of a figure with both forearms raised." loading="lazy" decoding="async">
+        <img src="./Assets/Lazeski/ilinden-study-02.webp" width="960" height="1202" alt="Pencil study of a turning figure with head and boot sketches in the margins." loading="lazy" decoding="async">
+        <img src="./Assets/Lazeski/ilinden-study-03.webp" width="954" height="1198" alt="Pencil study of a figure leaning forward with an arm raised and a separate study of a hand." loading="lazy" decoding="async">
+      </div>
+      <figcaption>Three preparatory studies for <i>Ilinden 1903</i>. The <a href="https://fliphtml5.com/cwijv/ufqc/">Museum of the Macedonian Struggle</a> exhibited studies for the mural in 2024.</figcaption>
+    </figure>
 
     <section class="profile-row" aria-labelledby="glass">
       <figure class="profile-rail">
