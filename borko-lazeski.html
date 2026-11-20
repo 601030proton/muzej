@@ -24,6 +24,7 @@
 :root {
   --page-x: clamp(18px, 5.2vw, 72px);
   --profile-gap: clamp(36px, 6vw, 96px);
+  --profile-sticky-top: 100px;
   --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 * { box-sizing: border-box; }
@@ -49,14 +50,14 @@ a { color: inherit; text-underline-offset: .16em; }
 .profile-deck { font: 400 clamp(26px, 2.6vw, 38px)/1.2 var(--muzej-body-family); }
 .profile-main > article { margin-top: 120px; }
 .profile-row + .profile-row { margin-top: 100px; }
-.profile-rail { position: sticky; top: 100px; }
-.profile-rail img { display: block; width: 100%; height: auto; max-height: calc(100svh - 165px); object-fit: contain; object-position: left top; }
+.profile-rail { position: sticky; top: var(--profile-sticky-top); width: min(100%, calc((100svh - var(--profile-sticky-top) - 76px) * .75)); }
+.profile-rail img, .profile-portrait img, .profile-studies img { display: block; width: 100%; height: auto; }
 .profile-rail figcaption { max-width: 48ch; margin-top: 12px; }
-.profile-wide, .profile-studies { max-width: 1120px; margin: clamp(60px, 8vw, 110px) auto; }
-.profile-wide img, .profile-studies img { display: block; width: 100%; height: auto; }
-.profile-wide figcaption, .profile-studies figcaption { margin-top: 12px; }
+.profile-portrait, .profile-studies { margin: clamp(60px, 8vw, 110px) auto; }
+.profile-portrait { max-width: 440px; }
+.profile-studies { max-width: 1120px; }
+.profile-portrait figcaption, .profile-studies figcaption { margin-top: 12px; }
 .profile-study-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 2vw, 28px); }
-.profile-study-grid img { aspect-ratio: 3 / 4; object-fit: contain; background: #f7f4ef; }
 @media (max-width: 560px) {
   .profile-study-grid { grid-template-columns: minmax(0, 1fr); }
 }
@@ -64,7 +65,7 @@ a { color: inherit; text-underline-offset: .16em; }
 .profile-section-title { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .profile-prose p { margin: 0 0 1.25em; }
 .profile-prose p:last-child { margin-bottom: 0; }
-body main.profile-main > .sources-section.muzej-sources { margin-left: calc((100% + var(--profile-gap)) / 2); max-width: min(520px, calc((100% - var(--profile-gap)) / 2)); }
+.profile-closing-copy { min-width: 0; }
 .site-footer { background: #111; color: #fff; padding: 60px var(--page-x); font: 400 13px/1.5 var(--sans); }
 .footer-inner { max-width: 1360px; margin: auto; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; }
 .footer-statement { margin: 16px 0 0; }
@@ -79,9 +80,7 @@ body main.profile-main > .sources-section.muzej-sources { margin-left: calc((100
   .profile-main > article { margin-top: 64px; }
   .profile-row + .profile-row { margin-top: 68px; }
   .profile-prose { font-size: 22px; }
-  .profile-rail { position: static; }
-  .profile-rail img { max-height: 65svh; }
-  body main.profile-main > .sources-section.muzej-sources { margin-left: 0; max-width: 520px; }
+  .profile-rail { position: static; width: 100%; }
   .footer-inner { align-items: flex-start; flex-direction: column; }
 }
 </style>
@@ -137,8 +136,8 @@ body main.profile-main > .sources-section.muzej-sources { margin-left: calc((100
   <article aria-label="Borko Lazeski: Painting in Public">
     <section class="profile-row" aria-labelledby="station-wall">
       <figure class="profile-rail">
-        <img src="./Assets/Lazeski/prilep-fresco-detail.webp" width="1458" height="732" alt="Angular red horses and blue-green figures overlap in a battle scene in the Prilep version of the fresco." loading="lazy" decoding="async">
-        <figcaption>Battle scene from the later version of <i>The National Liberation War</i>, Marko Cepenkov Cultural Center, Prilep. Photograph via <a href="https://www.spomenikdatabase.org/borko-lazeski">Spomenik Database</a>.</figcaption>
+        <img src="./Assets/Lazeski/ilinden-mural-left.webp" width="576" height="768" alt="Fighters raise rifles beneath a red banner in the left detail of Lazeski’s Ilinden mural." loading="lazy" decoding="async">
+        <figcaption><i>Ilinden 1903</i>, left detail of the mural shown again below.</figcaption>
       </figure>
       <div class="profile-prose">
         <h2 class="profile-section-title" id="station-wall">The station wall</h2>
@@ -148,15 +147,10 @@ body main.profile-main > .sources-section.muzej-sources { margin-left: calc((100
       </div>
     </section>
 
-    <figure class="profile-wide">
-      <img src="./Assets/Lazeski/ilinden-artist.webp" width="1223" height="864" alt="Lazeski sits beside a mural filled with fighters and horses, with painting supplies at his feet." loading="lazy" decoding="async">
-      <figcaption>Borko Lazeski beside <i>Ilinden 1903</i>. AI-assisted color image.</figcaption>
-    </figure>
-
     <section class="profile-row" aria-labelledby="public-room">
       <figure class="profile-rail">
-        <img src="./Assets/Lazeski/ilinden-mural.webp" width="1357" height="768" alt="Fighters gather around a rocky outcrop under a banner in Lazeski’s Ilinden composition." loading="lazy" decoding="async">
-        <figcaption><i>Ilinden 1903</i>. AI-assisted reproduction.</figcaption>
+        <img src="./Assets/Lazeski/ilinden-mural-right.webp" width="576" height="768" alt="Mounted and foot soldiers converge beside a rocky outcrop in the right detail of Lazeski’s Ilinden mural." loading="lazy" decoding="async">
+        <figcaption><i>Ilinden 1903</i>, right detail of the same mural.</figcaption>
       </figure>
       <div class="profile-prose">
         <h2 class="profile-section-title" id="public-room">A room people already used</h2>
@@ -167,11 +161,16 @@ body main.profile-main > .sources-section.muzej-sources { margin-left: calc((100
       </div>
     </section>
 
+    <figure class="profile-portrait">
+      <img src="./Assets/Lazeski/ilinden-artist-portrait.webp" width="648" height="864" alt="Lazeski, seated beside the mural, looks back toward the painted fighters." loading="lazy" decoding="async">
+      <figcaption>Borko Lazeski beside <i>Ilinden 1903</i>. Colorized photograph.</figcaption>
+    </figure>
+
     <figure class="profile-studies">
       <div class="profile-study-grid">
-        <img src="./Assets/Lazeski/ilinden-study-01.webp" width="960" height="1202" alt="Pencil study of a figure with both forearms raised." loading="lazy" decoding="async">
-        <img src="./Assets/Lazeski/ilinden-study-02.webp" width="960" height="1202" alt="Pencil study of a turning figure with head and boot sketches in the margins." loading="lazy" decoding="async">
-        <img src="./Assets/Lazeski/ilinden-study-03.webp" width="954" height="1198" alt="Pencil study of a figure leaning forward with an arm raised and a separate study of a hand." loading="lazy" decoding="async">
+        <img src="./Assets/Lazeski/ilinden-study-01-white.webp" width="960" height="1280" alt="Pencil study of a figure with both forearms raised." loading="lazy" decoding="async">
+        <img src="./Assets/Lazeski/ilinden-study-02-white.webp" width="960" height="1280" alt="Pencil study of a turning figure with head and boot sketches in the margins." loading="lazy" decoding="async">
+        <img src="./Assets/Lazeski/ilinden-study-03-white.webp" width="960" height="1280" alt="Pencil study of a figure leaning forward with an arm raised and a separate study of a hand." loading="lazy" decoding="async">
       </div>
       <figcaption>Three preparatory studies for <i>Ilinden 1903</i>. The <a href="https://fliphtml5.com/cwijv/ufqc/">Museum of the Macedonian Struggle</a> exhibited studies for the mural in 2024.</figcaption>
     </figure>
@@ -179,26 +178,28 @@ body main.profile-main > .sources-section.muzej-sources { margin-left: calc((100
     <section class="profile-row" aria-labelledby="glass">
       <figure class="profile-rail">
         <img src="./Assets/Makedonium/lazeski-stained-glass.webp" width="900" height="1200" alt="Green, blue, and gold light from Lazeski’s stained glass falls across a wall inside Makedonium." loading="lazy" decoding="async">
-        <figcaption>Light from Lazeski’s stained glass inside Makedonium, Kruševo. Adobe Stock.</figcaption>
+        <figcaption>Light from Lazeski’s stained glass inside Makedonium, Kruševo.</figcaption>
       </figure>
-      <div class="profile-prose">
-        <h2 class="profile-section-title" id="glass">Color after the wall</h2>
-        <p>Inside <a href="./makedonium.html">Makedonium in Kruševo</a>, the color travels farther. Lazeski made stained glass for the monument, which opened in 1974. The windows are sunk into the ends of projecting concrete forms. From inside, you see the glass at the far end of a deep opening and then see its greens, blues, and yellows again on the concrete around you.</p>
-        <p>Architecture kept providing him with different surfaces and different audiences. He taught at the academy of fine arts in Baghdad and later made murals in Mexico City, including a work on the Non-Aligned Movement in 1983. In Kruševo in July 2026, conservators examined Lazeski’s glass and its metal supports as part of preparations for its protection and restoration.</p>
-        <p>In the station photograph, the architecture determines how much of the fresco a person can see at once. In Kruševo, it determines where the color falls as the light changes. Both works ask for something a reproduction can only suggest. You have to move through the room to see what the artist did with it.</p>
+      <div class="profile-closing-copy">
+        <div class="profile-prose">
+          <h2 class="profile-section-title" id="glass">Color after the wall</h2>
+          <p>Inside <a href="./makedonium.html">Makedonium in Kruševo</a>, the color travels farther. Lazeski made stained glass for the monument, which opened in 1974. The windows are sunk into the ends of projecting concrete forms. From inside, you see the glass at the far end of a deep opening and then see its greens, blues, and yellows again on the concrete around you.</p>
+          <p>Architecture kept providing him with different surfaces and different audiences. He taught at the academy of fine arts in Baghdad and later made murals in Mexico City, including a work on the Non-Aligned Movement in 1983. In Kruševo in July 2026, conservators examined Lazeski’s glass and its metal supports as part of preparations for its protection and restoration.</p>
+          <p>In the station photograph, the architecture determines how much of the fresco a person can see at once. In Kruševo, it determines where the color falls as the light changes. Both works ask for something a reproduction can only suggest. You have to move through the room to see what the artist did with it.</p>
+        </div>
+
+        <section class="sources-section muzej-sources" aria-labelledby="sources-title">
+          <h2 class="section-heading" id="sources-title">Sources</h2>
+          <p><a href="https://arhiva.zaum.mk/wp-content/uploads/2022/03/1979_12_05_Borko-Lazeski_Sonja-Abadzieva_OCR.pdf">Sonja Abadžieva Dimitrova. <i>Borko Lazeski</i>, 1979.</a> Monograph, including the station commission, preparatory drawings, and fresco technique.</p>
+          <p><a href="https://nationalgallery.mk/history/?lang=en">National Gallery of Macedonia. Institutional history.</a> Lazeski’s role in establishing the gallery.</p>
+          <p><a href="https://ibrahimicollection.com/node/2377">Ibrahimi Collection. Borko Lazeski chronology.</a> Training, wartime activity, and exhibition history.</p>
+          <p><a href="https://www.spomenikdatabase.org/skopje">Spomenik Database. Skopje’s railway station mural.</a> Archival photographs, the 1963 earthquake, and the Prilep version. The opening photograph shows Lazeski’s <i>The National Liberation War</i> in the railway station, completed in 1956.</p>
+          <p><a href="https://mau.rs/images/Exhibitions/_TouringExhibitions/Ovo_nije_rat_DKSG_Skoplje/Which_side_are_you_on.pdf"><i>Which Side Are You On?</i> Exhibition booklet.</a> Teaching in Baghdad and mural commissions in Mexico City.</p>
+          <p><a href="https://heritage.gov.mk/2026/07/24/%D1%81%D1%82%D1%80%D1%83%D1%87%D0%B5%D0%BD-%D1%83%D0%B2%D0%B8%D0%B4-%D0%BD%D0%B0-%D0%B2%D0%B8%D1%82%D1%80%D0%B0%D0%B6%D0%B8%D1%82%D0%B5-%D0%BE%D0%B4-%D0%B1%D0%BE%D1%80%D0%BA%D0%BE-%D0%BB%D0%B0%D0%B7/nggallery/image/002_krush/">National Conservation Centre. Inspection of Lazeski’s stained glass at Makedonium, July 2026.</a></p>
+        </section>
       </div>
     </section>
   </article>
-
-  <section class="sources-section muzej-sources" aria-labelledby="sources-title">
-    <h2 class="section-heading" id="sources-title">Sources</h2>
-    <p><a href="https://arhiva.zaum.mk/wp-content/uploads/2022/03/1979_12_05_Borko-Lazeski_Sonja-Abadzieva_OCR.pdf">Sonja Abadžieva Dimitrova. <i>Borko Lazeski</i>, 1979.</a> Monograph, including the station commission, preparatory drawings, and fresco technique.</p>
-    <p><a href="https://nationalgallery.mk/history/?lang=en">National Gallery of Macedonia. Institutional history.</a> Lazeski’s role in establishing the gallery.</p>
-    <p><a href="https://ibrahimicollection.com/node/2377">Ibrahimi Collection. Borko Lazeski chronology.</a> Training, wartime activity, and exhibition history.</p>
-    <p><a href="https://www.spomenikdatabase.org/skopje">Spomenik Database. Skopje’s railway station mural.</a> Archival photographs, the 1963 earthquake, and the Prilep version. The opening photograph shows Lazeski’s <i>The National Liberation War</i> in the railway station, completed in 1956.</p>
-    <p><a href="https://mau.rs/images/Exhibitions/_TouringExhibitions/Ovo_nije_rat_DKSG_Skoplje/Which_side_are_you_on.pdf"><i>Which Side Are You On?</i> Exhibition booklet.</a> Teaching in Baghdad and mural commissions in Mexico City.</p>
-    <p><a href="https://heritage.gov.mk/2026/07/24/%D1%81%D1%82%D1%80%D1%83%D1%87%D0%B5%D0%BD-%D1%83%D0%B2%D0%B8%D0%B4-%D0%BD%D0%B0-%D0%B2%D0%B8%D1%82%D1%80%D0%B0%D0%B6%D0%B8%D1%82%D0%B5-%D0%BE%D0%B4-%D0%B1%D0%BE%D1%80%D0%BA%D0%BE-%D0%BB%D0%B0%D0%B7/nggallery/image/002_krush/">National Conservation Centre. Inspection of Lazeski’s stained glass at Makedonium, July 2026.</a></p>
-  </section>
   <section class="more-from-muzej" data-more-from-muzej aria-labelledby="more-from-muzej-title"></section>
 </main>
 <footer class="site-footer muzej-footer">
