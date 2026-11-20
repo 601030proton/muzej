@@ -75,10 +75,9 @@ main .cinema .home-story-headline {
 
 .opening-lead-image {
   display: block;
+  width: 100%;
   aspect-ratio: 3 / 2;
-  max-height: 57svh;
-  margin-inline: auto;
-  overflow: hidden;
+  max-height: min(48svh, 460px);
   background: #fff;
 }
 
@@ -86,8 +85,7 @@ main .cinema .home-story-headline {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  /* Trim the white canvas around the cassette frames. */
-  scale: 1.22;
+  object-position: center;
 }
 
 .opening-lead-copy {
@@ -185,7 +183,7 @@ main .focus .home-story-headline {
   }
 
   .opening-lead-image {
-    max-height: 51svh;
+    max-height: 45svh;
   }
 
   .opening-lead-copy {
@@ -205,7 +203,7 @@ main .focus .home-story-headline {
   }
 
   .opening-lead-image {
-    max-height: 50svh;
+    max-height: 40svh;
   }
 
   .opening-stories {
