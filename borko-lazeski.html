@@ -10,7 +10,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Borko Lazeski: Painting in Public | Muzej">
 <meta property="og:description" content="Borko Lazeski’s lost Skopje railway-station fresco, its second life in Prilep, and the color of his stained glass at Makedonium.">
-<meta property="og:image" content="https://muzej.co/Assets/Lazeski/skopje-station-fresco-colorized.webp">
+<meta property="og:image" content="https://muzej.co/Assets/Lazeski/skopje-station-fresco-colorized-sharp.webp">
 <meta property="og:url" content="https://muzej.co/borko-lazeski.html">
 <link rel="stylesheet" href="fonts.css?v=20261101-consistency-3">
 <link rel="stylesheet" href="bylines.css?v=20261107">
@@ -51,12 +51,11 @@ a { color: inherit; text-underline-offset: .16em; }
 .profile-main > article { margin-top: 120px; }
 .profile-row + .profile-row { margin-top: 100px; }
 .profile-rail { position: sticky; top: var(--profile-sticky-top); width: min(100%, calc((100svh - var(--profile-sticky-top) - 76px) * .75)); }
-.profile-rail img, .profile-portrait img, .profile-studies img { display: block; width: 100%; height: auto; }
+.profile-rail--archive { width: 100%; }
+.profile-rail img, .profile-studies img { display: block; width: 100%; height: auto; }
 .profile-rail figcaption { max-width: 48ch; margin-top: 12px; }
-.profile-portrait, .profile-studies { margin: clamp(60px, 8vw, 110px) auto; }
-.profile-portrait { max-width: 440px; }
-.profile-studies { max-width: 1120px; }
-.profile-portrait figcaption, .profile-studies figcaption { margin-top: 12px; }
+.profile-studies { max-width: 1120px; margin: clamp(60px, 8vw, 110px) auto; }
+.profile-studies figcaption { margin-top: 12px; }
 .profile-study-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 2vw, 28px); }
 @media (max-width: 560px) {
   .profile-study-grid { grid-template-columns: minmax(0, 1fr); }
@@ -127,7 +126,7 @@ a { color: inherit; text-underline-offset: .16em; }
     </div>
     <div class="muzej-intro-media">
       <figure class="profile-hero">
-        <img src="./Assets/Lazeski/skopje-station-fresco-colorized.webp" width="1398" height="1864" alt="Colorized archival photograph of passengers crossing the concourse beneath Lazeski’s fresco in Skopje’s old railway station." fetchpriority="high" decoding="async">
+        <img src="./Assets/Lazeski/skopje-station-fresco-colorized-sharp.webp" width="1398" height="1864" alt="Colorized archival photograph of passengers crossing the concourse beneath Lazeski’s fresco in Skopje’s old railway station." fetchpriority="high" decoding="async">
       </figure>
       <p class="profile-deck muzej-intro-deck">From Skopje’s lost railway fresco to the glass at Makedonium.</p>
     </div>
@@ -148,9 +147,9 @@ a { color: inherit; text-underline-offset: .16em; }
     </section>
 
     <section class="profile-row" aria-labelledby="public-room">
-      <figure class="profile-rail">
-        <img src="./Assets/Lazeski/ilinden-mural-right.webp" width="576" height="768" alt="Mounted and foot soldiers converge beside a rocky outcrop in the right detail of Lazeski’s Ilinden mural." loading="lazy" decoding="async">
-        <figcaption><i>Ilinden 1903</i>, right detail of the same mural.</figcaption>
+      <figure class="profile-rail profile-rail--archive">
+        <img src="./Assets/Lazeski/ilinden-artist.webp" width="1223" height="864" alt="Lazeski sits beside a mural filled with fighters and horses, with painting supplies at his feet." loading="lazy" decoding="async">
+        <figcaption>Borko Lazeski beside <i>Ilinden 1903</i>. Colorized photograph.</figcaption>
       </figure>
       <div class="profile-prose">
         <h2 class="profile-section-title" id="public-room">A room people already used</h2>
@@ -160,11 +159,6 @@ a { color: inherit; text-underline-offset: .16em; }
         <p>The 1963 earthquake destroyed the original fresco. Decades later, Lazeski and his assistants returned to the composition at the Marko Cepenkov Cultural Center in Prilep. The new building gave them two lobbies, so the long sequence had to be divided. The Prilep version was unveiled in 1993, after his death. Its arrangement records a second encounter between the painting and a building, with a different walk from one scene to the next.</p>
       </div>
     </section>
-
-    <figure class="profile-portrait">
-      <img src="./Assets/Lazeski/ilinden-artist-portrait.webp" width="648" height="864" alt="Lazeski, seated beside the mural, looks back toward the painted fighters." loading="lazy" decoding="async">
-      <figcaption>Borko Lazeski beside <i>Ilinden 1903</i>. Colorized photograph.</figcaption>
-    </figure>
 
     <figure class="profile-studies">
       <div class="profile-study-grid">
@@ -177,8 +171,8 @@ a { color: inherit; text-underline-offset: .16em; }
 
     <section class="profile-row" aria-labelledby="glass">
       <figure class="profile-rail">
-        <img src="./Assets/Makedonium/lazeski-stained-glass.webp" width="900" height="1200" alt="Green, blue, and gold light from Lazeski’s stained glass falls across a wall inside Makedonium." loading="lazy" decoding="async">
-        <figcaption>Light from Lazeski’s stained glass inside Makedonium, Kruševo.</figcaption>
+        <img src="./Assets/Lazeski/ilinden-mural-right.webp" width="576" height="768" alt="Mounted and foot soldiers converge beside a rocky outcrop in the right detail of Lazeski’s Ilinden mural." loading="lazy" decoding="async">
+        <figcaption><i>Ilinden 1903</i>, right detail of the same mural.</figcaption>
       </figure>
       <div class="profile-closing-copy">
         <div class="profile-prose">
