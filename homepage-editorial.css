@@ -257,7 +257,7 @@ main .focus .home-story-headline {
 
 /* Keep the Traditions heading centered while the arrows sit on its right. */
 .traditions .section-heading { position: relative; }
-.traditions-controls {
+:is(.traditions-controls, .catalogue-controls) {
   position: absolute;
   inset-inline-end: 0;
   top: 50%;
@@ -265,9 +265,9 @@ main .focus .home-story-headline {
   display: flex;
   gap: 4px;
 }
-.traditions-controls[hidden],
-#traditions-stories > [hidden] { display: none; }
-.traditions-controls button {
+:is(.traditions-controls, .catalogue-controls)[hidden],
+:is(#traditions-stories, #catalogue-stories) > [hidden] { display: none; }
+:is(.traditions-controls, .catalogue-controls) button {
   display: grid;
   place-items: center;
   width: 44px;
@@ -278,10 +278,13 @@ main .focus .home-story-headline {
   color: inherit;
   cursor: pointer;
 }
-.traditions-controls button:hover { background: rgba(0, 0, 0, .045); }
-.traditions-controls button:focus-visible { outline: 1px solid currentColor; outline-offset: -2px; }
+:is(.traditions-controls, .catalogue-controls) button:hover { background: rgba(0, 0, 0, .045); }
+:is(.traditions-controls, .catalogue-controls) button:focus-visible { outline: 1px solid currentColor; outline-offset: -2px; }
 .traditions .chorapi-card-media { background: #cfb39c; isolation: isolate; }
 .traditions .chorapi-card-media img { object-fit: contain; mix-blend-mode: multiply; }
+
+.catalogue-controls { position: static; transform: none; }
+.catalogue .section-heading { align-items: center; }
 
 @media (max-width: 500px) {
   .traditions .section-heading:has(.traditions-controls:not([hidden])) {
@@ -289,7 +292,7 @@ main .focus .home-story-headline {
     align-items: center;
     gap: 12px;
   }
-  .traditions-controls { position: static; transform: none; }
+  :is(.traditions-controls, .catalogue-controls) { position: static; transform: none; }
 }
 
 .focus-header {
@@ -342,6 +345,11 @@ main .focus .home-story-headline {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+#focus #pieta-focus .focus-media img {
+  object-fit: cover;
+  object-position: center 18%;
 }
 
 #focus .focus-copy {

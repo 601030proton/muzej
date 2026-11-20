@@ -7,8 +7,8 @@
       kicker: "Art | Focus",
       dek: "The Macedonian artist presented Pietà in the Emergency Blankets at the 2026 Biennale.",
       image: "./Assets/Zernovski/pieta-installation.webp",
-      alt: "A gold-foil Pietà installed in a former Venetian chapel.",
-      position: "center center"
+      alt: "Zernovski’s figures wrapped in gold emergency blankets at the former Buon Pastore chapel in Venice.",
+      position: "center 18%"
     },
     {
       slug: "vodici-in-bituse",
@@ -119,6 +119,16 @@
       image: "./Assets/Marko%20Interview/Text%20and%20Photos/Images/Micov-Color-Photo_Rachel_Malehorn-17.jpg",
       alt: "Marko Micov ballet portrait.",
       position: "center top"
+    },
+    {
+      slug: "borko-lazeski",
+      href: "borko-lazeski.html",
+      title: "Borko Lazeski: Painting in Public",
+      kicker: "Art | Painting",
+      dek: "A railway-station fresco, a second life in Prilep, and stained glass at Makedonium.",
+      image: "./Assets/Lazeski/skopje-station-fresco.webp",
+      alt: "Lazeski’s fresco stretches above the concourse of Skopje’s old railway station.",
+      position: "center center"
     },
     {
       slug: "martinoski",

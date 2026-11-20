@@ -83,11 +83,8 @@
 })();
 
 
-// Show four stories at a time, including on the existing two-column mobile grid.
-(() => {
-  const stories = document.querySelector('#traditions-stories');
-  const controls = document.querySelector('.traditions-controls');
-  const visibleCount = 4;
+// Keep the existing grids and rotate one story per step.
+function mountStoryCarousel(stories, controls, visibleCount) {
   if (!stories || !controls || stories.children.length <= visibleCount) return;
 
   function updateVisibleStories() {
@@ -109,7 +106,10 @@
 
   updateVisibleStories();
   controls.hidden = false;
-})();
+}
+
+mountStoryCarousel(document.querySelector('#traditions-stories'), document.querySelector('.traditions-controls'), 4);
+mountStoryCarousel(document.querySelector('#catalogue-stories'), document.querySelector('.catalogue-controls'), 3);
 
 (() => {
   const carousel = document.getElementById('focus');
