@@ -22,12 +22,12 @@
 <script src="more-from-muzej.js?v=20261120-lazeski-pieta" defer></script>
 <style>
 :root {
-  --page-x: clamp(22px, 5vw, 80px);
+  --page-x: clamp(18px, 5.2vw, 72px);
   --profile-gap: clamp(36px, 6vw, 96px);
   --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 * { box-sizing: border-box; }
-body { margin: 0; background: #fff; color: #000; font: 400 16px/1.5 var(--muzej-body-family); }
+body { margin: 0; background: #fff; color: #000; font-family: var(--muzej-body-family); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
 a { color: inherit; text-underline-offset: .16em; }
 .site-header { position: sticky; top: 0; z-index: 10; }
 .utility-menu { position: relative; }
@@ -42,19 +42,19 @@ a { color: inherit; text-underline-offset: .16em; }
 .profile-main { max-width: 1520px; margin: auto; padding: 12px var(--page-x) 0; }
 .profile-opening, .profile-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: var(--profile-gap); }
 .profile-title h1 { font: 400 clamp(44px, 4.4vw, 70px)/.97 var(--muzej-body-family); letter-spacing: -.025em; }
-.profile-kicker, .profile-credit, figcaption { font: 400 11px/1.5 var(--sans); }
+.profile-kicker, figcaption { font: 400 11px/1.5 var(--sans); }
 .profile-kicker { text-transform: uppercase; letter-spacing: .08em; }
 .profile-hero, .profile-rail { margin: 0; min-width: 0; }
-.profile-hero img { display: block; width: 100%; height: calc(100svh - 150px); object-fit: contain; object-position: center bottom; }
+.profile-hero img { display: block; width: 100%; height: calc(100svh - 150px); object-fit: contain; object-position: center; }
 .profile-deck { font: 400 clamp(26px, 2.6vw, 38px)/1.2 var(--muzej-body-family); }
-.profile-credit { margin: 16px 0 0; }
-.profile-row { margin-top: clamp(68px, 8vw, 120px); }
+.profile-main > article { margin-top: 120px; }
+.profile-row + .profile-row { margin-top: 100px; }
 .profile-rail { position: sticky; top: 100px; }
 .profile-rail img { display: block; width: 100%; height: auto; max-height: calc(100svh - 165px); object-fit: contain; object-position: left top; }
 .profile-rail figcaption { max-width: 48ch; margin-top: 12px; }
 .profile-row-text .profile-prose { grid-column: 2; }
-.profile-prose { max-width: 38em; font: 400 clamp(21px, 1.65vw, 25px)/1.46 var(--muzej-body-family); }
-.profile-prose h2 { margin: 0 0 22px; font: 400 clamp(29px, 3vw, 44px)/1.1 var(--muzej-body-family); }
+.profile-prose { min-width: 0; font: 400 clamp(21px, 1.65vw, 25px)/1.46 var(--muzej-body-family); }
+.profile-section-title { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .profile-prose p { margin: 0 0 1.25em; }
 .profile-prose p:last-child { margin-bottom: 0; }
 body main.profile-main > .sources-section.muzej-sources { margin-left: calc((100% + var(--profile-gap)) / 2); max-width: min(520px, calc((100% - var(--profile-gap)) / 2)); }
@@ -65,9 +65,13 @@ body main.profile-main > .sources-section.muzej-sources { margin-left: calc((100
 .footer-links a { text-decoration: none; }
 .footer-links a:hover { text-decoration: underline; }
 @media (max-width: 760px) {
-  .profile-opening, .profile-row { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .profile-main { padding-inline: 20px; }
+  .profile-opening, .profile-row { grid-template-columns: minmax(0, 1fr); gap: 36px; }
   .profile-title h1 { font-size: clamp(36px, 9vw, 60px); }
-  .profile-hero img { height: auto; max-height: 70svh; object-position: center top; }
+  .profile-hero img { height: auto; }
+  .profile-main > article { margin-top: 64px; }
+  .profile-row + .profile-row { margin-top: 68px; }
+  .profile-prose { font-size: 22px; }
   .profile-rail { position: static; }
   .profile-rail img { max-height: 65svh; }
   .profile-row-text .profile-prose { grid-column: auto; }
@@ -120,8 +124,7 @@ body main.profile-main > .sources-section.muzej-sources { margin-left: calc((100
       <figure class="profile-hero">
         <img src="./Assets/Lazeski/skopje-station-fresco.webp" width="1397" height="1402" alt="Passengers cross the concourse beneath Lazeski’s fresco in Skopje’s old railway station." fetchpriority="high" decoding="async">
       </figure>
-      <p class="profile-deck muzej-intro-deck">Before the earthquake, a 45-meter fresco stretched above the doors to Skopje’s railway platforms. Lazeski spent years getting the figures to move across that wall.</p>
-      <p class="profile-credit">Borko Lazeski, <i>The National Liberation War</i>, completed 1956. Archival photograph of Skopje’s old railway station, via <a href="https://www.spomenikdatabase.org/skopje">Spomenik Database</a>.</p>
+      <p class="profile-deck muzej-intro-deck">From Skopje’s lost railway fresco to the glass at Makedonium.</p>
     </div>
   </header>
 
@@ -132,7 +135,7 @@ body main.profile-main > .sources-section.muzej-sources { margin-left: calc((100
         <figcaption>Battle scene from the later version of <i>The National Liberation War</i>, Marko Cepenkov Cultural Center, Prilep. Photograph via <a href="https://www.spomenikdatabase.org/borko-lazeski">Spomenik Database</a>.</figcaption>
       </figure>
       <div class="profile-prose">
-        <h2 id="station-wall">The station wall</h2>
+        <h2 class="profile-section-title" id="station-wall">The station wall</h2>
         <p>In the photograph of the old Skopje railway station, the people on the concourse are small enough to count in a glance. The painted figures above them take longer. Borko Lazeski’s fresco ran nearly the length of the hall, high above the doors to the platforms. A traveler waiting beneath it could see one stretch at a time. To see the whole thing, they had to walk.</p>
         <p>Lazeski began the commission in 1951. In her 1979 monograph, Sonja Abadžieva Dimitrova describes an early design closer to realism and years of drawings that gradually broke its figures into harder planes. Painting into wet plaster took another six months with assistants. When <i>The National Liberation War</i> was unveiled in 1956, the wall carried seven episodes of occupation, resistance, and liberation. Lazeski had joined the Partisans during the war. Some of the events he painted came from firsthand experience.</p>
         <p>The later version in Prilep gives a clearer view of what those drawings were working toward. Red horses and blue-green bodies press into each other until their outlines are hard to separate. A bent leg carries the eye into the flank of a horse. A blade of green cuts into an area of red. A scene that large could be read from across the hall because Lazeski gave its most crowded passages a few strong directions.</p>
@@ -141,7 +144,7 @@ body main.profile-main > .sources-section.muzej-sources { margin-left: calc((100
 
     <section class="profile-row profile-row-text" aria-labelledby="public-room">
       <div class="profile-prose">
-        <h2 id="public-room">A room people already used</h2>
+        <h2 class="profile-section-title" id="public-room">A room people already used</h2>
         <p>Lazeski was born in Prilep in 1917. He studied in Belgrade and completed his training in Sofia in 1943. After the war, he went to Paris, where he studied fresco, mosaic, and stained glass and took classes with the Cubist painter André Lhote. Back in Skopje, he became the first manager and organizer of what is now the National Gallery of Macedonia, alongside a founding generation that included <a href="./martinoski.html">Nikola Martinoski</a> and Lazar Ličenoski.</p>
         <p>At the station, he was painting for people occupied with departures, bags, and tickets. He spoke of fresco as a medium that belonged to everyone around it. The choice of a concourse made that idea practical. A person could encounter a large modernist painting on an ordinary journey through town.</p>
         <p>The 1963 earthquake destroyed the original fresco. Decades later, Lazeski and his assistants returned to the composition at the Marko Cepenkov Cultural Center in Prilep. The new building gave them two lobbies, so the long sequence had to be divided. The Prilep version was unveiled in 1993, after his death. Its arrangement records a second encounter between the painting and a building, with a different walk from one scene to the next.</p>
@@ -154,7 +157,7 @@ body main.profile-main > .sources-section.muzej-sources { margin-left: calc((100
         <figcaption>Light from Lazeski’s stained glass inside Makedonium, Kruševo. Adobe Stock.</figcaption>
       </figure>
       <div class="profile-prose">
-        <h2 id="glass">Color after the wall</h2>
+        <h2 class="profile-section-title" id="glass">Color after the wall</h2>
         <p>Inside <a href="./makedonium.html">Makedonium in Kruševo</a>, the color travels farther. Lazeski made stained glass for the monument, which opened in 1974. The windows are sunk into the ends of projecting concrete forms. From inside, you see the glass at the far end of a deep opening and then see its greens, blues, and yellows again on the concrete around you.</p>
         <p>Architecture kept providing him with different surfaces and different audiences. He taught at the academy of fine arts in Baghdad and later made murals in Mexico City, including a work on the Non-Aligned Movement in 1983. In Kruševo in July 2026, conservators examined Lazeski’s glass and its metal supports as part of preparations for its protection and restoration.</p>
         <p>In the station photograph, the architecture determines how much of the fresco a person can see at once. In Kruševo, it determines where the color falls as the light changes. Both works ask for something a reproduction can only suggest. You have to move through the room to see what the artist did with it.</p>
@@ -167,7 +170,7 @@ body main.profile-main > .sources-section.muzej-sources { margin-left: calc((100
     <p><a href="https://arhiva.zaum.mk/wp-content/uploads/2022/03/1979_12_05_Borko-Lazeski_Sonja-Abadzieva_OCR.pdf">Sonja Abadžieva Dimitrova. <i>Borko Lazeski</i>, 1979.</a> Monograph, including the station commission, preparatory drawings, and fresco technique.</p>
     <p><a href="https://nationalgallery.mk/history/?lang=en">National Gallery of Macedonia. Institutional history.</a> Lazeski’s role in establishing the gallery.</p>
     <p><a href="https://ibrahimicollection.com/node/2377">Ibrahimi Collection. Borko Lazeski chronology.</a> Training, wartime activity, and exhibition history.</p>
-    <p><a href="https://www.spomenikdatabase.org/skopje">Spomenik Database. Skopje’s railway station mural.</a> Archival photographs, the 1963 earthquake, and the Prilep version.</p>
+    <p><a href="https://www.spomenikdatabase.org/skopje">Spomenik Database. Skopje’s railway station mural.</a> Archival photographs, the 1963 earthquake, and the Prilep version. The opening photograph shows Lazeski’s <i>The National Liberation War</i> in the railway station, completed in 1956.</p>
     <p><a href="https://mau.rs/images/Exhibitions/_TouringExhibitions/Ovo_nije_rat_DKSG_Skoplje/Which_side_are_you_on.pdf"><i>Which Side Are You On?</i> Exhibition booklet.</a> Teaching in Baghdad and mural commissions in Mexico City.</p>
     <p><a href="https://heritage.gov.mk/2026/07/24/%D1%81%D1%82%D1%80%D1%83%D1%87%D0%B5%D0%BD-%D1%83%D0%B2%D0%B8%D0%B4-%D0%BD%D0%B0-%D0%B2%D0%B8%D1%82%D1%80%D0%B0%D0%B6%D0%B8%D1%82%D0%B5-%D0%BE%D0%B4-%D0%B1%D0%BE%D1%80%D0%BA%D0%BE-%D0%BB%D0%B0%D0%B7/nggallery/image/002_krush/">National Conservation Centre. Inspection of Lazeski’s stained glass at Makedonium, July 2026.</a></p>
   </section>

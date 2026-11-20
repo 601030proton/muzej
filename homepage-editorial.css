@@ -347,11 +347,6 @@ main .focus .home-story-headline {
   object-fit: contain;
 }
 
-#focus #pieta-focus .focus-media img {
-  object-fit: cover;
-  object-position: center 18%;
-}
-
 #focus .focus-copy {
   margin-top: clamp(16px, 2.3vw, 28px);
 }
