@@ -96,8 +96,8 @@
       title: "Tobacco Pickers (Тутуноберачите)",
       kicker: "Poetry",
       dek: "Kočo Racin’s poem on the work of picking, threading, and weighing tobacco.",
-      image: "./Assets/TobaccoPickers/white-dawns-cover.webp",
-      alt: "The 1939 cover of Kočo Racin’s White Dawns.",
+      image: "./Assets/TobaccoPickers/tobacco-drying.webp",
+      alt: "A worker tends rows of tobacco drying on wooden racks below a church.",
       position: "center center"
     },
     {
