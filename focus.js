@@ -13,7 +13,7 @@
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
   var current = 0, playing = !reduce.matches, inView = true, timer = null, transition = 0, revision = 0;
   function number(n) { return String(n).padStart(2, '0'); }
-  function label(w) { return w.title + ', ' + w.year; }
+  function label(w) { return w.year ? w.title + ', ' + w.year : w.title; }
   function preload(n) { var next = new Image(); next.src = works[(n + works.length) % works.length].src; }
   function paintViewer() {
     var w = works[current];
