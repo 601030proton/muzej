@@ -1106,7 +1106,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
 <link rel="stylesheet" href="bylines.css?v=20261107">
 <link rel="stylesheet" href="editorial-sources.css?v=20261109-sources">
 <link rel="stylesheet" href="muzej-header.css?v=20261114-canonical-2">
-<link rel="canonical" href="https://muzej.co/makedonium.html"><meta property="og:type" content="article"><meta property="og:title" content="Makedonium | Muzej"><meta property="og:description" content="The drawings, unrealized spaces, and artistic collaboration behind the Ilinden Monument in Kruševo."><meta property="og:url" content="https://muzej.co/makedonium.html"><meta property="og:image" content="https://muzej.co/Assets/Makedonium/construction-1973.jpg"><style>
+<link rel="canonical" href="https://muzej.co/makedonium.html"><meta property="og:type" content="article"><meta property="og:title" content="Makedonium | Muzej"><meta property="og:description" content="The drawings, unrealized spaces, and artistic collaboration behind the Ilinden Monument in Kruševo."><meta property="og:url" content="https://muzej.co/makedonium.html"><meta property="og:image" content="https://muzej.co/Assets/Makedonium/construction-1973-portrait.webp"><style>
 /* Image inspection only; all editorial layout and type come from Concrete Skopje. */
 .image-open{display:block;width:100%;margin:0;padding:0;border:0;background:transparent;cursor:zoom-in;color:inherit}
 .image-open:focus-visible{outline:2px solid #000;outline-offset:5px}
@@ -1142,7 +1142,7 @@ body main .sources-section.muzej-sources>p{max-width:520px}
   justify-content: center;
   min-height: 0 !important;
   width: min(100%, max(270px, calc(75svh - 115px)));
-  aspect-ratio: 3 / 4;
+  aspect-ratio: auto;
   margin-inline: auto;
 }
 .makedonium-feature header.muzej-sticky-opening .feature-copy { justify-content: center; }
@@ -1236,9 +1236,9 @@ body main .sources-section.muzej-sources>p{max-width:520px}
 <main><div class="guide-wrap">
 <header class="feature muzej-sticky-opening"><div class="feature-inner"><div class="feature-copy"><p class="guide-overline">Architecture | Kruševo</p><p class="feature-byline muzej-byline">Words <strong>Aleksandar Trajkovski</strong></p><h1 class="feature-title">Makedonium</h1></div><div class="feature-scroll-column"><figure class="feature-media makedonium-figure">
 <div class="makedonium-plate">
-<button type="button" class="image-open" data-open-image style="--image-ratio: 2000 / 1296" data-image-caption="The dome under construction, 1973. Grabul Family Archive, MoMA." aria-label="Enlarge the dome and its scaffolding in 1973"><img src="./Assets/Makedonium/construction-1973.jpg" alt="the dome and its scaffolding in 1973" width="2000" height="1296" fetchpriority="high"></button>
+<button type="button" class="image-open" data-open-image style="--image-ratio: 3 / 4" data-image-caption="The dome under construction, 1973. Grabul Family Archive, MoMA." aria-label="Enlarge the dome and its scaffolding in 1973"><img src="./Assets/Makedonium/construction-1973-portrait.webp" data-original-src="./Assets/Makedonium/construction-1973.jpg" alt="The dome and its scaffolding in 1973, with the sky and foreground extended for the portrait format" width="1098" height="1464" fetchpriority="high"></button>
 </div>
-<figcaption><span>The dome under construction, 1973. Grabul Family Archive, MoMA.<sup class="refs"><a href="#source-4">4</a></sup></span></figcaption>
+<figcaption><span>The dome under construction, 1973. Grabul Family Archive, MoMA. Sky and foreground digitally extended.<sup class="refs"><a href="#source-4">4</a></sup></span></figcaption>
 </figure><p class="feature-deck">A route through the Ilinden Monument in Kruševo, from the hillside approach to the projection room that was never built.</p><div class="guide-intro"><p>From Kruševo, the white dome on Gumenje is the part of the Ilinden Monument you see first. On foot it comes last. Iskra and Jordan Grabuloski used the slope to set out a sequence of spaces, beginning in the open air and ending inside the dome.<sup class="refs"><a href="#source-1">1</a>, <a href="#source-7">7</a></sup></p></div></div></div></header>
 <nav class="guide-index" aria-label="Sections in this feature"><h2 class="guide-index-title">In this feature</h2><ol>
 <li><a href="#two-ilindens"><span>01</span>The approach</a></li>
@@ -1408,7 +1408,7 @@ if (menuButton && menuPanel) {
 </script>
 <dialog id="image-viewer" aria-label="Image inspection"><div class="viewer-bar"><span class="micro" id="viewer-position">Image inspection</span><div><button id="zoom-out" aria-label="Zoom out">−</button><button id="zoom-in" aria-label="Zoom in">+</button><button id="viewer-close">Close ×</button></div></div><div class="viewer-canvas" tabindex="0" aria-label="Scrollable enlarged image"><img id="viewer-image" alt=""></div><p id="viewer-caption"></p></dialog><script>const viewer=document.getElementById('image-viewer'),large=document.getElementById('viewer-image'),canvas=document.querySelector('.viewer-canvas');let zoom=1,fitWidth=0,trigger=null;
 function setZoom(v){zoom=Math.max(1,Math.min(4,v));large.style.maxWidth=zoom===1?'100%':'none';large.style.maxHeight=zoom===1?'100%':'none';large.style.width=zoom===1?'auto':`${fitWidth*zoom}px`;document.getElementById('viewer-position').textContent=zoom===1?'Image inspection':`Image inspection · ${Math.round(zoom*100)}%`;document.getElementById('zoom-out').disabled=zoom<=1;document.getElementById('zoom-in').disabled=zoom>=4}
-document.querySelectorAll('[data-open-image]').forEach(button=>button.addEventListener('click',()=>{trigger=button;const im=button.querySelector('img');large.src=im.src;large.alt=im.alt;document.getElementById('viewer-caption').textContent=button.dataset.imageCaption;setZoom(1);viewer.showModal();large.onload=()=>{setZoom(1);fitWidth=large.getBoundingClientRect().width};fitWidth=large.getBoundingClientRect().width;document.body.style.overflow='hidden';document.getElementById('viewer-close').focus()}));
+document.querySelectorAll('[data-open-image]').forEach(button=>button.addEventListener('click',()=>{trigger=button;const im=button.querySelector('img');large.src=im.dataset.originalSrc || im.src;large.alt=im.dataset.originalSrc ? 'The dome and its scaffolding in 1973' : im.alt;document.getElementById('viewer-caption').textContent=button.dataset.imageCaption;setZoom(1);viewer.showModal();large.onload=()=>{setZoom(1);fitWidth=large.getBoundingClientRect().width};fitWidth=large.getBoundingClientRect().width;document.body.style.overflow='hidden';document.getElementById('viewer-close').focus()}));
 document.getElementById('viewer-close').addEventListener('click',()=>viewer.close());viewer.addEventListener('close',()=>{document.body.style.overflow='';large.removeAttribute('src');if(trigger)trigger.focus()});
 document.getElementById('zoom-in').addEventListener('click',()=>setZoom(zoom+.5));document.getElementById('zoom-out').addEventListener('click',()=>setZoom(zoom-.5));
 </script></body>
