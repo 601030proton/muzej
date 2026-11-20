@@ -290,17 +290,3 @@ main .focus .home-story-headline {
   }
   .traditions-controls { position: static; transform: none; }
 }
-
-.pieta-home-feature {
-  max-width: 1040px;
-  margin-inline: auto;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  align-items: center;
-}
-.pieta-home-feature figure { max-width: 450px; }
-.pieta-home-feature img { display: block; height: auto; }
-.pieta-home-feature .feature-copy { padding-bottom: 0; }
-@media (max-width: 700px) {
-  .pieta-home-feature { grid-template-columns: 1fr; }
-  .pieta-home-feature figure { max-width: none; }
-}
