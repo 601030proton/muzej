@@ -110,3 +110,40 @@
   updateVisibleStories();
   controls.hidden = false;
 })();
+
+(() => {
+  const carousel = document.getElementById('focus');
+  const track = carousel.querySelector('#focus-slides');
+  const controls = carousel.querySelector('.focus-controls');
+  const status = carousel.querySelector('.focus-status');
+  const slides = Array.from(track.children);
+  let active = 0;
+
+  function showSlide(index, announce = false) {
+    active = (index + slides.length) % slides.length;
+    slides.forEach((slide, i) => { slide.hidden = i !== active; });
+    if (announce) status.textContent = slides[active].querySelector('h3').innerText.replace(/\s+/g, ' ');
+  }
+
+  function showLinkedSlide() {
+    const linked = slides.findIndex(slide => location.hash === '#' + slide.id);
+    if (linked !== -1) showSlide(linked);
+  }
+
+  controls.addEventListener('click', event => {
+    const button = event.target.closest('button[data-step]');
+    if (button) showSlide(active + Number(button.dataset.step), true);
+  });
+
+  controls.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+    event.preventDefault();
+    showSlide(active + (event.key === 'ArrowRight' ? 1 : -1), true);
+  });
+
+  showSlide(0);
+  showLinkedSlide();
+  window.addEventListener('hashchange', showLinkedSlide);
+  track.dataset.carousel = '';
+  controls.hidden = false;
+})();
