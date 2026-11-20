@@ -3,9 +3,9 @@
     {
       slug: "velimir-zernovski",
       href: "velimir-zernovski.html",
-      title: "Velimir Zernovski’s Gold Pietà",
+      title: "Velimir Zernovski at the Venice Biennale",
       kicker: "Art | Focus",
-      dek: "The Macedonian pavilion at the 2026 Venice Biennale.",
+      dek: "The Macedonian artist presented Pietà in the Emergency Blankets at the 2026 Biennale.",
       image: "./Assets/Zernovski/pieta-installation.webp",
       alt: "A gold-foil Pietà installed in a former Venetian chapel.",
       position: "center center"
