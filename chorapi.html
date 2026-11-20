@@ -1155,6 +1155,47 @@ body.muzej-logo-hidden .site-header .brand-mark {
   object-fit: contain;
   object-position: center;
 }
+.chorapi-artwork-details {
+  max-width: 520px;
+  margin-top: 64px;
+  padding-top: 20px;
+  border-top: 1px solid #11110f;
+  color: #000;
+}
+.chorapi-artwork-details > h2 {
+  margin: 0 0 8px;
+  font: 400 clamp(26px, 2.4vw, 30px)/1.1 "plantin", Georgia, serif;
+}
+.chorapi-artwork-details > .chorapi-object-label {
+  margin: 0 0 22px;
+  font: 400 13px/1.5 var(--sans);
+}
+.chorapi-artwork-details > div {
+  padding-block: 14px;
+  border-top: 1px solid rgba(17, 17, 15, .1);
+  font: 400 14px/1.5 var(--sans);
+}
+.chorapi-artwork-details h3 {
+  margin: 0 0 8px;
+  font: 600 13px/1.4 var(--sans);
+}
+.chorapi-artwork-details dl,
+.chorapi-artwork-details dd,
+.chorapi-article .chorapi-artwork-details > div p {
+  margin: 0;
+  font: inherit;
+}
+.chorapi-artwork-details dl > div {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  gap: 10px;
+  padding-block: 3px;
+}
+.chorapi-artwork-details dt { font-weight: 500; }
+.chorapi-artwork-details a { text-underline-offset: .2em; }
+@media (max-width: 480px) {
+  .chorapi-artwork-details dl > div { grid-template-columns: 6rem minmax(0, 1fr); }
+}
 @media (max-width: 760px) {
   .chorapi-article .lazarki-hero .chorapi-photo-frame {
     width: min(100%, max(195px, 39svh));
@@ -1226,6 +1267,37 @@ body.muzej-logo-hidden .site-header .brand-mark {
 <p>The museum also photographed these stockings beside a striped silk <i>mintan</i>, a short coat, and white canvas <i>čakširi</i> edged in black braid. All three pieces are cataloged as men’s clothing from Gorni Polog. Against the trousers, the black wool is emphatic. The fine stripes of the coat and the much larger flowers of the stockings give the ensemble two very different scales of pattern. The museum layout shows the pieces together. It leaves open how much of the upper band a wearer would have exposed.</p>
 <p>In his catalog entry, ethnologist Gordanche Vidinic places the stockings within a household division of work. Women knitted socks to go with the other garments they made for their families. Knitting also had a commercial life. Writing about the history of the craft, ethnologist Jasemin Nazim points to an 1878 Bitola tax register that lists a merchant of knitted stockings. The register tells us that stockings were being sold. The Gorni Polog record gives no name for the person who made this pair.</p>
 <p>What remains is a set of decisions we can still see. The cuffs carry the widest bands of color. The feet carry separate designs that turn with the shape of the knit. Even the very ends of the toes, which would disappear inside a shoe, were given their own small red pattern.</p>
+<section class="chorapi-artwork-details" aria-labelledby="artwork-details">
+  <h2 id="artwork-details">Artwork Details</h2>
+  <p class="chorapi-object-label">Serfidže stockings · The Metropolitan Museum of Art</p>
+  <div>
+    <h3>Object Information</h3>
+    <dl>
+      <div><dt>Title</dt><dd>Socks</dd></div>
+      <div><dt>Date</dt><dd>Fourth quarter of the 19th century</dd></div>
+      <div><dt>Geography</dt><dd>Made in Macedonia</dd></div>
+      <div><dt>Medium</dt><dd>Wool, metal</dd></div>
+      <div><dt>Dimensions</dt><dd>20 in. (50.8 cm)</dd></div>
+      <div><dt>Classification</dt><dd>Accessory · Foot and leg wear · Menswear</dd></div>
+    </dl>
+  </div>
+  <div>
+    <h3>Overview</h3>
+    <p>The Met’s pair from Serfidže features embroidered floral, geometric, and stylized figures.</p>
+  </div>
+  <div>
+    <h3>Provenance</h3>
+    <p>Brooklyn Museum collection, 1924. Gift of the Brooklyn Museum to The Metropolitan Museum of Art, 2009.</p>
+  </div>
+  <div>
+    <h3>Exhibition History</h3>
+    <p>The Met lists the pair as off view and gives no exhibition dates in its public record.</p>
+  </div>
+  <div>
+    <h3>References</h3>
+    <p><a href="https://www.metmuseum.org/art/collection/search/158354">The Metropolitan Museum of Art, object 2009.300.3419a, b</a>.</p>
+  </div>
+</section>
 <section class="sources-section muzej-sources" aria-labelledby="article-sources">
 <h2 id="article-sources" class="section-heading">Sources</h2>
 <p>Vidinic, Gordanche. “Socks (Chorapi).” Museum of Macedonia, inventory 1110. <a href="https://sharinghistory.museumwnf.org/database_item.php?id=object%3BAWE%3Bmc%3B18%3Ben">Catalog record and photographs</a>.</p>
