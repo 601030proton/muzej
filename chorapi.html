@@ -1136,7 +1136,10 @@ body.muzej-logo-hidden .site-header .brand-mark {
   width: 100%;
   aspect-ratio: 3 / 4;
   position: relative;
-  background: #fff;
+}
+.chorapi-article figure > .chorapi-photo-frame {
+  /* Override the inherited placeholder gradient so the white photos blend into the page. */
+  background: transparent !important;
 }
 .chorapi-article .lazarki-hero .chorapi-photo-frame {
   width: min(100%, max(285px, calc(75svh - 120px)));
