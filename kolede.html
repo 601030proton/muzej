@@ -1122,6 +1122,13 @@ body.muzej-logo-hidden .site-header .brand-mark {
 <link rel="stylesheet" href="article-intro.css?v=20261113-deck-below-fold-2">
 <style>
 .kolede-article .kolede-wide { width: 100%; max-width: 1041px; margin: 80px auto; }
+.kolede-article .kolede-archive-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: clamp(16px, 4vw, 54px); max-width: 900px; margin: clamp(48px, 7vw, 88px) auto; }
+.kolede-article .kolede-archive-pair figure { min-width: 0; margin: 0; }
+.kolede-article .kolede-archive-pair img { display: block; width: 100%; height: auto; }
+.kolede-article .kolede-archive-pair figcaption { font: 400 11px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; color: #000; margin: 12px 0 0; }
+@media (max-width: 560px) {
+  .kolede-article .kolede-archive-pair { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+}
 .kolede-article .kolede-wide iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; }
 .kolede-article .kolede-wide figcaption { font: 400 11px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; color: #000; margin-top: 12px; }
 .kolede-article .article-body-media { width: min(100%, 450px); }
@@ -1184,8 +1191,8 @@ body.muzej-logo-hidden .site-header .brand-mark {
   <article class="article-shell article-longform" aria-label="Kolede">
     <section class="content-row">
       <figure class="article-body-media">
-        <img src="./Assets/Kolede/green-koledari-mask.webp" alt="A brightly painted white face mask framed by metallic green tinsel." width="750" height="1000" loading="lazy" decoding="async">
-        <figcaption>A mask photographed on Badnik, January 6, 2020. <a href="https://commons.wikimedia.org/wiki/File:Christmas_mask,_Christmas_Eve,_orthodox_custom_in_North_Macedonia.jpg">Delfina</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>. Cropped.</figcaption>
+        <img src="./Assets/Kolede/archive-gradovci.webp" alt="Children carrying sticks walk through deep snow in Gradovci." width="1050" height="1400" loading="lazy" decoding="async">
+        <figcaption>Children make their Kolede rounds in Gradovci. Vera Kličkova, <a href="https://drive.google.com/file/d/1tvSvvbi-VQbf3Er73xqvJZTLF5SULGus/view?usp=share_link"><i>Bulletin of the Ethnological Museum</i>, no. 1 (1960)</a>, p. 206, fig. 2.</figcaption>
       </figure>
       <div class="article-body-copy body-block">
         <p>A child in Prilep told a reporter on Christmas Eve morning that it was their first time out collecting chestnuts. The group was walking through the neighborhood with little sticks called <i>koledački</i>. They used them to knock on doors. Another child told the reporter that adults had taught them the songs and how to make the rounds.</p>
@@ -1194,9 +1201,20 @@ body.muzej-logo-hidden .site-header .brand-mark {
         <h2 class="chapter-heading">A tune for the door</h2>
         <p>In Prilep, the song in Darko Štargoski’s 2025 report is <i>Koledica Varvarica</i>. In Gostivar, a speaker whose childhood memories were recorded by Boge Dimitrieski remembered <i>Kolede lede</i> and a second rhyme about <i>Božić Bata</i> bringing chocolate. When the children knocked, he recalled, women came out with little coins, walnuts, apples or chestnuts. His account preserves the sound of the local speech as well as the words of the rhyme.</p>
         <p>One version of <i>Kolede lede</i> starts with a beam falling on grandfather. Another verse turns to a calf that tries to talk its way out of being eaten. In the middle comes a line any child can deliver to the person answering the door: <i>Denes e Kolede, utre e Božiḱ</i>. Today is Kolede, tomorrow is Christmas.</p>
-        <p>The <i>Macedonian Encyclopedia</i> records a wider repertoire of songs sung around fires and at homes, with wishes for health and good fortune. The photograph alongside this section documents another variation. Some children went out masked. The small group in the Prilep report is a record of how the round was made there, on that morning.</p>
+        <p>The <i>Macedonian Encyclopedia</i> records a wider repertoire of songs sung around fires and at homes, with wishes for health and good fortune. In the photographs published with Vera Kličkova’s study, children walk through the snow in Gradovci and are welcomed at a doorway in Novo Selo.</p>
       </div>
     </section>
+
+    <div class="kolede-archive-pair">
+      <figure>
+        <img src="./Assets/Kolede/archive-novo-selo.webp" alt="Children with wooden sticks are welcomed at a doorway in Novo Selo." width="1050" height="1400" loading="lazy" decoding="async">
+        <figcaption>Welcoming the carolers in Novo Selo. Vera Kličkova, <a href="https://drive.google.com/file/d/1tvSvvbi-VQbf3Er73xqvJZTLF5SULGus/view?usp=share_link"><i>Bulletin of the Ethnological Museum</i>, no. 1 (1960)</a>, p. 206, fig. 3.</figcaption>
+      </figure>
+      <figure>
+        <img src="./Assets/Kolede/archive-doorstep.webp" alt="Children in headscarves gather at the door of a stone house." width="1050" height="1400" loading="lazy" decoding="async">
+        <figcaption>Carolers knock at the door. Vera Kličkova, <a href="https://drive.google.com/file/d/1tvSvvbi-VQbf3Er73xqvJZTLF5SULGus/view?usp=share_link"><i>Bulletin of the Ethnological Museum</i>, no. 1 (1960)</a>, p. 207, fig. 4.</figcaption>
+      </figure>
+    </div>
 
     <figure class="kolede-wide kolede-film">
       <iframe src="https://www.youtube-nocookie.com/embed/Nk1hrclZ3BU" title="Children singing Kolede in Prilep, filmed by Info Kompas" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
