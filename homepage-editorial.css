@@ -385,3 +385,6 @@ main .focus .home-story-headline {
 .home-shop-product a:hover .home-shop-caption > span:first-child,
 .shop .small-link:hover { text-decoration: underline; text-underline-offset: .2em; }
 .shop .section-heading .small-link { font-size: .875rem; }
+
+.archive-group + .archive-group { margin-top: clamp(30px, 4vw, 48px); }
+.archive-group-title { margin: 0; font: 400 11px/1.5 var(--sans); letter-spacing: .08em; text-transform: uppercase; }

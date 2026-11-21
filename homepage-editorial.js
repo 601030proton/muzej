@@ -75,8 +75,37 @@
     });
   }
  const archive=document.querySelector('#archive details');document.querySelectorAll('a[href="#archive"]').forEach(a=>a.addEventListener('click',()=>archive.open=true));if(location.hash==='#archive')archive.open=true;
- const entries=[...document.querySelectorAll('.archive-entry')];
- document.querySelector('#archive-search').addEventListener('input',e=>{const q=e.target.value.toLocaleLowerCase().trim();let count=0;entries.forEach(li=>{li.hidden=!li.textContent.toLocaleLowerCase().includes(q);if(!li.hidden)count++;});document.querySelector('#archive-status').textContent=q?count+' '+(count===1?'story':'stories')+' found':'';});
+  const normalizeArchiveText = (text) => text.toLowerCase()
+    .replaceAll('đ', 'd')
+    .normalize('NFD').replace(/\p{M}/gu, '');
+  const archiveGroups = [...archive.querySelectorAll('.archive-group')].map((group) => ({
+    group,
+    entries: [...group.querySelectorAll('.archive-entry')].map((entry) => ({
+      entry,
+      searchableText: normalizeArchiveText([
+        entry.textContent,
+        entry.dataset.search,
+        group.querySelector('h3').textContent,
+      ].join(' ')),
+    })),
+  }));
+  const archiveStatus = document.querySelector('#archive-status');
+  document.querySelector('#archive-search').addEventListener('input', (event) => {
+    const query = normalizeArchiveText(event.target.value.trim());
+    const words = query ? query.split(/\s+/) : [];
+    let count = 0;
+    for (const { group, entries } of archiveGroups) {
+      let groupCount = 0;
+      for (const { entry, searchableText } of entries) {
+        const matches = words.every((word) => searchableText.includes(word));
+        entry.hidden = !matches;
+        groupCount += Number(matches);
+      }
+      group.hidden = groupCount === 0;
+      count += groupCount;
+    }
+    archiveStatus.textContent = query ? count + (count === 1 ? ' story found' : ' stories found') : '';
+  });
 })();
 
 
