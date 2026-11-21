@@ -49,3 +49,45 @@
 @media(max-width:640px){
   .site-header .shell.header-frame{padding-block:18px!important}
 }
+
+/* Shared navigation for the journal homepage and shop. */
+.site-header--journal .utility-menu { position: relative; }
+.site-header--journal .utility-trigger {
+  list-style: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.site-header--journal .utility-trigger::-webkit-details-marker { display: none; }
+.site-header--journal .utility-icon { display: grid; gap: 5px; }
+.site-header--journal .utility-icon i {
+  display: block;
+  width: 23px;
+  height: 1px;
+  background: #000;
+}
+.site-header--journal .utility-panel {
+  position: absolute;
+  top: 46px;
+  right: 0;
+  z-index: 30;
+  width: 230px;
+  padding: 16px;
+  border: 1px solid #dedede;
+  background: #fff;
+}
+.site-header--journal .utility-panel a {
+  display: block;
+  padding: 9px 8px;
+  font: 400 13px/1.5 var(--sans);
+}
+.site-header--journal .utility-panel a:hover,
+.site-header--journal .utility-panel a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+.site-header--journal a:focus-visible,
+.site-header--journal summary:focus-visible {
+  outline: 1px solid #000;
+  outline-offset: 4px;
+}

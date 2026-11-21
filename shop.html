@@ -124,131 +124,6 @@
         transform: translate3d(0, calc(-100% - 42px), 0);
       }
 
-      .utility-link,
-      .utility-menu-item {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 2rem;
-        border: 0;
-        background: transparent;
-        padding: 0;
-        font-family: var(--sans);
-        font-size: 0.72rem;
-        line-height: 1.2;
-        letter-spacing: 0;
-        color: rgba(23, 21, 19, 0.58);
-        transition: color 180ms ease, border-color 180ms ease;
-      }
-
-      .utility-link:hover,
-      .utility-link[aria-current="page"],
-      .utility-menu-item:hover {
-        color: var(--foreground);
-      }
-
-      .utility-link[aria-current="page"] {
-        border-bottom: 1px solid rgba(23, 21, 19, 0.28);
-      }
-
-      .header-tools {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        position: relative;
-      }
-
-      .utility-menu {
-        position: relative;
-      }
-
-      .utility-menu summary {
-        list-style: none;
-      }
-
-      .utility-menu summary::-webkit-details-marker {
-        display: none;
-      }
-
-      .utility-trigger {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0.2rem 0;
-        border: 0;
-        background: transparent;
-        color: var(--foreground);
-        cursor: pointer;
-        transition: color 180ms ease, opacity 180ms ease;
-      }
-
-      .utility-trigger:hover {
-        opacity: 0.72;
-      }
-
-      .utility-icon {
-        display: grid;
-        gap: 0.26rem;
-      }
-
-      .utility-icon-line {
-        display: block;
-        width: 1.45rem;
-        height: 1px;
-        background: currentColor;
-        opacity: 0.88;
-      }
-
-      .utility-panel {
-        position: absolute;
-        top: calc(100% + 0.55rem);
-        right: 0;
-        z-index: 10;
-        display: grid;
-        min-width: 10rem;
-        padding: 0.45rem 0;
-        border: 1px solid rgba(23, 21, 19, 0.12);
-        background: #ffffff;
-        box-shadow: 0 10px 30px rgba(23, 21, 19, 0.08);
-      }
-
-      .utility-panel-group {
-        display: grid;
-        gap: 0;
-      }
-
-      .utility-panel-utility {
-        margin-top: 0.25rem;
-        padding-top: 0.35rem;
-        border-top: 1px solid rgba(23, 21, 19, 0.1);
-      }
-
-      .utility-panel .utility-link,
-      .utility-panel .utility-menu-item {
-        justify-content: flex-start;
-        min-height: 0;
-        width: 100%;
-        padding: 0.6rem 0.9rem;
-        text-align: left;
-        background: transparent;
-      }
-
-      .utility-panel-utility .utility-link {
-        font-size: 0.66rem;
-        letter-spacing: 0;
-        color: rgba(23, 21, 19, 0.52);
-      }
-
-      .utility-panel .utility-link[aria-current="page"] {
-        border-bottom: 0;
-        color: var(--foreground);
-      }
-
-      .utility-panel .utility-link:hover,
-      .utility-panel .utility-menu-item:hover {
-        background: rgba(23, 21, 19, 0.035);
-      }
-
       .about-page {
         min-height: calc(100svh - 120px);
         display: grid;
@@ -384,12 +259,6 @@
           justify-content: flex-start;
         }
 
-        .utility-panel {
-          left: 0;
-          right: auto;
-          min-width: 9.25rem;
-        }
-
         .about-page {
           min-height: auto;
           padding-top: 34px;
@@ -440,13 +309,6 @@
   .site-header .header-frame { grid-template-columns: minmax(0, 1fr) auto; align-items: center; justify-items: stretch; gap: 1rem; }
   .site-header .brand-mark { justify-self: start; min-width: 0; }
   .site-header .header-tools { justify-self: end; justify-content: flex-end; margin-left: auto; position: relative; z-index: 2002; }
-  .site-header .utility-menu { position: static; }
-  .site-header .utility-trigger { position: relative; z-index: 2003; }
-  .site-header .utility-panel { position: fixed; inset: 0; left: 0; right: 0; top: 0; z-index: 2001; display: grid; align-content: center; width: 100vw; max-width: none; min-width: 0; height: 100vh; height: 100svh; padding: clamp(76px, 18vh, 128px) var(--page-x) 48px; border: 0; background: rgba(255, 255, 255, 0.98); box-shadow: none; overflow-y: auto; transform: none; }
-  .site-header .utility-panel-group { width: min(100%, 22rem); margin: 0 auto; }
-  .site-header .utility-panel-utility { margin-top: 0.8rem; padding-top: 0.85rem; }
-  .site-header .utility-panel .utility-link,
-  .site-header .utility-panel .utility-menu-item { justify-content: center; min-height: 2.75rem; padding: 0.72rem 0; text-align: center; }
 }
 
 .site-header .brand-mark {
@@ -484,45 +346,12 @@
 }
 </style>
   <link rel="stylesheet" href="article-system.css?v=20261101-consistency-3">
-<link rel="stylesheet" href="shop-editorial.css?v=20261120-white">
-<link rel="stylesheet" href="muzej-header.css?v=20261114-canonical-2">
+<link rel="stylesheet" href="shop-editorial.css?v=20261121-caption">
+<link rel="stylesheet" href="muzej-header.css?v=20261121-shop-nav">
 </head>
   <body>
     <div class="page">
-      <header class="site-header">
-        <div class="shell header-frame">
-          <a class="brand-mark" href="index.html" aria-label="Muzej home">
-      <img class="brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png" alt="" aria-hidden="true">
-    </a>
-
-          <div class="header-tools">
-            <details class="utility-menu">
-              <summary class="utility-trigger" aria-label="Open navigation menu">
-                <span class="utility-icon" aria-hidden="true">
-                  <span class="utility-icon-line"></span>
-                  <span class="utility-icon-line"></span>
-                  <span class="utility-icon-line"></span>
-                </span>
-              </summary>
-              <nav class="utility-panel" aria-label="Site navigation">
-                <div class="utility-panel-group">
-                  <a class="utility-link" href="index.html">Home</a>
-                  <a class="utility-link" href="index.html#selected-stories">Selected Stories</a>
-                  <a class="utility-link" href="index.html#now-playing">Now Playing</a>
-                  <a class="utility-link" href="index.html#catalogue">Catalogue</a>
-<a class="utility-link" href="index.html#archive">Archive</a>
-                  <a class="utility-link" href="shop.html" aria-current="page">Shop</a>
-                  <a class="utility-link" href="about.html">About Muzej</a>
-                </div>
-                <div class="utility-panel-group utility-panel-utility">
-                  <a class="utility-link" href="mailto:muzej.mk@proton.me">Contact</a>
-                  <a class="utility-link" href="https://www.instagram.com/_muzej/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                </div>
-              </nav>
-            </details>
-          </div>
-        </div>
-      </header>
+      <header class="site-header site-header--journal"><div class="shell header-frame"><a aria-label="Muzej home" class="brand-mark" href="./"><img alt="Muzej" class="brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png"/></a><div class="header-tools"><details class="utility-menu"><summary aria-label="Open navigation menu" class="utility-trigger"><span aria-hidden="true" class="utility-icon"><i></i><i></i><i></i></span></summary><nav aria-label="Main navigation" class="utility-panel"><a href="./#selected-stories">Selected Stories</a><a href="./#focus">Art &amp; People</a><a href="./#now-playing">Cinema</a><a href="./#traditions">Traditions</a><a href="./#weekend">Weekend Guide</a><a href="./#archive">Archive</a><a href="./shop.html" aria-current="page">Shop</a><a href="./about.html">About Muzej</a></nav></details></div></div></header>
 
       <main class="shell shop-page" aria-labelledby="shop-title">
         <h1 class="shop-heading" id="shop-title">Shop</h1>
@@ -691,6 +520,11 @@
       })();
     </script>
     <script>
+      const menu=document.querySelector('.utility-menu');
+      document.querySelectorAll('.utility-panel a').forEach(a=>a.addEventListener('click',()=>menu.open=false));
+      document.addEventListener('keydown',e=>{if(e.key==='Escape')menu.open=false;});
+      document.addEventListener('click',e=>{if(!menu.contains(e.target))menu.open=false;});
+
       document.querySelectorAll('.shop-gallery').forEach((gallery) => {
         const photos = Array.from(gallery.querySelectorAll('.shop-plate'));
         const controls = gallery.querySelector('.shop-gallery-controls');
