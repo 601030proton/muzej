@@ -1742,8 +1742,8 @@
 <link rel="stylesheet" href="bylines.css?v=20261107">
 <style>
 .poem-language-label{margin:0 0 28px;font:400 11px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#000}
-#poem-original + #poem-text{margin-top:72px}
-@media(max-width:760px){#poem-original + #poem-text{margin-top:56px}}
+#poem-original:not([hidden]) + #poem-text{margin-top:72px}
+@media(max-width:760px){#poem-original:not([hidden]) + #poem-text{margin-top:56px}}
 </style>
 <style>
 .poem-feature-image{margin:clamp(18px,3vw,36px) 0 0;max-width:520px}
