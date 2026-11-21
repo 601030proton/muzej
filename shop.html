@@ -347,11 +347,12 @@
 </style>
   <link rel="stylesheet" href="article-system.css?v=20261101-consistency-3">
 <link rel="stylesheet" href="shop-editorial.css?v=20261121-caption">
-<link rel="stylesheet" href="muzej-header.css?v=20261121-shop-nav">
+<link rel="stylesheet" href="muzej-header.css?v=20261121-site-nav">
+<script defer src="muzej-header.js?v=20261121-site-nav"></script>
 </head>
   <body>
     <div class="page">
-      <header class="site-header site-header--journal"><div class="shell header-frame"><a aria-label="Muzej home" class="brand-mark" href="./"><img alt="Muzej" class="brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png"/></a><div class="header-tools"><details class="utility-menu"><summary aria-label="Open navigation menu" class="utility-trigger"><span aria-hidden="true" class="utility-icon"><i></i><i></i><i></i></span></summary><nav aria-label="Main navigation" class="utility-panel"><a href="./#selected-stories">Selected Stories</a><a href="./#focus">Art &amp; People</a><a href="./#now-playing">Cinema</a><a href="./#traditions">Traditions</a><a href="./#weekend">Weekend Guide</a><a href="./#archive">Archive</a><a href="./shop.html" aria-current="page">Shop</a><a href="./about.html">About Muzej</a></nav></details></div></div></header>
+      <header class="site-header site-header--journal"><div class="shell header-frame"><a aria-label="Muzej home" class="brand-mark" href="./"><img alt="Muzej" class="brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png"/></a><div class="muzej-menu-tools"><details class="muzej-menu"><summary aria-label="Navigation menu" aria-controls="muzej-menu-panel" class="muzej-menu-trigger"><span aria-hidden="true" class="muzej-menu-icon"><i></i><i></i><i></i></span></summary><nav aria-label="Main navigation" id="muzej-menu-panel" class="muzej-menu-panel"><a href="./#selected-stories">Selected Stories</a><a href="./#focus">Art &amp; People</a><a href="./#now-playing">Cinema</a><a href="./#traditions">Traditions</a><a href="./#weekend">Weekend Guide</a><a href="./#archive">Archive</a><a href="./shop.html" aria-current="page">Shop</a><a href="./about.html">About Muzej</a></nav></details></div></div></header>
 
       <main class="shell shop-page" aria-labelledby="shop-title">
         <h1 class="shop-heading" id="shop-title">Shop</h1>
@@ -520,10 +521,7 @@
       })();
     </script>
     <script>
-      const menu=document.querySelector('.utility-menu');
-      document.querySelectorAll('.utility-panel a').forEach(a=>a.addEventListener('click',()=>menu.open=false));
-      document.addEventListener('keydown',e=>{if(e.key==='Escape')menu.open=false;});
-      document.addEventListener('click',e=>{if(!menu.contains(e.target))menu.open=false;});
+
 
       document.querySelectorAll('.shop-gallery').forEach((gallery) => {
         const photos = Array.from(gallery.querySelectorAll('.shop-plate'));

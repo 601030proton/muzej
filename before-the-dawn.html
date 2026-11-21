@@ -899,7 +899,8 @@ body.muzej-logo-hidden .site-header .brand-mark {
 .vlado-radio-page .radio-article > .radio-row:last-child{margin-bottom:0}
 </style>
 <link rel="stylesheet" href="article-intro.css?v=20261113-deck-below-fold-2">
-<link rel="stylesheet" href="muzej-header.css?v=20261114-canonical-2">
+<link rel="stylesheet" href="muzej-header.css?v=20261121-site-nav">
+<script defer src="muzej-header.js?v=20261121-site-nav"></script>
 </head>
 <body class="radio-article-page vlado-radio-page">
 <header class="site-header">
@@ -907,31 +908,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
 <a aria-label="Muzej home" class="brand-mark" href="index.html">
 <img alt="" aria-hidden="true" class="brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png"/>
 </a>
-<div class="header-tools">
-<details class="utility-menu">
-<summary aria-label="Open navigation menu" class="utility-trigger">
-<span aria-hidden="true" class="utility-icon">
-<span class="utility-icon-line"></span>
-<span class="utility-icon-line"></span>
-<span class="utility-icon-line"></span>
-</span>
-</summary>
-<nav aria-label="Site navigation" class="utility-panel">
-<div class="utility-panel-group">
-<a class="utility-link" href="index.html">Home</a>
-<a class="utility-link" href="index.html#selected-stories">Selected Stories</a>
-<a class="utility-link" href="index.html#now-playing">Now Playing</a>
-<a class="utility-link" href="index.html#catalogue">Catalogue</a>
-<a class="utility-link" href="index.html#archive">Archive</a>
-<a class="utility-link" href="about.html">About Muzej</a>
-</div>
-<div class="utility-panel-group utility-panel-utility">
-<a class="utility-link" href="mailto:muzej.mk@proton.me">Contact</a>
-<a class="utility-link" href="https://www.instagram.com/_muzej/" rel="noopener noreferrer" target="_blank">Instagram</a>
-</div>
-</nav>
-</details>
-</div>
+<div class="muzej-menu-tools"><details class="muzej-menu"><summary aria-label="Navigation menu" aria-controls="muzej-menu-panel" class="muzej-menu-trigger"><span aria-hidden="true" class="muzej-menu-icon"><i></i><i></i><i></i></span></summary><nav aria-label="Main navigation" id="muzej-menu-panel" class="muzej-menu-panel"><a href="./#selected-stories">Selected Stories</a><a href="./#focus">Art &amp; People</a><a href="./#now-playing">Cinema</a><a href="./#traditions">Traditions</a><a href="./#weekend">Weekend Guide</a><a href="./#archive">Archive</a><a href="./shop.html">Shop</a><a href="./about.html">About Muzej</a></nav></details></div>
 </div>
 </header>
 <main id="main-content" class="radio-main"><header class="radio-opening muzej-intro-opening"><div class="radio-title-column muzej-intro-title"><p class="radio-kicker">Music | Eurovision</p><h1>Eurovision 1998: Vlado Janevski</h1><p class="radio-byline muzej-byline">Words <strong>Aleksandar Trajkovski</strong></p></div><div class="radio-opening-column muzej-intro-media"><figure class="radio-object hero-object"><img class="radio-hero-image" fetchpriority="high" decoding="async" alt="Vlado Janevski performing on a brightly lit stage in a blue suit" src="./Assets/Vlado/Pics/hero.png"/></figure><p class="radio-deck muzej-intro-deck">Vlado Janevski, “Ne zori, zoro,” and Macedonia’s Eurovision debut in 1998.</p></div></header>
@@ -967,27 +944,6 @@ body.muzej-logo-hidden .site-header .brand-mark {
 </nav>
 </div>
 </footer>
-<script>
-const menuButton = document.getElementById('menuButton');
-const menuPanel = document.getElementById('menuPanel');
-
-if (menuButton && menuPanel) {
-  const setMenuState = (isOpen) => {
-    menuPanel.classList.toggle('open', isOpen);
-    menuButton.classList.toggle('is-open', isOpen);
-    menuButton.setAttribute('aria-expanded', String(isOpen));
-    menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-  };
-
-  menuButton.addEventListener('click', () => {
-    setMenuState(!menuPanel.classList.contains('open'));
-  });
-
-  menuPanel.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => setMenuState(false));
-  });
-}
-</script>
 <script>
   (function () {
     var previousY = Math.max(window.scrollY || window.pageYOffset || 0, 0);

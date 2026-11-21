@@ -650,7 +650,8 @@ body{font-family:var(--article-serif);color:#000;background:#fff}
 @media(max-width:760px){.watch-hero{padding-top:12px;padding-bottom:48px}.watch-hero-inner{gap:28px}.watch-title{font-size:clamp(42px,9vw,60px)}}
 </style><link rel="stylesheet" href="article-system.css?v=20261101-consistency-3">
 <link rel="stylesheet" href="editorial-sources.css?v=20261109-sources">
-<link rel="stylesheet" href="muzej-header.css?v=20261114-canonical-2">
+<link rel="stylesheet" href="muzej-header.css?v=20261121-site-nav">
+<script defer src="muzej-header.js?v=20261121-site-nav"></script>
 </head>
 <body>
 <header class="site-header">
@@ -659,31 +660,7 @@ body{font-family:var(--article-serif);color:#000;background:#fff}
       <img class="brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png" alt="" aria-hidden="true">
     </a>
 
-    <div class="header-tools">
-      <details class="utility-menu">
-        <summary class="utility-trigger" aria-label="Open navigation menu">
-          <span class="utility-icon" aria-hidden="true">
-            <span class="utility-icon-line"></span>
-            <span class="utility-icon-line"></span>
-            <span class="utility-icon-line"></span>
-          </span>
-        </summary>
-        <nav class="utility-panel" aria-label="Site navigation">
-          <div class="utility-panel-group">
-            <a class="utility-link" href="index.html">Home</a>
-            <a class="utility-link" href="index.html#selected-stories">Selected Stories</a>
-            <a class="utility-link" href="index.html#now-playing">Now Playing</a>
-            <a class="utility-link" href="index.html#catalogue">Catalogue</a>
-<a class="utility-link" href="index.html#archive">Archive</a>
-            <a class="utility-link" href="about.html">About Muzej</a>
-          </div>
-          <div class="utility-panel-group utility-panel-utility">
-            <a class="utility-link" href="mailto:muzej.mk@proton.me">Contact</a>
-            <a class="utility-link" href="https://www.instagram.com/_muzej/" target="_blank" rel="noopener noreferrer">Instagram</a>
-          </div>
-        </nav>
-      </details>
-    </div>
+    <div class="muzej-menu-tools"><details class="muzej-menu"><summary aria-label="Navigation menu" aria-controls="muzej-menu-panel" class="muzej-menu-trigger"><span aria-hidden="true" class="muzej-menu-icon"><i></i><i></i><i></i></span></summary><nav aria-label="Main navigation" id="muzej-menu-panel" class="muzej-menu-panel"><a href="./#selected-stories">Selected Stories</a><a href="./#focus">Art &amp; People</a><a href="./#now-playing">Cinema</a><a href="./#traditions">Traditions</a><a href="./#weekend">Weekend Guide</a><a href="./#archive">Archive</a><a href="./shop.html">Shop</a><a href="./about.html">About Muzej</a></nav></details></div>
   </div>
 </header>
 
@@ -751,54 +728,6 @@ body{font-family:var(--article-serif);color:#000;background:#fff}
   </div>
 </footer>
 
-<script>
-  (function () {
-    var utilityMenu = document.querySelector(".utility-menu");
-
-    if (!utilityMenu) {
-      return;
-    }
-
-    var utilityTrigger = utilityMenu.querySelector(".utility-trigger");
-    var utilityLinks = utilityMenu.querySelectorAll(".utility-link");
-
-    function setUtilityMenuOpen(isOpen) {
-      utilityMenu.open = isOpen;
-
-      if (utilityTrigger) {
-        utilityTrigger.setAttribute("aria-expanded", String(isOpen));
-      }
-    }
-
-    utilityMenu.addEventListener("toggle", function () {
-      if (utilityTrigger) {
-        utilityTrigger.setAttribute("aria-expanded", String(utilityMenu.open));
-      }
-    });
-
-    utilityLinks.forEach(function (link) {
-      link.addEventListener("click", function () {
-        setUtilityMenuOpen(false);
-      });
-    });
-
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape" && utilityMenu.open) {
-        setUtilityMenuOpen(false);
-
-        if (utilityTrigger) {
-          utilityTrigger.focus();
-        }
-      }
-    });
-
-    document.addEventListener("click", function (event) {
-      if (utilityMenu.open && !utilityMenu.contains(event.target)) {
-        setUtilityMenuOpen(false);
-      }
-    });
-  })();
-</script>
 
 <script>
   (function () {

@@ -37,8 +37,8 @@
   left:-12.21%!important;
   top:-341.8%!important;
 }
-.site-header .header-tools{margin:0!important;flex:0 0 auto!important}
-.site-header .utility-trigger{
+.site-header .muzej-menu-tools{margin:0;flex:0 0 auto;pointer-events:auto}
+.site-header .muzej-menu-trigger{
   display:grid!important;
   place-items:center!important;
   width:44px!important;
@@ -50,44 +50,50 @@
   .site-header .shell.header-frame{padding-block:18px!important}
 }
 
-/* Shared navigation for the journal homepage and shop. */
-.site-header--journal .utility-menu { position: relative; }
-.site-header--journal .utility-trigger {
+/* The same compact navigation panel on every page. */
+.site-header .muzej-menu { position: relative; }
+.site-header .muzej-menu:not([open]) .muzej-menu-panel { display: none; }
+.site-header .muzej-menu-trigger {
   list-style: none;
   border: 0;
   background: transparent;
   cursor: pointer;
 }
-.site-header--journal .utility-trigger::-webkit-details-marker { display: none; }
-.site-header--journal .utility-icon { display: grid; gap: 5px; }
-.site-header--journal .utility-icon i {
+.site-header .muzej-menu-trigger::-webkit-details-marker { display: none; }
+.site-header .muzej-menu-icon { display: grid; gap: 5px; }
+.site-header .muzej-menu-icon i {
   display: block;
   width: 23px;
   height: 1px;
   background: #000;
 }
-.site-header--journal .utility-panel {
+.site-header .muzej-menu-panel {
   position: absolute;
   top: 46px;
   right: 0;
   z-index: 30;
-  width: 230px;
+  box-sizing: border-box;
+  width: min(230px, calc(100vw - 44px));
+  max-height: calc(100dvh - 86px);
+  overflow: auto;
   padding: 16px;
   border: 1px solid #dedede;
   background: #fff;
 }
-.site-header--journal .utility-panel a {
+.site-header .muzej-menu-panel a {
   display: block;
   padding: 9px 8px;
-  font: 400 13px/1.5 var(--sans);
+  color: #000;
+  text-decoration: none;
+  font: 400 13px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.site-header--journal .utility-panel a:hover,
-.site-header--journal .utility-panel a[aria-current="page"] {
+.site-header .muzej-menu-panel a:hover,
+.site-header .muzej-menu-panel a[aria-current="page"] {
   text-decoration: underline;
   text-underline-offset: .2em;
 }
-.site-header--journal a:focus-visible,
-.site-header--journal summary:focus-visible {
+.site-header .muzej-menu-panel a:focus-visible,
+.site-header .muzej-menu-trigger:focus-visible {
   outline: 1px solid #000;
   outline-offset: 4px;
 }

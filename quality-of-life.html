@@ -1253,7 +1253,8 @@ main > .more-from-muzej[data-more-from-muzej] {
   }
 }
 </style>
-<link rel="stylesheet" href="muzej-header.css?v=20261114-canonical-2">
+<link rel="stylesheet" href="muzej-header.css?v=20261121-site-nav">
+<script defer src="muzej-header.js?v=20261121-site-nav"></script>
 </head>
 <body class="muzej-feature">
 
@@ -1263,31 +1264,7 @@ main > .more-from-muzej[data-more-from-muzej] {
       <img class="brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png" alt="" aria-hidden="true">
     </a>
 
-    <div class="header-tools">
-      <details class="utility-menu">
-        <summary class="utility-trigger" aria-label="Open navigation menu" aria-controls="quality-navigation" aria-expanded="false">
-          <span class="utility-icon" aria-hidden="true">
-            <span class="utility-icon-line"></span>
-            <span class="utility-icon-line"></span>
-            <span class="utility-icon-line"></span>
-          </span>
-        </summary>
-        <nav class="utility-panel" id="quality-navigation" aria-label="Site navigation">
-          <div class="utility-panel-group">
-            <a class="utility-link" href="index.html">Home</a>
-            <a class="utility-link" href="index.html#selected-stories">Selected Stories</a>
-            <a class="utility-link" href="index.html#now-playing">Now Playing</a>
-            <a class="utility-link" href="index.html#catalogue">Catalogue</a>
-<a class="utility-link" href="index.html#archive">Archive</a>
-            <a class="utility-link" href="about.html">About Muzej</a>
-          </div>
-          <div class="utility-panel-group utility-panel-utility">
-            <a class="utility-link" href="mailto:muzej.mk@proton.me">Contact</a>
-            <a class="utility-link" href="https://www.instagram.com/_muzej/" target="_blank" rel="noopener noreferrer">Instagram</a>
-          </div>
-        </nav>
-      </details>
-    </div>
+    <div class="muzej-menu-tools"><details class="muzej-menu"><summary aria-label="Navigation menu" aria-controls="muzej-menu-panel" class="muzej-menu-trigger"><span aria-hidden="true" class="muzej-menu-icon"><i></i><i></i><i></i></span></summary><nav aria-label="Main navigation" id="muzej-menu-panel" class="muzej-menu-panel"><a href="./#selected-stories">Selected Stories</a><a href="./#focus">Art &amp; People</a><a href="./#now-playing">Cinema</a><a href="./#traditions">Traditions</a><a href="./#weekend">Weekend Guide</a><a href="./#archive">Archive</a><a href="./shop.html">Shop</a><a href="./about.html">About Muzej</a></nav></details></div>
   </div>
 </header>
 
@@ -1616,42 +1593,6 @@ main > .more-from-muzej[data-more-from-muzej] {
     });
   })();
 
-  (function () {
-    var utilityMenu = document.querySelector(".utility-menu");
-
-    if (!utilityMenu) {
-      return;
-    }
-
-    var utilityTrigger = utilityMenu.querySelector(".utility-trigger");
-    var utilityLinks = utilityMenu.querySelectorAll(".utility-link");
-
-    function setUtilityMenuOpen(isOpen) {
-      utilityMenu.open = isOpen;
-
-      if (utilityTrigger) {
-        utilityTrigger.setAttribute("aria-expanded", String(isOpen));
-      }
-    }
-
-    utilityMenu.addEventListener("toggle", function () {
-      if (utilityTrigger) {
-        utilityTrigger.setAttribute("aria-expanded", String(utilityMenu.open));
-      }
-    });
-
-    utilityLinks.forEach(function (link) {
-      link.addEventListener("click", function () {
-        setUtilityMenuOpen(false);
-      });
-    });
-
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") {
-        setUtilityMenuOpen(false);
-      }
-    });
-  })();
 
   (function () {
     var previousY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
