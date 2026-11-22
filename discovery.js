@@ -16,7 +16,8 @@
       "details": "Early 14th century · Painted panel",
       "museum": "Icon Gallery, Ohrid",
       "source": "https://commons.wikimedia.org/wiki/File:Annunciation,_Early_XIV_Century,_St_Mary_Perivleptos_Church,_Ohrid_Icon_Gallery.jpg",
-      "image": "./Assets/Discovery/annunciation-ohrid.webp"
+      "image": "./Assets/Discovery/annunciation-ohrid.webp",
+      "fit": "portrait"
     },
     {
       "id": "petlevski",
@@ -40,7 +41,8 @@
       "details": "Dimitar Kondovski · 1984 · Oil on canvas",
       "museum": "",
       "source": "https://eprints.ugd.edu.mk/12368/3/Strumica%20konferencija.pdf#page=1",
-      "image": "./Assets/Discovery/tsar-samoil-kondovski.webp"
+      "image": "./Assets/Discovery/tsar-samoil-kondovski.webp",
+      "fit": "portrait"
     }
   ];
   const target = (attribute) => discovery.querySelector('[data-discovery-' + attribute + ']');
@@ -62,6 +64,7 @@
       image.alt = work.title;
       image.decoding = 'async';
       image.dataset.workImage = work.id;
+      if (work.fit) image.dataset.discoveryFit = work.fit;
       image.addEventListener('error', () => image.remove(), { once: true });
       image.src = work.image;
       stage.append(image);

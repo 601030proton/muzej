@@ -6,8 +6,13 @@
 }
 
 .discovery-heading {
-  margin: 0 0 20px;
-  font: 400 clamp(21px, 1.8vw, 26px)/1.15 var(--serif);
+  margin: 0;
+  font: 400 clamp(27px, 2.4vw, 34px)/1.15 var(--serif);
+}
+.discovery-intro {
+  margin: 8px auto 14px;
+  color: #525257;
+  font: 14px/1.5 var(--sans);
 }
 .discovery-work { margin: 0; }
 
@@ -36,12 +41,19 @@
   animation: discovery-reveal 220ms ease-out both;
 }
 
+.discovery-stage img[data-discovery-fit="portrait"] { height: 100%; }
+
+/* Hide the museum backing visible through the break in this mask. */
+.discovery-stage img[data-work-image="trebenista-mask"] {
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1025 1024' preserveAspectRatio='none'%3E%3Cpath fill-rule='evenodd' d='M0 0H1025V1024H0Z M215 331 C219 325 222 320 220 316 C215 309 216 301 221 293 C229 283 239 278 249 276 C256 274 259 269 263 263 C267 259 268 252 274 247 C281 239 290 239 298 231 C302 227 311 229 318 231 C327 232 331 237 338 239 C344 241 347 247 350 251 C353 257 357 259 362 259 C368 259 368 255 372 257 C373 267 366 273 362 281 C357 288 355 294 350 299 C344 307 338 313 334 316 C330 321 331 327 327 333 C321 337 323 344 317 347 C312 348 311 355 305 359 C299 366 291 365 286 365 C276 365 272 358 263 359 C258 358 254 360 250 355 C244 350 238 350 233 345 C228 340 221 337 215 331 Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+}
+
 @keyframes discovery-reveal { from { opacity: 0; } to { opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .discovery-stage img { animation: none; } }
 
 .discovery-label { margin: 26px auto 0; }
 main .discovery-label .home-story-headline {
-  font-size: min(var(--home-story-size), calc(var(--home-section-size) - 2px));
+  font-size: clamp(23px, 2.05vw, 30px);
   margin: 0 0 12px;
 }
 .discovery-details { font: 13px/1.5 var(--sans); color: #525257; margin: 0; }
@@ -56,17 +68,15 @@ main .discovery-label .home-story-headline {
   .discovery-stage { height: clamp(240px, 69vw, 375px); }
 }
 
-
 @media (min-width: 900px) {
   .discovery { margin-top: clamp(40px, 4.5vw, 68px); }
-  .discovery-heading { margin-bottom: 12px; }
   .discovery-stage {
-    --compact-padding: 20px;
+    --compact-padding: 28px;
     /* Match the padding reduction in the stage height to keep its image area the same. */
     height: calc(var(--stage-height) - 2 * (var(--stage-padding) - var(--compact-padding)));
     padding-block: var(--compact-padding);
   }
-  .discovery-label { margin-top: 12px; }
+  .discovery-label { margin-top: 16px; }
   main .discovery-label .home-story-headline { margin-bottom: 8px; }
-  .discovery-actions { margin-top: 14px; }
+  .discovery-actions { margin-top: 18px; }
 }
