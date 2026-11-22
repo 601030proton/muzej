@@ -12,11 +12,13 @@
 .discovery-work { margin: 0; }
 
 .discovery-stage {
+  --stage-height: clamp(280px, 48vw, 540px);
+  --stage-padding: clamp(26px, 6vw, 74px);
   display: grid;
   place-items: center;
   grid-template: minmax(0, 1fr) / minmax(0, 1fr);
-  height: clamp(280px, 48vw, 540px);
-  padding: clamp(26px, 6vw, 74px);
+  height: var(--stage-height);
+  padding: var(--stage-padding);
 }
 
 .discovery-stage:empty::before {
@@ -52,4 +54,19 @@ main .discovery-label .home-story-headline {
 
 @media (max-width: 640px) {
   .discovery-stage { height: clamp(240px, 69vw, 375px); }
+}
+
+
+@media (min-width: 900px) {
+  .discovery { margin-top: clamp(40px, 4.5vw, 68px); }
+  .discovery-heading { margin-bottom: 12px; }
+  .discovery-stage {
+    --compact-padding: 20px;
+    /* Match the padding reduction in the stage height to keep its image area the same. */
+    height: calc(var(--stage-height) - 2 * (var(--stage-padding) - var(--compact-padding)));
+    padding-block: var(--compact-padding);
+  }
+  .discovery-label { margin-top: 12px; }
+  main .discovery-label .home-story-headline { margin-bottom: 8px; }
+  .discovery-actions { margin-top: 14px; }
 }
