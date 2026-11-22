@@ -13,8 +13,6 @@
   place-items: center;
   height: clamp(280px, 48vw, 540px);
   padding: clamp(26px, 6vw, 74px);
-  border-radius: 24px;
-  background: #f5f5f7;
 }
 
 .discovery-stage:empty::before {
@@ -28,7 +26,6 @@
   height: 100%;
   min-height: 0;
   object-fit: contain;
-  mix-blend-mode: multiply;
   animation: discovery-reveal 220ms ease-out both;
 }
 
@@ -55,7 +52,7 @@
 
 @media (max-width: 640px) {
   .discovery h2 { margin-bottom: 20px; }
-  .discovery-stage { height: clamp(240px, 69vw, 375px); border-radius: 18px; }
+  .discovery-stage { height: clamp(240px, 69vw, 375px); }
   .discovery-label { min-height: 146px; }
   .discovery-browse ul { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 16px; }
 }
