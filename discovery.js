@@ -8,7 +8,7 @@
       "details": "Neolithic · Terracotta",
       "museum": "Museum of the City of Skopje",
       "source": "https://www.frankfurt-live.com/gesichter-einer-neuen-aera-erste-bauern-in-nordmazedonien-vor-8000-jahren",
-      "image": "./Assets/Discovery/great-mother.webp"
+      "image": "./Assets/Discovery/great-mother-cutout.webp"
     },
     {
       "id": "icon",
