@@ -20,8 +20,10 @@
 <link href="homepage-editorial.css?v=20261122-spomeniks" rel="stylesheet"/>
 <link href="muzej-header.css?v=20261121-site-nav" rel="stylesheet"/>
 <script defer src="muzej-header.js?v=20261121-site-nav"></script>
+<link href="discovery.css?v=1" rel="stylesheet">
+<script defer src="discovery.js?v=1"></script>
 </head><body>
-<header class="site-header site-header--journal"><div class="shell header-frame"><a aria-label="Muzej home" class="brand-mark" href="./"><img alt="Muzej" class="brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png"/></a><div class="muzej-menu-tools"><details class="muzej-menu"><summary aria-label="Navigation menu" aria-controls="muzej-menu-panel" class="muzej-menu-trigger"><span aria-hidden="true" class="muzej-menu-icon"><i></i><i></i><i></i></span></summary><nav aria-label="Main navigation" id="muzej-menu-panel" class="muzej-menu-panel"><a href="./#selected-stories">Selected Stories</a><a href="./#focus">Art &amp; People</a><a href="./#now-playing">Cinema</a><a href="./#traditions">Traditions</a><a href="./#weekend">Weekend Guide</a><a href="./#archive">Archive</a><a href="./shop.html">Shop</a><a href="./about.html">About Muzej</a></nav></details></div></div></header>
+<header class="site-header site-header--journal"><div class="shell header-frame"><a aria-label="Muzej home" class="brand-mark" href="./"><img alt="Muzej" class="brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png"/></a><div class="muzej-menu-tools"><details class="muzej-menu"><summary aria-label="Navigation menu" aria-controls="muzej-menu-panel" class="muzej-menu-trigger"><span aria-hidden="true" class="muzej-menu-icon"><i></i><i></i><i></i></span></summary><nav aria-label="Main navigation" id="muzej-menu-panel" class="muzej-menu-panel"><a href="./#selected-stories">Selected Stories</a><a href="./#focus">Art &amp; People</a><a href="./#now-playing">Cinema</a><a href="./#traditions">Traditions</a><a href="./#weekend">Weekend Guide</a><a href="./#discovery">Discovery</a><a href="./#archive">Archive</a><a href="./shop.html">Shop</a><a href="./about.html">About Muzej</a></nav></details></div></div></header>
 <main>
 <section aria-label="Featured stories" class="home-opening shell" id="hero-feature">
   <article class="opening-lead">
@@ -120,6 +122,40 @@
       </div>
     </article>
   </div>
+</section>
+<section class="shell section discovery" id="discovery" aria-labelledby="discovery-title">
+  <h2 class="home-section-headline" id="discovery-title">Discovery</h2>
+  <figure class="discovery-work">
+    <div class="discovery-stage" data-discovery-stage><img src="./Assets/Discovery/great-mother.webp" alt="The Great Mother of Govrlevo" width="812" height="750" loading="lazy" decoding="async"></div>
+    <figcaption class="discovery-label" aria-live="polite" aria-atomic="true">
+      <h3 data-discovery-title>The Great Mother of Govrlevo</h3>
+      <p class="discovery-details" data-discovery-details>Neolithic · Terracotta</p>
+      <p class="discovery-details" data-discovery-museum>Museum of the City of Skopje</p>
+      <p class="discovery-note" data-discovery-note>Look where the shoulders meet the little house. The figure and the building are one clay form.</p>
+    </figcaption>
+  </figure>
+  <div class="discovery-actions">
+    <button type="button" data-discovery-next hidden>Show another work</button>
+    <a href="https://www.frankfurt-live.com/gesichter-einer-neuen-aera-erste-bauern-in-nordmazedonien-vor-8000-jahren" data-discovery-source>Source &amp; image credit</a>
+  </div>
+  <p class="discovery-credit" data-discovery-credit>Photograph by Stanimir Nedelkovski</p>
+  <details class="discovery-browse">
+    <summary>Browse all 12 works</summary>
+    <ul data-discovery-list>
+      <li><a data-work="great-mother" href="#discovery-great-mother" aria-current="true">The Great Mother of Govrlevo</a></li>
+      <li><a data-work="adam" href="#discovery-adam">The Adam of Govrlevo</a></li>
+      <li><a data-work="maenad" href="#discovery-maenad">The Tetovo Maenad</a></li>
+      <li><a data-work="mask" href="#discovery-mask">Gold Funerary Mask from Gorna Porta</a></li>
+      <li><a data-work="venus" href="#discovery-venus">The Venus of Skupi</a></li>
+      <li><a data-work="icon" href="#discovery-icon">The Annunciation</a></li>
+      <li><a data-work="coat" href="#discovery-coat">Bridal Coat with False Sleeves</a></li>
+      <li><a data-work="mart" href="#discovery-mart">Mother and Child</a></li>
+      <li><a data-work="poppies" href="#discovery-poppies">Poppies</a></li>
+      <li><a data-work="petlevski" href="#discovery-petlevski">Macedonian Village</a></li>
+      <li><a data-work="kondovski" href="#discovery-kondovski">Small Painting</a></li>
+      <li><a data-work="mazev" href="#discovery-mazev">Overripe Grain</a></li>
+    </ul>
+  </details>
 </section>
 <section aria-labelledby="catalogue-title" class="shell section catalogue" id="catalogue"><div class="section-heading"><h2 class="home-section-headline" id="catalogue-title">Catalogue</h2><div class="catalogue-controls" role="group" aria-label="Browse Catalogue" hidden>
 <button type="button" data-step="-1" aria-label="Previous Catalogue entries" aria-controls="catalogue-stories"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M20 12H4m7-7-7 7 7 7"/></svg></button>
