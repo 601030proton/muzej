@@ -1229,6 +1229,16 @@ body main .sources-section.muzej-sources>p{max-width:520px}
 .veles-feature .veles-plate-pair .image-open { width: 100%; }
 .veles-feature .veles-plate-pair + figcaption { margin-inline: 0; }
 .veles-feature .guide-image:has(.veles-plate-pair) { justify-content: flex-start; }
+.veles-feature .veles-history-plates {
+  display: grid;
+  align-self: start;
+  gap: 24px;
+  max-width: calc((100svh - var(--nav-h) - 80px) * 0.75);
+}
+.veles-feature .veles-history-figure { aspect-ratio: auto; }
+@media (max-width: 760px) {
+  .veles-feature .veles-history-plates { max-width: 480px; }
+}
 .veles-feature .feature-title span { display: block; }
 .veles-feature .veles-archive-photo { width: 100%; margin: 28px 0 0; }
 .veles-archive-photo img { display: block; width: 100%; height: auto; }
@@ -1271,18 +1281,18 @@ body main .sources-section.muzej-sources>p{max-width:520px}
 <li><a href="#drawings"><span>02</span>From paper to concrete</a></li>
 <li><a href="#crypt"><span>03</span>The court and the crypt</a></li>
 <li><a href="#mosaics"><span>04</span>Painting with stone</a></li>
-<li><a href="#bronze-tree"><span>05</span>The bronze tree</a></li>
+<li><a href="#wartime-veles"><span>05</span>Veles during World War II</a></li>
 </ol>
 </nav>
 <article aria-label="Veles Kosturnica">
 <section class="guide-entry" id="approach" aria-labelledby="approach-title">
 <header class="guide-entry-head"><span class="guide-number" aria-hidden="true">01</span><h2 class="guide-heading" id="approach-title">The approach</h2></header>
 <div class="guide-entry-grid">
-<figure class="guide-image veles-figure veles-full-plate veles-color-plate">
+<figure class="guide-image veles-figure veles-full-plate">
 <div class="veles-plate">
-<button type="button" class="image-open" data-open-image style="--image-ratio: 543 / 724" data-image-caption="The main stair from below. Rašo, Wikimedia Commons." aria-label="Enlarge: A long stair rises through a planted hillside to the ossuary"><img src="./Assets/Veles-Kosturnica/approach.webp" data-original-src="./Assets/Veles-Kosturnica/approach-full.webp" alt="A long stair rises through a planted hillside to the ossuary" width="543" height="724" loading="lazy" decoding="async"></button>
+<button type="button" class="image-open" data-open-image style="--image-ratio: 1402 / 894" data-image-caption="Architectural model of the Veles Memorial Ossuary. Spomenik Database." aria-label="Enlarge: The two shells and central staircase of the ossuary’s architectural model"><img src="./Assets/Veles-Kosturnica/approach-model.webp" alt="The two shells and central staircase of the ossuary’s architectural model" width="1402" height="894" loading="lazy" decoding="async"></button>
 </div>
-<figcaption><span>The main stair from below.</span></figcaption>
+<figcaption><span>Architectural model of the Veles Memorial Ossuary.<sup class="refs"><a href="#source-3">3</a></sup></span></figcaption>
 </figure>
 <div class="guide-copy"><div class="guide-prose">
 <p>From the foot of the hill, the stair is the clearest line in the complex. It climbs from a paved terrace beside a sunken circular amphitheater. The white roof enters the view well before the entrance does. Near the top, the gap between the two concrete halves marks the way into the court.<sup class="refs"><a href="#source-2">2</a>, <a href="#source-3">3</a></sup></p>
@@ -1353,22 +1363,27 @@ body main .sources-section.muzej-sources>p{max-width:520px}
 </div></div>
 </div>
 </section>
-<section class="guide-entry" id="bronze-tree" aria-labelledby="bronze-tree-title">
-<header class="guide-entry-head"><span class="guide-number" aria-hidden="true">05</span><h2 class="guide-heading" id="bronze-tree-title">The bronze tree</h2></header>
+<section class="guide-entry" id="wartime-veles" aria-labelledby="wartime-veles-title">
+<header class="guide-entry-head"><span class="guide-number" aria-hidden="true">05</span><h2 class="guide-heading" id="wartime-veles-title">Veles during World War II</h2></header>
 <div class="guide-entry-grid">
-<figure class="guide-image veles-figure veles-full-plate veles-color-plate">
+<div class="veles-history-plates">
+<figure class="veles-figure veles-history-figure">
 <div class="veles-plate">
-<button type="button" class="image-open" data-open-image style="--image-ratio: 483 / 644" data-image-caption="Ljubomir Denković’s bronze tree. Source: МАРХ." aria-label="Enlarge: The branching bronze sculpture on a low plinth in the memorial interior"><img src="./Assets/Veles-Kosturnica/bronze-tree.webp" alt="The branching bronze sculpture on a low plinth in the memorial interior" width="483" height="644" loading="lazy" decoding="async"></button>
+<button type="button" class="image-open" data-open-image style="--image-ratio: 1400 / 891" data-image-caption="Partisans march through Veles after its liberation, 1944. Spomenik Database." aria-label="Enlarge: Partisan soldiers march past crowds lining a street in Veles"><img src="./Assets/Veles-Kosturnica/veles-liberation-march-1944.webp" alt="Partisan soldiers march past crowds lining a street in Veles" width="1400" height="891" loading="lazy" decoding="async"></button>
 </div>
-<figcaption><span>Ljubomir Denković’s bronze tree.<sup class="refs"><a href="#source-2">2</a></sup></span></figcaption>
+<figcaption><span>Partisans march through Veles after its liberation, 1944.<sup class="refs"><a href="#source-3">3</a></sup></span></figcaption>
 </figure>
+<figure class="veles-figure veles-history-figure">
+<div class="veles-plate">
+<button type="button" class="image-open" data-open-image style="--image-ratio: 1199 / 801" data-image-caption="Partisans during the battle for Veles, 1944. Spomenik Database." aria-label="Enlarge: Two Partisans in position during the fighting for Veles"><img src="./Assets/Veles-Kosturnica/veles-partisans-1944.webp" alt="Two Partisans in position during the fighting for Veles" width="1199" height="801" loading="lazy" decoding="async"></button>
+</div>
+<figcaption><span>Partisans during the battle for Veles, 1944.<sup class="refs"><a href="#source-3">3</a></sup></span></figcaption>
+</figure>
+</div>
 <div class="guide-copy"><div class="guide-prose">
-<p>Denković’s bronze tree stands above the crypt. Its trunk rises as a single dark mass and breaks into a cluster of angular branches. Seen after the exterior, it brings the idea of flowering back at the scale of a person standing in a room.<sup class="refs"><a href="#source-2">2</a>, <a href="#source-6">6</a></sup></p>
-<p>The municipality’s restoration report records work on the roof and on the mosaics below it. At Veles, the question of how to preserve the art begins with how to keep water out of the building. The roof, the bronze, and the mosaic were designed to be seen together. Caring for the room is part of caring for the works it holds.<sup class="refs"><a href="#source-8">8</a></sup></p>
-<figure class="article-inline-media veles-archive-photo">
-<button type="button" class="image-open" data-open-image data-image-caption="A worker on the roof during the 2003 renovation. Source: Spomenik Database." aria-label="Enlarge: A worker standing on the roof of the memorial during renovation"><img src="./Assets/Veles-Kosturnica/roof-renovation-2003.webp" alt="A worker standing on the roof of the memorial during renovation" width="697" height="523" loading="lazy" decoding="async"></button>
-<figcaption>A worker on the roof during the 2003 renovation. <a href="https://www.spomenikdatabase.org/veles">Spomenik Database</a>.</figcaption>
-</figure>
+<p>German aircraft bombed Veles on April 6, 1941, as Axis forces invaded Yugoslavia. The city came under Bulgarian occupation after the Yugoslav army capitulated. By the following spring, students and women’s groups were protesting in Veles, and Partisan detachments were organizing in the surrounding area.<sup class="refs"><a href="#source-3">3</a></sup></p>
+<p>On November 9, 1944, Partisan forces including the Eighth Veles National Liberation Brigade liberated the city. Crowds lined the street as the Partisans marched through the center. Veles still marks November 9 as the city’s holiday.<sup class="refs"><a href="#source-3">3</a>, <a href="#source-8">8</a></sup></p>
+<p>The remains of fallen fighters were first buried at the Church of St. Panteleimon in Veles. In 1979, they were moved to the new ossuary. The memorial opened that October, thirty-five years after the fighting recorded in these photographs.<sup class="refs"><a href="#source-3">3</a>, <a href="#source-4">4</a></sup></p>
 </div></div>
 </div>
 </section>
@@ -1378,23 +1393,22 @@ body main .sources-section.muzej-sources>p{max-width:520px}
 <ol class="muzej-source-list">
 <li id="source-1"><a href="https://veles.gov.mk/?p=21141">Municipality of Veles — the ossuary, its authors, and the mosaic</a></li>
 <li id="source-2"><a href="https://marh.mk/spomen-kosturnica-veles/">МАРХ — Veles Memorial Ossuary, original plans and sections</a></li>
-<li id="source-3"><a href="https://www.spomenikdatabase.org/veles">Spomenik Database — competition, construction, burial chamber, plaque inscriptions, and mosaic photographs</a></li>
+<li id="source-3"><a href="https://www.spomenikdatabase.org/veles">Spomenik Database — wartime history, competition, construction, burial chamber, plaque inscriptions, and mosaic photographs</a></li>
 <li id="source-4"><a href="https://isie.org.mk/wp-content/uploads/2022/09/ENG_Monumental_MK.pdf">ISIE — Monumental, Veles entry</a></li>
 <li id="source-5"><a href="https://api.drum.lib.umd.edu/server/api/core/bitstreams/5878fd75-f19a-4520-99ae-75d987b570ea/content">Raino Eetu Isto — Monumental Endeavors, chapter 3, note 82, quoting Petar Mazev</a></li>
 <li id="source-6"><a href="https://journals.ukim.mk/index.php/godzbo/en/article/download/4077/3590/8249">Tatjana Filipovska — monumental painting in Macedonia, pp. 186–87</a></li>
 <li id="source-7"><a href="https://veles.gov.mk/odbelezana-114-godisnina-od-ragjanjeto-na-kosta-solev-racin/">Municipality of Veles — Kočo Racin and White Dawns</a></li>
-<li id="source-8"><a href="https://www.veles.gov.mk/downloads/2017/otcet2013-2017/Otcet_2017.pdf">Municipality of Veles — 2013–17 report, restoration of the ossuary</a></li>
+<li id="source-8"><a href="https://veles.gov.mk/9-noemvri-2020/">Municipality of Veles — November 9 and the city’s liberation</a></li>
 </ol>
 </section>
 <section class="sources-section muzej-sources" aria-labelledby="image-credits-title">
 <h2 class="section-heading" id="image-credits-title">Image credits</h2>
 <ol class="muzej-source-list">
 <li>The upper stair and concrete shell. <a href="https://commons.wikimedia.org/wiki/File:Veles_Memorial_Ossuary_03.jpg">Rašo / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Cropped and converted to black and white.</li>
-<li>The main stair from below. <a href="https://commons.wikimedia.org/wiki/File:Veles_Memorial_Ossuary_021.jpg">Rašo / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Cropped.</li>
 <li>The open court and the doorway into the memorial rooms. <a href="https://commons.wikimedia.org/wiki/File:%D0%A1%D0%BF%D0%BE%D0%BC%D0%B5%D0%BD_%D0%BA%D0%BE%D1%81%D1%82%D1%83%D1%80%D0%BD%D0%B8%D1%86%D0%B0_%D0%B8_%D0%BC%D1%83%D0%B7%D0%B5%D1%98_%D0%BD%D0%B0_%D0%BF%D0%B0%D0%B4%D0%BD%D0%B0%D1%82%D0%B8%D1%82%D0%B5_%D0%B1%D0%BE%D1%80%D1%86%D0%B8_%D0%B2%D0%BE_%D0%9D%D0%9E%D0%91,_%D0%92%D0%B5%D0%BB%D0%B5%D1%81.jpg">Dristovski / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Cropped.</li>
 <li>Detail of Petar Mazev’s mosaic. <a href="https://commons.wikimedia.org/wiki/File:%D0%9C%D0%BE%D0%B7%D0%B0%D0%B8%D0%BA_%D0%BE%D0%B4_%D0%9F%D0%B5%D1%82%D0%B0%D1%80_%D0%9C%D0%B0%D0%B7%D0%B5%D0%B2.jpg">Dristovski / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Cropped.</li>
-<li>1980s photograph of the stair, 1978 construction photograph, and 2003 roof renovation photograph. <a href="https://www.spomenikdatabase.org/veles">Spomenik Database</a>.</li>
-<li>Ground-floor plan, section, and interior photograph of the bronze tree. <a href="https://marh.mk/spomen-kosturnica-veles/">МАРХ</a>.</li>
+<li>Architectural model, 1980s stair photograph, 1978 construction photograph, and both 1944 photographs. <a href="https://www.spomenikdatabase.org/veles">Spomenik Database</a>.</li>
+<li>Ground-floor plan and section. <a href="https://marh.mk/spomen-kosturnica-veles/">МАРХ</a>.</li>
 </ol>
 </section>
 </div>
