@@ -25,6 +25,22 @@
       "museum": "Museum of Contemporary Art, Skopje",
       "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=38",
       "image": "./Assets/Discovery/macedonian-village.webp"
+    },
+    {
+      "id": "trebenista-mask",
+      "title": "Trebeništa Funerary Mask",
+      "details": "Late 6th–early 5th century BCE · Sheet gold · Grave IX",
+      "museum": "National Museum of Serbia, Belgrade",
+      "source": "https://novamakedonija.com.mk/zivot/kultura/ќе-ги-видиме-маските-од-требениште-од-м/",
+      "image": "./Assets/Discovery/trebenista-mask.webp"
+    },
+    {
+      "id": "tsar-samoil",
+      "title": "Цар Самоил",
+      "details": "Dimitar Kondovski · 1984 · Oil on canvas",
+      "museum": "",
+      "source": "https://eprints.ugd.edu.mk/12368/3/Strumica%20konferencija.pdf#page=1",
+      "image": "./Assets/Discovery/tsar-samoil-kondovski.webp"
     }
   ];
   const target = (attribute) => discovery.querySelector('[data-discovery-' + attribute + ']');
