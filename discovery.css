@@ -43,18 +43,11 @@ main .discovery-label .home-story-headline {
 .discovery-actions { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 14px 24px; margin: 20px auto 0; }
 .discovery-actions button { border: 0; border-radius: 999px; padding: 13px 21px; background: #171719; color: #fff; font: 500 14px/1.25 var(--sans); cursor: pointer; }
 .discovery-actions button:hover { background: #3d3d41; }
-.discovery-actions a, .discovery-browse summary { font: 14px/1.4 var(--sans); }
+.discovery-actions a { font: 14px/1.4 var(--sans); }
 .discovery-actions a { text-decoration: underline; text-underline-offset: 4px; }
-.discovery-browse { margin-top: 24px; border-top: 1px solid var(--rule); }
-.discovery-browse summary { padding: 14px; cursor: pointer; }
-.discovery-browse ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 24px; }
-.discovery-browse li { border-bottom: 1px solid var(--rule); }
-.discovery-browse a { display: block; padding: 11px 4px; font: 400 17px/1.25 var(--serif); }
-.discovery-browse a[aria-current] { text-decoration: underline; text-underline-offset: 3px; }
 .discovery :focus-visible { outline: 2px solid #171719; outline-offset: 3px; }
 
 @media (max-width: 640px) {
   .discovery h2 { margin-bottom: 20px; }
   .discovery-stage { height: clamp(240px, 69vw, 375px); }
-  .discovery-browse ul { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 16px; }
 }

@@ -30,7 +30,6 @@
   const target = (attribute) => discovery.querySelector('[data-discovery-' + attribute + ']');
   const stage = target('stage');
   const next = target('next');
-  const list = target('list');
   let current = works[0];
   let remaining = works.map((work) => work.id).slice(1);
 
@@ -51,8 +50,6 @@
       image.src = work.image;
       stage.append(image);
     }
-    list.querySelector('[aria-current]')?.removeAttribute('aria-current');
-    list.querySelector('[data-work="' + work.id + '"]')?.setAttribute('aria-current', 'true');
   }
 
   function select(work) {
@@ -71,15 +68,6 @@
     if (!remaining.length) remaining = works.filter((work) => work !== current).map((work) => work.id);
     const id = remaining[Math.floor(Math.random() * remaining.length)];
     select(works.find((work) => work.id === id));
-  });
-
-  list.addEventListener('click', (event) => {
-    const link = event.target.closest('[data-work]');
-    if (!link || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-    event.preventDefault();
-    select(works.find((work) => work.id === link.dataset.work));
-    next.focus({ preventScroll: true });
-    discovery.scrollIntoView({ block: 'start' });
   });
 
   next.hidden = false;
