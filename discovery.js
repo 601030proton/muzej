@@ -57,7 +57,6 @@
     target('title').textContent = work.title;
     target('details').textContent = work.details;
     target('museum').textContent = work.museum;
-    target('source').href = work.source;
     stage.replaceChildren();
     if (work.image) {
       const image = new Image();
