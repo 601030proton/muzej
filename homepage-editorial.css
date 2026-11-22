@@ -171,6 +171,19 @@ main .focus .home-story-headline {
   margin: 16px auto 22px;
 }
 
+@media (min-width: 901px) {
+  .home-opening {
+    --opening-rail-width: calc(clamp(118px, calc(22svh - 46px), 180px) + var(--gap) + 1px);
+    grid-template-columns: minmax(0, 1fr) var(--opening-rail-width);
+    column-gap: clamp(44px, 5vw, 80px);
+  }
+
+  .opening-stories {
+    width: 100%;
+    justify-self: end;
+  }
+}
+
 @media (min-width: 901px) and (max-height: 820px) {
   .home-opening {
     padding-block: 24px;
