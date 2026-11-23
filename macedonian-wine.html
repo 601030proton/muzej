@@ -13,6 +13,8 @@
 <meta property="og:image" content="https://muzej.co/Assets/MacedonianWine/vineyard-hero.webp">
 <link rel="icon" href="./Assets/Font/Muzej%20Logo.ai.png" type="image/png">
 <link rel="stylesheet" href="./fonts.css?v=20261101-consistency-3">
+<link rel="stylesheet" href="./bylines.css?v=20261107">
+<link rel="stylesheet" href="./article-intro.css?v=20261113-deck-below-fold-2">
 <link rel="stylesheet" href="./muzej-header.css?v=20261121-site-nav">
 <link rel="stylesheet" href="./muzej-footer-logo.css?v=20260914">
 <link rel="stylesheet" href="./editorial-sources.css?v=20261109-sources">
@@ -20,7 +22,7 @@
 <script defer src="./muzej-header.js?v=20261121-site-nav"></script>
 <script defer src="./more-from-muzej.js?v=20261123-lazarki-portrait"></script>
 <style>
-:root{--page-x:clamp(22px,5.2vw,80px);--sans:"Helvetica Neue",Helvetica,Arial,sans-serif;--serif:"plantin",Georgia,serif;--foreground:#000;--rule:#d5d5d5}
+:root{--page-x:clamp(22px,5.2vw,80px);--background:#fff;--sans:"Helvetica Neue",Helvetica,Arial,sans-serif;--serif:"plantin",Georgia,serif;--foreground:#000;--rule:#d5d5d5}
 *,*::before,*::after{box-sizing:border-box}
 body{margin:0;background:#fff;color:#000;font-family:var(--serif)}
 a{color:inherit;text-underline-offset:.19em}
@@ -31,21 +33,24 @@ h1,h2,h3{font-weight:400}
 .site-header{position:sticky;top:0;z-index:100;background:transparent;pointer-events:none}
 .site-header .brand-mark,.site-header .muzej-menu-tools{pointer-events:auto}
 .wine-shell{width:min(1280px,calc(100% - 2 * var(--page-x)));margin-inline:auto}
-.wine-hero{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,7vw,106px);align-items:end;padding:8px 0 0}
-.wine-hero-copy{padding-bottom:clamp(0px,3vw,42px)}
-.wine-meta,.wine-byline,.wine-photo-credit,.wine-bottle small,.wine-jump{font:400 12px/1.5 var(--sans)}
-.wine-meta,.wine-byline strong,.wine-bottle small{text-transform:uppercase;letter-spacing:.08em}
-.wine-byline strong{font-weight:600}
-.wine-hero h1{font-size:clamp(46px,6.4vw,96px);line-height:.98;letter-spacing:-.035em;margin:24px 0}
-.wine-hero img{width:min(100%,calc((100svh - 175px) * .75));aspect-ratio:3/4;object-fit:contain;margin-inline:auto}
-.wine-guide{margin-top:clamp(54px,8vw,112px)}
+.wine-opening-frame{max-width:1520px;margin:0 auto;padding:12px var(--page-x) 0}
+.wine-hero{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(36px,6vw,96px)}
+.wine-meta,.wine-byline{font:400 11px/1.5 var(--sans);color:#000}
+.wine-meta{text-transform:uppercase;letter-spacing:.08em}
+.wine-hero h1{font:400 clamp(48px,5.7vw,90px)/.97 var(--serif);letter-spacing:-.025em;max-width:12ch}
+.wine-hero figure{margin:0}
+.wine-hero img{display:block;width:100%;height:clamp(420px,calc(100svh - 190px),720px);object-fit:contain;object-position:center top}
+.wine-hero .muzej-intro-deck{font:400 clamp(26px,2.6vw,38px)/1.2 var(--serif)}
+.wine-guide{margin-top:clamp(64px,8vw,112px)}
+.wine-jump,.wine-bottle small{font:400 12px/1.5 var(--sans)}
+.wine-bottle small{text-transform:uppercase;letter-spacing:.08em}
 .wine-intro{display:grid;gap:1.1rem;max-width:920px;font-size:clamp(23px,1.65vw,31px);line-height:1.46}
 .wine-jump{display:flex;flex-wrap:wrap;gap:12px 26px;border-top:1px solid var(--rule);padding-top:16px;margin:clamp(26px,4vw,54px) 0}
 .wine-jump a{text-decoration:underline}
 .wine-section{width:min(100%,960px);margin:0 auto clamp(64px,9vw,128px);scroll-margin-top:104px}
-.wine-section h2{font-size:clamp(30px,4vw,52px);line-height:1.06;margin-bottom:22px}
-.wine-section h3{font-size:clamp(21px,2vw,27px);line-height:1.16}
-.wine-section p{font-size:clamp(18px,1.65vw,22px);line-height:1.46}
+.wine-section h2{font-size:30px;line-height:1.1;margin-bottom:24px}
+.wine-section h3{font-size:clamp(20px,1.75vw,24px);line-height:1.18}
+.wine-section p{font-size:clamp(21px,1.65vw,25px);line-height:1.46}
 .wine-section p+p{margin-top:1em}
 .wine-region-map{margin-bottom:28px}
 .wine-region-map img{width:100%}
@@ -64,18 +69,26 @@ h1,h2,h3{font-weight:400}
 .wine-deep-dive{border-top:1px solid #111;padding-top:25px}
 .wine-deep-dive p{max-width:580px}
 .wine-deep-dive h2 a{text-decoration-thickness:1px}
-body main .wine-sources{max-width:960px;margin:0 auto}
-body main .wine-sources .muzej-source-list{max-width:none;margin:0}
-.wine-sources li{break-inside:avoid}
+.wine-section.wine-deep-dive{margin-bottom:0}
+body main .sources-section.muzej-sources{margin-inline:0}
+body main .sources-section.muzej-sources .muzej-source-list{margin-block:0}
 .muzej-footer{padding:clamp(3.5rem,7vw,6rem) var(--page-x);background:#000;color:#f7f2e9}
 .footer-inner{display:grid;grid-template-columns:minmax(0,620px) minmax(0,260px);justify-content:center;gap:clamp(24px,6vw,96px);margin:0 auto}
 .footer-statement{margin:20px 0 0;font-size:18px}
 .footer-links{display:flex;flex-direction:column;gap:18px;font:400 13px/1.4 var(--sans)}
-@media(min-width:761px){.wine-sources .muzej-source-list{column-count:2;column-gap:64px}}
+@media(min-width:761px){
+ body main .sources-section.muzej-sources{max-width:none}
+ body main .sources-section.muzej-sources .muzej-source-list{max-width:none;column-count:2;column-gap:64px;column-fill:balance}
+ body main .sources-section.muzej-sources .muzej-source-list>li{break-inside:avoid;page-break-inside:avoid}
+}
+@media(max-width:760px){
+ .wine-hero{grid-template-columns:1fr;gap:36px}
+ .wine-hero h1{font-size:clamp(42px,11vw,68px)}
+ .wine-hero img{width:min(100%,440px);height:auto;aspect-ratio:3/4}
+ .wine-hero .muzej-intro-deck{font-size:26px}
+ .wine-section h2{font-size:26px}
+}
 @media(max-width:720px){
- .wine-hero{grid-template-columns:1fr;gap:24px}
- .wine-hero h1{margin:18px 0}
- .wine-hero img{width:min(100%,440px);margin:0}
  .wine-intro{font-size:clamp(17px,3.3vw,21px)}
  .wine-columns{grid-template-columns:1fr;row-gap:24px}
  .wine-bottle img{height:220px;width:min(100%,210px);margin-inline:auto}
@@ -97,19 +110,23 @@ body main .wine-sources .muzej-source-list{max-width:none;margin:0}
   </div>
 </header>
 <main>
-  <header class="wine-hero wine-shell">
-    <div class="wine-hero-copy">
-      <p class="wine-meta">Wine | Reference</p>
-      <h1>Macedonian Wine</h1>
-      <p class="wine-byline">Words <strong>Aleksandar Trajkovski</strong></p>
-    </div>
-    <figure><img src="./Assets/MacedonianWine/vineyard-hero.webp" width="1080" height="1440" alt="Rows of grapevines on a hillside with mountains beyond." fetchpriority="high"></figure>
-  </header>
+  <div class="wine-opening-frame">
+    <header class="wine-hero muzej-intro-opening">
+      <div class="muzej-intro-title">
+        <p class="wine-meta">Wine | Reference</p>
+        <h1>Macedonian Wine</h1>
+        <p class="wine-byline muzej-byline">Words <strong>Aleksandar Trajkovski</strong></p>
+      </div>
+      <div class="muzej-intro-media">
+        <figure><img src="./Assets/MacedonianWine/vineyard-hero.webp" width="1080" height="1440" alt="Rows of grapevines on a hillside with mountains beyond." fetchpriority="high"></figure>
+        <p class="muzej-intro-deck">A first guide to Macedonia’s wine regions, grapes, and bottles.</p>
+      </div>
+    </header>
+  </div>
 
   <article class="wine-guide wine-shell" aria-label="A guide to Macedonian wine">
     <section class="wine-intro" aria-label="Introduction">
       <p>Start in the valley of the Vardar with two grapes. Vranec is the dark, firm red that became Macedonia’s signature. Temjanika is a fragrant white that can smell like fresh grapes even when the wine is dry. Between them is the first useful lesson in Macedonian wine. The place on the label tells you where to look on a map. The grape and the producer tell you what you might find in the glass.</p>
-      <p>This guide starts with the wine regions inside the country, then follows the names you’ll actually see on bottles.</p>
     </section>
 
     <nav class="wine-jump" aria-label="In this guide">
@@ -177,9 +194,9 @@ body main .wine-sources .muzej-source-list{max-width:none;margin:0}
       <h2 id="next-title"><a href="./how-to-taste-vranec.html">Vranec</a></h2>
       <p>Go deeper into the grape, follow the vineyards on the Tikveš map, and compare Barovo and Bela Voda bottle by bottle.</p>
     </section>
-    <section class="sources-section muzej-sources wine-sources" aria-labelledby="sources-title">
+    <section class="sources-section muzej-sources" aria-labelledby="sources-title">
       <h2 class="section-heading" id="sources-title">Sources</h2>
-      <ol class="muzej-source-list" role="list">
+      <ol class="muzej-source-list">
         <li>Wines of Macedonia, <a href="https://winesofmacedonia.mk/winesofmacedonia-mk-wine-regions/">wine regions</a> and <a href="https://winesofmacedonia.mk/tikves-wine-district/">Tikveš wine district</a>.</li>
         <li>Wines of Macedonia, profiles of <a href="https://winesofmacedonia.mk/central-region/">Vardar Valley</a>, <a href="https://winesofmacedonia.mk/west-region/">Pelagonija–Polog</a>, and <a href="https://winesofmacedonia.mk/east-region/">Pčinja–Osogovo</a>.</li>
         <li>Zvonko Herceg, <a href="https://www.wsetglobal.com/knowledge-centre/blog/2021/october/05/discovering-vranec-and-north-macedonia">“Discovering Vranec and North Macedonia,”</a> WSET, 2021.</li>
