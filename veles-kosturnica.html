@@ -1159,6 +1159,7 @@ body main .sources-section.muzej-sources>p{max-width:520px}
 }
 #crypt .guide-prose > p .refs { color: #666; margin-left: .65em; }
 
+/* Veles uses 3:4 for the hero, the section 01 model, and the section 03 court image. */
 .veles-feature .veles-figure {
   display: flex;
   flex-direction: column;
@@ -1195,7 +1196,12 @@ body main .sources-section.muzej-sources>p{max-width:520px}
   object-position: center;
   filter: grayscale(1);
 }
-.veles-feature .veles-plate .veles-portrait-crop > img { object-fit: cover; }
+.veles-feature .veles-portrait-crop { --image-ratio: 3 / 4; }
+.veles-feature .veles-plate .veles-portrait-crop > img {
+  object-fit: cover;
+  object-position: var(--portrait-position, center);
+}
+.veles-feature #crypt .veles-portrait-crop { --portrait-position: 71% center; }
 .veles-feature .veles-figure figcaption {
   display: grid;
   gap: 5px;
@@ -1297,7 +1303,7 @@ body main .sources-section.muzej-sources>p{max-width:520px}
 <div class="guide-entry-grid">
 <figure class="guide-image veles-figure veles-full-plate">
 <div class="veles-plate">
-<button type="button" class="image-open veles-portrait-crop" data-open-image style="--image-ratio: 3 / 4" data-image-caption="Architectural model of the Veles Memorial Ossuary. Digitally reconstructed crop. Spomenik Database." aria-label="Enlarge: The two shells and central staircase of the ossuary’s architectural model"><img src="./Assets/Veles-Kosturnica/approach-model-portrait-restored.webp" data-source-file="./Assets/Veles-Kosturnica/approach-model.webp" alt="The two shells and central staircase of the ossuary’s architectural model" width="1080" height="1440" loading="lazy" decoding="async"></button>
+<button type="button" class="image-open veles-portrait-crop" data-open-image data-image-caption="Architectural model of the Veles Memorial Ossuary. Digitally reconstructed crop. Spomenik Database." aria-label="Enlarge: The two shells and central staircase of the ossuary’s architectural model"><img src="./Assets/Veles-Kosturnica/approach-model-portrait-restored.webp" data-source-file="./Assets/Veles-Kosturnica/approach-model.webp" alt="The two shells and central staircase of the ossuary’s architectural model" width="1080" height="1440" loading="lazy" decoding="async"></button>
 </div>
 <figcaption><span>Architectural model of the Veles Memorial Ossuary.<sup class="refs"><a href="#source-3">3</a></sup></span></figcaption>
 </figure>
@@ -1338,7 +1344,7 @@ body main .sources-section.muzej-sources>p{max-width:520px}
 <div class="guide-entry-grid">
 <figure class="guide-image veles-figure veles-full-plate veles-color-plate">
 <div class="veles-plate">
-<button type="button" class="image-open" data-open-image style="--image-ratio: 1024 / 683" data-image-caption="The court beneath the split concrete shells." aria-label="Enlarge: The concrete shells and plaques around the circular court"><img src="./Assets/Veles-Kosturnica/court-jurmovski.webp" alt="Concrete shells arch over the circular paving and bronze plaques in the court" width="1024" height="683" loading="lazy" decoding="async"></button>
+<button type="button" class="image-open veles-portrait-crop" data-open-image data-image-caption="The court beneath the split concrete shells." aria-label="Enlarge: The concrete shells and plaques around the circular court"><img src="./Assets/Veles-Kosturnica/court-jurmovski.webp" alt="Concrete shells arch over the circular paving and bronze plaques in the court" width="1024" height="683" loading="lazy" decoding="async"></button>
 </div>
 <figcaption><span>The court beneath the split concrete shells. Boris Jurmovski / МАРХ.</span></figcaption>
 </figure>
