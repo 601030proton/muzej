@@ -96,8 +96,8 @@
       title: "Tobacco Pickers (Тутуноберачите)",
       kicker: "Poetry",
       dek: "Kočo Racin’s poem on the work of picking, threading, and weighing tobacco.",
-      image: "./Assets/TobaccoPickers/tobacco-drying-sharpened.webp",
-      alt: "A worker tends rows of tobacco drying on wooden racks below a church.",
+      image: "./Assets/TobaccoPickers/girl-sorting-tobacco-portrait.webp",
+      alt: "A girl sits by a window, sorting tobacco leaves by hand.",
       position: "center center"
     },
     {
