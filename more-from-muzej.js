@@ -36,8 +36,8 @@
       title: "Lazarki",
       kicker: "Traditions",
       dek: "Girls carry spring blessings from house to house through song.",
-      image: "./Assets/Lazarki/lazarki-07.png",
-      alt: "Young women in traditional dress arranging flowers in a basket.",
+      image: "./Assets/Lazarki/lazarki-hero-portrait.webp",
+      alt: "Portrait of a woman in traditional dress with a floral headdress and layered jewelry.",
       position: "center center"
     },
     {
