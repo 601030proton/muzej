@@ -51,6 +51,14 @@
       "museum": "Museum of Contemporary Art, Skopje",
       "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=68",
       "image": "./Assets/Discovery/balkan-nucleus.webp"
+    },
+    {
+      "id": "shell-fortress",
+      "title": "Shell Fortress",
+      "details": "Vasko Taškovski · 1996 · Oil on canvas",
+      "museum": "Economic Chamber of North Macedonia",
+      "source": "https://www.mchamber.mk/mk/home/umetnostinfo/8",
+      "image": "./Assets/Discovery/shell-fortress.webp"
     }
   ];
   const target = (attribute) => discovery.querySelector('[data-discovery-' + attribute + ']');
