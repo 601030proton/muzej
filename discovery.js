@@ -59,13 +59,99 @@
       "museum": "Economic Chamber of North Macedonia",
       "source": "https://www.mchamber.mk/mk/home/umetnostinfo/8",
       "image": "./Assets/Discovery/shell-fortress.webp"
+    },
+    {
+      "id": "man-from-the-mountain",
+      "title": "Man from the Mountain",
+      "details": "Borka Avramova · 1962 · Terracotta",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=61",
+      "image": "./Assets/Discovery/man-from-the-mountain.webp",
+      "fit": "portrait"
+    },
+    {
+      "id": "legends",
+      "title": "From the Cycle Legends",
+      "details": "Zlatko Stefanov · 1986 · Oil on canvas",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=46",
+      "image": "./Assets/Discovery/legends.webp"
+    },
+    {
+      "id": "flower-garden-vii",
+      "title": "Flower Garden VII (Motif from a Suburb)",
+      "details": "Dušan Perčinkov · 1972 · Oil on canvas",
+      "museum": "National Gallery, Skopje",
+      "source": "https://nationalgallery.mk/pariski-refleksii-3-vo-chifte-amam/",
+      "image": "./Assets/Discovery/flower-garden-vii.webp"
+    },
+    {
+      "id": "eight-textile-models",
+      "title": "Eight Models for a Textile",
+      "details": "Gjorgji Jordanov Capev · 1958 · Drawing on paper",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=20",
+      "image": "./Assets/Discovery/eight-textile-models.webp"
+    },
+    {
+      "id": "stobi-peacock",
+      "title": "Peacock Mosaic",
+      "details": "Episcopal Basilica baptistery · Floor mosaic",
+      "museum": "Stobi",
+      "source": "https://commons.wikimedia.org/wiki/File:Mosaic_floor_decorated_with_a_peacock_in_the_baptistery_of_the_Episcopal_Basilica,_Stobi_(7359173306).jpg",
+      "image": "./Assets/Discovery/stobi-peacock.webp",
+      "credit": {
+        "name": "Carole Raddato",
+        "license": "CC BY-SA 2.0",
+        "url": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Mosaic_floor_decorated_with_a_peacock_in_the_baptistery_of_the_Episcopal_Basilica,_Stobi_(7359173306).jpg"
+      }
+    },
+    {
+      "id": "gjavato",
+      "title": "Gjavato",
+      "details": "Ivo Veljanov · 1977 · Photograph",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=42",
+      "image": "./Assets/Discovery/gjavato.webp"
+    },
+    {
+      "id": "licenoski-poppies",
+      "title": "Poppies",
+      "details": "Lazar Ličenoski · 1955 · Oil on fiberboard",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=52",
+      "image": "./Assets/Discovery/licenoski-poppies.webp"
+    },
+    {
+      "id": "calder-to-skopje",
+      "title": "To Skopje",
+      "details": "Alexander Calder · 1965 · Gouache",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://kunsthallewien.at/en/exhibition/no-feeling-is-final-the-skopje-solidarity-collection/",
+      "image": "./Assets/Discovery/calder-to-skopje.webp"
+    },
+    {
+      "id": "heraclea-great-basilica",
+      "title": "Great Basilica Mosaic",
+      "details": "Narthex · Central detail · Floor mosaic",
+      "museum": "Heraclea Lyncestis, Bitola",
+      "source": "https://muzejbitola.mk/en/mosaic-nartex/",
+      "image": "./Assets/Discovery/heraclea-great-basilica.webp",
+      "credit": {
+        "name": "Petar Milošević",
+        "license": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "note": "cropped",
+        "source": "https://commons.wikimedia.org/wiki/File:Herakleia_Lynkestis_mosaic_(%20%E1%BC%A9%CF%81%CE%AC%CE%BA%CE%BB%CE%B5%CE%B9%CE%B1_%CE%9B%CF%85%CE%B3%CE%BA%CE%B7%CF%83%CF%84%CE%AF%CF%82).jpg"
+      }
     }
   ];
   const target = (attribute) => discovery.querySelector('[data-discovery-' + attribute + ']');
   const stage = target('stage');
   const next = target('next');
   let current = works[0];
-  let remaining = works.map((work) => work.id).slice(1);
+  let remaining = works.map((work) => work.id);
 
   function show(work) {
     current = work;
@@ -73,6 +159,19 @@
     target('title').textContent = work.title;
     target('details').textContent = work.details;
     target('museum').textContent = work.museum;
+    const creditLine = target('credit');
+    creditLine.replaceChildren();
+    creditLine.hidden = !work.credit;
+    if (work.credit) {
+      const { name, source, license, url, note } = work.credit;
+      const photograph = document.createElement('a');
+      photograph.href = source;
+      photograph.textContent = name;
+      const licenseLink = document.createElement('a');
+      licenseLink.href = url;
+      licenseLink.textContent = license;
+      creditLine.append('Photo: ', photograph, ' · ', licenseLink, note ? ' · ' + note : '');
+    }
     stage.replaceChildren();
     if (work.image) {
       const image = new Image();
@@ -107,4 +206,5 @@
   next.hidden = false;
   window.addEventListener('hashchange', openFromHash);
   openFromHash();
+  remaining = remaining.filter((id) => id !== current.id);
 })();
