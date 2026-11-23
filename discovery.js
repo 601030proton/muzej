@@ -116,6 +116,22 @@
       "museum": "Museum of Contemporary Art, Skopje",
       "source": "https://kunsthallewien.at/en/exhibition/no-feeling-is-final-the-skopje-solidarity-collection/",
       "image": "./Assets/Discovery/calder-to-skopje.webp"
+    },
+    {
+      "id": "alexander-issus",
+      "title": "The Battle of Alexander at Issus",
+      "details": "Albrecht Altdorfer · 1529 · Oil on limewood panel",
+      "museum": "Alte Pinakothek, Munich",
+      "source": "https://www.sammlung.pinakothek.de/en/artwork/9pL3Qyz4eb",
+      "image": "./Assets/Discovery/alexander-issus.webp"
+    },
+    {
+      "id": "alexander-founding-alexandria",
+      "title": "Alexander the Great Founding Alexandria",
+      "details": "Placido Costanzi · 1736–37 · Oil on canvas",
+      "museum": "The Walters Art Museum, Baltimore",
+      "source": "https://art.thewalters.org/object/37.790/",
+      "image": "./Assets/Discovery/alexander-founding-alexandria.webp"
     }
   ];
   const target = (attribute) => discovery.querySelector('[data-discovery-' + attribute + ']');
