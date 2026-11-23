@@ -1166,19 +1166,13 @@ body main .sources-section.muzej-sources>p{max-width:520px}
   min-height: 0;
   margin: 0;
 }
-.veles-feature header.muzej-sticky-opening .feature-media.veles-figure {
-  width: 100%;
-  min-height: 0 !important;
+.veles-feature .feature-media.veles-figure {
+  display: flex;
+  justify-content: center;
+  min-height: calc(100svh - 90px);
+  width: min(100%, max(270px, calc(75svh - 155px)));
   aspect-ratio: auto;
-}
-@media (min-width: 761px) {
-  .veles-feature header.muzej-sticky-opening .feature-inner {
-    grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr);
-  }
-  .veles-feature header.muzej-sticky-opening .feature-copy {
-    height: auto;
-    padding: clamp(45px, 10vw, 155px) 0 24px;
-  }
+  margin-inline: auto;
 }
 .veles-feature header.muzej-sticky-opening .feature-media .veles-plate img {
   height: 100% !important;
@@ -1212,6 +1206,7 @@ body main .sources-section.muzej-sources>p{max-width:520px}
   object-position: center;
   filter: grayscale(1);
 }
+.veles-feature .veles-plate .veles-portrait-crop > img { object-fit: cover; }
 .veles-feature .veles-figure figcaption {
   display: grid;
   gap: 5px;
@@ -1236,7 +1231,14 @@ body main .sources-section.muzej-sources>p{max-width:520px}
 }
 .veles-feature .guide-intro { grid-template-columns: 1fr; }
 .veles-feature .guide-prose { max-width: 36em; }
+@media (max-width: 760px) {
+  .veles-feature .feature-media.veles-figure {
+    min-height: calc(100svh - 180px);
+    justify-content: flex-start;
+  }
+}
 @media (max-width: 640px) {
+  .veles-feature .feature-media.veles-figure { width: 100%; }
   .veles-feature .guide-image.veles-full-plate { max-width: 480px; }
   .veles-feature .veles-plate-pair .image-open { width: 76%; }
   .veles-feature .veles-plate-pair + figcaption { margin-inline: 12%; }
@@ -1282,7 +1284,7 @@ body main .sources-section.muzej-sources>p{max-width:520px}
 <div class="feature-scroll-column">
 <figure class="feature-media veles-figure">
 <div class="veles-plate">
-<button type="button" class="image-open" data-open-image style="--image-ratio: 1800 / 1064" data-image-caption="The upper stair and white concrete shells." aria-label="Enlarge: The upper stairs lead toward the two white concrete shells"><img src="./Assets/Veles-Kosturnica/hero-white-shells.webp" alt="A wide staircase leading up to white concrete shells under a blue sky" width="1800" height="1064" fetchpriority="high"></button>
+<button type="button" class="image-open veles-portrait-crop" data-open-image style="--image-ratio: 3 / 4" data-image-caption="The upper stair and white concrete shells." aria-label="Enlarge: The upper stairs lead toward the two white concrete shells"><img src="./Assets/Veles-Kosturnica/hero-white-shells.webp" alt="A wide staircase leading up to white concrete shells under a blue sky" width="1800" height="1064" fetchpriority="high"></button>
 </div>
 </figure>
 <p class="feature-deck">A walk through the 1979 memorial in Veles, from the hillside stair to Petar Mazev’s mosaics.</p>
@@ -1306,7 +1308,7 @@ body main .sources-section.muzej-sources>p{max-width:520px}
 <div class="guide-entry-grid">
 <figure class="guide-image veles-figure veles-full-plate">
 <div class="veles-plate">
-<button type="button" class="image-open" data-open-image style="--image-ratio: 1402 / 894" data-image-caption="Architectural model of the Veles Memorial Ossuary. Spomenik Database." aria-label="Enlarge: The two shells and central staircase of the ossuary’s architectural model"><img src="./Assets/Veles-Kosturnica/approach-model.webp" alt="The two shells and central staircase of the ossuary’s architectural model" width="1402" height="894" loading="lazy" decoding="async"></button>
+<button type="button" class="image-open veles-portrait-crop" data-open-image style="--image-ratio: 3 / 4" data-image-caption="Architectural model of the Veles Memorial Ossuary. Spomenik Database." aria-label="Enlarge: The two shells and central staircase of the ossuary’s architectural model"><img src="./Assets/Veles-Kosturnica/approach-model.webp" alt="The two shells and central staircase of the ossuary’s architectural model" width="1402" height="894" loading="lazy" decoding="async"></button>
 </div>
 <figcaption><span>Architectural model of the Veles Memorial Ossuary.<sup class="refs"><a href="#source-3">3</a></sup></span></figcaption>
 </figure>
