@@ -118,14 +118,6 @@
       "image": "./Assets/Discovery/calder-to-skopje-clean.webp"
     },
     {
-      "id": "alexander-issus",
-      "title": "The Battle of Alexander at Issus",
-      "details": "Albrecht Altdorfer · 1529 · Oil on limewood panel",
-      "museum": "Alte Pinakothek, Munich",
-      "source": "https://www.sammlung.pinakothek.de/en/artwork/9pL3Qyz4eb",
-      "image": "./Assets/Discovery/alexander-issus.webp"
-    },
-    {
       "id": "alexander-founding-alexandria",
       "title": "Alexander the Great Founding Alexandria",
       "details": "Placido Costanzi · 1736–37 · Oil on canvas",
