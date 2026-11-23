@@ -132,6 +132,102 @@
       "museum": "The Walters Art Museum, Baltimore",
       "source": "https://art.thewalters.org/object/37.790/",
       "image": "./Assets/Discovery/alexander-founding-alexandria.webp"
+    },
+    {
+      "id": "camel-caravan",
+      "title": "Camel Caravan",
+      "details": "János Vaszary · 1916 · Oil on canvas",
+      "museum": "Skopje · Hungarian National Gallery",
+      "source": "https://en.mng.hu/artworks/53622/",
+      "image": "./Assets/Discovery/camel-caravan.webp"
+    },
+    {
+      "id": "composition-aux-visages",
+      "title": "Composition aux visages",
+      "details": "Jean Lambert-Rucki · 1919 · Oil on canvas",
+      "museum": "Solun",
+      "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/lambert-jean-rucki/",
+      "image": "./Assets/Discovery/composition-aux-visages.webp"
+    },
+    {
+      "id": "women-in-krusevo",
+      "title": "Macedonian Women in Kruševo",
+      "details": "Albert Gartmann · 1916",
+      "museum": "",
+      "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/gartmann-albert/",
+      "image": "./Assets/Discovery/women-in-krusevo.webp"
+    },
+    {
+      "id": "the-high-road",
+      "title": "Macedonian Landscape: The High Road",
+      "details": "Wilhelm Morgner · 1916 · Watercolor",
+      "museum": "",
+      "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/morgner-wilhelm/",
+      "image": "./Assets/Discovery/the-high-road.webp"
+    },
+    {
+      "id": "skopje-viaduct-rider",
+      "title": "Rider near the Skopje Viaduct",
+      "details": "Ernst Richard Dietze · 1917 · Oil on panel",
+      "museum": "",
+      "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/dietze-richard-ernst/",
+      "image": "./Assets/Discovery/skopje-viaduct-rider.webp"
+    },
+    {
+      "id": "stip-pottery-market",
+      "title": "Pottery Market in Štip",
+      "details": "Ludvík Kuba · 1925 · Oil on panel",
+      "museum": "",
+      "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/kuba-ludvik/",
+      "image": "./Assets/Discovery/stip-pottery-market.webp"
+    },
+    {
+      "id": "lake-ohrid-lear",
+      "title": "Lake Ohrid",
+      "details": "Edward Lear · 1848",
+      "museum": "",
+      "source": "https://commons.wikimedia.org/wiki/File:Lake_Ohrid_by_Edward_Lear_(1848).jpg",
+      "image": "./Assets/Discovery/lake-ohrid-lear.webp"
+    },
+    {
+      "id": "kratovo-1915",
+      "title": "Kratovo",
+      "details": "Ivan Ivanov (Ivanić) · 1915 · Oil on canvas",
+      "museum": "",
+      "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/ivanov-ivan/",
+      "image": "./Assets/Discovery/kratovo-1915.webp"
+    },
+    {
+      "id": "nerezi-monastery",
+      "title": "Nerezi Monastery near Skopje",
+      "details": "František Malý · 1934 · Oil on canvas",
+      "museum": "",
+      "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/maly-frantisek/",
+      "image": "./Assets/Discovery/nerezi-monastery.webp"
+    },
+    {
+      "id": "solun-noll",
+      "title": "Solun",
+      "details": "Alexandre Noll · 1917 · Woodcut",
+      "museum": "",
+      "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/noll-alexandre/",
+      "image": "./Assets/Discovery/solun-noll.webp"
+    },
+    {
+      "id": "bridge-in-struga",
+      "title": "Bridge in Struga",
+      "details": "Stanyo Stamatov · 1915 · Watercolor",
+      "museum": "",
+      "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/stanyo-stamatov/",
+      "image": "./Assets/Discovery/bridge-in-struga.webp"
+    },
+    {
+      "id": "the-kidnapping-of-ellen-stone",
+      "title": "The Kidnapping of Ellen Stone",
+      "details": "Ekaterina Viktorovna Kaminina · Oil on canvas",
+      "museum": "Museum of the Macedonian Struggle, Skopje",
+      "source": "https://mmb.org.mk/en/macedonian-revolutionary-organization-1893-1903/",
+      "image": "./Assets/Discovery/the-kidnapping-of-ellen-stone.webp"
     }
   ];
   const target = (attribute) => discovery.querySelector('[data-discovery-' + attribute + ']');
