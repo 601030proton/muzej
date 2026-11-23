@@ -94,20 +94,6 @@
       "image": "./Assets/Discovery/eight-textile-models.webp"
     },
     {
-      "id": "stobi-peacock",
-      "title": "Peacock Mosaic",
-      "details": "Floor mosaic · Detail",
-      "museum": "Episcopal Basilica baptistery, Stobi",
-      "source": "https://commons.wikimedia.org/wiki/File:Mosaic_floor_decorated_with_a_peacock_in_the_baptistery_of_the_Episcopal_Basilica,_Stobi_(7359173306).jpg",
-      "image": "./Assets/Discovery/stobi-peacock.webp",
-      "credit": {
-        "name": "Carole Raddato",
-        "license": "CC BY-SA 2.0",
-        "url": "https://creativecommons.org/licenses/by-sa/2.0/",
-        "source": "https://commons.wikimedia.org/wiki/File:Mosaic_floor_decorated_with_a_peacock_in_the_baptistery_of_the_Episcopal_Basilica,_Stobi_(7359173306).jpg"
-      }
-    },
-    {
       "id": "gjavato",
       "title": "Gjavato",
       "details": "Ivo Veljanov · 1977 · Photograph",
@@ -130,21 +116,6 @@
       "museum": "Museum of Contemporary Art, Skopje",
       "source": "https://kunsthallewien.at/en/exhibition/no-feeling-is-final-the-skopje-solidarity-collection/",
       "image": "./Assets/Discovery/calder-to-skopje.webp"
-    },
-    {
-      "id": "heraclea-great-basilica",
-      "title": "Great Basilica Mosaic",
-      "details": "Narthex · Central detail · Floor mosaic",
-      "museum": "Heraclea Lyncestis, Bitola",
-      "source": "https://muzejbitola.mk/en/mosaic-nartex/",
-      "image": "./Assets/Discovery/heraclea-great-basilica.webp",
-      "credit": {
-        "name": "Petar Milošević",
-        "license": "CC BY-SA 4.0",
-        "url": "https://creativecommons.org/licenses/by-sa/4.0/",
-        "note": "cropped",
-        "source": "https://commons.wikimedia.org/wiki/File:Herakleia_Lynkestis_mosaic_(%20%E1%BC%A9%CF%81%CE%AC%CE%BA%CE%BB%CE%B5%CE%B9%CE%B1_%CE%9B%CF%85%CE%B3%CE%BA%CE%B7%CF%83%CF%84%CE%AF%CF%82).jpg"
-      }
     }
   ];
   const target = (attribute) => discovery.querySelector('[data-discovery-' + attribute + ']');
