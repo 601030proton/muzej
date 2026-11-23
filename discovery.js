@@ -43,6 +43,14 @@
       "source": "https://eprints.ugd.edu.mk/12368/3/Strumica%20konferencija.pdf#page=1",
       "image": "./Assets/Discovery/tsar-samoil-kondovski.webp",
       "fit": "portrait"
+    },
+    {
+      "id": "balkan-nucleus",
+      "title": "Balkan Nucleus",
+      "details": "Blagoja Manevski · 1985 · Acrylic on paper",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=68",
+      "image": "./Assets/Discovery/balkan-nucleus.webp"
     }
   ];
   const target = (attribute) => discovery.querySelector('[data-discovery-' + attribute + ']');
