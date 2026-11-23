@@ -1197,10 +1197,20 @@ body.muzej-logo-hidden .site-header .brand-mark {
   width: min(960px, calc(100% - 2 * clamp(22px, 5.2vw, 80px)));
   margin: 0 auto clamp(64px, 8vw, 112px);
 }
-.vranec-orientation-copy { max-width: 580px; margin: 0 auto clamp(42px, 5vw, 64px); }
+.vranec-intro-shell {
+  width: min(1280px, calc(100% - 2 * clamp(22px, 5.2vw, 80px)));
+  margin: 0 auto;
+}
+.vranec-intro {
+  display: grid;
+  gap: 1.1rem;
+  width: min(920px, 100%);
+  margin: 0 0 clamp(34px, 5vw, 64px);
+  text-align: left;
+  font: 400 clamp(23px, 1.65vw, 31px)/1.46 "plantin", Georgia, serif;
+}
+.vranec-intro p { margin: 0; }
 .vranec-orientation h2 { margin: 0 0 20px; font: 400 30px/1.1 "plantin", Georgia, serif; }
-.vranec-orientation p { margin: 0 0 1.25em; font: 400 clamp(21px, 1.65vw, 25px)/1.46 "plantin", Georgia, serif; }
-.vranec-orientation p:last-child { margin-bottom: 0; }
 .vranec-map { margin: 0; }
 .vranec-map img { display: block; width: 100%; height: auto; }
 .vranec-map figcaption { margin: 12px 0 0; font: 400 12px/1.5 var(--sans); }
@@ -1226,6 +1236,9 @@ body main .vranec-content .muzej-source-list { max-width: none; margin: 0; }
 }
 @media (min-width: 761px) {
   .vranec-sources .muzej-source-list { column-count: 2; column-gap: clamp(28px, 5vw, 64px); }
+}
+@media (max-width: 720px) {
+  .vranec-intro { margin-bottom: clamp(38px, 8vw, 58px); font-size: clamp(17px, 3.3vw, 21px); }
 }
 @media (max-width: 760px) {
   .vranec-orientation h2 { font-size: 26px; }
@@ -1253,14 +1266,15 @@ body main .vranec-content .muzej-source-list { max-width: none; margin: 0; }
 <div class="radio-main">
 <header class="radio-opening muzej-intro-opening"><div class="radio-title-column muzej-intro-title"><p class="radio-kicker">Wine | Culture</p><h1>Vranec</h1><p class="radio-byline muzej-byline">Words <strong>Aleksandar Trajkovski</strong></p></div><div class="radio-opening-column muzej-intro-media"><figure class="radio-object hero-object"><img class="radio-hero-image" src="./Assets/Vranec/tikves-02.png" width="4501" height="6000" alt="A man holding bunches of dark grapes in his hands." fetchpriority="high"></figure><p class="radio-deck muzej-intro-deck">Macedonia’s signature red grape, from the vineyards of the Vardar Valley to the dinner table.</p></div></header>
 </div>
-<article class="radio-article" aria-labelledby="vranec-introduction">
-<section class="vranec-orientation" aria-labelledby="vranec-introduction">
-  <div class="vranec-orientation-copy">
-    <h2 id="vranec-introduction">A grape and a place</h2>
+<article class="radio-article" aria-label="Vranec">
+<div class="vranec-intro-shell">
+  <section class="vranec-intro" aria-label="Introduction">
     <p>Vranec is a Balkan red grape with dark skins, often recognizable in the glass by its deep color, black-cherry fruit and firm tannins. In Montenegro, where growers have cultivated it for centuries, it goes by Vranac. In Macedonia today it’s a signature red, though its rise here is relatively recent.</p>
     <p>Writing for the Wine &amp; Spirit Education Trust, Zvonko Herceg traces its Macedonian plantings to a postwar trial near Skopje. The grape could yield enough to supply a large Yugoslav market. It spread from there, and today you’ll find it in everything from straightforward varietal wines to cellar-aged blends named for a vineyard.</p>
     <p>For a first look at where it grows, follow the Vardar southeast from Skopje. The valley is the larger wine region. Tikveš is the district around Kavadarci and Negotino, and the name of a winery in Kavadarci. That distinction helps when you turn over a bottle and find both the producer and the place of origin on the label.</p>
-  </div>
+  </section>
+</div>
+<section class="vranec-orientation" aria-labelledby="vranec-map-title">
   <figure class="vranec-map" aria-labelledby="vranec-map-title">
     <h2 id="vranec-map-title">Tikveš and the Vardar Valley</h2>
     <picture>
