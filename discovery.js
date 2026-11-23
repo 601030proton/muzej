@@ -115,7 +115,7 @@
       "details": "Alexander Calder · 1965 · Gouache",
       "museum": "Museum of Contemporary Art, Skopje",
       "source": "https://kunsthallewien.at/en/exhibition/no-feeling-is-final-the-skopje-solidarity-collection/",
-      "image": "./Assets/Discovery/calder-to-skopje.webp"
+      "image": "./Assets/Discovery/calder-to-skopje-clean.webp"
     },
     {
       "id": "alexander-issus",
@@ -155,15 +155,7 @@
       "details": "Albert Gartmann · 1916",
       "museum": "",
       "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/gartmann-albert/",
-      "image": "./Assets/Discovery/women-in-krusevo.webp"
-    },
-    {
-      "id": "the-high-road",
-      "title": "Macedonian Landscape: The High Road",
-      "details": "Wilhelm Morgner · 1916 · Watercolor",
-      "museum": "",
-      "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/morgner-wilhelm/",
-      "image": "./Assets/Discovery/the-high-road.webp"
+      "image": "./Assets/Discovery/women-in-krusevo-clean.webp"
     },
     {
       "id": "skopje-viaduct-rider",
@@ -171,7 +163,7 @@
       "details": "Ernst Richard Dietze · 1917 · Oil on panel",
       "museum": "",
       "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/dietze-richard-ernst/",
-      "image": "./Assets/Discovery/skopje-viaduct-rider.webp"
+      "image": "./Assets/Discovery/skopje-viaduct-rider-clean.webp"
     },
     {
       "id": "stip-pottery-market",
@@ -179,7 +171,7 @@
       "details": "Ludvík Kuba · 1925 · Oil on panel",
       "museum": "",
       "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/kuba-ludvik/",
-      "image": "./Assets/Discovery/stip-pottery-market.webp"
+      "image": "./Assets/Discovery/stip-pottery-market-clean.webp"
     },
     {
       "id": "lake-ohrid-lear",
@@ -203,7 +195,7 @@
       "details": "František Malý · 1934 · Oil on canvas",
       "museum": "",
       "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/maly-frantisek/",
-      "image": "./Assets/Discovery/nerezi-monastery.webp"
+      "image": "./Assets/Discovery/nerezi-monastery-clean.webp"
     },
     {
       "id": "solun-noll",
@@ -211,7 +203,7 @@
       "details": "Alexandre Noll · 1917 · Woodcut",
       "museum": "",
       "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/noll-alexandre/",
-      "image": "./Assets/Discovery/solun-noll.webp"
+      "image": "./Assets/Discovery/solun-noll-clean.webp"
     },
     {
       "id": "bridge-in-struga",
