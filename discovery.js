@@ -96,8 +96,8 @@
     {
       "id": "stobi-peacock",
       "title": "Peacock Mosaic",
-      "details": "Episcopal Basilica baptistery · Floor mosaic",
-      "museum": "Stobi",
+      "details": "Floor mosaic · Detail",
+      "museum": "Episcopal Basilica baptistery, Stobi",
       "source": "https://commons.wikimedia.org/wiki/File:Mosaic_floor_decorated_with_a_peacock_in_the_baptistery_of_the_Episcopal_Basilica,_Stobi_(7359173306).jpg",
       "image": "./Assets/Discovery/stobi-peacock.webp",
       "credit": {
