@@ -1247,6 +1247,13 @@ body main .sources-section.muzej-sources>p{max-width:520px}
 .veles-feature .veles-plate-pair .image-open { width: 100%; }
 .veles-feature .veles-plate-pair + figcaption { margin-inline: 0; }
 .veles-feature .guide-image:has(.veles-plate-pair) { justify-content: flex-start; }
+/* Keep the drawings rail bounded by the drawings and their captions. */
+.veles-feature #drawings .guide-image { aspect-ratio: auto; }
+@media (min-width: 761px) {
+  .veles-feature #drawings .guide-image {
+    max-width: max(14rem, calc((100svh - var(--nav-h) - 96px) * 1024 / 1151));
+  }
+}
 .veles-feature .veles-history-plates {
   display: grid;
   align-self: start;
