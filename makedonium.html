@@ -1139,10 +1139,12 @@ body main .sources-section.muzej-sources>p{max-width:520px}
   margin: 0;
 }
 .makedonium-feature .feature-media.makedonium-figure {
+  --hero-start: calc(var(--nav-h) + 30px);
+  --hero-room: max(0px, calc(100svh - var(--hero-start) - 18px));
   display: flex;
-  justify-content: center;
-  min-height: calc(100svh - 90px);
-  width: min(100%, max(270px, calc(75svh - 115px)));
+  justify-content: flex-start;
+  min-height: var(--hero-room) !important;
+  width: min(100%, calc(var(--hero-room) * .75));
   aspect-ratio: auto;
   margin-inline: auto;
 }
@@ -1202,13 +1204,9 @@ body main .sources-section.muzej-sources>p{max-width:520px}
 .makedonium-feature .guide-intro { grid-template-columns: 1fr; }
 .makedonium-feature .guide-prose { max-width: 36em; }
 @media (max-width: 760px) {
-  .makedonium-feature .feature-media.makedonium-figure {
-    min-height: calc(100svh - 180px);
-    justify-content: flex-start;
-  }
+  .makedonium-feature .feature-media.makedonium-figure { --hero-start: 290px; }
 }
 @media (max-width: 640px) {
-  .makedonium-feature .feature-media.makedonium-figure { width: 100%; }
   .makedonium-feature .guide-image.makedonium-full-plate { max-width: 480px; }
   .makedonium-feature .makedonium-plate-pair .image-open { width: 76%; }
   .makedonium-feature .makedonium-plate-pair + figcaption { margin-inline: 12%; }
@@ -1230,6 +1228,25 @@ body main .sources-section.muzej-sources>p{max-width:520px}
 <button type="button" class="image-open" data-open-image style="--image-ratio: 3 / 4" data-image-caption="The dome under construction, 1973. Grabul Family Archive, MoMA." aria-label="Enlarge the dome and its scaffolding in 1973"><img src="./Assets/Makedonium/construction-1973-portrait.webp" data-original-src="./Assets/Makedonium/construction-1973.jpg" data-original-alt="The dome and its scaffolding in 1973" alt="The dome and its scaffolding in 1973, with the sky and foreground extended for the portrait format" width="1098" height="1464" fetchpriority="high"></button>
 </div>
 </figure><p class="feature-deck">The Ilinden Monument commemorates the 1903 Ilinden Uprising and the first session of ASNOM in 1944.</p><div class="guide-intro"><p>Makedonium, also known as the Ilinden Monument, opened on August 2, 1974, on Gumenje hill in Kruševo. Iskra Grabuloska designed the complex with sculptor Jordan Grabuloski. Its main path passes a crypt and an outdoor classroom before reaching the white dome.<sup class="refs"><a href="#source-1">1</a>, <a href="#source-7">7</a></sup></p></div></div></div></header>
+<script>
+(() => {
+  const opening = document.querySelector('header.muzej-sticky-opening');
+  const hero = opening.querySelector('.feature-media.makedonium-figure');
+
+  function measureHeroStart() {
+    const top = Math.max(0, Math.ceil(hero.getBoundingClientRect().top + window.scrollY));
+    hero.style.setProperty('--hero-start', top + 'px');
+  }
+
+  measureHeroStart();
+  window.addEventListener('resize', measureHeroStart);
+  if ('ResizeObserver' in window) {
+    const observer = new ResizeObserver(measureHeroStart);
+    observer.observe(document.querySelector('.site-header'));
+    observer.observe(opening.querySelector('.feature-copy'));
+  }
+})();
+</script>
 <nav class="guide-index" aria-label="Sections in this feature"><h2 class="guide-index-title">In this feature</h2><ol>
 <li><a href="#two-ilindens"><span>01</span>The approach</a></li>
 <li><a href="#drawings"><span>02</span>Design and construction</a></li>
