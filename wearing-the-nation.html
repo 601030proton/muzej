@@ -760,9 +760,9 @@ body.muzej-logo-hidden .site-header .brand-mark {
 .shirt-visual {min-width:0;text-align:center}
 .shirt-stage {display:grid;grid-template-columns:44px minmax(0,1fr) 44px;align-items:center;gap:clamp(0px,2vw,16px)}
 .shirt-slide {min-width:0;margin:0}
-.shirt-image-frame {display:grid;place-items:center;aspect-ratio:6/7}
-.shirt-image-frame img {display:block;width:var(--shirt-scale,100%);height:auto}
-.shirt-slide .shirt-image-frame {width:min(100%,390px);margin-inline:auto}
+.shirt-image-frame {display:grid;grid-template: minmax(0,1fr) / minmax(0,1fr);place-items:center;aspect-ratio:6/7}
+.shirt-image-frame img {display:block;width:var(--shirt-scale,100%);max-width:none;height:auto}
+.shirt-slide .shirt-image-frame {width:min(92%,390px);margin-inline:auto}
 .shirt-year-text {min-width:0;padding-top:clamp(24px,5vw,70px)}
 .shirt-year[hidden] {display:none}
 .shirt-year + .shirt-year:not([hidden]) {margin-top:32px}
@@ -778,7 +778,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
 .shirt-filmstrip a {min-width:0;display:grid;justify-items:center;gap:3px;padding:3px 4px 6px;border-bottom:1px solid #e7e2dc;color:#25211f;font:400 12px/1.25 var(--sans,Arial,sans-serif);text-decoration:none}
 .shirt-filmstrip a[aria-current="true"],.shirt-filmstrip a:hover {border-color:#211e1b}
 .shirt-filmstrip a[aria-current="true"] {font-weight:700}
-.shirt-filmstrip .shirt-image-frame {width:min(100%,67px)}
+.shirt-filmstrip .shirt-image-frame {width:min(90%,67px)}
 .shirt-slideshow :focus-visible {outline:2px solid #211e1b;outline-offset:3px}
 @media(max-width:760px) {
   .shirt-layout {grid-template-columns:minmax(0,1fr);gap:22px}
@@ -815,17 +815,17 @@ body.muzej-logo-hidden .site-header .brand-mark {
         <div class="shirt-stage">
           <button class="shirt-arrow" type="button" data-shirt-step="-1" aria-label="Previous shirt" hidden>‹</button>
           <figure class="shirt-slide">
-            <div class="shirt-image-frame" style="--shirt-scale:97.6%"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-1994.webp" alt="Gems · 1994 shirt, front view" width="480" height="560" fetchpriority="high"></div>
+            <div class="shirt-image-frame" style="--shirt-scale:110%"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-1994.webp" alt="Gems · 1994 shirt, front view" width="480" height="560" fetchpriority="high"></div>
           </figure>
           <button class="shirt-arrow" type="button" data-shirt-step="1" aria-label="Next shirt" hidden>›</button>
         </div>
         <nav class="shirt-filmstrip" aria-label="Choose a shirt">
-          <a href="#shirt-1994" aria-label="Gems · 1994" aria-current="true" data-shirt-scale="97.6%">
-            <span class="shirt-image-frame" style="--shirt-scale:97.6%"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-1994.webp" alt="" width="480" height="560" decoding="async"></span>
+          <a href="#shirt-1994" aria-label="Gems · 1994" aria-current="true" data-shirt-scale="110%">
+            <span class="shirt-image-frame" style="--shirt-scale:110%"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-1994.webp" alt="" width="480" height="560" decoding="async"></span>
             <span>1994</span>
           </a>
-          <a href="#shirt-1998" aria-label="Puma · 1998" data-shirt-scale="100%">
-            <span class="shirt-image-frame" style="--shirt-scale:100%"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-1998.webp" alt="" width="480" height="560" decoding="async"></span>
+          <a href="#shirt-1998" aria-label="Puma · 1998" data-shirt-scale="114%">
+            <span class="shirt-image-frame" style="--shirt-scale:114%"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-1998.webp" alt="" width="480" height="560" decoding="async"></span>
             <span>1998</span>
           </a>
           <a href="#shirt-2016" aria-label="JAKO · 2016" data-shirt-scale="89.7%">
