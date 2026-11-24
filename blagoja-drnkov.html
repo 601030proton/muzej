@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Blagoja Drnkov: More Than Words | Muzej Catalogue</title>
-<meta name="description" content="A selection of photographs presented with a biography of Macedonian photographer and documentary filmmaker Blagoja Drnkov (1914–2012).">
+<meta name="description" content="Work, dress, and village life in eight photographs, from a potter’s wheel to a wedding procession in Galičnik.">
 <link rel="stylesheet" href="editorial-sources.css?v=20261109-sources">
 <link rel="stylesheet" href="muzej-footer-logo.css?v=20260914">
 <link rel="stylesheet" href="fonts.css?v=20261101-consistency-3">
@@ -22,14 +22,6 @@ body { margin: 0; background: #fff; color: #000; font-family: var(--muzej-body-f
 a { color: inherit; text-underline-offset: .16em; }
 .site-header { position: sticky; top: 0; z-index: 10; }
 
-
-
-
-
-
-
-
-
 .profile-main { max-width: 1520px; margin: auto; padding: 12px var(--page-x) 0; }
 .profile-opening { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: var(--profile-gap); }
 .profile-title h1 { font: 400 clamp(44px, 4.4vw, 70px)/.97 var(--muzej-body-family); letter-spacing: -.025em; }
@@ -40,16 +32,6 @@ a { color: inherit; text-underline-offset: .16em; }
 .profile-deck { font: 400 clamp(26px, 2.6vw, 38px)/1.2 var(--muzej-body-family); }
 .profile-main > article { margin-top: 120px; }
 
-
-
-
-
-
-
-
-
-
-
 .site-footer { background: #111; color: #fff; padding: 60px var(--page-x); font: 400 13px/1.5 var(--sans); }
 .footer-inner { max-width: 1360px; margin: auto; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; }
 .footer-statement { margin: 16px 0 0; }
@@ -59,10 +41,9 @@ a { color: inherit; text-underline-offset: .16em; }
 @media (max-width: 760px) {
   .profile-main { padding-inline: 20px; }
   .profile-opening { grid-template-columns: minmax(0, 1fr); gap: 36px; }
-  .profile-title h1 { font-size: clamp(36px, 9vw, 60px); }
+  .profile-title h1 { font-size: clamp(32px, 8.4vw, 56px); }
   .profile-hero img { height: auto; }
   .profile-main > article { margin-top: 64px; }
-
 
   .footer-inner { align-items: flex-start; flex-direction: column; }
 }
@@ -70,36 +51,19 @@ a { color: inherit; text-underline-offset: .16em; }
 :root { --rule:#ddd; --measure: 62ch; }
 html { scroll-padding-top: 105px; }
 header.muzej-intro-opening > .muzej-intro-title { height: min(calc(100svh - 154px), 680px); }
-.profile-main .profile-title h1 { max-width: 12ch; }
 .profile-hero img {
   width: min(100%, calc((100svh - 140px) * .75), 540px);
   height:auto; aspect-ratio:3/4; object-fit:cover; object-position:51% center;
   margin-inline:auto;
 }
 .profile-hero figcaption { width:min(100%,calc((100svh - 140px) * .75),540px); margin:10px auto 0; }
-.profile-main > article { margin-top: clamp(64px, 9vw, 120px); }
+.profile-main > article { margin-top: clamp(64px, 7vw, 104px); }
 .profile-opening .profile-deck { max-width: 24ch; margin-top:36px; }
-
-
-
-
-
-
-
 
 .plate-media { position:relative; display:block; aspect-ratio: 1.2; cursor:zoom-in; }
 .plate-media img { position:absolute; inset:0; display:block; width:100%; height:100%; object-fit:contain; }
 
-
-
 .plate-title { display:block; font:400 clamp(17px,1.8vw,24px)/1.15 var(--muzej-body-family); margin-bottom:4px; }
-
-.plate-source { text-decoration:none; display:inline-block; border-bottom:1px solid #bbb; margin-top:3px; }
-
-
-
-
-
 
 .viewer { color:#000; border:1px solid #ccc; width:min(900px,calc(100% - 24px)); max-height:calc(100dvh - 24px); padding:18px; background:#fff; }
 .viewer::backdrop { background: rgb(0 0 0 / .75); }
@@ -113,15 +77,12 @@ header.muzej-intro-opening > .muzej-intro-title { height: min(calc(100svh - 154p
   header.muzej-intro-opening > .muzej-intro-title { height:auto; }
   .profile-hero img,.profile-hero figcaption { width:min(100%,410px); }
 
-
-
-
   .profile-opening .profile-deck { margin-top:28px; }
 }
 @media(max-width:340px){ .viewer-controls button { padding-inline:5px; } }
 
 /* Catalogue photograph sequence */
-.profile-main .profile-title h1 { max-width: none; }
+.profile-subtitle { display:block; margin-top:.15em; font-size:.85em; }
 .profile-opening .profile-deck { max-width: 29ch; }
 .portrait-hero.plate-media { position:relative; display:block; width:min(100%,calc((100svh - 140px) * .75),540px); aspect-ratio:3/4; margin-inline:auto; }
 .portrait-hero.plate-media img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:56% 50%; margin:0; }
@@ -129,50 +90,39 @@ header.muzej-intro-opening > .muzej-intro-title { height: min(calc(100svh - 154p
 .catalogue-entry h2 { font:400 clamp(26px,3vw,38px)/1.1 var(--muzej-body-family); margin:0; }
 .catalogue-entry p { font:400 clamp(19px,2vw,24px)/1.48 var(--muzej-body-family); max-width:54ch; margin:0 0 1em; }
 .catalogue-entry p:last-child { margin-bottom:0; }
-.portfolio { max-width:1120px; margin:clamp(62px,10vw,132px) auto 0; }
+.portfolio { max-width:1120px; margin:clamp(62px,8vw,108px) auto 0; }
 .portfolio-row { display:grid; grid-template-columns:minmax(0,1fr); align-items:end; margin:0 auto clamp(65px,10vw,138px); }
 .portfolio-row:last-child { margin-bottom:0; }
-.portfolio-row.portrait-pair { grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:clamp(24px,6vw,80px); width:86%; }
 .portfolio-row.offset-pair { grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr); gap:clamp(24px,6vw,80px); align-items:center; }
 .portfolio-row.indented { width:45%; margin-left:12%; }
 .portfolio-row.wide { width:100%; }
 .portfolio-row.portrait-solo { width:min(48%,460px); margin-right:12%; }
-.portfolio-row.closing { width:min(58%,575px); }
+.portfolio-row.closing { width:min(45%,430px); }
 .photo-plate { min-width:0; margin:0; }
 .photo-plate .plate-media { display:block; width:100%; aspect-ratio:auto; }
 .photo-plate .plate-media img { display:block; position:static; width:100%; height:auto; max-height:none; }
 .photo-plate figcaption { margin-top:12px; }
 .photo-plate .plate-title,.profile-hero .plate-title { display:inline; font:inherit; margin:0; }
-.photo-plate .plate-source,.profile-hero .plate-source { margin:0 0 0 .75em; }
 @media(max-width:760px){
  .portrait-hero.plate-media,.profile-hero figcaption { width:min(100%,410px); }
  .catalogue-entry { grid-template-columns:1fr; gap:16px; }
- .portfolio-row.portrait-pair,.portfolio-row.offset-pair { grid-template-columns:1fr; gap:46px; width:100%; }
- .portfolio-row.portrait-pair > :first-child { width:78%; }
+ .portfolio-row.offset-pair { grid-template-columns:1fr; gap:46px; width:100%; }
  .portfolio-row.offset-pair > :last-child { width:76%; margin-left:auto; }
  .portfolio-row.indented { width:82%; margin-left:0; }
  .portfolio-row.portrait-solo { width:76%; margin-right:0; }
- .portfolio-row.closing { width:90%; }
+ .portfolio-row.closing { width:84%; }
 }
 
-.scroll-beat { margin:0 auto clamp(65px,10vw,138px); }
-.scroll-beat .portfolio-row { margin-bottom:0; }
-.scroll-beat:last-child { margin-bottom:0; }
 @media (min-width: 900px) and (min-height: 760px) and (prefers-reduced-motion: no-preference) {
-  .scroll-beat .portfolio-row:has(.sticky-plate) {
-    align-items:start;
-    padding-bottom:clamp(76px,12svh,120px);
-  }
-  .scroll-beat .sticky-plate { position:sticky; top:108px; align-self:start; }
-  .scroll-beat .sticky-plate .plate-media img {
+  .shoreline { align-items:start; padding-bottom:clamp(76px,12svh,120px); }
+  .shoreline > :first-child { position:sticky; top:var(--profile-sticky-top); }
+  .shoreline > :first-child img {
     max-height:calc(100svh - 200px);
     width:auto;
     max-width:100%;
     margin-inline:auto;
   }
-  .scroll-beat .portfolio-row:has(.sticky-plate) > .photo-plate:not(.sticky-plate) {
-    margin-top:clamp(130px,29svh,260px);
-  }
+  .shoreline > :last-child { margin-top:clamp(190px,37svh,360px); }
 }
 @media (max-width: 760px) {
   .biography-label { display:contents; }
@@ -197,7 +147,7 @@ body main .catalogue-sources > .sources-section.muzej-sources {
 <script defer src="muzej-header.js?v=20261121-site-nav"></script>
 <link rel="stylesheet" href="more-from-muzej.css?v=20261108-full-cassette">
 <script src="more-from-muzej.js?v=20261123-lazarki-portrait" defer></script>
-<meta property="og:type" content="article"><meta property="og:title" content="Blagoja Drnkov: More Than Words | Muzej"><meta property="og:description" content="A selection of photographs presented with a biography of Blagoja Drnkov."><meta property="og:image" content="https://muzej.co/Assets/Drnkov/catalogue-hero.webp"><meta property="og:url" content="https://muzej.co/blagoja-drnkov.html"><link rel="canonical" href="https://muzej.co/blagoja-drnkov.html"><link rel="icon" href="./Assets/Muzej%20Logo/MuzejNewWord.png" type="image/png"></head>
+<meta property="og:type" content="article"><meta property="og:title" content="Blagoja Drnkov: More Than Words | Muzej"><meta property="og:description" content="Work, dress, and village life in eight photographs, from a potter’s wheel to a wedding procession in Galičnik."><meta property="og:image" content="https://muzej.co/Assets/Drnkov/catalogue-hero.webp"><meta property="og:url" content="https://muzej.co/blagoja-drnkov.html"><link rel="canonical" href="https://muzej.co/blagoja-drnkov.html"><link rel="icon" href="./Assets/Muzej%20Logo/MuzejNewWord.png" type="image/png"></head>
 <body>
 <header class="site-header">
 <div class="shell header-frame">
@@ -211,10 +161,10 @@ body main .catalogue-sources > .sources-section.muzej-sources {
   <header class="profile-opening muzej-intro-opening">
     <div class="profile-title muzej-intro-title">
       <p class="profile-kicker"><a href="https://muzej.co/#catalogue">Catalogue</a> | Photography</p>
-      <h1>Blagoja Drnkov: More Than Words</h1>
+      <h1>Blagoja Drnkov<span class="profile-subtitle"> More Than Words</span></h1>
     </div>
     <div class="muzej-intro-media">
-      <figure class="profile-hero"><a class="plate-media portrait-hero" href="./Assets/Drnkov/catalogue-hero.webp"><img src="./Assets/Drnkov/catalogue-hero.webp" width="894" height="1192" alt="Blagoja Drnkov holding a camera" decoding="async" fetchpriority="high"></a></figure><p class="profile-deck muzej-intro-deck">Photography and documentary film in Macedonia.</p>
+      <figure class="profile-hero"><a class="plate-media portrait-hero" href="./Assets/Drnkov/catalogue-hero.webp"><img src="./Assets/Drnkov/catalogue-hero.webp" width="894" height="1192" alt="Blagoja Drnkov holding a camera" decoding="async" fetchpriority="high"></a></figure><p class="profile-deck muzej-intro-deck">Work, dress, and village life in eight photographs, from a potter’s wheel to a wedding procession in Galičnik.</p>
     </div>
   </header>
 
@@ -222,25 +172,62 @@ body main .catalogue-sources > .sources-section.muzej-sources {
     <section class="catalogue-entry" aria-labelledby="biography">
 <div class="biography-label"><h2 id="biography">Biography</h2>
 </div><div>
-<p>Blagoja Drnkov (1914–2012) was a Macedonian photographer and documentary filmmaker. He was born in Skopje and exhibited <i>Silence</i> in Belgrade in 1934. His photographs include portraits, landscapes, and records of village life and work.</p>
-<p>From 1953 to 1957, Drnkov worked at the Ethnological Museum in Skopje. The Museum of Contemporary Art in Skopje presented a solo exhibition of his photography in 1974. A jubilee exhibition followed in 1984. The 2022 exhibition <i>More Than Words</i> examined his work in the ethnological museum archive.</p>
+<p>Blagoja Drnkov (1914–2012) was a Macedonian photographer and documentary filmmaker. Born in Skopje, he exhibited <i>Silence</i> in Belgrade in 1934.</p>
+<p>From 1953 to 1957, Drnkov photographed fieldwork and museum collections for the Ethnological Museum in Skopje. The museum’s negative register records his photographs of clothing, crafts, and ceremonies. The Museum of Contemporary Art in Skopje held a solo exhibition in 1974. The 2022 exhibition <i>More Than Words</i> returned to his work in the ethnological museum archive.</p>
 </div>
-</section><section class="portfolio" aria-label="Selected photographs">
-<div class="scroll-beat"><div class="portfolio-row portrait-pair"><figure class="photo-plate"><a class="plate-media" href="./Assets/Drnkov/catalogue-berba.webp" data-source="./Assets/Drnkov/catalogue-berba.webp"><img src="./Assets/Drnkov/catalogue-berba.webp" width="880" height="1203" alt="Workers gather cotton by hand in a field." decoding="async" loading="lazy"></a></figure><figure class="photo-plate"><a class="plate-media" href="./Assets/Drnkov/catalogue-folk.webp" data-source="./Assets/Drnkov/catalogue-folk.webp"><img src="./Assets/Drnkov/catalogue-folk.webp" width="917" height="1152" alt="A woman in embroidered clothing stands in a field." decoding="async" loading="lazy"></a></figure></div></div>
-<div class="portfolio-row wide"><figure class="photo-plate"><a class="plate-media" href="./Assets/Drnkov/catalogue-pottter.webp" data-source="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf#page=9"><img src="./Assets/Drnkov/catalogue-pottter.webp" width="1147" height="912" alt="Hands shape a clay vessel on a wheel." decoding="async" loading="lazy"></a><figcaption><span class="plate-title"><i>Potter’s Hands</i></span>, 1947. <a class="plate-source" href="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf#page=9" aria-label="Source for Potter’s Hands">Source</a></figcaption></figure></div>
-<div class="scroll-beat"><div class="portfolio-row offset-pair"><figure class="photo-plate sticky-plate"><a class="plate-media" href="./Assets/Drnkov/catalogue-bleach.webp" data-source="./Assets/Drnkov/catalogue-bleach.webp"><img src="./Assets/Drnkov/catalogue-bleach.webp" width="1024" height="1024" alt="A woman holds a length of white cloth by the water." decoding="async" loading="lazy"></a></figure><figure class="photo-plate"><a class="plate-media" href="./Assets/Drnkov/catalogue-sea.webp" data-source="./Assets/Drnkov/catalogue-sea.webp"><img src="./Assets/Drnkov/catalogue-sea.webp" width="1197" height="880" alt="A figure in silhouette stands in shallow water." decoding="async" loading="lazy"></a></figure></div></div>
-<div class="scroll-beat"><div class="portfolio-row offset-pair"><figure class="photo-plate"><a class="plate-media" href="./Assets/Drnkov/catalogue-vill.webp" data-source="./Assets/Drnkov/catalogue-vill.webp"><img src="./Assets/Drnkov/catalogue-vill.webp" width="1059" height="992" alt="A seated figure overlooks a hillside village." decoding="async" loading="lazy"></a></figure><figure class="photo-plate sticky-plate"><a class="plate-media" href="./Assets/Drnkov/catalogue-village.webp" data-source="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf#page=9"><img src="./Assets/Drnkov/catalogue-village.webp" width="864" height="1217" alt="Figures on a village path beneath a flowering tree." decoding="async" loading="lazy"></a><figcaption><span class="plate-title">Village beneath a tree</span>. <a class="plate-source" href="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf#page=9" aria-label="Source for Village beneath a tree">Source</a></figcaption></figure></div></div>
-<div class="portfolio-row wide"><figure class="photo-plate"><a class="plate-media" href="./Assets/Drnkov/catalogue-wed1.webp" data-source="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf#page=8"><img src="./Assets/Drnkov/catalogue-wed1.webp" width="1082" height="976" alt="A wedding procession passes through a mountain village." decoding="async" loading="lazy"></a><figcaption><span class="plate-title"><i>Galičnik Wedding</i></span>, 1939. <a class="plate-source" href="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf#page=8" aria-label="Source for Galičnik Wedding">Source</a></figcaption></figure></div>
-<div class="scroll-beat"><div class="portfolio-row portrait-pair"><figure class="photo-plate sticky-plate"><a class="plate-media" href="./Assets/Drnkov/catalogue-makedonka.webp" data-source="https://macedonia.kroraina.com/mak_enc/encyclopaedia_macedonica_2.pdf#page=737"><img src="./Assets/Drnkov/catalogue-makedonka.webp" width="864" height="1235" alt="A bride wears a headdress decorated with flowers and coins." decoding="async" loading="lazy"></a><figcaption><span class="plate-title"><i>The Mirovačka Bride</i></span>, 1963. <a class="plate-source" href="https://macedonia.kroraina.com/mak_enc/encyclopaedia_macedonica_2.pdf#page=737" aria-label="Source for The Mirovačka Bride">Source</a></figcaption></figure><figure class="photo-plate"><a class="plate-media" href="./Assets/Drnkov/catalogue-mariovo.webp" data-source="./Assets/Drnkov/catalogue-mariovo.webp"><img src="./Assets/Drnkov/catalogue-mariovo.webp" width="848" height="1260" alt="A woman wearing a red fringed garment and a silver belt stands against a blue sky." decoding="async" loading="lazy"></a></figure></div></div>
-<div class="portfolio-row closing"><figure class="photo-plate"><a class="plate-media" href="./Assets/Drnkov/catalogue-mak.webp" data-source="./Assets/Drnkov/catalogue-mak.webp"><img src="./Assets/Drnkov/catalogue-mak.webp" width="816" height="1285" alt="An older man with a white mustache wears a dark fur hat." decoding="async" loading="lazy"></a></figure></div>
-</section><details class="catalogue-sources">
+</section>
+    <section class="portfolio" aria-label="Selected photographs">
+      <div class="portfolio-row wide">
+        <figure class="photo-plate">
+          <a class="plate-media" href="./Assets/Drnkov/catalogue-pottter.webp" data-source="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf#page=9"><img src="./Assets/Drnkov/catalogue-pottter.webp" width="1147" height="912" alt="Hands shape a clay vessel on a wheel." decoding="async" loading="lazy"></a>
+          <figcaption><span class="plate-title"><i>Potter’s Hands</i></span>, 1947.</figcaption>
+        </figure>
+      </div>
+      <div class="portfolio-row indented">
+        <figure class="photo-plate">
+          <a class="plate-media" href="./Assets/Drnkov/catalogue-berba.webp"><img src="./Assets/Drnkov/catalogue-berba.webp" width="880" height="1203" alt="Workers gather cotton by hand in a field." decoding="async" loading="lazy"></a>
+        </figure>
+      </div>
+      <div class="portfolio-row offset-pair shoreline">
+        <figure class="photo-plate">
+          <a class="plate-media" href="./Assets/Drnkov/catalogue-bleach.webp"><img src="./Assets/Drnkov/catalogue-bleach.webp" width="1024" height="1024" alt="A woman holds a length of white cloth by the water." decoding="async" loading="lazy"></a>
+        </figure>
+        <figure class="photo-plate">
+          <a class="plate-media" href="./Assets/Drnkov/catalogue-sea.webp"><img src="./Assets/Drnkov/catalogue-sea.webp" width="1197" height="880" alt="A figure in silhouette stands in shallow water." decoding="async" loading="lazy"></a>
+        </figure>
+      </div>
+      <div class="portfolio-row portrait-solo">
+        <figure class="photo-plate">
+          <a class="plate-media" href="./Assets/Drnkov/catalogue-village.webp" data-source="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf#page=9"><img src="./Assets/Drnkov/catalogue-village.webp" width="864" height="1217" alt="Figures on a village path beneath a flowering tree." decoding="async" loading="lazy"></a>
+        </figure>
+      </div>
+      <div class="portfolio-row wide">
+        <figure class="photo-plate">
+          <a class="plate-media" href="./Assets/Drnkov/catalogue-wed1.webp" data-source="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf#page=8"><img src="./Assets/Drnkov/catalogue-wed1.webp" width="1082" height="976" alt="A wedding procession passes through a mountain village." decoding="async" loading="lazy"></a>
+          <figcaption><span class="plate-title"><i>Galičnik Wedding</i></span>, 1939.</figcaption>
+        </figure>
+      </div>
+      <div class="portfolio-row indented">
+        <figure class="photo-plate">
+          <a class="plate-media" href="./Assets/Drnkov/catalogue-makedonka.webp" data-source="https://macedonia.kroraina.com/mak_enc/encyclopaedia_macedonica_2.pdf#page=737"><img src="./Assets/Drnkov/catalogue-makedonka.webp" width="864" height="1235" alt="A bride wears a headdress decorated with flowers and coins." decoding="async" loading="lazy"></a>
+          <figcaption><span class="plate-title"><i>The Mirovačka Bride</i></span>, 1963.</figcaption>
+        </figure>
+      </div>
+      <div class="portfolio-row closing">
+        <figure class="photo-plate">
+          <a class="plate-media" href="./Assets/Drnkov/catalogue-mak.webp"><img src="./Assets/Drnkov/catalogue-mak.webp" width="816" height="1285" alt="An older man with a white mustache wears a dark fur hat." decoding="async" loading="lazy"></a>
+        </figure>
+      </div>
+    </section>
+    <details class="catalogue-sources">
       <summary>Sources</summary>
       <div class="sources-section muzej-sources">
-        <p><a href="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf">Museum of Contemporary Art, Skopje. <i>Blagoja Drnkov</i>, 1974.</a> Solo exhibition catalogue with a text by Dimitar Kondovski.</p>
-        <p><a href="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf">Art Gallery, Skopje. <i>Blagoja Drnkov: 50 Years of Creativity</i>, 1984.</a> Jubilee catalogue, with an essay by Boris Petkovski and a chronology.</p>
+        <p><a href="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf">Museum of Contemporary Art, Skopje. <i>Blagoja Drnkov</i>, 1974.</a> Solo exhibition catalogue with a text by Dimitar Kondovski. The photograph of the village beneath a flowering tree appears on <a href="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf#page=9">PDF page 9</a>.</p>
+        <p><a href="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf">Art Gallery, Skopje. <i>Blagoja Drnkov: 50 Years of Creativity</i>, 1984.</a> Jubilee catalogue with <a href="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf#page=8"><i>Galičnik Wedding</i> (PDF page 8)</a> and <a href="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf#page=9"><i>Potter’s Hands</i> (PDF page 9)</a>.</p>
         <p><a href="https://www.academia.edu/101167484/Povekje_od_Zborovi_More_than_words_Blagoja_Drnkov_in_the_ethnological_museum_archive">Jovan Šurbanoski, <i>More Than Words</i>, 2022.</a> Exhibition catalogue on Drnkov’s photographs in the ethnological museum archive.</p>
         <p><a href="https://kinoteka.mk/en/lichnosti/drnkov-blagoja/">Cinematheque of Macedonia. Blagoja Drnkov.</a> Biography and filmography.</p>
-      <p>Images were supplied to Muzej. The photographer of the opening portrait is unidentified.</p>
+        <p><a href="https://macedonia.kroraina.com/mak_enc/encyclopaedia_macedonica_2.pdf#page=737">Macedonian Academy of Sciences and Arts. <i>Macedonian Encyclopedia</i>, vol. 2, 2009, p. 1529.</a> Reproduction of <i>The Mirovačka Bride</i>.</p>
+        <p>The photographs were supplied to Muzej. Credits for the opening portrait, the cotton harvest, both shoreline photographs, and the closing portrait are unconfirmed.</p>
     </div>
     </details>
 
