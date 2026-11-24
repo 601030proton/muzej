@@ -64,9 +64,10 @@ h1,h2,h3{font-weight:400}
 .wine-grapes div,.wine-label div{display:grid;grid-template-columns:minmax(110px,.33fr) minmax(0,1fr);gap:12px 26px;border-top:1px solid var(--rule);padding:15px 0}
 .wine-grapes dt,.wine-label dt{font-size:22px}
 .wine-grapes dd,.wine-label dd{margin:0;font-size:19px;line-height:1.42}
+.wine-label dd{line-height:var(--muzej-body-leading);text-wrap:pretty}
 .wine-bottle img{width:100%;height:clamp(165px,26vw,304px);object-fit:contain;object-position:center bottom;margin:5px 0 25px}
 .wine-bottle small{display:block;margin:5px 0 0}
-.wine-lead{max-width:680px}
+.wine-lead{text-wrap:pretty}
 .wine-section .wine-lead + .wine-columns,.wine-section .wine-lead + .wine-label{margin-top:26px}
 .wine-deep-dive{border-top:1px solid #111;padding-top:25px}
 .wine-deep-dive p{max-width:580px}
@@ -96,6 +97,9 @@ body main .sources-section.muzej-sources .muzej-source-list{margin-block:0}
  .wine-grapes div,.wine-label div{gap:12px;grid-template-columns:minmax(96px,.38fr) minmax(0,1fr)}
  .wine-grapes dt,.wine-label dt{font-size:19px}
  .footer-inner{grid-template-columns:1fr}
+}
+@media(max-width:540px){
+ .wine-label div{grid-template-columns:minmax(0,1fr);gap:6px}
 }
 </style>
 </head>
