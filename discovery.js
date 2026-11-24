@@ -246,14 +246,6 @@
       "image": "./Assets/Discovery/skopje-chokanov.webp"
     },
     {
-      "id": "lake-kostur-boissonnas",
-      "title": "Lake Kostur",
-      "details": "Frédéric Boissonnas · 1921 · Photograph",
-      "museum": "",
-      "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/boissonnas-frederic-1858-1946/",
-      "image": "./Assets/Discovery/lake-kostur-boissonnas.webp"
-    },
-    {
       "id": "veiled-women-solun",
       "title": "Veiled Women, Solun",
       "details": "Pierre Combet-Descombes · 1916 · Oil on canvas",
