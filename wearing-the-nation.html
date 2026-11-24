@@ -749,29 +749,42 @@ body.muzej-logo-hidden .site-header .brand-mark {
 <script defer src="muzej-header.js?v=20261121-site-nav"></script>
 <style>
 .shirt-slideshow {
-  width:min(720px,calc(100% - 40px));
+  width:min(1120px,calc(100% - 40px));
   margin:clamp(92px,11vw,138px) auto 0;
-  padding-bottom:clamp(32px,5vw,65px);
-  text-align:center;
+  padding-bottom:clamp(44px,7vw,90px);
 }
-.shirt-slideshow-heading {margin:0 0 clamp(12px,2.5vw,30px)}
+.shirt-slideshow-heading {text-align:center;margin:0 0 clamp(18px,3vw,44px)}
 .shirt-slideshow-heading .feature-kicker,.shirt-slideshow-heading .feature-byline {margin:0 0 8px}
 .shirt-slideshow-heading h1 {margin:0;font:400 clamp(38px,5.7vw,80px)/.98 "plantin",Georgia,serif;text-wrap:balance}
-.shirt-stage {display:grid;grid-template-columns:44px minmax(0,1fr) 44px;align-items:center;gap:clamp(0px,2vw,18px)}
+.shirt-layout {display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(26px,6vw,96px)}
+.shirt-visual {min-width:0;text-align:center}
+.shirt-stage {display:grid;grid-template-columns:44px minmax(0,1fr) 44px;align-items:center;gap:clamp(0px,2vw,16px)}
 .shirt-slide {min-width:0;margin:0}
-.shirt-slide img {display:block;width:min(100%,clamp(218px,35vw,390px));height:auto;margin:0 auto}
-.shirt-slide figcaption {display:grid;gap:4px;margin:0;font:400 14px/1.35 var(--sans,Arial,sans-serif);letter-spacing:normal;text-transform:none}
-.shirt-slide figcaption strong {font:400 clamp(22px,2.6vw,30px)/1.13 "plantin",Georgia,serif}
-.shirt-slide .shirt-withdrawn {font-weight:600;color:#762f29}
-.shirt-slide-note {min-height:1.35em}
+.shirt-image-frame {display:grid;place-items:center;aspect-ratio:6/7}
+.shirt-image-frame img {display:block;width:var(--shirt-scale,100%);height:auto}
+.shirt-slide .shirt-image-frame {width:min(100%,390px);margin-inline:auto}
+.shirt-year-text {min-width:0;padding-top:clamp(24px,5vw,70px)}
+.shirt-year[hidden] {display:none}
+.shirt-year + .shirt-year:not([hidden]) {margin-top:32px}
+.shirt-year[hidden] + .shirt-year {margin-top:0}
+.shirt-year h2 {margin:0 0 8px;font:400 clamp(26px,3vw,40px)/1.12 var(--muzej-body-family,"plantin",Georgia,serif)}
+.shirt-year p {margin:0 0 1em;font:400 var(--muzej-body-size,22px)/var(--muzej-body-leading,1.55) var(--muzej-body-family,"plantin",Georgia,serif)}
+.shirt-year .shirt-feature,.shirt-year .shirt-withdrawn {font:400 14px/1.45 var(--sans,Arial,sans-serif)}
+.shirt-year .shirt-feature {margin-bottom:16px}
+.shirt-year .shirt-withdrawn {font-weight:600;color:#762f29}
 .shirt-arrow {width:44px;height:44px;border:1px solid #dedbd7;border-radius:50%;background:#fff;color:#211e1b;font:400 23px/1 Arial,sans-serif;cursor:pointer}
 .shirt-arrow:hover {border-color:#211e1b}
-.shirt-filmstrip {display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(4px,1.2vw,12px);width:min(100%,460px);margin:18px auto 0}
+.shirt-filmstrip {display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(4px,1.2vw,12px);width:min(100%,460px);margin:14px auto 0}
 .shirt-filmstrip a {min-width:0;display:grid;justify-items:center;gap:3px;padding:3px 4px 6px;border-bottom:1px solid #e7e2dc;color:#25211f;font:400 12px/1.25 var(--sans,Arial,sans-serif);text-decoration:none}
 .shirt-filmstrip a[aria-current="true"],.shirt-filmstrip a:hover {border-color:#211e1b}
 .shirt-filmstrip a[aria-current="true"] {font-weight:700}
-.shirt-filmstrip img {display:block;width:min(100%,67px);height:auto}
+.shirt-filmstrip .shirt-image-frame {width:min(100%,67px)}
 .shirt-slideshow :focus-visible {outline:2px solid #211e1b;outline-offset:3px}
+@media(max-width:760px) {
+  .shirt-layout {grid-template-columns:minmax(0,1fr);gap:22px}
+  .shirt-year-text {width:min(100%,460px);margin-inline:auto;padding-top:0}
+  .shirt-stage {width:min(100%,500px);margin-inline:auto}
+}
 @media(max-width:480px) {
   .shirt-slideshow {width:calc(100% - 30px)}
   .shirt-stage {gap:2px}
@@ -791,52 +804,77 @@ body.muzej-logo-hidden .site-header .brand-mark {
 </header>
 
 <main>
-  <header class="shirt-slideshow" aria-labelledby="shirt-plate-title">
-    <div class="shirt-slideshow-heading">
+  <article class="shirt-slideshow" aria-labelledby="shirt-plate-title">
+    <header class="shirt-slideshow-heading">
       <p class="feature-byline muzej-byline">Words <strong>Aleksandar Trajkovski</strong></p>
       <p class="feature-kicker">Sport | Design</p>
       <h1 id="shirt-plate-title">The Nation on Their Backs</h1>
+    </header>
+    <div class="shirt-layout">
+      <div class="shirt-visual">
+        <div class="shirt-stage">
+          <button class="shirt-arrow" type="button" data-shirt-step="-1" aria-label="Previous shirt" hidden>‹</button>
+          <figure class="shirt-slide">
+            <div class="shirt-image-frame" style="--shirt-scale:97.6%"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-1994.webp" alt="Gems · 1994 shirt, front view" width="480" height="560" fetchpriority="high"></div>
+          </figure>
+          <button class="shirt-arrow" type="button" data-shirt-step="1" aria-label="Next shirt" hidden>›</button>
+        </div>
+        <nav class="shirt-filmstrip" aria-label="Choose a shirt">
+          <a href="#shirt-1994" aria-label="Gems · 1994" aria-current="true" data-shirt-scale="97.6%">
+            <span class="shirt-image-frame" style="--shirt-scale:97.6%"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-1994.webp" alt="" width="480" height="560" decoding="async"></span>
+            <span>1994</span>
+          </a>
+          <a href="#shirt-1998" aria-label="Puma · 1998" data-shirt-scale="100%">
+            <span class="shirt-image-frame" style="--shirt-scale:100%"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-1998.webp" alt="" width="480" height="560" decoding="async"></span>
+            <span>1998</span>
+          </a>
+          <a href="#shirt-2016" aria-label="JAKO · 2016" data-shirt-scale="89.7%">
+            <span class="shirt-image-frame" style="--shirt-scale:89.7%"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-2016.webp" alt="" width="480" height="560" decoding="async"></span>
+            <span>2016</span>
+          </a>
+          <a href="#shirt-2021" aria-label="JAKO · 2021, Withdrawn before Euro 2020" data-shirt-scale="89.2%">
+            <span class="shirt-image-frame" style="--shirt-scale:89.2%"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-2021.webp" alt="" width="480" height="560" decoding="async"></span>
+            <span>2021</span>
+          </a>
+          <a href="#shirt-2023" aria-label="JAKO · 2023" data-shirt-scale="84.5%">
+            <span class="shirt-image-frame" style="--shirt-scale:84.5%"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-2023.webp" alt="" width="480" height="560" decoding="async"></span>
+            <span>2023</span>
+          </a>
+        </nav>
+      </div>
+      <div class="shirt-year-text" aria-live="polite">
+        <section class="shirt-year" id="shirt-1994" aria-labelledby="shirt-title-1994">
+          <h2 id="shirt-title-1994">Gems · 1994</h2>
+          <p class="shirt-feature">Polo collar</p>
+          <p>The 1994 Gems home shirt has a yellow polo collar and buttoned placket. The red body is made of jacquard fabric with a subtle woven pattern.</p>
+        </section>
+        <section class="shirt-year" id="shirt-1998" aria-labelledby="shirt-title-1998">
+          <h2 id="shirt-title-1998">Puma · 1998</h2>
+          <p class="shirt-feature">Chest band</p>
+          <p>The 1998 Puma home shirt uses a broad yellow band edged in white across the chest and sleeves. The band breaks at the center for the Puma logo. The cuffs are yellow, and the red collar has yellow-and-white trim.</p>
+        </section>
+        <section class="shirt-year" id="shirt-2016" aria-labelledby="shirt-title-2016">
+          <h2 id="shirt-title-2016">JAKO · 2016</h2>
+          <p class="shirt-feature">Rays from the crest</p>
+          <p>JAKO’s 2016 home shirt has yellow rays extending across the red front from the federation crest.</p>
+          <p>Macedonia qualified for its first European Championship in November 2020 wearing the 2016 design. In its <a href="https://www.jako.com/ch-en/about-jako/newsblog/northern-macedonia-goes-to-the-european-championships-1234/" target="_blank" rel="noopener noreferrer">qualification announcement</a>, JAKO associated the sun shirt with the campaign and announced a new kit for the tournament.</p>
+        </section>
+        <section class="shirt-year" id="shirt-2021" aria-labelledby="shirt-title-2021">
+          <h2 id="shirt-title-2021">JAKO · 2021</h2>
+          <p class="shirt-feature">Tone-on-tone lynx</p>
+          <p class="shirt-withdrawn">Withdrawn before Euro 2020</p>
+          <p>In May 2021, ahead of Macedonia’s European Championship debut at Euro 2020, the football federation unveiled a burgundy home shirt with an embossed geometric lynx. Within days, the federation withdrew the design and announced that the team would wear its existing red-and-yellow sun kit.</p>
+          <p><a href="https://macedonianfootball.com/ffm-withdraws-new-kits-under-public-pressure/" target="_blank" rel="noopener noreferrer">Contemporary reporting</a> documented a petition to retain the previous shirt. Supporters objected to the darker red, the reduced use of yellow, and the replacement of the sun with a lynx. Footballer Natasha Andonova publicly defended the use of red and yellow.</p>
+        </section>
+        <section class="shirt-year" id="shirt-2023" aria-labelledby="shirt-title-2023">
+          <h2 id="shirt-title-2023">JAKO · 2023</h2>
+          <p class="shirt-feature">Sun around the player number</p>
+          <p>The 2016 sun design remained in use until JAKO introduced a new home kit in 2023.</p>
+          <p>The <a href="https://www.footyheadlines.com/2023/03/north-macedonia-2023-home-kit.html" target="_blank" rel="noopener noreferrer">2023 home shirt</a> retained the sun motif. Short yellow and orange strokes form rays around an open red center positioned for the player’s number. The sleeves have yellow cuffs.</p>
+        </section>
+      </div>
     </div>
-    <div class="shirt-stage">
-      <button class="shirt-arrow" type="button" data-shirt-step="-1" aria-label="Previous shirt" hidden>‹</button>
-      <figure class="shirt-slide">
-        <img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-1994.webp" alt="Gems 1994 shirt, front view" width="480" height="560" fetchpriority="high">
-        <figcaption aria-live="polite" aria-atomic="true"><strong data-shirt-label>Gems · 1994</strong><span data-shirt-feature>Polo collar</span><span class="shirt-withdrawn shirt-slide-note"></span></figcaption>
-      </figure>
-      <button class="shirt-arrow" type="button" data-shirt-step="1" aria-label="Next shirt" hidden>›</button>
-    </div>
-    <nav class="shirt-filmstrip" aria-label="Choose a shirt">
-      <a href="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-1994.webp" aria-label="Gems · 1994" data-shirt-name="Gems · 1994" data-shirt-detail="Polo collar" aria-current="true"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-1994.webp" alt="" width="480" height="560" decoding="async"><span>1994</span></a>
-      <a href="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-1998.webp" aria-label="Puma · 1998" data-shirt-name="Puma · 1998" data-shirt-detail="Chest band"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-1998.webp" alt="" width="480" height="560" decoding="async"><span>1998</span></a>
-      <a href="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-2016.webp" aria-label="JAKO · 2016" data-shirt-name="JAKO · 2016" data-shirt-detail="Rays from the crest"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-2016.webp" alt="" width="480" height="560" decoding="async"><span>2016</span></a>
-      <a href="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-2021.webp" aria-label="JAKO · 2021, Withdrawn before Euro 2020" data-shirt-name="JAKO · 2021" data-shirt-detail="Tone-on-tone lynx" data-shirt-note="Withdrawn before Euro 2020"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-2021.webp" alt="" width="480" height="560" decoding="async"><span>2021</span></a>
-      <a href="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-2023.webp" aria-label="JAKO · 2023" data-shirt-name="JAKO · 2023" data-shirt-detail="Sun around the player number"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-2023.webp" alt="" width="480" height="560" decoding="async"><span>2023</span></a>
-    </nav>
-  </header>
-
-  <article class="article-shell">
-<section class="article-body"><figure class="article-body-media"><div class="article-image-placeholder article-image-placeholder--portrait"><img src="./Assets/Wearing%20the%20Nation/Jerseys/4.png" alt="Burgundy JAKO shirt with tonal geometric lynx graphic" loading="lazy"></div><figcaption class="shirt-caption">JAKO, 2021 · Withdrawn Euro kit</figcaption></figure><div class="article-body-copy body-block">
-<h2 class="section-heading">JAKO, 2021: The withdrawn lynx kit</h2>
-<p>In May 2021, ahead of Macedonia’s European Championship debut at Euro 2020, the football federation unveiled a burgundy home shirt with an embossed geometric lynx. Within days, the federation withdrew the design and announced that the team would wear its existing red-and-yellow sun kit.</p>
-<p><a href="https://macedonianfootball.com/ffm-withdraws-new-kits-under-public-pressure/" target="_blank" rel="noopener noreferrer">Contemporary reporting</a> documented a petition to retain the previous shirt. Supporters objected to the darker red, the reduced use of yellow, and the replacement of the sun with a lynx. Footballer Natasha Andonova publicly defended the use of red and yellow.</p>
-</div><div class="empty-tail" aria-hidden="true"></div></section>
-<section class="article-body article-body-lower"><figure class="article-body-media"><div class="article-image-placeholder article-image-placeholder--portrait"><img src="./Assets/Wearing%20the%20Nation/Jerseys/1.png" alt="Red Gems shirt with yellow polo collar and textured fabric" loading="lazy"></div><figcaption class="shirt-caption">Gems, 1994</figcaption></figure><div class="article-body-copy body-block"><h2 class="section-heading">Gems, 1994: Polo collar</h2>
-<p>The 1994 Gems home shirt has a yellow polo collar and buttoned placket. The red body is made of jacquard fabric with a subtle woven pattern.</p>
-</div><div class="empty-tail" aria-hidden="true"></div></section>
-<section class="article-body article-body-lower"><figure class="article-body-media"><div class="article-image-placeholder article-image-placeholder--portrait"><img src="./Assets/Wearing%20the%20Nation/Jerseys/new2.png" alt="Red Puma shirt with white-edged yellow chest and sleeve bands" loading="lazy"></div><figcaption class="shirt-caption">Puma, 1998</figcaption></figure><div class="article-body-copy body-block"><h2 class="section-heading">Puma, 1998: Chest and sleeve bands</h2>
-<p>The 1998 Puma home shirt uses a broad yellow band edged in white across the chest and sleeves. The band breaks at the center for the Puma logo. The cuffs are yellow, and the red collar has yellow-and-white trim.</p>
-      </div><div class="empty-tail" aria-hidden="true"></div></section>
-<section class="article-body article-body-lower"><figure class="article-body-media"><div class="article-image-placeholder article-image-placeholder--portrait"><img src="./Assets/Wearing%20the%20Nation/Jerseys/nation-on-their-backs-03.png" alt="JAKO sunburst shirt with rays radiating from the federation crest" loading="lazy"></div><figcaption class="shirt-caption">JAKO, design introduced in 2016</figcaption></figure><div class="article-body-copy body-block">
-<h2 class="section-heading">JAKO, 2016: Crest-centered sun</h2>
-<p>JAKO’s 2016 home shirt has yellow rays extending across the red front from the federation crest.</p>
-<p>Macedonia qualified for its first European Championship in November 2020 wearing the 2016 design. In its <a href="https://www.jako.com/ch-en/about-jako/newsblog/northern-macedonia-goes-to-the-european-championships-1234/" target="_blank" rel="noopener noreferrer">qualification announcement</a>, JAKO associated the sun shirt with the campaign and announced a new kit for the tournament.</p>
-      </div><div class="empty-tail" aria-hidden="true"></div></section>
-<section class="article-body article-body-lower"><figure class="article-body-media"><div class="article-image-placeholder article-image-placeholder--portrait"><img src="./Assets/Wearing%20the%20Nation/Jerseys/5.png" alt="Red JAKO shirt with segmented sun rays and yellow cuffs" loading="lazy"></div><figcaption class="shirt-caption">JAKO, 2023</figcaption></figure><div class="article-body-copy body-block">
-<h2 class="section-heading">JAKO, 2023: Centered sun</h2>
-<p>The 2016 sun design remained in use until JAKO introduced a new home kit in 2023.</p>
-<p>The <a href="https://www.footyheadlines.com/2023/03/north-macedonia-2023-home-kit.html" target="_blank" rel="noopener noreferrer">2023 home shirt</a> retained the sun motif. Short yellow and orange strokes form rays around an open red center positioned for the player’s number. The sleeves have yellow cuffs.</p>
-      </div><div class="empty-tail" aria-hidden="true"></div></section>
-</article>
+  </article>
 
   <section class="more-from-muzej" data-more-from-muzej aria-labelledby="more-from-muzej-title"></section>
 </main>
@@ -910,23 +948,22 @@ body.muzej-logo-hidden .site-header .brand-mark {
 (() => {
   const slideshow = document.querySelector('.shirt-slideshow');
   const previews = [...slideshow.querySelectorAll('.shirt-filmstrip a')];
-  const photo = slideshow.querySelector('.shirt-slide img');
-  const label = slideshow.querySelector('[data-shirt-label]');
-  const feature = slideshow.querySelector('[data-shirt-feature]');
-  const note = slideshow.querySelector('.shirt-slide-note');
+  const panels = [...slideshow.querySelectorAll('.shirt-year')];
+  const frame = slideshow.querySelector('.shirt-slide .shirt-image-frame');
+  const photo = frame.querySelector('img');
   let selected = 0;
 
   function show(index) {
-    previews[selected].removeAttribute('aria-current');
     selected = (index + previews.length) % previews.length;
     const preview = previews[selected];
-    const { shirtName, shirtDetail, shirtNote } = preview.dataset;
-    photo.src = preview.href;
-    photo.alt = shirtName + ' shirt, front view';
-    label.textContent = shirtName;
-    feature.textContent = shirtDetail;
-    note.textContent = shirtNote || '';
-    preview.setAttribute('aria-current', 'true');
+    photo.src = preview.querySelector('img').src;
+    photo.alt = panels[selected].querySelector('h2').textContent + ' shirt, front view';
+    frame.style.setProperty('--shirt-scale', preview.dataset.shirtScale);
+    for (const [index, panel] of panels.entries()) {
+      panel.hidden = index !== selected;
+      if (panel.hidden) previews[index].removeAttribute('aria-current');
+      else previews[index].setAttribute('aria-current', 'true');
+    }
   }
 
   previews.forEach((preview, index) => {
@@ -940,11 +977,13 @@ body.muzej-logo-hidden .site-header .brand-mark {
     button.hidden = false;
     button.addEventListener('click', () => show(selected + Number(button.dataset.shirtStep)));
   });
-  slideshow.addEventListener('keydown', (event) => {
+  slideshow.querySelector('.shirt-visual').addEventListener('keydown', (event) => {
     if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
     event.preventDefault();
     show(selected + (event.key === 'ArrowRight' ? 1 : -1));
   });
+  const initialIndex = previews.findIndex(preview => preview.hash === location.hash);
+  show(initialIndex === -1 ? 0 : initialIndex);
 })();
 </script>
 </body>
