@@ -1,7 +1,7 @@
 (function () {
   var articles = [
     {"slug":"borka-avramova","href":"borka-avramova.html","title":"Borka Avramova: Modernist Concepts","kicker":"Art | Focus","dek":"In 1954, Borka Avramova presented Macedonia’s first solo sculpture exhibition, showing eleven works in Skopje.","image":"./Assets/In%20Focus/borka-avramova/lepa-perovic.webp","alt":"A sculpted head on a plinth, silhouetted against a window."},
-    {"slug":"gordana-vrencoska","href":"gordana-vrencoska.html","title":"Gordana Vrencoska: Visual Cultural Heritage","kicker":"Art | Focus","dek":"A wedding flag, childhood drawings, and the objects Vrencoska brings out of her own archive.","image":"./Assets/In%20Focus/gordana-vrencoska/bridal-flag.webp","alt":"A red and white textile flag with three circular motifs across its center."},
+    {"slug":"gordana-vrencoska","href":"gordana-vrencoska.html","title":"Gordana Vrencoska: Visual Cultural Heritage","kicker":"Art | Focus","dek":"A wedding flag, childhood drawings, and the objects Vrencoska brings out of her own archive.","image":"./Assets/In%20Focus/gordana-vrencoska/neverending-story.webp","alt":"Angular fabric forms arranged in a row on a pale wall."},
     {"slug":"monika-moteska","href":"monika-moteska.html","title":"Monika Moteska: Embroidery in Stone","kicker":"Art | Focus","dek":"Marble, enlarged needles, and the landscape of Prilep in Monika Moteska’s installations.","image":"./Assets/In%20Focus/monika-moteska/embroidery-in-stone.webp","alt":"Marble pieces and enlarged metal needles lit on a dark floor."},
     {
       slug: "velimir-zernovski",
