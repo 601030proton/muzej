@@ -125,7 +125,13 @@ html { scroll-padding-top: 105px; }
   .biography-label { display:contents; }
 }
 
-.catalogue-sources { max-width:520px; margin:64px 0 0; }
+.catalogue-entry.catalogue-source-row { margin-top:64px; padding-top:0; border-top:0; }
+.catalogue-sources { width:100%; max-width:520px; margin:0; }
+@media (min-width: 761px) {
+  .catalogue-sources { grid-column:2; }
+}
+.site-footer.muzej-footer .footer-links a { color:inherit; }
+.site-footer.muzej-footer .footer-brand-mark-image { max-width:none; }
 .catalogue-sources > summary {
   border-top:1px solid #11110f;
   border-bottom:1px solid #ddd;
@@ -216,20 +222,23 @@ body main .catalogue-sources > .sources-section.muzej-sources {
         </figure>
       </div>
     </section>
-    <details class="catalogue-sources">
-      <summary>Sources</summary>
-      <div class="sources-section muzej-sources">
-        <p><a href="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf">Museum of Contemporary Art, Skopje. <i>Blagoja Drnkov</i>, 1974.</a> Solo exhibition catalogue with a text by Dimitar Kondovski. The photograph of the village beneath a flowering tree appears on <a href="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf#page=9">PDF page 9</a>.</p>
-        <p><a href="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf">Art Gallery, Skopje. <i>Blagoja Drnkov: 50 Years of Creativity</i>, 1984.</a> Jubilee catalogue with <a href="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf#page=8"><i>Galičnik Wedding</i> (PDF page 8)</a> and <a href="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf#page=9"><i>Potter’s Hands</i> (PDF page 9)</a>.</p>
-        <p><a href="https://www.academia.edu/101167484/Povekje_od_Zborovi_More_than_words_Blagoja_Drnkov_in_the_ethnological_museum_archive">Jovan Šurbanoski, <i>More Than Words</i>, 2022.</a> Exhibition catalogue on Drnkov’s photographs in the ethnological museum archive.</p>
-        <p><a href="https://kinoteka.mk/en/lichnosti/drnkov-blagoja/">Cinematheque of Macedonia. Blagoja Drnkov.</a> Biography and filmography.</p>
-        <p><a href="https://macedonia.kroraina.com/mak_enc/encyclopaedia_macedonica_2.pdf#page=737">Macedonian Academy of Sciences and Arts. <i>Macedonian Encyclopedia</i>, vol. 2, 2009, p. 1529.</a> Reproduction of <i>The Mirovačka Bride</i>.</p>
-        <p>The photographs were supplied to Muzej. Credits for the opening portrait, the cotton harvest, both shoreline photographs, and the closing portrait are unconfirmed.</p>
+    <div class="catalogue-entry catalogue-source-row">
+      <details class="catalogue-sources">
+        <summary>Sources</summary>
+        <div class="sources-section muzej-sources">
+          <p><a href="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf">Museum of Contemporary Art, Skopje. <i>Blagoja Drnkov</i>, 1974.</a> Solo exhibition catalogue with a text by Dimitar Kondovski. The photograph of the village beneath a flowering tree appears on <a href="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf#page=9">PDF page 9</a>.</p>
+          <p><a href="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf">Art Gallery, Skopje. <i>Blagoja Drnkov: 50 Years of Creativity</i>, 1984.</a> Jubilee catalogue with <a href="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf#page=8"><i>Galičnik Wedding</i> (PDF page 8)</a> and <a href="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf#page=9"><i>Potter’s Hands</i> (PDF page 9)</a>.</p>
+          <p><a href="https://www.academia.edu/101167484/Povekje_od_Zborovi_More_than_words_Blagoja_Drnkov_in_the_ethnological_museum_archive">Jovan Šurbanoski, <i>More Than Words</i>, 2022.</a> Exhibition catalogue on Drnkov’s photographs in the ethnological museum archive.</p>
+          <p><a href="https://kinoteka.mk/en/lichnosti/drnkov-blagoja/">Cinematheque of Macedonia. Blagoja Drnkov.</a> Biography and filmography.</p>
+          <p><a href="https://macedonia.kroraina.com/mak_enc/encyclopaedia_macedonica_2.pdf#page=737">Macedonian Academy of Sciences and Arts. <i>Macedonian Encyclopedia</i>, vol. 2, 2009, p. 1529.</a> Reproduction of <i>The Mirovačka Bride</i>.</p>
+          <p>The photographs were supplied to Muzej. Credits for the opening portrait, the cotton harvest, both shoreline photographs, and the closing portrait are unconfirmed.</p>
+      </div>
+      </details>
     </div>
-    </details>
 
     </article>
-<section class="more-from-muzej" data-more-from-muzej aria-labelledby="more-from-muzej-title"></section></main>
+  <section class="more-from-muzej" data-more-from-muzej aria-labelledby="more-from-muzej-title"></section>
+</main>
 <footer class="site-footer muzej-footer">
   <div class="footer-inner">
     <div class="footer-brand">

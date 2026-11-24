@@ -747,6 +747,26 @@ body.muzej-logo-hidden .site-header .brand-mark {
 <link rel="stylesheet" href="bylines.css?v=20261107">
 <link rel="stylesheet" href="muzej-header.css?v=20261121-site-nav">
 <script defer src="muzej-header.js?v=20261121-site-nav"></script>
+<style>
+.shirt-plate {width:min(1440px,calc(100% - 2 * var(--page-x, 5vw)));margin:clamp(92px,12vw,158px) auto 0;padding-bottom:clamp(40px,7vw,92px)}
+.shirt-plate-heading {text-align:center;margin:0 auto clamp(30px,5vw,72px)}
+.shirt-plate-heading .feature-kicker,.shirt-plate-heading .feature-byline {margin:0 0 10px}
+.shirt-plate-heading h1 {margin:0;font:400 clamp(38px,5.7vw,88px)/.98 "plantin",Georgia,serif;text-wrap:balance}
+.shirt-plate-grid {display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(12px,2vw,34px);align-items:start}
+.shirt-plate-item {min-width:0;margin:0;text-align:center}
+.shirt-plate-image {position:relative}
+.shirt-plate-image img {display:block;width:100%;height:auto}
+.shirt-plate-image svg {position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.shirt-plate-image line {stroke:#362d2a;stroke-width:1;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 1px #fff)}
+.shirt-plate-item figcaption {display:grid;gap:5px;margin:0;font:400 13px/1.35 var(--sans,Arial,sans-serif);letter-spacing:normal;text-transform:none}
+.shirt-plate-item figcaption strong {font:400 clamp(18px,2vw,26px)/1.1 "plantin",Georgia,serif}
+.shirt-plate-item .shirt-withdrawn {font-weight:600;color:#762f29}
+@media(max-width:760px) {
+  .shirt-plate {width:calc(100% - 40px)}
+  .shirt-plate-grid {grid-template-columns:minmax(0,380px);justify-content:center;gap:36px}
+  .shirt-plate-item figcaption {font-size:14px}
+}
+</style>
 </head>
 <body class="kinfolk-article-hero nation-article">
 
@@ -761,13 +781,50 @@ body.muzej-logo-hidden .site-header .brand-mark {
 </header>
 
 <main>
-  <header class="feature muzej-sticky-opening"><div class="feature-inner"><div class="feature-copy">
-        <p class="feature-byline muzej-byline">Words <strong>Aleksandar Trajkovski</strong></p>
-        <p class="feature-kicker">Sport | Design</p>
-        <h1 class="feature-title">The Nation on Their Backs</h1>
-      </div><div class="feature-scroll-column"><figure class="feature-media">
-        <img src="./Assets/Wearing%20the%20Nation/nation-on-their-backs-index-portrait.png" alt="A collection of Macedonian football shirts in red, yellow, and white.">
-      </figure><p class="feature-deck">Five designs for Macedonia’s national football team, including the proposed Euro 2020 shirt withdrawn in 2021.</p></div></div></header>
+  <header class="shirt-plate" aria-labelledby="shirt-plate-title">
+    <div class="shirt-plate-heading">
+      <p class="feature-byline muzej-byline">Words <strong>Aleksandar Trajkovski</strong></p>
+      <p class="feature-kicker">Sport | Design</p>
+      <h1 id="shirt-plate-title">The Nation on Their Backs</h1>
+    </div>
+    <div class="shirt-plate-grid" aria-label="Five Macedonia national team shirt designs, 1994 to 2023">
+      <figure class="shirt-plate-item">
+        <div class="shirt-plate-image">
+          <img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-1994.webp" alt="Gems 1994 shirt, front view" width="480" height="560" fetchpriority="high">
+          <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="42" y1="4" x2="50" y2="13"/></svg>
+        </div>
+        <figcaption><strong>Gems · 1994</strong><span>Polo collar</span></figcaption>
+      </figure>
+      <figure class="shirt-plate-item">
+        <div class="shirt-plate-image">
+          <img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-1998.webp" alt="Puma 1998 shirt, front view" width="480" height="560" decoding="async">
+          <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="7" y1="16" x2="31" y2="24"/></svg>
+        </div>
+        <figcaption><strong>Puma · 1998</strong><span>Chest band</span></figcaption>
+      </figure>
+      <figure class="shirt-plate-item">
+        <div class="shirt-plate-image">
+          <img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-2016.webp" alt="JAKO 2016 shirt, front view" width="480" height="560" decoding="async">
+          <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="84" y1="10" x2="61" y2="28"/></svg>
+        </div>
+        <figcaption><strong>JAKO · 2016</strong><span>Rays from the crest</span></figcaption>
+      </figure>
+      <figure class="shirt-plate-item">
+        <div class="shirt-plate-image">
+          <img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-2021.webp" alt="JAKO 2021 shirt, front view" width="480" height="560" decoding="async">
+          <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="94" y1="47" x2="52" y2="57"/></svg>
+        </div>
+        <figcaption><strong>JAKO · 2021</strong><span>Tone-on-tone lynx</span><span class="shirt-withdrawn">Withdrawn before Euro 2020</span></figcaption>
+      </figure>
+      <figure class="shirt-plate-item">
+        <div class="shirt-plate-image">
+          <img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-2023.webp" alt="JAKO 2023 shirt, front view" width="480" height="560" decoding="async">
+          <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="91" y1="33" x2="52" y2="48"/></svg>
+        </div>
+        <figcaption><strong>JAKO · 2023</strong><span>Sun around the player number</span></figcaption>
+      </figure>
+    </div>
+  </header>
 
   <article class="article-shell">
 <section class="article-body"><figure class="article-body-media"><div class="article-image-placeholder article-image-placeholder--portrait"><img src="./Assets/Wearing%20the%20Nation/Jerseys/4.png" alt="Burgundy JAKO shirt with tonal geometric lynx graphic" loading="lazy"></div><figcaption class="shirt-caption">JAKO, 2021 · Withdrawn Euro kit</figcaption></figure><div class="article-body-copy body-block">
