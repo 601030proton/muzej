@@ -206,6 +206,14 @@
       "image": "./Assets/Discovery/bridge-in-struga.webp"
     },
     {
+      "id": "andre-vidal-fountain-bouf",
+      "title": "Woman at the Fountain in Bouf",
+      "details": "André Vidal · c. 1920 · Oil on canvas",
+      "museum": "Bouf, Lerin region",
+      "source": "https://www.proantic.com/605904-andre-vidal-grece-grece-macedoine-buf-pres-de-florina-c-1920-hst-54x65cm.html",
+      "image": "./Assets/Discovery/andre-vidal-woman-at-the-fountain.webp"
+    },
+    {
       "id": "the-kidnapping-of-ellen-stone",
       "title": "The Kidnapping of Ellen Stone",
       "details": "Ekaterina Viktorovna Kaminina · Oil on canvas",
