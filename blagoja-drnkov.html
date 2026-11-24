@@ -177,6 +177,22 @@ header.muzej-intro-opening > .muzej-intro-title { height: min(calc(100svh - 154p
 @media (max-width: 760px) {
   .biography-label { display:contents; }
 }
+
+.catalogue-sources { max-width:520px; margin:64px 0 0; }
+.catalogue-sources > summary {
+  border-top:1px solid #11110f;
+  border-bottom:1px solid #ddd;
+  padding:14px 0;
+  cursor:pointer;
+  font:400 20px/1.2 var(--muzej-body-family);
+}
+.catalogue-sources > summary::marker { font-size:.7em; }
+.catalogue-sources > summary:focus-visible { outline:1px solid currentColor; outline-offset:4px; }
+body main .catalogue-sources > .sources-section.muzej-sources {
+  margin-top:0;
+  padding:8px 0 0;
+  border-top:0;
+}
 </style>
 <script defer src="muzej-header.js?v=20261121-site-nav"></script>
 <link rel="stylesheet" href="more-from-muzej.css?v=20261108-full-cassette">
@@ -217,14 +233,16 @@ header.muzej-intro-opening > .muzej-intro-title { height: min(calc(100svh - 154p
 <div class="portfolio-row wide"><figure class="photo-plate"><a class="plate-media" href="./Assets/Drnkov/catalogue-wed1.webp" data-source="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf#page=8"><img src="./Assets/Drnkov/catalogue-wed1.webp" width="1082" height="976" alt="A wedding procession passes through a mountain village." decoding="async" loading="lazy"></a><figcaption><span class="plate-title"><i>Galičnik Wedding</i></span>, 1939. <a class="plate-source" href="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf#page=8" aria-label="Source for Galičnik Wedding">Source</a></figcaption></figure></div>
 <div class="scroll-beat"><div class="portfolio-row portrait-pair"><figure class="photo-plate sticky-plate"><a class="plate-media" href="./Assets/Drnkov/catalogue-makedonka.webp" data-source="https://macedonia.kroraina.com/mak_enc/encyclopaedia_macedonica_2.pdf#page=737"><img src="./Assets/Drnkov/catalogue-makedonka.webp" width="864" height="1235" alt="A bride wears a headdress decorated with flowers and coins." decoding="async" loading="lazy"></a><figcaption><span class="plate-title"><i>The Mirovačka Bride</i></span>, 1963. <a class="plate-source" href="https://macedonia.kroraina.com/mak_enc/encyclopaedia_macedonica_2.pdf#page=737" aria-label="Source for The Mirovačka Bride">Source</a></figcaption></figure><figure class="photo-plate"><a class="plate-media" href="./Assets/Drnkov/catalogue-mariovo.webp" data-source="./Assets/Drnkov/catalogue-mariovo.webp"><img src="./Assets/Drnkov/catalogue-mariovo.webp" width="848" height="1260" alt="A woman wearing a red fringed garment and a silver belt stands against a blue sky." decoding="async" loading="lazy"></a></figure></div></div>
 <div class="portfolio-row closing"><figure class="photo-plate"><a class="plate-media" href="./Assets/Drnkov/catalogue-mak.webp" data-source="./Assets/Drnkov/catalogue-mak.webp"><img src="./Assets/Drnkov/catalogue-mak.webp" width="816" height="1285" alt="An older man with a white mustache wears a dark fur hat." decoding="async" loading="lazy"></a></figure></div>
-</section><section class="sources-section muzej-sources" aria-labelledby="sources">
-      <h2 class="section-heading" id="sources">Sources</h2>
+</section><details class="catalogue-sources">
+      <summary>Sources</summary>
+      <div class="sources-section muzej-sources">
         <p><a href="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf">Museum of Contemporary Art, Skopje. <i>Blagoja Drnkov</i>, 1974.</a> Solo exhibition catalogue with a text by Dimitar Kondovski.</p>
         <p><a href="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf">Art Gallery, Skopje. <i>Blagoja Drnkov: 50 Years of Creativity</i>, 1984.</a> Jubilee catalogue, with an essay by Boris Petkovski and a chronology.</p>
         <p><a href="https://www.academia.edu/101167484/Povekje_od_Zborovi_More_than_words_Blagoja_Drnkov_in_the_ethnological_museum_archive">Jovan Šurbanoski, <i>More Than Words</i>, 2022.</a> Exhibition catalogue on Drnkov’s photographs in the ethnological museum archive.</p>
         <p><a href="https://kinoteka.mk/en/lichnosti/drnkov-blagoja/">Cinematheque of Macedonia. Blagoja Drnkov.</a> Biography and filmography.</p>
       <p>Images were supplied to Muzej. The photographer of the opening portrait is unidentified.</p>
-    </section>
+    </div>
+    </details>
 
     </article>
 <section class="more-from-muzej" data-more-from-muzej aria-labelledby="more-from-muzej-title"></section></main>
