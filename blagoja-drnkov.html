@@ -14,7 +14,6 @@
 :root {
   --page-x: clamp(18px, 5.2vw, 72px);
   --profile-gap: clamp(36px, 6vw, 96px);
-  --profile-sticky-top: 100px;
   --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 * { box-sizing: border-box; }
@@ -110,25 +109,15 @@ html { scroll-padding-top: 105px; }
  .portfolio-row.closing { width:84%; }
 }
 
-@media (min-width: 900px) and (min-height: 760px) and (prefers-reduced-motion: no-preference) {
-  .shoreline { align-items:start; padding-bottom:clamp(76px,12svh,120px); }
-  .shoreline > :first-child { position:sticky; top:var(--profile-sticky-top); }
-  .shoreline > :first-child img {
-    max-height:calc(100svh - 200px);
-    width:auto;
-    max-width:100%;
-    margin-inline:auto;
-  }
-  .shoreline > :last-child { margin-top:clamp(190px,37svh,360px); }
-}
+.portfolio-row.shoreline {align-items:end}
 @media (max-width: 760px) {
   .biography-label { display:contents; }
 }
 
-.catalogue-entry.catalogue-source-row { margin-top:64px; padding-top:0; border-top:0; }
-.catalogue-sources { width:100%; max-width:520px; margin:0; }
-@media (min-width: 761px) {
-  .catalogue-sources { grid-column:2; }
+.catalogue-source-row { max-width:1120px; margin:64px auto 0; }
+.catalogue-sources { width:min(100%,520px); margin-left:auto; }
+@media (max-width: 760px) {
+  .catalogue-sources { margin-left:0; }
 }
 .site-footer.muzej-footer .footer-links a { color:inherit; }
 .site-footer.muzej-footer .footer-brand-mark-image { max-width:none; }
@@ -222,7 +211,7 @@ body main .catalogue-sources > .sources-section.muzej-sources {
         </figure>
       </div>
     </section>
-    <div class="catalogue-entry catalogue-source-row">
+    <div class="catalogue-source-row">
       <details class="catalogue-sources">
         <summary>Sources</summary>
         <div class="sources-section muzej-sources">

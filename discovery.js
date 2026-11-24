@@ -220,6 +220,46 @@
       "museum": "Museum of the Macedonian Struggle, Skopje",
       "source": "https://mmb.org.mk/en/macedonian-revolutionary-organization-1893-1903/",
       "image": "./Assets/Discovery/the-kidnapping-of-ellen-stone.webp"
+    },
+    {
+      "id": "landscape-in-macedonia",
+      "title": "Landscape in Macedonia",
+      "details": "Frédéric-Marius de Buzon · 1923",
+      "museum": "",
+      "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/buzon-de-frederic-marius/",
+      "image": "./Assets/Discovery/landscape-in-macedonia.webp"
+    },
+    {
+      "id": "bride-from-krivogastani",
+      "title": "Bride from Krivogaštani",
+      "details": "Olga Benson · 1930 · Watercolor",
+      "museum": "",
+      "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/benson-olga/",
+      "image": "./Assets/Discovery/bride-from-krivogastani.webp"
+    },
+    {
+      "id": "skopje-chokanov",
+      "title": "Skopje",
+      "details": "Danyo Chokanov · 1942 · Oil on canvas",
+      "museum": "",
+      "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/chokanov-denyo-denju-1901-1982/",
+      "image": "./Assets/Discovery/skopje-chokanov.webp"
+    },
+    {
+      "id": "lake-kostur-boissonnas",
+      "title": "Lake Kostur",
+      "details": "Frédéric Boissonnas · 1921 · Photograph",
+      "museum": "",
+      "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/boissonnas-frederic-1858-1946/",
+      "image": "./Assets/Discovery/lake-kostur-boissonnas.webp"
+    },
+    {
+      "id": "veiled-women-solun",
+      "title": "Veiled Women, Solun",
+      "details": "Pierre Combet-Descombes · 1916 · Oil on canvas",
+      "museum": "",
+      "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/combet-descombes-pierre-1885-1966/",
+      "image": "./Assets/Discovery/veiled-women-solun.webp"
     }
   ];
   const target = (attribute) => discovery.querySelector('[data-discovery-' + attribute + ']');

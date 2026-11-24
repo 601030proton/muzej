@@ -748,23 +748,33 @@ body.muzej-logo-hidden .site-header .brand-mark {
 <link rel="stylesheet" href="muzej-header.css?v=20261121-site-nav">
 <script defer src="muzej-header.js?v=20261121-site-nav"></script>
 <style>
-.shirt-plate {width:min(1440px,calc(100% - 2 * var(--page-x, 5vw)));margin:clamp(92px,12vw,158px) auto 0;padding-bottom:clamp(40px,7vw,92px)}
-.shirt-plate-heading {text-align:center;margin:0 auto clamp(30px,5vw,72px)}
-.shirt-plate-heading .feature-kicker,.shirt-plate-heading .feature-byline {margin:0 0 10px}
-.shirt-plate-heading h1 {margin:0;font:400 clamp(38px,5.7vw,88px)/.98 "plantin",Georgia,serif;text-wrap:balance}
-.shirt-plate-grid {display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(12px,2vw,34px);align-items:start}
-.shirt-plate-item {min-width:0;margin:0;text-align:center}
-.shirt-plate-image {position:relative}
-.shirt-plate-image img {display:block;width:100%;height:auto}
-.shirt-plate-image svg {position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
-.shirt-plate-image line {stroke:#362d2a;stroke-width:1;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 1px #fff)}
-.shirt-plate-item figcaption {display:grid;gap:5px;margin:0;font:400 13px/1.35 var(--sans,Arial,sans-serif);letter-spacing:normal;text-transform:none}
-.shirt-plate-item figcaption strong {font:400 clamp(18px,2vw,26px)/1.1 "plantin",Georgia,serif}
-.shirt-plate-item .shirt-withdrawn {font-weight:600;color:#762f29}
-@media(max-width:760px) {
-  .shirt-plate {width:calc(100% - 40px)}
-  .shirt-plate-grid {grid-template-columns:minmax(0,380px);justify-content:center;gap:36px}
-  .shirt-plate-item figcaption {font-size:14px}
+.shirt-slideshow {
+  width:min(720px,calc(100% - 40px));
+  margin:clamp(92px,11vw,138px) auto 0;
+  padding-bottom:clamp(32px,5vw,65px);
+  text-align:center;
+}
+.shirt-slideshow-heading {margin:0 0 clamp(12px,2.5vw,30px)}
+.shirt-slideshow-heading .feature-kicker,.shirt-slideshow-heading .feature-byline {margin:0 0 8px}
+.shirt-slideshow-heading h1 {margin:0;font:400 clamp(38px,5.7vw,80px)/.98 "plantin",Georgia,serif;text-wrap:balance}
+.shirt-stage {display:grid;grid-template-columns:44px minmax(0,1fr) 44px;align-items:center;gap:clamp(0px,2vw,18px)}
+.shirt-slide {min-width:0;margin:0}
+.shirt-slide img {display:block;width:min(100%,clamp(218px,35vw,390px));height:auto;margin:0 auto}
+.shirt-slide figcaption {display:grid;gap:4px;margin:0;font:400 14px/1.35 var(--sans,Arial,sans-serif);letter-spacing:normal;text-transform:none}
+.shirt-slide figcaption strong {font:400 clamp(22px,2.6vw,30px)/1.13 "plantin",Georgia,serif}
+.shirt-slide .shirt-withdrawn {font-weight:600;color:#762f29}
+.shirt-slide-note {min-height:1.35em}
+.shirt-arrow {width:44px;height:44px;border:1px solid #dedbd7;border-radius:50%;background:#fff;color:#211e1b;font:400 23px/1 Arial,sans-serif;cursor:pointer}
+.shirt-arrow:hover {border-color:#211e1b}
+.shirt-filmstrip {display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(4px,1.2vw,12px);width:min(100%,460px);margin:18px auto 0}
+.shirt-filmstrip a {min-width:0;display:grid;justify-items:center;gap:3px;padding:3px 4px 6px;border-bottom:1px solid #e7e2dc;color:#25211f;font:400 12px/1.25 var(--sans,Arial,sans-serif);text-decoration:none}
+.shirt-filmstrip a[aria-current="true"],.shirt-filmstrip a:hover {border-color:#211e1b}
+.shirt-filmstrip a[aria-current="true"] {font-weight:700}
+.shirt-filmstrip img {display:block;width:min(100%,67px);height:auto}
+.shirt-slideshow :focus-visible {outline:2px solid #211e1b;outline-offset:3px}
+@media(max-width:480px) {
+  .shirt-slideshow {width:calc(100% - 30px)}
+  .shirt-stage {gap:2px}
 }
 </style>
 </head>
@@ -781,49 +791,27 @@ body.muzej-logo-hidden .site-header .brand-mark {
 </header>
 
 <main>
-  <header class="shirt-plate" aria-labelledby="shirt-plate-title">
-    <div class="shirt-plate-heading">
+  <header class="shirt-slideshow" aria-labelledby="shirt-plate-title">
+    <div class="shirt-slideshow-heading">
       <p class="feature-byline muzej-byline">Words <strong>Aleksandar Trajkovski</strong></p>
       <p class="feature-kicker">Sport | Design</p>
       <h1 id="shirt-plate-title">The Nation on Their Backs</h1>
     </div>
-    <div class="shirt-plate-grid" aria-label="Five Macedonia national team shirt designs, 1994 to 2023">
-      <figure class="shirt-plate-item">
-        <div class="shirt-plate-image">
-          <img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-1994.webp" alt="Gems 1994 shirt, front view" width="480" height="560" fetchpriority="high">
-          <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="42" y1="4" x2="50" y2="13"/></svg>
-        </div>
-        <figcaption><strong>Gems · 1994</strong><span>Polo collar</span></figcaption>
+    <div class="shirt-stage">
+      <button class="shirt-arrow" type="button" data-shirt-step="-1" aria-label="Previous shirt" hidden>‹</button>
+      <figure class="shirt-slide">
+        <img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-1994.webp" alt="Gems 1994 shirt, front view" width="480" height="560" fetchpriority="high">
+        <figcaption aria-live="polite" aria-atomic="true"><strong data-shirt-label>Gems · 1994</strong><span data-shirt-feature>Polo collar</span><span class="shirt-withdrawn shirt-slide-note"></span></figcaption>
       </figure>
-      <figure class="shirt-plate-item">
-        <div class="shirt-plate-image">
-          <img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-1998.webp" alt="Puma 1998 shirt, front view" width="480" height="560" decoding="async">
-          <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="7" y1="16" x2="31" y2="24"/></svg>
-        </div>
-        <figcaption><strong>Puma · 1998</strong><span>Chest band</span></figcaption>
-      </figure>
-      <figure class="shirt-plate-item">
-        <div class="shirt-plate-image">
-          <img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-2016.webp" alt="JAKO 2016 shirt, front view" width="480" height="560" decoding="async">
-          <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="84" y1="10" x2="61" y2="28"/></svg>
-        </div>
-        <figcaption><strong>JAKO · 2016</strong><span>Rays from the crest</span></figcaption>
-      </figure>
-      <figure class="shirt-plate-item">
-        <div class="shirt-plate-image">
-          <img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-2021.webp" alt="JAKO 2021 shirt, front view" width="480" height="560" decoding="async">
-          <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="94" y1="47" x2="52" y2="57"/></svg>
-        </div>
-        <figcaption><strong>JAKO · 2021</strong><span>Tone-on-tone lynx</span><span class="shirt-withdrawn">Withdrawn before Euro 2020</span></figcaption>
-      </figure>
-      <figure class="shirt-plate-item">
-        <div class="shirt-plate-image">
-          <img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-2023.webp" alt="JAKO 2023 shirt, front view" width="480" height="560" decoding="async">
-          <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="91" y1="33" x2="52" y2="48"/></svg>
-        </div>
-        <figcaption><strong>JAKO · 2023</strong><span>Sun around the player number</span></figcaption>
-      </figure>
+      <button class="shirt-arrow" type="button" data-shirt-step="1" aria-label="Next shirt" hidden>›</button>
     </div>
+    <nav class="shirt-filmstrip" aria-label="Choose a shirt">
+      <a href="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-1994.webp" aria-label="Gems · 1994" data-shirt-name="Gems · 1994" data-shirt-detail="Polo collar" aria-current="true"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-1994.webp" alt="" width="480" height="560" decoding="async"><span>1994</span></a>
+      <a href="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-1998.webp" aria-label="Puma · 1998" data-shirt-name="Puma · 1998" data-shirt-detail="Chest band"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-1998.webp" alt="" width="480" height="560" decoding="async"><span>1998</span></a>
+      <a href="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-2016.webp" aria-label="JAKO · 2016" data-shirt-name="JAKO · 2016" data-shirt-detail="Rays from the crest"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-2016.webp" alt="" width="480" height="560" decoding="async"><span>2016</span></a>
+      <a href="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-2021.webp" aria-label="JAKO · 2021, Withdrawn before Euro 2020" data-shirt-name="JAKO · 2021" data-shirt-detail="Tone-on-tone lynx" data-shirt-note="Withdrawn before Euro 2020"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-2021.webp" alt="" width="480" height="560" decoding="async"><span>2021</span></a>
+      <a href="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-2023.webp" aria-label="JAKO · 2023" data-shirt-name="JAKO · 2023" data-shirt-detail="Sun around the player number"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-2023.webp" alt="" width="480" height="560" decoding="async"><span>2023</span></a>
+    </nav>
   </header>
 
   <article class="article-shell">
@@ -918,5 +906,46 @@ body.muzej-logo-hidden .site-header .brand-mark {
   })();
 </script>
 
+<script>
+(() => {
+  const slideshow = document.querySelector('.shirt-slideshow');
+  const previews = [...slideshow.querySelectorAll('.shirt-filmstrip a')];
+  const photo = slideshow.querySelector('.shirt-slide img');
+  const label = slideshow.querySelector('[data-shirt-label]');
+  const feature = slideshow.querySelector('[data-shirt-feature]');
+  const note = slideshow.querySelector('.shirt-slide-note');
+  let selected = 0;
+
+  function show(index) {
+    previews[selected].removeAttribute('aria-current');
+    selected = (index + previews.length) % previews.length;
+    const preview = previews[selected];
+    const { shirtName, shirtDetail, shirtNote } = preview.dataset;
+    photo.src = preview.href;
+    photo.alt = shirtName + ' shirt, front view';
+    label.textContent = shirtName;
+    feature.textContent = shirtDetail;
+    note.textContent = shirtNote || '';
+    preview.setAttribute('aria-current', 'true');
+  }
+
+  previews.forEach((preview, index) => {
+    preview.addEventListener('click', (event) => {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      show(index);
+    });
+  });
+  slideshow.querySelectorAll('[data-shirt-step]').forEach((button) => {
+    button.hidden = false;
+    button.addEventListener('click', () => show(selected + Number(button.dataset.shirtStep)));
+  });
+  slideshow.addEventListener('keydown', (event) => {
+    if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+    event.preventDefault();
+    show(selected + (event.key === 'ArrowRight' ? 1 : -1));
+  });
+})();
+</script>
 </body>
 </html>
