@@ -1463,7 +1463,11 @@ header.muzej-intro-opening>.muzej-intro-media>figure{min-height:calc(100svh - 80
 .galicnik-article .chapter-heading {margin-top:0}
 .galicnik-film {margin:32px 0 0; padding:20px 0; border-block:1px solid #dedede}
 .galicnik-film figcaption {font:400 14px/1.5 var(--sans); margin:0}
-.galicnik-sources {max-width:720px; margin:40px auto 90px}
+.lazarki-article .content-row.sources-row {margin:0}
+.galicnik-sources {margin:0 0 90px}
+@media(min-width:761px){
+ .galicnik-sources {grid-column:2}
+}
 @media(max-width:760px){
  header.muzej-intro-opening>.muzej-intro-media>figure {min-height:0}
  .galicnik-article .lazarki-hero img {height:auto; width:100%; max-height:65svh; min-height:0}
@@ -1540,15 +1544,17 @@ header.muzej-intro-opening>.muzej-intro-media>figure{min-height:calc(100svh - 80
       </div>
     </section>
 
-    <section class="sources-section muzej-sources galicnik-sources" aria-labelledby="galicnik-sources">
-      <h2 class="section-heading" id="galicnik-sources">Sources</h2>
-      <p>Ludvík Kuba. <a href="https://macedonia.kroraina.com/en/lkm/lkm_4.htm">“A Week of Weddings in Galichnik.”</a> <i>A Book on Macedonia. Travels and Research (1925–1927)</i>, chapter IV.</p>
-      <p>Olive Lodge. “Serbian Wedding Customs: St. Peter’s Day in Galičnik.” <i>The Slavonic and East European Review</i> 13, no. 39 (April 1935), pp. 650–673. See the British Museum’s <a href="https://artsandculture.google.com/asset/bride-s-costume-from-gali%C4%8Dnik/WgHc1Iy4G2ed-g">bridal ensemble</a> and <a href="https://artsandculture.google.com/asset/gali%C4%8Dnik-bride-s-costume-woman-s-coat-klasenik-guvealski-detail/VAEZgIkXLZWJHw">coat record</a>.</p>
-      <p>Sifrid Miladinov. <i>Galičnik</i> (1940). <a href="https://kinoteka.mk/en/cinematheque-and-cinesqu%D0%B0re-invite-you-to-watch-macedonian-movies-online/">Cinematheque of Macedonia film notes</a>.</p>
-      <p>Iliya Nedin. <a href="https://www.ceeol.com/search/article-detail?id=1063987">Study of the Galičnik Wedding festival</a>. <i>Ongal</i>, no. 10 (2015), pp. 62–112.</p>
-      <p>Tcerepna, photographs and notes on the <a href="https://commons.wikimedia.org/wiki/File:%D0%93%D0%B0%D0%BB%D0%B8%D1%87%D0%BA%D0%B0_%D1%81%D0%B2%D0%B0%D0%B4%D0%B1%D0%B0_-_1993_13.jpg">1993 wedding</a> and the <a href="https://commons.wikimedia.org/wiki/File:%D0%93%D0%B0%D0%BB%D0%B8%D1%87%D0%BA%D0%B0_%D1%81%D0%B2%D0%B0%D0%B4%D0%B1%D0%B0_-_1994_23.jpg">1994 festival</a>.</p>
-      <p>Galičnik village council. <a href="https://galichnik.com.mk/?p=1228">Selection of the 2026 couple</a>, March 27, 2026. Office of the President. <a href="https://pretsedatel.mk/en/galicka-svadba-2026-en/">Report on the 2026 wedding</a>, July 12, 2026.</p>
-    </section>
+    <div class="content-row sources-row">
+      <section class="sources-section muzej-sources galicnik-sources" aria-labelledby="galicnik-sources">
+        <h2 class="section-heading" id="galicnik-sources">Sources</h2>
+        <p>Ludvík Kuba. <a href="https://macedonia.kroraina.com/en/lkm/lkm_4.htm">“A Week of Weddings in Galichnik.”</a> <i>A Book on Macedonia. Travels and Research (1925–1927)</i>, chapter IV.</p>
+        <p>Olive Lodge. “Serbian Wedding Customs: St. Peter’s Day in Galičnik.” <i>The Slavonic and East European Review</i> 13, no. 39 (April 1935), pp. 650–673. See the British Museum’s <a href="https://artsandculture.google.com/asset/bride-s-costume-from-gali%C4%8Dnik/WgHc1Iy4G2ed-g">bridal ensemble</a> and <a href="https://artsandculture.google.com/asset/gali%C4%8Dnik-bride-s-costume-woman-s-coat-klasenik-guvealski-detail/VAEZgIkXLZWJHw">coat record</a>.</p>
+        <p>Sifrid Miladinov. <i>Galičnik</i> (1940). <a href="https://kinoteka.mk/en/cinematheque-and-cinesqu%D0%B0re-invite-you-to-watch-macedonian-movies-online/">Cinematheque of Macedonia film notes</a>.</p>
+        <p>Iliya Nedin. <a href="https://www.ceeol.com/search/article-detail?id=1063987">Study of the Galičnik Wedding festival</a>. <i>Ongal</i>, no. 10 (2015), pp. 62–112.</p>
+        <p>Tcerepna, photographs and notes on the <a href="https://commons.wikimedia.org/wiki/File:%D0%93%D0%B0%D0%BB%D0%B8%D1%87%D0%BA%D0%B0_%D1%81%D0%B2%D0%B0%D0%B4%D0%B1%D0%B0_-_1993_13.jpg">1993 wedding</a> and the <a href="https://commons.wikimedia.org/wiki/File:%D0%93%D0%B0%D0%BB%D0%B8%D1%87%D0%BA%D0%B0_%D1%81%D0%B2%D0%B0%D0%B4%D0%B1%D0%B0_-_1994_23.jpg">1994 festival</a>.</p>
+        <p>Galičnik village council. <a href="https://galichnik.com.mk/?p=1228">Selection of the 2026 couple</a>, March 27, 2026. Office of the President. <a href="https://pretsedatel.mk/en/galicka-svadba-2026-en/">Report on the 2026 wedding</a>, July 12, 2026.</p>
+      </section>
+    </div>
   </article>
 <section aria-labelledby="more-from-muzej-title" class="more-from-muzej" data-more-from-muzej="traditions"></section>
 </main>

@@ -1464,7 +1464,11 @@ header.muzej-intro-opening>.muzej-intro-media>figure{min-height:calc(100svh - 80
 .teshkoto-article .teshkoto-media-note {margin: 28px 0 0; padding: 14px 0; border-top: 1px solid #d8d8d8}
 .teshkoto-article .teshkoto-media-note figcaption {font:400 12px/1.5 var(--sans); margin:0}
 .teshkoto-video iframe {display:block; width:100%; aspect-ratio:16 / 9; border:0; background:#f3f3f3}
-.teshkoto-sources {max-width:720px; margin:40px auto 90px}
+.lazarki-article .content-row.sources-row {margin:0}
+.teshkoto-sources {margin:0 0 90px}
+@media(min-width:761px){
+ .teshkoto-sources {grid-column:2}
+}
 @media(max-width:760px){
  header.muzej-intro-opening>.muzej-intro-media>figure {min-height:0}
  .teshkoto-article .lazarki-hero img {height:auto; width:100%; max-height:65svh; min-height:0}
@@ -1546,14 +1550,16 @@ header.muzej-intro-opening>.muzej-intro-media>figure{min-height:calc(100svh - 80
       </div>
     </section>
 
-    <section class="sources-section muzej-sources teshkoto-sources" aria-labelledby="teshkoto-sources">
-      <h2 class="section-heading" id="teshkoto-sources">Sources</h2>
-      <p>Carol Silverman, <a href="https://www.academia.edu/34600374/Macedonia_UNESCO_and_Intangible_Cultural_Heritage_The_Challenging_Fate_of_Te%C5%A1koto">“Macedonia, UNESCO, and Intangible Cultural Heritage: The Challenging Fate of Teškoto.”</a> <i>Journal of Folklore Research</i> 52, nos. 2–3 (2015), pp. 233–251.</p>
-      <p>Stojanče Kostov, <a href="https://www.ceeol.com/search/article-detail?id=968601">study comparing Teškoto and Lesnoto</a>, <i>Palimpsest</i> 4, no. 7 (2019), pp. 221–228, and <a href="https://www.ceeol.com/search/article-detail?id=1432573">“Teškoto – a dance that evolved from the Lesnoto,”</a> <i>Macedonian Folklore</i> 57, no. 89 (2026), pp. 51–60.</p>
-      <p>Tanec, <a href="https://tanec.mk/ora/">repertoire notes</a>. Smithsonian Folkways, <a href="https://folkways.si.edu/yugoslav-national-folk-ballet/teshkoto/world/music/track/smithsonian">Tanec’s 1956 recording</a>, FW08803_104.</p>
-      <p>Filmoteka Narodowa, <a href="https://repozytorium.fn.org.pl/?q=en/node/5685"><i>Jugosławia. Festiwal muzyki i tańca</i></a> (1948). Eddy Nadel, <a href="https://www.youtube.com/watch?v=4C64SImegm4"><i>Tanec in Skopje</i></a> (1951). Filip Petkovski, <a href="https://www.youtube.com/watch?v=84NlX4-B9AE"><i>Teškoto through the Years</i></a> (2020).</p>
-      <p>Blaže Koneski, <a href="https://mn.mk/pesni-za-makedonija/2844-teskoto/">“Teškoto,”</a> from <i>Zemjata i ljubovta</i> (1948). Namita Subiotto, <a href="https://e-lib.ugd.edu.mk/resursi/megunarodni-spisanija/pal/pal-2022_13.pdf">study of Koneski in Slovenian translation</a>, <i>Palimpsest</i> (2022).</p>
-    </section>
+    <div class="content-row sources-row">
+      <section class="sources-section muzej-sources teshkoto-sources" aria-labelledby="teshkoto-sources">
+        <h2 class="section-heading" id="teshkoto-sources">Sources</h2>
+        <p>Carol Silverman, <a href="https://www.academia.edu/34600374/Macedonia_UNESCO_and_Intangible_Cultural_Heritage_The_Challenging_Fate_of_Te%C5%A1koto">“Macedonia, UNESCO, and Intangible Cultural Heritage: The Challenging Fate of Teškoto.”</a> <i>Journal of Folklore Research</i> 52, nos. 2–3 (2015), pp. 233–251.</p>
+        <p>Stojanče Kostov, <a href="https://www.ceeol.com/search/article-detail?id=968601">study comparing Teškoto and Lesnoto</a>, <i>Palimpsest</i> 4, no. 7 (2019), pp. 221–228, and <a href="https://www.ceeol.com/search/article-detail?id=1432573">“Teškoto – a dance that evolved from the Lesnoto,”</a> <i>Macedonian Folklore</i> 57, no. 89 (2026), pp. 51–60.</p>
+        <p>Tanec, <a href="https://tanec.mk/ora/">repertoire notes</a>. Smithsonian Folkways, <a href="https://folkways.si.edu/yugoslav-national-folk-ballet/teshkoto/world/music/track/smithsonian">Tanec’s 1956 recording</a>, FW08803_104.</p>
+        <p>Filmoteka Narodowa, <a href="https://repozytorium.fn.org.pl/?q=en/node/5685"><i>Jugosławia. Festiwal muzyki i tańca</i></a> (1948). Eddy Nadel, <a href="https://www.youtube.com/watch?v=4C64SImegm4"><i>Tanec in Skopje</i></a> (1951). Filip Petkovski, <a href="https://www.youtube.com/watch?v=84NlX4-B9AE"><i>Teškoto through the Years</i></a> (2020).</p>
+        <p>Blaže Koneski, <a href="https://mn.mk/pesni-za-makedonija/2844-teskoto/">“Teškoto,”</a> from <i>Zemjata i ljubovta</i> (1948). Namita Subiotto, <a href="https://e-lib.ugd.edu.mk/resursi/megunarodni-spisanija/pal/pal-2022_13.pdf">study of Koneski in Slovenian translation</a>, <i>Palimpsest</i> (2022).</p>
+      </section>
+    </div>
   </article>
 <section aria-labelledby="more-from-muzej-title" class="more-from-muzej" data-more-from-muzej="traditions"></section>
 </main>
