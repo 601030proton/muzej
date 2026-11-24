@@ -10,3 +10,16 @@ body main :is(.sources-section.muzej-sources,.muzej-source-list) a:hover{text-de
 @media(max-width:760px){body main .sources-section.muzej-sources>h2.section-heading{font-size:26px;margin-bottom:22px}}
 
 body main .muzej-source-list{width:100%;max-width:520px;list-style:none;padding:0}
+
+/* Sources after a full-width article block sit on the right edge. */
+body main .sources-section.muzej-sources.muzej-sources-end {
+  width: min(100%, 520px);
+  max-width: 520px;
+  margin: 64px 0 0 auto;
+}
+body main .sources-section.muzej-sources.muzej-sources-end .muzej-source-list {
+  column-count: 1;
+}
+@media(max-width:760px) {
+  body main .sources-section.muzej-sources.muzej-sources-end { margin-inline: 0; }
+}

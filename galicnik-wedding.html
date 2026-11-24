@@ -1462,16 +1462,7 @@ header.muzej-intro-opening>.muzej-intro-media>figure{min-height:calc(100svh - 80
 .galicnik-article .chapter-heading {margin-top:0}
 .galicnik-film {margin:32px 0 0; padding:20px 0; border-block:1px solid #dedede}
 .galicnik-film figcaption {font:400 14px/1.5 var(--sans); margin:0}
-.galicnik-article .content-row.galicnik-photo-pair {
-  grid-template-columns:repeat(2,minmax(0,420px));
-  justify-content:center;
-  gap:clamp(24px,4vw,64px);
-}
-.galicnik-photo-pair .article-body-media {position:static;width:100%}
 .galicnik-sources {margin:0}
-@media(max-width:760px) {
-  .galicnik-article .content-row.galicnik-photo-pair {grid-template-columns:minmax(0,420px)}
-}
 @media(max-width:760px){
  header.muzej-intro-opening>.muzej-intro-media>figure {min-height:0}
  .galicnik-article .lazarki-hero img {height:auto; width:100%; max-height:65svh; min-height:0}
@@ -1479,13 +1470,13 @@ header.muzej-intro-opening>.muzej-intro-media>figure{min-height:calc(100svh - 80
  .galicnik-article .content-row {gap:24px}
 }
 </style>
-<link href="fonts.css?v=20261101-consistency-3" rel="stylesheet"/>
-<link href="more-from-muzej.css?v=20261108-full-cassette" rel="stylesheet"/>
-<script defer="" src="more-from-muzej.js?v=20261123-lazarki-portrait"></script>
-<link href="muzej-footer-logo.css?v=20260914" rel="stylesheet"/>
+<link href="fonts.css?v=20261124-editorial" rel="stylesheet"/>
+<link href="more-from-muzej.css?v=20261124-editorial" rel="stylesheet"/>
+<script defer="" src="more-from-muzej.js?v=20261124-editorial"></script>
+<link rel="stylesheet" href="muzej-footer-logo.css?v=20261124-editorial">
 <link rel="stylesheet" href="article-system.css?v=20261101-consistency-3">
 <link rel="stylesheet" href="bylines.css?v=20261107">
-<link rel="stylesheet" href="editorial-sources.css?v=20261109-sources">
+<link rel="stylesheet" href="editorial-sources.css?v=20261124-editorial">
 <link rel="stylesheet" href="article-intro.css?v=20261113-deck-below-fold-2">
 <link rel="stylesheet" href="muzej-header.css?v=20261121-site-nav">
 <script defer src="muzej-header.js?v=20261121-site-nav"></script>
@@ -1503,7 +1494,7 @@ header.muzej-intro-opening>.muzej-intro-media>figure{min-height:calc(100svh - 80
   <header class="lazarki-opening muzej-intro-opening">
     <div class="lazarki-opening-copy muzej-intro-title">
       <p class="lazarki-kicker">Traditions</p>
-      <h1>Galičnik Wedding</h1>
+      <h1 class="muzej-article-title">Galičnik Wedding</h1>
       <p class="lazarki-byline muzej-byline">Words <strong>Aleksandar Trajkovski</strong></p>
     </div>
     <div class="muzej-intro-media">
@@ -1533,10 +1524,12 @@ header.muzej-intro-opening>.muzej-intro-media>figure{min-height:calc(100svh - 80
       </div>
     </section>
 
-    <div class="content-row galicnik-photo-pair">
-      <figure class="article-body-media"><img src="./Assets/GalicnikWedding/galicnik-decorated-vessel-3x4.webp" alt="Two women in embroidered clothing hold a vessel decorated with flowers." width="783" height="1044" loading="lazy" decoding="async"></figure>
-      <figure class="article-body-media"><img src="./Assets/GalicnikWedding/galicnik-musicians-3x4.webp" alt="Drummers and wind players perform beside a group in traditional dress." width="624" height="832" loading="lazy" decoding="async"></figure>
-    </div>
+    <section class="gallery-reading ohrid-sketch-spread" aria-label="Wedding rites and musicians">
+      <figure class="gallery-reading-media"><img src="./Assets/GalicnikWedding/galicnik-decorated-vessel-3x4.webp" alt="Two women in embroidered clothing hold a vessel decorated with flowers." width="783" height="1044" loading="lazy" decoding="async"></figure>
+      <div class="gallery-reading-side">
+        <figure class="gallery-reading-feature"><img src="./Assets/GalicnikWedding/galicnik-musicians-3x4.webp" alt="Drummers and wind players perform beside a group in traditional dress." width="624" height="832" loading="lazy" decoding="async"></figure>
+      </div>
+    </section>
 
     <section class="content-row">
       <figure class="article-body-media"><img src="./Assets/GalicnikWedding/galicnik-dance-3x4.webp" alt="Linked hands frame a dancer balancing on a drum and a musician playing a pipe." width="768" height="1024" loading="lazy" decoding="async"></figure>
@@ -1559,17 +1552,17 @@ header.muzej-intro-opening>.muzej-intro-media>figure{min-height:calc(100svh - 80
 
 
   </article>
-<section aria-labelledby="more-from-muzej-title" class="more-from-muzej" data-more-from-muzej="traditions"></section>
+<section class="more-from-muzej" data-more-from-muzej="traditions" aria-labelledby="more-from-muzej-title"></section>
 </main>
 
 <footer class="site-footer muzej-footer">
 <div class="footer-inner">
 <div class="footer-brand">
-<a aria-label="Muzej home" class="footer-brand-mark" href="https://muzej.co/"><img alt="" aria-hidden="true" class="footer-brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png"/></a>
+<a aria-label="Muzej home" class="footer-brand-mark" href="index.html"><img alt="" aria-hidden="true" class="footer-brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png"/></a>
 <p class="footer-statement">An editorial archive of Macedonian art, style, tradition, and culture.</p>
 </div>
 <nav aria-label="Footer navigation" class="footer-links">
-<a href="https://muzej.co/about.html">About Muzej</a>
+<a href="about.html">About Muzej</a>
 <a href="mailto:muzej.mk@proton.me">Contact</a>
 <a aria-label="Open Muzej on Instagram" href="https://www.instagram.com/_muzej/" rel="noopener noreferrer" target="_blank">Instagram</a>
 </nav>

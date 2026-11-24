@@ -388,7 +388,7 @@
     heading.style.fontFamily = '"plantin", Georgia, serif';
     heading.style.fontWeight = "400";
     heading.style.fontStyle = "normal";
-    heading.textContent = isTraditions ? "More in Traditions" : "More from Muzej";
+    heading.textContent = "More from Muzej";
     grid.className = "more-from-muzej-card-grid";
 
     related.forEach(function (article) {

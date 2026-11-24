@@ -1008,9 +1008,9 @@ body.muzej-logo-hidden .site-header .brand-mark {
   margin-top: 0;
 }
 </style>
-<link href="more-from-muzej.css?v=20261113-radio-seamless" rel="stylesheet"/>
-<script defer="" src="more-from-muzej.js?v=20261123-lazarki-portrait"></script>
-<link href="fonts.css?v=20261101-consistency-3" rel="stylesheet"/>
+<link href="more-from-muzej.css?v=20261124-editorial" rel="stylesheet"/>
+<script defer="" src="more-from-muzej.js?v=20261124-editorial"></script>
+<link href="fonts.css?v=20261124-editorial" rel="stylesheet"/>
 <link href="article-opening.css?v=20261101" rel="stylesheet"/>
 <link href="article-system.css?v=20261101-consistency-3" rel="stylesheet"/>
 <link href="bylines.css?v=20261107" rel="stylesheet"/>
@@ -1027,7 +1027,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
 <meta content="Galika | Muzej" property="og:title"/>
 <meta content="An electronic music festival in Galičnik. Photographs from Galika and music from Bare Minimum." property="og:description"/>
 <meta content="https://muzej.co/Assets/Galika/galika-dance-floor.webp" property="og:image"/>
-<link href="editorial-sources.css?v=20261109-sources" rel="stylesheet"/>
+<link href="editorial-sources.css?v=20261124-editorial" rel="stylesheet"/>
 <style>
 .galika-article{--foreground:#000;--ink:#000;--ink-soft:#000;color:#000;background:#fff}
 .galika-article .journal-opening h1{font-size:clamp(80px,11vw,170px);line-height:.9;letter-spacing:-.035em}
@@ -1082,6 +1082,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
 .galika-photo-pair img{display:block;width:100%;height:auto}
 @media(max-width:600px){.galika-photo-pair{grid-template-columns:1fr;gap:48px}}
 </style>
+<link rel="stylesheet" href="muzej-footer-logo.css?v=20261124-editorial">
 </head>
 <body class="kinfolk-article-hero journal-layout galika-article"><header class="site-header">
 <div class="shell header-frame">
@@ -1093,7 +1094,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
 </header>
 <main>
 <header aria-labelledby="article-title" class="journal-opening muzej-intro-opening">
-<div class="journal-opening-copy muzej-intro-title"><p class="galika-kicker">Music | Galičnik</p><h1 id="article-title">Galika</h1><p class="journal-byline muzej-byline">Words <strong>Aleksandar Trajkovski</strong></p></div>
+<div class="journal-opening-copy muzej-intro-title"><p class="galika-kicker">Music | Galičnik</p><h1 class="muzej-article-title" id="article-title">Galika</h1><p class="journal-byline muzej-byline">Words <strong>Aleksandar Trajkovski</strong></p></div>
 <div class="muzej-intro-media"><figure class="journal-hero"><img alt="A DJ wearing headphones at the decks, with dancers close behind in red light." decoding="async" fetchpriority="high" height="1600" src="./Assets/Galika/galika-at-the-decks.webp" width="1066"/></figure><p class="journal-deck muzej-intro-deck">An electronic music festival in Galičnik.</p></div>
 </header>
 <article class="article-shell">
@@ -1109,12 +1110,12 @@ body.muzej-logo-hidden .site-header .brand-mark {
 <section class="article-body galika-reference-row"><aside class="article-body-media galika-poster-note"><figure><img alt="The first Galika poster, combining landscape, woven patterns, and traditional dress." decoding="async" height="1440" loading="lazy" src="./Assets/Galika/galika-poster.jpg" width="1080"/></figure></aside><div class="article-body-copy"><section aria-labelledby="sources-title" class="sources-section muzej-sources"><h2 class="section-heading" id="sources-title">Sources</h2><p><a href="https://www.nulta.mk/posts/galika-кога-клубот-ќе-се-пресели-во-коњски-м">Ljubica Angelkova. Galika, Nulta, August 14, 2026.</a></p><p><a href="https://ra.co/events/2473755">Galika. Event announcement, artwork, and program, Resident Advisor.</a></p><p><a href="https://bare-minimum.bandcamp.com/album/da-funk">Sasho Uzun. <em>Da Funk</em>, BM001. Bare Minimum, October 20, 2025.</a></p></section></div></section>
 <p class="galika-caption">Photographs Aleksandra Kostadinovska</p>
 </article>
-<section aria-labelledby="more-from-muzej-title" class="more-from-muzej" data-more-from-muzej=""></section>
+<section class="more-from-muzej" data-more-from-muzej="" aria-labelledby="more-from-muzej-title"></section>
 </main>
 <footer class="site-footer muzej-footer">
 <div class="footer-inner">
 <div class="footer-brand">
-<span class="footer-wordmark">Muzej</span>
+<a aria-label="Muzej home" class="footer-brand-mark" href="index.html"><img alt="" aria-hidden="true" class="footer-brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png"/></a>
 <p class="footer-statement">An editorial archive of Macedonian art, style, tradition, and culture.</p>
 </div>
 <nav aria-label="Footer navigation" class="footer-links">
