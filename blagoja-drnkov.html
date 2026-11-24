@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blagoja Drnkov | Muzej Catalogue</title>
+<meta name="description" content="A selection of ten photographs by Blagoja Drnkov, Macedonian photographer and documentary filmmaker (1914–2012).">
+<style>
+@font-face {
+  font-family: "plantin";
+  src: url("https://use.typekit.net/af/73d2e3/00000000000000007735baf2/31/l?subset_id=1&fvd=n4&v=3") format("woff2"),
+       url("https://use.typekit.net/af/73d2e3/00000000000000007735baf2/31/d?subset_id=1&fvd=n4&v=3") format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "plantin";
+  src: url("https://use.typekit.net/af/4179dd/00000000000000007735baef/31/l?subset_id=1&fvd=i4&v=3") format("woff2"),
+       url("https://use.typekit.net/af/4179dd/00000000000000007735baef/31/d?subset_id=1&fvd=i4&v=3") format("woff");
+  font-display: swap;
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "plantin";
+  src: url("https://use.typekit.net/af/d2d7b4/00000000000000007735baec/31/l?subset_id=1&fvd=n7&v=3") format("woff2"),
+       url("https://use.typekit.net/af/d2d7b4/00000000000000007735baec/31/d?subset_id=1&fvd=n7&v=3") format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "plantin";
+  src: url("https://use.typekit.net/af/358f1b/00000000000000007735baee/31/l?subset_id=1&fvd=i7&v=3") format("woff2"),
+       url("https://use.typekit.net/af/358f1b/00000000000000007735baee/31/d?subset_id=1&fvd=i7&v=3") format("woff");
+  font-display: swap;
+  font-style: italic;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "adobe-jenson-pro";
+  src: url("https://use.typekit.net/af/6ac4d9/00000000000000007735d85e/31/l?subset_id=1&fvd=n4&v=3") format("woff2"),
+       url("https://use.typekit.net/af/6ac4d9/00000000000000007735d85e/31/d?subset_id=1&fvd=n4&v=3") format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "adobe-jenson-pro";
+  src: url("https://use.typekit.net/af/594743/00000000000000007735d867/31/l?subset_id=1&fvd=n3&v=3") format("woff2"),
+       url("https://use.typekit.net/af/594743/00000000000000007735d867/31/d?subset_id=1&fvd=n3&v=3") format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 300;
+}
+
+
+:root{--muzej-body-family:"plantin", Georgia, serif}
+/* Canonical Muzej masthead geometry, taken directly from the homepage.
+   All article headers use this rule; individual features must not rescale or reposition the wordmark. */
+.site-header .shell.header-frame{
+  width:min(100%,1600px)!important;
+  max-width:none!important;
+  min-width:0!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  box-sizing:border-box!important;
+  margin-inline:auto!important;
+  padding:30px clamp(22px,5vw,80px)!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:0!important;
+}
+.site-header .brand-mark{
+  display:block!important;
+  position:relative!important;
+  overflow:hidden!important;
+  width:clamp(142px,13vw,186px)!important;
+  height:auto!important;
+  min-width:0!important;
+  max-width:none!important;
+  aspect-ratio:1237 / 244!important;
+  flex:0 0 auto!important;
+  margin:0!important;
+  padding:0!important;
+}
+.site-header .brand-mark-image{
+  position:absolute!important;
+  display:block!important;
+  max-width:none!important;
+  width:124.17%!important;
+  height:auto!important;
+  left:-12.21%!important;
+  top:-341.8%!important;
+}
+.site-header .muzej-menu-tools{margin:0;flex:0 0 auto;pointer-events:auto}
+.site-header .muzej-menu-trigger{
+  display:grid!important;
+  place-items:center!important;
+  width:44px!important;
+  height:44px!important;
+  min-height:0!important;
+  padding:0!important;
+}
+@media(max-width:640px){
+  .site-header .shell.header-frame{padding-block:18px!important}
+}
+
+/* The same compact navigation panel on every page. */
+.site-header .muzej-menu { position: relative; }
+.site-header .muzej-menu:not([open]) .muzej-menu-panel { display: none; }
+.site-header .muzej-menu-trigger {
+  list-style: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.site-header .muzej-menu-trigger::-webkit-details-marker { display: none; }
+.site-header .muzej-menu-icon { display: grid; gap: 5px; }
+.site-header .muzej-menu-icon i {
+  display: block;
+  width: 23px;
+  height: 1px;
+  background: #000;
+}
+.site-header .muzej-menu-panel {
+  position: absolute;
+  top: 46px;
+  right: 0;
+  z-index: 30;
+  box-sizing: border-box;
+  width: min(230px, calc(100vw - 44px));
+  max-height: calc(100dvh - 86px);
+  overflow: auto;
+  padding: 16px;
+  border: 1px solid #dedede;
+  background: #fff;
+}
+.site-header .muzej-menu-panel a {
+  display: block;
+  padding: 9px 8px;
+  color: #000;
+  text-decoration: none;
+  font: 400 13px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.site-header .muzej-menu-panel a:hover,
+.site-header .muzej-menu-panel a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+.site-header .muzej-menu-panel a:focus-visible,
+.site-header .muzej-menu-trigger:focus-visible {
+  outline: 1px solid #000;
+  outline-offset: 4px;
+}
+
+
+:root {
+  --page-x: clamp(18px, 5.2vw, 72px);
+  --profile-gap: clamp(36px, 6vw, 96px);
+  --profile-sticky-top: 100px;
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: #fff; color: #000; font-family: var(--muzej-body-family); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+a { color: inherit; text-underline-offset: .16em; }
+.site-header { position: sticky; top: 0; z-index: 10; }
+.utility-menu { position: relative; }
+.utility-trigger { cursor: pointer; list-style: none; }
+.utility-trigger::-webkit-details-marker { display: none; }
+.utility-icon { display: grid; gap: 5px; }
+.utility-icon-line { width: 22px; height: 1px; background: currentColor; }
+.utility-panel { position: absolute; top: 100%; right: 0; width: 220px; padding: 15px; background: #fff; border: 1px solid #ddd; font: 400 13px/1.4 var(--sans); }
+.utility-panel-group + .utility-panel-group { margin-top: 12px; padding-top: 12px; border-top: 1px solid #ddd; }
+.utility-link { display: block; padding: 7px 8px; text-decoration: none; }
+.utility-link:hover { text-decoration: underline; }
+.profile-main { max-width: 1520px; margin: auto; padding: 12px var(--page-x) 0; }
+.profile-opening, .profile-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: var(--profile-gap); }
+.profile-title h1 { font: 400 clamp(44px, 4.4vw, 70px)/.97 var(--muzej-body-family); letter-spacing: -.025em; }
+.profile-kicker, figcaption { font: 400 11px/1.5 var(--sans); }
+.profile-kicker { text-transform: uppercase; letter-spacing: .08em; }
+.profile-hero, .profile-rail { margin: 0; min-width: 0; }
+.profile-hero img { display: block; width: 100%; height: calc(100svh - 150px); object-fit: contain; object-position: center; }
+.profile-deck { font: 400 clamp(26px, 2.6vw, 38px)/1.2 var(--muzej-body-family); }
+.profile-main > article { margin-top: 120px; }
+.profile-row + .profile-row { margin-top: 100px; }
+.profile-rail { position: sticky; top: var(--profile-sticky-top); width: min(100%, calc((100svh - var(--profile-sticky-top) - 76px) * .75)); }
+.profile-rail img, .profile-studies img { display: block; width: 100%; height: auto; }
+.profile-rail figcaption { max-width: 48ch; margin-top: 12px; }
+.profile-studies { max-width: 1120px; margin: clamp(60px, 8vw, 110px) auto; }
+.profile-studies figcaption { margin-top: 12px; }
+.profile-study-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 2vw, 28px); }
+@media (max-width: 560px) {
+  .profile-study-grid { grid-template-columns: minmax(0, 1fr); }
+}
+.profile-prose { min-width: 0; font: 400 clamp(21px, 1.65vw, 25px)/1.46 var(--muzej-body-family); }
+.profile-section-title { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.profile-prose p { margin: 0 0 1.25em; }
+.profile-prose p:last-child { margin-bottom: 0; }
+.profile-closing-copy { min-width: 0; }
+.site-footer { background: #111; color: #fff; padding: 60px var(--page-x); font: 400 13px/1.5 var(--sans); }
+.footer-inner { max-width: 1360px; margin: auto; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; }
+.footer-statement { margin: 16px 0 0; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 18px; }
+.footer-links a { text-decoration: none; }
+.footer-links a:hover { text-decoration: underline; }
+@media (max-width: 760px) {
+  .profile-main { padding-inline: 20px; }
+  .profile-opening, .profile-row { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .profile-title h1 { font-size: clamp(36px, 9vw, 60px); }
+  .profile-hero img { height: auto; }
+  .profile-main > article { margin-top: 64px; }
+  .profile-row + .profile-row { margin-top: 68px; }
+  .profile-prose { font-size: 22px; }
+  .profile-rail { position: static; width: 100%; }
+  .footer-inner { align-items: flex-start; flex-direction: column; }
+}
+
+/* Restore Muzej's image-and-deck opening: the headline stays in view until the introduction has passed. */
+header.muzej-intro-opening{align-items:start}
+header.muzej-intro-opening>.muzej-intro-title{
+position:sticky;top:100px;align-self:start;height:calc(100svh - 160px);min-height:0;
+display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;gap:24px;
+padding:0;margin:0;min-width:0;
+}
+header.muzej-intro-opening>.muzej-intro-title>h1{order:1;margin:0}
+header.muzej-intro-opening>.muzej-intro-title>[class*="kicker"]{order:0;margin:0}
+header.muzej-intro-opening>.muzej-intro-title>[class*="byline"]{order:2;margin:0}
+header.muzej-intro-opening>.muzej-intro-title>.vodici-photo-credit{order:3;margin:0}
+header.muzej-intro-opening>.muzej-intro-media{min-width:0;align-self:start}
+header.muzej-intro-opening .muzej-intro-deck{width:100%;max-width:none;margin:40px 0 0;padding:0;text-align:left}
+@media(max-width:760px){
+header.muzej-intro-opening>.muzej-intro-title{position:static;height:auto;min-height:0;gap:20px;padding:0}
+header.muzej-intro-opening .muzej-intro-deck{margin-top:28px}
+}
+
+/* Reserve the opening screen for the headline and image before revealing the deck. */
+header.muzej-intro-opening>.muzej-intro-media>figure{min-height:calc(100svh - 80px)}
+@media(max-width:760px){header.muzej-intro-opening>.muzej-intro-media>figure{min-height:calc(100svh - 180px)}}
+
+:root { --rule:#ddd; --measure: 62ch; }
+html { scroll-padding-top: 105px; }
+.profile-main .profile-title { height: min(calc(100svh - 154px), 680px); }
+.profile-main .profile-title h1 { max-width: 12ch; }
+header.muzej-intro-opening > .muzej-intro-media > figure { min-height: 0; }
+.profile-hero img {
+  width: min(100%, calc((100svh - 140px) * .75), 540px);
+  height:auto; aspect-ratio:3/4; object-fit:cover; object-position:51% center;
+  margin-inline:auto;
+}
+.profile-hero figcaption { width:min(100%,calc((100svh - 140px) * .75),540px); margin:10px auto 0; }
+.profile-main > article { margin-top: clamp(64px, 9vw, 120px); }
+.profile-opening .profile-deck { max-width: 24ch; margin-top:36px; }
+.profile-rail { width:100%; }
+.profile-rail img { max-height:min(72svh, 640px); object-fit:contain; object-position:left center; }
+.profile-prose h2, .catalogue-heading h2, .more-catalogue h2, .source-notes h2 {
+  font: 400 clamp(32px,4vw,57px)/1.04 var(--muzej-body-family);
+  letter-spacing: -.025em; margin: 0 0 18px;
+}
+.profile-prose { max-width:var(--measure); }
+.article-jump { font: 12px/1.5 var(--sans); margin-top: 28px; display:flex; flex-wrap:wrap; gap: 12px 24px; }
+.catalogue-set, .source-notes, .more-catalogue {
+  border-top:1px solid var(--rule); padding-top:24px; margin:clamp(62px,9vw,134px) 0 0;
+}
+.catalogue-heading { display:grid; grid-template-columns: 1fr 1fr; align-items:start; gap:var(--profile-gap); margin:0 0 38px; }
+.catalogue-heading p { max-width:39ch; margin:0; font:400 clamp(19px,2vw,26px)/1.4 var(--muzej-body-family); }
+.plate-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:44px clamp(18px,3vw,45px); }
+.plate { margin:0; min-width:0; display:flex; flex-direction:column; }
+.plate-media { position:relative; display:block; aspect-ratio: 1.2; cursor:zoom-in; }
+.plate-media img { position:absolute; inset:0; display:block; width:100%; height:100%; object-fit:contain; }
+.plate figcaption { display:grid; grid-template-columns: 2.25em minmax(0,1fr); gap:6px; padding-top:11px; margin-top:9px; border-top:1px solid var(--rule); }
+.plate-no { font-variant-numeric:tabular-nums; }
+.plate-meta { display:block; }
+.plate-title { display:block; font:400 clamp(17px,1.8vw,24px)/1.15 var(--muzej-body-family); margin-bottom:4px; }
+.plate-data { display:block; }
+.plate-source { text-decoration:none; display:inline-block; border-bottom:1px solid #bbb; margin-top:3px; }
+.plate a:hover, .related a:hover { text-decoration:underline; }
+.source-notes ul, .source-notes p { font:13px/1.55 var(--sans); max-width:76ch; }
+.source-notes ul { padding-left:1.2em; display:grid; gap:8px; margin-bottom:20px; }
+.related { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(18px,4vw,60px); max-width:850px; }
+.related a { text-decoration:none; display:block; }
+.related img { display:block; width:100%; height:auto; aspect-ratio:3/4; object-fit:cover; margin-bottom:12px; }
+.related span { font:400 clamp(19px,2.7vw,31px)/1.12 var(--muzej-body-family); display:block; }
+.more-catalogue { margin-bottom:90px; }
+.site-footer { background:#111; color:#fff; }
+.site-footer .footer-brand-mark { font: 25px/1 var(--muzej-body-family); text-decoration:none; }
+.viewer { color:#000; border:1px solid #ccc; width:min(900px,calc(100% - 24px)); max-height:calc(100dvh - 24px); padding:18px; background:#fff; }
+.viewer::backdrop { background: rgb(0 0 0 / .75); }
+.viewer-controls { display:flex; justify-content:space-between; gap:6px; margin-bottom:12px; }
+.viewer-controls button { color:#000; background:#fff; border:1px solid #bbb; padding:8px 10px; font:13px/1.2 var(--sans); cursor:pointer; }
+.viewer img { display:block; max-width:100%; max-height:65dvh; height:auto; width:auto; margin:auto; }
+.viewer h2 { font:400 23px/1.2 var(--muzej-body-family); margin:12px 0 4px; }
+.viewer a { font:12px/1.4 var(--sans); }
+@media(max-width:760px){
+  .profile-main .profile-title { height:auto; }
+  .profile-hero img,.profile-hero figcaption { width:min(100%,410px); }
+  .profile-rail img { max-height:none; }
+  .catalogue-heading { grid-template-columns:1fr; gap:0; }
+  .plate-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:26px 14px; }
+  .plate figcaption { grid-template-columns:minmax(0,1fr); gap:2px; }
+  .profile-opening .profile-deck { margin-top:28px; }
+  .site-footer { padding: 40px 20px; }
+}
+@media(max-width:340px){ .related { grid-template-columns:1fr; } .viewer-controls button { padding-inline:5px; } }
+
+/* Catalogue photograph sequence */
+.profile-main .profile-title h1 { max-width: none; }
+.profile-opening .profile-deck { max-width: 29ch; }
+.bride-hero.plate-media { position:relative; display:block; width:min(100%,calc((100svh - 140px) * .75),540px); aspect-ratio:3/4; margin-inline:auto; }
+.bride-hero.plate-media img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:56% 50%; margin:0; }
+.catalogue-entry { display:grid; grid-template-columns:minmax(140px,1fr) minmax(0,2fr); gap:var(--profile-gap); max-width:980px; margin:0 auto; padding-top:24px; border-top:1px solid #ddd; }
+.catalogue-entry h2 { font:400 clamp(26px,3vw,38px)/1.1 var(--muzej-body-family); margin:0; }
+.catalogue-entry p { font:400 clamp(19px,2vw,24px)/1.48 var(--muzej-body-family); max-width:54ch; margin:0 0 1em; }
+.catalogue-entry p:last-child { margin-bottom:0; }
+.portfolio { max-width:1120px; margin:clamp(62px,10vw,132px) auto 0; }
+.portfolio-row { display:grid; grid-template-columns:minmax(0,1fr); align-items:end; margin:0 auto clamp(65px,10vw,138px); }
+.portfolio-row:last-child { margin-bottom:0; }
+.portfolio-row.portrait-pair { grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:clamp(24px,6vw,80px); width:86%; }
+.portfolio-row.offset-pair { grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr); gap:clamp(24px,6vw,80px); align-items:center; }
+.portfolio-row.indented { width:45%; margin-left:12%; }
+.portfolio-row.wide { width:100%; }
+.portfolio-row.portrait-solo { width:min(48%,460px); margin-right:12%; }
+.portfolio-row.closing { width:min(58%,575px); }
+.photo-plate { min-width:0; margin:0; }
+.photo-plate .plate-media { display:block; width:100%; aspect-ratio:auto; }
+.photo-plate .plate-media img { display:block; position:static; width:100%; height:auto; max-height:none; }
+.photo-plate figcaption { margin-top:12px; }
+.photo-plate .plate-title,.profile-hero .plate-title { display:inline; font:inherit; margin:0; }
+.photo-plate .plate-source,.profile-hero .plate-source { margin:0 0 0 .75em; }
+@media(max-width:760px){
+ .bride-hero.plate-media,.profile-hero figcaption { width:min(100%,410px); }
+ .catalogue-entry { grid-template-columns:1fr; gap:16px; }
+ .portfolio-row.portrait-pair,.portfolio-row.offset-pair { grid-template-columns:1fr; gap:46px; width:100%; }
+ .portfolio-row.portrait-pair > :first-child { width:78%; }
+ .portfolio-row.offset-pair > :last-child { width:76%; margin-left:auto; }
+ .portfolio-row.indented { width:82%; margin-left:0; }
+ .portfolio-row.portrait-solo { width:76%; margin-right:0; }
+ .portfolio-row.closing { width:90%; }
+}
+
+.drnkov-portrait { margin:24px 0 0; max-width:190px; }
+.drnkov-portrait img { display:block; max-width:100%; height:auto; }
+.drnkov-portrait figcaption { margin-top:9px; }
+.scroll-beat { margin:0 auto clamp(65px,10vw,138px); }
+.scroll-beat .portfolio-row { margin-bottom:0; }
+.scroll-beat:last-child { margin-bottom:0; }
+@media (min-width: 900px) and (min-height: 760px) and (prefers-reduced-motion: no-preference) {
+  .scroll-beat { display:flow-root; }
+  .scroll-beat::after { content:""; display:block; height:clamp(76px,12svh,116px); }
+  .scroll-beat .portfolio-row { position:sticky; top:108px; }
+  .scroll-beat .photo-plate .plate-media img { height:auto; max-height:calc(100svh - 245px); object-fit:contain; }
+}
+@media (max-width: 760px) {
+  .biography-label { display:contents; }
+  .drnkov-portrait { grid-row:3; margin:6px 0 0; }
+}
+</style>
+<script defer src="muzej-header.js?v=20261121-site-nav"></script>
+<link rel="stylesheet" href="more-from-muzej.css?v=20261108-full-cassette">
+<script src="more-from-muzej.js?v=20261123-lazarki-portrait" defer></script>
+<meta property="og:type" content="article"><meta property="og:title" content="Blagoja Drnkov | Muzej"><meta property="og:description" content="Ten photographs by the Macedonian photographer and documentary filmmaker."><meta property="og:image" content="https://muzej.co/Assets/Drnkov/hero.webp"><meta property="og:url" content="https://muzej.co/blagoja-drnkov.html"><link rel="canonical" href="https://muzej.co/blagoja-drnkov.html"><link rel="icon" href="./Assets/Muzej%20Logo/MuzejNewWord.png" type="image/png"></head>
+<body>
+<header class="site-header">
+<div class="shell header-frame">
+<a aria-label="Muzej home" class="brand-mark" href="https://muzej.co/">
+<img alt="" aria-hidden="true" class="brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png">
+</a>
+<div class="muzej-menu-tools"><details class="muzej-menu"><summary aria-label="Navigation menu" aria-controls="muzej-menu-panel" class="muzej-menu-trigger"><span aria-hidden="true" class="muzej-menu-icon"><i></i><i></i><i></i></span></summary><nav aria-label="Main navigation" id="muzej-menu-panel" class="muzej-menu-panel"><a href="https://muzej.co/#selected-stories">Selected Stories</a><a href="https://muzej.co/#focus">Art &amp; People</a><a href="https://muzej.co/#now-playing">Cinema</a><a href="https://muzej.co/#traditions">Traditions</a><a href="https://muzej.co/#weekend">Weekend Guide</a><a href="https://muzej.co/#catalogue">Catalogue</a><a href="https://muzej.co/#archive">Archive</a><a href="https://muzej.co/shop.html">Shop</a><a href="https://muzej.co/about.html">About Muzej</a></nav></details></div>
+</div>
+</header>
+<main id="main-content" class="profile-main">
+  <header class="profile-opening muzej-intro-opening">
+    <div class="profile-title muzej-intro-title">
+      <p class="profile-kicker"><a href="https://muzej.co/#catalogue">Catalogue</a> | Photography</p>
+      <h1>Blagoja Drnkov</h1>
+    </div>
+    <div class="muzej-intro-media">
+      <figure class="profile-hero" id="plate-03"><a class="plate-media bride-hero" href="https://macedonia.kroraina.com/mak_enc/encyclopaedia_macedonica_2.pdf#page=737"><img src="./Assets/Drnkov/hero.webp" width="297" height="396" alt="Woman wearing an elaborate bridal headdress" decoding="async" fetchpriority="high" data-original-src="./Assets/Drnkov/mirovacka-bride.webp"></a><figcaption><span class="plate-title"><i>The Mirovačka Bride</i></span>, 1963. <a class="plate-source" href="https://macedonia.kroraina.com/mak_enc/encyclopaedia_macedonica_2.pdf#page=737" aria-label="Source for The Mirovačka Bride">Source</a></figcaption></figure><p class="profile-deck muzej-intro-deck">Selected photographs by the Macedonian photographer and documentary filmmaker.</p>
+    </div>
+  </header>
+
+  <article aria-label="Blagoja Drnkov">
+    <section class="catalogue-entry" aria-labelledby="biography">
+<div class="biography-label"><h2 id="biography">Biography</h2>
+<figure class="drnkov-portrait"><img src="./Assets/Drnkov/drnkov-portrait.jpg" width="223" height="300" alt="Blagoja Drnkov holding a camera" loading="lazy" decoding="async"><figcaption>Blagoja Drnkov. Photographer unidentified. Photograph supplied to Muzej.</figcaption></figure></div><div>
+<p>Blagoja Drnkov (1914–2012) was a Macedonian photographer and documentary filmmaker. He was born in Skopje and exhibited <i>Silence</i> in Belgrade in 1934. His photographs include portraits, landscapes, and records of village life and work.</p>
+<p>From 1953 to 1957, Drnkov worked at the Ethnological Museum in Skopje. The Museum of Contemporary Art in Skopje presented a solo exhibition of his photography in 1974. A jubilee exhibition followed in 1984. The 2022 exhibition <i>More Than Words</i> examined his work in the ethnological museum archive.</p>
+</div>
+</section><section class="portfolio" aria-label="Selected photographs"><div class="portfolio-row wide"><figure class="photo-plate" id="plate-20">
+        <a class="plate-media" href="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf#page=11"><img src="./Assets/Drnkov/winter.webp" width="1041" height="933" alt="Snow covering a roof and branches" decoding="async" loading="lazy"></a><figcaption><span class="plate-title"><i>Winter</i></span>, 1982. <a class="plate-source" href="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf#page=11" aria-label="Source for Winter">Source</a></figcaption></figure>
+      </div><div class="scroll-beat"><div class="portfolio-row portrait-pair"><figure class="photo-plate" id="plate-17"><a class="plate-media" href="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf#page=12"><img src="./Assets/Drnkov/cracked-earth.webp" width="839" height="909" alt="Dry ground fractured into dark blocks" loading="lazy" decoding="async"></a><figcaption><span class="plate-title">Cracked earth</span>, Date unconfirmed.<a class="plate-source" href="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf#page=12" aria-label="Source for Cracked earth">Source</a></figcaption></figure><figure class="photo-plate" id="plate-15"><a class="plate-media" href="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf#page=9"><img src="./Assets/Drnkov/village-beneath-a-tree.webp" width="847" height="1035" alt="Two figures walking downhill beneath a spreading tree" loading="lazy" decoding="async"></a><figcaption><span class="plate-title">Village beneath a tree</span>, Date unconfirmed.<a class="plate-source" href="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf#page=9" aria-label="Source for Village beneath a tree">Source</a></figcaption></figure></div></div><div class="portfolio-row indented"><figure class="photo-plate" id="plate-12"><a class="plate-media" href="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf#page=16"><img src="./Assets/Drnkov/fishing-platform.webp" width="873" height="958" alt="A figure standing on a platform above the water" loading="lazy" decoding="async"></a><figcaption><span class="plate-title">Fishing platform</span>, Date unconfirmed.<a class="plate-source" href="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf#page=16" aria-label="Source for Fishing platform">Source</a></figcaption></figure></div><div class="portfolio-row wide"><figure class="photo-plate" id="plate-11"><a class="plate-media" href="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf#page=9"><img src="./Assets/Drnkov/potters-hands.webp" width="1150" height="914" alt="A potter’s hands shaping the mouth of a clay vessel on a wheel" loading="lazy" decoding="async"></a><figcaption><span class="plate-title"><i>Potter’s Hands</i></span>, 1947.<a class="plate-source" href="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf#page=9" aria-label="Source for Potter’s Hands">Source</a></figcaption></figure></div><div class="scroll-beat"><div class="portfolio-row offset-pair"><figure class="photo-plate" id="plate-10"><a class="plate-media" href="https://www.aldokliman.com/foto-video-audio/foto-foto/portreti-portreti"><img src="./Assets/Drnkov/aldo-kliman.webp" width="1150" height="750" alt="Aldo Kliman sitting in a room with bookshelves" loading="lazy" decoding="async"></a><figcaption><span class="plate-title">Aldo Kliman, Skopje</span>, August 13, 1972.<a class="plate-source" href="https://www.aldokliman.com/foto-video-audio/foto-foto/portreti-portreti" aria-label="Source for Aldo Kliman, Skopje">Source</a></figcaption></figure><figure class="photo-plate" id="plate-09"><a class="plate-media" href="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf#page=19"><img src="./Assets/Drnkov/let-it-never-happen-again.webp" width="891" height="1045" alt="A figure with one arm raised against the sky" loading="lazy" decoding="async"></a><figcaption><span class="plate-title"><i>Let It Never Happen Again</i></span>, 1948.<a class="plate-source" href="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf#page=19" aria-label="Source for Let It Never Happen Again">Source</a></figcaption></figure></div></div><div class="portfolio-row wide"><figure class="photo-plate" id="plate-01"><a class="plate-media" href="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf#page=8"><img src="./Assets/Drnkov/galicnik-wedding.webp" width="1079" height="973" alt="Wedding procession passing through a steep village below a mountain" loading="lazy" decoding="async"></a><figcaption><span class="plate-title"><i>Galičnik Wedding</i></span>, 1939.<a class="plate-source" href="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf#page=8" aria-label="Source for Galičnik Wedding">Source</a></figcaption></figure></div><div class="scroll-beat"><div class="portfolio-row closing"><figure class="photo-plate" id="plate-02"><a class="plate-media" href="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf#page=10"><img src="./Assets/Drnkov/macedonian.webp" width="968" height="1034" alt="Portrait of a man in a fur hat with branches crossing his face" loading="lazy" decoding="async"></a><figcaption><span class="plate-title"><i>Macedonian</i></span>, 1954.<a class="plate-source" href="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf#page=10" aria-label="Source for Macedonian">Source</a></figcaption></figure></div></div></section><section class="source-notes" aria-labelledby="sources">
+      <h2 id="sources">Sources</h2>
+      <ul>
+        <li><a href="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf">Museum of Contemporary Art, Skopje. <i>Blagoja Drnkov</i>, 1974.</a> Solo exhibition catalogue with a text by Dimitar Kondovski.</li>
+        <li><a href="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf">Art Gallery, Skopje. <i>Blagoja Drnkov: 50 Years of Creativity</i>, 1984.</a> Jubilee catalogue, with an essay by Boris Petkovski and a chronology.</li>
+        <li><a href="https://www.academia.edu/101167484/Povekje_od_Zborovi_More_than_words_Blagoja_Drnkov_in_the_ethnological_museum_archive">Jovan Šurbanoski, <i>More Than Words</i>, 2022.</a> Exhibition catalogue on Drnkov’s photographs in the ethnological museum archive.</li>
+        <li><a href="https://kinoteka.mk/en/lichnosti/drnkov-blagoja/">Cinematheque of Macedonia. Blagoja Drnkov.</a> Biography and filmography.</li>
+      </ul>
+      <p>The photographs are reproduced from published sources. Three captions describe images whose original titles and dates are unconfirmed. Open the hero to see the full portrait.</p>
+    </section>
+
+    </article>
+<section class="more-from-muzej" data-more-from-muzej aria-labelledby="more-from-muzej-title"></section></main>
+<footer class="site-footer muzej-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a class="footer-brand-mark" href="https://muzej.co/">Muzej</a>
+      <p class="footer-statement">An editorial archive of Macedonian art, style, tradition, and culture.</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer navigation"><a href="https://muzej.co/#catalogue">Catalogue</a><a href="https://muzej.co/about.html">About Muzej</a><a href="https://www.instagram.com/_muzej/">Instagram</a></nav>
+  </div>
+</footer>
+<dialog class="viewer" aria-labelledby="viewer-title">
+  <div class="viewer-controls">
+    <button type="button" data-prev>Previous</button>
+    <button type="button" data-next>Next</button>
+    <button type="button" data-close autofocus>Close</button>
+  </div>
+  <img alt="">
+  <h2 id="viewer-title"></h2>
+  <a data-viewer-source>Open source</a>
+</dialog>
+<script>
+const viewer = document.querySelector('.viewer');
+const plates = Array.from(document.querySelectorAll('.plate-media'));
+const viewerImage = viewer.querySelector('img');
+const viewerTitle = viewer.querySelector('h2');
+const viewerSource = viewer.querySelector('[data-viewer-source]');
+let index = 0;
+let trigger = null;
+
+function selectPlate(nextIndex) {
+  index = (nextIndex + plates.length) % plates.length;
+  const plate = plates[index];
+  const image = plate.querySelector('img');
+  const title = plate.closest('figure').querySelector('.plate-title');
+  viewerImage.src = image.dataset.originalSrc || image.getAttribute('src');
+  viewerImage.alt = image.alt;
+  viewerTitle.textContent = title.textContent;
+  viewerSource.href = plate.href;
+}
+
+if (typeof viewer.showModal === 'function') {
+  plates.forEach((plate, position) => {
+    plate.setAttribute('aria-label', 'View ' + plate.closest('figure').querySelector('.plate-title').textContent);
+    plate.addEventListener('click', (event) => {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      trigger = plate;
+      selectPlate(position);
+      viewer.showModal();
+    });
+  });
+  viewer.querySelector('[data-prev]').addEventListener('click', () => selectPlate(index - 1));
+  viewer.querySelector('[data-next]').addEventListener('click', () => selectPlate(index + 1));
+  viewer.querySelector('[data-close]').addEventListener('click', () => viewer.close());
+  viewer.addEventListener('close', () => trigger?.focus());
+  viewer.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') selectPlate(index - 1);
+    if (event.key === 'ArrowRight') selectPlate(index + 1);
+  });
+}
+</script>
+</body>
+</html>
