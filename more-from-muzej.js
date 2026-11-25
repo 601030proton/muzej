@@ -146,9 +146,9 @@
     {
       slug: "martinoski",
       href: "martinoski.html",
-      title: "Nikola Martinoski: Becoming a Painter",
+      title: "Nikola Martinoski in Paris",
       kicker: "Art | Painting",
-      dek: "Martinoski stands at the hinge point where Macedonian painting became recognizably modern.",
+      dek: "Kiril Penušliski on the painter’s year in Paris and the Okean café frescoes.",
       image: "./Assets/Martinoski%20Article/Nikola%27s%20Hero%20Images/NewNikolaMartinoski%20copy.png",
       alt: "Nikola Martinoski holding paintbrushes.",
       position: "center center"
