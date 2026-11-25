@@ -62,11 +62,12 @@
   play.addEventListener('click', function () { playing = !playing; schedule(); });
   document.querySelectorAll('[data-work]').forEach(function (link) {
     link.addEventListener('click', function (event) {
+      if (link.classList.contains('work-reference') && (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)) return;
       event.preventDefault(); select(Number(link.dataset.work), true);
       var film = document.querySelector('.work-filmstrip');
       var thumb = document.querySelector('.work-thumb[aria-current]');
       film.scrollTo({left:thumb.offsetLeft - film.offsetLeft - film.clientWidth / 2 + thumb.clientWidth / 2,behavior:reduce.matches?'auto':'smooth'});
-      if (link.classList.contains('work-card')) { gallery.scrollIntoView({behavior:reduce.matches?'auto':'smooth',block:'start'}); document.querySelector('.work-image-button').focus({preventScroll:true}); }
+      if (link.matches('.work-card, .work-reference')) { gallery.scrollIntoView({behavior:reduce.matches?'auto':'smooth',block:'start'}); document.querySelector('.work-image-button').focus({preventScroll:true}); }
     });
   });
   indexToggle.addEventListener('click', function () {

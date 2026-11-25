@@ -240,3 +240,6 @@ ol.work-credit-list{list-style:none;padding:0;margin:20px 0 0}
   height: 100%;
   object-fit: contain;
 }
+
+.work-essay .work-reference { color: inherit; text-decoration: underline; text-decoration-color: #888; text-decoration-thickness: 1px; text-underline-offset: .18em; }
+.work-essay .work-reference:hover { text-decoration-color: currentColor; }
