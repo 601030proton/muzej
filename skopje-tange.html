@@ -776,7 +776,17 @@ body.muzej-logo-hidden .site-header .brand-mark {
   line-height: 1.5;
 }
 .city-wall-reprint .credit-line { margin: 1rem 0 1.75rem; }
-.city-wall-reprint .article-body-media figcaption { font-size: 0.78rem; line-height: 1.4; }
+.city-wall-reprint .wall-inline-figure {
+  width: min(100%, 390px);
+  margin: 1.5rem 0 2rem;
+}
+.city-wall-reprint .wall-inline-figure img { width: 100%; height: auto; }
+.city-wall-reprint :is(.article-body-media, .wall-inline-figure) figcaption {
+  margin-top: 12px;
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
 .city-wall-reprint :is(figure, [id^="wall-note"]) { scroll-margin-top: calc(var(--nav-h) + 2rem); }
 .city-wall-reprint .wall-figure-ref { font-size: 0.77em; white-space: nowrap; }
 </style>
@@ -831,14 +841,14 @@ body.muzej-logo-hidden .site-header .brand-mark {
         <p class="feature-byline muzej-byline">Words <strong>Vlatko P. Korobar and Jasmina Siljanoska</strong></p>
         <h1 class="muzej-article-title feature-title">Tokyo on the Vardar</h1>
       </div><div class="feature-scroll-column"><figure class="feature-media">
-        <img src="./Assets/Kenzo%20Article/Tange%20Pics/kenzohero.png" alt="Kenzo Tange portrait collage with Skopje brutalist architecture and red geometric forms">
+        <img src="./Assets/City-Wall-Reprint/city-wall-skopje-portrait.webp" width="1080" height="1440" fetchpriority="high" alt="Concrete stair tower and projecting apartment bays at Skopje’s City Wall housing complex">
       </figure><p class="feature-deck">How ideas from Tange’s Tokyo Bay plan became part of Skopje’s City Wall housing.</p></div></div></header>
 
   <article class="article-shell city-wall-reprint" aria-label="The Skopje City Wall Housing Complex">
     <section class="article-body">
-      <figure class="article-body-media" id="wall-figure-05">
-        <img src="./Assets/City-Wall-Reprint/city-wall-plan.webp" width="447" height="477" loading="lazy" decoding="async" alt="Plan marking City Wall housing blocks, kindergartens and buildings retained within the complex">
-        <figcaption>Figure 5. The City Wall housing complex and the buildings retained within it. © Vlatko P. Korobar and Jasmina Siljanoska, 2023.</figcaption>
+      <figure class="article-body-media">
+        <img src="./Assets/Kenzo%20Article/Tange%20Pics/Skopje_Cite_Master_Plan_0033_02.jpg" width="1283" height="1303" loading="lazy" decoding="async" alt="Color photograph of Kenzo Tange’s model for central Skopje, with towers and the Vardar in the foreground">
+        <figcaption>Kenzo Tange’s model for the reconstruction of central Skopje, 1965.</figcaption>
       </figure>
       <div class="article-body-copy body-block">
         <p class="credit-line">Originally published as “The Skopje City Wall Housing Complex” in <a href="https://doi.org/10.52200/docomomo.68.09"><em>Docomomo Journal</em> 68 (2023), pp. 90–97</a>. © 2023 Vlatko P. Korobar and Jasmina Siljanoska. <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Headings shortened and article reformatted for the web. Abstract, supplementary material and selected figures omitted.</p>
@@ -879,6 +889,10 @@ body.muzej-logo-hidden .site-header .brand-mark {
         <p>The ground floor and the mezzanine were planned for various commercial activities and business premises, with entrances mainly from the pedestrian areas along the main road. In addition, the towers and blocks had common premises such as a room for house council meetings and children’s activities, a two-room apartment for the housemaster, a workshop with storage, a room for bicycles and baby carriages, a common drying room, etc.</p>
         <p>The double structure on the outside mainly faces the inner ring road, towards which all entrances are oriented, while the inner space is a predominantly pedestrian area. Both sides and experiences are well integrated by pedestrian passages which are often placed so as to connect the remnants of the old street network. They also allow an easy transition from the public to the semi-public space of the residential community.</p>
         <p>This open semi-public space is used for greenery, playground corners, walkways, mixed-use zones, parking, small urban parks, etc., while several kindergartens and an existing primary school were incorporated into the complex <a class="wall-figure-ref" href="#wall-figure-05">[Figure 5]</a>. Within this space, several service streets were introduced, providing motorized access to the housing and commercial units. Parking of vehicles is organized as surface and underground parking space. Unfortunately, the promenade that was supposed to stretch from one end to another within the complex was never fully implemented.</p>
+        <figure class="wall-inline-figure" id="wall-figure-05">
+          <img src="./Assets/City-Wall-Reprint/city-wall-plan.webp" width="447" height="477" loading="lazy" decoding="async" alt="Plan marking City Wall housing blocks, kindergartens and buildings retained within the complex">
+          <figcaption>Figure 5. The City Wall housing complex and the buildings retained within it. © Vlatko P. Korobar and Jasmina Siljanoska, 2023.</figcaption>
+        </figure>
         <p>At present, the area in which the City Wall is located accommodates a large number of citizens and activities. This is a result of its immediate vicinity to the central business district and to major public institutions and amenities. The morphology of the physical structure, which is permeable and open to the city and the mixed-use of the ground floors, provides a high level of interaction of the residents with the adjacent public spaces and easy transition of pedestrians through the City Wall area.</p>
         <p>In fact, the City Wall housing area serves a double purpose. It clearly separates the CBD from the rest of the wider central area and provides a full daily cycle of activities in the center, while the notion of a “wall fortress,” in its contemporary interpretation, provides a meaningful image and becomes a symbol of the city form <a class="wall-figure-ref" href="#wall-figure-08">[Figure 8]</a>.</p>
         <h2 class="section-heading">The City Wall as cultural heritage</h2>
@@ -912,6 +926,8 @@ body.muzej-logo-hidden .site-header .brand-mark {
                   <h2 class="section-heading" id="sources-title">Sources</h2>
                   <p><a href="https://doi.org/10.52200/docomomo.68.09">Vlatko P. Korobar and Jasmina Siljanoska, “The Skopje City Wall Housing Complex.” <em>Docomomo Journal</em> 68 (2023), pp. 90–97.</a></p>
                   <p><a href="https://docomomojournal.com/index.php/journal/article/download/519/467">Original article PDF, including the complete figures and bibliography.</a></p>
+                  <p>Opening photograph and homepage crop: <a href="https://commons.wikimedia.org/wiki/File:City_Wall_Skopje.jpg">City Wall, Skopje</a>, Novica Nakov, 2006. <a rel="license" href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>. Cropped.</p>
+                  <p>Competition model: <a href="https://commons.wikimedia.org/wiki/File:Skopje_Cite_Master_Plan_0033_02.jpg">Skopje City Center Master Plan</a>, Kenzo Tange Associates, 1965. <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
                   <ol class="endnote">
                     <li id="wall-note-1">The sentence comments on the fact that Tange’s proposal has been THE epitomization of the entire reconstruction project for Skopje, although in fact, the UN Town Planning Project was a much larger undertaking which apart from the city center competition and project, included a master plan for the entire city which involved Polservice from Warsaw, Doxiades Associates from Athens and ITPA from Skopje. In other words, it is a simplification and reduction of the comprehensive planning exercise which took place after the earthquake. <a href="#wall-note-ref" aria-label="Return to note reference">↩</a></li>
                   </ol>
