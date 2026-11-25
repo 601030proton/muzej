@@ -1,899 +1,144 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Denes and Macedonian Modernism | Muzej</title>
 <meta name="description" content="Tatjana Filipovska and Natali Rajchinovska-Pavleska on Denes, Borko Lazeski, Jordan Grabuloski, and postwar Macedonian art.">
-<title>Denes and Macedonian Modernism | МУЗЕЈ</title>
-<link rel="icon" type="image/png" href="./Assets/Font/Muzej%20Logo.ai.png">
-<link rel="apple-touch-icon" href="./Assets/Font/Muzej%20Logo.ai.png">
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&display=swap"
-/>
+<link rel="canonical" href="https://muzej.co/denes">
+<link rel="icon" href="./Assets/Muzej%20Logo/MuzejNewWord.png" type="image/png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Denes and Macedonian Modernism | Muzej">
+<meta property="og:description" content="Tatjana Filipovska and Natali Rajchinovska-Pavleska on Denes, Borko Lazeski, Jordan Grabuloski, and postwar Macedonian art.">
+<meta property="og:image" content="https://muzej.co/Assets/Denes/denes-catalogue-cover.webp">
+<meta property="og:url" content="https://muzej.co/denes">
 <link rel="stylesheet" href="fonts.css?v=20261124-editorial">
-<style>
-:root {
-  --background: #ffffff;
-  --foreground: #0f0e0d;
-  --white: #ffffff;
-  --ink: #0f0e0d;
-  --ink-soft: rgba(15, 14, 13, 0.62);
-  --ink-faint: rgba(15, 14, 13, 0.12);
-  --muted: #70675d;
-  --rule: rgba(23, 21, 19, 0.09);
-  --page-x: clamp(18px, 5.2vw, 72px);
-  --nav-h: clamp(88px, 10vw, 128px);
-  --feature-w: min(1280px, calc(100vw - (var(--page-x) * 2)));
-  --rail-gap: clamp(34px, 5.4vw, 84px);
-  --body-col: minmax(520px, 760px);
-  --body-tail: 0px;
-  --section-gap: clamp(48px, 8vw, 108px);
-  --content-max: 1520px;
-  --font-display: "plantin", Georgia, serif;
-  --font-wordmark: var(--font-display);
-  --serif: var(--font-display);
-        --headline-serif: var(--font-display);
-  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --article-serif: "adobe-jenson-pro", Georgia, serif;
-  --brand-serif: var(--font-wordmark);
-}
-
-*, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  background: var(--white);
-  color: var(--ink);
-  font-family: var(--article-serif);
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-img { display: block; max-width: 100%; }
-a { color: inherit; }
-
-.shell {
-  width: min(100%, var(--content-max));
-  margin: 0 auto;
-  padding-left: var(--page-x);
-  padding-right: var(--page-x);
-}
-
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 40;
-  background: var(--background);
-}
-.header-frame {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  gap: 1.5rem 2rem;
-  padding-top: 28px;
-  padding-bottom: 24px;
-}
-.brand-mark {
-  display: inline-flex;
-  align-items: center;
-  font-family: var(--font-wordmark);
-  font-size: clamp(2.4rem, 1.9rem + 1.43vw, 3.76rem);
-  line-height: 0.92;
-  letter-spacing: 0;
-  font-weight: 400;
-  font-optical-sizing: auto;
-  white-space: nowrap;
-  text-decoration: none;
-
-}
-
-.utility-link,
-.utility-menu-item {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2rem;
-  border: 0;
-  background: transparent;
-  padding: 0;
-  font-family: var(--sans);
-  font-size: 0.72rem;
-  line-height: 1.2;
-  letter-spacing: 0;
-  color: rgba(23, 21, 19, 0.58);
-  text-decoration: none;
-  transition: color 180ms ease, border-color 180ms ease;
-}
-.utility-link:hover,
-.utility-menu-item:hover {
-  color: var(--foreground);
-}
-.header-tools {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  position: relative;
-}
-.utility-menu {
-  position: relative;
-}
-.utility-menu summary {
-  list-style: none;
-}
-.utility-menu summary::-webkit-details-marker {
-  display: none;
-}
-.utility-trigger {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.2rem 0;
-  border: 0;
-  background: transparent;
-  color: var(--foreground);
-  cursor: pointer;
-  transition: color 180ms ease, opacity 180ms ease;
-}
-.utility-trigger:hover {
-  opacity: 0.72;
-}
-.utility-trigger:focus-visible {
-  outline: 2px solid rgba(141, 79, 61, 0.45);
-  outline-offset: 3px;
-}
-.utility-icon {
-  display: grid;
-  gap: 0.26rem;
-}
-.utility-icon-line {
-  display: block;
-  width: 1.45rem;
-  height: 1px;
-  background: currentColor;
-  opacity: 0.88;
-}
-.utility-panel {
-  position: absolute;
-  top: calc(100% + 0.55rem);
-  right: 0;
-  z-index: 10;
-  display: grid;
-  min-width: 10rem;
-  padding: 0.45rem 0;
-  border: 1px solid rgba(23, 21, 19, 0.12);
-  background: #ffffff;
-  box-shadow: 0 10px 30px rgba(23, 21, 19, 0.08);
-}
-.utility-panel-group {
-  display: grid;
-  gap: 0;
-}
-.utility-panel-utility {
-  margin-top: 0.25rem;
-  padding-top: 0.35rem;
-  border-top: 1px solid rgba(23, 21, 19, 0.1);
-}
-.utility-panel .utility-link,
-.utility-panel .utility-menu-item {
-  justify-content: flex-start;
-  min-height: 0;
-  width: 100%;
-  padding: 0.6rem 0.9rem;
-  text-align: left;
-  background: transparent;
-}
-.utility-panel-utility .utility-link {
-  font-size: 0.66rem;
-  letter-spacing: 0;
-  color: rgba(23, 21, 19, 0.52);
-}
-.utility-panel .utility-menu-item {
-  cursor: pointer;
-}
-.utility-panel .utility-link:hover,
-.utility-panel .utility-menu-item:hover {
-  background: rgba(23, 21, 19, 0.035);
-}
-
-main {
-  padding-top: clamp(24px, 3.2vw, 48px);
-}
-
-.feature {
-  padding:
-    clamp(0px, 0.6vw, 6px)
-    clamp(16px, 3vw, 40px)
-    clamp(56px, 8vw, 102px);
-}
-.feature-inner {
-  display: grid;
-  grid-template-columns: minmax(420px, 1.06fr) minmax(300px, 0.84fr);
-  gap: clamp(22px, 3.8vw, 52px);
-  align-items: stretch;
-  max-width: min(1320px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
-  margin: 0 auto;
-}
-.feature-media {
-  margin: 0;
-}
-.feature-media img {
-  width: 100%;
-  height: clamp(620px, 80vh, 920px);
-  object-fit: contain;
-  object-position: center top;
-  background: var(--white);
-}
-.feature-copy {
-  min-height: clamp(620px, 80vh, 920px);
-  max-width: 27rem;
-  margin: 0 auto;
-  padding: clamp(26px, 3.6vw, 42px) 0 clamp(20px, 3vw, 30px);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-}
-.feature-title {
-  margin: 0;
-  color: var(--ink);
-  font-family: "plantin", Georgia, serif;
-  font-size: clamp(42px, 5.2vw, 82px);
-  font-weight: 400;
-  line-height: 0.98;
-  letter-spacing: 0;
-  text-transform: none;
-  text-wrap: balance;
-}
-.feature-byline {
-  margin: 0 0 auto;
-  color: var(--ink-soft);
-  font-size: clamp(16px, 1.18vw, 19px);
-  letter-spacing: 0;
-  line-height: 1.4;
-}
-.feature-title-break {
-  display: block;
-}
-.feature-deck {
-  max-width: min(1380px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
-  margin: clamp(40px, 5vw, 78px) auto 0;
-  color: var(--ink);
-  font-family: "plantin", Georgia, serif;
-  font-size: clamp(32px, 3.05vw, 56px);
-  font-weight: 400;
-  line-height: 1.08;
-  letter-spacing: 0;
-  text-wrap: balance;
-}
-.article-shell {
-  max-width: var(--feature-w);
-  margin: 0 auto;
-  padding: 0 var(--page-x) clamp(84px, 10vw, 132px);
-}
-.content-row {
-  display: grid;
-  grid-template-columns: minmax(270px, 1fr) var(--body-col);
-  column-gap: var(--rail-gap);
-  align-items: start;
-}
-.article-body {
-  display: grid;
-  grid-template-columns: minmax(270px, 1fr) var(--body-col);
-  column-gap: var(--rail-gap);
-  align-items: start;
-  margin-bottom: var(--section-gap);
-}
-.content-row + .content-row {
-  margin-top: var(--section-gap);
-}
-.content-row .empty-rail,
-.article-body .empty-tail,
-.content-row .empty-tail {
-  min-height: 1px;
-}
-.article-body .empty-tail,
-.content-row .empty-tail {
-  display: none;
-}
-.article-body-media {
-  margin: 0;
-  align-self: start;
-  position: sticky;
-  top: calc(var(--nav-h) + clamp(12px, 2vw, 26px));
-}
-.article-body-media img {
-  width: 100%;
-  height: auto;
-}
-.article-body-media figcaption {
-  margin-top: 12px;
-  color: var(--ink-soft);
-  font-size: 8px;
-  letter-spacing: 0;
-}
-.article-body-copy {
-  min-width: 0;
-  justify-self: end;
-  width: min(100%, 520px);
-}
-
-.section-heading {
-  margin: 0;
-  max-width: 15ch;
-  font-size: clamp(30px, 4vw, 48px);
-  font-weight: 400;
-  line-height: 1.02;
-  letter-spacing: 0;
-}
-
-.body-block p {
-  margin: 0;
-  font-size: clamp(23px, 1.65vw, 31px);
-  line-height: 1.46;
-}
-.body-block p + p {
-  margin-top: 1.95em;
-}
-
-.pull-quote {
-  margin: 0;
-  max-width: none;
-  justify-self: end;
-  width: min(100%, 520px);
-  font-size: clamp(20px, 2.35vw, 26px);
-  line-height: 1.12;
-  letter-spacing: 0;
-}
-
-.gallery-reading {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(14px, 1.9vw, 24px);
-  margin: var(--section-gap) 0 0;
-}
-.gallery-reading-media,
-.gallery-reading-feature {
-  margin: 0;
-  aspect-ratio: 15 / 21;
-  overflow: hidden;
-}
-.gallery-reading-media img,
-.gallery-reading-feature img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.gallery-reading-side {
-  min-width: 0;
-}
-.article-body-lower {
-  margin-top: clamp(22px, 3vw, 34px);
-  margin-bottom: 0;
-}
-
-.more-from-muzej {
-  padding-top: clamp(70px, 9vw, 132px);
-  padding-bottom: clamp(82px, 10vw, 148px);
-  background: transparent;
-  color: var(--foreground);
-}
-.more-from-muzej-frame {
-  display: grid;
-  width: min(calc(100% - (var(--page-x) * 2)), 68rem);
-  max-width: 68rem;
-  margin: 0 auto;
-  padding-left: 0;
-  padding-right: 0;
-  border-top: 2px solid var(--foreground);
-  padding-top: clamp(2.1rem, 4vw, 3.25rem);
-}
-.more-from-muzej-title {
-  max-width: none;
-  margin: 0;
-  font-family: var(--headline-serif);
-  font-size: clamp(1.45rem, 1vw + 1.1rem, 1.9rem);
-  line-height: 1.08;
-  letter-spacing: -0.02em;
-  font-weight: 650;
-  font-optical-sizing: auto;
-}
-.related-list {
-  list-style: none;
-  margin: clamp(1.4rem, 2.5vw, 2rem) 0 0;
-  padding: 0;
-}
-.related-list li {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
-  padding: clamp(1.1rem, 1.8vw, 1.6rem) 0;
-  border-top: 1px solid var(--rule);
-  align-items: start;
-}
-.related-list li:last-child {
-  border-bottom: 1px solid var(--rule);
-}
-.related-list a {
-  font-family: var(--headline-serif);
-  font-size: clamp(1.1rem, 1.3vw + 0.7rem, 1.55rem);
-  font-weight: 400;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
-  color: var(--foreground);
-  font-optical-sizing: auto;
-  border-bottom: none;
-  text-decoration: none;
-  transition: color 180ms ease;
-}
-.related-list a:hover {
-  color: var(--muted);
-}
-.related-list .related-desc {
-  display: block;
-  margin-top: 0.45rem;
-  font-family: var(--sans);
-  font-size: clamp(0.82rem, 0.78rem + 0.18vw, 0.94rem);
-  line-height: 1.72;
-  letter-spacing: 0;
-  color: var(--muted);
-}
-
-.site-footer {
-  margin-top: 0;
-}
-.muzej-footer {
-  width: 100%;
-  padding: clamp(3.5rem, 7vw, 6rem) var(--page-x);
-  background: #000000;
-  color: #f7f2e9;
-}
-.footer-inner {
-  display: grid;
-  grid-template-columns: minmax(320px, 620px) minmax(180px, 260px);
-  gap: clamp(3rem, 7vw, 6rem);
-  justify-content: center;
-  align-items: start;
-  width: min(100%, 1160px);
-  margin: 0 auto;
-}
-.footer-brand {
-  min-width: 0;
-}
-.footer-wordmark {
-  display: inline-flex;
-  font-family: var(--font-wordmark);
-  font-size: clamp(3.1rem, 5vw, 5rem);
-  font-weight: 400;
-  line-height: 0.92;
-  letter-spacing: 0;
-  font-optical-sizing: auto;
-
-}
-.footer-statement {
-  max-width: 38.75rem;
-  margin: clamp(1.15rem, 1.8vw, 1.45rem) 0 0;
-  font-size: clamp(1rem, 1vw + 0.72rem, 1.15rem);
-  line-height: 1.5;
-  color: rgba(247, 242, 233, 0.86);
-}
-.muzej-footer .footer-links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.25rem;
-  padding-top: 0.28rem;
-}
-.muzej-footer .footer-links a {
-  font-family: var(--sans);
-  font-size: 0.85rem;
-  line-height: 1.2;
-  letter-spacing: 0;
-  font-weight: 500;
-  color: inherit;
-  text-decoration: none;
-  transition: opacity 180ms ease, text-decoration-color 180ms ease;
-}
-.muzej-footer .footer-links a:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.25em;
-  opacity: 0.86;
-}
-
-@media (max-width: 1080px) {
-  .footer-inner {
-    grid-template-columns: 1fr;
-    gap: 2.4rem;
-  }
-
-  .muzej-footer .footer-links {
-    padding-top: 0;
-  }
-}
-
-@media (max-width: 1140px) {
-  .header-frame {
-    grid-template-columns: 1fr;
-    justify-items: start;
-    gap: 0.85rem 1.25rem;
-  }
-  .header-tools {
-    justify-content: flex-start;
-  }
-}
-
-@media (max-width: 980px) {
-  .menu-button {
-    padding: 8px 0 6px 18px;
-  }
-  .menu-panel {
-    padding: 0 calc(var(--page-x) + 18px) 0 var(--page-x);
-    gap: 16px;
-  }
-  .menu-panel a {
-    width: min(100%, 22rem);
-    font-size: clamp(26px, 5vw, 42px);
-  }
-  .feature-inner {
-    grid-template-columns: minmax(300px, 0.94fr) minmax(300px, 0.9fr);
-    gap: clamp(24px, 4vw, 46px);
-    align-items: stretch;
-  }
-  .feature-media img {
-    height: clamp(500px, 70vh, 720px);
-  }
-  .feature-copy {
-    min-height: clamp(500px, 70vh, 720px);
-    max-width: 23rem;
-  }
-  .feature-title {
-    font-size: clamp(34px, 4.35vw, 58px);
-  }
-  .feature-deck {
-    margin-top: clamp(30px, 4.2vw, 48px);
-    font-size: clamp(16px, 2.05vw, 20px);
-  }
-  .content-row {
-    grid-template-columns: minmax(210px, 1fr) minmax(0, 660px);
-  }
-  .article-body {
-    grid-template-columns: minmax(210px, 1fr) minmax(0, 660px);
-  }
-}
-
-@media (max-width: 760px) {
-  .header-frame {
-    padding-top: 20px;
-    padding-bottom: 18px;
-  }
-  .brand-mark {
-    font-size: clamp(2.16rem, 10.15vw, 2.87rem);
-
-  }
-}
-
-@media (max-width: 720px) {
-  .header-frame {
-    padding-top: 20px;
-    padding-bottom: 18px;
-  }
-  .brand-mark {
-    font-size: clamp(2.16rem, 10.15vw, 2.87rem);
-
-  }
-  .menu-button {
-    gap: 7px;
-    padding: 8px 0 6px 16px;
-    margin-top: 1px;
-  }
-  .menu-panel {
-    padding: 0 calc(var(--page-x) + 6px) 0 var(--page-x);
-    gap: 14px;
-  }
-  .menu-panel a {
-    width: min(100%, 16rem);
-    font-size: clamp(22px, 9vw, 30px);
-    line-height: 1.08;
-  }
-  .menu-panel a:last-child {
-    font-size: 18px;
-  }
-  .feature {
-    padding:
-      4px
-      var(--page-x)
-      48px;
-  }
-  .feature-inner,
-  .article-body,
-  .content-row {
-    grid-template-columns: 1fr;
-    flex-direction: column;
-    text-align: left;
-  }
-  .feature-inner {
-    display: grid;
-    gap: 22px;
-  }
-  .feature-media img {
-    max-height: clamp(330px, 52vh, 430px);
-  }
-  .article-body {
-    gap: 24px;
-    margin-bottom: 40px;
-  }
-  .gallery-reading {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    margin: 40px 0 0;
-  }
-  .article-body-media {
-    position: static;
-  }
-  .gallery-reading-media {
-    position: static;
-  }
-  .article-body-lower {
-    margin-top: 18px;
-    margin-bottom: 0;
-  }
-  .content-row .empty-tail {
-    display: none;
-  }
-  .article-body .empty-tail {
-    display: none;
-  }
-  .feature-copy {
-    max-width: none;
-    min-height: auto;
-    padding: 0;
-  }
-  .feature-title {
-    font-size: clamp(30px, 8.2vw, 38px);
-    line-height: 1.03;
-    width: calc(100vw - (var(--page-x) * 2));
-    max-width: 100%;
-    overflow-wrap: break-word;
-  }
-  .feature-byline {
-    margin: 28px 0 0;
-    font-size: 15px;
-  }
-  .feature-title-break {
-    display: block;
-  }
-  .feature-deck {
-    margin-top: 34px;
-    font-size: clamp(15px, 3.9vw, 18px);
-    line-height: 1.2;
-  }
-  .content-row + .content-row {
-    margin-top: 40px;
-  }
-}
-
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: transparent;
-  pointer-events: none;
-}
-
-.site-header .header-frame,
-.site-header .brand-mark,
-.site-header .header-tools {
-  pointer-events: auto;
-}
-
-.site-header .brand-mark {
-  transform: translate3d(0, 0, 0);
-  transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: transform;
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-}
-
-body.muzej-logo-hidden .site-header .brand-mark {
-  transform: translate3d(0, calc(-100% - 42px), 0);
-}
-
-.site-header .brand-mark {
-  position: relative;
-  width: 160px;
-  height: 32px;
-  overflow: hidden;
-  flex: 0 0 auto;
-}
-
-.site-header .brand-mark-image {
-  position: absolute;
-  width: 198.68px;
-  max-width: none;
-  height: auto;
-  left: -19.53px;
-  top: -107.88px;
-  display: block;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .site-header .brand-mark {
-    transition: none;
-    will-change: auto;
-  }
-
-  body.muzej-logo-hidden .site-header .brand-mark {
-    transform: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .site-header { z-index: 2000; }
-  .site-header .header-frame { grid-template-columns: minmax(0, 1fr) auto; align-items: center; justify-items: stretch; gap: 1rem; }
-  .site-header .brand-mark { justify-self: start; min-width: 0; width: 124px; height: 25px; }
-  .site-header .brand-mark-image { width: 153.97px; left: -15.13px; top: -83.62px; }
-  .site-header .header-tools { justify-self: end; justify-content: flex-end; margin-left: auto; position: relative; z-index: 2002; }
-  .site-header .utility-menu { position: static; }
-  .site-header .utility-trigger { position: relative; z-index: 2003; }
-  .site-header .utility-panel { position: fixed; inset: 0; left: 0; right: 0; top: 0; z-index: 2001; display: grid; align-content: center; width: 100vw; max-width: none; min-width: 0; height: 100vh; height: 100svh; padding: clamp(76px, 18vh, 128px) var(--page-x) 48px; border: 0; background: rgba(255, 255, 255, 0.98); box-shadow: none; overflow-y: auto; transform: none; }
-  .site-header .utility-panel-group { width: min(100%, 22rem); margin: 0 auto; }
-  .site-header .utility-panel-utility { margin-top: 0.8rem; padding-top: 0.85rem; }
-  .site-header .utility-panel .utility-link,
-  .site-header .utility-panel .utility-menu-item { justify-content: center; min-height: 2.75rem; padding: 0.72rem 0; text-align: center; }
-}
-
-
-.denes-cover {
-  width: min(100%, calc(max(400px, 100svh - 138px) * .75));
-  aspect-ratio: 3 / 4;
-  margin-inline: auto;
-  background: #f3eee6;
-  color: #201d1a;
-  display: grid;
-  align-items: end;
-  container-type: inline-size;
-}
-.denes-cover-text {
-  padding: 0 8% 11%;
-  border-top: 1px solid #aca098;
-  margin-top: auto;
-}
-.denes-cover .denes-cyrillic {
-  display: block;
-  font-family: var(--font-display);
-  font-size: clamp(46px, 18cqw, 98px);
-  font-weight: 400;
-  line-height: 1.03;
-  padding-top: .2em;
-  letter-spacing: -.05em;
-}
-.denes-cover .denes-years {
-  display: block;
-  margin-top: 1rem;
-  color: #695c53;
-  font: 500 .76rem/1.2 var(--sans);
-  letter-spacing: .05em;
-}
-.denes-reading { width: min(100%, 820px); }
-.denes-reading .section-heading {
-  max-width: none;
-  margin: 2.4rem 0 .9rem;
-  font-size: clamp(1.75rem, 3vw, 2.55rem);
-}
-.denes-reading .body-block p { font-size: clamp(1.2rem, 1.7vw, 1.52rem); }
-.denes-reading .body-block p + p { margin-top: 1em; }
-.denes-reading .sources-section {
-  border-top: 1px solid var(--rule);
-  margin-top: clamp(48px, 8vw, 96px);
-  padding-top: 1.25rem;
-}
-.denes-reading .sources-section .section-heading { margin-top: 0; }
-.denes-reading .sources-section p { font-size: 1rem; line-height: 1.5; }
-.denes-related { display: flex; flex-wrap: wrap; gap: .75rem 1.75rem; margin-top: 2rem; }
-.denes-article .feature-deck { max-width: 34ch; }
-@media (max-width: 720px) {
-  .denes-cover { width: min(100%, 335px); }
-  .denes-reading { padding-inline: var(--page-x); }
-}
-</style>
-<link rel="stylesheet" href="more-from-muzej.css?v=20261124-editorial">
-<link rel="stylesheet" href="muzej-footer-logo.css?v=20261124-editorial">
-<link rel="stylesheet" href="article-opening.css?v=20261101">
-<link rel="stylesheet" href="article-system.css?v=20261101-consistency-3">
 <link rel="stylesheet" href="bylines.css?v=20261107">
-<link rel="stylesheet" href="editorial-sources.css?v=20261124-editorial">
-<style>
-.gallery-reading--single > .gallery-reading-media{grid-column:1 / -1;aspect-ratio:auto}
-.gallery-reading--single > .gallery-reading-media img{height:auto}
-</style>
-<style>
-@media (min-width: 761px) {
-  .tange-article .article-shell {
-    width: min(100%, var(--content-max));
-    max-width: none;
-    margin-inline: auto;
-    padding-inline: var(--page-x);
-  }
-  .tange-article .article-body {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: clamp(34px, 6vw, 90px);
-  }
-  .article-body-media {
-    display: flex;
-    flex-direction: column;
-    width: min(88%, 420px);
-    max-height: calc(100svh - var(--nav-h) - clamp(12px, 2vw, 26px) - 24px);
-  }
-  .article-body-media img { min-height: 0; object-fit: contain; object-position: left top; }
-  .article-body-media figcaption { flex-shrink: 0; }
-}
-</style>
 <link rel="stylesheet" href="muzej-header.css?v=20261121-site-nav">
 <script defer src="muzej-header.js?v=20261121-site-nav"></script>
+<link rel="stylesheet" href="muzej-footer-logo.css?v=20261124-editorial">
+<link rel="stylesheet" href="article-intro.css?v=20261113-deck-below-fold-2">
+<link rel="stylesheet" href="editorial-sources.css?v=20261124-editorial">
+<link rel="stylesheet" href="more-from-muzej.css?v=20261124-editorial">
+<script src="more-from-muzej.js?v=20261124-editorial" defer></script>
+<style>
+:root {
+  --page-x: clamp(18px, 5.2vw, 72px);
+  --profile-gap: clamp(36px, 6vw, 96px);
+  --profile-sticky-top: 100px;
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: #fff; color: #000; font-family: var(--muzej-body-family); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+a { color: inherit; text-underline-offset: .16em; }
+.site-header { position: sticky; top: 0; z-index: 10; }
+.profile-main { max-width: 1520px; margin: auto; padding: 12px var(--page-x) 0; }
+.profile-opening, .profile-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: var(--profile-gap); }
+.profile-title h1 { font: 400 clamp(44px, 4.4vw, 70px)/.97 var(--muzej-body-family); letter-spacing: -.025em; }
+.profile-kicker, figcaption { font: 400 11px/1.5 var(--sans); }
+.profile-kicker { text-transform: uppercase; letter-spacing: .08em; }
+.profile-hero, .profile-rail { margin: 0; min-width: 0; }
+.profile-hero img { display: block; width: 100%; height: calc(100svh - 150px); object-fit: contain; object-position: center; }
+.profile-deck { font: 400 clamp(26px, 2.6vw, 38px)/1.2 var(--muzej-body-family); }
+.profile-main > article { margin-top: 120px; }
+.profile-row + .profile-row { margin-top: 100px; }
+.profile-rail { position: sticky; top: var(--profile-sticky-top); width: min(100%, calc((100svh - var(--profile-sticky-top) - 76px) * .75)); }
+.profile-rail img { display: block; width: 100%; height: auto; }
+.profile-rail figcaption { max-width: 48ch; margin-top: 12px; }
+.profile-prose { min-width: 0; font: 400 clamp(21px, 1.65vw, 25px)/1.46 var(--muzej-body-family); }
+.profile-section-title { margin: 0 0 20px; font: 400 clamp(26px, 3vw, 38px)/1.1 var(--muzej-body-family); }
+.profile-prose p { margin: 0 0 1.25em; }
+.profile-prose p:last-child { margin-bottom: 0; }
+.profile-closing-copy { min-width: 0; }
+.site-footer { background: #111; color: #fff; padding: 60px var(--page-x); font: 400 13px/1.5 var(--sans); }
+.footer-inner { max-width: 1360px; margin: auto; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; }
+.footer-statement { margin: 16px 0 0; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 18px; }
+.footer-links a { text-decoration: none; }
+.footer-links a:hover { text-decoration: underline; }
+@media (max-width: 760px) {
+  .profile-main { padding-inline: 20px; }
+  .profile-opening, .profile-row { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .profile-title h1 { font-size: clamp(36px, 9vw, 60px); }
+  header.muzej-intro-opening > .muzej-intro-media > .profile-hero { min-height: auto; }
+  .profile-hero img { height: auto; max-height: 70svh; }
+  .profile-row:not(.profile-makedonium) { gap: 0; }
+  .profile-main > article { margin-top: 64px; }
+  .profile-row + .profile-row { margin-top: 68px; }
+  .profile-prose { font-size: 22px; }
+  .profile-rail { position: static; width: 100%; }
+  .footer-inner { align-items: flex-start; flex-direction: column; }
+}
+</style>
 </head>
-<body class="kinfolk-article-hero denes-article">
-
+<body>
 <header class="site-header">
-  <div class="shell header-frame">
-    <a class="brand-mark" href="index.html" aria-label="Muzej home"><img class="brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png" alt="" aria-hidden="true" /></a>
-
-    <div class="muzej-menu-tools"><details class="muzej-menu"><summary aria-label="Navigation menu" aria-controls="muzej-menu-panel" class="muzej-menu-trigger"><span aria-hidden="true" class="muzej-menu-icon"><i></i><i></i><i></i></span></summary><nav aria-label="Main navigation" id="muzej-menu-panel" class="muzej-menu-panel"><a href="./#selected-stories">Selected Stories</a><a href="./#focus">Art &amp; People</a><a href="./#now-playing">Cinema</a><a href="./#traditions">Traditions</a><a href="./#weekend">Weekend Guide</a><a href="./#archive">Archive</a><a href="./shop.html">Shop</a><a href="./about.html">About Muzej</a></nav></details></div>
-  </div>
+<div class="shell header-frame">
+<a aria-label="Muzej home" class="brand-mark" href="index.html">
+<img alt="" aria-hidden="true" class="brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png"/>
+</a>
+<div class="muzej-menu-tools"><details class="muzej-menu"><summary aria-label="Navigation menu" aria-controls="muzej-menu-panel" class="muzej-menu-trigger"><span aria-hidden="true" class="muzej-menu-icon"><i></i><i></i><i></i></span></summary><nav aria-label="Main navigation" id="muzej-menu-panel" class="muzej-menu-panel"><a href="./#selected-stories">Selected Stories</a><a href="./#focus">Art &amp; People</a><a href="./#now-playing">Cinema</a><a href="./#traditions">Traditions</a><a href="./#weekend">Weekend Guide</a><a href="./#archive">Archive</a><a href="./shop.html">Shop</a><a href="./about.html">About Muzej</a></nav></details></div>
+</div>
 </header>
-
-<main>
-  <header class="feature muzej-sticky-opening">
-    <div class="feature-inner">
-      <div class="feature-copy">
-        <p class="feature-byline muzej-byline">Words <strong>Tatjana Filipovska and Natali Rajchinovska-Pavleska</strong></p>
-        <h1 class="muzej-article-title feature-title">Denes and Macedonian Modernism</h1>
-      </div>
-      <div class="feature-scroll-column">
-        <figure class="feature-media denes-cover" aria-label="Denes, 1953 to 1955">
-          <div class="denes-cover-text" aria-hidden="true">
-            <span class="denes-cyrillic" lang="mk">ДЕНЕС</span>
-            <span class="denes-years">1953–1955</span>
-          </div>
-        </figure>
-        <p class="feature-deck">How a group of painters, architects, and sculptors argued for creative freedom in postwar Macedonia.</p>
-      </div>
+<main id="main-content" class="profile-main">
+  <header class="profile-opening muzej-intro-opening">
+    <div class="profile-title muzej-intro-title">
+      <p class="profile-kicker">Art | History</p>
+      <h1 class="muzej-article-title">Denes and Macedonian Modernism</h1>
+      <p class="muzej-byline">Words <strong>Tatjana Filipovska and Natali Rajchinovska-Pavleska</strong></p>
+    </div>
+    <div class="muzej-intro-media">
+      <figure class="profile-hero">
+        <img src="./Assets/Denes/denes-catalogue-cover.webp" width="930" height="1240" alt="Dimitar Kondovski’s cover for the 1983 Denes retrospective, with black Cyrillic lettering." fetchpriority="high" decoding="async">
+      </figure>
+      <p class="profile-deck muzej-intro-deck">How a group of painters, architects, and sculptors argued for creative freedom in postwar Macedonia.</p>
     </div>
   </header>
 
-  <article class="article-shell denes-reading" aria-label="The Social Context of the Dialectical Structure in the Macedonian Art-Modernist Discourse">
-    <div class="body-block">
-        <h2 class="section-heading">The Denes group</h2>
-        <p>The “Denes” group, formed in 1953 by architects, painters, and sculptors, conceptualizes its program of action based on the principles of “freedom of personal expression” and “using contemporary art achievements from the world to create our contemporary art.” At the Third Union of Visual Artists of Yugoslavia (Congress, May 1953, Ohrid), the group proposed approaching the tendencies of the more developed art centers from the Yugoslav areas, with the aim of a more visible “affirmation of individuals,” a clearer articulation of the “different artistic currents” and an “active struggle of different views” (Протуѓер, 1983: 8). In addition to the need to group similar author views, what significantly moves the discourse of art from the passive domain is the call for the creation of a contemporary art audience, and the concept of everyone’s participation in the field of cultural and social activity. Their commitments are based on the synthesis of the three branches of the creative fields (architecture, sculpture and painting), counting on their overlapping aesthetic and social reciprocity.</p>
-        <p>In their Manifesto, the artists were named as “art workers,” whose living in a socialist society was not a prerequisite for creating “socialist art.” (Петковски, 1983: 32). The critical attitude expressed about the types of “struggle” through art essentially underlines the necessity of different opinions, different aesthetic views, the articulation of which would take place simultaneously with the socialist construction of the Republic (Протуѓер во Петковски 1989: 227). One of the founders of the Group – Borko Lazeski, clarifies that “our motifs” should not be taken “as a guarantee for the content of the artwork,” but as “painting from which Macedonia radiates in its essence” (Лазески, 1954). Advocating for non-figurative art (a term preferred to abstraction), Lazeski traces the authority of art as a problematic category waiting to be (individually) worked out.</p>
-        <p>The theoretical-polemical and practical activity of the “Denes” group (1953–1955), the open and sharp questioning of democratization and freedom of thought, the radical critical attitudes about the position of art in society, created “engaged polemical thought,” about the contexts for the possibilities of the “revolution in the social sphere” to be “touched and fertilized by the revolution in the sphere of art” (Ѓурчинов, 1983: 18–20). The short activity of the group, its ephemerality, also had its advantages in the later independent construction of the individual artistic syntagms of the individual authors who avoided the so-called “sclerotic challenge of ‘academicism’ and the prescription of group exclusivity.” The authors of the “Denes” group were the builders of “aesthetic pluralism” (Ѓурчинов, 1983: 17–23; Величковски, 2013: 16).</p>
-        <h2 class="section-heading">Lazeski and the public mural</h2>
-        <p>In the hotbed of great ideological confrontations in Yugoslavia, at the time of deciding “for or against Krleža,” Lazeski felt close to Krleža’s ideas about free creative expression. In the conceptual program of the Belgrade group “Life” [“Život“] Lazeski participates in the production of small-format graphics with a social sign and motifs taken from the everyday and modest life of workers, reinterpreted through the prism of a restless, revolted and young artist (Ibid.,1979: 8-9). In the drawings from the fourth decade: Third Class (1936), Workers Have Lunch (1936), in their title sub-layers we perceive the author’s preoccupation with class differences and the question of class consciousness.</p>
-        <p>The concept of class consciousness originates from the hypotheses of Karl Marx, who believed that if the proletariat – the working class saw the potential of association, the group with common interests could undertake revolutionary feats and contribute to the overthrow of the dominant capitalist class (Borland, 2008: 134; Lukács,1971: 46–47). According to post-Marxist theories and neo-philosophy, collective consciousness can only be achieved through individual consciousness and free individual action (Gurbuz, 2008: 142–143). Consciousness and visual language could find the common thread as a “transparent cage” only if they are fully contained in the world they enclose, the very exterior from which one cannot escape (Meillassoux, 2008: 14–15). Then, art depicts reality which at the same time condemns it (Marcuse, 1978: 55).</p>
-        <p>As a pedagogue and theorist, Lazeski interprets the relationship between art, society and social classes from an extremely dialectical perspective. In his lecture on “Art and Society” from 1937, he talks about art that has the right to speak about social reality and people’s lives, but art that unites members of the working class (in Marx’s sense of class consciousness), art that preaches faith and great humanity. In Lazeski, the urge and the need to depict a scene of mass and collective action can be seen in the small-format drawings: Demonstrations in Belgrade (1935/37) and House and Hoe (1936/37). Both examples show the potential for compositionally constructing mass scenes of monumental proportions, later manifested in the large frescoes of 1950 and 1951–56. Undoubtedly, Lazeski’s early drawings show the evolution of his artistic expression, set as a problematic category, as an “artistic dialectic” and as an “ideological political maturation” that translates the thematic preoccupation into a representational construction (Абаџиева-Димитрова, 1979: 10).</p>
-        <p>This approach is not far from the concepts of Marcuse who, discussing the political potential of art, claims that it is found in art itself, in the aesthetic form as such. Lazeski locates the search for a new autonomy of expression, in Marcuse’s sense, in the revolutionary transformation, in the radical change of the style or in the technique, in the juxtaposition of the prevailing freedom and the rebelliousness of the subversive potential (Marcuse, 1978: ix-xi). According to Abadzieva-Dimitrova, “revolutionary from the earliest youth, Lazeski fights with the forces of fate, with the exploiters before the war, with the fascists during the war, with the misconceptions and perceptions of the environment, with the natural element” (1979: 5).</p>
-        <p>Immediately after returning from Paris, Lazeski creates the monumental mural Fresco for NOV (1951–1956). We see his initiatory attempts to socialize and democratize art in the effort to expand the aesthetic dimension of the work of art in the field of social practices, saying that: “The mural is my address to the people. It is common property, a kind of mass media” (Мирчевски in Абаџиева-Димитрова, 1979: 25). Made in the fresco buono technique, as a horizontal compositional panorama and a semantic chronograph, the fresco meant “a model for a new art: public, monumental, with a new social function” (Петковски,1983: 35). In addition to the essential pretext for transposing the engaged content – the historical awareness of the meaning of NOV, the motives for the realization of the Fresco for NOV are guided by six fundamental principles, and the complete narrative is a structural fusion of the content with the form (Marcuse, 1978: 8, 19) in a studious, energetic and poignant portrayal of the collective dimension of suffering, resistance and victory, the incarnation of victory (Абаџиева-Димитрова, 1979: 25–29).</p>
-        <p>For Lazeski, the installation of this fresco meant a search for his artistic truth, a testimony to the historical events of this area and of this country, a document from the time of our revolution (Николовски 1957: 10–11; Абаџиева-Димитрова 1979: 36). This achievement gave “a significant contribution to the breakthrough of new artistic endeavors in contemporary Macedonian painting, which at the end of the decade was stimulated precisely by the characteristics of this fresco”. It became “a model for public, monumental art, which had more than an aesthetic function, its purpose was to realize the social function of art” (Петковски, 1984: 28).</p>
-        <h2 class="section-heading">Grabuloski and the Makedonium</h2>
-        <p>The work of the Macedonian sculptor Jordan Grabuloski (1925–1986) perhaps most consistently embodies the ideological program of the “Denes” group. The monument Ilinden (or Macedonium) (1972–1974), near Kruševo (collaboration with Iskra Grabul), is an example of the realization of the expected synthesis of creative disciplines (sculpture, architecture, painting) with a clear aspiration towards the purification of modern art, a language and concept that communicates through public, monumental art. Plastically rendered as a spatial structure, a functional spatial unity, as a “radiating ambience,” the shape itself is the bearer of a narrative (Петковски, 1977: 35; 1989: 253). The purpose of the monument is “the spread of modern art” through the efforts of political thought (Ibid., 1989: 253-254).</p>
-    </div>
-    <section class="sources-section muzej-sources" aria-labelledby="sources-title">
-      <h2 class="section-heading" id="sources-title">Sources</h2>
-      <p>Tatjana Filipovska and Natali Rajchinovska-Pavleska, “The Social Context of the Dialectical Structure in the Macedonian Art-Modernist Discourse.” <em>Annual of the Faculty of Philosophy in Skopje</em> 78, no. 1 (2025), pp. 175–190. <a href="https://doi.org/10.37510/godzbo25781175f">Original article</a>.</p>
-      <p>This excerpt draws from pp. 181–184. Muzej shortened the headings, lightly edited punctuation and spacing, and omitted the footnotes from this edition. <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>.</p>
-      <p><a href="https://journals.ukim.mk/index.php/godzbo/en/article/download/4077/3590/8249">Read the complete English paper, including footnotes and bibliography.</a></p>
+  <article aria-label="Denes and Macedonian Modernism">
+    <section class="profile-row" aria-labelledby="denes-group">
+      <h2 class="profile-section-title" id="denes-group">The Denes group</h2>
+      <div class="profile-prose">
+          <p>The “Denes” group, formed in 1953 by architects, painters, and sculptors, conceptualizes its program of action based on the principles of “freedom of personal expression” and “using contemporary art achievements from the world to create our contemporary art.” At the Third Union of Visual Artists of Yugoslavia (Congress, May 1953, Ohrid), the group proposed approaching the tendencies of the more developed art centers from the Yugoslav areas, with the aim of a more visible “affirmation of individuals,” a clearer articulation of the “different artistic currents” and an “active struggle of different views” (Протуѓер, 1983: 8). In addition to the need to group similar author views, what significantly moves the discourse of art from the passive domain is the call for the creation of a contemporary art audience, and the concept of everyone’s participation in the field of cultural and social activity. Their commitments are based on the synthesis of the three branches of the creative fields (architecture, sculpture and painting), counting on their overlapping aesthetic and social reciprocity.</p>
+          <p>In their Manifesto, the artists were named as “art workers,” whose living in a socialist society was not a prerequisite for creating “socialist art.” (Петковски, 1983: 32). The critical attitude expressed about the types of “struggle” through art essentially underlines the necessity of different opinions, different aesthetic views, the articulation of which would take place simultaneously with the socialist construction of the Republic (Протуѓер во Петковски 1989: 227). One of the founders of the Group – Borko Lazeski, clarifies that “our motifs” should not be taken “as a guarantee for the content of the artwork,” but as “painting from which Macedonia radiates in its essence” (Лазески, 1954). Advocating for non-figurative art (a term preferred to abstraction), Lazeski traces the authority of art as a problematic category waiting to be (individually) worked out.</p>
+          <p>The theoretical-polemical and practical activity of the “Denes” group (1953–1955), the open and sharp questioning of democratization and freedom of thought, the radical critical attitudes about the position of art in society, created “engaged polemical thought,” about the contexts for the possibilities of the “revolution in the social sphere” to be “touched and fertilized by the revolution in the sphere of art” (Ѓурчинов, 1983: 18–20). The short activity of the group, its ephemerality, also had its advantages in the later independent construction of the individual artistic syntagms of the individual authors who avoided the so-called “sclerotic challenge of ‘academicism’ and the prescription of group exclusivity.” The authors of the “Denes” group were the builders of “aesthetic pluralism” (Ѓурчинов, 1983: 17–23; Величковски, 2013: 16).</p>
+      </div>
     </section>
-    <nav class="denes-related" aria-label="Related Muzej articles">
-      <a href="./borko-lazeski.html">Borko Lazeski</a>
-      <a href="./makedonium.html">Makedonium</a>
-    </nav>
+    <section class="profile-row" aria-labelledby="lazeski-mural">
+      <h2 class="profile-section-title" id="lazeski-mural">Lazeski and the public mural</h2>
+      <div class="profile-prose">
+          <p>In the hotbed of great ideological confrontations in Yugoslavia, at the time of deciding “for or against Krleža,” Lazeski felt close to Krleža’s ideas about free creative expression. In the conceptual program of the Belgrade group “Life” [“Život“] Lazeski participates in the production of small-format graphics with a social sign and motifs taken from the everyday and modest life of workers, reinterpreted through the prism of a restless, revolted and young artist (Ibid.,1979: 8-9). In the drawings from the fourth decade: Third Class (1936), Workers Have Lunch (1936), in their title sub-layers we perceive the author’s preoccupation with class differences and the question of class consciousness.</p>
+          <p>The concept of class consciousness originates from the hypotheses of Karl Marx, who believed that if the proletariat – the working class saw the potential of association, the group with common interests could undertake revolutionary feats and contribute to the overthrow of the dominant capitalist class (Borland, 2008: 134; Lukács,1971: 46–47). According to post-Marxist theories and neo-philosophy, collective consciousness can only be achieved through individual consciousness and free individual action (Gurbuz, 2008: 142–143). Consciousness and visual language could find the common thread as a “transparent cage” only if they are fully contained in the world they enclose, the very exterior from which one cannot escape (Meillassoux, 2008: 14–15). Then, art depicts reality which at the same time condemns it (Marcuse, 1978: 55).</p>
+          <p>As a pedagogue and theorist, Lazeski interprets the relationship between art, society and social classes from an extremely dialectical perspective. In his lecture on “Art and Society” from 1937, he talks about art that has the right to speak about social reality and people’s lives, but art that unites members of the working class (in Marx’s sense of class consciousness), art that preaches faith and great humanity. In Lazeski, the urge and the need to depict a scene of mass and collective action can be seen in the small-format drawings: Demonstrations in Belgrade (1935/37) and House and Hoe (1936/37). Both examples show the potential for compositionally constructing mass scenes of monumental proportions, later manifested in the large frescoes of 1950 and 1951–56. Undoubtedly, Lazeski’s early drawings show the evolution of his artistic expression, set as a problematic category, as an “artistic dialectic” and as an “ideological political maturation” that translates the thematic preoccupation into a representational construction (Абаџиева-Димитрова, 1979: 10).</p>
+          <p>This approach is not far from the concepts of Marcuse who, discussing the political potential of art, claims that it is found in art itself, in the aesthetic form as such. Lazeski locates the search for a new autonomy of expression, in Marcuse’s sense, in the revolutionary transformation, in the radical change of the style or in the technique, in the juxtaposition of the prevailing freedom and the rebelliousness of the subversive potential (Marcuse, 1978: ix-xi). According to Abadzieva-Dimitrova, “revolutionary from the earliest youth, Lazeski fights with the forces of fate, with the exploiters before the war, with the fascists during the war, with the misconceptions and perceptions of the environment, with the natural element” (1979: 5).</p>
+          <p>Immediately after returning from Paris, Lazeski creates the monumental mural Fresco for NOV (1951–1956). We see his initiatory attempts to socialize and democratize art in the effort to expand the aesthetic dimension of the work of art in the field of social practices, saying that: “The mural is my address to the people. It is common property, a kind of mass media” (Мирчевски in Абаџиева-Димитрова, 1979: 25). Made in the fresco buono technique, as a horizontal compositional panorama and a semantic chronograph, the fresco meant “a model for a new art: public, monumental, with a new social function” (Петковски,1983: 35). In addition to the essential pretext for transposing the engaged content – the historical awareness of the meaning of NOV, the motives for the realization of the Fresco for NOV are guided by six fundamental principles, and the complete narrative is a structural fusion of the content with the form (Marcuse, 1978: 8, 19) in a studious, energetic and poignant portrayal of the collective dimension of suffering, resistance and victory, the incarnation of victory (Абаџиева-Димитрова, 1979: 25–29).</p>
+          <p>For Lazeski, the installation of this fresco meant a search for his artistic truth, a testimony to the historical events of this area and of this country, a document from the time of our revolution (Николовски 1957: 10–11; Абаџиева-Димитрова 1979: 36). This achievement gave “a significant contribution to the breakthrough of new artistic endeavors in contemporary Macedonian painting, which at the end of the decade was stimulated precisely by the characteristics of this fresco”. It became “a model for public, monumental art, which had more than an aesthetic function, its purpose was to realize the social function of art” (Петковски, 1984: 28).</p>
+          <p><a href="./borko-lazeski.html">Borko Lazeski: Painting in Public</a></p>
+      </div>
+    </section>
+    <section class="profile-row profile-makedonium" aria-labelledby="makedonium">
+      <figure class="profile-rail">
+        <img src="./Assets/Denes/makedonium-construction-1973.webp" width="894" height="1192" alt="Iskra and Jordan Grabuloski in front of the scaffolded Makedonium dome in Kruševo." loading="lazy" decoding="async">
+        <figcaption>Iskra and Jordan Grabuloski at the <a href="./makedonium.html">Makedonium</a> construction site, 1973.</figcaption>
+      </figure>
+      <div class="profile-closing-copy">
+        <div class="profile-prose">
+          <h2 class="profile-section-title" id="makedonium">Grabuloski and the Makedonium</h2>
+          <p>The work of the Macedonian sculptor Jordan Grabuloski (1925–1986) perhaps most consistently embodies the ideological program of the “Denes” group. The monument Ilinden (or Macedonium) (1972–1974), near Kruševo (collaboration with Iskra Grabul), is an example of the realization of the expected synthesis of creative disciplines (sculpture, architecture, painting) with a clear aspiration towards the purification of modern art, a language and concept that communicates through public, monumental art. Plastically rendered as a spatial structure, a functional spatial unity, as a “radiating ambience,” the shape itself is the bearer of a narrative (Петковски, 1977: 35; 1989: 253). The purpose of the monument is “the spread of modern art” through the efforts of political thought (Ibid., 1989: 253-254).</p>
+        </div>
+        <section class="sources-section muzej-sources" aria-labelledby="sources-title">
+          <h2 class="section-heading" id="sources-title">Sources</h2>
+          <p>Tatjana Filipovska and Natali Rajchinovska-Pavleska, “The Social Context of the Dialectical Structure in the Macedonian Art-Modernist Discourse.” <em>Annual of the Faculty of Philosophy in Skopje</em> 78, no. 1 (2025), pp. 175–190. <a href="https://doi.org/10.37510/godzbo25781175f">Original article</a>.</p>
+          <p>This excerpt draws from pp. 181–184. Muzej shortened the headings, lightly edited punctuation and spacing, and omitted the footnotes from this edition. <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>.</p>
+          <p><a href="https://journals.ukim.mk/index.php/godzbo/en/article/download/4077/3590/8249">Read the complete English paper, including footnotes and bibliography.</a></p>
+          <p>Dimitar Kondovski, cover design for <em>Denes 1953–1983</em>. Art Gallery, Skopje, 1983. <a href="https://arhiva.zaum.mk/%D0%B4%D0%B5%D0%BD%D0%B5%D1%81-1953-1983/">ZaUm Archive</a>.</p>
+          <p>Iskra and Jordan Grabuloski at the Makedonium construction site, 1973. <a href="https://ohrid1.com/archives/103726">Archival photograph published by Ohrid1</a>.</p>
+        </section>
+      </div>
+    </section>
   </article>
+  <section class="more-from-muzej" data-more-from-muzej="" aria-labelledby="more-from-muzej-title"></section>
 </main>
-
 <footer class="site-footer muzej-footer">
 <div class="footer-inner">
 <div class="footer-brand">
@@ -907,57 +152,5 @@ body.muzej-logo-hidden .site-header .brand-mark {
 </nav>
 </div>
 </footer>
-
-
-<script>
-  (function () {
-    var previousY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
-    var ticking = false;
-    var revealZone = 24;
-    var motionThreshold = 4;
-    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-    function updateMuzejLogoVisibility() {
-      var currentY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
-      var delta = currentY - previousY;
-
-      if (reducedMotion.matches) {
-        document.body.classList.remove("muzej-logo-hidden");
-        ticking = false;
-        return;
-      }
-
-      if (currentY <= revealZone) {
-        document.body.classList.remove("muzej-logo-hidden");
-      } else if (delta > motionThreshold) {
-        document.body.classList.add("muzej-logo-hidden");
-      } else if (delta < -motionThreshold) {
-        document.body.classList.remove("muzej-logo-hidden");
-      }
-
-      previousY = currentY;
-      ticking = false;
-    }
-
-    function requestMuzejLogoVisibility() {
-      if (!ticking) {
-        window.requestAnimationFrame(updateMuzejLogoVisibility);
-        ticking = true;
-      }
-    }
-
-    window.addEventListener("scroll", requestMuzejLogoVisibility, { passive: true });
-    window.addEventListener("resize", requestMuzejLogoVisibility);
-
-    if (reducedMotion.addEventListener) {
-      reducedMotion.addEventListener("change", requestMuzejLogoVisibility);
-    } else if (reducedMotion.addListener) {
-      reducedMotion.addListener(requestMuzejLogoVisibility);
-    }
-
-    updateMuzejLogoVisibility();
-  })();
-</script>
-
 </body>
 </html>
