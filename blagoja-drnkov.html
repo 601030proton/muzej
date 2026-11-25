@@ -15,6 +15,7 @@
 :root {
   --page-x: clamp(18px, 5.2vw, 72px);
   --profile-gap: clamp(36px, 6vw, 96px);
+  --profile-sticky-top: 100px;
   --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 * { box-sizing: border-box; }
@@ -23,7 +24,7 @@ a { color: inherit; text-underline-offset: .16em; }
 .site-header { position: sticky; top: 0; z-index: 10; }
 
 .profile-main { max-width: 1520px; margin: auto; padding: 12px var(--page-x) 0; }
-.profile-opening { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: var(--profile-gap); }
+.profile-opening, .profile-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: var(--profile-gap); }
 .profile-title h1 { font: 400 clamp(44px, 4.4vw, 70px)/.97 var(--muzej-body-family); letter-spacing: -.025em; }
 .profile-kicker, figcaption { font: 400 11px/1.5 var(--sans); }
 .profile-kicker { text-transform: uppercase; letter-spacing: .08em; }
@@ -40,7 +41,7 @@ a { color: inherit; text-underline-offset: .16em; }
 .footer-links a:hover { text-decoration: underline; }
 @media (max-width: 760px) {
   .profile-main { padding-inline: 20px; }
-  .profile-opening { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .profile-opening, .profile-row { grid-template-columns: minmax(0, 1fr); gap: 36px; }
   .profile-title h1 { font-size: clamp(36px, 9vw, 60px); }
   .profile-hero img { height: auto; }
   .profile-main > article { margin-top: 64px; }
@@ -83,16 +84,19 @@ html { scroll-padding-top: 105px; }
 .profile-opening .profile-deck { max-width: 29ch; }
 .portrait-hero.plate-media { position:relative; display:block; width:min(100%,calc((100svh - 140px) * .75),540px); aspect-ratio:3/4; margin-inline:auto; }
 .portrait-hero.plate-media img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:56% 50%; margin:0; }
-.catalogue-essay {
-  width: 100%;
-  max-width: 62ch;
-  margin-inline: auto;
-  font: 400 clamp(19px, 1.8vw, 22px)/1.55 var(--muzej-body-family);
+.profile-rail {
+  position: sticky;
+  top: var(--profile-sticky-top);
+  align-self: start;
+  width: min(100%, calc((100svh - var(--profile-sticky-top) - 76px) * 1.1));
 }
-.catalogue-essay p { margin: 0 0 1em; }
-.catalogue-essay .catalogue-reprint-credit {
-  margin: 24px 0 0;
-  font: 400 12px/1.55 var(--sans);
+.profile-prose { min-width: 0; font: 400 clamp(21px, 1.65vw, 25px)/1.46 var(--muzej-body-family); }
+.profile-section-title { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.profile-prose p { margin: 0 0 1.25em; }
+.profile-prose .catalogue-reprint-credit { margin: 24px 0 0; font: 400 12px/1.55 var(--sans); }
+@media (max-width: 760px) {
+  .profile-prose { font-size: 22px; }
+  .profile-rail { position: static; width: 100%; }
 }
 .portfolio { max-width:1120px; margin:clamp(62px,8vw,108px) auto 0; }
 .portfolio-row { display:grid; grid-template-columns:minmax(0,1fr); align-items:end; margin:0 auto clamp(65px,10vw,138px); }
@@ -166,14 +170,21 @@ body main .catalogue-sources > .sources-section.muzej-sources {
   </header>
 
   <article aria-label="Blagoja Drnkov: More Than Words">
-    <section class="catalogue-essay" id="exhibition-text" aria-label="1974 exhibition essay" lang="en">
-      <p>With the time photography has become one of the essential form trough which the reality is expressed, penetrating the past and reaching into the present as a determing factor of valid communications for the future, determing the essential dimensions of reality in which it exists. As an active participant in the direct end transposed conclusions of unquestionable facts and free improvisations which are innabled the human spirit and sensibility photography become a creative meaning of existing values through which time and space are focused, in the burning point of truth. It has become a necessity penetrating all the pores of life and science, so that they could no longer exist withaut it.</p>
-      <p>Even in his earliest photography, of images where youthful romantic poetry sparkles, Blagoja Drnkov shows direct sensibility and sensitivity, in order to express his own intimacy and attitude towards life. From those first creative realisation of reality through the eye of the camera, in the last 40 years Drnkov has passed trough all those inevitable internal conflicts, which accompany maturing.</p>
-      <p>As time passed the lens, once unapproachable and impartial, was becoming an organic unity, enabling penetrations into visuality of the substance itself, the essence of fundamental thought. Complete technical mastery was not his aim bat the sought release, the possibility for precise definition, a medium of expression ...</p>
-      <p>As a photographer he is always intensely careful, interested in everything, always in the right place, unnoticed, recording the moment and his own attitude towards it with an inspiring concentration. With no regard for external attractiveness, Drnkov, penetrates into the essence of things he has seen because he alweys finds the way to the sphere of very familiar experiences which go hand in hand with his competence then the allowed. His world is aur country — a colourful portrait of it with all ist natural as well as human and social complexity. His attatchment to his native place and to the familiar determined that specific elegic tone which pulsates like a melodious presence in his visualized silence. It is the exceptional melodiousness of Macedonia, which literally springs out from the disorderd water-jugs, which flows over the wrinkled face of the dry oak-tree spills over the old nailed gate, spreads over the quiet poppi — fields which breaks aut through the sharpened dramatics of Markukula’s, waves in the childeren’s excitement in an Ohrid boat, quivers in the simple little branch of the acacia ... Evrywhere, a black-white melodious colourfullness pours out from the inside. There we can recognize the authenticity of a real master, whom the eye the camera serves, as the silent keys serve the pianist to express the deepest emotions.</p>
-      <p>To talk abaut Blagoja Drnkov is to realize the numerous kilometres of exposed celluloid film, on which the biography of the outhor remains recorded, to recognize the years which dropped into the silent solitude of the war with the capricious little instrument — from their first acquaintance and their misanderstanding to the definite mutual identification, when it was impossible to distanguish them from each ather. And for such an achievement time relations are not the only requirement for survival, but first of all enormous love, patience and wisdom is necessery — as is the case with all arts.</p>
-      <p>And as much as photography has become a part of life, so has the creativity of Drnkov become a part of us. The 40 years of consequent presence through which we are revealed.</p>
-      <p class="catalogue-reprint-credit">English text from the <a href="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf#page=20">solo exhibition catalogue</a>, Museum of Contemporary Art, Skopje, May 1974. Reprinted by permission.</p>
+    <section class="profile-row" id="exhibition-text" aria-labelledby="exhibition-text-title" lang="en">
+      <figure class="photo-plate profile-rail">
+        <a class="plate-media" href="./Assets/Drnkov/catalogue-wed1.webp" data-source="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf#page=8"><img src="./Assets/Drnkov/catalogue-wed1.webp" width="1082" height="976" alt="A wedding procession passes through a mountain village." decoding="async" loading="lazy"></a>
+        <figcaption><span class="plate-title"><i>Galičnik Wedding</i></span>, 1939.</figcaption>
+      </figure>
+      <div class="profile-prose">
+        <h2 class="profile-section-title" id="exhibition-text-title">1974 exhibition essay</h2>
+        <p>With the time photography has become one of the essential form trough which the reality is expressed, penetrating the past and reaching into the present as a determing factor of valid communications for the future, determing the essential dimensions of reality in which it exists. As an active participant in the direct end transposed conclusions of unquestionable facts and free improvisations which are innabled the human spirit and sensibility photography become a creative meaning of existing values through which time and space are focused, in the burning point of truth. It has become a necessity penetrating all the pores of life and science, so that they could no longer exist withaut it.</p>
+        <p>Even in his earliest photography, of images where youthful romantic poetry sparkles, Blagoja Drnkov shows direct sensibility and sensitivity, in order to express his own intimacy and attitude towards life. From those first creative realisation of reality through the eye of the camera, in the last 40 years Drnkov has passed trough all those inevitable internal conflicts, which accompany maturing.</p>
+        <p>As time passed the lens, once unapproachable and impartial, was becoming an organic unity, enabling penetrations into visuality of the substance itself, the essence of fundamental thought. Complete technical mastery was not his aim bat the sought release, the possibility for precise definition, a medium of expression ...</p>
+        <p>As a photographer he is always intensely careful, interested in everything, always in the right place, unnoticed, recording the moment and his own attitude towards it with an inspiring concentration. With no regard for external attractiveness, Drnkov, penetrates into the essence of things he has seen because he alweys finds the way to the sphere of very familiar experiences which go hand in hand with his competence then the allowed. His world is aur country — a colourful portrait of it with all ist natural as well as human and social complexity. His attatchment to his native place and to the familiar determined that specific elegic tone which pulsates like a melodious presence in his visualized silence. It is the exceptional melodiousness of Macedonia, which literally springs out from the disorderd water-jugs, which flows over the wrinkled face of the dry oak-tree spills over the old nailed gate, spreads over the quiet poppi — fields which breaks aut through the sharpened dramatics of Markukula’s, waves in the childeren’s excitement in an Ohrid boat, quivers in the simple little branch of the acacia ... Evrywhere, a black-white melodious colourfullness pours out from the inside. There we can recognize the authenticity of a real master, whom the eye the camera serves, as the silent keys serve the pianist to express the deepest emotions.</p>
+        <p>To talk abaut Blagoja Drnkov is to realize the numerous kilometres of exposed celluloid film, on which the biography of the outhor remains recorded, to recognize the years which dropped into the silent solitude of the war with the capricious little instrument — from their first acquaintance and their misanderstanding to the definite mutual identification, when it was impossible to distanguish them from each ather. And for such an achievement time relations are not the only requirement for survival, but first of all enormous love, patience and wisdom is necessery — as is the case with all arts.</p>
+        <p>And as much as photography has become a part of life, so has the creativity of Drnkov become a part of us. The 40 years of consequent presence through which we are revealed.</p>
+        <p class="catalogue-reprint-credit">English text from the <a href="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf#page=20">solo exhibition catalogue</a>, Museum of Contemporary Art, Skopje, May 1974. Reprinted by permission.</p>
+      </div>
     </section>
     <section class="portfolio" aria-label="Selected photographs">
       <div class="portfolio-row wide">
@@ -198,12 +209,6 @@ body main .catalogue-sources > .sources-section.muzej-sources {
       <div class="portfolio-row portrait-solo">
         <figure class="photo-plate">
           <a class="plate-media" href="./Assets/Drnkov/catalogue-village.webp" data-source="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf#page=9"><img src="./Assets/Drnkov/catalogue-village.webp" width="864" height="1217" alt="Figures on a village path beneath a flowering tree." decoding="async" loading="lazy"></a>
-        </figure>
-      </div>
-      <div class="portfolio-row wide">
-        <figure class="photo-plate">
-          <a class="plate-media" href="./Assets/Drnkov/catalogue-wed1.webp" data-source="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf#page=8"><img src="./Assets/Drnkov/catalogue-wed1.webp" width="1082" height="976" alt="A wedding procession passes through a mountain village." decoding="async" loading="lazy"></a>
-          <figcaption><span class="plate-title"><i>Galičnik Wedding</i></span>, 1939.</figcaption>
         </figure>
       </div>
       <div class="portfolio-row indented">
