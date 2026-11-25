@@ -186,9 +186,9 @@
     {
       slug: "wearing-the-nation",
       href: "wearing-the-nation.html",
-      title: "The Nation on Their Backs",
+      title: "Macedonia’s Football Shirts",
       kicker: "Sport | Design",
-      dek: "Five Macedonian shirts, and what they reveal about design, memory, and the limits of reinvention.",
+      dek: "National team shirts from 1993 to 2026–27.",
       image: "./Assets/Wearing%20the%20Nation/e9d02185-3178-4851-b0b0-ef36d7436568.png",
       alt: "A collection of Macedonian football shirts in red, yellow, and white.",
       position: "center center"

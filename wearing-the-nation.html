@@ -1,799 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Five home shirt designs for Macedonia’s national football team, from 1994 to 2023.">
-<title>The Nation on Their Backs | Muzej</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A chronological archive of Macedonia’s national team football shirts, from 1993 to 2026–27.">
+<title>Macedonia’s Football Shirts | Muzej</title>
 <link rel="icon" type="image/png" href="./Assets/Font/Muzej%20Logo.ai.png">
 <link rel="apple-touch-icon" href="./Assets/Font/Muzej%20Logo.ai.png">
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&display=swap"
-/>
 <link rel="stylesheet" href="fonts.css?v=20261124-editorial">
+<link rel="stylesheet" href="muzej-header.css?v=20261121-site-nav">
+<link rel="stylesheet" href="muzej-footer-logo.css?v=20261124-editorial">
+<link rel="stylesheet" href="more-from-muzej.css?v=20261124-editorial">
+<script defer src="muzej-header.js?v=20261121-site-nav"></script>
+<script defer src="more-from-muzej.js?v=20261124-editorial"></script>
 <style>
-:root {
-  --background: #ffffff;
-  --foreground: #0f0e0d;
-  --white: #ffffff;
-  --ink: #0f0e0d;
-  --ink-soft: rgba(15, 14, 13, 0.62);
-  --ink-faint: rgba(15, 14, 13, 0.12);
-  --muted: #70675d;
-  --rule: rgba(23, 21, 19, 0.09);
-  --page-x: clamp(18px, 5.2vw, 72px);
-  --nav-h: clamp(88px, 10vw, 128px);
-  --feature-w: min(1280px, calc(100vw - (var(--page-x) * 2)));
-  --rail-gap: clamp(34px, 5.4vw, 84px);
-  --body-col: minmax(520px, 760px);
-  --body-tail: 0px;
-  --section-gap: clamp(48px, 8vw, 108px);
-  --content-max: 1520px;
-  --font-display: "plantin", Georgia, serif;
-  --font-wordmark: var(--font-display);
-  --serif: var(--font-display);
-        --headline-serif: var(--font-display);
-  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --article-serif: "adobe-jenson-pro", Georgia, serif;
-  --brand-serif: var(--font-wordmark);
-}
-
-*, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  background: var(--white);
-  color: var(--ink);
-  font-family: var(--article-serif);
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-img { display: block; max-width: 100%; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #fff; color: #111; font-family: "plantin", Georgia, serif; }
 a { color: inherit; }
 
-.shell {
-  width: min(100%, var(--content-max));
-  margin: 0 auto;
-  padding-left: var(--page-x);
-  padding-right: var(--page-x);
-}
-
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 40;
-  background: var(--background);
-}
-.header-frame {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  gap: 1.5rem 2rem;
-  padding-top: 28px;
-  padding-bottom: 24px;
-}
-.brand-mark {
-  display: inline-flex;
-  align-items: center;
-  font-family: var(--font-wordmark);
-  font-size: clamp(2.4rem, 1.9rem + 1.43vw, 3.76rem);
-  line-height: 0.92;
-  letter-spacing: 0;
-  font-weight: 400;
-  font-optical-sizing: auto;
-  white-space: nowrap;
-  text-decoration: none;
-
-}
-
-.site-header .brand-mark {
-  position: relative;
-  width: 160px;
-  height: 32px;
-  overflow: hidden;
-  flex: 0 0 auto;
-}
-
-.site-header .brand-mark-image {
-  position: absolute;
-  width: 198.68px;
-  max-width: none;
-  height: auto;
-  left: -19.53px;
-  top: -107.88px;
-  display: block;
-}
-
-.utility-link,
-.utility-menu-item {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2rem;
-  border: 0;
-  background: transparent;
-  padding: 0;
-  font-family: var(--sans);
-  font-size: 0.72rem;
-  line-height: 1.2;
-  letter-spacing: 0;
-  color: rgba(23, 21, 19, 0.58);
-  text-decoration: none;
-  transition: color 180ms ease, border-color 180ms ease;
-}
-.utility-link:hover,
-.utility-menu-item:hover {
-  color: var(--foreground);
-}
-.header-tools {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  position: relative;
-}
-.utility-menu {
-  position: relative;
-}
-.utility-menu summary {
-  list-style: none;
-}
-.utility-menu summary::-webkit-details-marker {
-  display: none;
-}
-.utility-trigger {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.2rem 0;
-  border: 0;
-  background: transparent;
-  color: var(--foreground);
-  cursor: pointer;
-  transition: color 180ms ease, opacity 180ms ease;
-}
-.utility-trigger:hover {
-  opacity: 0.72;
-}
-.utility-trigger:focus-visible {
-  outline: 2px solid rgba(141, 79, 61, 0.45);
-  outline-offset: 3px;
-}
-.utility-icon {
-  display: grid;
-  gap: 0.26rem;
-}
-.utility-icon-line {
-  display: block;
-  width: 1.45rem;
-  height: 1px;
-  background: currentColor;
-  opacity: 0.88;
-}
-.utility-panel {
-  position: absolute;
-  top: calc(100% + 0.55rem);
-  right: 0;
-  z-index: 10;
-  display: grid;
-  min-width: 10rem;
-  padding: 0.45rem 0;
-  border: 1px solid rgba(23, 21, 19, 0.12);
-  background: #ffffff;
-  box-shadow: 0 10px 30px rgba(23, 21, 19, 0.08);
-}
-.utility-panel-group {
-  display: grid;
-  gap: 0;
-}
-.utility-panel-utility {
-  margin-top: 0.25rem;
-  padding-top: 0.35rem;
-  border-top: 1px solid rgba(23, 21, 19, 0.1);
-}
-.utility-panel .utility-link,
-.utility-panel .utility-menu-item {
-  justify-content: flex-start;
-  min-height: 0;
-  width: 100%;
-  padding: 0.6rem 0.9rem;
-  text-align: left;
-  background: transparent;
-}
-.utility-panel-utility .utility-link {
-  font-size: 0.66rem;
-  letter-spacing: 0;
-  color: rgba(23, 21, 19, 0.52);
-}
-.utility-panel .utility-menu-item {
-  cursor: pointer;
-}
-.utility-panel .utility-link:hover,
-.utility-panel .utility-menu-item:hover {
-  background: rgba(23, 21, 19, 0.035);
-}
-
-main {
-  padding-top: clamp(24px, 3.2vw, 48px);
-}
-
-.feature {
-  padding:
-    clamp(0px, 0.6vw, 6px)
-    clamp(16px, 3vw, 40px)
-    clamp(56px, 8vw, 102px);
-}
-.feature-inner {
-  display: grid;
-  grid-template-columns: minmax(420px, 1.06fr) minmax(300px, 0.84fr);
-  gap: clamp(22px, 3.8vw, 52px);
-  align-items: stretch;
-  max-width: min(1320px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
-  margin: 0 auto;
-}
-.feature-media {
-  margin: 0;
-}
-.feature-media img {
-  width: 100%;
-  height: clamp(620px, 80vh, 920px);
-  object-fit: cover;
-  object-position: center;
-  background: var(--white);
-}
-.feature-copy {
-  min-height: clamp(620px, 80vh, 920px);
-  max-width: 28rem;
-  margin: 0 auto;
-  padding: clamp(26px, 3.6vw, 42px) 0 clamp(20px, 3vw, 30px);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-}
-.feature-kicker {
-  margin: 0 0 1.2rem;
-  font-family: var(--sans);
-  font-size: 0.72rem;
-  line-height: 1.2;
-  letter-spacing: 0;
-  color: var(--ink-soft);
-}
-.feature-title {
-  margin: 0;
-  color: var(--ink);
-  font-family: "plantin", Georgia, serif;
-  font-size: clamp(42px, 5.2vw, 82px);
-  font-weight: 400;
-  line-height: 0.98;
-  letter-spacing: 0;
-  text-transform: none;
-  text-wrap: balance;
-}
-.feature-byline {
-  margin: 0 0 auto;
-  color: var(--ink-soft);
-  font-size: clamp(16px, 1.18vw, 19px);
-  letter-spacing: 0;
-  line-height: 1.4;
-}
-.feature-deck {
-  max-width: min(1380px, calc(100vw - (clamp(16px, 3vw, 40px) * 2)));
-  margin: clamp(40px, 5vw, 78px) auto 0;
-  color: var(--ink);
-  font-family: "plantin", Georgia, serif;
-  font-size: clamp(32px, 3.05vw, 56px);
-  font-weight: 400;
-  line-height: 1.08;
-  letter-spacing: 0;
-  text-wrap: balance;
-}
-.article-shell {
-  max-width: var(--feature-w);
-  margin: 0 auto;
-  padding: 0 var(--page-x) clamp(84px, 10vw, 132px);
-}
-.content-row {
-  display: grid;
-  grid-template-columns: minmax(270px, 1fr) var(--body-col);
-  column-gap: var(--rail-gap);
-  align-items: start;
-}
-.article-body {
-  display: grid;
-  grid-template-columns: minmax(270px, 1fr) var(--body-col);
-  column-gap: var(--rail-gap);
-  align-items: start;
-  margin-bottom: var(--section-gap);
-}
-.content-row + .content-row {
-  margin-top: var(--section-gap);
-}
-.content-row .empty-rail,
-.article-body .empty-tail,
-.content-row .empty-tail {
-  min-height: 1px;
-}
-.article-body .empty-tail,
-.content-row .empty-tail {
-  display: none;
-}
-.article-body-media {
-  margin: 0;
-  align-self: start;
-  position: sticky;
-  top: calc(var(--nav-h) + clamp(12px, 2vw, 26px));
-}
-.article-body-copy {
-  min-width: 0;
-  justify-self: end;
-  width: min(100%, 520px);
-}
-.section-heading {
-  margin: 0 0 1.15em;
-  max-width: min(100%, 24ch);
-  font-size: clamp(30px, 4vw, 48px);
-  font-weight: 400;
-  line-height: 1.02;
-  letter-spacing: 0;
-  text-wrap: normal;
-}
-.body-block p {
-  margin: 0;
-  font-size: clamp(23px, 1.65vw, 31px);
-  line-height: 1.46;
-}
-.body-block p + p,
-.body-block p + .section-heading {
-  margin-top: 1.95em;
-}
-.pull-quote {
-  margin: 0;
-  max-width: none;
-  justify-self: end;
-  width: min(100%, 520px);
-  font-size: clamp(20px, 2.35vw, 26px);
-  line-height: 1.12;
-  letter-spacing: 0;
-}
-.gallery-reading {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(14px, 1.9vw, 24px);
-  margin: var(--section-gap) 0 0;
-}
-.gallery-reading-media,
-.gallery-reading-feature {
-  margin: 0;
-  aspect-ratio: 15 / 21;
-  overflow: hidden;
-}
-.gallery-reading-side {
-  min-width: 0;
-}
-.article-body-lower {
-  margin-top: clamp(22px, 3vw, 34px);
-  margin-bottom: 0;
-}
-.article-image-placeholder {
-  display: block;
-  width: 100%;
-  border: 1px solid rgba(23, 21, 19, 0.08);
-  background:
-    linear-gradient(180deg, #f7f2e9 0%, #f1e9dd 100%);
-}
-.article-image-placeholder--portrait {
-  aspect-ratio: 3 / 4;
-}
-.article-image-placeholder--spread {
-  aspect-ratio: 16 / 10;
-}
-.gallery-reading .article-image-placeholder {
-  height: 100%;
-}
-.article-image-placeholder img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.article-image-placeholder:has(img[src*="/Jerseys/"]) {
-  border: 0;
-  outline: 0;
-  box-shadow: none;
-  background: transparent;
-}
-.article-image-placeholder:has(img[src*="/Jerseys/"]) img {
-  border: 0;
-  outline: 0;
-  box-shadow: none;
-}
-.article-image-placeholder:has(img[src$="/new2.png"]) img,
-.article-image-placeholder:has(img[src$="/nation-on-their-backs-03.png"]) img {
-  object-fit: contain;
-}
-.more-from-muzej {
-  padding-top: clamp(24px, 4vw, 56px);
-  padding-bottom: clamp(82px, 10vw, 148px);
-  background: transparent;
-  color: var(--foreground);
-}
-.more-from-muzej-frame {
-  display: grid;
-  width: min(calc(100% - (var(--page-x) * 2)), 68rem);
-  max-width: 68rem;
-  margin: 0 auto;
-  padding-left: 0;
-  padding-right: 0;
-  border-top: 2px solid var(--foreground);
-  padding-top: clamp(2.1rem, 4vw, 3.25rem);
-}
-.more-from-muzej-title {
-  max-width: none;
-  margin: 0;
-  font-family: var(--headline-serif);
-  font-size: clamp(1.45rem, 1vw + 1.1rem, 1.9rem);
-  line-height: 1.08;
-  letter-spacing: -0.02em;
-  font-weight: 650;
-  font-optical-sizing: auto;
-}
-.related-list {
-  list-style: none;
-  margin: clamp(1.4rem, 2.5vw, 2rem) 0 0;
-  padding: 0;
-}
-.related-list li {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
-  padding: clamp(1.1rem, 1.8vw, 1.6rem) 0;
-  border-top: 1px solid var(--rule);
-  align-items: start;
-}
-.related-list li:last-child {
-  border-bottom: 1px solid var(--rule);
-}
-.related-list a {
-  font-family: var(--headline-serif);
-  font-size: clamp(1.1rem, 1.3vw + 0.7rem, 1.55rem);
-  font-weight: 400;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
-  color: var(--foreground);
-  font-optical-sizing: auto;
-  border-bottom: none;
-  text-decoration: none;
-  transition: color 180ms ease;
-}
-.related-list a:hover {
-  color: var(--muted);
-}
-.related-list .related-desc {
-  display: block;
-  margin-top: 0.45rem;
-  font-family: var(--sans);
-  font-size: clamp(0.82rem, 0.78rem + 0.18vw, 0.94rem);
-  line-height: 1.72;
-  letter-spacing: 0;
-  color: var(--muted);
-}
-.site-footer {
-  margin-top: 0;
-}
-.muzej-footer {
-  width: 100%;
-  padding: clamp(3.5rem, 7vw, 6rem) var(--page-x);
-  background: #000000;
-  color: #f7f2e9;
-}
-.footer-inner {
-  display: grid;
-  grid-template-columns: minmax(320px, 620px) minmax(180px, 260px);
-  gap: clamp(3rem, 7vw, 6rem);
-  justify-content: center;
-  align-items: start;
-  width: min(100%, 1160px);
-  margin: 0 auto;
-}
-.footer-brand {
-  min-width: 0;
-}
-.footer-wordmark {
-  display: inline-flex;
-  font-family: var(--font-wordmark);
-  font-size: clamp(3.1rem, 5vw, 5rem);
-  font-weight: 400;
-  line-height: 0.92;
-  letter-spacing: 0;
-  font-optical-sizing: auto;
-
-}
-.footer-statement {
-  max-width: 38.75rem;
-  margin: clamp(1.15rem, 1.8vw, 1.45rem) 0 0;
-  font-size: clamp(1rem, 1vw + 0.72rem, 1.15rem);
-  line-height: 1.5;
-  color: rgba(247, 242, 233, 0.86);
-}
-.muzej-footer .footer-links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.25rem;
-  padding-top: 0.28rem;
-}
-.muzej-footer .footer-links a {
-  font-family: var(--sans);
-  font-size: 0.85rem;
-  line-height: 1.2;
-  letter-spacing: 0;
-  font-weight: 500;
-  color: inherit;
-  text-decoration: none;
-  transition: opacity 180ms ease, text-decoration-color 180ms ease;
-}
-.muzej-footer .footer-links a:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.25em;
-  opacity: 0.86;
-}
-
-@media (max-width: 1080px) {
-  .footer-inner {
-    grid-template-columns: 1fr;
-    gap: 2.4rem;
-  }
-
-  .muzej-footer .footer-links {
-    padding-top: 0;
-  }
-}
-
-@media (max-width: 1140px) {
-  .header-frame {
-    grid-template-columns: 1fr;
-    justify-items: start;
-    gap: 0.85rem 1.25rem;
-  }
-  .header-tools {
-    justify-content: flex-start;
-  }
-}
-
-@media (max-width: 980px) {
-  .feature-inner {
-    grid-template-columns: minmax(300px, 0.94fr) minmax(300px, 0.9fr);
-    gap: clamp(24px, 4vw, 46px);
-    align-items: stretch;
-  }
-  .feature-media img {
-    height: clamp(500px, 70vh, 720px);
-  }
-  .feature-copy {
-    min-height: clamp(500px, 70vh, 720px);
-    max-width: 23rem;
-  }
-  .feature-title {
-    font-size: clamp(34px, 4.35vw, 58px);
-  }
-  .feature-deck {
-    margin-top: clamp(30px, 4.2vw, 48px);
-    font-size: clamp(16px, 2.05vw, 20px);
-  }
-  .content-row {
-    grid-template-columns: minmax(210px, 1fr) minmax(0, 660px);
-  }
-  .article-body {
-    grid-template-columns: minmax(210px, 1fr) minmax(0, 660px);
-  }
-}
-
-@media (max-width: 760px) {
-  .header-frame {
-    padding-top: 20px;
-    padding-bottom: 18px;
-  }
-  .brand-mark {
-    font-size: clamp(2.16rem, 10.15vw, 2.87rem);
-
-  }
-}
-
-@media (max-width: 720px) {
-  .feature {
-    padding:
-      4px
-      var(--page-x)
-      48px;
-  }
-  .feature-inner,
-  .article-body,
-  .content-row {
-    grid-template-columns: 1fr;
-    flex-direction: column;
-    text-align: left;
-  }
-  .feature-inner {
-    display: grid;
-    gap: 22px;
-  }
-  .feature-media img {
-    height: clamp(330px, 52vh, 440px);
-  }
-  .article-body {
-    gap: 24px;
-    margin-bottom: 40px;
-  }
-  .gallery-reading {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    margin: 40px 0 0;
-  }
-  .article-body-media {
-    position: static;
-  }
-  .article-body-lower {
-    margin-top: 18px;
-    margin-bottom: 0;
-  }
-  .content-row .empty-tail,
-  .article-body .empty-tail {
-    display: none;
-  }
-  .feature-copy {
-    max-width: none;
-    min-height: auto;
-    padding: 0;
-  }
-  .feature-title {
-    font-size: clamp(30px, 8.2vw, 38px);
-    line-height: 1.03;
-    width: calc(100vw - (var(--page-x) * 2));
-    max-width: 100%;
-    overflow-wrap: break-word;
-  }
-  .feature-byline {
-    margin: 28px 0 0;
-    font-size: 15px;
-  }
-  .feature-deck {
-    margin-top: 34px;
-    font-size: clamp(15px, 3.9vw, 18px);
-    line-height: 1.2;
-  }
-}
-
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: transparent;
-  pointer-events: none;
-}
-
-.site-header .header-frame,
-.site-header .brand-mark,
-.site-header .header-tools {
-  pointer-events: auto;
-}
-
-.site-header .brand-mark {
-  transform: translate3d(0, 0, 0);
-  transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: transform;
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-}
-
-body.muzej-logo-hidden .site-header .brand-mark {
-  transform: translate3d(0, calc(-100% - 42px), 0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .site-header .brand-mark {
-    transition: none;
-    will-change: auto;
-  }
-
-  body.muzej-logo-hidden .site-header .brand-mark {
-    transform: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .site-header { z-index: 2000; }
-  .site-header .header-frame { grid-template-columns: minmax(0, 1fr) auto; align-items: center; justify-items: stretch; gap: 1rem; }
-  .site-header .brand-mark { justify-self: start; min-width: 0; }
-  .site-header .header-tools { justify-self: end; justify-content: flex-end; margin-left: auto; position: relative; z-index: 2002; }
-  .site-header .utility-menu { position: static; }
-  .site-header .utility-trigger { position: relative; z-index: 2003; }
-  .site-header .utility-panel { position: fixed; inset: 0; left: 0; right: 0; top: 0; z-index: 2001; display: grid; align-content: center; width: 100vw; max-width: none; min-width: 0; height: 100vh; height: 100svh; padding: clamp(76px, 18vh, 128px) var(--page-x) 48px; border: 0; background: rgba(255, 255, 255, 0.98); box-shadow: none; overflow-y: auto; transform: none; }
-  .site-header .utility-panel-group { width: min(100%, 22rem); margin: 0 auto; }
-  .site-header .utility-panel-utility { margin-top: 0.8rem; padding-top: 0.85rem; }
-  .site-header .utility-panel .utility-link,
-  .site-header .utility-panel .utility-menu-item { justify-content: center; min-height: 2.75rem; padding: 0.72rem 0; text-align: center; }
-}
-
-
-@media (max-width: 768px) {
-  .site-header .brand-mark {
-    width: 124px;
-    height: 25px;
-  }
-
-  .site-header .brand-mark-image {
-    width: 153.97px;
-    left: -15.13px;
-    top: -83.62px;
-  }
-}
-</style>
-<link rel="stylesheet" href="more-from-muzej.css?v=20261124-editorial">
-<script src="more-from-muzej.js?v=20261124-editorial" defer></script>
-<link rel="stylesheet" href="muzej-footer-logo.css?v=20261124-editorial">
-<style>.shirt-caption{margin:16px 0 0;font:400 12px/1.5 Helvetica,Arial,sans-serif;color:#000}</style><style id="shirt-scale-refinement">
-.article-body-media .article-image-placeholder{aspect-ratio:auto;background:transparent;border:0}
-.article-body-media .article-image-placeholder img{width:100%;height:auto;object-fit:contain}
-.article-shell .article-body + .article-body{margin-top:clamp(48px,5vw,72px)}
-</style><link rel="stylesheet" href="article-opening.css?v=20261101">
-<link rel="stylesheet" href="article-system.css?v=20261101-nation-plantin-4">
-<link rel="stylesheet" href="bylines.css?v=20261107">
-<link rel="stylesheet" href="muzej-header.css?v=20261121-site-nav">
-<script defer src="muzej-header.js?v=20261121-site-nav"></script>
-<style>
-.shirt-slideshow {
-  width:min(1120px,calc(100% - 40px));
-  margin:clamp(12px,2.5svh,30px) auto 0;
-  padding-bottom:clamp(44px,7vw,90px);
-}
-.shirt-slideshow-heading {text-align:center;margin:0 0 clamp(12px,2.6svh,28px)}
-.shirt-slideshow-heading .feature-kicker {margin:0 0 8px}
-.shirt-slideshow-heading h1 {margin:0;font:400 clamp(32px,4.6vw,58px)/1.03 "plantin",Georgia,serif;text-wrap:balance}
-.shirt-layout {display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(26px,6vw,96px)}
-.shirt-visual {min-width:0;text-align:center}
-.shirt-stage {display:grid;grid-template-columns:44px minmax(0,1fr) 44px;align-items:center;gap:clamp(0px,2vw,16px)}
-.shirt-slide {min-width:0;margin:0}
-.shirt-image-frame {display:grid;grid-template: minmax(0,1fr) / minmax(0,1fr);place-items:center;aspect-ratio:6/7}
-.shirt-image-frame img {display:block;width:var(--shirt-scale,100%);max-width:none;height:auto}
-.shirt-slide .shirt-image-frame {width:min(92%,clamp(150px,calc((100svh - 420px) * 6 / 7),390px));margin-inline:auto}
-.shirt-year-text {min-width:0;padding-top:clamp(24px,5vw,70px)}
-.shirt-year[hidden] {display:none}
-.shirt-year + .shirt-year:not([hidden]) {margin-top:32px}
-.shirt-year[hidden] + .shirt-year {margin-top:0}
-.shirt-year h2 {margin:0 0 8px;font:400 clamp(26px,3vw,40px)/1.12 var(--muzej-body-family,"plantin",Georgia,serif)}
-.shirt-year p {margin:0 0 1em;font:400 var(--muzej-body-size,22px)/var(--muzej-body-leading,1.55) var(--muzej-body-family,"plantin",Georgia,serif)}
-.shirt-year .shirt-feature,.shirt-year .shirt-withdrawn {font:400 14px/1.45 var(--sans,Arial,sans-serif)}
-.shirt-year .shirt-feature {margin-bottom:16px}
-.shirt-year .shirt-withdrawn {font-weight:600;color:#762f29}
-.shirt-arrow {width:44px;height:44px;border:1px solid #dedbd7;border-radius:50%;background:#fff;color:#211e1b;font:400 23px/1 Arial,sans-serif;cursor:pointer}
-.shirt-arrow:hover {border-color:#211e1b}
-.shirt-filmstrip {display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(4px,1.2vw,12px);width:min(100%,460px);margin:14px auto 0}
-.shirt-filmstrip a {min-width:0;display:grid;justify-items:center;gap:3px;padding:3px 4px 6px;border-bottom:1px solid #e7e2dc;color:#25211f;font:400 12px/1.25 var(--sans,Arial,sans-serif);text-decoration:none}
-.shirt-filmstrip a[aria-current="true"],.shirt-filmstrip a:hover {border-color:#211e1b}
-.shirt-filmstrip a[aria-current="true"] {font-weight:700}
-.shirt-filmstrip .shirt-image-frame {width:min(90%,67px)}
-.shirt-slideshow :focus-visible {outline:2px solid #211e1b;outline-offset:3px}
-@media(max-width:760px) {
-  .shirt-layout {grid-template-columns:minmax(0,1fr);gap:22px}
-  .shirt-year-text {width:min(100%,460px);margin-inline:auto;padding-top:0}
-  .shirt-stage {width:min(100%,500px);margin-inline:auto}
-  .shirt-slide .shirt-image-frame {width:min(92%,clamp(145px,calc((100svh - 320px) * 6 / 7),330px))}
-}
-@media(max-width:480px) {
-  .shirt-slideshow {width:calc(100% - 30px)}
-  .shirt-stage {gap:2px}
-}
+.shirt-slideshow { width: min(100% - 30px, 760px); margin-inline: auto; padding: 14px 0 clamp(48px, 7vw, 90px); text-align: center; }
+.shirt-slideshow h1 { margin: 0 0 18px; font: 400 clamp(2rem, 5.6vw, 3.625rem)/1.04 "plantin", Georgia, serif; text-wrap: balance; }
+.browse { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 12px; margin-bottom: 12px; font: 13px system-ui, sans-serif; }
+.browse select { color: inherit; background: #fff; border: 1px solid #b8b7b1; border-radius: 0; padding: 6px 24px 6px 8px; font: inherit; }
+.carousel { display: grid; grid-template-columns: 44px minmax(0,1fr) 44px; align-items: center; width: min(100%, clamp(360px, 58svh, 460px)); gap: clamp(5px, 2vw, 16px); margin-inline: auto; }
+figure { margin: 0; min-width: 0; }
+.frame { display: grid; place-items: center; aspect-ratio: 3 / 4; background: #f6f5f2; touch-action: pan-y; }
+.frame img { grid-area: 1/1; width: 90%; height: 88%; min-height: 0; object-fit: contain; mix-blend-mode: multiply; }
+.frame [hidden] { display: none; }
+.frame span { grid-area: 1/1; max-width: 85%; font: 13px system-ui, sans-serif; }
+.shirt-slideshow button { border: 1px solid #b8b7b1; background: #fff; color: inherit; min-height: 44px; padding: 0; font: 22px system-ui, sans-serif; cursor: pointer; }
+.shirt-slideshow button:disabled { opacity: .35; cursor: default; }
+.shirt-slideshow :focus-visible { outline: 2px solid #161614; outline-offset: 3px; }
+figcaption { display: grid; gap: 3px; min-height: 71px; padding-top: 11px; }
+#title { font-size: clamp(1.25rem, 4vw, 1.55rem); }
+#note, #source, #position { font: 12px system-ui, sans-serif; }
+#position { min-width: 62px; font-variant-numeric: tabular-nums; }
+#source { text-underline-offset: 3px; }
 </style>
 </head>
-<body class="kinfolk-article-hero nation-article">
-
+<body>
 <header class="site-header">
   <div class="shell header-frame">
     <a class="brand-mark" href="index.html" aria-label="Muzej home">
@@ -803,82 +48,33 @@ body.muzej-logo-hidden .site-header .brand-mark {
     <div class="muzej-menu-tools"><details class="muzej-menu"><summary aria-label="Navigation menu" aria-controls="muzej-menu-panel" class="muzej-menu-trigger"><span aria-hidden="true" class="muzej-menu-icon"><i></i><i></i><i></i></span></summary><nav aria-label="Main navigation" id="muzej-menu-panel" class="muzej-menu-panel"><a href="./#selected-stories">Selected Stories</a><a href="./#focus">Art &amp; People</a><a href="./#now-playing">Cinema</a><a href="./#traditions">Traditions</a><a href="./#weekend">Weekend Guide</a><a href="./#archive">Archive</a><a href="./shop.html">Shop</a><a href="./about.html">About Muzej</a></nav></details></div>
   </div>
 </header>
-
-<main>
-  <article class="shirt-slideshow" aria-labelledby="shirt-plate-title">
-    <header class="shirt-slideshow-heading">
-      <p class="feature-kicker">Sport | Design</p>
-      <h1 class="muzej-article-title muzej-title-compact" id="shirt-plate-title">The Nation on Their Backs</h1>
-    </header>
-    <div class="shirt-layout">
-      <div class="shirt-visual">
-        <div class="shirt-stage">
-          <button class="shirt-arrow" type="button" data-shirt-step="-1" aria-label="Previous shirt" hidden>‹</button>
-          <figure class="shirt-slide">
-            <div class="shirt-image-frame" style="--shirt-scale:110%"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-1994.webp" alt="Gems · 1994 shirt, front view" width="480" height="560" fetchpriority="high"></div>
-          </figure>
-          <button class="shirt-arrow" type="button" data-shirt-step="1" aria-label="Next shirt" hidden>›</button>
-        </div>
-        <nav class="shirt-filmstrip" aria-label="Choose a shirt">
-          <a href="#shirt-1994" aria-label="Gems · 1994" aria-current="true" data-shirt-scale="110%">
-            <span class="shirt-image-frame" style="--shirt-scale:110%"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-1994.webp" alt="" width="480" height="560" decoding="async"></span>
-            <span>1994</span>
-          </a>
-          <a href="#shirt-1998" aria-label="Puma · 1998" data-shirt-scale="114%">
-            <span class="shirt-image-frame" style="--shirt-scale:114%"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-1998.webp" alt="" width="480" height="560" decoding="async"></span>
-            <span>1998</span>
-          </a>
-          <a href="#shirt-2016" aria-label="JAKO · 2016" data-shirt-scale="89.7%">
-            <span class="shirt-image-frame" style="--shirt-scale:89.7%"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-2016.webp" alt="" width="480" height="560" decoding="async"></span>
-            <span>2016</span>
-          </a>
-          <a href="#shirt-2021" aria-label="JAKO · 2021, Withdrawn before Euro 2020" data-shirt-scale="89.2%">
-            <span class="shirt-image-frame" style="--shirt-scale:89.2%"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-2021.webp" alt="" width="480" height="560" decoding="async"></span>
-            <span>2021</span>
-          </a>
-          <a href="#shirt-2023" aria-label="JAKO · 2023" data-shirt-scale="84.5%">
-            <span class="shirt-image-frame" style="--shirt-scale:84.5%"><img src="./Assets/Wearing%20the%20Nation/Jerseys/shirt-plate-2023.webp" alt="" width="480" height="560" decoding="async"></span>
-            <span>2023</span>
-          </a>
-        </nav>
+<main id="main-content">
+  <article class="shirt-slideshow" aria-labelledby="heading">
+    <h1 id="heading">Macedonia’s Football Shirts</h1>
+      <div class="browse">
+        <label for="jump">Jump to year</label>
+        <select id="jump" disabled><option>1993</option></select>
+        <span id="position">1 / 51</span>
       </div>
-      <div class="shirt-year-text" aria-live="polite">
-        <section class="shirt-year" id="shirt-1994" aria-labelledby="shirt-title-1994">
-          <h2 id="shirt-title-1994">Gems · 1994</h2>
-          <p class="shirt-feature">Polo collar</p>
-          <p>The 1994 Gems shirt fastens like a polo. A yellow collar frames the buttoned opening, and a pattern is woven into the red jacquard below. The design makes its strongest use of yellow at the neck.</p>
-        </section>
-        <section class="shirt-year" id="shirt-1998" aria-labelledby="shirt-title-1998">
-          <h2 id="shirt-title-1998">Puma · 1998</h2>
-          <p class="shirt-feature">Chest band</p>
-          <p>On the 1998 Puma shirt, the broad yellow band runs across the chest and carries onto the sleeves, edged in white. It opens at the center for the maker’s logo. The same colors return in smaller details at the cuffs and along the red collar.</p>
-        </section>
-        <section class="shirt-year" id="shirt-2016" aria-labelledby="shirt-title-2016">
-          <h2 id="shirt-title-2016">JAKO · 2016</h2>
-          <p class="shirt-feature">Rays from the crest</p>
-          <p>On the 2016 shirt, the federation crest sits at the point where yellow rays spread across the red front. The badge is part of the geometry of the shirt.</p>
-          <p>Macedonia wore the design in November 2020 when it qualified for its first European Championship. In <a href="https://www.jako.com/ch-en/about-jako/newsblog/northern-macedonia-goes-to-the-european-championships-1234/" target="_blank" rel="noopener noreferrer">qualification announcement</a>, JAKO tied the sun shirt to the qualifying campaign and announced that the team would have a new kit for the tournament.</p>
-        </section>
-        <section class="shirt-year" id="shirt-2021" aria-labelledby="shirt-title-2021">
-          <h2 id="shirt-title-2021">JAKO · 2021</h2>
-          <p class="shirt-feature">Tone-on-tone lynx</p>
-          <p class="shirt-withdrawn">Withdrawn before Euro 2020</p>
-          <p>The football federation unveiled the burgundy shirt in May 2021 for Macedonia’s debut at the postponed Euro 2020. A geometric lynx was embossed into the front in a shade close to the fabric. Within days the federation withdrew it and said the team would play in the existing red-and-yellow sun shirt.</p>
-          <p><a href="https://macedonianfootball.com/ffm-withdraws-new-kits-under-public-pressure/" target="_blank" rel="noopener noreferrer">Contemporary reporting</a> documented a petition to keep the existing design. Supporters objected to the darker red, the reduced use of yellow, and the replacement of the sun with a lynx. Footballer Natasha Andonova publicly defended the team’s use of red and yellow.</p>
-        </section>
-        <section class="shirt-year" id="shirt-2023" aria-labelledby="shirt-title-2023">
-          <h2 id="shirt-title-2023">JAKO · 2023</h2>
-          <p class="shirt-feature">Sun around the player number</p>
-          <p>The 2016 shirt stayed in use until JAKO introduced its replacement in 2023.</p>
-          <p>On the <a href="https://www.footyheadlines.com/2023/03/north-macedonia-2023-home-kit.html" target="_blank" rel="noopener noreferrer">2023 home shirt</a>, short yellow and orange strokes form the sun around a space reserved for the player’s number. The earlier design radiated from the federation crest. Here, the number occupies the center of the shirt and of the image.</p>
-        </section>
+      <div class="carousel">
+        <button id="previous" type="button" disabled aria-label="Previous shirt">←</button>
+        <figure>
+          <div class="frame" id="frame">
+            <img id="shirt" src="https://www.footballkitarchive.com/cdn/2024/08/23/60xZi2GMa6UOzRZ/north-macedonia-1993-home-kit.jpg" alt="1993 · In-House · Home" fetchpriority="high" draggable="false">
+            <span id="unavailable" hidden>Image unavailable. View the archive record below.</span>
+          </div>
+          <figcaption aria-live="polite">
+            <span id="title">1993 · In-House · Home</span>
+            <span id="note" hidden></span>
+            <a id="source" href="https://www.footballkitarchive.com/north-macedonia-1993-home-kit-286024/">Football Kit Archive</a>
+          </figcaption>
+        </figure>
+        <button id="next" type="button" disabled aria-label="Next shirt">→</button>
       </div>
-    </div>
+      <noscript>Browse the <a href="https://www.footballkitarchive.com/north-macedonia-kits-t1457/?sorting=asc">Football Kit Archive chronology</a>.</noscript>
   </article>
-
   <section class="more-from-muzej" data-more-from-muzej="" aria-labelledby="more-from-muzej-title"></section>
 </main>
-
 <footer class="site-footer muzej-footer">
 <div class="footer-inner">
 <div class="footer-brand">
@@ -892,97 +88,119 @@ body.muzej-logo-hidden .site-header .brand-mark {
 </nav>
 </div>
 </footer>
-
-<script>
-  (function () {
-    var previousY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
-    var ticking = false;
-    var revealZone = 24;
-    var motionThreshold = 4;
-    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-    function updateMuzejLogoVisibility() {
-      var currentY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
-      var delta = currentY - previousY;
-
-      if (reducedMotion.matches) {
-        document.body.classList.remove("muzej-logo-hidden");
-        ticking = false;
-        return;
-      }
-
-      if (currentY <= revealZone) {
-        document.body.classList.remove("muzej-logo-hidden");
-      } else if (delta > motionThreshold) {
-        document.body.classList.add("muzej-logo-hidden");
-      } else if (delta < -motionThreshold) {
-        document.body.classList.remove("muzej-logo-hidden");
-      }
-
-      previousY = currentY;
-      ticking = false;
-    }
-
-    function requestMuzejLogoVisibility() {
-      if (!ticking) {
-        window.requestAnimationFrame(updateMuzejLogoVisibility);
-        ticking = true;
-      }
-    }
-
-    window.addEventListener("scroll", requestMuzejLogoVisibility, { passive: true });
-    window.addEventListener("resize", requestMuzejLogoVisibility);
-
-    if (reducedMotion.addEventListener) {
-      reducedMotion.addEventListener("change", requestMuzejLogoVisibility);
-    } else if (reducedMotion.addListener) {
-      reducedMotion.addListener(requestMuzejLogoVisibility);
-    }
-
-    updateMuzejLogoVisibility();
-  })();
-</script>
-
 <script>
 (() => {
-  const slideshow = document.querySelector('.shirt-slideshow');
-  const previews = [...slideshow.querySelectorAll('.shirt-filmstrip a')];
-  const panels = [...slideshow.querySelectorAll('.shirt-year')];
-  const frame = slideshow.querySelector('.shirt-slide .shirt-image-frame');
-  const photo = frame.querySelector('img');
-  let selected = 0;
+  const shirts = [
+    {"id": "1993-home", "year": "1993", "brand": "In-House", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-1993-home-kit-286024/", "image": "https://www.footballkitarchive.com/cdn/2024/08/23/60xZi2GMa6UOzRZ/north-macedonia-1993-home-kit.jpg", "note": ""},
+    {"id": "1994-home", "year": "1994", "brand": "Gems", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-1994-home-kit-41646/", "image": "https://www.footballkitarchive.com/cdn/2026/11/06/O5oX8PPN3TaRWxz/north-macedonia-1994-home-kit.jpg", "note": ""},
+    {"id": "1994-away", "year": "1994", "brand": "Gems", "variant": "Away", "source": "https://www.footballkitarchive.com/north-macedonia-1994-away-kit-41645/", "image": "https://www.footballkitarchive.com/cdn/2021/09/25/HqhJMh52koOgNDw/north-macedonia-1994-away-kit.jpg", "note": ""},
+    {"id": "1996-home", "year": "1996", "brand": "Gems", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-1996-home-kit-28560/", "image": "https://www.footballkitarchive.com/cdn/2022/11/22/gGoS322SS6j60UF/north-macedonia-1996-home-kit.jpg", "note": ""},
+    {"id": "1996-away", "year": "1996", "brand": "Gems", "variant": "Away", "source": "https://www.footballkitarchive.com/north-macedonia-1996-away-kit-41644/", "image": "https://www.footballkitarchive.com/cdn/2021/09/25/6lOBjS6F5TGDfVx/north-macedonia-1996-away-kit.jpg", "note": ""},
+    {"id": "1998-home", "year": "1998", "brand": "Puma", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-1998-home-kit-41643/", "image": "https://www.footballkitarchive.com/cdn/2026/03/20/scx3ZgGrkUbLMyK/north-macedonia-1998-home-kit.jpg", "note": ""},
+    {"id": "1998-away", "year": "1998", "brand": "Puma", "variant": "Away", "source": "https://www.footballkitarchive.com/north-macedonia-1998-away-kit-41642/", "image": "https://www.footballkitarchive.com/cdn/2025/08/17/4U4Hb4AJScJsFks/north-macedonia-1998-away-kit.jpg", "note": ""},
+    {"id": "2002-home", "year": "2002", "brand": "Puma", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-2002-home-kit-41641/", "image": "https://www.footballkitarchive.com/cdn/2021/09/25/CXH8wKnPtVNklio/north-macedonia-2002-home-kit.jpg", "note": ""},
+    {"id": "2002-away", "year": "2002", "brand": "Puma", "variant": "Away", "source": "https://www.footballkitarchive.com/north-macedonia-2002-away-kit-41638/", "image": "https://www.footballkitarchive.com/cdn/2021/09/25/VKtJoTXrNrIcoC2/north-macedonia-2002-away-kit.jpg", "note": ""},
+    {"id": "2003-home", "year": "2003", "brand": "Puma", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-2003-home-kit-41640/", "image": "https://www.footballkitarchive.com/cdn/2021/09/25/Wy7ZQwBX6D0WLRx/north-macedonia-2003-home-kit.jpg", "note": ""},
+    {"id": "2004-home", "year": "2004", "brand": "Puma", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-2004-home-kit-41639/", "image": "https://www.footballkitarchive.com/cdn/2022/12/06/IQpPd45NMIAgVnA/north-macedonia-2004-home-kit.jpg", "note": ""},
+    {"id": "2004-away", "year": "2004", "brand": "Puma", "variant": "Away", "source": "https://www.footballkitarchive.com/north-macedonia-2004-away-kit-99563/", "image": "https://www.footballkitarchive.com/cdn/2026/10/21/Ul8y48K6wLRxlos/north-macedonia-2004-away-kit.jpg", "note": ""},
+    {"id": "2004-third", "year": "2004", "brand": "Puma", "variant": "Third", "source": "https://www.footballkitarchive.com/north-macedonia-2004-third-kit-99564/", "image": "https://www.footballkitarchive.com/cdn/2022/12/06/PuICpgAdLedMK8O/north-macedonia-2004-third-kit.jpg", "note": ""},
+    {"id": "2006-home", "year": "2006", "brand": "Puma", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-2006-home-kit-41637/", "image": "https://www.footballkitarchive.com/cdn/2022/12/06/rSQ7qeVTUbchfVd/north-macedonia-2006-home-kit.jpg", "note": ""},
+    {"id": "2006-away", "year": "2006", "brand": "Puma", "variant": "Away", "source": "https://www.footballkitarchive.com/north-macedonia-2006-away-kit-41636/", "image": "https://www.footballkitarchive.com/cdn/2022/12/06/LUEFTzmnyT3f1uO/north-macedonia-2006-away-kit.jpg", "note": ""},
+    {"id": "2008-home", "year": "2008", "brand": "Puma", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-2008-home-kit-95752/", "image": "https://www.footballkitarchive.com/cdn/2024/02/24/hZitqqjRohVuaTz/north-macedonia-2008-home-kit.jpg", "note": ""},
+    {"id": "2008-away", "year": "2008", "brand": "Puma", "variant": "Away", "source": "https://www.footballkitarchive.com/north-macedonia-2008-away-kit-41635/", "image": "https://www.footballkitarchive.com/cdn/2022/12/06/C8vbdrj1ahkbLep/north-macedonia-2008-away-kit.jpg", "note": ""},
+    {"id": "2008-third", "year": "2008", "brand": "Puma", "variant": "Third", "source": "https://www.footballkitarchive.com/north-macedonia-2008-third-kit-28559/", "image": "https://www.footballkitarchive.com/cdn/2022/12/06/7CJGQRsjG1GeOQw/north-macedonia-2008-third-kit.jpg", "note": ""},
+    {"id": "2010-home", "year": "2010", "brand": "Puma", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-2010-home-kit-19788/", "image": "https://www.footballkitarchive.com/cdn/2021/02/24/UGc9T06za61V9Cf/north-macedonia-2010-home-kit.jpg", "note": ""},
+    {"id": "2010-away", "year": "2010", "brand": "Puma", "variant": "Away", "source": "https://www.footballkitarchive.com/north-macedonia-2010-away-kit-19827/", "image": "https://www.footballkitarchive.com/cdn/2026/05/03/QfnaknbAJ3D6YCD/north-macedonia-2010-away-kit.jpg", "note": ""},
+    {"id": "2013-home", "year": "2013", "brand": "Puma", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-2013-home-kit-41634/", "image": "https://www.footballkitarchive.com/cdn/2022/12/06/nNoWc9mx0XqFlXz/north-macedonia-2013-home-kit.jpg", "note": ""},
+    {"id": "2013-away", "year": "2013", "brand": "Puma", "variant": "Away", "source": "https://www.footballkitarchive.com/north-macedonia-2013-away-kit-99565/", "image": "https://www.footballkitarchive.com/cdn/2022/12/06/ef8ZFauTYmlUMcz/north-macedonia-2013-away-kit.jpg", "note": ""},
+    {"id": "2014-home", "year": "2014", "brand": "Jako", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-2014-home-kit-23655/", "image": "https://www.footballkitarchive.com/cdn/2021/04/01/RkNDb2V65etjhjr/north-macedonia-2014-home-kit.jpg", "note": ""},
+    {"id": "2014-away", "year": "2014", "brand": "Jako", "variant": "Away", "source": "https://www.footballkitarchive.com/north-macedonia-2014-away-kit-23656/", "image": "https://www.footballkitarchive.com/cdn/2021/04/01/gTUSuthkI9dHtiJ/north-macedonia-2014-away-kit.jpg", "note": ""},
+    {"id": "2014-third", "year": "2014", "brand": "Jako", "variant": "Third", "source": "https://www.footballkitarchive.com/north-macedonia-2014-third-kit-96590/", "image": "https://www.footballkitarchive.com/cdn/2022/12/06/7phucuatasw59zN/north-macedonia-2014-third-kit.jpg", "note": ""},
+    {"id": "2016-home", "year": "2016", "brand": "Jako", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-2016-home-kit-19828/", "image": "https://www.footballkitarchive.com/cdn/2022/11/22/Xl8n0PQA8bNYbhB/north-macedonia-2016-home-kit.jpg", "note": ""},
+    {"id": "2016-away", "year": "2016", "brand": "Jako", "variant": "Away", "source": "https://www.footballkitarchive.com/north-macedonia-2016-away-kit-19829/", "image": "https://www.footballkitarchive.com/cdn/2021/02/25/MtsN3vHgQfTeoIj/north-macedonia-2016-away-kit.jpg", "note": ""},
+    {"id": "2016-gk-1", "year": "2016", "brand": "Jako", "variant": "Goalkeeper 1", "source": "https://www.footballkitarchive.com/north-macedonia-2016-gk-1-kit-254742/", "image": "https://www.footballkitarchive.com/cdn/2024/05/28/FOTMp8PvnUW4TK8/north-macedonia-2016-gk-1-kit.jpg", "note": ""},
+    {"id": "2016-gk-2", "year": "2016", "brand": "Jako", "variant": "Goalkeeper 2", "source": "https://www.footballkitarchive.com/north-macedonia-2016-gk-2-kit-315810/", "image": "https://www.footballkitarchive.com/cdn/2024/11/21/SOYLFMnwmVMsMpr/north-macedonia-2016-gk-2-kit.jpg", "note": ""},
+    {"id": "2018-home", "year": "2018", "brand": "Jako", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-2018-home-kit-28820/", "image": "https://www.footballkitarchive.com/cdn/2023/08/27/twijyBAGxrfEK0r/north-macedonia-2018-home-kit.jpg", "note": ""},
+    {"id": "2018-away", "year": "2018", "brand": "Jako", "variant": "Away", "source": "https://www.footballkitarchive.com/north-macedonia-2018-away-kit-28819/", "image": "https://www.footballkitarchive.com/cdn/2021/05/28/jLjafXFoIylR6ih/north-macedonia-2018-away-kit.jpg", "note": ""},
+    {"id": "2020-home", "year": "2020", "brand": "Jako", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-2020-home-kit-23658/", "image": "https://www.footballkitarchive.com/cdn/2023/08/27/vHExgHZQWg3izDr/north-macedonia-2020-home-kit.jpg", "note": ""},
+    {"id": "2020-away", "year": "2020", "brand": "Jako", "variant": "Away", "source": "https://www.footballkitarchive.com/north-macedonia-2020-away-kit-23657/", "image": "https://www.footballkitarchive.com/cdn/2021/04/01/sAON1Rft4McvJrK/north-macedonia-2020-away-kit.jpg", "note": ""},
+    {"id": "2020-gk-1", "year": "2020", "brand": "Jako", "variant": "Goalkeeper 1", "source": "https://www.footballkitarchive.com/north-macedonia-2020-gk-1-kit-29854/", "image": "https://www.footballkitarchive.com/cdn/2021/06/16/WzxsMoVfDToBJRz/north-macedonia-2020-gk-1-kit.jpg", "note": ""},
+    {"id": "2021-home", "year": "2021", "brand": "Jako", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-2021-home-kit-28816/", "image": "https://www.footballkitarchive.com/cdn/2021/05/28/D95zFPCQGXQyor2/north-macedonia-2021-home-kit.jpg", "note": "Withdrawn before Euro 2020"},
+    {"id": "2021-away", "year": "2021", "brand": "Jako", "variant": "Away", "source": "https://www.footballkitarchive.com/north-macedonia-2021-away-kit-28817/", "image": "https://www.footballkitarchive.com/cdn/2021/05/28/oRKJuH4VaYIdHn2/north-macedonia-2021-away-kit.jpg", "note": "Withdrawn before Euro 2020"},
+    {"id": "2021-third", "year": "2021", "brand": "Jako", "variant": "Third", "source": "https://www.footballkitarchive.com/north-macedonia-2021-third-kit-28818/", "image": "https://www.footballkitarchive.com/cdn/2021/05/28/j4ShCAximY9sQWP/north-macedonia-2021-third-kit.jpg", "note": "Withdrawn before Euro 2020"},
+    {"id": "2021-gk-1", "year": "2021", "brand": "Jako", "variant": "Goalkeeper 1", "source": "https://www.footballkitarchive.com/north-macedonia-2021-gk-1-kit-254741/", "image": "https://www.footballkitarchive.com/cdn/2024/05/28/E0PwqDzeqyeb5LP/north-macedonia-2021-gk-1-kit.jpg", "note": ""},
+    {"id": "2021-gk-2", "year": "2021", "brand": "Jako", "variant": "Goalkeeper 2", "source": "https://www.footballkitarchive.com/north-macedonia-2021-gk-2-kit-315792/", "image": "https://www.footballkitarchive.com/cdn/2024/11/21/cPaQxNWOEfXiqiI/north-macedonia-2021-gk-2-kit.jpg", "note": ""},
+    {"id": "2022-home", "year": "2022", "brand": "Jako", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-2022-home-kit-59427/", "image": "https://www.footballkitarchive.com/cdn/2025/08/20/GBsnDBjbhBPni9g/north-macedonia-2022-home-kit.jpg", "note": ""},
+    {"id": "2022-away", "year": "2022", "brand": "Jako", "variant": "Away", "source": "https://www.footballkitarchive.com/north-macedonia-2022-away-kit-59428/", "image": "https://www.footballkitarchive.com/cdn/2022/03/25/Bm6GvjHbsWMCFv7/north-macedonia-2022-away-kit.jpg", "note": ""},
+    {"id": "2022-gk-1", "year": "2022", "brand": "Jako", "variant": "Goalkeeper 1", "source": "https://www.footballkitarchive.com/north-macedonia-2022-gk-1-kit-315791/", "image": "https://www.footballkitarchive.com/cdn/2024/11/21/VCr7RAfuCAcrMRL/north-macedonia-2022-gk-1-kit.jpg", "note": ""},
+    {"id": "2023-home", "year": "2023", "brand": "Jako", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-2023-home-kit-130932/", "image": "https://www.footballkitarchive.com/cdn/2024/07/11/dzA0eCdErk1VXXP/north-macedonia-2023-home-kit.jpg", "note": ""},
+    {"id": "2023-away", "year": "2023", "brand": "Jako", "variant": "Away", "source": "https://www.footballkitarchive.com/north-macedonia-2023-away-kit-130933/", "image": "https://www.footballkitarchive.com/cdn/2026/03/25/xzlyaHOrlK4Okyt/north-macedonia-2023-away-kit.jpg", "note": ""},
+    {"id": "2023-third", "year": "2023", "brand": "Jako", "variant": "Third", "source": "https://www.footballkitarchive.com/north-macedonia-2023-third-kit-130934/", "image": "https://www.footballkitarchive.com/cdn/2026/03/25/VTDStAOJhxNzwGu/north-macedonia-2023-third-kit.jpg", "note": ""},
+    {"id": "2023-gk-1", "year": "2023", "brand": "Jako", "variant": "Goalkeeper 1", "source": "https://www.footballkitarchive.com/north-macedonia-2023-gk-1-kit-315787/", "image": "https://www.footballkitarchive.com/cdn/2024/11/21/pQxk4b5Mq0etOAL/north-macedonia-2023-gk-1-kit.jpg", "note": ""},
+    {"id": "2023-gk-2", "year": "2023", "brand": "Jako", "variant": "Goalkeeper 2", "source": "https://www.footballkitarchive.com/north-macedonia-2023-gk-2-kit-315788/", "image": "https://www.footballkitarchive.com/cdn/2024/11/21/ZdaBUZIZgwmz5HE/north-macedonia-2023-gk-2-kit.jpg", "note": ""},
+    {"id": "2026-home", "year": "2026", "brand": "adidas", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-2026-home-kit-467625/", "image": "https://www.footballkitarchive.com/cdn/2026/03/20/Kd3ypydNQmH4Kdb/north-macedonia-2026-home-kit.jpg", "note": ""},
+    {"id": "2026-gk-1", "year": "2026", "brand": "adidas", "variant": "Goalkeeper 1", "source": "https://www.footballkitarchive.com/north-macedonia-2026-gk-1-kit-467626/", "image": "https://www.footballkitarchive.com/cdn/2026/03/20/qvSxiEic3gxa8a0/north-macedonia-2026-gk-1-kit.jpg", "note": ""},
+    {"id": "2026-27-home", "year": "2026–27", "brand": "adidas", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-2026-27-home-kit-478822/", "image": "https://www.footballkitarchive.com/cdn/2026/05/02/0g12pIZD2bqKiux/north-macedonia-2026-27-home-kit.jpg", "note": ""},
+    {"id": "2026-27-away", "year": "2026–27", "brand": "adidas", "variant": "Away", "source": "https://www.footballkitarchive.com/north-macedonia-2026-27-away-kit-478823/", "image": "https://www.footballkitarchive.com/cdn/2026/11/05/tiKNjerpaKBaNQt/north-macedonia-2026-27-away-kit.jpg", "note": ""}
+  ];
+  const get = (id) => document.getElementById(id);
+  const image = get('shirt');
+  const year = get('jump');
+  const previous = get('previous');
+  const next = get('next');
+  const frame = get('frame');
+  const legacyLink = /^#shirt-(1994|1998|2016|2021|2023)$/.exec(location.hash);
+  const initialShirt = legacyLink ? '#' + legacyLink[1] + '-home' : location.hash;
+  let index = Math.max(0, shirts.findIndex((shirt) => '#' + shirt.id === initialShirt));
 
-  function show(index) {
-    selected = (index + previews.length) % previews.length;
-    const preview = previews[selected];
-    photo.src = preview.querySelector('img').src;
-    photo.alt = panels[selected].querySelector('h2').textContent + ' shirt, front view';
-    frame.style.setProperty('--shirt-scale', preview.dataset.shirtScale);
-    for (const [index, panel] of panels.entries()) {
-      panel.hidden = index !== selected;
-      if (panel.hidden) previews[index].removeAttribute('aria-current');
-      else previews[index].setAttribute('aria-current', 'true');
-    }
+  year.options.length = 0;
+  year.disabled = false;
+
+  for (const date of new Set(shirts.map((shirt) => shirt.year))) {
+    year.add(new Option(date, date));
   }
 
-  previews.forEach((preview, index) => {
-    preview.addEventListener('click', (event) => {
-      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  function show(position) {
+    index = Math.max(0, Math.min(position, shirts.length - 1));
+    const shirt = shirts[index];
+    const label = [shirt.year, shirt.brand, shirt.variant].join(' · ');
+    image.hidden = false;
+    get('unavailable').hidden = true;
+    image.alt = label;
+    if (image.getAttribute('src') !== shirt.image) image.src = shirt.image;
+    get('title').textContent = label;
+    get('note').textContent = shirt.note;
+    get('note').hidden = !shirt.note;
+    get('source').href = shirt.source;
+    get('position').textContent = (index + 1) + ' / ' + shirts.length;
+    previous.disabled = index === 0;
+    next.disabled = index === shirts.length - 1;
+    year.value = shirt.year;
+    if (location.hash !== '#' + shirt.id) history.replaceState(null, '', '#' + shirt.id);
+  }
+
+  image.addEventListener('error', () => {
+    image.hidden = true;
+    get('unavailable').hidden = false;
+  });
+  previous.addEventListener('click', () => show(index - 1));
+  next.addEventListener('click', () => show(index + 1));
+  year.addEventListener('change', () => show(shirts.findIndex((shirt) => shirt.year === year.value)));
+  document.querySelector('.shirt-slideshow').addEventListener('keydown', (event) => {
+    if (event.target === year || event.altKey || event.ctrlKey || event.metaKey) return;
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
       event.preventDefault();
-      show(index);
-    });
+      show(index + (event.key === 'ArrowLeft' ? -1 : 1));
+    }
   });
-  slideshow.querySelectorAll('[data-shirt-step]').forEach((button) => {
-    button.hidden = false;
-    button.addEventListener('click', () => show(selected + Number(button.dataset.shirtStep)));
+  let startX;
+  frame.addEventListener('touchstart', (event) => { startX = event.changedTouches[0].clientX; }, { passive: true });
+  frame.addEventListener('touchend', (event) => {
+    const distance = event.changedTouches[0].clientX - startX;
+    startX = undefined;
+    if (Math.abs(distance) >= 45) show(index + (distance > 0 ? -1 : 1));
   });
-  slideshow.querySelector('.shirt-visual').addEventListener('keydown', (event) => {
-    if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
-    event.preventDefault();
-    show(selected + (event.key === 'ArrowRight' ? 1 : -1));
-  });
-  const initialIndex = previews.findIndex(preview => preview.hash === location.hash);
-  show(initialIndex === -1 ? 0 : initialIndex);
+  show(index);
 })();
 </script>
 </body>
