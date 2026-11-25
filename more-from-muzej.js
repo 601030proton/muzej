@@ -166,9 +166,9 @@
     {
       slug: "vangel-naumovski",
       href: "vangel-naumovski.html",
-      title: "Vangel Naumovski: Forms of Life",
+      title: "Vangel Naumovski: Painter from Fairy Tales",
       kicker: "Art | Painting",
-      dek: "The Lake, the Body, and the Cosmos.",
+      dek: "Maja Chankulovska-Mihajlovska on the world of Naumovski’s paintings.",
       image: "./Assets/Vangel/Website%20Pics/1.png",
       alt: "Portrait of Vangel Naumovski seated before one of his paintings.",
       position: "center top"
