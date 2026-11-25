@@ -86,14 +86,6 @@
       "image": "./Assets/Discovery/flower-garden-vii.webp"
     },
     {
-      "id": "eight-textile-models",
-      "title": "Eight Models for a Textile",
-      "details": "Gjorgji Jordanov Capev · 1958 · Drawing on paper",
-      "museum": "Museum of Contemporary Art, Skopje",
-      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=20",
-      "image": "./Assets/Discovery/eight-textile-models.webp"
-    },
-    {
       "id": "gjavato",
       "title": "Gjavato",
       "details": "Ivo Veljanov · 1977 · Photograph",
@@ -252,6 +244,149 @@
       "museum": "",
       "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/combet-descombes-pierre-1885-1966/",
       "image": "./Assets/Discovery/veiled-women-solun.webp"
+    },
+    {
+      "id": "motif-from-ohrid-kodzoman",
+      "title": "Motif from Ohrid",
+      "details": "Vangel Kodžoman · 1937 · Watercolor",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=37",
+      "image": "./Assets/Discovery/motif-from-ohrid-kodzoman.webp",
+      "fit": "portrait"
+    },
+    {
+      "id": "old-skopje-hiessleitner",
+      "title": "Old Skopje",
+      "details": "Emmy Singer-Hiessleitner · 1932 · Watercolor",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=12",
+      "image": "./Assets/Discovery/old-skopje-hiessleitner.webp"
+    },
+    {
+      "id": "house-in-kratovo",
+      "title": "House in Kratovo",
+      "details": "Ana Temkova · 1975 · Oil on canvas",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=23",
+      "image": "./Assets/Discovery/house-in-kratovo.webp"
+    },
+    {
+      "id": "from-bregalnica",
+      "title": "From Bregalnica",
+      "details": "Ljubomir Belogaski · 1937 · Watercolor",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=36",
+      "image": "./Assets/Discovery/from-bregalnica.webp"
+    },
+    {
+      "id": "in-bitola-veljanov",
+      "title": "In Bitola",
+      "details": "Ivo Veljanov · 1978 · Photograph",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=43",
+      "image": "./Assets/Discovery/in-bitola-veljanov.webp"
+    },
+    {
+      "id": "galicnik-dolhopf",
+      "title": "Galičnik 1",
+      "details": "Gerd Dolhopf · 1993 · Photograph",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=60",
+      "image": "./Assets/Discovery/galicnik-dolhopf.webp"
+    },
+    {
+      "id": "women-reapers",
+      "title": "Women Reapers",
+      "details": "Dimitar Avramovski Pandilov · 1935 · Oil on canvas",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=34",
+      "image": "./Assets/Discovery/women-reapers.webp",
+      "fit": "portrait"
+    },
+    {
+      "id": "tobaccos-2",
+      "title": "Tobaccos 2",
+      "details": "Risto Lozanoski · 1963 · Oil on canvas",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=33",
+      "image": "./Assets/Discovery/tobaccos-2.webp"
+    },
+    {
+      "id": "tobacco-picker-todorovski",
+      "title": "Tobacco Picker",
+      "details": "Dimo Todorovski · 1942–43 · Patinated plaster",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=57",
+      "image": "./Assets/Discovery/tobacco-picker-todorovski.webp",
+      "fit": "portrait"
+    },
+    {
+      "id": "embroiderer-2",
+      "title": "Embroiderer 2",
+      "details": "Ljubomir Belogaski · 1950",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=56",
+      "image": "./Assets/Discovery/embroiderer-2.webp",
+      "fit": "portrait"
+    },
+    {
+      "id": "macedonian-woman-mazev",
+      "title": "Macedonian Woman",
+      "details": "Petar Mazev · 1968 · Mixed media on canvas",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=27",
+      "image": "./Assets/Discovery/macedonian-woman-mazev.webp",
+      "fit": "portrait"
+    },
+    {
+      "id": "fields-risteski",
+      "title": "Fields",
+      "details": "Aleksandar Risteski · 1968 · Oil on canvas",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=32",
+      "image": "./Assets/Discovery/fields-risteski.webp"
+    },
+    {
+      "id": "polyptych-kondovski",
+      "title": "Polyptych",
+      "details": "Dimitar Kondovski · 1964 · Tempera and oil on panel",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=19",
+      "image": "./Assets/Discovery/polyptych-kondovski.webp",
+      "fit": "portrait"
+    },
+    {
+      "id": "dead-city-of-stobi",
+      "title": "Dead City of Stobi",
+      "details": "Dragutin Avramovski–Gute · 1965 · Mixed media",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=28",
+      "image": "./Assets/Discovery/dead-city-of-stobi.webp"
+    },
+    {
+      "id": "twinkling-landscape-2",
+      "title": "Twinkling Landscape 2",
+      "details": "Dušan Perčinkov · 1972",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=49",
+      "image": "./Assets/Discovery/twinkling-landscape-2.webp",
+      "fit": "portrait"
+    },
+    {
+      "id": "welcome-to-skopje-zernovski",
+      "title": "From Welcome to Skopje",
+      "details": "Velimir Žernovski · 2005",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=9",
+      "image": "./Assets/Discovery/welcome-to-skopje-zernovski.webp"
+    },
+    {
+      "id": "figures-in-a-carriage",
+      "title": "Figures in a Carriage",
+      "details": "Aneta Svetieva · 1982 · Terracotta",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=15",
+      "image": "./Assets/Discovery/figures-in-a-carriage.webp"
     }
   ];
   const target = (attribute) => discovery.querySelector('[data-discovery-' + attribute + ']');
