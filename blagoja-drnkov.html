@@ -100,12 +100,22 @@ html { scroll-padding-top: 105px; }
 }
 .portfolio { max-width:1120px; margin:clamp(62px,8vw,108px) auto 0; }
 .portfolio-row { display:grid; grid-template-columns:minmax(0,1fr); align-items:end; margin:0 auto clamp(65px,10vw,138px); }
-.portfolio-row:last-child { margin-bottom:0; }
-.portfolio-row.offset-pair { grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr); gap:clamp(24px,6vw,80px); align-items:center; }
-.portfolio-row.indented { width:45%; margin-left:12%; }
 .portfolio-row.wide { width:100%; }
-.portfolio-row.portrait-solo { width:min(48%,460px); margin-right:12%; }
-.portfolio-row.closing { width:min(45%,430px); }
+.portfolio-sequence {
+  width: min(100%, 920px);
+  margin-inline: auto;
+  display: grid;
+  gap: clamp(54px, 8vw, 104px);
+}
+.portfolio-pair {
+  display: grid;
+  align-items: start;
+  gap: clamp(18px, 3vw, 42px);
+}
+.portfolio-pair-land { grid-template-columns: minmax(0, .732fr) minmax(0, .709fr); }
+.portfolio-pair-shore { grid-template-columns: minmax(0, 1fr) minmax(0, 1.36fr); }
+.portfolio-pair-portraits { grid-template-columns: minmax(0, .7fr) minmax(0, .75fr); }
+.portfolio-sequence .portfolio-closing { width: min(100%, 430px); justify-self: center; }
 .photo-plate { min-width:0; margin:0; }
 .photo-plate .plate-media { display:block; width:100%; aspect-ratio:auto; }
 .photo-plate .plate-media img { display:block; position:static; width:100%; height:auto; max-height:none; }
@@ -113,14 +123,9 @@ html { scroll-padding-top: 105px; }
 .photo-plate .plate-title,.profile-hero .plate-title { display:inline; font:inherit; margin:0; }
 @media(max-width:760px){
  .portrait-hero.plate-media,.profile-hero figcaption { width:min(100%,410px); }
- .portfolio-row.offset-pair { grid-template-columns:1fr; gap:46px; width:100%; }
- .portfolio-row.offset-pair > :last-child { width:76%; margin-left:auto; }
- .portfolio-row.indented { width:82%; margin-left:0; }
- .portfolio-row.portrait-solo { width:76%; margin-right:0; }
- .portfolio-row.closing { width:84%; }
+  .portfolio-sequence { gap: 48px; }
+  .portfolio-sequence .portfolio-pair { grid-template-columns: minmax(0, 1fr); gap: 24px; }
 }
-
-.portfolio-row.shoreline {align-items:end}
 
 .catalogue-source-row { max-width:1120px; margin:64px auto 0; }
 .catalogue-sources { width:min(100%,520px); margin-left:auto; }
@@ -194,37 +199,33 @@ body main .catalogue-sources > .sources-section.muzej-sources {
           <figcaption><span class="plate-title"><i>Potter’s Hands</i></span>, 1947.</figcaption>
         </figure>
       </div>
-      <div class="portfolio-row indented">
-        <figure class="photo-plate">
-          <a class="plate-media" href="./Assets/Drnkov/catalogue-berba.webp"><img src="./Assets/Drnkov/catalogue-berba.webp" width="880" height="1203" alt="Workers gather cotton by hand in a field." decoding="async" loading="lazy"></a>
-        </figure>
-      </div>
-      <div class="portfolio-row offset-pair shoreline">
-        <figure class="photo-plate">
-          <a class="plate-media" href="./Assets/Drnkov/catalogue-bleach.webp"><img src="./Assets/Drnkov/catalogue-bleach.webp" width="1024" height="1024" alt="A woman holds a length of white cloth by the water." decoding="async" loading="lazy"></a>
-        </figure>
-        <figure class="photo-plate">
-          <a class="plate-media" href="./Assets/Drnkov/catalogue-sea.webp"><img src="./Assets/Drnkov/catalogue-sea.webp" width="1197" height="880" alt="A figure in silhouette stands in shallow water." decoding="async" loading="lazy"></a>
-        </figure>
-      </div>
-      <div class="portfolio-row portrait-solo">
-        <figure class="photo-plate">
-          <a class="plate-media" href="./Assets/Drnkov/catalogue-village.webp" data-source="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf#page=9"><img src="./Assets/Drnkov/catalogue-village.webp" width="864" height="1217" alt="Figures on a village path beneath a flowering tree." decoding="async" loading="lazy"></a>
-        </figure>
-      </div>
-      <div class="portfolio-row indented">
-        <figure class="photo-plate">
-          <a class="plate-media" href="./Assets/Drnkov/catalogue-makedonka.webp" data-source="https://macedonia.kroraina.com/mak_enc/encyclopaedia_macedonica_2.pdf#page=737"><img src="./Assets/Drnkov/catalogue-makedonka.webp" width="864" height="1235" alt="A bride wears a headdress decorated with flowers and coins." decoding="async" loading="lazy"></a>
-          <figcaption><span class="plate-title"><i>The Mirovačka Bride</i></span>, 1963.</figcaption>
-        </figure>
-      </div>
-      <div class="portfolio-row portrait-solo">
-        <figure class="photo-plate">
-          <a class="plate-media" href="./Assets/Drnkov/catalogue-mariovo.webp"><img src="./Assets/Drnkov/catalogue-mariovo.webp" width="846" height="1128" alt="A woman in a red fringed garment and an engraved belt buckle stands against a blue sky." decoding="async" loading="lazy"></a>
-        </figure>
-      </div>
-      <div class="portfolio-row closing">
-        <figure class="photo-plate">
+      <div class="portfolio-sequence">
+        <div class="portfolio-pair portfolio-pair-land">
+          <figure class="photo-plate">
+            <a class="plate-media" href="./Assets/Drnkov/catalogue-berba.webp"><img src="./Assets/Drnkov/catalogue-berba.webp" width="880" height="1203" alt="Workers gather cotton by hand in a field." decoding="async" loading="lazy"></a>
+          </figure>
+          <figure class="photo-plate">
+            <a class="plate-media" href="./Assets/Drnkov/catalogue-village.webp" data-source="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf#page=9"><img src="./Assets/Drnkov/catalogue-village.webp" width="864" height="1217" alt="Figures on a village path beneath a flowering tree." decoding="async" loading="lazy"></a>
+          </figure>
+        </div>
+        <div class="portfolio-pair portfolio-pair-shore">
+          <figure class="photo-plate">
+            <a class="plate-media" href="./Assets/Drnkov/catalogue-bleach.webp"><img src="./Assets/Drnkov/catalogue-bleach.webp" width="1024" height="1024" alt="A woman holds a length of white cloth by the water." decoding="async" loading="lazy"></a>
+          </figure>
+          <figure class="photo-plate">
+            <a class="plate-media" href="./Assets/Drnkov/catalogue-sea.webp"><img src="./Assets/Drnkov/catalogue-sea.webp" width="1197" height="880" alt="A figure in silhouette stands in shallow water." decoding="async" loading="lazy"></a>
+          </figure>
+        </div>
+        <div class="portfolio-pair portfolio-pair-portraits">
+          <figure class="photo-plate">
+            <a class="plate-media" href="./Assets/Drnkov/catalogue-makedonka.webp" data-source="https://macedonia.kroraina.com/mak_enc/encyclopaedia_macedonica_2.pdf#page=737"><img src="./Assets/Drnkov/catalogue-makedonka.webp" width="864" height="1235" alt="A bride wears a headdress decorated with flowers and coins." decoding="async" loading="lazy"></a>
+            <figcaption><span class="plate-title"><i>The Mirovačka Bride</i></span>, 1963.</figcaption>
+          </figure>
+          <figure class="photo-plate">
+            <a class="plate-media" href="./Assets/Drnkov/catalogue-mariovo.webp"><img src="./Assets/Drnkov/catalogue-mariovo.webp" width="846" height="1128" alt="A woman in a red fringed garment and an engraved belt buckle stands against a blue sky." decoding="async" loading="lazy"></a>
+          </figure>
+        </div>
+        <figure class="photo-plate portfolio-closing">
           <a class="plate-media" href="./Assets/Drnkov/catalogue-mak.webp"><img src="./Assets/Drnkov/catalogue-mak.webp" width="816" height="1285" alt="An older man with a white mustache wears a dark fur hat." decoding="async" loading="lazy"></a>
         </figure>
       </div>
