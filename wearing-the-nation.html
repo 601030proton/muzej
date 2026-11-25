@@ -27,7 +27,6 @@ figure { margin: 0; min-width: 0; }
 .frame { position: relative; display: grid; place-items: center; aspect-ratio: 3 / 4; background: #fff; touch-action: pan-y; }
 .frame img { position: absolute; display: block; width: var(--image-width); height: auto; max-width: none; left: var(--image-left); top: var(--image-top); clip-path: var(--image-crop); user-select: none; }
 .frame [hidden] { display: none; }
-.frame span { grid-area: 1 / 1; max-width: 85%; font: 13px system-ui, sans-serif; color: #555; }
 .shirt-slideshow button { align-self: center; transform: translateY(-40px); border: 0; background: transparent; color: inherit; min-height: 44px; padding: 0; font: 24px system-ui, sans-serif; cursor: pointer; }
 .shirt-slideshow button:disabled { opacity: .28; cursor: default; }
 .shirt-slideshow :focus-visible { outline: 2px solid #161614; outline-offset: 3px; }
@@ -36,6 +35,14 @@ figcaption { display: grid; gap: 3px; min-height: 80px; padding-top: 4px; align-
 #note, #source, #position { font: 12px system-ui, sans-serif; }
 #position { min-width: 62px; font-variant-numeric: tabular-nums; }
 #source { text-underline-offset: 3px; }
+.browse a, .shirt-index a { text-underline-offset: 3px; }
+.shirt-index { width: min(100% - 40px, 620px); margin: 0 auto clamp(56px, 8vw, 100px); }
+.shirt-index summary { cursor: pointer; font-size: clamp(1.3rem, 3vw, 1.6rem); }
+.shirt-index ol { margin: 16px 0 0; padding: 0; list-style: none; }
+.shirt-index li { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: 16px; padding: 10px 0; border-bottom: 1px solid #ddd; scroll-margin-top: 90px; }
+.shirt-index li > a { font: 12px system-ui, sans-serif; }
+.shirt-index li small { display: block; margin-top: 2px; font: 12px system-ui, sans-serif; }
+.shirt-index li:target { border-bottom-color: #111; }
 </style>
 </head>
 <body>
@@ -54,14 +61,14 @@ figcaption { display: grid; gap: 3px; min-height: 80px; padding-top: 4px; align-
       <div class="browse">
         <label for="jump">Jump to year</label>
         <select id="jump" disabled><option>1994</option></select>
-        <span id="position">2 / 51</span>
+        <span id="position"></span>
+        <a id="view-index" href="#shirt-index" hidden>All 51 shirts</a>
       </div>
       <div class="carousel">
         <button id="previous" type="button" disabled aria-label="Previous shirt">←</button>
         <figure>
           <div class="frame" id="frame">
             <img id="shirt" src="./Assets/Wearing%20the%20Nation/Jerseys/Archive/1994-home.webp" alt="1994 · Gems · Home" fetchpriority="high" draggable="false" style="--image-width: 102.4%; --image-left: -1.2%; --image-top: 21.1%; --image-crop: inset(7.71% 6.05% 8.06% 6.05%);">
-            <span id="unavailable" hidden></span>
           </div>
           <figcaption aria-live="polite">
             <span id="title">1994 · Gems · Home</span>
@@ -73,6 +80,10 @@ figcaption { display: grid; gap: 3px; min-height: 80px; padding-top: 4px; align-
       </div>
       <noscript>Browse the <a href="https://www.footballkitarchive.com/north-macedonia-kits-t1457/?sorting=asc">Football Kit Archive chronology</a>.</noscript>
   </article>
+  <details class="shirt-index" id="shirt-index" hidden>
+    <summary>All 51 shirts</summary>
+    <ol id="shirt-records"></ol>
+  </details>
   <section class="more-from-muzej" data-more-from-muzej="" aria-labelledby="more-from-muzej-title"></section>
 </main>
 <footer class="site-footer muzej-footer">
@@ -97,11 +108,11 @@ figcaption { display: grid; gap: 3px; min-height: 80px; padding-top: 4px; align-
     {"id": "1996-home", "year": "1996", "brand": "Gems", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-1996-home-kit-28560/", "note": ""},
     {"id": "1996-away", "year": "1996", "brand": "Gems", "variant": "Away", "source": "https://www.footballkitarchive.com/north-macedonia-1996-away-kit-41644/", "note": "", "flatLay": [46, 46, 714, 586, 760, 634]},
     {"id": "1998-home", "year": "1998", "brand": "Puma", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-1998-home-kit-41643/", "note": "", "flatLay": [44, 45, 715, 557, 760, 602]},
-    {"id": "1998-away", "year": "1998", "brand": "Puma", "variant": "Away", "source": "https://www.footballkitarchive.com/north-macedonia-1998-away-kit-41642/", "note": "", "flatLay": [45, 46, 715, 549, 760, 594]},
+    {"id": "1998-away", "year": "1998", "brand": "Puma", "variant": "Away", "source": "https://www.footballkitarchive.com/north-macedonia-1998-away-kit-41642/", "note": "", "flatLay": [7, 5, 1593, 1197, 1600, 1203], "image": "./Assets/Wearing%20the%20Nation/Jerseys/Archive/1998-away-flat-lay.webp", "imageSource": "https://www.classicfootballshirts.com/1998-01-macedonia-match-issue-away-shirt-16-mcda98mw099.html"},
     {"id": "2002-home", "year": "2002", "brand": "Puma", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-2002-home-kit-41641/", "note": ""},
     {"id": "2002-away", "year": "2002", "brand": "Puma", "variant": "Away", "source": "https://www.footballkitarchive.com/north-macedonia-2002-away-kit-41638/", "note": ""},
-    {"id": "2003-home", "year": "2003", "brand": "Puma", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-2003-home-kit-41640/", "note": ""},
-    {"id": "2004-home", "year": "2004", "brand": "Puma", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-2004-home-kit-41639/", "note": "", "flatLay": [44, 44, 716, 610, 760, 654]},
+    {"id": "2003-home", "year": "2003", "brand": "Puma", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-2003-home-kit-41640/", "note": "", "flatLay": [2, 0, 1596, 1195, 1600, 1195], "image": "./Assets/Wearing%20the%20Nation/Jerseys/Archive/2003-home-flat-lay.webp", "imageSource": "https://www.classicfootballshirts.com/2003-north-macedonia-home-shirt-710-s-mcdh0333814.html"},
+    {"id": "2004-home", "year": "2004", "brand": "Puma", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-2004-home-kit-41639/", "note": "", "flatLay": [44, 44, 716, 610, 760, 654], "image": "./Assets/Wearing%20the%20Nation/Jerseys/Archive/2004-home.webp?v=flat-lay-gallery"},
     {"id": "2004-away", "year": "2004", "brand": "Puma", "variant": "Away", "source": "https://www.footballkitarchive.com/north-macedonia-2004-away-kit-99563/", "note": "", "flatLay": [46, 46, 716, 628, 760, 673]},
     {"id": "2004-third", "year": "2004", "brand": "Puma", "variant": "Third", "source": "https://www.footballkitarchive.com/north-macedonia-2004-third-kit-99564/", "note": ""},
     {"id": "2006-home", "year": "2006", "brand": "Puma", "variant": "Home", "source": "https://www.footballkitarchive.com/north-macedonia-2006-home-kit-41637/", "note": "", "flatLay": [44, 45, 715, 624, 760, 667]},
@@ -149,79 +160,113 @@ figcaption { display: grid; gap: 3px; min-height: 80px; padding-top: 4px; align-
   const previous = get('previous');
   const next = get('next');
   const frame = get('frame');
-  const legacyLink = /^#shirt-(1994|1998|2016|2021|2023)$/.exec(location.hash);
-  const initialShirt = legacyLink ? '#' + legacyLink[1] + '-home' : location.hash;
-  const requestedIndex = shirts.findIndex((shirt) => '#' + shirt.id === initialShirt);
-  let index = requestedIndex === -1 ? shirts.findIndex((shirt) => shirt.flatLay) : requestedIndex;
-  const unavailable = get('unavailable');
+  const archive = get('shirt-index');
+  const indexLink = get('view-index');
   const imageDirectory = './Assets/Wearing%20the%20Nation/Jerseys/Archive/';
+  const gallery = shirts.filter((shirt) => shirt.flatLay);
+  const labelFor = (shirt) => [shirt.year, shirt.brand, shirt.variant].join(' · ');
+  let index = 0;
 
-  year.options.length = 0;
-  year.disabled = false;
-
-  for (const date of new Set(shirts.map((shirt) => shirt.year))) {
-    year.add(new Option(date, date));
+  function setYears() {
+    year.options.length = 0;
+    for (const date of new Set(gallery.map((shirt) => shirt.year))) {
+      year.add(new Option(date, date));
+    }
+    year.disabled = gallery.length === 0;
   }
 
-  function showImage(shirt, label) {
-    unavailable.hidden = true;
-    image.hidden = true;
-    if (!shirt.flatLay) {
-      image.removeAttribute('src');
-      unavailable.textContent = 'Flat-lay image unavailable';
-      unavailable.hidden = false;
-      return;
-    }
+  function show(position, updateLink = true) {
+    index = Math.max(0, Math.min(position, gallery.length - 1));
+    const shirt = gallery[index];
+    if (!shirt) return;
 
     const [left, top, right, bottom, width, height] = shirt.flatLay;
-    const shirtWidth = right - left;
-    const shirtHeight = bottom - top;
-    // Scale by garment height within the 3:4 frame, leaving room for wide sleeves.
-    const scale = Math.min(0.70 * 4 / 3 / shirtHeight, 0.90 / shirtWidth);
+    const scale = Math.min(0.70 * 4 / 3 / (bottom - top), 0.90 / (right - left));
     image.style.setProperty('--image-width', (width * scale * 100) + '%');
     image.style.setProperty('--image-left', (0.5 - (left + right) / 2 * scale) * 100 + '%');
     image.style.setProperty('--image-top', (0.5 - (top + bottom) / 2 * scale * 3 / 4) * 100 + '%');
     const insets = [top / height, (width - right) / width, (height - bottom) / height, left / width];
     image.style.setProperty('--image-crop', 'inset(' + insets.map((inset) => inset * 100 + '%').join(' ') + ')');
+    const label = labelFor(shirt);
     image.alt = label;
     const src = shirt.image || imageDirectory + shirt.id + '.webp';
-    if (image.getAttribute('src') !== src) image.src = src;
+    if (image.getAttribute('src') !== src) {
+      image.hidden = true;
+      image.src = src;
+    }
     if (image.complete && image.naturalWidth) image.hidden = false;
-  }
 
-  function show(position) {
-    index = Math.max(0, Math.min(position, shirts.length - 1));
-    const shirt = shirts[index];
-    const label = [shirt.year, shirt.brand, shirt.variant].join(' · ');
-    showImage(shirt, label);
     get('title').textContent = label;
     get('note').textContent = shirt.note;
     get('note').hidden = !shirt.note;
-    get('source').href = shirt.source;
-    get('position').textContent = (index + 1) + ' / ' + shirts.length;
+    get('source').href = shirt.imageSource || shirt.source;
+    get('source').textContent = shirt.imageSource ? 'Classic Football Shirts' : 'Football Kit Archive';
+    get('position').textContent = (index + 1) + ' / ' + gallery.length;
     previous.disabled = index === 0;
-    next.disabled = index === shirts.length - 1;
+    next.disabled = index === gallery.length - 1;
     year.value = shirt.year;
-    if (location.hash !== '#' + shirt.id) history.replaceState(null, '', '#' + shirt.id);
+    if (updateLink && location.hash !== '#' + shirt.id) history.replaceState(null, '', '#' + shirt.id);
   }
+
+  function applyLocation() {
+    const legacy = /^shirt-(1994|1998|2016|2021|2023)$/.exec(location.hash.slice(1));
+    const id = legacy ? legacy[1] + '-home' : location.hash.slice(1);
+    const position = gallery.findIndex((shirt) => shirt.id === id);
+    if (position !== -1) {
+      show(position, Boolean(legacy));
+      return;
+    }
+
+    if (id === archive.id || shirts.some((shirt) => shirt.id === id)) {
+      archive.open = true;
+      const record = get(id);
+      if (record) requestAnimationFrame(() => record.scrollIntoView({ block: 'start' }));
+    }
+  }
+
+  for (const shirt of shirts) {
+    const row = document.createElement('li');
+    const label = document.createElement('span');
+    label.textContent = labelFor(shirt);
+    if (shirt.note) {
+      const note = document.createElement('small');
+      note.textContent = shirt.note;
+      label.append(note);
+    }
+
+    const source = document.createElement('a');
+    source.href = shirt.source;
+    source.textContent = 'Archive record';
+    source.setAttribute('aria-label', 'Archive record for ' + labelFor(shirt));
+    row.append(label, source);
+    row.id = shirt.flatLay ? 'record-' + shirt.id : shirt.id;
+    get('shirt-records').append(row);
+  }
+  archive.hidden = false;
+  indexLink.hidden = false;
+  indexLink.addEventListener('click', () => { archive.open = true; });
+  const slideshow = document.querySelector('.shirt-slideshow');
 
   image.addEventListener('load', () => {
     image.hidden = false;
   });
   image.addEventListener('error', () => {
-    if (!image.hasAttribute('src')) return;
-    image.hidden = true;
-    unavailable.textContent = 'Image unavailable. View the archive record below.';
-    unavailable.hidden = false;
+    if (!image.complete || image.naturalWidth || !gallery.length) return;
+    get('record-' + gallery[index].id).id = gallery[index].id;
+    gallery.splice(index, 1);
+    setYears();
+    if (gallery.length) {
+      show(index);
+    } else {
+      slideshow.hidden = true;
+      archive.open = true;
+    }
   });
-  window.addEventListener('hashchange', () => {
-    const position = shirts.findIndex((shirt) => '#' + shirt.id === location.hash);
-    if (position !== -1) show(position);
-  });
+  window.addEventListener('hashchange', applyLocation);
   previous.addEventListener('click', () => show(index - 1));
   next.addEventListener('click', () => show(index + 1));
-  year.addEventListener('change', () => show(shirts.findIndex((shirt) => shirt.year === year.value)));
-  document.querySelector('.shirt-slideshow').addEventListener('keydown', (event) => {
+  year.addEventListener('change', () => show(gallery.findIndex((shirt) => shirt.year === year.value)));
+  slideshow.addEventListener('keydown', (event) => {
     if (event.target === year || event.altKey || event.ctrlKey || event.metaKey) return;
     if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
       event.preventDefault();
@@ -235,7 +280,9 @@ figcaption { display: grid; gap: 3px; min-height: 80px; padding-top: 4px; align-
     startX = undefined;
     if (Math.abs(distance) >= 45) show(index + (distance > 0 ? -1 : 1));
   });
-  show(index);
+  setYears();
+  show(0, false);
+  applyLocation();
 })();
 </script>
 </body>
