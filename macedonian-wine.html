@@ -73,17 +73,10 @@ h1,h2,h3{font-weight:400}
 .wine-deep-dive p{max-width:580px}
 .wine-deep-dive h2 a{text-decoration-thickness:1px}
 .wine-section.wine-deep-dive{margin-bottom:0}
-body main .sources-section.muzej-sources{margin-inline:0}
-body main .sources-section.muzej-sources .muzej-source-list{margin-block:0}
 .muzej-footer{padding:clamp(3.5rem,7vw,6rem) var(--page-x);background:#000;color:#f7f2e9}
 .footer-inner{display:grid;grid-template-columns:minmax(0,620px) minmax(0,260px);justify-content:center;gap:clamp(24px,6vw,96px);margin:0 auto}
 .footer-statement{margin:20px 0 0;font-size:18px}
 .footer-links{display:flex;flex-direction:column;gap:18px;font:400 13px/1.4 var(--sans)}
-@media(min-width:761px){
- body main .sources-section.muzej-sources{max-width:none}
- body main .sources-section.muzej-sources .muzej-source-list{max-width:none;column-count:2;column-gap:64px;column-fill:balance}
- body main .sources-section.muzej-sources .muzej-source-list>li{break-inside:avoid;page-break-inside:avoid}
-}
 @media(max-width:760px){
  .wine-hero{grid-template-columns:1fr;gap:36px}
  .wine-hero img{width:min(100%,440px);height:auto;aspect-ratio:3/4}

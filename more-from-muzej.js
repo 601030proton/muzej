@@ -166,7 +166,7 @@
     {
       slug: "vangel-naumovski",
       href: "vangel-naumovski.html",
-      title: "Vangel Naumovski: Painter from Fairy Tales",
+      title: "Vangel Naumovski: The Lake and the Cosmos",
       kicker: "Art | Painting",
       dek: "Maja Chankulovska-Mihajlovska on the world of Naumovski’s paintings.",
       image: "./Assets/Vangel/Website%20Pics/1.png",

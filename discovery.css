@@ -1,6 +1,6 @@
 .discovery {
   max-width: 940px;
-  margin: clamp(52px, 7vw, 104px) auto 0;
+  margin: clamp(88px, 11vw, 160px) auto 0;
   text-align: center;
   scroll-margin-top: 86px;
 }
@@ -68,7 +68,6 @@ main .discovery-label .home-story-headline {
 }
 
 @media (min-width: 900px) {
-  .discovery { margin-top: clamp(40px, 4.5vw, 68px); }
   .discovery-stage {
     --compact-padding: 28px;
     /* Match the padding reduction in the stage height to keep its image area the same. */
