@@ -181,6 +181,7 @@ main .focus .home-story-headline {
   .opening-stories {
     width: 100%;
     justify-self: end;
+    padding-left: calc(var(--gap) - 8px);
   }
 }
 
