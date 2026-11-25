@@ -18,25 +18,25 @@
 body { margin: 0; background: #fff; color: #111; font-family: "plantin", Georgia, serif; }
 a { color: inherit; }
 
-.shirt-slideshow { width: min(100% - 48px, 1120px); margin: 0 auto; padding: clamp(20px, 4vw, 58px) 0 clamp(42px, 6vw, 84px); font-family: system-ui, sans-serif; }
-.gallery-header { display: flex; justify-content: space-between; align-items: baseline; gap: 18px 32px; flex-wrap: wrap; }
-.gallery-header h1 { margin: 0; font-size: clamp(2.25rem, 5.65vw, 4.75rem); font-weight: 650; letter-spacing: -.062em; line-height: .99; text-wrap: balance; }
-.gallery-header a { color: #222; font-size: .875rem; line-height: 1.4; text-underline-offset: 4px; white-space: nowrap; }
+.shirt-slideshow { width: min(100% - 48px, 1120px); margin: 0 auto; padding: clamp(20px, 4vw, 58px) 0 clamp(42px, 6vw, 84px); }
+.gallery-header h1 { margin: 0; font-size: clamp(2.25rem, 5.65vw, 4.75rem); font-weight: 400; letter-spacing: -.025em; line-height: 1; text-wrap: balance; }
 .gallery-figure { margin: 0; display: grid; grid-template-columns: minmax(210px, 1fr) minmax(0, 2fr); grid-template-areas: "caption image"; align-items: center; column-gap: clamp(24px, 5vw, 72px); padding: 0 clamp(0px, 3vw, 40px); }
 .frame { grid-area: image; position: relative; margin-inline: auto; width: min(100%, clamp(300px, 46svh, 455px)); aspect-ratio: 3 / 4; background: #fff; touch-action: pan-y; }
 .shirt-image { position: absolute; display: block; width: var(--image-width); height: auto; max-width: none; left: var(--image-left); top: var(--image-top); clip-path: var(--image-crop); user-select: none; }
 .shirt-image[hidden] { display: none; }
 .gallery-caption { grid-area: caption; align-self: center; min-width: 0; }
 .gallery-caption p { margin: 0; }
-#title { font-size: clamp(2.3rem, 5vw, 4.3rem); font-weight: 650; line-height: 1; letter-spacing: -.065em; }
-#maker { margin-top: 10px; font-size: clamp(1.05rem, 2vw, 1.35rem); font-weight: 500; letter-spacing: -.02em; }
+#title { font-size: clamp(2.3rem, 5vw, 4.3rem); font-weight: 400; line-height: 1; letter-spacing: -.025em; }
+#maker { margin-top: 10px; font-size: clamp(1.05rem, 2vw, 1.35rem); font-weight: 400; }
 #note { margin-top: 6px; font-size: .875rem; }
-#source { display: inline-block; margin-top: 18px; color: #454545; font-size: .8125rem; text-underline-offset: 4px; }
 .gallery-nav { display: grid; grid-template-columns: 44px minmax(0, 1fr) 44px; align-items: center; gap: clamp(6px, 1.4vw, 18px); border-top: 1px solid #e7e7e7; padding-top: 17px; }
 .gallery-nav[hidden] { display: none; }
-.gallery-arrow { border: 0; border-radius: 50%; width: 44px; height: 44px; padding: 0 0 3px; background: #f1f1f1; color: #111; cursor: pointer; font: 24px/1 system-ui, sans-serif; }
-.gallery-arrow:disabled { color: #717171; opacity: .5; cursor: default; }
-.gallery-arrow:not(:disabled):hover { background: #e7e7e7; }
+.gallery-arrow { position: relative; display: grid; place-items: center; border: 0; border-radius: 50%; width: 44px; height: 44px; padding: 0; background: transparent; color: #111; cursor: pointer; }
+.gallery-arrow::before { position: absolute; inset: 5px; border: 1px solid #d7d7d7; border-radius: 50%; content: ""; }
+.gallery-arrow::after { width: 6px; height: 6px; border: solid currentColor; border-width: 0 1px 1px 0; transform: translateX(-1px) rotate(-45deg); content: ""; }
+#previous::after { transform: translateX(1px) rotate(135deg); }
+.gallery-arrow:disabled { opacity: .35; cursor: default; }
+.gallery-arrow:not(:disabled):hover::before { border-color: #111; }
 .gallery-thumbs { display: flex; justify-content: safe center; min-width: 0; gap: 8px; padding: 4px; overflow-x: auto; scrollbar-width: thin; }
 .gallery-thumb { display: grid; justify-items: center; flex: 0 0 clamp(65px, 8vw, 91px); padding: 4px 4px 7px; background: #fff; color: #111; border: 1px solid #e2e2e2; border-radius: 12px; font: inherit; cursor: pointer; }
 .gallery-thumb:hover { border-color: #888; }
@@ -44,22 +44,20 @@ a { color: inherit; }
 .gallery-thumb-image { position: relative; display: block; width: 48px; aspect-ratio: 3 / 4; }
 .gallery-thumb-label { font-size: .6875rem; white-space: nowrap; }
 .shirt-slideshow :focus-visible { outline: 2px solid #111; outline-offset: 2px; }
-.shirt-index { width: min(100% - 48px, 1120px); margin: 0 auto clamp(56px, 8vw, 100px); border-block: 1px solid #e7e7e7; padding-block: 20px; font-family: system-ui, sans-serif; }
-.shirt-index summary { cursor: pointer; font-size: clamp(1.125rem, 3vw, 1.375rem); font-weight: 600; }
+.shirt-index { width: min(100% - 48px, 1120px); margin: 0 auto clamp(56px, 8vw, 100px); border-block: 1px solid #e7e7e7; padding-block: 20px; }
+.shirt-index h2 { margin: 0; font-size: clamp(1.125rem, 3vw, 1.375rem); font-weight: 400; }
 .shirt-index ol { margin: 16px 0 0; padding: 0; list-style: none; }
-.shirt-index li { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: 16px; padding: 10px 0; border-bottom: 1px solid #e7e7e7; scroll-margin-top: 90px; }
+.shirt-index li { padding: 10px 0; border-bottom: 1px solid #e7e7e7; scroll-margin-top: 90px; }
 .shirt-index li:last-child { border-bottom: 0; }
-.shirt-index li > a { font-size: .8125rem; text-underline-offset: 4px; }
 .shirt-index li small { display: block; margin-top: 2px; font-size: .75rem; }
 .shirt-index li:target { border-bottom-color: #111; }
 @media (max-width: 660px) {
   .shirt-slideshow, .shirt-index { width: min(100% - 32px, 1120px); }
-  .gallery-header { display: grid; justify-items: center; text-align: center; gap: 12px; }
+  .gallery-header { text-align: center; }
   .gallery-figure { grid-template-columns: minmax(0, 1fr); grid-template-areas: "image" "caption"; padding: 0; text-align: center; }
   .frame { width: min(100%, 285px, 43svh); }
   .gallery-caption { padding-bottom: 24px; }
   #maker { margin-top: 7px; }
-  #source { margin-top: 10px; }
   .gallery-nav { padding-top: 11px; }
 }
 </style>
@@ -78,7 +76,6 @@ a { color: inherit; }
   <article class="shirt-slideshow" aria-labelledby="heading">
     <div class="gallery-header">
       <h1 id="heading">Macedonia’s Football Shirts</h1>
-      <a id="view-index" href="#shirt-index" hidden>All 51 shirts</a>
     </div>
     <figure class="gallery-figure">
       <div class="frame" id="frame">
@@ -88,20 +85,18 @@ a { color: inherit; }
         <p id="title">1994</p>
         <p id="maker">Gems · Home</p>
         <p id="note" hidden></p>
-        <a id="source" href="https://www.footballkitarchive.com/north-macedonia-1994-home-kit-41646/">Football Kit Archive</a>
       </figcaption>
     </figure>
     <nav class="gallery-nav" aria-label="Shirt gallery" hidden>
-      <button class="gallery-arrow" id="previous" type="button" disabled aria-label="Previous shirt">‹</button>
+      <button class="gallery-arrow" id="previous" type="button" disabled aria-label="Previous shirt"></button>
       <div class="gallery-thumbs" id="gallery-thumbs"></div>
-      <button class="gallery-arrow" id="next" type="button" disabled aria-label="Next shirt">›</button>
+      <button class="gallery-arrow" id="next" type="button" disabled aria-label="Next shirt"></button>
     </nav>
-      <noscript>Browse the <a href="https://www.footballkitarchive.com/north-macedonia-kits-t1457/?sorting=asc">Football Kit Archive chronology</a>.</noscript>
   </article>
-  <details class="shirt-index" id="shirt-index" hidden>
-    <summary>All 51 shirts</summary>
+  <section class="shirt-index" id="shirt-index" aria-labelledby="shirt-index-heading" hidden>
+    <h2 id="shirt-index-heading">Shirt index</h2>
     <ol id="shirt-records"></ol>
-  </details>
+  </section>
   <section class="more-from-muzej" data-more-from-muzej="" aria-labelledby="more-from-muzej-title"></section>
 </main>
 <footer class="site-footer muzej-footer">
@@ -179,7 +174,6 @@ a { color: inherit; }
   const next = get('next');
   const frame = get('frame');
   const archive = get('shirt-index');
-  const indexLink = get('view-index');
   const imageDirectory = './Assets/Wearing%20the%20Nation/Jerseys/Archive/';
   const gallery = shirts.filter((shirt) => shirt.flatLay);
   const labelFor = (shirt) => [shirt.year, shirt.brand, shirt.variant].join(' · ');
@@ -225,6 +219,7 @@ a { color: inherit; }
     index = Math.max(0, Math.min(position, gallery.length - 1));
     const shirt = gallery[index];
     if (!shirt) return;
+    archive.hidden = true;
     positionImage(image, shirt);
     const label = labelFor(shirt);
     image.alt = label;
@@ -239,8 +234,6 @@ a { color: inherit; }
     get('maker').textContent = shirt.brand + ' · ' + shirt.variant;
     get('note').textContent = shirt.note;
     get('note').hidden = !shirt.note;
-    get('source').href = shirt.imageSource || shirt.source;
-    get('source').textContent = shirt.imageSource ? 'Classic Football Shirts' : 'Football Kit Archive';
     for (const [id, thumbnail] of thumbnails) {
       if (id === shirt.id) thumbnail.setAttribute('aria-current', 'true');
       else thumbnail.removeAttribute('aria-current');
@@ -265,7 +258,7 @@ a { color: inherit; }
     }
 
     if (id === archive.id || shirts.some((shirt) => shirt.id === id)) {
-      archive.open = true;
+      archive.hidden = false;
       const record = get(id);
       if (record) requestAnimationFrame(() => record.scrollIntoView({ block: 'start' }));
     }
@@ -281,17 +274,10 @@ a { color: inherit; }
       label.append(note);
     }
 
-    const source = document.createElement('a');
-    source.href = shirt.source;
-    source.textContent = 'Archive record';
-    source.setAttribute('aria-label', 'Archive record for ' + labelFor(shirt));
-    row.append(label, source);
+    row.append(label);
     row.id = shirt.flatLay ? 'record-' + shirt.id : shirt.id;
     get('shirt-records').append(row);
   }
-  archive.hidden = false;
-  indexLink.hidden = false;
-  indexLink.addEventListener('click', () => { archive.open = true; });
   const slideshow = document.querySelector('.shirt-slideshow');
 
   image.addEventListener('load', () => {
@@ -308,7 +294,7 @@ a { color: inherit; }
       show(index);
     } else {
       slideshow.hidden = true;
-      archive.open = true;
+      archive.hidden = false;
     }
   });
   window.addEventListener('hashchange', applyLocation);
