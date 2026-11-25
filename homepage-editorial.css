@@ -343,6 +343,10 @@ main .focus .home-story-headline {
   object-fit: contain;
 }
 
+#focus #borka-avramova-focus .focus-media img {
+  object-fit: cover;
+}
+
 #focus .focus-copy {
   margin-top: clamp(16px, 2.3vw, 28px);
 }

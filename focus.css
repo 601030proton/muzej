@@ -231,7 +231,7 @@ ol.work-credit-list{list-style:none;padding:0;margin:20px 0 0}
   min-height: 0;
 }
 .work-gallery--viewport-fit .work-image-button {
-  width: min(100%, 1050px, max(220px, calc((100svh - var(--work-gallery-top-space, 322px)) * 1.5)));
+  width: min(100%, 1050px, max(var(--work-gallery-min-width, 220px), calc((100svh - var(--work-gallery-top-space, 322px)) * 1.5)));
   height: auto;
   aspect-ratio: 3 / 2;
 }

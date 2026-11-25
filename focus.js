@@ -12,6 +12,30 @@
   var viewer = document.querySelector('.work-lightbox');
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
   var current = 0, playing = !reduce.matches, inView = true, timer = null, transition = 0, revision = 0;
+  if (gallery.hasAttribute('data-fit-controls')) {
+    var stage = gallery.querySelector('.work-stage');
+    var caption = gallery.querySelector('.work-caption-row');
+    var filmstrip = gallery.querySelector('.work-filmstrip');
+    var heading = document.querySelector('.work-heading');
+    var siteHeader = document.querySelector('.site-header');
+
+    function fitControls() {
+      var stageBounds = stage.getBoundingClientRect();
+      var stageTop = stageBounds.top + window.scrollY;
+      var controlsHeight = filmstrip.getBoundingClientRect().bottom - stageBounds.bottom;
+      gallery.style.setProperty('--work-gallery-top-space', Math.ceil(stageTop + controlsHeight + 16) + 'px');
+    }
+
+    fitControls();
+    window.addEventListener('resize', fitControls);
+    if ('ResizeObserver' in window) {
+      var resizeObserver = new ResizeObserver(fitControls);
+      [siteHeader, heading, caption, filmstrip].forEach(function (element) {
+        resizeObserver.observe(element);
+      });
+    }
+  }
+
   function number(n) { return String(n).padStart(2, '0'); }
   function label(w) { return w.year ? w.title + ', ' + w.year : w.title; }
   function preload(n) { var next = new Image(); next.src = works[(n + works.length) % works.length].src; }
