@@ -387,6 +387,172 @@
       "museum": "Museum of Contemporary Art, Skopje",
       "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=15",
       "image": "./Assets/Discovery/figures-in-a-carriage.webp"
+    },
+    {
+      "id": "neighborhood-in-skopje-svecnjak",
+      "title": "Neighborhood in Skopje",
+      "details": "Vilim Svečnjak · 1948 · Oil on canvas",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=13",
+      "image": "./Assets/Discovery/neighborhood-in-skopje-svecnjak.webp"
+    },
+    {
+      "id": "landscape-cvetkov",
+      "title": "Landscape",
+      "details": "Venko Cvetkov · 1990–91 · Oil on canvas",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=35",
+      "image": "./Assets/Discovery/landscape-cvetkov.webp"
+    },
+    {
+      "id": "photography-761",
+      "title": "Photography 761",
+      "details": "Marin Dimeski–Dimes · 1976 · Photograph",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=50",
+      "image": "./Assets/Discovery/photography-761.webp"
+    },
+    {
+      "id": "horseman-janevski",
+      "title": "Horseman",
+      "details": "Živko Janevski · 1967 · Photograph",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=64",
+      "image": "./Assets/Discovery/horseman-janevski.webp",
+      "fit": "portrait"
+    },
+    {
+      "id": "man-selling-a-rooster",
+      "title": "Man Selling a Rooster",
+      "details": "Lazar Ličenoski · 1935 · Oil on canvas",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=55",
+      "image": "./Assets/Discovery/man-selling-a-rooster.webp",
+      "fit": "portrait"
+    },
+    {
+      "id": "monastery-landscape-mazev",
+      "title": "Monastery Landscape",
+      "details": "Petar Mazev · 1965 · Mixed media on board",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=29",
+      "image": "./Assets/Discovery/monastery-landscape-mazev.webp"
+    },
+    {
+      "id": "archangel-gabriel-damjanovski",
+      "title": "Archangel Gabriel",
+      "details": "Božidar Damjanovski · 1981 · Mixed media on canvas",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=16",
+      "image": "./Assets/Discovery/archangel-gabriel-damjanovski.webp",
+      "fit": "portrait"
+    },
+    {
+      "id": "ohrid-angel-8",
+      "title": "Ohrid Angel 8",
+      "details": "Simon Šemov · 1990 · Drawing",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=17",
+      "image": "./Assets/Discovery/ohrid-angel-8.webp"
+    },
+    {
+      "id": "amphora-7",
+      "title": "Amphora 7",
+      "details": "Dime Šumka · 1959–63 · Concrete and cement",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=14",
+      "image": "./Assets/Discovery/amphora-7.webp",
+      "fit": "portrait"
+    },
+    {
+      "id": "musandra-1",
+      "title": "Musandra 1",
+      "details": "Tomo Šijak · 1967 · Object",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=2",
+      "image": "./Assets/Discovery/musandra-1.webp",
+      "fit": "portrait"
+    },
+    {
+      "id": "musandra-with-colliding-waves",
+      "title": "Musandra with Colliding Waves",
+      "details": "Tomo Šijak · 1968 · Painting-object",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=24",
+      "image": "./Assets/Discovery/musandra-with-colliding-waves.webp",
+      "fit": "portrait"
+    },
+    {
+      "id": "enclosed-porch-2",
+      "title": "Enclosed Porch 2",
+      "details": "Jovan Šumkovski · 1989–90 · Painting-object",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=25",
+      "image": "./Assets/Discovery/enclosed-porch-2.webp"
+    },
+    {
+      "id": "biljana-was-bleaching-linen",
+      "title": "Biljana Was Bleaching Linen",
+      "details": "Ismet Ramićević · 2001 · Laminated newspapers",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=70",
+      "image": "./Assets/Discovery/biljana-was-bleaching-linen.webp"
+    },
+    {
+      "id": "craftsmen-janevski",
+      "title": "Craftsmen",
+      "details": "Živko Janevski · Photograph",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=64",
+      "image": "./Assets/Discovery/craftsmen-janevski.webp"
+    },
+    {
+      "id": "five-drops-dream-11",
+      "title": "Five Drops Dream 11",
+      "details": "Milčo Mančevski · 1999–2010 · Photographs",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=78",
+      "image": "./Assets/Discovery/five-drops-dream-11.webp"
+    },
+    {
+      "id": "blvd-hristina-ivanoska",
+      "title": "Blvd Hristina Ivanoska – The Beast",
+      "details": "Hristina Ivanoska · 2001",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=74",
+      "image": "./Assets/Discovery/blvd-hristina-ivanoska.webp"
+    },
+    {
+      "id": "integralism-3",
+      "title": "Integralism 3",
+      "details": "Žaneta Vangeli · 2002 · Digital prints",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=79",
+      "image": "./Assets/Discovery/integralism-3.webp"
+    },
+    {
+      "id": "april-1-no-1",
+      "title": "April 1 No. 1",
+      "details": "Ivan Blažev · 2008 · Digital photograph",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=65",
+      "image": "./Assets/Discovery/april-1-no-1.webp"
+    },
+    {
+      "id": "interlocator-calovski",
+      "title": "Interlocator",
+      "details": "Jane Čalovski · 2011 · Installation",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=81",
+      "image": "./Assets/Discovery/interlocator-calovski.webp"
+    },
+    {
+      "id": "galicnik-2-dolhopf",
+      "title": "Galičnik 2",
+      "details": "Gerd Dolhopf · 1993 · Photograph",
+      "museum": "Museum of Contemporary Art, Skopje",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=60",
+      "image": "./Assets/Discovery/galicnik-2-dolhopf.webp"
     }
   ];
   const target = (attribute) => discovery.querySelector('[data-discovery-' + attribute + ']');
