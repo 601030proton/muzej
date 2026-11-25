@@ -188,7 +188,7 @@
       href: "wearing-the-nation.html",
       title: "Macedonia’s Football Shirts",
       kicker: "Sport | Design",
-      dek: "National team shirts from 1993 to 2026–27.",
+      dek: "Selected national team shirts, 1994–2010.",
       image: "./Assets/Wearing%20the%20Nation/e9d02185-3178-4851-b0b0-ef36d7436568.png",
       alt: "A collection of Macedonian football shirts in red, yellow, and white.",
       position: "center center"
