@@ -1,0 +1,17 @@
+.prespa-opening-media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+}
+
+@media (min-width: 791px) and (max-height: 1180px) {
+  .prespa-guide-layout .prespa-opening-media {
+    min-height: calc(100svh - 145px);
+  }
+}
+
+@media (max-width: 790px) and (height < calc(133.34vw + 290px)) {
+  .prespa-guide-layout .prespa-opening-media {
+    min-height: calc(100svh - 95px);
+  }
+}
