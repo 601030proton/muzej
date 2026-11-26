@@ -15,3 +15,7 @@
 #prespa-guide #pelister .place-image img {
   object-fit: contain;
 }
+
+#prespa-guide .prespa-opening > img {
+  aspect-ratio: 3 / 4;
+}
