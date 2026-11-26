@@ -17,5 +17,12 @@
 }
 
 #prespa-guide .prespa-opening > img {
+  width: min(100%, max(165px, calc((100svh - 305px) * .75)));
   aspect-ratio: 3 / 4;
+}
+
+@media (max-width: 790px) {
+  #prespa-guide .prespa-opening > img {
+    width: min(100%, max(145px, calc((100svh - 235px) * .75)));
+  }
 }
