@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Blagoja Drnkov: More Than Words | Muzej Catalogue</title>
 <meta name="description" content="Dimitar Kondovski’s 1974 exhibition essay and ten photographs by Blagoja Drnkov.">
-<link rel="stylesheet" href="editorial-sources.css?v=20261124-editorial">
 <link rel="stylesheet" href="muzej-footer-logo.css?v=20261124-editorial">
 <link rel="stylesheet" href="fonts.css?v=20261124-editorial">
 <link rel="stylesheet" href="muzej-header.css?v=20261121-site-nav">
@@ -93,6 +92,7 @@ html { scroll-padding-top: 105px; }
 .profile-prose { min-width: 0; font: 400 clamp(21px, 1.65vw, 25px)/1.46 var(--muzej-body-family); }
 .profile-section-title { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .profile-prose p { margin: 0 0 1.25em; }
+.profile-prose p:last-child { margin-bottom: 0; }
 @media (max-width: 760px) {
   .profile-prose { font-size: 22px; }
   .profile-rail { position: static; width: 100%; }
@@ -126,27 +126,8 @@ html { scroll-padding-top: 105px; }
   .portfolio-sequence .portfolio-pair { grid-template-columns: minmax(0, 1fr); gap: 24px; }
 }
 
-.catalogue-source-row { max-width:1120px; margin:64px auto 0; }
-.catalogue-sources { width:min(100%,520px); margin-left:auto; }
-@media (max-width: 760px) {
-  .catalogue-sources { margin-left:0; }
-}
 .site-footer.muzej-footer .footer-links a { color:inherit; }
 .site-footer.muzej-footer .footer-brand-mark-image { max-width:none; }
-.catalogue-sources > summary {
-  border-top:1px solid #11110f;
-  border-bottom:1px solid #ddd;
-  padding:14px 0;
-  cursor:pointer;
-  font:400 20px/1.2 var(--muzej-body-family);
-}
-.catalogue-sources > summary::marker { font-size:.7em; }
-.catalogue-sources > summary:focus-visible { outline:1px solid currentColor; outline-offset:4px; }
-body main .catalogue-sources > .sources-section.muzej-sources {
-  margin-top:0;
-  padding:8px 0 0;
-  border-top:0;
-}
 </style>
 <script defer src="muzej-header.js?v=20261121-site-nav"></script>
 <link rel="stylesheet" href="more-from-muzej.css?v=20261124-editorial">
@@ -232,21 +213,7 @@ body main .catalogue-sources > .sources-section.muzej-sources {
         </div>
       </div>
     </section>
-    <div class="catalogue-source-row">
-      <details class="catalogue-sources">
-        <summary>Sources</summary>
-        <div class="sources-section muzej-sources">
-          <p><a href="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf#page=20">Museum of Contemporary Art, Skopje. <i>Blagoja Drnkov</i>, 1974.</a> The catalogue includes Dimitar Kondovski’s essay and the village photograph on <a href="https://arhiva.zaum.mk/wp-content/uploads/2018/04/1974_05_00_Blagoja_Drnkov.pdf#page=9">PDF page 9</a>.</p>
-          <p><a href="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf">Art Gallery, Skopje. <i>Blagoja Drnkov: 50 Years of Creativity</i>, 1984.</a> The catalogue reproduces <a href="https://arhiva.zaum.mk/wp-content/uploads/2019/03/1984_04_06_Blagoja_Drnkov.pdf#page=9"><i>Potter’s Hands</i></a>.</p>
-          <p><a href="https://www.academia.edu/101167484/Povekje_od_Zborovi_More_than_words_Blagoja_Drnkov_in_the_ethnological_museum_archive">Jovan Šurbanoski. <i>More Than Words</i>, 2022.</a> Catalogue on Drnkov’s photographs in the archive of the Ethnological Museum.</p>
-          <p><a href="https://kinoteka.mk/en/lichnosti/drnkov-blagoja/">Cinematheque of Macedonia. Blagoja Drnkov.</a> Biography and filmography.</p>
-          <p><a href="https://macedonia.kroraina.com/mak_enc/encyclopaedia_macedonica_2.pdf#page=737">Macedonian Academy of Sciences and Arts. <i>Macedonian Encyclopedia</i>, vol. 2, 2009, p. 1529.</a> Reproduces <i>The Mirovačka Bride</i>.</p>
-          <p>Source credits are unconfirmed for the opening portrait, the cotton harvest, both shoreline photographs, the Mariovo portrait, the portrait of the older man, and the shepherd photograph.</p>
-        </div>
-      </details>
-    </div>
-
-    </article>
+  </article>
   <section class="more-from-muzej" data-more-from-muzej="" aria-labelledby="more-from-muzej-title"></section>
 </main>
 <footer class="site-footer muzej-footer">
