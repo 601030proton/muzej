@@ -349,7 +349,13 @@ main {
   position: sticky;
   top: calc(var(--nav-h) + 30px);
 }
-.jump-nav-label,
+.jump-nav .jump-nav-label {
+  margin: 0 0 9px;
+  color: var(--ink);
+  font: 500 10px/1.4 var(--sans);
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
 .section-label {
   margin: 0 0 16px;
   color: var(--ink-soft);
@@ -363,17 +369,20 @@ main {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1px;
 }
-.jump-nav-list a {
-  font-family: var(--display);
-  font-size: clamp(20px, 1.9vw, 26px);
-  line-height: 1.06;
+.jump-nav .jump-nav-list a {
+  display: inline-block;
+  padding: 4px 0;
+  color: var(--ink);
+  font: 400 14px/1.35 var(--sans);
+  letter-spacing: 0;
   text-decoration: none;
 }
-.jump-nav-list a:hover,
-.jump-nav-list a:focus-visible {
-  opacity: 0.56;
+.jump-nav .jump-nav-list a:hover,
+.jump-nav .jump-nav-list a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: .2em;
 }
 
 .intro-meta {
@@ -841,14 +850,18 @@ main {
   }
   .jump-nav {
     position: static;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 2px 14px;
+  }
+  .jump-nav .jump-nav-label {
+    margin: 0;
   }
   .jump-nav-list {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 12px 18px;
-  }
-  .jump-nav-list a {
-    font-size: 18px;
+    gap: 0 16px;
   }
   .section-note {
     max-width: 28rem;
@@ -938,9 +951,6 @@ main {
   .lede {
     font-size: clamp(28px, 9vw, 40px);
     max-width: none;
-  }
-  .jump-nav-list a {
-    font-size: 16px;
   }
   .recommendation-row-title,
   .itinerary-item-title,
@@ -1510,12 +1520,12 @@ body.muzej-logo-hidden .site-header .brand-mark {
     <section class="section-frame" id="overview">
       <aside class="section-rail">
         <nav class="jump-nav" aria-label="Jump to sections">
-          <p class="jump-nav-label">Jump to:</p>
+          <p class="jump-nav-label">Jump to</p>
           <ul class="jump-nav-list">
             <li><a href="#overview">The place</a></li>
             <li><a href="#itinerary">The weekend</a></li>
-          <li><a href="#recommendations">Plan the weekend</a></li>
-            </ul>
+            <li><a href="#recommendations">Plan the weekend</a></li>
+          </ul>
         </nav>
       </aside>
 

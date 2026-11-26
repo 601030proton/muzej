@@ -350,7 +350,13 @@ main {
   position: sticky;
   top: calc(var(--nav-h) + 30px);
 }
-.jump-nav-label,
+.jump-nav .jump-nav-label {
+  margin: 0 0 9px;
+  color: var(--ink);
+  font: 500 10px/1.4 var(--sans);
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
 .section-label {
   margin: 0 0 16px;
   color: var(--ink-soft);
@@ -364,17 +370,20 @@ main {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1px;
 }
-.jump-nav-list a {
-  font-family: var(--display);
-  font-size: clamp(20px, 1.9vw, 26px);
-  line-height: 1.06;
+.jump-nav .jump-nav-list a {
+  display: inline-block;
+  padding: 4px 0;
+  color: var(--ink);
+  font: 400 14px/1.35 var(--sans);
+  letter-spacing: 0;
   text-decoration: none;
 }
-.jump-nav-list a:hover,
-.jump-nav-list a:focus-visible {
-  opacity: 0.56;
+.jump-nav .jump-nav-list a:hover,
+.jump-nav .jump-nav-list a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: .2em;
 }
 
 .intro-meta {
@@ -842,14 +851,18 @@ main {
   }
   .jump-nav {
     position: static;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 2px 14px;
+  }
+  .jump-nav .jump-nav-label {
+    margin: 0;
   }
   .jump-nav-list {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 12px 18px;
-  }
-  .jump-nav-list a {
-    font-size: 18px;
+    gap: 0 16px;
   }
   .section-note {
     max-width: 28rem;
@@ -939,9 +952,6 @@ main {
   .lede {
     font-size: clamp(28px, 9vw, 40px);
     max-width: none;
-  }
-  .jump-nav-list a {
-    font-size: 16px;
   }
   .recommendation-row-title,
   .itinerary-item-title,
@@ -1551,7 +1561,12 @@ body.muzej-logo-hidden .site-header .brand-mark {
 <section class="weekender-hero" aria-labelledby="weekenderTitle"><div class="weekender-hero-media" aria-hidden="true"><video autoplay muted loop playsinline preload="auto" poster="./Assets/Krusevo/krusevo-hero-poster.jpg"><source src="./Assets/Krusevo/krusevo-hero.mp4" type="video/mp4"></source></video></div><div class="weekender-hero-overlay" aria-hidden="true"></div><div class="weekender-hero-inner"><div class="weekender-hero-copy"><p class="weekender-kicker">Weekend Guide</p><span class="weekender-rule" aria-hidden="true"></span><h1 class="muzej-article-title weekender-title" id="weekenderTitle">Kruševo</h1><p class="weekender-dek">Martinoski in the Tahu house, lunch at Šape, and a drink overlooking town.</p></div></div></section>
 
 <article class="weekender-shell">
-<section class="section-frame" id="overview"><aside class="section-rail"><nav aria-label="Jump to sections" class="jump-nav"><p class="jump-nav-label">Jump to:</p><ul class="jump-nav-list"><li><a href="#overview">The place</a></li><li><a href="#itinerary">The weekend</a></li><li><a href="#recommendations">Plan the weekend</a></li></ul></nav></aside><div class="section-main"><div class="intro-meta"><span></span></div><p class="section-label">The place</p><div class="body-copy"><p>Get to Kruševo on Friday in time for a drink at LOK. On Saturday, walk the old town, eat at the original Šape in the bazaar, and see Nikola Martinoski’s paintings in the Tahu family house. Pick up walnut lokum at Tagas-Balkan before a swim and dinner at Panorama.</p><p>Save Sunday morning for the Ilinden Monument and the Toše Proeski Memorial House. They’re both on Gumenje and worth seeing together for the architecture alone.</p></div><div class="krusevo-overview-gallery"><figure class="support-figure krusevo-overview-photo"><img alt="Kruševo rooftops at sunset" class="overview-image" decoding="async" height="1440" loading="lazy" src="./Assets/Krusevo/town-sunset.webp" width="1080"><figcaption class="itinerary-caption">Kruševo</figcaption></figure><figure class="support-figure krusevo-overview-photo"><div class="vila-gora-crop"><img alt="Painted façades and Vila Gora in Kruševo’s old town" class="overview-image" decoding="async" height="1440" loading="lazy" src="./Assets/Krusevo/old-town-vilagora.webp" width="1080"></div><figcaption class="itinerary-caption">Vila Gora · Wander-Lush</figcaption></figure></div></div></section>
+<section class="section-frame" id="overview"><aside class="section-rail"><nav aria-label="Jump to sections" class="jump-nav"><p class="jump-nav-label">Jump to</p>
+          <ul class="jump-nav-list">
+            <li><a href="#overview">The place</a></li>
+            <li><a href="#itinerary">The weekend</a></li>
+            <li><a href="#recommendations">Plan the weekend</a></li>
+          </ul></nav></aside><div class="section-main"><div class="intro-meta"><span></span></div><p class="section-label">The place</p><div class="body-copy"><p>Get to Kruševo on Friday in time for a drink at LOK. On Saturday, walk the old town, eat at the original Šape in the bazaar, and see Nikola Martinoski’s paintings in the Tahu family house. Pick up walnut lokum at Tagas-Balkan before a swim and dinner at Panorama.</p><p>Save Sunday morning for the Ilinden Monument and the Toše Proeski Memorial House. They’re both on Gumenje and worth seeing together for the architecture alone.</p></div><div class="krusevo-overview-gallery"><figure class="support-figure krusevo-overview-photo"><img alt="Kruševo rooftops at sunset" class="overview-image" decoding="async" height="1440" loading="lazy" src="./Assets/Krusevo/town-sunset.webp" width="1080"><figcaption class="itinerary-caption">Kruševo</figcaption></figure><figure class="support-figure krusevo-overview-photo"><div class="vila-gora-crop"><img alt="Painted façades and Vila Gora in Kruševo’s old town" class="overview-image" decoding="async" height="1440" loading="lazy" src="./Assets/Krusevo/old-town-vilagora.webp" width="1080"></div><figcaption class="itinerary-caption">Vila Gora · Wander-Lush</figcaption></figure></div></div></section>
 <section class="section-frame" id="itinerary"><div class="section-rail"></div><div class="section-main"><h2 class="section-title">The weekend</h2><section class="day-block" aria-labelledby="fridayLabel">
 <h3 id="fridayLabel" class="day-label">Friday</h3>
 <article class="itinerary-entry itinerary-entry--text-only">
