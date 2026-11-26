@@ -39,7 +39,10 @@
   font-size:11px;text-transform:uppercase;letter-spacing:.1em;
 }
 .prespa-shell .map{position:relative;isolation:isolate}
-.prespa-shell .map img{width:100%;height:auto}
+.prespa-shell .map img{width:100%;height:auto;aspect-ratio:780/815}
+.prespa-shell .map-leaders{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.prespa-shell .map-leaders line{stroke:#686868;stroke-width:1;vector-effect:non-scaling-stroke}
+.prespa-shell .map-leaders circle{fill:#686868}
 .prespa-shell .map-caption{margin-top:8px;font-size:10px;color:#444}
 .prespa-map-nav{display:flex;flex-wrap:wrap;gap:12px 22px;margin-top:15px}
 .prespa-shell :is(.pin,.map-label){
@@ -51,11 +54,7 @@
   text-decoration:none;font:500 11px/1 var(--sans);
 }
 .prespa-shell .pin:is(:hover,:focus-visible){background:#555}
-.prespa-shell .pin-offset-villa{margin-left:28px}
-.prespa-shell .pin-offset-markova{margin-left:8px}
 .prespa-shell .map-label{white-space:nowrap;pointer-events:none;font:400 clamp(9px,1.35vw,12px)/1.2 var(--sans)}
-.prespa-shell .map-label.lake{color:#444}
-.prespa-shell .map-label.baba{color:#444}
 .prespa-shell .index{margin-bottom:33px}
 .prespa-shell :is(.index h2,.route h2){font-size:30px;line-height:1.1;margin-bottom:16px}
 .prespa-shell .index ol{list-style:none;padding:0;border-top:1px solid var(--guide-rule)}
@@ -77,15 +76,6 @@
 .prespa-shell .place-image-pair img{aspect-ratio:4/5}
 .prespa-shell .place-image-pair img:first-child{object-position:50% 50%}
 .prespa-shell .place-image-pair img:last-child{object-position:56% 48%}
-.prespa-shell #when-in-krusevo .place-image-pair img:first-child{object-position:50% 30%}
-.prespa-shell .extra-jumps{display:flex;flex-wrap:wrap;gap:8px 18px;padding:13px 0 0}
-.prespa-shell .pin-leader{
-  position:absolute;left:var(--from-x);top:var(--from-y);
-  width:var(--leader-width);height:1px;
-  background:#797979;transform-origin:left center;transform:rotate(var(--leader-angle));
-  pointer-events:none;
-}
-.prespa-shell .krusevo-map .pin{width:24px}
 
 .prespa-shell .place-content{padding-top:18px}
 
@@ -134,3 +124,19 @@
 .prespa-shell #pelister .place-image img{aspect-ratio:2.25}
 #krusevo-opening > img{object-position:50% 84%}
 .prespa-shell #kamp-fest .place-image-pair img:first-child{object-position:58% 47%}
+
+
+.prespa-shell .place-image-native img,
+.prespa-shell .place-image-story img {
+  aspect-ratio:auto;
+}
+.prespa-shell .place-image-complete img {
+  width:auto;
+  max-width:100%;
+  max-height:min(520px,75svh);
+  aspect-ratio:auto;
+  object-fit:contain;
+  margin-inline:auto;
+}
+.prespa-shell .place-image-story{display:grid;gap:8px}
+.prespa-shell .place-category + .place-content{padding-top:0}
