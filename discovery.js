@@ -545,6 +545,14 @@
       "museum": "Museum of Contemporary Art, Skopje",
       "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=60",
       "image": "./Assets/Discovery/galicnik-2-dolhopf.webp"
+    },
+    {
+      "id": "terracotta-pyxis",
+      "title": "Terracotta Pyxis (Cosmetic Box)",
+      "details": "3rd–2nd century BCE · Hellenistic · Terracotta",
+      "museum": "The Metropolitan Museum of Art, New York",
+      "source": "https://www.metmuseum.org/art/collection/search/255663",
+      "image": "./Assets/Discovery/terracotta-pyxis-met.webp"
     }
   ];
   const target = (attribute) => discovery.querySelector('[data-discovery-' + attribute + ']');
