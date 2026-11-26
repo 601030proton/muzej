@@ -38,7 +38,7 @@
 .prespa-shell :is(.eyebrow,.route-label){
   font-size:11px;text-transform:uppercase;letter-spacing:.1em;
 }
-.prespa-shell .map{position:relative}
+.prespa-shell .map{position:relative;isolation:isolate}
 .prespa-shell .map img{width:100%;height:auto}
 .prespa-shell .map-caption{margin-top:8px;font-size:10px;color:#444}
 .prespa-map-nav{display:flex;flex-wrap:wrap;gap:12px 22px;margin-top:15px}
@@ -47,16 +47,16 @@
 }
 .prespa-shell .pin{
   z-index:1;display:grid;place-items:center;width:26px;aspect-ratio:1;
-  border:1px solid white;border-radius:50%;background:#a62c24;color:white;
+  border:1px solid white;border-radius:50%;background:#181818;color:white;
   text-decoration:none;font:500 11px/1 var(--sans);
 }
-.prespa-shell .pin:is(:hover,:focus-visible){background:#161616}
+.prespa-shell .pin:is(:hover,:focus-visible){background:#555}
 .prespa-shell .pin-offset-villa{margin-left:28px}
 .prespa-shell .pin-offset-markova{margin-left:8px}
 .prespa-shell .map-label{white-space:nowrap;pointer-events:none;font:400 clamp(9px,1.35vw,12px)/1.2 var(--sans)}
-.prespa-shell .map-label.lake{color:#355c66}
-.prespa-shell .map-label.baba{color:#53514a}
-.prespa-shell .index{padding:20px 25px 24px;background:#f7f6f2;margin-bottom:33px}
+.prespa-shell .map-label.lake{color:#444}
+.prespa-shell .map-label.baba{color:#444}
+.prespa-shell .index{margin-bottom:33px}
 .prespa-shell :is(.index h2,.route h2){font-size:30px;line-height:1.1;margin-bottom:16px}
 .prespa-shell .index ol{list-style:none;padding:0;border-top:1px solid var(--guide-rule)}
 .prespa-shell .index li a{
@@ -73,7 +73,20 @@
 }
 .prespa-shell #kurbinovo .place-image img{aspect-ratio:4/3}
 .prespa-shell #brajcino .place-image img{object-position:center 59%}
-.prespa-shell .place-image figcaption{margin-top:8px;color:#444;font-size:11px}
+.prespa-shell .place-image-pair{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.prespa-shell .place-image-pair img{aspect-ratio:4/5}
+.prespa-shell .place-image-pair img:first-child{object-position:50% 50%}
+.prespa-shell .place-image-pair img:last-child{object-position:56% 48%}
+.prespa-shell #when-in-krusevo .place-image-pair img:first-child{object-position:50% 30%}
+.prespa-shell .extra-jumps{display:flex;flex-wrap:wrap;gap:8px 18px;padding:13px 0 0}
+.prespa-shell .pin-leader{
+  position:absolute;left:var(--from-x);top:var(--from-y);
+  width:var(--leader-width);height:1px;
+  background:#797979;transform-origin:left center;transform:rotate(var(--leader-angle));
+  pointer-events:none;
+}
+.prespa-shell .krusevo-map .pin{width:24px}
+
 .prespa-shell .place-content{padding-top:18px}
 
 .prespa-shell .place h3{
@@ -106,7 +119,6 @@
   .prespa-opening{padding-bottom:25px}
   .prespa-opening > p{font-size:26px}
   .prespa-shell :is(.index h2,.route h2){font-size:26px}
-  .prespa-shell .index{padding:18px 15px}
   .prespa-shell .place{padding-bottom:32px}
 }
 @media(max-width:420px){
@@ -114,3 +126,11 @@
   .prespa-shell .index li small{font-size:10px}
   .prespa-shell .routes{grid-template-columns:1fr}
 }
+
+.prespa-shell .map-credit{
+  position:absolute;right:5px;bottom:5px;padding:2px 4px;background:#fff;
+  color:#454545;font:400 9px/1.3 var(--sans);
+}
+.prespa-shell #pelister .place-image img{aspect-ratio:2.25}
+#krusevo-opening > img{object-position:50% 84%}
+.prespa-shell #kamp-fest .place-image-pair img:first-child{object-position:58% 47%}
