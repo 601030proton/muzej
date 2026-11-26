@@ -488,7 +488,7 @@
       "details": "Jovan Šumkovski · 1989–90 · Painting-object",
       "museum": "Museum of Contemporary Art, Skopje",
       "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=25",
-      "image": "./Assets/Discovery/enclosed-porch-2.webp"
+      "image": "./Assets/Discovery/enclosed-porch-2-transparent.webp"
     },
     {
       "id": "biljana-was-bleaching-linen",
