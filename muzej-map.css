@@ -1,0 +1,40 @@
+.muzej-relief-map {
+  position: relative;
+  isolation: isolate;
+  container-type: inline-size;
+}
+.muzej-relief-map picture,
+.muzej-relief-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.muzej-relief-map .map-number {
+  position: absolute;
+  top: var(--my);
+  left: var(--mx);
+  transform: translate(-50%, -50%);
+  display: grid;
+  width: clamp(14px, 3.7cqw, 26px);
+  aspect-ratio: 1;
+  align-content: center;
+  justify-content: center;
+  border: 1px solid white;
+  border-radius: 50%;
+  background: #181818;
+  color: white;
+  font: 500 clamp(8px, 2.2cqw, 11px)/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+}
+.muzej-relief-map .map-number:is(:hover, :focus-visible) {
+  z-index: 1;
+  background: #555;
+  outline: 1px solid #181818;
+  outline-offset: 2px;
+}
+@media (max-width: 600px) {
+  .muzej-relief-map .map-number {
+    top: var(--mobile-y, var(--my));
+    left: var(--mobile-x, var(--mx));
+  }
+}

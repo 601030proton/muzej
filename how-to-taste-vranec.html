@@ -1230,9 +1230,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
 body main .vranec-content .vranec-sources { max-width: 960px; margin: 0 auto; }
 body main .vranec-content .muzej-source-list { max-width: none; margin: 0; }
 .vranec-sources li { break-inside: avoid; }
-@media (min-width: 601px) {
-  .vranec-map img { aspect-ratio: 4698 / 3504; object-fit: cover; }
-}
+
 @media (min-width: 761px) {
   .vranec-sources .muzej-source-list { column-count: 2; column-gap: clamp(28px, 5vw, 64px); }
 }
@@ -1248,6 +1246,7 @@ body main .vranec-content .muzej-source-list { max-width: none; margin: 0; }
   .vranec-map-key { grid-template-columns: 1fr; }
 }
 </style>
+<link rel="stylesheet" href="./muzej-map.css?v=20261126-mono">
 </head>
 <body class="ohrid-article radio-article-page vranec-article-page">
 
@@ -1277,17 +1276,21 @@ body main .vranec-content .muzej-source-list { max-width: none; margin: 0; }
 <section class="vranec-orientation" aria-labelledby="vranec-map-title">
   <figure class="vranec-map" aria-labelledby="vranec-map-title">
     <h2 id="vranec-map-title">Tikveš and the Vardar Valley</h2>
-    <picture>
-      <source media="(max-width: 600px)" width="1200" height="1206" srcset="./Assets/Vranec/tikves-vardar-map-mobile.webp">
-      <img src="./Assets/Vranec/tikves-vardar-map.webp" width="1600" height="1233" loading="lazy" decoding="async" alt="The Vardar runs southeast from Veles past Negotino and through Demir Kapija. Kavadarci lies west of Negotino, near Lake Tikveš and Crna Reka. Bela Voda is north of Veles, and Barovo lies southwest of Demir Kapija in the Kožuf foothills.">
+    <div class="muzej-relief-map">
+<picture>
+      <source media="(max-width: 600px)" width="1200" height="1206" srcset="./Assets/Vranec/tikves-vardar-mono-mobile.webp">
+      <img src="./Assets/Vranec/tikves-vardar-mono.webp" width="1600" height="1233" loading="lazy" decoding="async" alt="The Vardar runs southeast from Veles past Negotino and through Demir Kapija. Kavadarci lies west of Negotino, near Lake Tikveš and Crna Reka. Bela Voda is north of Veles, and Barovo lies southwest of Demir Kapija in the Kožuf foothills.">
     </picture>
+<a class="map-number" href="#map-bela-voda" aria-label="1. Bela Voda" style="--mx:27.1%;--my:11.07%;--mobile-x:13.5%;--mobile-y:9.33%">1</a>
+<a class="map-number" href="#map-barovo" aria-label="2. Barovo" style="--mx:61.3%;--my:84.62%;--mobile-x:59.2%;--mobile-y:84.53%">2</a>
+</div>
     <figcaption>Terrain from Mapzen elevation tiles. Waterways © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>. Vineyard locations from Tikveš Winery’s 2024 inventory.</figcaption>
   </figure>
   <dl class="vranec-map-key">
     <div><dt>Kavadarci and Negotino</dt><dd>Towns in the central Tikveš district. Tikveš Winery is based in Kavadarci.</dd></div>
     <div><dt>The Vardar and Crna Reka</dt><dd>The Vardar is the main river. Crna Reka feeds Lake Tikveš and joins the Vardar upstream of Negotino.</dd></div>
-    <div><dt>Demir Kapija and Barovo</dt><dd>The Vardar cuts through a gorge at Demir Kapija. Southwest of town, Tikveš’s Barovo vineyards sit at 500–590 meters in the Kožuf foothills.</dd></div>
-    <div><dt>Veles and Bela Voda</dt><dd>The Bela Voda vineyard site lies north of Veles at 280–300 meters.</dd></div>
+    <div id="map-barovo"><dt>2. Demir Kapija and Barovo</dt><dd>The Vardar cuts through a gorge at Demir Kapija. Southwest of town, Tikveš’s Barovo vineyards sit at 500–590 meters in the Kožuf foothills.</dd></div>
+    <div id="map-bela-voda"><dt>1. Veles and Bela Voda</dt><dd>The Bela Voda vineyard site lies north of Veles at 280–300 meters.</dd></div>
   </dl>
 </section>
 <div class="vranec-content">

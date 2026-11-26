@@ -95,6 +95,7 @@ h1,h2,h3{font-weight:400}
  .wine-label div{grid-template-columns:minmax(0,1fr);gap:6px}
 }
 </style>
+<link rel="stylesheet" href="./muzej-map.css?v=20261126-mono">
 </head>
 <body>
 <header class="site-header">
@@ -133,13 +134,18 @@ h1,h2,h3{font-weight:400}
     <section class="wine-section" id="regions" aria-labelledby="regions-title">
       <h2 id="regions-title">Wine regions</h2>
       <figure class="wine-region-map">
-        <img src="./Assets/MacedonianWine/macedonian-wine-full-macedonia.webp" width="1600" height="1193" alt="Relief map of geographic Macedonia showing the Vardar, Pirin, and Egej areas. The three wine regions covered in the article are labeled in Vardar Macedonia, with Tikveš by Kavadarci." loading="lazy" decoding="async">
+        <div class="muzej-relief-map">
+<img src="./Assets/MacedonianWine/macedonian-wine-mono.webp" width="1600" height="1193" alt="Relief map of geographic Macedonia showing the Vardar, Pirin, and Egej areas. The three wine regions covered in the article are labeled in Vardar Macedonia, with Tikveš by Kavadarci." loading="lazy" decoding="async">
+<a class="map-number" href="#wine-vardar" aria-label="1. Vardar Valley" style="--mx:42.9%;--my:47.25%">1</a>
+<a class="map-number" href="#wine-pelagonija" aria-label="2. Pelagonija–Polog" style="--mx:18.4%;--my:37.55%">2</a>
+<a class="map-number" href="#wine-pcinja" aria-label="3. Pčinja–Osogovo" style="--mx:38.1%;--my:23.35%">3</a>
+</div>
         <figcaption>The map shows geographic Macedonia. Labels locate the three wine regions covered here. Base map from Muzej’s <a href="./quality-of-life.html">Quality of Life Survey</a>. The Vardar River trace is based on <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>.</figcaption>
       </figure>
       <div class="wine-columns">
-        <div class="wine-region"><h3>Vardar Valley</h3><p>Also called Povardarie, this wine region follows the river from Skopje through Veles toward Negotino and Demir Kapija. The Tikveš district is centered on Kavadarci and Negotino.</p></div>
-        <div class="wine-region"><h3>Pelagonija–Polog</h3><p>The western wine region includes the districts around Bitola, Prilep, Prespa, and Ohrid. The region’s plateaus and mountain valleys have colder winters than the central Vardar Valley.</p></div>
-        <div class="wine-region"><h3>Pčinja–Osogovo</h3><p>The northeastern wine region includes Kumanovo, Kratovo, and Pijanec. Its vineyards occupy mountain slopes, some as high as 850 meters according to Wines of Macedonia.</p></div>
+        <div class="wine-region" id="wine-vardar"><h3>1. Vardar Valley</h3><p>Also called Povardarie, this wine region follows the river from Skopje through Veles toward Negotino and Demir Kapija. The Tikveš district is centered on Kavadarci and Negotino.</p></div>
+        <div class="wine-region" id="wine-pelagonija"><h3>2. Pelagonija–Polog</h3><p>The western wine region includes the districts around Bitola, Prilep, Prespa, and Ohrid. The region’s plateaus and mountain valleys have colder winters than the central Vardar Valley.</p></div>
+        <div class="wine-region" id="wine-pcinja"><h3>3. Pčinja–Osogovo</h3><p>The northeastern wine region includes Kumanovo, Kratovo, and Pijanec. Its vineyards occupy mountain slopes, some as high as 850 meters according to Wines of Macedonia.</p></div>
       </div>
     </section>
 
