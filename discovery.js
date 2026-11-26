@@ -222,12 +222,12 @@
       "image": "./Assets/Discovery/landscape-in-macedonia.webp"
     },
     {
-      "id": "bride-from-krivogastani",
-      "title": "Bride from Krivogaštani",
+      "id": "macedonian-folk-dress-benson",
+      "title": "Macedonian Folk Dress",
       "details": "Olga Benson · 1930 · Watercolor",
       "museum": "",
       "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/benson-olga/",
-      "image": "./Assets/Discovery/bride-from-krivogastani.webp"
+      "image": "./Assets/Discovery/macedonian-folk-dress-benson.webp"
     },
     {
       "id": "skopje-chokanov",
@@ -411,15 +411,6 @@
       "museum": "Museum of Contemporary Art, Skopje",
       "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=50",
       "image": "./Assets/Discovery/photography-761.webp"
-    },
-    {
-      "id": "horseman-janevski",
-      "title": "Horseman",
-      "details": "Živko Janevski · 1967 · Photograph",
-      "museum": "Museum of Contemporary Art, Skopje",
-      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=64",
-      "image": "./Assets/Discovery/horseman-janevski.webp",
-      "fit": "portrait"
     },
     {
       "id": "man-selling-a-rooster",
