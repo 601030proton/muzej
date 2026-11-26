@@ -386,7 +386,7 @@
       "details": "Aneta Svetieva · 1982 · Terracotta",
       "museum": "Museum of Contemporary Art, Skopje",
       "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=15",
-      "image": "./Assets/Discovery/figures-in-a-carriage.webp"
+      "image": "./Assets/Discovery/figures-in-a-carriage-transparent.webp"
     },
     {
       "id": "neighborhood-in-skopje-svecnjak",
