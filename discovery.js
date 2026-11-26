@@ -539,14 +539,6 @@
       "image": "./Assets/Discovery/april-1-no-1.webp"
     },
     {
-      "id": "interlocator-calovski",
-      "title": "Interlocator",
-      "details": "Jane Čalovski · 2011 · Installation",
-      "museum": "Museum of Contemporary Art, Skopje",
-      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=81",
-      "image": "./Assets/Discovery/interlocator-calovski.webp"
-    },
-    {
       "id": "galicnik-2-dolhopf",
       "title": "Galičnik 2",
       "details": "Gerd Dolhopf · 1993 · Photograph",
