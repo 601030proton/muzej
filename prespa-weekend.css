@@ -9,8 +9,8 @@
 .prespa-shell :is([id]){scroll-margin-top:85px}
 .prespa-guide-layout{
   display:grid;
-  grid-template-columns:minmax(0,560px) minmax(0,1fr);
-  column-gap:clamp(38px,6vw,100px);
+  grid-template-columns:minmax(0,520px) minmax(0,1fr);
+  column-gap:clamp(30px,4.6vw,76px);
   grid-template-rows:repeat(5,auto);
   align-items:start;
 }
@@ -20,11 +20,11 @@
   grid-row:1 / span 5;
   position:sticky;
   top:90px;
-  width:min(100%, calc((100svh - 155px) * .959));
+  width:min(100%,calc((100svh - 155px) * .959));
   justify-self:center;
 }
 .prespa-opening{padding-bottom:33px}
-.prespa-title{display:grid;gap:10px;margin-bottom:21px}
+.prespa-title{display:grid;gap:10px;margin:21px 0 0}
 .prespa-opening > img{width:100%;height:auto;aspect-ratio:1.55;object-fit:cover}
 .prespa-opening > p{
   font: 400 clamp(26px,2.6vw,38px)/1.2 var(--muzej-body-family);
@@ -56,7 +56,7 @@
 .prespa-shell .map-label{white-space:nowrap;pointer-events:none;font:400 clamp(9px,1.35vw,12px)/1.2 var(--sans)}
 .prespa-shell .map-label.lake{color:#355c66}
 .prespa-shell .map-label.baba{color:#53514a}
-.prespa-shell .index{padding:21px 0 42px;border-top:1px solid var(--guide-rule)}
+.prespa-shell .index{padding:20px 25px 24px;background:#f7f6f2;margin-bottom:33px}
 .prespa-shell :is(.index h2,.route h2){font-size:30px;line-height:1.1;margin-bottom:16px}
 .prespa-shell .index ol{list-style:none;padding:0;border-top:1px solid var(--guide-rule)}
 .prespa-shell .index li a{
@@ -65,7 +65,9 @@
 }
 .prespa-shell .index li strong{font:400 18px/1.35 var(--muzej-body-family)}
 .prespa-shell .index li a:hover strong{text-decoration:underline}
-.prespa-shell .place{border-top:1px solid var(--guide-rule);padding:27px 0 43px}
+.prespa-shell .place{border-top:1px solid var(--guide-rule);padding:22px 0 38px;margin-top:12px}
+.prespa-shell .place-category{margin:0 0 10px}
+.prespa-shell #markova .place-image img{aspect-ratio:1.42;object-position:50% 43%}
 .prespa-shell .place-image img{
   display:block;width:100%;height:auto;aspect-ratio:1.6;object-fit:cover;
 }
@@ -73,7 +75,7 @@
 .prespa-shell #brajcino .place-image img{object-position:center 59%}
 .prespa-shell .place-image figcaption{margin-top:8px;color:#444;font-size:11px}
 .prespa-shell .place-content{padding-top:18px}
-.prespa-shell .place-id{margin-bottom:7px}
+
 .prespa-shell .place h3{
   font-size:clamp(24px,2.5vw,32px);line-height:1.12;
   margin-bottom:14px;text-wrap:pretty;
@@ -99,11 +101,12 @@
   .prespa-guide-layout{display:block}
   .prespa-guide-layout > .prespa-map-panel{position:static;width:100%;margin-bottom:24px}
   .prespa-shell .map{max-width:540px}
+  .prespa-shell .map img{height:auto}
   .prespa-map-nav{display:none}
   .prespa-opening{padding-bottom:25px}
   .prespa-opening > p{font-size:26px}
   .prespa-shell :is(.index h2,.route h2){font-size:26px}
-  .prespa-shell .index{padding-bottom:31px}
+  .prespa-shell .index{padding:18px 15px}
   .prespa-shell .place{padding-bottom:32px}
 }
 @media(max-width:420px){
