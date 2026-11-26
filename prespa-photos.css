@@ -1,0 +1,17 @@
+#prespa-guide .prespa-opening > img,
+#prespa-guide.prespa-shell .place-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+#prespa-guide .place-image-stack {
+  display: grid;
+  gap: 8px;
+}
+
+#prespa-guide #pelister .place-image img {
+  object-fit: contain;
+}
