@@ -38,3 +38,33 @@
     left: var(--mobile-x, var(--mx));
   }
 }
+
+.muzej-relief-map .map-place-name,
+.muzej-relief-map .map-number-named span {
+  color: #252525;
+  font: 400 clamp(9px, 1.65cqw, 15px)/1.1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  white-space: nowrap;
+}
+
+.muzej-relief-map .map-place-name {
+  position: absolute;
+  top: var(--my);
+  left: var(--mx);
+  pointer-events: none;
+}
+.muzej-relief-map .map-place-right { transform: translate(8px, -50%); }
+.muzej-relief-map .map-place-left { transform: translate(calc(-100% - 8px), -50%); }
+
+.muzej-relief-map .map-number-named span {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 5px);
+  transform: translateY(-50%);
+}
+
+@media (max-width: 600px) {
+  .muzej-relief-map .map-place-name {
+    top: var(--mobile-y, var(--my));
+    left: var(--mobile-x, var(--mx));
+  }
+}
