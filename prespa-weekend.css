@@ -25,10 +25,9 @@
 }
 .prespa-opening{padding-bottom:33px}
 .prespa-title{display:grid;gap:10px;margin-bottom:21px}
-.prespa-opening .feature-title{font-family:var(--muzej-body-family);margin:0}
 .prespa-opening > img{width:100%;height:auto;aspect-ratio:1.55;object-fit:cover}
 .prespa-opening > p{
-  font:400 clamp(21px,2.3vw,28px)/1.23 var(--serif);
+  font: 400 clamp(26px,2.6vw,38px)/1.2 var(--muzej-body-family);
   max-width:27ch;
   margin-top:16px;
   text-wrap:pretty;
@@ -58,13 +57,13 @@
 .prespa-shell .map-label.lake{color:#355c66}
 .prespa-shell .map-label.baba{color:#53514a}
 .prespa-shell .index{padding:21px 0 42px;border-top:1px solid var(--guide-rule)}
-.prespa-shell :is(.index h2,.route h2){font:400 clamp(30px,3vw,42px)/1.06 var(--serif);margin-bottom:16px}
+.prespa-shell :is(.index h2,.route h2){font-size:30px;line-height:1.1;margin-bottom:16px}
 .prespa-shell .index ol{list-style:none;padding:0;border-top:1px solid var(--guide-rule)}
 .prespa-shell .index li a{
   display:grid;grid-template-columns:24px minmax(0,1fr) auto;align-items:baseline;
   gap:7px;padding:10px 0;border-bottom:1px solid var(--guide-rule);text-decoration:none;
 }
-.prespa-shell .index li strong{font:400 clamp(17px,1.65vw,22px)/1.15 var(--serif)}
+.prespa-shell .index li strong{font:400 18px/1.35 var(--muzej-body-family)}
 .prespa-shell .index li a:hover strong{text-decoration:underline}
 .prespa-shell .place{border-top:1px solid var(--guide-rule);padding:27px 0 43px}
 .prespa-shell .place-image img{
@@ -76,8 +75,8 @@
 .prespa-shell .place-content{padding-top:18px}
 .prespa-shell .place-id{margin-bottom:7px}
 .prespa-shell .place h3{
-  font:400 clamp(32px,4vw,49px)/1.03 var(--serif);
-  letter-spacing:-.03em;margin-bottom:14px;text-wrap:pretty;
+  font-size:clamp(24px,2.5vw,32px);line-height:1.12;
+  margin-bottom:14px;text-wrap:pretty;
 }
 .prespa-shell .place-info{
   display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;
@@ -85,12 +84,12 @@
   border-top:1px solid var(--guide-rule);border-bottom:1px solid var(--guide-rule);
 }
 .prespa-shell .recommendation p{
-  font:400 var(--muzej-body-size)/var(--muzej-body-leading) var(--serif);margin-top:14px;
+  margin-top:14px;
 }
 .prespa-shell .links,.prespa-shell .source-links{display:flex;flex-wrap:wrap;gap:8px 17px}
 .prespa-shell .route{border-top:1px solid var(--guide-rule);padding:23px 0 40px}
 .prespa-shell .routes{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.prespa-shell .routes h3{font:400 25px/1.15 var(--serif);margin:6px 0}
+.prespa-shell .routes h3{font-size:22px;line-height:1.18;margin:6px 0}
 .prespa-shell .routes p:not(.route-label){font-size:18px;line-height:1.45;margin-bottom:8px}
 .prespa-shell .sources{border-top:1px solid var(--guide-rule);padding:17px 0 40px}
 .prespa-shell .sources summary{cursor:pointer}
@@ -102,6 +101,8 @@
   .prespa-shell .map{max-width:540px}
   .prespa-map-nav{display:none}
   .prespa-opening{padding-bottom:25px}
+  .prespa-opening > p{font-size:26px}
+  .prespa-shell :is(.index h2,.route h2){font-size:26px}
   .prespa-shell .index{padding-bottom:31px}
   .prespa-shell .place{padding-bottom:32px}
 }
