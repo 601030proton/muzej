@@ -317,7 +317,7 @@
       "details": "Dimo Todorovski · 1942–43 · Patinated plaster",
       "museum": "Museum of Contemporary Art, Skopje",
       "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=57",
-      "image": "./Assets/Discovery/tobacco-picker-todorovski.webp",
+      "image": "./Assets/Discovery/tobacco-picker-todorovski-transparent.webp",
       "fit": "portrait"
     },
     {
