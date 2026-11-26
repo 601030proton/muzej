@@ -540,7 +540,7 @@
     {
       "id": "terracotta-pyxis",
       "title": "Terracotta Pyxis (Cosmetic Box)",
-      "details": "3rd–2nd century BCE · Hellenistic · Terracotta",
+      "details": "3rd–2nd century BCE · Terracotta",
       "museum": "The Metropolitan Museum of Art, New York",
       "source": "https://www.metmuseum.org/art/collection/search/255663",
       "image": "./Assets/Discovery/terracotta-pyxis-met.webp"
