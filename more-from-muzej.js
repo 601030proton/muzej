@@ -186,7 +186,7 @@
     {
       slug: "wearing-the-nation",
       href: "wearing-the-nation.html",
-      title: "Macedonia’s Football Shirts",
+      title: "Macedonia’s Early National Team Shirts",
       kicker: "Sport | Design",
       dek: "Selected national team shirts, 1994–2010.",
       image: "./Assets/Wearing%20the%20Nation/e9d02185-3178-4851-b0b0-ef36d7436568.png",
