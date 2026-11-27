@@ -140,3 +140,30 @@
 }
 .prespa-shell .place-image-story{display:grid;gap:8px}
 .prespa-shell .place-category + .place-content{padding-top:0}
+
+.weekend-route-links {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 22px;
+  padding:12px 0;
+  margin-bottom:23px;
+  border-block:1px solid var(--guide-rule);
+}
+.prespa-shell .weekend-plan {
+  padding:18px 0 8px;
+  border-top:1px solid var(--guide-rule);
+}
+.prespa-shell .weekend-plan + .weekend-plan {margin-top:24px}
+.prespa-shell .weekend-plan > h3 {
+  font-size:clamp(22px,3vw,27px);
+  line-height:1.15;
+  margin:0 0 10px;
+}
+.prespa-shell .weekend-plan-edition {font:400 12px/1.5 var(--sans)}
+.prespa-shell .weekend-plan-links {margin:8px 0 0}
+.prespa-shell .weekend-plan .routes {margin-top:20px}
+.prespa-shell .weekend-plan .routes h4 {font-size:22px;line-height:1.18;margin:6px 0}
+.prespa-shell .weekend-plan .routes a:not(.action) {text-decoration:underline}
+@media(max-width:600px){
+  .prespa-shell .weekend-plan .routes {grid-template-columns:1fr}
+}
