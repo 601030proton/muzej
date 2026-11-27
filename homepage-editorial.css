@@ -86,7 +86,7 @@ main .cinema .home-story-headline {
 
 .opening-lead-copy {
   text-align: center;
-  padding-top: 18px;
+  padding-top: 12px;
 }
 
 .opening-lead h1 {
@@ -139,7 +139,7 @@ main .cinema .home-story-headline {
 }
 
 .opening-story--quality img {
-  filter: saturate(.65);
+  filter: none;
 }
 
 .opening-lead,
@@ -185,8 +185,8 @@ main .focus .home-story-headline {
 
 @media (min-width: 901px) {
   .home-opening {
-    grid-template-columns: minmax(0, 1fr) clamp(210px, 19vw, 272px);
-    column-gap: clamp(36px, 4.5vw, 72px);
+    grid-template-columns: minmax(0, 1fr) clamp(250px, 24vw, 340px);
+    column-gap: clamp(28px, 3.2vw, 48px);
   }
 }
 
