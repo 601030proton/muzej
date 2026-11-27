@@ -15,3 +15,7 @@
     min-height: calc(100svh - 95px);
   }
 }
+
+.prespa-title .feature-title {
+  text-wrap: balance;
+}
