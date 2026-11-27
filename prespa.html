@@ -48,31 +48,6 @@ h1,h2,h3{font-weight:400}
 <link rel="stylesheet" href="./prespa-weekend.css?v=20261126-flush-frames">
 <link rel="stylesheet" href="./prespa-photos.css?v=20261126-shared-opening">
 <link rel="stylesheet" href="./weekend-opening.css?v=20261126-guide-titles">
-<style>
-.prespa-guide-layout .prespa-opening-motion { position: relative; min-height: 0; }
-.prespa-opening-motion video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
-.prespa-motion-toggle {
-  position: absolute; right: 10px; bottom: 10px; min-height: 34px; padding: 5px 9px;
-  border: 1px solid #fff; background: #000a; color: #fff; font: inherit; font-size: 12px; cursor: pointer;
-}
-</style>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const video = document.querySelector('#prespa-hero-video');
-  const toggle = document.querySelector('.prespa-motion-toggle');
-  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  function play() {
-    if (!video.getAttribute('src')) video.src = video.dataset.src;
-    video.play().catch(() => {});
-  }
-  video.addEventListener('play', () => { toggle.textContent = 'Pause video'; });
-  video.addEventListener('pause', () => { toggle.textContent = 'Play video'; });
-  toggle.addEventListener('click', () => { if (video.paused) play(); else video.pause(); });
-  motion.addEventListener('change', () => { if (motion.matches) video.pause(); else play(); });
-  toggle.hidden = false;
-  if (!motion.matches) play();
-});
-</script>
 </head>
 <body class="prespa-page">
 <header class="site-header">
@@ -84,10 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="muzej-menu-tools"><details class="muzej-menu"><summary aria-label="Navigation menu" aria-controls="muzej-menu-panel" class="muzej-menu-trigger"><span aria-hidden="true" class="muzej-menu-icon"><i></i><i></i><i></i></span></summary><nav aria-label="Main navigation" id="muzej-menu-panel" class="muzej-menu-panel"><a href="./#selected-stories">Selected Stories</a><a href="./#focus">Art &amp; People</a><a href="./#now-playing">Cinema</a><a href="./#traditions">Traditions</a><a href="./#weekend">Weekend Guide</a><a href="./#archive">Archive</a><a href="./shop.html">Shop</a><a href="./about.html">About Muzej</a></nav></details></div>
   </div>
 </header>
-<main><article class="prespa-shell" id="prespa-guide"><div class="prespa-guide-layout"><header class="prespa-opening" id="prespa-opening"><div class="prespa-opening-media prespa-opening-motion">
-<video id="prespa-hero-video" width="1920" height="1080" muted loop playsinline preload="none" poster="./Assets/Prespa/prespa-village-poster.webp" data-src="./Assets/Prespa/prespa-village-loop.mp4" aria-label="A slow aerial view of a village above Lake Prespa with mountains beyond"></video>
-<button class="prespa-motion-toggle" type="button" aria-controls="prespa-hero-video" hidden>Play video</button>
-</div><div class="prespa-title"><p class="eyebrow">Weekend Guide</p><h1 class="muzej-article-title feature-title">A Local’s Guide to Summer in Prespa</h1></div><p>Beachside DJs at Kamp Fest, frescoes in Kurbinovo, and wine under Baba Mountain.</p></header>
+<main><article class="prespa-shell" id="prespa-guide"><div class="prespa-guide-layout"><header class="prespa-opening" id="prespa-opening"><div class="prespa-opening-media"><img src="./Assets/Prespa/krani-dj-portrait.webp" alt="A DJ at the decks at the Kamp Fest Prespa beach bar in Krani" loading="eager" decoding="async" width="894" height="1192" fetchpriority="high"></div><div class="prespa-title"><p class="eyebrow">Weekend Guide</p><h1 class="muzej-article-title feature-title">A Local’s Guide to Summer in Prespa</h1></div><p>Beachside DJs at Kamp Fest, frescoes in Kurbinovo, and wine under Baba Mountain.</p></header>
 <aside class="prespa-map-panel" aria-label="Map of the guide"><figure class="map-section"><div class="map-viewport"><div class="map">
 <img src="./Assets/Prespa/weekend-map.webp" width="780" height="815" alt="Map of the Prespa guide locations">
 <a class="pin" href="#kamp-fest" aria-label="Kamp Fest Prespa (Krani)" style="--x:46.48%;--y:60.14%">1</a><a class="pin" href="#krani-pretor" aria-label="Krani to Pretor by e-bike (Pretor)" style="--x:41.45%;--y:43.88%">2</a><a class="pin" href="#kurbinovo" aria-label="St. George (Kurbinovo)" style="--x:57.26%;--y:34.64%">3</a><a class="pin" href="#markova" aria-label="Markova Noga Utro (Dolno Dupeni)" style="--x:64.95%;--y:91.09%">4</a><a class="pin" href="#podmocani" aria-label="The Eftimovski collection (Podmočani)" style="--x:38.18%;--y:20.75%">5</a><a class="pin" href="#alesto" aria-label="Alesto Winery (Arvati village marker)" style="--x:63.41%;--y:49.97%">6</a><a class="pin" href="#pelister" aria-label="Pelister Peak (summit of the 4×4 route)" style="--x:80.38%;--y:30.27%">7</a><a class="pin" href="#brajcino" aria-label="Vila Raskrsnica (Brajčino)" style="--x:73.79%;--y:72.34%">8</a><a class="pin" href="#villa" aria-label="Villa Prespa (Dolno Dupeni)" style="--x:54.38%;--y:82.32%">9</a>
