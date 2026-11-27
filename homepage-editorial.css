@@ -76,27 +76,18 @@ main .cinema .home-story-headline {
 }
 
 .opening-lead-image img {
-  position: absolute;
-  top: 50%;
-  left: 0;
+  display: block;
   width: 100%;
-  height: auto;
-  transform: translateY(-50%);
-}
-
-.opening-lead:not([data-opening-story="radio"]) .opening-lead-image img {
-  inset: 0;
   height: 100%;
   object-fit: cover;
-  transform: none;
 }
-.opening-lead[data-opening-story="concrete"] img { object-position: 50% 39%; }
+.opening-lead[data-opening-story="concrete"] img { object-position: 50% 25%; }
 .opening-lead[data-opening-story="quality"] img { object-position: 50% 59%; }
 .opening-story[data-opening-story="radio"] img { object-fit: contain; }
 
 .opening-lead-copy {
   text-align: center;
-  padding-top: 12px;
+  padding-top: 22px;
 }
 
 .opening-lead h1 {
@@ -197,7 +188,11 @@ main .focus .home-story-headline {
   .home-opening {
     grid-template-columns: minmax(0, 1fr) clamp(250px, 24vw, 340px);
     column-gap: clamp(28px, 3.2vw, 48px);
+    align-content: start;
+    align-items: start;
   }
+
+  .opening-lead { margin-top: clamp(56px, 11vh, 106px); }
 }
 
 @media (min-width: 901px) and (max-height: 820px) {
@@ -441,7 +436,7 @@ main .focus .home-story-headline {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .opening-lead { row-gap: 16px; }
+  .opening-lead { row-gap: 22px; }
   .opening-story {
     grid-template-areas: "image" "eyebrow" "title" "deck";
   }

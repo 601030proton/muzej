@@ -11,11 +11,11 @@
   },
   krusevo: {
    href: './krusevo.html',
-   title: 'Kruševo',
-   poster: './Assets/Krusevo/krusevo-hero-poster.jpg',
-   video: './Assets/Krusevo/krusevo-hero.mp4',
-   alt: 'A view of Kruševo and its surrounding mountain landscape',
-   deck: 'A mountain town of steep streets, museums, and places to linger.'
+   title: 'Kruševo in Winter',
+   poster: './Assets/Krusevo/stanic-sledding.webp',
+   video: './Assets/Krusevo/stanic-winter-loop.mp4',
+   alt: 'Children sledding and skiers descending the slope at Stanič in Kruševo',
+   deck: 'Skiing and sledding at Stanič, with lunch and galleries back in town.'
   }
  };
  const guideTabs = document.querySelectorAll('[data-guide]');
