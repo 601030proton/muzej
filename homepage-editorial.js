@@ -1,14 +1,65 @@
 (()=>{
 
- const guides={krusevo:{href:'krusevo.html',title:'Kruševo',src:'./Assets/Krusevo/krusevo-hero-poster.jpg',alt:'A view of Kruševo and its surrounding mountain landscape',deck:'A mountain town of steep streets, museums, and places to linger.'},prespa:{href:'prespa.html',title:'Prespa',src:'./Assets/Homepage/prespa-hero.webp',alt:'View across Lake Prespa toward the surrounding mountains',deck:'Villages, lakeside tables, and a weekend beside the water.'}};
- function setGuideMedia(key,guide){
- const link=document.querySelector('#weekend-image-link');
- if(key==='krusevo'){
- const video=document.createElement('video');video.id='weekend-image';video.autoplay=true;video.muted=true;video.defaultMuted=true;video.loop=true;video.playsInline=true;video.preload='metadata';video.poster='./Assets/Krusevo/krusevo-hero-poster.jpg';video.src='./Assets/Krusevo/krusevo-hero.mp4';video.setAttribute('aria-label',guide.alt);link.replaceChildren(video);
- }else{const img=document.createElement('img');img.id='weekend-image';img.src=guide.src;img.alt=guide.alt;img.loading='lazy';link.replaceChildren(img);}
+ const guides = {
+  prespa: {
+   href: './prespa.html',
+   title: 'Prespa',
+   poster: './Assets/Prespa/prespa-village-poster.webp',
+   video: './Assets/Prespa/prespa-village-loop.mp4',
+   alt: 'A village above Lake Prespa with mountains beyond',
+   deck: 'Villages, lakeside tables, and a weekend beside the water.'
+  },
+  krusevo: {
+   href: './krusevo.html',
+   title: 'Kruševo',
+   poster: './Assets/Krusevo/krusevo-hero-poster.jpg',
+   video: './Assets/Krusevo/krusevo-hero.mp4',
+   alt: 'A view of Kruševo and its surrounding mountain landscape',
+   deck: 'A mountain town of steep streets, museums, and places to linger.'
+  }
+ };
+ const guideTabs = document.querySelectorAll('[data-guide]');
+ const guideLink = document.querySelector('#weekend-image-link');
+ const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+ function setGuideMedia(guide) {
+  const image = document.createElement('img');
+  image.id = 'weekend-image';
+  image.src = guide.poster;
+  image.alt = guide.alt;
+  image.loading = 'lazy';
+  if (motion.matches) {
+   guideLink.replaceChildren(image);
+   return;
+  }
+  const video = document.createElement('video');
+  video.id = 'weekend-image';
+  video.autoplay = true;
+  video.defaultMuted = true;
+  video.muted = true;
+  video.loop = true;
+  video.playsInline = true;
+  video.preload = 'metadata';
+  video.poster = guide.poster;
+  video.setAttribute('aria-label', guide.alt);
+  video.addEventListener('error', () => video.replaceWith(image), {once: true});
+  video.src = guide.video;
+  guideLink.replaceChildren(video);
  }
- setGuideMedia('krusevo',guides.krusevo);
- document.querySelectorAll('[data-guide]').forEach(b=>b.addEventListener('click',()=>{const guide=guides[b.dataset.guide];document.querySelectorAll('[data-guide]').forEach(e=>e.setAttribute('aria-pressed',String(e===b)));setGuideMedia(b.dataset.guide,guide);document.querySelector('#weekend-title-link').textContent=guide.title;document.querySelector('#weekend-deck').textContent=guide.deck;['#weekend-image-link','#weekend-title-link','#weekend-read-link'].forEach(s=>document.querySelector(s).href='https://muzej.co/'+guide.href);}));
+ if (guideLink && guideTabs.length) {
+  const activeGuide = () => guides[document.querySelector('[data-guide][aria-pressed="true"]').dataset.guide];
+  setGuideMedia(activeGuide());
+  motion.addEventListener('change', () => setGuideMedia(activeGuide()));
+  guideTabs.forEach(tab => tab.addEventListener('click', () => {
+   const guide = guides[tab.dataset.guide];
+   guideTabs.forEach(button => button.setAttribute('aria-pressed', String(button === tab)));
+   setGuideMedia(guide);
+   document.querySelector('#weekend-title-link').textContent = guide.title;
+   document.querySelector('#weekend-deck').textContent = guide.deck;
+   ['#weekend-image-link', '#weekend-title-link', '#weekend-read-link'].forEach(selector => {
+    document.querySelector(selector).href = guide.href;
+   });
+  }));
+ }
   var films = [
     {
       id: 'zLmtG7q3k8s',
