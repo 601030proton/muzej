@@ -32,7 +32,7 @@
   margin-top:16px;
   text-wrap:pretty;
 }
-.prespa-shell :is(.eyebrow,.location,.action,.map-caption,figcaption,.route-label,.sources,.index li span,.index li small,.prespa-map-nav){
+.prespa-shell :is(.eyebrow,.location,.action,.map-caption,figcaption,.route-label,.sources,.index li span,.index li small){
   font:400 12px/1.4 var(--sans);
 }
 .prespa-shell :is(.eyebrow,.route-label){
@@ -44,7 +44,6 @@
 .prespa-shell .map-leaders line{stroke:#686868;stroke-width:1;vector-effect:non-scaling-stroke}
 .prespa-shell .map-leaders circle{fill:#686868}
 .prespa-shell .map-caption{margin-top:8px;font-size:10px;color:#444}
-.prespa-map-nav{display:flex;flex-wrap:wrap;gap:12px 22px;margin-top:15px}
 .prespa-shell :is(.pin,.map-label){
   position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);
 }
@@ -105,7 +104,6 @@
   .prespa-guide-layout > .prespa-map-panel{position:static;width:100%;margin-bottom:24px}
   .prespa-shell .map{max-width:540px}
   .prespa-shell .map img{height:auto}
-  .prespa-map-nav{display:none}
   .prespa-opening{padding-bottom:25px}
   .prespa-opening > p{font-size:26px}
   .prespa-shell :is(.index h2,.route h2){font-size:26px}
@@ -182,14 +180,25 @@ body:has(.prespa-shell) .site-header {background:#fff}
 .prespa-shell .map img {display:block}
 
 @media (min-width:791px) {
+  .prespa-shell {
+    container-type:inline-size;
+    --guide-column-gap:clamp(30px,4.6vw,76px);
+    --guide-half-width:calc((100cqi - var(--guide-column-gap)) / 2);
+    --guide-opening-width:min(520px,var(--guide-half-width),calc((100svh - 155px) * .75));
+  }
+
   .prespa-guide-layout {
-    --guide-opening-width:min(520px, calc((100svh - 155px) * .75));
-    grid-template-columns:minmax(0,min(520px,47%)) minmax(0,1fr);
+    grid-template-columns:minmax(0,min(520px,var(--guide-half-width))) minmax(0,1fr);
+    column-gap:var(--guide-column-gap);
   }
 
   .prespa-guide-layout .prespa-opening-media img,
   .prespa-guide-layout > .prespa-map-panel {
-    width:min(100%,var(--guide-opening-width));
+    width:var(--guide-opening-width);
+  }
+
+  .prespa-guide-layout .prespa-opening-media img {
+    display:block;
   }
 
   .prespa-shell .map-viewport {
