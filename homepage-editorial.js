@@ -204,7 +204,9 @@ mountStoryCarousel(document.querySelector('#catalogue-stories'), document.queryS
 
   function showLinkedSlide() {
     const linked = slides.findIndex(slide => location.hash === '#' + slide.id);
-    if (linked !== -1) showSlide(linked);
+    if (linked === -1) return false;
+    showSlide(linked);
+    return true;
   }
 
   controls.addEventListener('click', event => {
@@ -218,8 +220,26 @@ mountStoryCarousel(document.querySelector('#catalogue-stories'), document.queryS
     showSlide(active + (event.key === 'ArrowRight' ? 1 : -1), true);
   });
 
-  showSlide(0);
-  showLinkedSlide();
+  const openingKey = 'muzej-art-in-focus-opening';
+  let previousOpening = -1;
+  try {
+    const savedOpening = Number.parseInt(sessionStorage.getItem(openingKey), 10);
+    if (savedOpening >= 0 && savedOpening < slides.length) previousOpening = savedOpening;
+  } catch {
+    // A random opening still works when browser storage is unavailable.
+  }
+
+  if (!showLinkedSlide()) {
+    const excludePrevious = previousOpening !== -1 && slides.length > 1;
+    let opening = Math.floor(Math.random() * (slides.length - Number(excludePrevious)));
+    if (excludePrevious && opening >= previousOpening) opening += 1;
+    showSlide(opening);
+  }
+  try {
+    sessionStorage.setItem(openingKey, String(active));
+  } catch {
+    // Navigation does not depend on browser storage.
+  }
   window.addEventListener('hashchange', showLinkedSlide);
   track.dataset.carousel = '';
   controls.hidden = false;
