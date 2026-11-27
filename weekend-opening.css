@@ -10,12 +10,38 @@
   }
 }
 
-@media (max-width: 790px) and (height < calc(133.34vw + 290px)) {
-  .prespa-guide-layout .prespa-opening-media {
-    min-height: calc(100svh - 95px);
-  }
-}
 
 .prespa-title .feature-title {
   text-wrap: balance;
+}
+
+/* Shared mobile editorial layout for both Weekend Guides. */
+@media (max-width: 790px) {
+  .prespa-shell { --page-x: clamp(18px, 5vw, 32px); padding-top: 12px; }
+  .prespa-guide-layout { display: block; max-width: 540px; margin-inline: auto; }
+  .prespa-guide-layout .prespa-opening-media { min-height: 0; }
+  .prespa-opening-media img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; }
+  .prespa-shell .prespa-title { margin-top: 18px; gap: 8px; }
+  .prespa-shell .prespa-title .feature-title { font-size: clamp(34px, 10vw, 54px); line-height: 1.02; text-wrap: balance; }
+  .prespa-shell .prespa-opening > p { font-size: clamp(21px, 5.8vw, 28px); line-height: 1.25; max-width: none; margin-top: 14px; }
+  .prespa-shell .prespa-opening { padding-bottom: 28px; }
+  .prespa-guide-layout > .prespa-map-panel { position: static; width: 100%; margin-bottom: 24px; }
+  .prespa-shell .map-viewport { width: 100%; }
+  .prespa-shell .map { max-width: none; }
+  .prespa-shell .pin { width: 30px; }
+  .prespa-shell .index li a { grid-template-columns: 24px minmax(0, 1fr); gap: 2px 8px; padding: 10px 0; min-height: 48px; }
+  .prespa-shell .index li small { grid-column: 2; font-size: 12px; }
+  .prespa-shell .index li strong { font-size: 19px; }
+  .prespa-shell .weekend-route-links { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; padding: 0; }
+  .prespa-shell .weekend-route-links .action { display: flex; align-items: center; justify-content: space-between; min-height: 48px; gap: 6px; }
+  .prespa-shell .place { margin-top: 0; padding: 20px 0 32px; }
+  .prespa-shell .place-content { padding-top: 14px; }
+  .prespa-shell .place h3 { font-size: clamp(27px, 7vw, 34px); margin-bottom: 10px; }
+  .prespa-shell .place-info { display: grid; gap: 4px; padding: 8px 0; }
+  .prespa-shell .links { gap: 0 16px; }
+  .prespa-shell .links .action { display: inline-flex; align-items: center; min-height: 44px; gap: 5px; }
+  .prespa-shell .recommendation p { font-size: 19px; line-height: 1.48; margin-top: 12px; }
+  .prespa-shell .routes, .prespa-shell .weekend-plan .routes { grid-template-columns: minmax(0,1fr); gap: 20px; }
+  .prespa-shell :is(iframe,video) { max-width: 100%; }
+  .prespa-shell iframe { width: 100%; }
 }
