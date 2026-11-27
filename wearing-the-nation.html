@@ -20,39 +20,49 @@ a { color: inherit; }
 
 .shirt-slideshow {
   width: min(100% - 48px, 1120px);
-  height: max(190px, calc(100svh - var(--shirt-masthead, 104px)));
-  margin: 0 auto clamp(44px, 7vw, 92px);
-  padding: clamp(8px, 2.1svh, 24px) 0 max(12px, env(safe-area-inset-bottom));
+  min-height: clamp(500px, calc(100svh - var(--shirt-masthead, 104px)), 820px);
+  margin: 0 auto clamp(48px, 7vw, 92px);
+  padding: clamp(8px, 1.5svh, 18px) 0 max(12px, env(safe-area-inset-bottom));
   display: grid;
   grid-template-rows: auto minmax(0, 1fr) auto;
-  gap: clamp(7px, 1.35svh, 16px);
+  gap: clamp(14px, 2.4svh, 26px);
 }
 .shirt-slideshow[hidden] { display: none; }
-.gallery-header h1 { margin: 0; font-size: clamp(1.7rem, min(5.65vw, 8svh), 4.75rem); font-weight: 400; letter-spacing: -.025em; line-height: 1; text-wrap: balance; }
-.gallery-range { margin: 7px 0 0; font-size: clamp(.95rem, 2vw, 1.25rem); }
-.gallery-figure { margin: 0; min-height: 0; display: grid; grid-template-columns: minmax(160px, 1fr) minmax(0, 2fr); grid-template-rows: minmax(0, 1fr); grid-template-areas: "caption image"; align-items: center; column-gap: clamp(24px, 5vw, 72px); padding: 0 clamp(0px, 3vw, 40px); }
-.gallery-stage { grid-area: image; align-self: stretch; min-width: 0; min-height: 0; display: grid; place-items: center; container-type: size; }
-.frame { position: relative; width: min(100%, 40svh, 485px); width: min(100cqw, 75cqh, 485px); aspect-ratio: 3 / 4; touch-action: pan-y; }
+.gallery-header { text-align: center; }
+.gallery-header h1 {
+  max-width: 17em;
+  margin: 0 auto;
+  font-size: clamp(2.3rem, 5.8vw, 5.125rem);
+  font-weight: 400;
+  letter-spacing: -.035em;
+  line-height: .98;
+  text-wrap: balance;
+}
+.gallery-range { margin: 10px 0 0; font-size: clamp(1rem, 1.6vw, 1.2rem); line-height: 1.2; }
+.gallery-figure { display: grid; grid-template-rows: minmax(0, 1fr) auto; gap: 0; min-height: clamp(265px, 42svh, 410px); margin: 0; }
+.gallery-stage { min-width: 0; min-height: 0; display: grid; place-items: center; container-type: size; }
+.frame { position: relative; width: min(100%, 58svh, 610px); width: min(100cqw, 125cqh, 610px); aspect-ratio: 5 / 4; touch-action: pan-y; }
 .shirt-image { position: absolute; display: block; width: var(--image-width); height: auto; max-width: none; left: var(--image-left); top: var(--image-top); clip-path: var(--image-crop); user-select: none; }
 .shirt-image[hidden] { display: none; }
-.gallery-caption { grid-area: caption; align-self: center; min-width: 0; }
+.gallery-caption { min-width: 0; text-align: center; font-size: clamp(1rem, 1.8vw, 1.2rem); line-height: 1.2; }
 .gallery-caption p { margin: 0; }
-#title { font-size: clamp(1.8rem, min(5vw, 7svh), 4.3rem); font-weight: 400; line-height: 1; letter-spacing: -.025em; }
-#maker { margin-top: 7px; font-size: clamp(.95rem, 2vw, 1.35rem); font-weight: 400; }
-#note { margin-top: 6px; font-size: .875rem; }
-.gallery-nav { display: grid; grid-template-columns: 44px minmax(0, 1fr) 44px; align-items: center; gap: clamp(2px, 1vw, 12px); width: min(100%, 770px); margin: 0 auto; }
+@media (min-width: 661px) { .gallery-caption { transform: translateY(-14px); } }
+.gallery-caption #title { font-weight: 600; }
+.gallery-caption #maker::before { content: " · "; }
+.gallery-caption #note { margin-top: 5px; font-size: .875rem; }
+.gallery-nav { display: grid; grid-template-columns: 44px minmax(0, 1fr) 44px; align-items: center; gap: clamp(2px, 1vw, 12px); width: min(100%, 700px); margin: 0 auto; }
 .gallery-nav[hidden] { display: none; }
-.gallery-arrow { display: grid; place-items: center; border: 0; border-radius: 50%; width: 44px; height: 44px; padding: 0; background: transparent; color: #111; cursor: pointer; }
-.gallery-arrow::after { width: 7px; height: 7px; border: solid currentColor; border-width: 0 1px 1px 0; transform: translateX(-1px) rotate(-45deg); content: ""; }
+.gallery-arrow { display: grid; place-items: center; border: 0; width: 44px; height: 44px; padding: 0; background: transparent; color: #111; cursor: pointer; }
+.gallery-arrow::after { width: 8px; height: 8px; border: solid currentColor; border-width: 0 1px 1px 0; transform: translateX(-1px) rotate(-45deg); content: ""; }
 #previous::after { transform: translateX(1px) rotate(135deg); }
 .gallery-arrow:disabled { opacity: .28; cursor: default; }
 .gallery-thumbs { display: flex; justify-content: center; min-width: 0; gap: clamp(1px, 1vw, 10px); padding: 2px; }
-.gallery-thumb { display: grid; justify-items: center; flex: 1 1 0; max-width: 72px; min-width: 0; min-height: 44px; padding: 1px 0 4px; background: transparent; color: #111; border: 0; border-bottom: 1px solid transparent; font: inherit; cursor: pointer; }
+.gallery-thumb { display: grid; justify-items: center; align-content: center; gap: 4px; flex: 1 1 0; max-width: 68px; min-width: 0; min-height: 44px; padding: 2px 0 5px; background: transparent; color: #111; border: 0; border-bottom: 1px solid transparent; font: inherit; cursor: pointer; }
 .gallery-thumb[aria-current="true"] { border-bottom-color: currentColor; }
-.gallery-thumb-image { position: relative; display: block; width: min(100%, clamp(30px, 5.4svh, 46px)); aspect-ratio: 3 / 4; }
+.gallery-thumb-image { position: relative; display: block; width: min(100%, clamp(30px, 5.4svh, 46px)); aspect-ratio: 5 / 4; }
 .gallery-thumb-label { font-size: clamp(.56rem, 1.75vw, .72rem); line-height: 1.15; white-space: nowrap; }
 @media (hover: hover) {
-  .gallery-arrow:not(:disabled):hover { background: #f5f5f5; }
+  .gallery-arrow:not(:disabled):hover::after { border-width: 0 2px 2px 0; }
   .gallery-thumb:not([aria-current="true"]):hover { border-bottom-color: #b7b7b7; }
 }
 .shirt-slideshow :focus-visible { outline: 2px solid #111; outline-offset: 2px; }
@@ -64,12 +74,13 @@ a { color: inherit; }
 .shirt-index li small { display: block; margin-top: 2px; font-size: .75rem; }
 .shirt-index li:target { border-bottom-color: #111; }
 @media (max-width: 660px) {
-  .shirt-slideshow, .shirt-index { width: calc(100% - 24px); }
-  .shirt-slideshow { height: max(190px, calc(100svh - var(--shirt-masthead, 80px))); }
-  .gallery-header { text-align: center; }
-  .gallery-figure { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) auto; grid-template-areas: "image" "caption"; padding: 0; text-align: center; }
-  .gallery-caption { padding-bottom: 4px; }
-  #maker { margin-top: 5px; }
+  .shirt-slideshow, .shirt-index { width: calc(100% - 32px); }
+  .shirt-slideshow { min-height: 0; grid-template-rows: auto auto auto; }
+  .gallery-header h1 { max-width: 11em; font-size: clamp(2.2rem, 9.5vw, 3.75rem); }
+  .gallery-figure { min-height: 0; }
+  .gallery-stage { width: min(100%, 60svh, 445px); aspect-ratio: 5 / 4; justify-self: center; }
+  .gallery-nav { grid-template-columns: 32px minmax(0, 1fr) 32px; }
+  .gallery-arrow { width: 32px; }
 }
 @media (max-height: 530px) {
   .gallery-thumb-image { width: min(100%, 26px); }
@@ -96,12 +107,11 @@ a { color: inherit; }
     <figure class="gallery-figure">
       <div class="gallery-stage">
         <div class="frame" id="frame">
-        <img id="shirt" class="shirt-image" src="./Assets/Wearing%20the%20Nation/Jerseys/Archive/1994-home.webp" alt="1994 · Gems · Home" fetchpriority="high" draggable="false" style="--image-width: 102.4%; --image-left: -1.2%; --image-top: 21.1%; --image-crop: inset(7.71% 6.05% 8.06% 6.05%);">
+        <img id="shirt" class="shirt-image" src="./Assets/Wearing%20the%20Nation/Jerseys/Archive/1994-home.webp" alt="1994 · Gems · Home" fetchpriority="high" draggable="false" style="--image-width: 104.671%; --image-left: -2.335%; --image-top: 1.022%; --image-crop: inset(7.71% 6.05% 8.06% 6.05%);">
         </div>
       </div>
       <figcaption class="gallery-caption" aria-live="polite">
-        <p id="title">1994</p>
-        <p id="maker">Gems · Home</p>
+        <p><span id="title">1994</span><span id="maker">Gems · Home</span></p>
         <p id="note" hidden></p>
       </figcaption>
     </figure>
@@ -207,10 +217,11 @@ a { color: inherit; }
 
   function positionImage(element, shirt) {
     const [left, top, right, bottom, width, height] = shirt.flatLay;
-    const scale = Math.min(0.76 * 4 / 3 / (bottom - top), 0.92 / (right - left));
+    const frameAspect = 5 / 4;
+    const scale = Math.min(0.94 / frameAspect / (bottom - top), 0.92 / (right - left));
     element.style.setProperty('--image-width', (width * scale * 100) + '%');
     element.style.setProperty('--image-left', (0.5 - (left + right) / 2 * scale) * 100 + '%');
-    element.style.setProperty('--image-top', (0.5 - (top + bottom) / 2 * scale * 3 / 4) * 100 + '%');
+    element.style.setProperty('--image-top', (0.5 - (top + bottom) / 2 * scale * frameAspect) * 100 + '%');
     const insets = [top / height, (width - right) / width, (height - bottom) / height, left / width];
     element.style.setProperty('--image-crop', 'inset(' + insets.map((inset) => inset * 100 + '%').join(' ') + ')');
   }
