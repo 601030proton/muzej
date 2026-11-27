@@ -84,6 +84,16 @@ main .cinema .home-story-headline {
   transform: translateY(-50%);
 }
 
+.opening-lead:not([data-opening-story="radio"]) .opening-lead-image img {
+  inset: 0;
+  height: 100%;
+  object-fit: cover;
+  transform: none;
+}
+.opening-lead[data-opening-story="concrete"] img { object-position: 50% 39%; }
+.opening-lead[data-opening-story="quality"] img { object-position: 50% 59%; }
+.opening-story[data-opening-story="radio"] img { object-fit: contain; }
+
 .opening-lead-copy {
   text-align: center;
   padding-top: 12px;

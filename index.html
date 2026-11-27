@@ -17,7 +17,7 @@
 <link href="./Assets/Muzej%20Logo/MuzejNewWord.png" rel="apple-touch-icon"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="fonts.css?v=20261124-editorial" rel="stylesheet"/>
-<link href="homepage-editorial.css?v=20261127-focus-deck" rel="stylesheet"/>
+<link href="homepage-editorial.css?v=20261127-rotating-lead" rel="stylesheet"/>
 <link href="muzej-header.css?v=20261121-site-nav" rel="stylesheet"/>
 <script defer src="muzej-header.js?v=20261121-site-nav"></script>
 <link href="discovery.css?v=13" rel="stylesheet">
@@ -38,7 +38,7 @@
 <header class="site-header site-header--journal"><div class="shell header-frame"><a aria-label="Muzej home" class="brand-mark" href="./"><img alt="Muzej" class="brand-mark-image" src="./Assets/Muzej%20Logo/MuzejNewWord.png"/></a><div class="muzej-menu-tools"><details class="muzej-menu"><summary aria-label="Navigation menu" aria-controls="muzej-menu-panel" class="muzej-menu-trigger"><span aria-hidden="true" class="muzej-menu-icon"><i></i><i></i><i></i></span></summary><nav aria-label="Main navigation" id="muzej-menu-panel" class="muzej-menu-panel"><a href="./#selected-stories">Selected Stories</a><a href="./#focus">Art &amp; People</a><a href="./#now-playing">Cinema</a><a href="./#traditions">Traditions</a><a href="./#weekend">Weekend Guide</a><a href="./#discovery">Discovery</a><a href="./#archive">Archive</a><a href="./shop.html">Shop</a><a href="./about.html">About Muzej</a></nav></details></div></div></header>
 <main>
 <section aria-label="Featured stories" class="home-opening shell" id="hero-feature">
-  <article class="opening-lead">
+  <article class="opening-lead" data-opening-story="radio">
     <div class="opening-lead-image">
       <img alt="A rotating selection of Macedonian cassette covers" decoding="async" fetchpriority="high" src="./Assets/Radio%20Free%20Macedonia/radio-free-macedonia-18-cassettes.gif"/>
     </div>
@@ -49,24 +49,73 @@
     </div>
   </article>
   <div class="opening-stories">
-    <article class="opening-story">
+    <article class="opening-story" data-opening-story="concrete">
       <p class="eyebrow">Architecture | Skopje</p>
       <h2><a href="./skopje-brutalism.html">Concrete Skopje</a></h2>
       <div class="opening-story-image">
-        <img alt="" decoding="async" loading="lazy" width="1080" height="1440" src="./Assets/Homepage/telecommunications-centre-and-central-post-office.webp"/>
+        <img alt="The Telecommunications Centre and Central Post Office in Skopje" decoding="async" loading="lazy" width="1080" height="1440" src="./Assets/Homepage/telecommunications-centre-and-central-post-office.webp"/>
       </div>
       <p class="opening-story-deck">Six modernist buildings in Skopje.</p>
     </article>
-    <article class="opening-story opening-story--quality">
+    <article class="opening-story opening-story--quality" data-opening-story="quality">
       <p class="eyebrow">Quality of Life</p>
       <h2><a href="./quality-of-life.html">Where to Live in Macedonia</a></h2>
       <div class="opening-story-image">
-        <img alt="" decoding="async" loading="lazy" width="1086" height="1448" src="./Assets/Quality%20of%20Life/crimson-poppy-house-hero.webp"/>
+        <img alt="An Ohrid house inside a red poppy against a blue sky" decoding="async" loading="lazy" width="1086" height="1448" src="./Assets/Quality%20of%20Life/crimson-poppy-house-hero.webp"/>
       </div>
       <p class="opening-story-deck">Ten places to live all&nbsp;year.</p>
     </article>
   </div>
 </section>
+<script>
+(() => {
+  const opening = document.getElementById('hero-feature');
+  const rail = opening.querySelector('.opening-stories');
+  const stories = Array.from(opening.querySelectorAll('[data-opening-story]')).map(card => ({
+    card,
+    key: card.dataset.openingStory,
+    image: card.querySelector('img'),
+    figure: card.querySelector('img').parentElement,
+    eyebrow: card.querySelector('.eyebrow'),
+    link: card.querySelector('h1 a, h2 a'),
+    deck: card.querySelector('.opening-lead-deck, .opening-story-deck')
+  }));
+  const storageKey = 'muzej-homepage-lead';
+  let previous;
+  try { previous = sessionStorage.getItem(storageKey); } catch {}
+
+  function place(story, isLead) {
+    const { card, image, figure, eyebrow, link, deck } = story;
+    if (card.classList.contains('opening-lead') === isLead) return;
+    card.classList.toggle('opening-lead', isLead);
+    card.classList.toggle('opening-story', !isLead);
+    figure.className = isLead ? 'opening-lead-image' : 'opening-story-image';
+    deck.className = isLead ? 'opening-lead-deck' : 'opening-story-deck';
+    image.loading = isLead ? 'eager' : 'lazy';
+    image.fetchPriority = isLead ? 'high' : 'auto';
+    const heading = document.createElement(isLead ? 'h1' : 'h2');
+    heading.append(link);
+    if (isLead) {
+      const copy = document.createElement('div');
+      copy.className = 'opening-lead-copy';
+      copy.append(eyebrow, heading, deck);
+      card.replaceChildren(figure, copy);
+    } else {
+      card.replaceChildren(eyebrow, heading, figure, deck);
+    }
+  }
+
+  const choices = stories.filter(story => story.key !== previous);
+  const lead = choices[Math.floor(Math.random() * choices.length)];
+  if (lead !== stories[0]) {
+    const sideStories = stories.filter(story => story !== lead);
+    stories.forEach(story => place(story, story === lead));
+    opening.prepend(lead.card);
+    rail.replaceChildren(...sideStories.map(story => story.card));
+  }
+  try { sessionStorage.setItem(storageKey, lead.key); } catch {}
+})();
+</script>
 <section aria-labelledby="selected-title" class="shell section selected" id="selected-stories"><div class="section-heading"><h2 class="home-section-headline" id="selected-title">Selected Stories</h2><a class="small-link" href="#archive">Explore the archive <span aria-hidden="true"><svg aria-hidden="true" class="arrow-icon" height="12" viewbox="0 0 16 16" width="12"><path d="M3 13L13 3M3 3H13V13" fill="none" stroke="currentColor" stroke-width="1.2"></path></svg></span></a></div><div class="selected-grid">
 <article class="story"><a class="story-media" href="./skopje-tange.html"><img alt="Kenzo Tange and the reconstruction of Skopje" class="" decoding="async" loading="lazy" src="./Assets/Homepage/kenzohero.webp"/></a><div class="story-copy"><p class="eyebrow">Architecture | Skopje</p><h3 class="home-story-headline"><a href="./skopje-tange.html">Tokyo on the Vardar</a></h3><p class="story-deck">Kenzo Tange’s plan for rebuilding Skopje after the 1963 earthquake.</p></div></article><article class="story"><a class="story-media" href="./experimental-music.html"><img alt="Chlen 16’s bassist performing in front of a crowd" decoding="async" loading="lazy" src="./Assets/Experimental%20Music/chlen-16.webp" width="1200" height="1600"/></a><div class="story-copy"><p class="eyebrow">Music | Macedonia</p><h3 class="home-story-headline"><a href="./experimental-music.html">Macedonia’s Experimental Music Today</a></h3><p class="story-deck">Independent radio, record labels, and ten recordings from the mid-2020s.</p></div></article><article class="story"><a class="story-media" href="./venus-of-skupi.html"><img alt="Marble head associated with the Venus of Skupi." class="" decoding="async" loading="lazy" src="./Assets/Homepage/venusskupi_website-01.webp"/></a><div class="story-copy"><p class="eyebrow">Art | Antiquity</p><h3 class="home-story-headline"><a href="./venus-of-skupi.html">The Venus of Skupi</a></h3><p class="story-deck">A Roman marble statue unearthed at Scupi in 2008.</p></div></article>
 </div></section>
