@@ -1047,6 +1047,33 @@ body.muzej-logo-hidden .site-header .brand-mark {
 <link rel="stylesheet" href="article-opening.css?v=20261101">
 <link rel="stylesheet" href="article-system.css?v=20261101-consistency-3">
 <link rel="stylesheet" href="bylines.css?v=20261107">
+<style>
+.article-interview .article-body-media--portrait img {
+  display: block;
+  object-fit: contain;
+}
+
+@media (min-width: 761px) {
+  .article-shell.article-interview {
+    width: min(100%, var(--content-max));
+    max-width: none;
+  }
+
+  .article-interview .article-body,
+  .article-interview .article-photo-credits {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(34px, 6vw, 90px);
+  }
+
+  .article-interview .article-body-copy {
+    justify-self: start;
+  }
+
+  .article-interview .article-body-media--portrait {
+    width: min(88%, 420px, calc((100svh - var(--nav-h) - clamp(12px, 2vw, 26px) - 24px) * .75));
+  }
+}
+</style>
 <link rel="stylesheet" href="muzej-header.css?v=20261121-site-nav">
 <script defer src="muzej-header.js?v=20261121-site-nav"></script>
 </head>
@@ -1073,7 +1100,7 @@ body.muzej-logo-hidden .site-header .brand-mark {
   <article class="article-shell article-interview">
     <section class="article-body">
       <figure class="article-body-media article-body-media--portrait">
-        <img src="./Assets/Tattoo/tathero.png" alt="Tattoo (1991)." loading="lazy" decoding="async">
+        <img src="./Assets/Tattoo/tathero.png" alt="Tattoo (1991)." width="4501" height="6001" loading="lazy" decoding="async">
       </figure>
 
       <div class="article-body-copy body-block">
@@ -1085,11 +1112,10 @@ body.muzej-logo-hidden .site-header .brand-mark {
           <img src="./Assets/Tattoo/tat.png" alt="Tattoo (1991)." loading="lazy" decoding="async">
         </figure>
       </div>
-      <div class="empty-tail" aria-hidden="true"></div>
     </section>
 
 <section class="article-body article-body-lower">
-      <figure class="article-body-media article-body-media--portrait"><img src="./Assets/Tattoo/Tattoo_1080x1440%20copy-07.png" alt="Tattoo (1991)." loading="lazy" decoding="async"></figure>
+      <figure class="article-body-media article-body-media--portrait"><img src="./Assets/Tattoo/Tattoo_1080x1440%20copy-07.png" alt="Tattoo (1991)." width="4501" height="6001" loading="lazy" decoding="async"></figure>
       <div class="article-body-copy body-block">
         <p>At the time of its release, "Tattoo" was experienced exceptionally strongly by Macedonian audiences, which had high expectations of the future and of the new state that was still being formed. The film gave legitimacy to those expectations: the right to wish for a different system, to wish for a different Macedonia, and the opportunity to actively participate in that change. Today, after 35 years of independence, the value of the film is not only in its artistic and historical importance, but also in the question it poses: what did we do with the energy, ideas and hopes that were so strong back then?</p>
         <p>If "Tattoo" managed to cause a spiritual and intellectual upheaval, then the responsibility for the outcome no longer belongs to the filmmaker, but to us.</p>
@@ -1102,7 +1128,6 @@ body.muzej-logo-hidden .site-header .brand-mark {
         <h2 class="interview-question">Starring</h2>
         <p><a href="https://www.imdb.com/name/nm0431317/?ref_=tt_ov_3_1" target="_blank" rel="noopener noreferrer">Meto Jovanovski</a><br><a href="https://www.imdb.com/name/nm0575811/?ref_=tt_ov_3_2" target="_blank" rel="noopener noreferrer">Ljiljana Medjesi</a><br><a href="https://www.imdb.com/name/nm0033014/?ref_=tt_ov_3_3" target="_blank" rel="noopener noreferrer">Stojan 'Stole' Arandjelovic</a></p>
       </div>
-      <div class="empty-tail" aria-hidden="true"></div>
     </section>
 
     <div class="content-row article-photo-credits" id="photo-credits"><div class="empty-rail" aria-hidden="true"></div><aside class="photo-credit-note" aria-label="Photo credits"></aside><div class="empty-tail" aria-hidden="true"></div></div>
