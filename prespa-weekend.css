@@ -59,10 +59,18 @@
 .prespa-shell .index ol{list-style:none;padding:0;border-top:1px solid var(--guide-rule)}
 .prespa-shell .index li a{
   display:grid;grid-template-columns:24px minmax(0,1fr) auto;align-items:baseline;
-  gap:7px;padding:10px 0;border-bottom:1px solid var(--guide-rule);text-decoration:none;
+  gap:7px;padding:10px 8px;border-bottom:1px solid var(--guide-rule);text-decoration:none;
 }
 .prespa-shell .index li strong{font:400 18px/1.35 var(--muzej-body-family)}
-.prespa-shell .index li a:hover strong{text-decoration:underline}
+.prespa-shell .index li a:is(:hover,:focus-visible){
+  background:#000;
+  color:#fff;
+}
+.prespa-shell .index li a:is(:hover,:focus-visible) :is(span,strong,small){color:inherit}
+.prespa-shell .index li a:focus-visible{
+  outline:2px solid #fff;
+  outline-offset:-4px;
+}
 .prespa-shell .place{border-top:1px solid var(--guide-rule);padding:22px 0 38px;margin-top:12px}
 .prespa-shell .place-category{margin:0 0 10px}
 .prespa-shell #markova .place-image img{aspect-ratio:1.42;object-position:50% 43%}
