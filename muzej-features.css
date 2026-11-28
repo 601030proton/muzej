@@ -62,13 +62,13 @@
 .muzej-feature .survey-index-title{font:400 14px/1.4 Helvetica,Arial,sans-serif}
 @media(max-width:720px){.muzej-feature .survey-index{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
-.muzej-feature .guide-index li > a { padding-inline: 8px; }
-.muzej-feature .guide-index li > a:is(:hover, :focus-visible) {
+.muzej-feature :is(.guide-index, .survey-index) li > a { padding-inline: 8px; }
+.muzej-feature :is(.guide-index, .survey-index) li > a:is(:hover, :focus-visible) {
   background: #000;
   color: #fff;
 }
-.muzej-feature .guide-index li > a:is(:hover, :focus-visible) span { color: inherit; }
-.muzej-feature .guide-index li > a:focus-visible {
+.muzej-feature :is(.guide-index, .survey-index) li > a:is(:hover, :focus-visible) span { color: inherit; }
+.muzej-feature :is(.guide-index, .survey-index) li > a:focus-visible {
   outline: 2px solid #fff;
   outline-offset: -4px;
 }
