@@ -11,7 +11,7 @@
 <meta property="og:title" content="A Local’s Guide to Skopje at Night | Muzej">
 <meta property="og:description" content="Wine on Ruzveltova, a basement set at Kotur, and burek on the way home.">
 <meta property="og:url" content="https://muzej.co/skopje-at-night">
-<meta property="og:image" content="https://marh.mk/wp-content/uploads/2026/09/buru_may16_ervinkovac_070-768x1151.jpg">
+<meta property="og:image" content="https://muzej.co/Assets/Skopje%20at%20Night/buru-night-poster.webp">
 <link rel="icon" href="./Assets/Font/Muzej%20Logo.ai.png" type="image/png">
 <link rel="preconnect" href="https://use.typekit.net" crossorigin>
 <link rel="stylesheet" href="fonts.css?v=20261124-editorial">
@@ -48,18 +48,34 @@ h1,h2,h3{font-weight:400}
 <link rel="stylesheet" href="./weekend-opening.css?v=20261126-guide-titles">
 <style>
 .skopje-night .prespa-guide-layout { grid-template-rows: repeat(3,auto); }
-.skopje-night .night-photo { margin:0; }
-.skopje-night .night-photo img { object-fit:cover;background:#221411; }
-.skopje-night .night-photo figcaption { margin-top:9px; }
-.skopje-night .prespa-opening { padding-top:12px; }
+.skopje-night .night-photo {
+  margin: 0;
+  width: var(--guide-opening-width, 100%);
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: #221411;
+}
+.skopje-night .night-photo :is(img, video) {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.skopje-night .night-photo video { position: absolute; inset: 0; }
+.skopje-night .night-photo video[hidden] { display: none; }
+.skopje-night .night-motion-toggle {
+  position: absolute; bottom: 12px; left: 12px;
+  padding: 7px 9px; border: 1px solid #fff;
+  background: #000; color: #fff; font: 12px var(--sans); cursor: pointer;
+}
 .skopje-night .prespa-opening > p { max-width:22ch; }
 .skopje-night .night-plan { margin:0 0 26px;padding:16px 0;border-block:1px solid var(--guide-rule); }
 .skopje-night .night-plan p { font-size:18px;line-height:1.45; }
 .skopje-night .night-plan .eyebrow { margin-bottom:6px; }
 .skopje-night .night-stops .place { padding-bottom:25px; }
 .skopje-night .night-stops .night-crowd-photo { margin: 0 0 24px; }
-.skopje-night .night-crowd-photo img { aspect-ratio: 3 / 2; }
-.skopje-night .night-crowd-photo figcaption { margin-top: 7px; }
+.skopje-night .night-stops .place-image img { aspect-ratio: 3 / 2; }
 .skopje-night .night-stops .place-content { padding-top:5px; }
 .skopje-night .night-stops .place-info { margin-top:8px; }
 .skopje-night audio { display:block;width:min(100%,440px);margin-top:14px; }
@@ -82,10 +98,11 @@ h1,h2,h3{font-weight:400}
 <div class="prespa-guide-layout">
   <header class="prespa-opening">
     <div class="prespa-opening-media">
-  <figure class="night-photo">
-    <img src="https://marh.mk/wp-content/uploads/2026/09/buru_may16_ervinkovac_070-768x1151.jpg" width="768" height="1151" fetchpriority="high" decoding="async" alt="A guest in red light at a BURU party in Skopje">
-    <figcaption>BURU, Skopje. Photograph by Ervin Kovac. <a href="https://marh.mk/arhitektura_i_muzika_buru/">MARH</a></figcaption>
-  </figure>
+      <figure class="night-photo">
+        <img src="./Assets/Skopje%20at%20Night/buru-night-poster.webp" width="720" height="960" fetchpriority="high" decoding="async" alt="A guest in red light at a BURU party in Skopje">
+        <video class="night-motion" data-src="./Assets/Skopje%20at%20Night/buru-night-photo-loop.mp4" muted playsinline loop preload="none" aria-hidden="true" hidden></video>
+        <button class="night-motion-toggle" type="button" hidden>Pause motion</button>
+      </figure>
     </div>
     <div class="prespa-title"><p class="eyebrow">Weekend Guide</p><h1 class="muzej-article-title feature-title">A Local’s Guide to Skopje at Night</h1></div>
     <p>Wine on Ruzveltova, a basement set at Kotur, and burek on the way home.</p>
@@ -93,10 +110,6 @@ h1,h2,h3{font-weight:400}
   <aside class="prespa-map-panel" aria-label="Map of the guide">
     <figure class="map-section"><div class="map-viewport"><div class="map">
         <img src="./Assets/Skopje%20at%20Night/skopje-night-map.webp" width="780" height="815" alt="Monochrome street map of central Skopje, from Karpoš to the Old Bazaar">
-        <svg class="map-leaders" viewBox="0 0 780 815" aria-hidden="true">
-          <line x1="358.33" y1="429.99" x2="379.08" y2="480.04"></line>
-          <circle cx="358.33" cy="429.99" r="2.3"></circle>
-        </svg>
         <a class="pin" href="#el-cabron" aria-label="El Cabron" style="--x:38.15%;--y:40.21%">1</a>
         <a class="pin" href="#destan" aria-label="Destan in the Old Bazaar" style="--x:82.56%;--y:50.86%">2</a>
         <a class="pin" href="#kotur" aria-label="Kotur" style="--x:68.56%;--y:64.74%">3</a>
@@ -113,13 +126,14 @@ h1,h2,h3{font-weight:400}
   <section class="index" id="index" aria-labelledby="index-title">
     <div class="night-plan">
       <p class="eyebrow">One night</p>
-      <p><a href="#el-cabron">El Cabron</a> → <a href="#kotur">Kotur</a> → <a href="#minus-eden">Minus Eden</a> → <a href="#silbo">Silbo</a>. If <a href="#buru">BURU</a> is on, make it the main event.</p>
+      <p><a href="#el-cabron">El Cabron</a> → <a href="#kotur">Kotur</a> → <a href="#minus-eden">Minus Eden</a> → <a href="#silbo">Silbo</a>.</p>
     </div>
     <h2 class="section-heading" id="index-title">In this guide</h2><ol><li><a href="#el-cabron"><span aria-hidden="true">01</span><strong>El Cabron</strong><small>Wine</small></a></li><li><a href="#destan"><span aria-hidden="true">02</span><strong>Destan</strong><small>Dinner</small></a></li><li><a href="#kotur"><span aria-hidden="true">03</span><strong>Downstairs at Kotur</strong><small>Experimental</small></a></li><li><a href="#buru"><span aria-hidden="true">04</span><strong>BURU</strong><small>Party series</small></a></li><li><a href="#minus-eden"><span aria-hidden="true">05</span><strong>Minus Eden</strong><small>Club</small></a></li><li><a href="#dunja"><span aria-hidden="true">06</span><strong>Dunja</strong><small>DIY gigs</small></a></li><li><a href="#silbo"><span aria-hidden="true">07</span><strong>Silbo</strong><small>Late food</small></a></li></ol>
   </section>
   <div class="places night-stops" aria-label="Skopje recommendations">
     <article class="place" id="el-cabron" aria-labelledby="el-cabron-title">
   <p class="eyebrow place-category">Wine</p>
+  <figure class="place-image"><img src="./Assets/Skopje%20at%20Night/el-cabron-bar.webp" alt="The wine counter and hanging glasses at El Cabron" width="900" height="600" loading="lazy" decoding="async"></figure>
   <div class="place-content">
     <h3 class="section-heading" id="el-cabron-title">El Cabron</h3>
     <div class="place-info"><p class="location">Ruzveltova 63A</p><div class="links"><a class="action" href="https://wolt.com/en/mkd/skopje/venue/el-cabron-wine-bar/items/menucategory-1">Wine list <span aria-hidden="true">→</span></a></div></div>
@@ -136,7 +150,6 @@ h1,h2,h3{font-weight:400}
 </article>
   <figure class="place-image night-crowd-photo">
     <img src="./Assets/Skopje%20at%20Night/buru-friends.webp" alt="Friends in the crowd under warm spotlights at BURU" width="1080" height="720" loading="lazy" decoding="async">
-    <figcaption>Friends on the floor at BURU. Photograph by Ervin Kovac.</figcaption>
   </figure>
 <article class="place" id="kotur" aria-labelledby="kotur-title">
   <p class="eyebrow place-category">Experimental</p>
@@ -151,12 +164,11 @@ h1,h2,h3{font-weight:400}
   <p class="eyebrow place-category">Party series</p>
   <figure class="place-image night-crowd-photo">
     <img src="./Assets/Skopje%20at%20Night/buru-booth.webp" alt="Three people pose together behind the DJ booth at BURU" width="1080" height="720" loading="lazy" decoding="async">
-    <figcaption>At the decks at BURU. Photograph by Ervin Kovac.</figcaption>
   </figure>
   <div class="place-content">
     <h3 class="section-heading" id="buru-title">BURU</h3>
     <div class="place-info"><p class="location">Location varies</p><div class="links"><a class="action" href="https://ra.co/events/2462955">Past BURU lineup <span aria-hidden="true">→</span></a></div></div>
-    <div class="recommendation body-copy"><p>If BURU is on, build your night around it. The collective has put a dance floor in both the Museum of Contemporary Art and the old railway station that houses the city museum. Look for residents Rabo de Toro and check the address on the flyer.</p></div>
+    <div class="recommendation body-copy"><p>BURU has put a dance floor in both the Museum of Contemporary Art and the old railway station that houses the city museum. Look for residents Rabo de Toro and check the address on the flyer.</p></div>
   </div>
 </article>
 <article class="place" id="minus-eden" aria-labelledby="minus-eden-title">
@@ -169,10 +181,10 @@ h1,h2,h3{font-weight:400}
 </article>
   <figure class="place-image night-crowd-photo">
     <img src="./Assets/Skopje%20at%20Night/buru-dancer.webp" alt="A dancer raises an arm beneath red lights at BURU" width="1080" height="720" loading="lazy" decoding="async">
-    <figcaption>A dancer at BURU. Photograph by Ervin Kovac.</figcaption>
   </figure>
 <article class="place" id="dunja" aria-labelledby="dunja-title">
   <p class="eyebrow place-category">DIY gigs</p>
+  <figure class="place-image"><img src="./Assets/Skopje%20at%20Night/dunja-courtyard.webp" alt="People gathered in the courtyard at Social Centre Dunja" width="900" height="600" loading="lazy" decoding="async"></figure>
   <div class="place-content">
     <h3 class="section-heading" id="dunja-title">Dunja</h3>
     <div class="place-info"><p class="location">Rajko Žinzifov 22</p><div class="links"><a class="action" href="https://www.mono-ton.com/events">Mono-Ton listings <span aria-hidden="true">→</span></a></div></div>
@@ -181,6 +193,7 @@ h1,h2,h3{font-weight:400}
 </article>
 <article class="place" id="silbo" aria-labelledby="silbo-title">
   <p class="eyebrow place-category">Late food</p>
+  <figure class="place-image"><img src="./Assets/Skopje%20at%20Night/silbo-storefront.webp" alt="Customers outside the lit Silbo bakery at night" width="900" height="600" loading="lazy" decoding="async"></figure>
   <div class="place-content">
     <h3 class="section-heading" id="silbo-title">Silbo</h3>
     <div class="place-info"><p class="location">Majakovski 1–4/1</p><div class="links"><a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Silbo+Majakovski+Skopje">Map <span aria-hidden="true">→</span></a></div></div>
@@ -188,7 +201,7 @@ h1,h2,h3{font-weight:400}
   </div>
 </article>
     <p class="night-related"><a href="./experimental-music.html">Read Experimental Music in Macedonia <span aria-hidden="true">→</span></a></p>
-    <details class="sources"><summary>Sources</summary><div class="source-links"><a class="action" href="https://marh.mk/arhitektura_i_muzika_buru/">BURU interview and photographs · MARH</a><a class="action" href="https://www.radiopanik.org/emissions/radia/kanal-103-1/">Kanal 103 recording · Radio Panik</a><a class="action" href="https://www.mono-ton.com/events">Kotur and Dunja listings · Mono-Ton</a><a class="action" href="https://skrol.mk/nastani/house-jazz-so-dj-ikac-degustatsija-na_340f64/">El Cabron event listings · Skrol</a><a class="action" href="https://www.skopjecentralapartments.com/en/guide/eat">Destan · Skopje Central guide</a><a class="action" href="https://www.petitfute.co.uk/v49916-skopje/c1165-restaurants/c126-restauration-rapide-a-domicile/c135-sur-place-a-emporter/c140-sur-le-pouce/2058922-silbo-furna.html">Silbo · Petit Futé</a></div></details>
+    <details class="sources"><summary>Sources</summary><div class="source-links"><a class="action" href="https://www.tripadvisor.com/Restaurant_Review-g295110-d23888141-Reviews-El_Cabron_Coffee_Wine_Bar-Skopje_Skopje_Region.html">El Cabron photograph · Tripadvisor</a><a class="action" href="https://glasniidei.mk/?p=13111">Dunja photograph · Glasni Idei</a><a class="action" href="https://www.skopjecentralapartments.com/en/guide/eat/silbo">Silbo photograph · Skopje Central</a><a class="action" href="https://www.youtube.com/watch?v=FecoRYXa0fc">Rabo de Toro at BURU · Full set</a><a class="action" href="https://marh.mk/arhitektura_i_muzika_buru/">BURU photographs · Ervin Kovac via MARH</a><a class="action" href="https://www.radiopanik.org/emissions/radia/kanal-103-1/">Kanal 103 recording · Radio Panik</a><a class="action" href="https://www.mono-ton.com/events">Kotur and Dunja listings · Mono-Ton</a><a class="action" href="https://skrol.mk/nastani/house-jazz-so-dj-ikac-degustatsija-na_340f64/">El Cabron event listings · Skrol</a><a class="action" href="https://www.skopjecentralapartments.com/en/guide/eat">Destan · Skopje Central guide</a><a class="action" href="https://www.petitfute.co.uk/v49916-skopje/c1165-restaurants/c126-restauration-rapide-a-domicile/c135-sur-place-a-emporter/c140-sur-le-pouce/2058922-silbo-furna.html">Silbo · Petit Futé</a></div></details>
   </div>
 </div>
 </article>
@@ -206,5 +219,36 @@ h1,h2,h3{font-weight:400}
 </nav>
 </div>
 </footer>
+<script>
+  (() => {
+    const video = document.querySelector('.night-motion');
+    const button = document.querySelector('.night-motion-toggle');
+    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+    function play() {
+      if (!video.src) video.src = video.dataset.src;
+      video.play().then(() => {
+        if (reducedMotion.matches) { pause(); return; }
+        video.hidden = false;
+        button.hidden = false;
+        button.textContent = 'Pause motion';
+      }).catch(() => {});
+    }
+    function pause() {
+      video.pause();
+      button.textContent = 'Play motion';
+    }
+    if (!reducedMotion.matches) play();
+    reducedMotion.addEventListener('change', () => {
+      if (reducedMotion.matches) {
+        pause();
+        video.hidden = true;
+        button.hidden = true;
+      } else {
+        play();
+      }
+    });
+    button.addEventListener('click', () => video.paused ? play() : pause());
+  })();
+</script>
 </body>
 </html>
