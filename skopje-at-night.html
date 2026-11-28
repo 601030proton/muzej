@@ -45,16 +45,13 @@ h1,h2,h3{font-weight:400}
 }
 </style>
 <link rel="stylesheet" href="./prespa-weekend.css?v=20261127-contents-hover">
+<link rel="stylesheet" href="./weekend-opening.css?v=20261126-guide-titles">
 <style>
 .skopje-night .prespa-guide-layout { grid-template-rows: repeat(3,auto); }
-.skopje-night .night-photo {
-  grid-column:2;grid-row:1 / span 3;position:sticky;top:112px;
-  width:min(100%,calc((100svh - 158px) * .75));justify-self:center;
-}
-.skopje-night .night-photo img { display:block;width:100%;aspect-ratio:3/4;object-fit:cover;background:#221411; }
+.skopje-night .night-photo { margin:0; }
+.skopje-night .night-photo img { object-fit:cover;background:#221411; }
 .skopje-night .night-photo figcaption { margin-top:9px; }
 .skopje-night .prespa-opening { padding-top:12px; }
-.skopje-night .prespa-title { margin-top:0; }
 .skopje-night .prespa-opening > p { max-width:22ch; }
 .skopje-night .night-plan { margin:0 0 26px;padding:16px 0;border-block:1px solid var(--guide-rule); }
 .skopje-night .night-plan p { font-size:18px;line-height:1.45; }
@@ -65,11 +62,6 @@ h1,h2,h3{font-weight:400}
 .skopje-night audio { display:block;width:min(100%,440px);margin-top:14px; }
 .skopje-night .night-audio { margin-top:6px; }
 .skopje-night .night-related { margin:0 0 38px; }
-@media(max-width:860px){
-  .skopje-night .prespa-guide-layout { display:block; }
-  .skopje-night .night-photo { position:static;width:min(100%,480px);margin:0 0 30px; }
-  .skopje-night .prespa-opening { padding-top:0; }
-}
 </style>
 </head>
 <body class="prespa-page">
@@ -86,13 +78,35 @@ h1,h2,h3{font-weight:400}
 <article class="prespa-shell skopje-night">
 <div class="prespa-guide-layout">
   <header class="prespa-opening">
-    <div class="prespa-title"><p class="eyebrow">Weekend Guide</p><h1 class="muzej-article-title feature-title">A Local’s Guide to Skopje at Night</h1></div>
-    <p>Wine on Ruzveltova, a basement set at Kotur, and burek on the way home.</p>
-  </header>
+    <div class="prespa-opening-media">
   <figure class="night-photo">
     <img src="https://marh.mk/wp-content/uploads/2026/09/buru_may16_ervinkovac_070-768x1151.jpg" width="768" height="1151" fetchpriority="high" decoding="async" alt="A guest in red light at a BURU party in Skopje">
     <figcaption>BURU, Skopje. Photograph by Ervin Kovac. <a href="https://marh.mk/arhitektura_i_muzika_buru/">MARH</a></figcaption>
   </figure>
+    </div>
+    <div class="prespa-title"><p class="eyebrow">Weekend Guide</p><h1 class="muzej-article-title feature-title">A Local’s Guide to Skopje at Night</h1></div>
+    <p>Wine on Ruzveltova, a basement set at Kotur, and burek on the way home.</p>
+  </header>
+  <aside class="prespa-map-panel" aria-label="Map of the guide">
+    <figure class="map-section"><div class="map-viewport"><div class="map">
+        <img src="./Assets/Skopje%20at%20Night/skopje-night-map.webp" width="780" height="815" alt="Monochrome street map of central Skopje, from Karpoš to the Old Bazaar">
+        <svg class="map-leaders" viewBox="0 0 780 815" aria-hidden="true">
+          <line x1="358.33" y1="429.99" x2="379.08" y2="480.04"></line>
+          <circle cx="358.33" cy="429.99" r="2.3"></circle>
+        </svg>
+        <a class="pin" href="#el-cabron" aria-label="El Cabron" style="--x:38.15%;--y:40.21%">1</a>
+        <a class="pin" href="#destan" aria-label="Destan in the Old Bazaar" style="--x:82.56%;--y:50.86%">2</a>
+        <a class="pin" href="#kotur" aria-label="Kotur" style="--x:68.56%;--y:64.74%">3</a>
+        <a class="pin" href="#buru" aria-label="Museum of Contemporary Art, a past BURU venue" style="--x:75.54%;--y:39.58%">4</a>
+        <a class="pin" href="#minus-eden" aria-label="Minus Eden" style="--x:20.26%;--y:33.15%">5</a>
+        <a class="pin" href="#dunja" aria-label="Dunja" style="--x:48.6%;--y:58.9%">6</a>
+        <a class="pin" href="#silbo" aria-label="Silbo" style="--x:43.72%;--y:49.71%">7</a>
+        <span class="map-label" aria-hidden="true" style="--x:28%;--y:25%">Karpoš</span>
+        <span class="map-label" aria-hidden="true" style="--x:61%;--y:32%">Vardar</span>
+        <span class="map-label" aria-hidden="true" style="--x:80%;--y:57%">Old Bazaar</span>
+        <span class="map-label" aria-hidden="true" style="--x:61%;--y:71%">Centar</span>
+    </div><a class="map-credit" href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors</a></div></figure>
+  </aside>
   <section class="index" id="index" aria-labelledby="index-title">
     <div class="night-plan">
       <p class="eyebrow">One night</p>
@@ -106,7 +120,7 @@ h1,h2,h3{font-weight:400}
   <div class="place-content">
     <h3 class="section-heading" id="el-cabron-title">El Cabron</h3>
     <div class="place-info"><p class="location">Ruzveltova 63A</p><div class="links"><a class="action" href="https://wolt.com/en/mkd/skopje/venue/el-cabron-wine-bar/items/menucategory-1">Wine list <span aria-hidden="true">→</span></a></div></div>
-    <div class="recommendation body-copy"><p>Ask what Macedonian wine is open and try a glass of Vranec if they’re pouring one. Look for their DJ nights. DJ Ikac has played house and jazz here alongside a tasting.</p></div>
+    <div class="recommendation body-copy"><p>Start with a glass of Vranec on Ruzveltova. If Ikac is on the bill, stay for the house set.</p></div>
   </div>
 </article>
 <article class="place" id="destan" aria-labelledby="destan-title">
@@ -130,7 +144,7 @@ h1,h2,h3{font-weight:400}
   <p class="eyebrow place-category">Party series</p>
   <div class="place-content">
     <h3 class="section-heading" id="buru-title">BURU</h3>
-    <div class="place-info"><p class="location">Location varies</p><div class="links"><a class="action" href="https://ra.co/events/2462955">BURU on Resident Advisor <span aria-hidden="true">→</span></a></div></div>
+    <div class="place-info"><p class="location">Location varies</p><div class="links"><a class="action" href="https://ra.co/events/2462955">Past BURU lineup <span aria-hidden="true">→</span></a></div></div>
     <div class="recommendation body-copy"><p>If BURU is on, build your night around it. The collective has put a dance floor in both the Museum of Contemporary Art and the old railway station that houses the city museum. Look for residents Rabo de Toro and check the address on the flyer.</p></div>
   </div>
 </article>
