@@ -32,6 +32,12 @@
     .journal-hero img { min-height: 0; object-position: left top; }
     .martinki-page .muzej-intro-deck { text-wrap: pretty; }
     .martinki-page .article-shell > .content-row { margin-bottom: 0; }
+    @media (min-width: 761px) {
+      .martinki-page .article-shell > .sources-section.muzej-sources-end {
+        width: calc((100% - var(--journal-gap)) / 2);
+        max-width: none;
+      }
+    }
     .martinki-verse { margin: 36px 0; padding-block: 22px; border-block: 1px solid #dedbd6; }
     .martinki-verse p { margin: 0; }
     .martinki-verse p + p { margin-top: .55em; }
