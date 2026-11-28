@@ -1,5 +1,20 @@
 /* Canonical Muzej masthead geometry, taken directly from the homepage.
    All article headers use this rule; individual features must not rescale or reposition the wordmark. */
+header.site-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 100;
+  background: transparent !important;
+  pointer-events: none;
+  transition: transform 460ms cubic-bezier(.22, 1, .36, 1);
+}
+header.site-header.is-scrolling-down:not(:has(:focus-visible, .muzej-menu[open])) {
+  transform: translateY(-100%);
+}
+@media (prefers-reduced-motion: reduce) {
+  header.site-header { transition: none; }
+}
+
 .site-header .shell.header-frame{
   width:min(100%,1600px)!important;
   max-width:none!important;
@@ -14,6 +29,7 @@
   align-items:center!important;
   justify-content:space-between!important;
   gap:0!important;
+  pointer-events:none!important;
 }
 .site-header .brand-mark{
   display:block!important;
@@ -27,10 +43,17 @@
   flex:0 0 auto!important;
   margin:0!important;
   padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  transform:none!important;
+  opacity:1!important;
+  pointer-events:auto!important;
 }
 .site-header .brand-mark-image{
   position:absolute!important;
   display:block!important;
+  background:transparent!important;
   max-width:none!important;
   width:124.17%!important;
   height:auto!important;
