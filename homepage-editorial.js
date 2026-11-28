@@ -5,7 +5,7 @@
    href: './prespa.html',
    title: 'Prespa',
    poster: './Assets/Prespa/prespa-village-poster.webp',
-   video: './Assets/Prespa/prespa-village-blend.mp4',
+   video: './Assets/Prespa/prespa-village-soft-loop.mp4',
    alt: 'A village above Lake Prespa with mountains beyond',
    deck: 'Villages, lakeside tables, and a weekend beside the water.'
   },
