@@ -12,9 +12,9 @@
   krusevo: {
    href: './krusevo.html',
    title: 'Kruševo in Winter',
-   poster: './Assets/Krusevo/stanic-sledding.webp',
-   video: './Assets/Krusevo/stanic-winter-loop.mp4',
-   alt: 'Children sledding and skiers descending the slope at Stanič in Kruševo',
+   poster: './Assets/Krusevo/krusevo-drone-poster.webp',
+   video: './Assets/Krusevo/krusevo-drone-homepage.mp4',
+   alt: 'A drone view of skiers and sledders on a snowy slope in Kruševo',
    deck: 'Skiing and sledding at Stanič, with lunch and galleries back in town.'
   }
  };
