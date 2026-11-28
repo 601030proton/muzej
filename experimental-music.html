@@ -31,14 +31,18 @@
     .journal-kicker { font: 400 11px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
     .journal-hero img { min-height: 0; object-position: left top; }
     .scene-caption { margin: 10px 0 0; font: 400 11px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; }
-    .scene-photo-rail { align-self: stretch; min-width: 0; }
-    .scene-photo-rail .scene-photo { margin-bottom: 18px; }
-    .scene-photo-rail .scene-photo:not(:last-child) { position: static; }
-    .scene-photo-rail .scene-photo:last-child { margin-bottom: 0; }
+    .scene-photo-rail {
+      display: grid;
+      grid-template-rows: repeat(3, minmax(0, 1fr));
+      align-self: stretch;
+      min-width: 0;
+    }
+    .scene-photo-slot { min-width: 0; }
     .scene-photo-rail .scene-photo img { aspect-ratio: 3 / 4; }
     @media (max-width: 760px) {
-      .scene-photo-rail { display: grid; grid-auto-flow: column; grid-auto-columns: 85%; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; }
-      .scene-photo-rail .scene-photo { width: 100%; margin: 0; scroll-snap-align: start; }
+      .scene-photo-rail { grid-template-rows: auto; grid-auto-flow: column; grid-auto-columns: 85%; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; }
+      .scene-photo-slot { scroll-snap-align: start; }
+      .scene-photo-rail .scene-photo { width: 100%; }
     }
     .scene-inline { max-width: 440px; margin: 36px 0; }
     .scene-inline img { display: block; width: 100%; height: auto; }
@@ -100,9 +104,15 @@
     <article class="article-shell article-longform">
       <div class="content-row scene-column">
         <aside class="scene-photo-rail" aria-label="Lea Carine live photographs">
-          <figure class="article-body-media scene-photo"><img src="./Assets/Experimental%20Music/lea-carine-vocalist.webp" alt="Lea Carine singing into a microphone" width="690" height="920" loading="lazy" decoding="async"></figure>
-          <figure class="article-body-media scene-photo"><img src="./Assets/Experimental%20Music/lea-carine-motion.webp" alt="Motion blur around Lea Carine as she sings onstage" width="747" height="996" loading="lazy" decoding="async"></figure>
-          <figure class="article-body-media scene-photo"><img src="./Assets/Experimental%20Music/lea-carine-guitar.webp" alt="A guitarist looking down at the fretboard during Lea Carine’s set" width="732" height="976" loading="lazy" decoding="async"></figure>
+          <div class="scene-photo-slot">
+            <figure class="article-body-media scene-photo"><img src="./Assets/Experimental%20Music/lea-carine-vocalist.webp" alt="Lea Carine singing into a microphone" width="690" height="920" loading="lazy" decoding="async"></figure>
+          </div>
+          <div class="scene-photo-slot">
+            <figure class="article-body-media scene-photo"><img src="./Assets/Experimental%20Music/lea-carine-motion.webp" alt="Motion blur around Lea Carine as she sings onstage" width="747" height="996" loading="lazy" decoding="async"></figure>
+          </div>
+          <div class="scene-photo-slot">
+            <figure class="article-body-media scene-photo"><img src="./Assets/Experimental%20Music/lea-carine-guitar.webp" alt="A guitarist looking down at the fretboard during Lea Carine’s set" width="732" height="976" loading="lazy" decoding="async"></figure>
+          </div>
         </aside>
         <div class="article-body-copy body-block">
           <p>Experimental music in Macedonia includes post-punk, ambient and electronic composition, and free improvisation. In Skopje, Kanal 103 has broadcast independent music since 1991 and releases records under the name Stotrojka. Other labels represented here include PMG Jazz, Sharla, and Mrtov Konj, which the Gola Planina collective established in 2024.</p>
