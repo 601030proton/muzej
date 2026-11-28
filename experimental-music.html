@@ -31,7 +31,15 @@
     .journal-kicker { font: 400 11px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
     .journal-hero img { min-height: 0; object-position: left top; }
     .scene-caption { margin: 10px 0 0; font: 400 11px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; }
-    .journal-layout .scene-column .article-body-media img { aspect-ratio: 1; object-fit: contain; }
+    .scene-photo-rail { align-self: stretch; min-width: 0; }
+    .scene-photo-rail .scene-photo { margin-bottom: 18px; }
+    .scene-photo-rail .scene-photo:not(:last-child) { position: static; }
+    .scene-photo-rail .scene-photo:last-child { margin-bottom: 0; }
+    .scene-photo-rail .scene-photo img { aspect-ratio: 3 / 4; }
+    @media (max-width: 760px) {
+      .scene-photo-rail { display: grid; grid-auto-flow: column; grid-auto-columns: 85%; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; }
+      .scene-photo-rail .scene-photo { width: 100%; margin: 0; scroll-snap-align: start; }
+    }
     .scene-inline { max-width: 440px; margin: 36px 0; }
     .scene-inline img { display: block; width: 100%; height: auto; }
     .scene-column .chapter-heading { scroll-margin-top: 50px; }
@@ -91,10 +99,11 @@
     </header>
     <article class="article-shell article-longform">
       <div class="content-row scene-column">
-        <figure class="article-body-media article-body-media--portrait">
-          <img src="./Assets/Experimental%20Music/alembic-bez-nikogo.webp" alt="Cover of Alembic’s Без никого да удриш, with a figure on a red bed beside an open laptop" width="1050" height="1050" loading="lazy" decoding="async">
-          <figcaption>Alembic, <i>Без никого да удриш</i> (2026).</figcaption>
-        </figure>
+        <aside class="scene-photo-rail" aria-label="Lea Carine live photographs">
+          <figure class="article-body-media scene-photo"><img src="./Assets/Experimental%20Music/lea-carine-vocalist.webp" alt="Lea Carine singing into a microphone" width="690" height="920" loading="lazy" decoding="async"></figure>
+          <figure class="article-body-media scene-photo"><img src="./Assets/Experimental%20Music/lea-carine-motion.webp" alt="Motion blur around Lea Carine as she sings onstage" width="747" height="996" loading="lazy" decoding="async"></figure>
+          <figure class="article-body-media scene-photo"><img src="./Assets/Experimental%20Music/lea-carine-guitar.webp" alt="A guitarist looking down at the fretboard during Lea Carine’s set" width="732" height="976" loading="lazy" decoding="async"></figure>
+        </aside>
         <div class="article-body-copy body-block">
           <p>Experimental music in Macedonia includes post-punk, ambient and electronic composition, and free improvisation. In Skopje, Kanal 103 has broadcast independent music since 1991 and releases records under the name Stotrojka. Other labels represented here include PMG Jazz, Sharla, and Mrtov Konj, which the Gola Planina collective established in 2024.</p>
 
@@ -191,6 +200,7 @@
             <h2 class="section-heading" id="scene-sources">Sources</h2>
             <p>The listening selection comes from Jakub Knera’s <a href="https://thequietus.com/quietus-reviews/quietus-international/north-macedonia-experimental-music-review-stotrojka-mrtov-konj/">“Inner Ear: Macedonian Music for September,” <i>The Quietus</i></a>, September 18, 2026. Performance photographs via the same feature.</p>
             <p>Opening photograph of Chlen 16 by Zdenko Petrovski.</p>
+            <p>Live photographs via <a href="https://www.instagram.com/p/DdL5VdhjkQw/?img_index=1">Lea Carine on Instagram</a>.</p>
             <p><a href="https://www.mono-ton.com/events/ntma4y2fctdgtnkn6lmbw5kpjthx7y">Mono-Ton’s first birthday program</a> and <a href="https://chlen16.bandcamp.com/track/-">Chlen 16’s single and recording credits</a>.</p>
             <p><a href="https://stotrojka.bandcamp.com/">Stotrojka’s catalog</a> and <a href="https://sdk.mk/index.php/kultura/kultnoto-radio-kanal-103-na-1-maj-ke-zamolkne-na-24-chasa-kako-protest-oti-vladata-2-godini-ne-mu-davaat-frekventsija/">SDK’s reporting on the Kanal 103 protest</a>.</p>
             <p><a href="https://golaplanina.bandcamp.com/album/2022">Gola Planina’s 2022 selection</a>, <a href="https://mrtovkonj.bandcamp.com/music">Mrtov Konj’s catalog</a>, and <a href="https://www.slobodenpecat.mk/intervju-so-martin-dzhorlev-za-aktivnostite-na-gola-planina-kolektivot-e-dom-za-sekoj-iskren-i-sloboden-duh/"><i>Sloboden Pečat</i>’s interview with Martin Džorlev</a>.</p>
