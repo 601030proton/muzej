@@ -23,3 +23,17 @@ body main .sources-section.muzej-sources.muzej-sources-end .muzej-source-list {
 @media(max-width:760px) {
   body main .sources-section.muzej-sources.muzej-sources-end { margin-inline: 0; }
 }
+
+body main .muzej-sources-disclosure > summary {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  cursor: pointer;
+  font: 400 26px/1.1 "plantin", Georgia, serif;
+  list-style: none;
+}
+body main .muzej-sources-disclosure > summary::-webkit-details-marker { display: none; }
+body main .muzej-sources-disclosure > summary::after { content: "+"; }
+body main .muzej-sources-disclosure[open] > summary::after { content: "−"; }
+body main .muzej-sources-disclosure > summary:focus-visible { outline-offset: 4px; }
+body main .muzej-sources-disclosure > .muzej-source-list { margin: 16px 0 0; }
