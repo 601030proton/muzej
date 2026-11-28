@@ -31,7 +31,6 @@
     .journal-kicker { font: 400 11px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
     .journal-hero img { min-height: 0; object-position: left top; }
     .scene-caption { margin: 10px 0 0; font: 400 11px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; }
-    .scene-deck { max-width: 28ch; }
     .journal-layout .scene-column .article-body-media img { aspect-ratio: 1; object-fit: contain; }
     .scene-inline { max-width: 440px; margin: 36px 0; }
     .scene-inline img { display: block; width: 100%; height: auto; }
@@ -50,7 +49,6 @@
     .video-play span { z-index: 1; display: grid; place-items: center; width: 58px; height: 58px; padding-left: 3px; border-radius: 50%; background: #fff; color: #111; font-size: 19px; }
     .video-play:focus-visible { outline: 2px solid #fff; outline-offset: -5px; }
     @media (max-width: 760px) {
-      .journal-opening h1 { font-size: clamp(39px, 10vw, 64px); }
       .journal-hero img { height: auto; max-height: calc(100svh - 255px); object-position: center top; }
     }
   </style>
@@ -87,9 +85,8 @@
       <div class="muzej-intro-media">
         <figure class="journal-hero">
           <img src="./Assets/Experimental%20Music/chlen-16.webp" alt="Chlen 16’s bassist playing in front of a stone wall and a closely packed audience" width="1200" height="1600" fetchpriority="high">
-          <figcaption class="scene-caption">Chlen 16 live. Photograph by Zdenko Petrovski.</figcaption>
         </figure>
-        <p class="journal-deck muzej-intro-deck scene-deck">Independent radio, record labels, and ten recordings from the mid-2020s.</p>
+        <p class="journal-deck muzej-intro-deck">Independent radio, record labels, and ten recordings from the mid-2020s.</p>
       </div>
     </header>
     <article class="article-shell article-longform">
@@ -193,6 +190,7 @@
           <section class="sources-section muzej-sources muzej-sources-end" aria-labelledby="scene-sources">
             <h2 class="section-heading" id="scene-sources">Sources</h2>
             <p>The listening selection comes from Jakub Knera’s <a href="https://thequietus.com/quietus-reviews/quietus-international/north-macedonia-experimental-music-review-stotrojka-mrtov-konj/">“Inner Ear: Macedonian Music for September,” <i>The Quietus</i></a>, September 18, 2026. Performance photographs via the same feature.</p>
+            <p>Opening photograph of Chlen 16 by Zdenko Petrovski.</p>
             <p><a href="https://www.mono-ton.com/events/ntma4y2fctdgtnkn6lmbw5kpjthx7y">Mono-Ton’s first birthday program</a> and <a href="https://chlen16.bandcamp.com/track/-">Chlen 16’s single and recording credits</a>.</p>
             <p><a href="https://stotrojka.bandcamp.com/">Stotrojka’s catalog</a> and <a href="https://sdk.mk/index.php/kultura/kultnoto-radio-kanal-103-na-1-maj-ke-zamolkne-na-24-chasa-kako-protest-oti-vladata-2-godini-ne-mu-davaat-frekventsija/">SDK’s reporting on the Kanal 103 protest</a>.</p>
             <p><a href="https://golaplanina.bandcamp.com/album/2022">Gola Planina’s 2022 selection</a>, <a href="https://mrtovkonj.bandcamp.com/music">Mrtov Konj’s catalog</a>, and <a href="https://www.slobodenpecat.mk/intervju-so-martin-dzhorlev-za-aktivnostite-na-gola-planina-kolektivot-e-dom-za-sekoj-iskren-i-sloboden-duh/"><i>Sloboden Pečat</i>’s interview with Martin Džorlev</a>.</p>
