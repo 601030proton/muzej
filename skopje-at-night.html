@@ -64,11 +64,6 @@ h1,h2,h3{font-weight:400}
 }
 .skopje-night .night-photo video { position: absolute; inset: 0; }
 .skopje-night .night-photo video[hidden] { display: none; }
-.skopje-night .night-motion-toggle {
-  position: absolute; bottom: 12px; left: 12px;
-  padding: 7px 9px; border: 1px solid #fff;
-  background: #000; color: #fff; font: 12px var(--sans); cursor: pointer;
-}
 .skopje-night .prespa-opening > p { max-width:22ch; }
 .skopje-night .night-plan { margin:0 0 26px;padding:16px 0;border-block:1px solid var(--guide-rule); }
 .skopje-night .night-plan p { font-size:18px;line-height:1.45; }
@@ -76,6 +71,7 @@ h1,h2,h3{font-weight:400}
 .skopje-night .night-stops .place { padding-bottom:25px; }
 .skopje-night .night-stops .night-crowd-photo { margin: 0 0 24px; }
 .skopje-night .night-stops .place-image img { aspect-ratio: 3 / 2; }
+.skopje-night #dunja .place-image img { aspect-ratio: auto; }
 .skopje-night #el-cabron .place-image img { object-position: 50% 71%; }
 .skopje-night .night-stops .place-content { padding-top:5px; }
 .skopje-night .night-stops .place-info { margin-top:8px; }
@@ -102,7 +98,6 @@ h1,h2,h3{font-weight:400}
       <figure class="night-photo">
         <img src="./Assets/Skopje%20at%20Night/buru-dancer-portrait.webp" width="540" height="720" fetchpriority="high" decoding="async" alt="A dancer raises an arm beneath red lights at BURU">
         <video class="night-motion" data-src="./Assets/Skopje%20at%20Night/buru-dancer-motion.mp4" muted playsinline loop preload="none" aria-hidden="true" hidden></video>
-        <button class="night-motion-toggle" type="button" hidden>Pause motion</button>
       </figure>
     </div>
     <div class="prespa-title"><p class="eyebrow">Weekend Guide</p><h1 class="muzej-article-title feature-title">A Local’s Guide to Skopje at Night</h1></div>
@@ -143,6 +138,7 @@ h1,h2,h3{font-weight:400}
 </article>
 <article class="place" id="destan" aria-labelledby="destan-title">
   <p class="eyebrow place-category">Dinner</p>
+  <figure class="place-image"><img src="./Assets/Skopje%20at%20Night/destan-old-bazaar-night.webp" alt="Evening diners outside Destan in the Old Bazaar" width="900" height="600" loading="lazy" decoding="async"></figure>
   <div class="place-content">
     <h3 class="section-heading" id="destan-title">Destan</h3>
     <div class="place-info"><p class="location">Old Bazaar</p><div class="links"><a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Destan+Old+Bazaar+Skopje">Map <span aria-hidden="true">→</span></a></div></div>
@@ -174,6 +170,7 @@ h1,h2,h3{font-weight:400}
 </article>
 <article class="place" id="minus-eden" aria-labelledby="minus-eden-title">
   <p class="eyebrow place-category">Club</p>
+  <figure class="place-image"><img src="./Assets/Skopje%20at%20Night/minus-eden-dance-floor.webp" alt="The crowd and blue ceiling lights at Minus Eden, seen from behind the DJ booth" width="900" height="600" loading="lazy" decoding="async"></figure>
   <div class="place-content">
     <h3 class="section-heading" id="minus-eden-title">Minus Eden</h3>
     <div class="place-info"><p class="location">Karpoš</p><div class="links"><a class="action" href="https://ra.co/clubs/134524">Club listings <span aria-hidden="true">→</span></a></div></div>
@@ -182,7 +179,7 @@ h1,h2,h3{font-weight:400}
 </article>
 <article class="place" id="dunja" aria-labelledby="dunja-title">
   <p class="eyebrow place-category">DIY gigs</p>
-  <figure class="place-image"><img src="./Assets/Skopje%20at%20Night/dunja-courtyard.webp" alt="People gathered in the courtyard at Social Centre Dunja" width="900" height="600" loading="lazy" decoding="async"></figure>
+  <figure class="place-image"><img src="./Assets/Skopje%20at%20Night/dunja-evening-flyer.webp" alt="Flyer for Amplidyne Effect and Martin Djorlev’s evening show at Social Centre Dunja" width="900" height="506" loading="lazy" decoding="async"></figure>
   <div class="place-content">
     <h3 class="section-heading" id="dunja-title">Dunja</h3>
     <div class="place-info"><p class="location">Rajko Žinzifov 22</p><div class="links"><a class="action" href="https://www.mono-ton.com/events">Mono-Ton listings <span aria-hidden="true">→</span></a></div></div>
@@ -199,7 +196,7 @@ h1,h2,h3{font-weight:400}
   </div>
 </article>
     <p class="night-related"><a href="./experimental-music.html">Read Experimental Music in Macedonia <span aria-hidden="true">→</span></a></p>
-    <details class="sources"><summary>Sources</summary><div class="source-links"><span>El Cabron photograph · AI-enhanced from the supplied image</span><a class="action" href="https://glasniidei.mk/?p=13111">Dunja photograph · Glasni Idei</a><a class="action" href="https://www.skopjecentralapartments.com/en/guide/eat/silbo">Silbo photograph · Skopje Central</a><a class="action" href="https://www.youtube.com/watch?v=FecoRYXa0fc">Rabo de Toro at BURU · Full set</a><a class="action" href="https://marh.mk/arhitektura_i_muzika_buru/">BURU photographs · Ervin Kovac via MARH</a><a class="action" href="https://www.radiopanik.org/emissions/radia/kanal-103-1/">Kanal 103 recording · Radio Panik</a><a class="action" href="https://www.mono-ton.com/events">Kotur and Dunja listings · Mono-Ton</a><a class="action" href="https://skrol.mk/nastani/house-jazz-so-dj-ikac-degustatsija-na_340f64/">El Cabron event listings · Skrol</a><a class="action" href="https://www.skopjecentralapartments.com/en/guide/eat">Destan · Skopje Central guide</a><a class="action" href="https://www.petitfute.co.uk/v49916-skopje/c1165-restaurants/c126-restauration-rapide-a-domicile/c135-sur-place-a-emporter/c140-sur-le-pouce/2058922-silbo-furna.html">Silbo · Petit Futé</a></div></details>
+    <details class="sources"><summary>Sources</summary><div class="source-links"><span>El Cabron photograph · AI-enhanced from the supplied image</span><a class="action" href="https://ampeff.com/amplidyne-effect-martin-djorlev-live-s-c-dunja-skopje-13th-december-2024/">Dunja concert flyer · Amplidyne Effect</a><a class="action" href="https://mktickets.mk/venue/minus-eden/">Minus Eden photograph · MKTickets</a><a class="action" href="https://www.skopjedailytours.com/destan-barbecue-restaurant/">Destan photograph · Skopje Daily Tours</a><a class="action" href="https://www.skopjecentralapartments.com/en/guide/eat/silbo">Silbo photograph · Skopje Central</a><a class="action" href="https://www.youtube.com/watch?v=FecoRYXa0fc">Rabo de Toro at BURU · Full set</a><a class="action" href="https://marh.mk/arhitektura_i_muzika_buru/">BURU photographs · Ervin Kovac via MARH</a><a class="action" href="https://www.radiopanik.org/emissions/radia/kanal-103-1/">Kanal 103 recording · Radio Panik</a><a class="action" href="https://www.mono-ton.com/events">Kotur and Dunja listings · Mono-Ton</a><a class="action" href="https://skrol.mk/nastani/house-jazz-so-dj-ikac-degustatsija-na_340f64/">El Cabron event listings · Skrol</a><a class="action" href="https://www.skopjecentralapartments.com/en/guide/eat">Destan · Skopje Central guide</a><a class="action" href="https://www.petitfute.co.uk/v49916-skopje/c1165-restaurants/c126-restauration-rapide-a-domicile/c135-sur-place-a-emporter/c140-sur-le-pouce/2058922-silbo-furna.html">Silbo · Petit Futé</a></div></details>
   </div>
 </div>
 </article>
@@ -220,32 +217,23 @@ h1,h2,h3{font-weight:400}
 <script>
   (() => {
     const video = document.querySelector('.night-motion');
-    const button = document.querySelector('.night-motion-toggle');
     const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-    function play() {
+    function syncMotion() {
+      if (reducedMotion.matches) {
+        video.pause();
+        video.hidden = true;
+        return;
+      }
       if (!video.src) video.src = video.dataset.src;
       video.play().then(() => {
-        if (reducedMotion.matches) { pause(); return; }
-        video.hidden = false;
-        button.hidden = false;
-        button.textContent = 'Pause motion';
-      }).catch(() => {});
-    }
-    function pause() {
-      video.pause();
-      button.textContent = 'Play motion';
-    }
-    if (!reducedMotion.matches) play();
-    reducedMotion.addEventListener('change', () => {
-      if (reducedMotion.matches) {
-        pause();
+        if (reducedMotion.matches) video.pause();
+        else video.hidden = false;
+      }).catch(() => {
         video.hidden = true;
-        button.hidden = true;
-      } else {
-        play();
-      }
-    });
-    button.addEventListener('click', () => video.paused ? play() : pause());
+      });
+    }
+    syncMotion();
+    reducedMotion.addEventListener('change', syncMotion);
   })();
 </script>
 </body>
