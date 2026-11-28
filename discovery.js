@@ -121,7 +121,7 @@
       "id": "camel-caravan",
       "title": "Camel Caravan",
       "details": "János Vaszary · 1916 · Oil on canvas",
-      "museum": "Skopje · Hungarian National Gallery",
+      "museum": "Hungarian National Gallery, Budapest",
       "source": "https://en.mng.hu/artworks/53622/",
       "image": "./Assets/Discovery/camel-caravan.webp"
     },
@@ -129,7 +129,7 @@
       "id": "composition-aux-visages",
       "title": "Composition aux visages",
       "details": "Jean Lambert-Rucki · 1919 · Oil on canvas",
-      "museum": "Solun",
+      "museum": "",
       "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/lambert-jean-rucki/",
       "image": "./Assets/Discovery/composition-aux-visages.webp"
     },
@@ -153,16 +153,16 @@
       "id": "stip-pottery-market",
       "title": "Pottery Market in Štip",
       "details": "Ludvík Kuba · 1925 · Oil on panel",
-      "museum": "",
+      "museum": "Private collection (documented by Art Lexicon)",
       "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/kuba-ludvik/",
       "image": "./Assets/Discovery/stip-pottery-market-clean.webp"
     },
     {
       "id": "lake-ohrid-lear",
       "title": "Lake Ohrid",
-      "details": "Edward Lear · 1848",
-      "museum": "",
-      "source": "https://commons.wikimedia.org/wiki/File:Lake_Ohrid_by_Edward_Lear_(1848).jpg",
+      "details": "Edward Lear · 1848 · Drawing",
+      "museum": "Houghton Library, Harvard University",
+      "source": "https://digitalcollections.library.harvard.edu/catalog/hou01475c01376",
       "image": "./Assets/Discovery/lake-ohrid-lear.webp"
     },
     {
@@ -177,7 +177,7 @@
       "id": "nerezi-monastery",
       "title": "Nerezi Monastery near Skopje",
       "details": "František Malý · 1934 · Oil on canvas",
-      "museum": "",
+      "museum": "Private collection (documented by Art Lexicon)",
       "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/maly-frantisek/",
       "image": "./Assets/Discovery/nerezi-monastery-clean.webp"
     },
@@ -201,7 +201,7 @@
       "id": "andre-vidal-fountain-bouf",
       "title": "Woman at the Fountain in Bouf",
       "details": "André Vidal · c. 1920 · Oil on canvas",
-      "museum": "Bouf, Lerin region",
+      "museum": "",
       "source": "https://www.proantic.com/605904-andre-vidal-grece-grece-macedoine-buf-pres-de-florina-c-1920-hst-54x65cm.html",
       "image": "./Assets/Discovery/andre-vidal-woman-at-the-fountain.webp"
     },
@@ -240,7 +240,7 @@
     {
       "id": "veiled-women-solun",
       "title": "Veiled Women, Solun",
-      "details": "Pierre Combet-Descombes · 1916 · Oil on canvas",
+      "details": "Pierre Combet-Descombes · 1916 · Oil on board",
       "museum": "",
       "source": "https://www.artlexicon.mk/foreign-painters-in-macedonia/combet-descombes-pierre-1885-1966/",
       "image": "./Assets/Discovery/veiled-women-solun.webp"
@@ -250,7 +250,7 @@
       "title": "Motif from Ohrid",
       "details": "Vangel Kodžoman · 1937 · Watercolor",
       "museum": "Museum of Contemporary Art, Skopje",
-      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=37",
+      "source": "https://arhiva.zaum.mk/wp-content/uploads/2019/02/2017_09_13_Makedonska_razglednica_katalog.pdf#page=36",
       "image": "./Assets/Discovery/motif-from-ohrid-kodzoman.webp",
       "fit": "portrait"
     },
