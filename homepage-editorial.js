@@ -16,19 +16,99 @@
    video: './Assets/Krusevo/krusevo-drone-homepage.mp4',
    alt: 'A drone view of skiers and sledders on a snowy slope in Kruševo',
    deck: 'Skiing and sledding at Stanič, with lunch and galleries back in town.'
+  },
+  skopje: {
+   href: './skopje-at-night.html',
+   title: 'Skopje at Night',
+   poster: './Assets/Skopje%20at%20Night/buru-dancer.webp',
+   clip: { videoId: 'FecoRYXa0fc', startSeconds: 4595, endSeconds: 4605 },
+   alt: 'A dancer silhouetted against red light',
+   deck: 'Independent clubs, DIY gigs, and late-night food in Skopje.'
   }
  };
  const guideTabs = document.querySelectorAll('[data-guide]');
  const guideLink = document.querySelector('#weekend-image-link');
  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+ let youtubeReady;
+ let clearClip = () => {};
+
+ function loadYouTubePlayer() {
+  if (window.YT?.Player) return Promise.resolve();
+  if (!youtubeReady) {
+   youtubeReady = new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    window.onYouTubeIframeAPIReady = resolve;
+    script.src = 'https://www.youtube.com/iframe_api';
+    script.addEventListener('error', reject, {once: true});
+    document.head.append(script);
+   }).catch(error => {
+    youtubeReady = undefined;
+    throw error;
+   });
+  }
+  return youtubeReady;
+ }
+
+ function setGuideClip(guide) {
+  const clip = guide.clip;
+  let active = true;
+  let player;
+  const frame = document.createElement('iframe');
+  frame.title = 'RABOdeTORO at BURU, Museum of the City of Skopje';
+  frame.allow = 'autoplay; encrypted-media; picture-in-picture';
+  frame.allowFullscreen = true;
+  frame.referrerPolicy = 'strict-origin-when-cross-origin';
+  frame.src = 'https://www.youtube.com/embed/' + clip.videoId + '?' + new URLSearchParams({
+   enablejsapi: '1',
+   origin: window.location.origin,
+   playsinline: '1',
+   rel: '0',
+   start: String(clip.startSeconds),
+   end: String(clip.endSeconds)
+  });
+
+  clearClip = () => {
+   active = false;
+   player?.destroy();
+   frame.remove();
+   guideLink.hidden = false;
+  };
+
+  loadYouTubePlayer().then(() => {
+   if (!active) return;
+   guideLink.after(frame);
+   guideLink.hidden = true;
+   player = new window.YT.Player(frame, {
+    events: {
+     onReady: ({target}) => {
+      if (!active) return;
+      target.mute();
+      target.playVideo();
+     },
+     onStateChange: ({target, data}) => {
+      if (active && data === window.YT.PlayerState.ENDED) target.loadVideoById(clip);
+     },
+     onError: () => {
+      if (active) clearClip();
+     }
+    }
+   });
+  }).catch(() => {
+   if (active) clearClip();
+  });
+ }
+
  function setGuideMedia(guide) {
+  clearClip();
+  clearClip = () => {};
   const image = document.createElement('img');
   image.id = 'weekend-image';
   image.src = guide.poster;
   image.alt = guide.alt;
   image.loading = 'lazy';
-  if (motion.matches) {
+  if (motion.matches || guide.clip) {
    guideLink.replaceChildren(image);
+   if (guide.clip && !motion.matches) setGuideClip(guide);
    return;
   }
   const video = document.createElement('video');
