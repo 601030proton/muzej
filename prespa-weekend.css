@@ -166,7 +166,7 @@
   .prespa-shell .weekend-plan .routes {grid-template-columns:1fr}
 }
 
-body:has(.prespa-shell) .site-header {background:#fff}
+body:has(.prespa-shell) .site-header {position:relative;top:auto;background:transparent}
 .prespa-shell :is(#route,#festival-weekend,#any-weekend,#looking-ahead) {scroll-margin-top:120px}
 .prespa-shell .weekend-ahead {
   border-top:1px solid var(--guide-rule);
